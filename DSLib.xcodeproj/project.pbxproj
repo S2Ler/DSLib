@@ -1,0 +1,235 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AED6C1971465E55000D9B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1961465E55000D9B44E /* Foundation.framework */; };
+		AED6C1A91465E63100D9B44E /* DSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = AED6C1A71465E63100D9B44E /* DSMacros.h */; };
+		AED6C1AA1465E63100D9B44E /* DSMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = AED6C1A81465E63100D9B44E /* DSMacros.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AED6C1931465E55000D9B44E /* libDSLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDSLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED6C1961465E55000D9B44E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AED6C19A1465E55000D9B44E /* DSLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DSLib-Prefix.pch"; path = "DSLib/DSLib-Prefix.pch"; sourceTree = "<group>"; };
+		AED6C1A71465E63100D9B44E /* DSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMacros.h; sourceTree = SOURCE_ROOT; };
+		AED6C1A81465E63100D9B44E /* DSMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMacros.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AED6C1901465E55000D9B44E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED6C1971465E55000D9B44E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AED6C1881465E55000D9B44E = {
+			isa = PBXGroup;
+			children = (
+				AED6C1981465E55000D9B44E /* DSLib */,
+				AED6C1951465E55000D9B44E /* Frameworks */,
+				AED6C1941465E55000D9B44E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AED6C1941465E55000D9B44E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AED6C1931465E55000D9B44E /* libDSLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AED6C1951465E55000D9B44E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AED6C1961465E55000D9B44E /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AED6C1981465E55000D9B44E /* DSLib */ = {
+			isa = PBXGroup;
+			children = (
+				AED6C1A71465E63100D9B44E /* DSMacros.h */,
+				AED6C1A81465E63100D9B44E /* DSMacros.m */,
+				AED6C1991465E55000D9B44E /* Supporting Files */,
+			);
+			path = DSLib;
+			sourceTree = "<group>";
+		};
+		AED6C1991465E55000D9B44E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AED6C19A1465E55000D9B44E /* DSLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AED6C1911465E55000D9B44E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED6C1A91465E63100D9B44E /* DSMacros.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AED6C1921465E55000D9B44E /* DSLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED6C1A01465E55000D9B44E /* Build configuration list for PBXNativeTarget "DSLib" */;
+			buildPhases = (
+				AED6C18F1465E55000D9B44E /* Sources */,
+				AED6C1901465E55000D9B44E /* Frameworks */,
+				AED6C1911465E55000D9B44E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DSLib;
+			productName = DSLib;
+			productReference = AED6C1931465E55000D9B44E /* libDSLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AED6C18A1465E55000D9B44E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "DS ltd.";
+			};
+			buildConfigurationList = AED6C18D1465E55000D9B44E /* Build configuration list for PBXProject "DSLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AED6C1881465E55000D9B44E;
+			productRefGroup = AED6C1941465E55000D9B44E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AED6C1921465E55000D9B44E /* DSLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AED6C18F1465E55000D9B44E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED6C1AA1465E63100D9B44E /* DSMacros.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AED6C19E1465E55000D9B44E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AED6C19F1465E55000D9B44E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AED6C1A11465E55000D9B44E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DSLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DSLib/DSLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AED6C1A21465E55000D9B44E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DSLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DSLib/DSLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AED6C18D1465E55000D9B44E /* Build configuration list for PBXProject "DSLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED6C19E1465E55000D9B44E /* Debug */,
+				AED6C19F1465E55000D9B44E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED6C1A01465E55000D9B44E /* Build configuration list for PBXNativeTarget "DSLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED6C1A11465E55000D9B44E /* Debug */,
+				AED6C1A21465E55000D9B44E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AED6C18A1465E55000D9B44E /* Project object */;
+}
