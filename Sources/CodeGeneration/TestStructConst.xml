@@ -1,0 +1,9 @@
+<structs module="apiFunctions">
+  <struct name="RestApiFunctions" instance_name = "restApiFunctions">
+    <constant type="NSString *const" name="get_tree">"get_tree"</constant>
+    <constant type="NSString *const" name="delete">"delete"</constant>
+  </struct>
+  <struct name="UploadApiFunctions" instance_name="uploadApiFunctions">
+    <constant type="NSInteger const" name="upload">1</constant>
+  </struct>
+</structs>
