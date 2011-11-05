@@ -3,8 +3,7 @@
 
 set -x
 
-should_preprocess_with_codegenerator=false
-should_generate_doc=false
+should_preprocess_with_codegenerator=true
 
 function failed()
 {
@@ -13,14 +12,7 @@ function failed()
 }
 
 if $should_preprocess_with_codegenerator; then
-	cd "${SOURCE_ROOT}/LibsITechArt/CodeGenerator"
+	cd "${SOURCE_ROOT}/CodeGeneration"
 
 	ruby -w "./cg_generate_objc.rb" --d "${SOURCE_ROOT}" || failed cg_generate_objc;
-	ruby -w "./cg_generate_requests_customizer.rb" --d "${SOURCE_ROOT}" || failed cg_generate_requests_customizer;
-fi
-
-if $should_generate_doc; then	
-	export DOXYGEN_PATH="/Applications/Doxygen.app/Contents/Resources/doxygen"	
-	cd "${SOURCE_ROOT}"
-	./BuildScripts/build_doc.sh
 fi

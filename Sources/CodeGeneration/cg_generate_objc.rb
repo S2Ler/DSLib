@@ -43,14 +43,12 @@ def processDir(dir)
         outPathH = File.expand_path("#{fileName}.h", dir)
         outPathM = File.expand_path("#{fileName}.m", dir)
 
-        args = "--i '#{full_item_path}' --t 'ObjectiveC_h.erb' --o '#{outPathH}' --t 'ObjectiveC_m.erb' --o '#{outPathM}'"
+        args = "--i '#{full_item_path}' --t 'generate_constants_h.erb' --o '#{outPathH}' --t 'generate_constants_m.erb' --o '#{outPathM}'"
         
-        isSuccess = system("ruby cg_generate.rb #{args}")
+        isSuccess = system("ruby generate_constants.rb #{args}")
       end
     end
   }
-
-
 end
 
 
