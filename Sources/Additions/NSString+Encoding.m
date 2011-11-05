@@ -1,10 +1,3 @@
-//
-//  NSString+Encoding.m
-//  FlipDrive
-//
-//  Created by Alexander Belyavskiy on 4/14/11.
-//  Copyright 2011 FilpDrive.com. All rights reserved.
-//
 
 #import "NSString+Encoding.h"
 #import <CommonCrypto/CommonDigest.h>

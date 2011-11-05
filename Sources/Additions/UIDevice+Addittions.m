@@ -1,10 +1,3 @@
-//
-//  UIDevice+Addittions.m
-//  FlipDrive
-//
-//  Created by Belyavskiy Alexander on 5/14/11.
-//  Copyright 2011 FilpDrive.com. All rights reserved.
-//
 
 #import "UIDevice+Addittions.h"
 

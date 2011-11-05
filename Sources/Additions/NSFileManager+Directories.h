@@ -1,11 +1,3 @@
-//
-//  NSFileManager+Directories.h
-//  GainFx Trade
-//
-//  Created by Alexander Belyavskiy on 7/5/11.
-//  Copyright 2011 iTechArt. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 /** Easy access various directories */

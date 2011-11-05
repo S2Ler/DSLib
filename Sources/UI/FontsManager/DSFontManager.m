@@ -15,7 +15,7 @@ static DSFontManager *sharedInstance = nil;
 + (DSFontManager *)sharedInstance {
 	@synchronized(self) {
 		if (sharedInstance == nil) {
-			sharedInstance = [[ITFontManager alloc] init];
+			sharedInstance = [[DSFontManager alloc] init];
 		}
 	}
 	return sharedInstance;
