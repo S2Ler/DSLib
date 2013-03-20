@@ -1,3 +1,10 @@
+//
+//  DependencyResolver+Private.h
+//  A6.nl
+//
+//  Created by Belyavskiy Alexander on 6/12/11.
+//  Copyright 2011 HTApplications. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 #import "DependencyResolver.h"
@@ -7,5 +14,6 @@
 @end
 
 @interface DependencyResolver()
-@property (nonatomic, retain) NSMutableDictionary *resolveMap;
+@property (nonatomic, strong) NSMutableDictionary *resolveMap;
+@property (nonatomic, strong) NSMutableDictionary *singletonsCache;
 @end

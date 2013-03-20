@@ -2,7 +2,7 @@
 #import "DSValueChooserViewController.h"
 
 @interface DSValueChooserViewController()
-@property (nonatomic, retain) NSIndexPath *selectedPath;
+@property (nonatomic, strong) NSIndexPath *selectedPath;
 @end
 
 @implementation DSValueChooserViewController
@@ -15,7 +15,7 @@
 {
   self = [super init];
   if (self) {
-    _values = [theValues retain];
+    _values = theValues;
     
     if (selectedValue) {
       for (int idx = 0; idx < [_values count]; idx++) {
@@ -30,15 +30,6 @@
   return self;
 }
 
-- (void)dealloc
-{
-  Block_release(_filter);
-  
-  [_userInfo release];
-  [_selectedPath release];
-  [_values release];
-  [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -80,7 +71,6 @@
      target:self
      action:@selector(cancelChoosingValues)];
   [[self navigationItem] setLeftBarButtonItem:cancelButton];
-  [cancelButton release];
   
   UIBarButtonItem *doneButton 
   = [[UIBarButtonItem alloc]
@@ -88,7 +78,6 @@
      target:self
      action:@selector(doneChoosingValues)];
   [[self navigationItem] setRightBarButtonItem:doneButton];
-  [doneButton release];
   
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
@@ -127,7 +116,6 @@
             initWithStyle:UITableViewCellStyleValue1
             reuseIdentifier:CELL_ID];
     [[cell textLabel] setBackgroundColor:[UIColor clearColor]];
-    [cell autorelease];
   }
   
   id value = [_values objectAtIndex:[indexPath row]];
@@ -173,6 +161,6 @@
 
 - (void)setValueFilterBlock:(value_filter_block_t)theFilter
 {
-  _filter = Block_copy(theFilter);
+    _filter = theFilter;
 }
 @end

@@ -7,7 +7,7 @@
   static NSString *iosVersion = nil;
   
   if (!iosVersion) {
-    iosVersion = [[[UIDevice currentDevice] systemVersion] retain];
+    iosVersion = [[UIDevice currentDevice] systemVersion];
   }
   
   return iosVersion;

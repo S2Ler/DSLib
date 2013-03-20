@@ -15,9 +15,9 @@
 	NSMutableDictionary *fetchControllers_;
 }
 
-@property (nonatomic, retain, readonly) NSManagedObjectContext *context;
-@property (nonatomic, retain, readonly) NSManagedObjectModel *model;
-@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *coordinator;
+@property (nonatomic, strong, readonly) NSManagedObjectContext *context;
+@property (nonatomic, strong, readonly) NSManagedObjectModel *model;
+@property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *coordinator;
 
 - (id) initWithModelFileName:(NSString *)aFileName
                    storePath:(NSString *)aPath;

@@ -12,9 +12,6 @@
 
 - (void)dealloc {
   [_timer invalidate];
-  PG_SAVE_RELEASE(_timer);
-  
-  [super dealloc];
 }
 
 + (DSVibrator *)sharedInstance

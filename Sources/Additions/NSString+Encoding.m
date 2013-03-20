@@ -1,8 +1,9 @@
 
 #import "NSString+Encoding.h"
+#import "NSString+Extras.h"
 #import <CommonCrypto/CommonDigest.h>
 
-@implementation NSString (NSString)
+@implementation NSString (Encoding)
 - (BOOL)isANSI {
   NSUInteger charCount = [self length];
   
@@ -83,6 +84,62 @@
 }
 
 - (UIImage *)image {
-  return [UIImage imageNamed:self];
+  UIImage *image = nil;
+  if (![[self pathExtension] isEmpty]) {
+    image = iPhone568Image(self);
+  }
+  else {
+    image = iPhone568ImagePNG(self);
+  }
+  
+  if (!image) {
+    image = [UIImage imageNamed:self];
+  }
+  
+  return image;
+}
+
+- (NSDictionary *)loadPlistFromBundle
+{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:self ofType:@"plist"];
+    if (plistPath) {
+        NSDictionary *plist = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+        return plist;
+    } else {
+        return nil;
+    }
+}
+
+- (NSString *)trimWhiteSpaces
+{
+  return [self stringByTrimmingCharactersInSet:
+          [NSCharacterSet whitespaceCharacterSet]];
+}
+
+- (NSString *)urlCompliantString;
+{	
+  NSString *s 
+  = (__bridge_transfer id)CFURLCreateStringByAddingPercentEscapes
+  (
+   NULL, 
+   (__bridge CFStringRef)[self mutableCopy],
+   NULL,
+   CFSTR("￼=,!$&'()*+;@?\n\"<>#\t :/"),
+   kCFStringEncodingUTF8
+   ); 
+  
+  return s;
+}
+
++ (NSString *)generateUUIDString
+{
+  CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorDefault);
+
+  NSString *uuidString
+    = (__bridge_transfer NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuid);
+
+  CFRelease(uuid);
+
+  return uuidString;
 }
 @end

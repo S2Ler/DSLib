@@ -1,5 +1,7 @@
 #import "PGAccelerometerMovementDetector.h"
 
+#define kPGAnimationFlashDuration 1.0
+
 @interface PGAccelerometerMovementDetector ()
 {
   double valueStrength;
@@ -10,7 +12,7 @@
 }
 
 @property(nonatomic, assign) double valueStrength;
-@property(nonatomic, retain) UIAcceleration *lastAcceleration;
+@property(nonatomic, strong) UIAcceleration *lastAcceleration;
 
 
 - (BOOL)isShakingAcceleration:(UIAcceleration *)lastAccel
@@ -36,8 +38,6 @@ static const double histeresisValue = 0.2;
 - (void)dealloc
 {
   [[UIAccelerometer sharedAccelerometer] setDelegate:nil];
-  PG_SAVE_RELEASE(_lastAcceleration);
-  [super dealloc];
 }
 
 - (id)initWithShakeStrenght:(double)percentStrength
@@ -76,7 +76,7 @@ static const double histeresisValue = 0.2;
         [[NSNotificationCenter defaultCenter]
                                postNotificationName:kPGDidShakeNotification
                                              object:nil];
-        DDLogInfo(@"PGAccselerometerShake: didShake");
+        NSLog(@"PGAccselerometerShake: didShake");
       }
     } else if (histeresisExcited &&
                [self isShakingAcceleration:self.lastAcceleration

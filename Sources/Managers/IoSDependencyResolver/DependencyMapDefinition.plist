@@ -2,7 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>PROTOCOL_NAME</key>
-	<string>CONCRETE_CLASS_NAME</string>
+	<key>FDWebServiceParamsFactory</key>
+	<string>FDWebServiceParamsFactory_impl</string>
+	<key>FDPhotosBridge</key>
+	<string>FDPhotosBridge_impl</string>
+	<key>FDCacher</key>
+	<string>FDCacher_impl</string>
+	<key>FDCacherProxy</key>
+	<string>FDCacherProxy_impl</string>
+	<key>FDCacheManager</key>
+	<string>FDCacheManager_impl</string>
 </dict>
 </plist>

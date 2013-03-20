@@ -33,17 +33,9 @@
   [slider startTextAnimation];
   [slider setDelegate:self];
   [[self sliderPlaceHolder] addSubview:slider];
-  [slider release];
   _slider = slider;
 }
 
-- (void)dealloc 
-{
-  [sliderPlaceHolder release];
-  Block_release(_onSlideRightMostHandler);
-  
-  [super dealloc];
-}
 
 - (void) sliderDidSlideRightMost:(DSSlider *)sliderViewController
 {

@@ -45,18 +45,6 @@ static DSFontManager *sharedInstance = nil;
 	return self;
 }
 
-- (id)retain {
-	return self;
-}
-
-- (void)release {
-	//do nothing
-}
-
-- (id)autorelease {
-	return self;
-}
-
 #pragma mark =================methods=================
 - (void)addFontWithKey:(NSString *)aFontKey
 				  font:(UIFont *)aFont {

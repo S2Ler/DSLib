@@ -6,9 +6,6 @@
 
 @implementation DSCheckButton 
 
-- (void)dealloc {
-  [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {

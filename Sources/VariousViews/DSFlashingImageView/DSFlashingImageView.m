@@ -8,6 +8,7 @@
 
 #define FADE_ANIMATION_KEY @"animation.fade"
 #define SCALE_ANIMATION_KEY @"animation.scale"
+#define kPGAnimationFlashDuration 1.0
 
 #pragma mark - private
 @interface DSFlashingImageView() {
@@ -43,11 +44,6 @@
 @synthesize isFlashingEnabled = _isFlashingEnabled;
 @synthesize flashInterval = _flashInterval;
 @synthesize pulsingEnabled = _pulsingEnabled;
-
-- (void)dealloc {
-  PG_SAVE_RELEASE(_flashImages);
-  [super dealloc];  
-}
 
 - (void)generalInit
 {
@@ -99,8 +95,7 @@
         animated:(BOOL)theAnimationFlag
 {
   if (theAnimationFlag) {
-    CAAnimation *fadeAnimation
-    = [CATransition transationForFadeWithDuration:kPGAnimationFlashDuration];
+    CAAnimation *fadeAnimation = [CATransition transationForFadeWithDuration:kPGAnimationFlashDuration];
     
     [[self layer] addAnimation:fadeAnimation
                         forKey:FADE_ANIMATION_KEY];

@@ -5,10 +5,10 @@
 
 @interface PGVideoImageView : UIImageView
 {
-	id<PGVideoImageViewDelegate> _delegate;
+	id<PGVideoImageViewDelegate> __weak _delegate;
 }
 
-@property (nonatomic, assign) id<PGVideoImageViewDelegate> delegate;
+@property (nonatomic, weak) id<PGVideoImageViewDelegate> delegate;
 
 @property (nonatomic,assign) BOOL autoRepeatMode;
 @property (nonatomic,assign) BOOL playbackControlHidden;

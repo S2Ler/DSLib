@@ -2,7 +2,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DSFlashingImageView : UIImageView
-@property (nonatomic, retain) NSArray *flashImages;
+@property (nonatomic, strong) NSArray *flashImages;
 
 - (void)setPulsingEnabled:(BOOL)thePulsingFlag
                  duration:(NSTimeInterval)thePulseDuration

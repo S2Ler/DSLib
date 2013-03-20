@@ -1,13 +1,28 @@
+//
+//  DependencyResolver.m
+//  A6.nl
+//
+//  Created by Belyavskiy Alexander on 6/12/11.
+//  Copyright 2011 HTApplications. All rights reserved.
+//
+
 
 #pragma mark - include
-#import "DependencyResolver.h"
 #import "DependencyResolver+Private.h"
+
+Protocol *protocolForName(NSString *name);
+Protocol *protocolForName(NSString *name) {
+    Protocol *protocol = NSProtocolFromString(name);
+    return protocol;
+}
+
 
 static DependencyResolver *sharedInstance = nil;
 
 @implementation DependencyResolver
 #pragma mark - synth
-@synthesize resolveMap = resolveMap_;
+@synthesize resolveMap = _resolveMap;
+@synthesize singletonsCache = _singletonsCache;
 
 #pragma mark - singleton
 + (DependencyResolver *)sharedInstance {
@@ -30,34 +45,62 @@ static DependencyResolver *sharedInstance = nil;
 	return nil;
 }
 
-- (id) init {
+- (id)init {
 	self = [super init];
 	if (self != nil) {		
-    resolveMap_ = [[NSMutableDictionary alloc] init];
+    _resolveMap = [[NSMutableDictionary alloc] init];
+    _singletonsCache = [[NSMutableDictionary alloc] init];
 	}
 	return self;
 }
 
-- (id)copyWithZone:(NSZone *)zone {
-	return self;
-}
-
-- (id)retain {
-	return self;
-}
-
-- (void)release {
-	//do nothing
-}
-
-- (id)autorelease {
-	return self;
+- (void)dealloc {
+  
+  abort();
 }
 
 #pragma mark - public
-+ (Class)resolve:(Protocol *)theProtocol {
-  DependencyResolver *instance = [self sharedInstance];
-  NSValue *protocolObject = [NSValue valueWithPointer:theProtocol];
-  return [[instance resolveMap] objectForKey:protocolObject];                                
++ (Class)resolve:(Protocol *)theProtocol 
+{
+  @synchronized(self) {
+    DependencyResolver *instance = [self sharedInstance];
+    NSValue *protocolObject = [NSValue valueWithPointer:( const void *)(theProtocol)];
+    Class class = [[instance resolveMap] objectForKey:protocolObject];
+
+    return class;                                
+  }
+}
+
++ (Class)resolveWithName:(NSString *)theProtocolName 
+{
+  @synchronized(self) {
+    return [self resolve:protocolForName(theProtocolName)];
+  }
+}
+
++ (id)resolveSingleton:(Protocol *)theProtocol 
+{
+  @synchronized(self) {
+    DependencyResolver *instance = [self sharedInstance];
+    NSValue *protocolObject = [NSValue valueWithPointer:( const void *)(theProtocol)];
+    
+    id cachedSingleton = [[instance singletonsCache]
+                          objectForKey:protocolObject];
+    
+    if (!cachedSingleton) {
+      cachedSingleton = [[[self resolve:theProtocol] alloc] init];
+      [[instance singletonsCache] setObject:cachedSingleton
+                                     forKey:protocolObject];
+    }
+    
+    return cachedSingleton;
+  }
+}
+
++ (id)resolveSingletonWithName:(NSString *)theProtocolName 
+{ 
+  @synchronized(self) {
+    return [self resolveSingleton:protocolForName(theProtocolName)];
+  }
 }
 @end

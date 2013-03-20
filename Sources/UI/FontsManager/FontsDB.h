@@ -3,7 +3,7 @@
 #import "DSFontManager.h"
 
 struct GUIElements {
-	NSString *homeTopNewsTitle;
+	__unsafe_unretained NSString *homeTopNewsTitle;
 };
 typedef struct GUIElements GUIElements;
 extern GUIElements guiElements;

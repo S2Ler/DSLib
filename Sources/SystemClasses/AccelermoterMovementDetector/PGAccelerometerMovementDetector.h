@@ -1,6 +1,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define kPGDidShakeNotification @"DidShakeNotifications"
+
 @interface PGAccelerometerMovementDetector : NSObject <UIAccelerometerDelegate>
 
 /**

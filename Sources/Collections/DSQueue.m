@@ -17,11 +17,6 @@
 @synthesize isFull = isFull_;
 @synthesize queue = queue_;
 
-- (void) dealloc
-{
-	[queue_ release];
-	[super dealloc];
-}
 
 #pragma mark ----------------inits----------------
 - (id)initWithCapacity:(NSUInteger)theCapacity {
@@ -37,7 +32,7 @@
 #pragma mark ----------------queue----------------
 - (id)pop
 {
-  id lastObject = [[[queue_ lastObject] retain] autorelease];
+  id lastObject = [queue_ lastObject];
   if (lastObject != nil) {
     [queue_ removeLastObject];
 	}
@@ -87,7 +82,7 @@
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {	
-	queue_ = [[aDecoder decodeObjectForKey:@"queue"] retain];
+	queue_ = [aDecoder decodeObjectForKey:@"queue"];
 	return self;
 }
 

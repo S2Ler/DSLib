@@ -11,4 +11,12 @@
  \return array with objects from the target array */
 - (NSArray *)objectsFromIndex:(NSUInteger)theFrom
                         count:(NSUInteger)theCount;
+
+- (id)firstObjectWhichEqualsTo:(id)object;
+
+/** if keypaths count is 1 returns an array of the keypath values from objects in the receiver array.
+* if no keypaths return an empty array.
+* if keypaths count is more than 1 return an array of dictionaries which contain keypath values from objects in the receiver array. Keypaths is a key in this dictionaries.
+*/
+- (NSArray *)extractKeypaths:(NSArray *)keypaths;
 @end

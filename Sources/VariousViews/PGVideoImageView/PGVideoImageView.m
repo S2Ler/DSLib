@@ -9,8 +9,8 @@
 	BOOL _statusBarHidden;
 }
 
-@property (nonatomic,retain) NSURL* movieURL;
-@property (nonatomic,retain) MPMoviePlayerController * moviePlayer;
+@property (nonatomic,strong) NSURL* movieURL;
+@property (nonatomic,strong) MPMoviePlayerController * moviePlayer;
 
 
 - (void)moviePlayBackDidFinish:(NSNotification*)notification;
@@ -27,14 +27,6 @@
 @synthesize statusBarHidden = _statusBarHidden;
 @synthesize autoRepeatMode = _autoRepeatMode;
 @synthesize delegate = _delegate;
-
-- (void)dealloc 
-{
-  PG_SAVE_RELEASE(_movieURL);
-	PG_SAVE_RELEASE(_moviePlayer);
-	[super dealloc];
-}
-
 
 - (id)initWithFrame:(CGRect)frame andPath:(NSString *)moviePath
 {

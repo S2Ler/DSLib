@@ -14,7 +14,6 @@
 											  cancelButtonTitle:@"Close" 
 											  otherButtonTitles:nil];
 	[alertView show];
-	[alertView release];
 }
 
 + (void)showWithTitle:(NSString *)aTitle
@@ -27,7 +26,6 @@
 											  cancelButtonTitle:aCloseButtonText
 											  otherButtonTitles:nil];
 	[alertView show];
-	[alertView release];
 }
 
 + (void)showWithTitle:(NSString *)aTitle
@@ -38,7 +36,6 @@
 											  cancelButtonTitle:@"Close"
 											  otherButtonTitles:nil];
 	[alertView show];
-	[alertView release];
 }
 
 + (void)showWithTitle:(NSString *)aTitle
@@ -52,7 +49,6 @@
 											  cancelButtonTitle:@"OK"
 											  otherButtonTitles:nil];
 	[alertView show];
-	[alertView release];
 }
 
 + (void)showWithTitle:(NSString *)aTitle
@@ -68,7 +64,6 @@
 											  cancelButtonTitle:@"OK"
 											  otherButtonTitles:nil];
 	[alertView show];
-	[alertView release];
 }
 
 @end

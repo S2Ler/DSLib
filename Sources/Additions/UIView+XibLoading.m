@@ -6,7 +6,7 @@
 {
   id newInstance = [XibLoader firstViewInXibNamed:
                     NSStringFromClass([self class])];
-  return [newInstance retain];
+    return newInstance;
 }
 
 @end

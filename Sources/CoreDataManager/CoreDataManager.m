@@ -3,7 +3,7 @@
 
 #pragma mark =================props=================
 @interface CoreDataManager()
-@property (nonatomic, retain) NSMutableDictionary *fetchControllers;
+@property (nonatomic, strong) NSMutableDictionary *fetchControllers;
 @end
 
 @implementation CoreDataManager
@@ -11,13 +11,6 @@
 @synthesize fetchControllers = fetchControllers_;
 
 #pragma mark memory
-- (void)dealloc {
-	[modelFileName_ release];
-	[storePath_ release];
-	[fetchControllers_ release];
-	
-	[super dealloc];
-}
 
 #pragma mark Initialization
 - (id) initWithModelFileName:(NSString *)aFileName
@@ -25,8 +18,8 @@
 {
 	self = [super init];
 	if (self != nil) {
-		modelFileName_ = [aFileName retain];
-		storePath_ = [aPath retain];
+		modelFileName_ = aFileName;
+		storePath_ = aPath;
 		fetchControllers_ = [[NSMutableDictionary alloc] init];
 	}
 	return self;
@@ -59,7 +52,6 @@
   = [[NSBundle mainBundle] pathForResource:modelFileName_ ofType:@"momd"];
 	NSURL *modelURL = [[NSURL alloc] initFileURLWithPath:modelPath];
 	model_ = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-	[modelURL release];
 	return model_;
 }
 
@@ -77,7 +69,7 @@
   = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.model];
 	
   NSMutableDictionary *options 
-  = [[[NSMutableDictionary alloc] init] autorelease];
+  = [[NSMutableDictionary alloc] init];
   
 	[options setObject:[NSNumber numberWithBool:YES] forKey:NSMigratePersistentStoresAutomaticallyOption];
   
@@ -108,14 +100,13 @@
 		NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:aSortKey
                                                                    ascending:anIsAscending];
 		[fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-		[sortDescriptor release];
 	}
 	if (aPredicateFormat) {
 		NSPredicate *predicate = [NSPredicate predicateWithFormat:aPredicateFormat];
 		[fetchRequest setPredicate:predicate];
 	}
 	
-	return [fetchRequest autorelease];
+	return fetchRequest;
 }
 
 - (NSFetchedResultsController *)fetchedResultControllerWithRequest:(NSFetchRequest *)aRequest
@@ -129,11 +120,10 @@
 	if (![fetchController performFetch:&error]) {
 		//TODO: Error handling
 		//		[[ErrorHandler sharedInstance] handleError:error];
-    [fetchController release];
 		return nil;
 	}
 	
-	return [fetchController autorelease];
+	return fetchController;
 }
 
 - (void)addFetchControllerWithSortKey:(NSString *)sortKey 
@@ -202,7 +192,6 @@
 	NSManagedObjectContext *context = [self context];
 	if (![context save:&error]) {
 		[context rollback];
-		VLog(@"Error: %@", error);
 	}
 }
 @end

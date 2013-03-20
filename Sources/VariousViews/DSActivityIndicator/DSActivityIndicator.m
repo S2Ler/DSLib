@@ -4,8 +4,8 @@
 
 #pragma mark =================props=================
 @interface DSActivityIndicator()	
-@property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
-@property (nonatomic, retain) UIImageView *doneImageView;
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, strong) UIImageView *doneImageView;
 @end
 
 @implementation DSActivityIndicator
@@ -14,11 +14,6 @@
 @synthesize doneImageView = doneImageView_;
 
 #pragma mark =================memory=================
-- (void)dealloc {
-	[activityIndicator_ release];
-	[doneImageView_ release];
-    [super dealloc];
-}
 
 #pragma mark =================inites=================
 - (id)initWithFrame:(CGRect)aFrame
@@ -35,7 +30,6 @@
 		[newActivityInicatorView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 		[self addSubview:newActivityInicatorView];
 		[self setActivityIndicator:newActivityInicatorView];				
-		[newActivityInicatorView release];
 		
 		UIImageView *newImageView = [[UIImageView alloc] initWithFrame:[self bounds]];
 		[newImageView setBackgroundColor:[UIColor clearColor]];

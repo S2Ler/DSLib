@@ -60,7 +60,6 @@
 	
   [sliderView addSubview:sliderBackground];
   
-  [sliderBackground release];
 	
   // Add the slider with correct geometry centered over the track
   slider = [[UISlider alloc] initWithFrame:[sliderBackground frame]];
@@ -82,19 +81,17 @@
   [slider addTarget:self action:@selector(sliderDown:) forControlEvents:UIControlEventTouchDown];
   [slider addTarget:self action:@selector(sliderChanged:) forControlEvents:UIControlEventValueChanged];
   
-  UIImage *sliderTrackMin = [[[UIImage alloc] init] autorelease];
-  UIImage *sliderTrackMax = [[[UIImage alloc] init] autorelease];
+  UIImage *sliderTrackMin = [[UIImage alloc] init];
+  UIImage *sliderTrackMax = [[UIImage alloc] init];
   [slider setMinimumTrackImage:sliderTrackMin forState:UIControlStateNormal];
   [slider setMaximumTrackImage:sliderTrackMax forState:UIControlStateNormal];
   
   [sliderView addSubview:slider];
-  [slider release];
   
   [sliderView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth |
                                    UIViewAutoresizingFlexibleHeight)];
   [self setBounds:[sliderView bounds]];
   [self addSubview:sliderView];
-  [sliderView release];
   
   // label on slider track
   UIFont *labelFont = [UIFont systemFontOfSize:24];
@@ -129,12 +126,10 @@
   gradientLocations = [NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0],
                        [NSNumber numberWithFloat:0.10],
                        [NSNumber numberWithFloat:0.20], nil];
-  [gradientLocations retain];
   
   gradientEndLocations = [NSArray arrayWithObjects:[NSNumber numberWithFloat:0.80],
                           [NSNumber numberWithFloat:0.90],
                           [NSNumber numberWithFloat:1.0], nil];
-  [gradientEndLocations retain];
   
   [animationLayer setColors:colors];
   [animationLayer setLocations:gradientLocations];
@@ -193,8 +188,7 @@
 - (void)setText:(NSString *)theText
 {
   if (text != theText) {
-    [text release];
-    text = [theText retain];
+    text = theText;
     [label setText:theText];
   }
 }

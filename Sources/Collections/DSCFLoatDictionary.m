@@ -12,9 +12,7 @@ CGFloat CGFloatNotFound = CGFLOAT_MAX;
   }
   
   free(_values);
-  [_objects release];
   
-  [super dealloc];
 }
 
 - (id)initWithCapacity:(NSInteger)theCapacity

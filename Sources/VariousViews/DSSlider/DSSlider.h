@@ -23,17 +23,17 @@
   
   BOOL sliderTouchDown;
   
-  id delegate;
+  id __weak delegate;
 }
 
-@property (nonatomic, retain) NSString *text;
-@property (nonatomic, retain) UIImage *trackImage;
-@property (nonatomic, retain) UIImage *thumbImage;
-@property (nonatomic, retain) UIImage *backgroundImage;
+@property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) UIImage *trackImage;
+@property (nonatomic, strong) UIImage *thumbImage;
+@property (nonatomic, strong) UIImage *backgroundImage;
 
 @property (nonatomic, assign) CGFloat sliderTrackEdgeInset;
 
-@property (nonatomic, assign) id delegate;
+@property (nonatomic, weak) id delegate;
 
 - (id) initWithText:(NSString *)t trackImage:(UIImage *)trackImg thumbImage:(UIImage *)thumbImg;
 - (id) initWithText:(NSString *)t trackImgName:(NSString *)trackImgName thumbImgName:(NSString *)thumbImgName;

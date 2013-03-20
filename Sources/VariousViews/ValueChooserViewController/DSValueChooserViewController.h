@@ -20,8 +20,8 @@ UITableViewDataSource
   value_filter_block_t _filter;
 }
 
-@property (nonatomic, retain) id<DSValueChooserViewControllerDelegate> delegate;
-@property (nonatomic, retain) NSDictionary *userInfo;
+@property (nonatomic, strong) id<DSValueChooserViewControllerDelegate> delegate;
+@property (nonatomic, strong) NSDictionary *userInfo;
 
 /** \param theValues for non NSString objects description 
  *   selector will be used. theValues is retained.

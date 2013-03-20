@@ -5,7 +5,6 @@
 - (void)dealloc
 {
   free(_values);
-  [super dealloc];
 }
 
 - (id)initWithCapacity:(unsigned int)theCapacity 

@@ -56,18 +56,6 @@ GUIElements guiElements = {
 	return self;
 }
 
-- (id)retain {
-	return self;
-}
-
-- (void)release {
-	//do nothing
-}
-
-- (id)autorelease {
-	return self;
-}
-
 #pragma mark =================methods=================
 - (UIFont *)fontForGUIElement:(NSString *)aGUIElement {
 	return [fontManager_ fontWithKey:aGUIElement];
