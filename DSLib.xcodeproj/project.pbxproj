@@ -66,6 +66,8 @@
 		847FCAAC16F9F76700D03502 /* XibLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA7716F9F76700D03502 /* XibLoader.h */; };
 		847FCAAD16F9F76700D03502 /* XibLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA7816F9F76700D03502 /* XibLoader.m */; };
 		847FCAAE16F9F76700D03502 /* UIDevice+Addittions.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA7916F9F76700D03502 /* UIDevice+Addittions.h */; };
+		849D04DC17702FC300BCD7A5 /* DSDateFormatterCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D04DA17702FC300BCD7A5 /* DSDateFormatterCache.h */; };
+		849D04DD17702FC300BCD7A5 /* DSDateFormatterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D04DB17702FC300BCD7A5 /* DSDateFormatterCache.m */; };
 		AED6C1971465E55000D9B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1961465E55000D9B44E /* Foundation.framework */; };
 		AED6C1F21465E77600D9B44E /* DSCArray.h in Headers */ = {isa = PBXBuildFile; fileRef = AED6C1C11465E77600D9B44E /* DSCArray.h */; };
 		AED6C1F31465E77600D9B44E /* DSCArray.m in Sources */ = {isa = PBXBuildFile; fileRef = AED6C1C21465E77600D9B44E /* DSCArray.m */; };
@@ -182,6 +184,8 @@
 		847FCA7716F9F76700D03502 /* XibLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XibLoader.h; sourceTree = "<group>"; };
 		847FCA7816F9F76700D03502 /* XibLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XibLoader.m; sourceTree = "<group>"; };
 		847FCA7916F9F76700D03502 /* UIDevice+Addittions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Addittions.h"; sourceTree = "<group>"; };
+		849D04DA17702FC300BCD7A5 /* DSDateFormatterCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDateFormatterCache.h; sourceTree = "<group>"; };
+		849D04DB17702FC300BCD7A5 /* DSDateFormatterCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDateFormatterCache.m; sourceTree = "<group>"; };
 		AED6C1931465E55000D9B44E /* libDSLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDSLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6C1961465E55000D9B44E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AED6C19A1465E55000D9B44E /* DSLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DSLib-Prefix.pch"; path = "DSLib/DSLib-Prefix.pch"; sourceTree = "<group>"; };
@@ -279,6 +283,15 @@
 				84444FE4176FB67A00602FCB /* DSSettings_impl.m */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		849D04D917702FC300BCD7A5 /* DateFormatterCache */ = {
+			isa = PBXGroup;
+			children = (
+				849D04DA17702FC300BCD7A5 /* DSDateFormatterCache.h */,
+				849D04DB17702FC300BCD7A5 /* DSDateFormatterCache.m */,
+			);
+			path = DateFormatterCache;
 			sourceTree = "<group>";
 		};
 		AED6C1881465E55000D9B44E = {
@@ -578,6 +591,7 @@
 		AED6C2861465EF4E00D9B44E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				849D04D917702FC300BCD7A5 /* DateFormatterCache */,
 				AED6C2871465EF4F00D9B44E /* PGTimeFunctions.h */,
 				AED6C2881465EF4F00D9B44E /* PGTimeFunctions.m */,
 			);
@@ -693,6 +707,7 @@
 				84444FE5176FB67A00602FCB /* CStringsFunctions.h in Headers */,
 				84444FE7176FB67A00602FCB /* DSRuntimeHacker.h in Headers */,
 				84444FE9176FB67A00602FCB /* DSSettings_impl.h in Headers */,
+				849D04DC17702FC300BCD7A5 /* DSDateFormatterCache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +815,7 @@
 				84444FE6176FB67A00602FCB /* CStringsFunctions.m in Sources */,
 				84444FE8176FB67A00602FCB /* DSRuntimeHacker.m in Sources */,
 				84444FEA176FB67A00602FCB /* DSSettings_impl.m in Sources */,
+				849D04DD17702FC300BCD7A5 /* DSDateFormatterCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
