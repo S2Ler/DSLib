@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84444FE5176FB67A00602FCB /* CStringsFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 84444FDF176FB67A00602FCB /* CStringsFunctions.h */; };
+		84444FE6176FB67A00602FCB /* CStringsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84444FE0176FB67A00602FCB /* CStringsFunctions.m */; };
+		84444FE7176FB67A00602FCB /* DSRuntimeHacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 84444FE1176FB67A00602FCB /* DSRuntimeHacker.h */; };
+		84444FE8176FB67A00602FCB /* DSRuntimeHacker.m in Sources */ = {isa = PBXBuildFile; fileRef = 84444FE2176FB67A00602FCB /* DSRuntimeHacker.m */; };
+		84444FE9176FB67A00602FCB /* DSSettings_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 84444FE3176FB67A00602FCB /* DSSettings_impl.h */; };
+		84444FEA176FB67A00602FCB /* DSSettings_impl.m in Sources */ = {isa = PBXBuildFile; fileRef = 84444FE4176FB67A00602FCB /* DSSettings_impl.m */; };
 		847FCA7A16F9F76700D03502 /* UIDevice+Addittions.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA4516F9F76700D03502 /* UIDevice+Addittions.m */; };
 		847FCA7B16F9F76700D03502 /* CATransition+AnimationsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA4616F9F76700D03502 /* CATransition+AnimationsBuilder.h */; };
 		847FCA7C16F9F76700D03502 /* CATransition+AnimationsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA4716F9F76700D03502 /* CATransition+AnimationsBuilder.m */; };
@@ -117,6 +123,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84444FDF176FB67A00602FCB /* CStringsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CStringsFunctions.h; sourceTree = "<group>"; };
+		84444FE0176FB67A00602FCB /* CStringsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CStringsFunctions.m; sourceTree = "<group>"; };
+		84444FE1176FB67A00602FCB /* DSRuntimeHacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRuntimeHacker.h; sourceTree = "<group>"; };
+		84444FE2176FB67A00602FCB /* DSRuntimeHacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRuntimeHacker.m; sourceTree = "<group>"; };
+		84444FE3176FB67A00602FCB /* DSSettings_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSettings_impl.h; sourceTree = "<group>"; };
+		84444FE4176FB67A00602FCB /* DSSettings_impl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSettings_impl.m; sourceTree = "<group>"; };
 		847FCA4516F9F76700D03502 /* UIDevice+Addittions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Addittions.m"; sourceTree = "<group>"; };
 		847FCA4616F9F76700D03502 /* CATransition+AnimationsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransition+AnimationsBuilder.h"; sourceTree = "<group>"; };
 		847FCA4716F9F76700D03502 /* CATransition+AnimationsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransition+AnimationsBuilder.m"; sourceTree = "<group>"; };
@@ -256,6 +268,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84444FDE176FB67A00602FCB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				84444FDF176FB67A00602FCB /* CStringsFunctions.h */,
+				84444FE0176FB67A00602FCB /* CStringsFunctions.m */,
+				84444FE1176FB67A00602FCB /* DSRuntimeHacker.h */,
+				84444FE2176FB67A00602FCB /* DSRuntimeHacker.m */,
+				84444FE3176FB67A00602FCB /* DSSettings_impl.h */,
+				84444FE4176FB67A00602FCB /* DSSettings_impl.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		AED6C1881465E55000D9B44E = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +441,7 @@
 		AED6C1CC1465E77600D9B44E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				84444FDE176FB67A00602FCB /* Settings */,
 				AED6C1D01465E77600D9B44E /* IoSDependencyResolver */,
 			);
 			path = Managers;
@@ -664,6 +690,9 @@
 				847FCAAA16F9F76700D03502 /* UIView+Resizing.h in Headers */,
 				847FCAAC16F9F76700D03502 /* XibLoader.h in Headers */,
 				847FCAAE16F9F76700D03502 /* UIDevice+Addittions.h in Headers */,
+				84444FE5176FB67A00602FCB /* CStringsFunctions.h in Headers */,
+				84444FE7176FB67A00602FCB /* DSRuntimeHacker.h in Headers */,
+				84444FE9176FB67A00602FCB /* DSSettings_impl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +797,9 @@
 				847FCAA916F9F76700D03502 /* UIView+Layout.m in Sources */,
 				847FCAAB16F9F76700D03502 /* UIView+Resizing.m in Sources */,
 				847FCAAD16F9F76700D03502 /* XibLoader.m in Sources */,
+				84444FE6176FB67A00602FCB /* CStringsFunctions.m in Sources */,
+				84444FE8176FB67A00602FCB /* DSRuntimeHacker.m in Sources */,
+				84444FEA176FB67A00602FCB /* DSSettings_impl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
