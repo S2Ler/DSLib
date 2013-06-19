@@ -6,6 +6,7 @@
 //  Copyright (c) 2011 FlipDrive.com. All rights reserved.
 //
 
+typedef void (^NSObjectObserverBlock)(id object, NSString *keyPath);
 
 
 @interface NSObject (Observing)
@@ -13,4 +14,8 @@
         forKeyPaths:(NSString *)theKeyPath,...;
 - (void)removeObserver:(NSObject *)theObserver
               keyPaths:(NSString *)theKeyPath,...;
+
+/** Not thread save */
+- (void)addObserverForKeyPath:(NSString *)keypath block:(NSObjectObserverBlock)block;
+- (void)removeObserverForKeyPath:(NSString *)keyPath;
 @end
