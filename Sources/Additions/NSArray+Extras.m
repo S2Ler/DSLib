@@ -80,4 +80,31 @@
 	return imagesArray;
 }
 
+- (NSArray *)groupObjectsByKeyPath:(NSString *)keyPath
+{
+    NSMutableArray *groups = [NSMutableArray array];
+    
+    NSMutableArray *(^groupWithKeyPathValue) (id) = ^NSMutableArray *(id value)
+    {
+        for (NSMutableArray *group in groups) {
+            id anyObject = [group lastObject];
+            if ([[anyObject valueForKeyPath:keyPath] isEqual:value]) {
+                return group;
+            }
+        }
+
+        NSMutableArray *newGroup = [NSMutableArray array];
+        [groups addObject:newGroup];
+        return newGroup;
+    };
+
+    //Start reading here
+    for (id object in self) {
+        NSMutableArray *group = groupWithKeyPathValue([object valueForKeyPath:keyPath]);
+        [group addObject:object];
+    }
+
+    return groups;
+}
+
 @end
