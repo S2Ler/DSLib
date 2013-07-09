@@ -98,7 +98,7 @@
   CGSize labelSize = [text sizeWithFont:labelFont];
   label = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, labelSize.width, labelSize.height)];
   [label setTextColor:[UIColor whiteColor]];
-  [label setTextAlignment:UITextAlignmentCenter];
+  [label setTextAlignment:NSTextAlignmentCenter];
   [label setAdjustsFontSizeToFitWidth:YES];
   [label setMinimumFontSize:10.0];
   [label setBackgroundColor:[UIColor clearColor]];

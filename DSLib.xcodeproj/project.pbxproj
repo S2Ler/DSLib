@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0900F608178826B000D92D39 /* DSCFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0900F606178826B000D92D39 /* DSCFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0900F609178826B000D92D39 /* DSCFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900F607178826B000D92D39 /* DSCFunctions.m */; };
+		0900F61517882D1D00D92D39 /* QRunLoopOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0900F61117882D1D00D92D39 /* QRunLoopOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0900F61617882D1D00D92D39 /* QRunLoopOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900F61217882D1D00D92D39 /* QRunLoopOperation.m */; };
+		0900F61717882D1D00D92D39 /* QWatchedOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0900F61317882D1D00D92D39 /* QWatchedOperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0900F61817882D1D00D92D39 /* QWatchedOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900F61417882D1D00D92D39 /* QWatchedOperationQueue.m */; };
+		0900F61D17883CAF00D92D39 /* UIDevice+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0900F61B17883CAF00D92D39 /* UIDevice+Additions.h */; };
+		0900F61E17883CAF00D92D39 /* UIDevice+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900F61C17883CAF00D92D39 /* UIDevice+Additions.m */; };
 		84444FE5176FB67A00602FCB /* CStringsFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 84444FDF176FB67A00602FCB /* CStringsFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84444FE6176FB67A00602FCB /* CStringsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84444FE0176FB67A00602FCB /* CStringsFunctions.m */; };
 		84444FE7176FB67A00602FCB /* DSRuntimeHacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 84444FE1176FB67A00602FCB /* DSRuntimeHacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84444FE8176FB67A00602FCB /* DSRuntimeHacker.m in Sources */ = {isa = PBXBuildFile; fileRef = 84444FE2176FB67A00602FCB /* DSRuntimeHacker.m */; };
 		84444FE9176FB67A00602FCB /* DSSettings_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 84444FE3176FB67A00602FCB /* DSSettings_impl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84444FEA176FB67A00602FCB /* DSSettings_impl.m in Sources */ = {isa = PBXBuildFile; fileRef = 84444FE4176FB67A00602FCB /* DSSettings_impl.m */; };
-		847FCA7A16F9F76700D03502 /* UIDevice+Addittions.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA4516F9F76700D03502 /* UIDevice+Addittions.m */; };
 		847FCA7B16F9F76700D03502 /* CATransition+AnimationsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA4616F9F76700D03502 /* CATransition+AnimationsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		847FCA7C16F9F76700D03502 /* CATransition+AnimationsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA4716F9F76700D03502 /* CATransition+AnimationsBuilder.m */; };
 		847FCA7D16F9F76700D03502 /* NSArray+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA4816F9F76700D03502 /* NSArray+Extras.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,8 +62,6 @@
 		847FCAA116F9F76700D03502 /* UIApplication+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA6C16F9F76700D03502 /* UIApplication+DSAdditions.m */; };
 		847FCAA216F9F76700D03502 /* UIBarButtonItem+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA6D16F9F76700D03502 /* UIBarButtonItem+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		847FCAA316F9F76700D03502 /* UIBarButtonItem+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA6E16F9F76700D03502 /* UIBarButtonItem+DSAdditions.m */; };
-		847FCAA416F9F76700D03502 /* UIDevice+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA6F16F9F76700D03502 /* UIDevice+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		847FCAA516F9F76700D03502 /* UIDevice+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA7016F9F76700D03502 /* UIDevice+Additions.m */; };
 		847FCAA616F9F76700D03502 /* UITableView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA7116F9F76700D03502 /* UITableView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		847FCAA716F9F76700D03502 /* UITableView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA7216F9F76700D03502 /* UITableView+DSAdditions.m */; };
 		847FCAA816F9F76700D03502 /* UIView+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA7316F9F76700D03502 /* UIView+Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,7 +70,6 @@
 		847FCAAB16F9F76700D03502 /* UIView+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA7616F9F76700D03502 /* UIView+Resizing.m */; };
 		847FCAAC16F9F76700D03502 /* XibLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA7716F9F76700D03502 /* XibLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		847FCAAD16F9F76700D03502 /* XibLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA7816F9F76700D03502 /* XibLoader.m */; };
-		847FCAAE16F9F76700D03502 /* UIDevice+Addittions.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA7916F9F76700D03502 /* UIDevice+Addittions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		849D04DC17702FC300BCD7A5 /* DSDateFormatterCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D04DA17702FC300BCD7A5 /* DSDateFormatterCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		849D04DD17702FC300BCD7A5 /* DSDateFormatterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D04DB17702FC300BCD7A5 /* DSDateFormatterCache.m */; };
 		AED6C1971465E55000D9B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1961465E55000D9B44E /* Foundation.framework */; };
@@ -118,20 +122,25 @@
 		AED6C2951465EF5200D9B44E /* PGTimeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AED6C2881465EF4F00D9B44E /* PGTimeFunctions.m */; };
 		AED6C2961465EF5200D9B44E /* PGSMSBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = AED6C28B1465EF5000D9B44E /* PGSMSBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED6C2971465EF5200D9B44E /* PGSMSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = AED6C28C1465EF5000D9B44E /* PGSMSBridge.m */; };
-		AED6C2981465EF5200D9B44E /* PGAccelerometerMovementDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = AED6C28F1465EF5200D9B44E /* PGAccelerometerMovementDetector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AED6C2991465EF5200D9B44E /* PGAccelerometerMovementDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = AED6C2901465EF5200D9B44E /* PGAccelerometerMovementDetector.m */; };
 		AED6C29A1465EF5200D9B44E /* DSVibrator.h in Headers */ = {isa = PBXBuildFile; fileRef = AED6C2921465EF5200D9B44E /* DSVibrator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED6C29B1465EF5200D9B44E /* DSVibrator.m in Sources */ = {isa = PBXBuildFile; fileRef = AED6C2931465EF5200D9B44E /* DSVibrator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0900F606178826B000D92D39 /* DSCFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCFunctions.h; sourceTree = "<group>"; };
+		0900F607178826B000D92D39 /* DSCFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCFunctions.m; sourceTree = "<group>"; };
+		0900F61117882D1D00D92D39 /* QRunLoopOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRunLoopOperation.h; sourceTree = "<group>"; };
+		0900F61217882D1D00D92D39 /* QRunLoopOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRunLoopOperation.m; sourceTree = "<group>"; };
+		0900F61317882D1D00D92D39 /* QWatchedOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWatchedOperationQueue.h; sourceTree = "<group>"; };
+		0900F61417882D1D00D92D39 /* QWatchedOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWatchedOperationQueue.m; sourceTree = "<group>"; };
+		0900F61B17883CAF00D92D39 /* UIDevice+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Additions.h"; sourceTree = "<group>"; };
+		0900F61C17883CAF00D92D39 /* UIDevice+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Additions.m"; sourceTree = "<group>"; };
 		84444FDF176FB67A00602FCB /* CStringsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CStringsFunctions.h; sourceTree = "<group>"; };
 		84444FE0176FB67A00602FCB /* CStringsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CStringsFunctions.m; sourceTree = "<group>"; };
 		84444FE1176FB67A00602FCB /* DSRuntimeHacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRuntimeHacker.h; sourceTree = "<group>"; };
 		84444FE2176FB67A00602FCB /* DSRuntimeHacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRuntimeHacker.m; sourceTree = "<group>"; };
 		84444FE3176FB67A00602FCB /* DSSettings_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSettings_impl.h; sourceTree = "<group>"; };
 		84444FE4176FB67A00602FCB /* DSSettings_impl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSettings_impl.m; sourceTree = "<group>"; };
-		847FCA4516F9F76700D03502 /* UIDevice+Addittions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Addittions.m"; sourceTree = "<group>"; };
 		847FCA4616F9F76700D03502 /* CATransition+AnimationsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransition+AnimationsBuilder.h"; sourceTree = "<group>"; };
 		847FCA4716F9F76700D03502 /* CATransition+AnimationsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransition+AnimationsBuilder.m"; sourceTree = "<group>"; };
 		847FCA4816F9F76700D03502 /* NSArray+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extras.h"; sourceTree = "<group>"; };
@@ -173,8 +182,6 @@
 		847FCA6C16F9F76700D03502 /* UIApplication+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+DSAdditions.m"; sourceTree = "<group>"; };
 		847FCA6D16F9F76700D03502 /* UIBarButtonItem+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+DSAdditions.h"; sourceTree = "<group>"; };
 		847FCA6E16F9F76700D03502 /* UIBarButtonItem+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+DSAdditions.m"; sourceTree = "<group>"; };
-		847FCA6F16F9F76700D03502 /* UIDevice+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Additions.h"; sourceTree = "<group>"; };
-		847FCA7016F9F76700D03502 /* UIDevice+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Additions.m"; sourceTree = "<group>"; };
 		847FCA7116F9F76700D03502 /* UITableView+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DSAdditions.h"; sourceTree = "<group>"; };
 		847FCA7216F9F76700D03502 /* UITableView+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DSAdditions.m"; sourceTree = "<group>"; };
 		847FCA7316F9F76700D03502 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
@@ -183,12 +190,11 @@
 		847FCA7616F9F76700D03502 /* UIView+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Resizing.m"; sourceTree = "<group>"; };
 		847FCA7716F9F76700D03502 /* XibLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XibLoader.h; sourceTree = "<group>"; };
 		847FCA7816F9F76700D03502 /* XibLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XibLoader.m; sourceTree = "<group>"; };
-		847FCA7916F9F76700D03502 /* UIDevice+Addittions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Addittions.h"; sourceTree = "<group>"; };
 		849D04DA17702FC300BCD7A5 /* DSDateFormatterCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDateFormatterCache.h; sourceTree = "<group>"; };
 		849D04DB17702FC300BCD7A5 /* DSDateFormatterCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDateFormatterCache.m; sourceTree = "<group>"; };
 		AED6C1931465E55000D9B44E /* libDSLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDSLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6C1961465E55000D9B44E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AED6C19A1465E55000D9B44E /* DSLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DSLib-Prefix.pch"; path = "DSLib/DSLib-Prefix.pch"; sourceTree = "<group>"; };
+		AED6C19A1465E55000D9B44E /* DSLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLib-Prefix.pch"; sourceTree = "<group>"; };
 		AED6C1BA1465E77600D9B44E /* cg_generate_objc.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = cg_generate_objc.rb; sourceTree = "<group>"; };
 		AED6C1BB1465E77600D9B44E /* generate_constants.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generate_constants.rb; sourceTree = "<group>"; };
 		AED6C1BC1465E77600D9B44E /* generate_constants_h.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = generate_constants_h.erb; sourceTree = "<group>"; };
@@ -253,8 +259,6 @@
 		AED6C2881465EF4F00D9B44E /* PGTimeFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGTimeFunctions.m; sourceTree = "<group>"; };
 		AED6C28B1465EF5000D9B44E /* PGSMSBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSMSBridge.h; sourceTree = "<group>"; };
 		AED6C28C1465EF5000D9B44E /* PGSMSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGSMSBridge.m; sourceTree = "<group>"; };
-		AED6C28F1465EF5200D9B44E /* PGAccelerometerMovementDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAccelerometerMovementDetector.h; sourceTree = "<group>"; };
-		AED6C2901465EF5200D9B44E /* PGAccelerometerMovementDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGAccelerometerMovementDetector.m; sourceTree = "<group>"; };
 		AED6C2921465EF5200D9B44E /* DSVibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSVibrator.h; sourceTree = "<group>"; };
 		AED6C2931465EF5200D9B44E /* DSVibrator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSVibrator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,6 +276,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0900F61017882D1D00D92D39 /* QHTTPOperation */ = {
+			isa = PBXGroup;
+			children = (
+				0900F61117882D1D00D92D39 /* QRunLoopOperation.h */,
+				0900F61217882D1D00D92D39 /* QRunLoopOperation.m */,
+				0900F61317882D1D00D92D39 /* QWatchedOperationQueue.h */,
+				0900F61417882D1D00D92D39 /* QWatchedOperationQueue.m */,
+			);
+			path = QHTTPOperation;
+			sourceTree = "<group>";
+		};
 		84444FDE176FB67A00602FCB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +355,7 @@
 		AED6C1AB1465E77600D9B44E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0900F61017882D1D00D92D39 /* QHTTPOperation */,
 				AED6C2861465EF4E00D9B44E /* Helpers */,
 				AED6C2891465EF4F00D9B44E /* Network */,
 				AED6C28D1465EF5000D9B44E /* SystemClasses */,
@@ -359,7 +375,8 @@
 		AED6C1AC1465E77600D9B44E /* Additions */ = {
 			isa = PBXGroup;
 			children = (
-				847FCA4516F9F76700D03502 /* UIDevice+Addittions.m */,
+				0900F61B17883CAF00D92D39 /* UIDevice+Additions.h */,
+				0900F61C17883CAF00D92D39 /* UIDevice+Additions.m */,
 				847FCA4616F9F76700D03502 /* CATransition+AnimationsBuilder.h */,
 				847FCA4716F9F76700D03502 /* CATransition+AnimationsBuilder.m */,
 				847FCA4816F9F76700D03502 /* NSArray+Extras.h */,
@@ -401,8 +418,6 @@
 				847FCA6C16F9F76700D03502 /* UIApplication+DSAdditions.m */,
 				847FCA6D16F9F76700D03502 /* UIBarButtonItem+DSAdditions.h */,
 				847FCA6E16F9F76700D03502 /* UIBarButtonItem+DSAdditions.m */,
-				847FCA6F16F9F76700D03502 /* UIDevice+Additions.h */,
-				847FCA7016F9F76700D03502 /* UIDevice+Additions.m */,
 				847FCA7116F9F76700D03502 /* UITableView+DSAdditions.h */,
 				847FCA7216F9F76700D03502 /* UITableView+DSAdditions.m */,
 				847FCA7316F9F76700D03502 /* UIView+Layout.h */,
@@ -411,7 +426,6 @@
 				847FCA7616F9F76700D03502 /* UIView+Resizing.m */,
 				847FCA7716F9F76700D03502 /* XibLoader.h */,
 				847FCA7816F9F76700D03502 /* XibLoader.m */,
-				847FCA7916F9F76700D03502 /* UIDevice+Addittions.h */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -594,6 +608,8 @@
 				849D04D917702FC300BCD7A5 /* DateFormatterCache */,
 				AED6C2871465EF4F00D9B44E /* PGTimeFunctions.h */,
 				AED6C2881465EF4F00D9B44E /* PGTimeFunctions.m */,
+				0900F606178826B000D92D39 /* DSCFunctions.h */,
+				0900F607178826B000D92D39 /* DSCFunctions.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -618,19 +634,9 @@
 		AED6C28D1465EF5000D9B44E /* SystemClasses */ = {
 			isa = PBXGroup;
 			children = (
-				AED6C28E1465EF5200D9B44E /* AccelermoterMovementDetector */,
 				AED6C2911465EF5200D9B44E /* DSVibrator */,
 			);
 			path = SystemClasses;
-			sourceTree = "<group>";
-		};
-		AED6C28E1465EF5200D9B44E /* AccelermoterMovementDetector */ = {
-			isa = PBXGroup;
-			children = (
-				AED6C28F1465EF5200D9B44E /* PGAccelerometerMovementDetector.h */,
-				AED6C2901465EF5200D9B44E /* PGAccelerometerMovementDetector.m */,
-			);
-			path = AccelermoterMovementDetector;
 			sourceTree = "<group>";
 		};
 		AED6C2911465EF5200D9B44E /* DSVibrator */ = {
@@ -659,12 +665,15 @@
 				AED6C1FE1465E77600D9B44E /* DependencyRegister.h in Headers */,
 				AED6C2001465E77600D9B44E /* DependencyResolver+Private.h in Headers */,
 				AED6C2021465E77600D9B44E /* DependencyResolver+Register.h in Headers */,
+				0900F61517882D1D00D92D39 /* QRunLoopOperation.h in Headers */,
 				AED6C2041465E77600D9B44E /* DependencyResolver.h in Headers */,
 				AED6C2061465E77600D9B44E /* FontsDB.h in Headers */,
+				0900F61717882D1D00D92D39 /* QWatchedOperationQueue.h in Headers */,
 				AED6C2081465E77600D9B44E /* DSFontManager.h in Headers */,
 				AED6C20A1465E77600D9B44E /* DSActivityIndicator.h in Headers */,
 				AED6C2721465EF3200D9B44E /* DSFlashingImageView.h in Headers */,
 				AED6C2741465EF3200D9B44E /* DSRotatingImageView.h in Headers */,
+				0900F61D17883CAF00D92D39 /* UIDevice+Additions.h in Headers */,
 				AED6C2761465EF3200D9B44E /* DSSlider.h in Headers */,
 				AED6C2781465EF3200D9B44E /* DSSliderDelegate.h in Headers */,
 				AED6C2791465EF3200D9B44E /* PGSlider.h in Headers */,
@@ -676,8 +685,8 @@
 				AED6C2831465EF3200D9B44E /* DSValueChooserViewController.h in Headers */,
 				AED6C2851465EF3200D9B44E /* DSValueChooserViewControllerDelegate.h in Headers */,
 				AED6C2961465EF5200D9B44E /* PGSMSBridge.h in Headers */,
-				AED6C2981465EF5200D9B44E /* PGAccelerometerMovementDetector.h in Headers */,
 				847FCA7B16F9F76700D03502 /* CATransition+AnimationsBuilder.h in Headers */,
+				0900F608178826B000D92D39 /* DSCFunctions.h in Headers */,
 				847FCA7D16F9F76700D03502 /* NSArray+Extras.h in Headers */,
 				847FCA7F16F9F76700D03502 /* NSArray+ObjectsQuery.h in Headers */,
 				847FCA8116F9F76700D03502 /* NSFileManager+Directories.h in Headers */,
@@ -698,12 +707,10 @@
 				847FCA9E16F9F76700D03502 /* NSObject+DSAdditions.h in Headers */,
 				847FCAA016F9F76700D03502 /* UIApplication+DSAdditions.h in Headers */,
 				847FCAA216F9F76700D03502 /* UIBarButtonItem+DSAdditions.h in Headers */,
-				847FCAA416F9F76700D03502 /* UIDevice+Additions.h in Headers */,
 				847FCAA616F9F76700D03502 /* UITableView+DSAdditions.h in Headers */,
 				847FCAA816F9F76700D03502 /* UIView+Layout.h in Headers */,
 				847FCAAA16F9F76700D03502 /* UIView+Resizing.h in Headers */,
 				847FCAAC16F9F76700D03502 /* XibLoader.h in Headers */,
-				847FCAAE16F9F76700D03502 /* UIDevice+Addittions.h in Headers */,
 				84444FE5176FB67A00602FCB /* CStringsFunctions.h in Headers */,
 				84444FE7176FB67A00602FCB /* DSRuntimeHacker.h in Headers */,
 				84444FE9176FB67A00602FCB /* DSSettings_impl.h in Headers */,
@@ -737,7 +744,7 @@
 		AED6C18A1465E55000D9B44E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "DS ltd.";
 			};
 			buildConfigurationList = AED6C18D1465E55000D9B44E /* Build configuration list for PBXProject "DSLib" */;
@@ -772,6 +779,7 @@
 				AED6C2031465E77600D9B44E /* DependencyResolver+Register.m in Sources */,
 				AED6C2051465E77600D9B44E /* DependencyResolver.m in Sources */,
 				AED6C2071465E77600D9B44E /* FontsDB.m in Sources */,
+				0900F61817882D1D00D92D39 /* QWatchedOperationQueue.m in Sources */,
 				AED6C2091465E77600D9B44E /* DSFontManager.m in Sources */,
 				AED6C20B1465E77600D9B44E /* DSActivityIndicator.m in Sources */,
 				AED6C2731465EF3200D9B44E /* DSFlashingImageView.m in Sources */,
@@ -784,9 +792,7 @@
 				AED6C2841465EF3200D9B44E /* DSValueChooserViewController.m in Sources */,
 				AED6C2951465EF5200D9B44E /* PGTimeFunctions.m in Sources */,
 				AED6C2971465EF5200D9B44E /* PGSMSBridge.m in Sources */,
-				AED6C2991465EF5200D9B44E /* PGAccelerometerMovementDetector.m in Sources */,
 				AED6C29B1465EF5200D9B44E /* DSVibrator.m in Sources */,
-				847FCA7A16F9F76700D03502 /* UIDevice+Addittions.m in Sources */,
 				847FCA7C16F9F76700D03502 /* CATransition+AnimationsBuilder.m in Sources */,
 				847FCA7E16F9F76700D03502 /* NSArray+Extras.m in Sources */,
 				847FCA8016F9F76700D03502 /* NSArray+ObjectsQuery.m in Sources */,
@@ -796,18 +802,20 @@
 				847FCA8816F9F76700D03502 /* UIAlertView+Additions.m in Sources */,
 				847FCA8A16F9F76700D03502 /* UIApplication+KeyboardView.m in Sources */,
 				847FCA8C16F9F76700D03502 /* UIFont+FromString.m in Sources */,
+				0900F61E17883CAF00D92D39 /* UIDevice+Additions.m in Sources */,
 				847FCA8E16F9F76700D03502 /* UIScreen+Availability.m in Sources */,
 				847FCA9016F9F76700D03502 /* UIView+XibLoading.m in Sources */,
 				847FCA9316F9F76700D03502 /* NSData+OAdditions.m in Sources */,
 				847FCA9516F9F76700D03502 /* NSDate+OAddittions.m in Sources */,
 				847FCA9716F9F76700D03502 /* NSDictionary+JSONDictionary.m in Sources */,
+				0900F609178826B000D92D39 /* DSCFunctions.m in Sources */,
 				847FCA9916F9F76700D03502 /* NSMutableArray+Additions.m in Sources */,
+				0900F61617882D1D00D92D39 /* QRunLoopOperation.m in Sources */,
 				847FCA9B16F9F76700D03502 /* NSMutableURLRequest+POSTData.m in Sources */,
 				847FCA9D16F9F76700D03502 /* NSObject+DeepCopy.m in Sources */,
 				847FCA9F16F9F76700D03502 /* NSObject+DSAdditions.m in Sources */,
 				847FCAA116F9F76700D03502 /* UIApplication+DSAdditions.m in Sources */,
 				847FCAA316F9F76700D03502 /* UIBarButtonItem+DSAdditions.m in Sources */,
-				847FCAA516F9F76700D03502 /* UIDevice+Additions.m in Sources */,
 				847FCAA716F9F76700D03502 /* UITableView+DSAdditions.m in Sources */,
 				847FCAA916F9F76700D03502 /* UIView+Layout.m in Sources */,
 				847FCAAB16F9F76700D03502 /* UIView+Resizing.m in Sources */,
@@ -826,8 +834,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -843,9 +852,12 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -854,8 +866,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -864,7 +877,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
