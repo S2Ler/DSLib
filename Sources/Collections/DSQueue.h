@@ -1,16 +1,15 @@
 #import <Foundation/Foundation.h>
 
 /** First In First Out queue.
- If number of items exceed theCapacity defined in init method the object which
- came first will be removed. */
+ If number of items exceed theCapacity defined in initWithCapacity: method the object which
+ came first will be removed.
+ If you use init: method the capacity will be NSUIntegerMax.
+ */
 @interface DSQueue : NSObject
 <
 NSCoding,
 NSCopying
-> {
-  /** queue storage object */
-	NSMutableArray *queue_;
-  
+> {  
   /** Maximum number of objects in queue */
   NSUInteger capacity_;
   
@@ -20,12 +19,16 @@ NSCopying
 
 /** \param theCapacity maximum number of items in queue */
 - (id)initWithCapacity:(NSUInteger)theCapacity;
+- (id)init;
++ (DSQueue *)queue;
 
 /** \return Poped object from the queue. The one which pushed last. */
 - (id)pop;
 
 /** Adds theObject to the end of queue */
 - (void)push:(id)theObject;
+/** Adds theObject to the beginning of the queue */
+- (void)pushBack:(id)theObject;
 
 /** The top object in the queue */
 - (id)top;
@@ -36,6 +39,11 @@ NSCopying
 /** Remove all objects from the queue */
 - (void)removeAll;
 
+/** Remove specific objects from queue */
+- (void)removeObjectsInArray:(NSArray *)theObjects;
+
+- (BOOL)containsObject:(id)anObject;
+
 /** \return current number of objects in the queue */
 - (NSUInteger)count;
 
@@ -43,7 +51,7 @@ NSCopying
 - (NSUInteger)capacity;
 
 /** \return YES if capacity == count. 
- NOTE: KVO is supported by this method */
+ \note KVO is supported by this method */
 - (BOOL)isFull;
 
 /** \return enumerator for all objects in queue */
@@ -52,6 +60,7 @@ NSCopying
 /** \return reversed enumerator for all objects in queue */
 - (NSEnumerator *)reverseObjectEnumerator;
 
+- (id)firstObjectWhichEqualsTo:(id)object;
 @end
 
 /** For internal and subclass use */

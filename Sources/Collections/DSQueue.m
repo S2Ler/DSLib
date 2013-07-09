@@ -17,6 +17,9 @@
 @synthesize isFull = isFull_;
 @synthesize queue = queue_;
 
+- (void) dealloc
+{
+}
 
 #pragma mark ----------------inits----------------
 - (id)initWithCapacity:(NSUInteger)theCapacity {
@@ -28,6 +31,22 @@
 	}
 	return self;
 }
+
+- (id)init {
+  self = [super init];
+  if (self) {
+    queue_ = [[NSMutableArray alloc] init];
+    capacity_ = NSUIntegerMax;
+    isFull_ = NO;
+  }
+  return self;
+}
+
++ (DSQueue *)queue
+{
+  return [[DSQueue alloc] init];
+}
+
 
 #pragma mark ----------------queue----------------
 - (id)pop
@@ -63,10 +82,33 @@
   [self updatedIsFullVariable];
 }
 
+- (void)pushBack:(id)theObject
+{
+  if ([queue_ count] == capacity_) {
+    [queue_ removeObjectAtIndex:0];
+    [self updatedIsFullVariable];
+  }
+  
+	[queue_ insertObject:theObject
+               atIndex:0];
+  [self updatedIsFullVariable];  
+}
+
 - (void)removeAll {
 	[queue_ removeAllObjects];
   [self updatedIsFullVariable];
 }
+
+- (void)removeObjectsInArray:(NSArray *)theObjects
+{
+  [queue_ removeObjectsInArray:theObjects];
+}
+
+- (BOOL)containsObject:(id)anObject
+{
+  return [[self queue] containsObject:anObject];
+}
+
 
 - (NSUInteger)count {
 	return [queue_ count];
@@ -93,6 +135,12 @@
 - (NSEnumerator *)reverseObjectEnumerator {
   return [queue_ reverseObjectEnumerator];
 }
+
+- (id)firstObjectWhichEqualsTo:(id)object
+{
+  return [[self queue] objectAtIndex:[[self queue] indexOfObject:object]];
+}
+
 
 - (void)updatedIsFullVariable {
   [self setIsFull:([self count] >= [self capacity])];

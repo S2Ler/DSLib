@@ -117,12 +117,12 @@
   else
   {
     // Register to receive a notification when the movie is in memory and ready to play.
-    [[NSNotificationCenter defaultCenter]
-		 addObserver:self
-		 selector:@selector(moviePreloadDidFinish:) 
-		// name:MPMoviePlayerContentPreloadDidFinishNotification
-		 name:MPMoviePlayerLoadStateDidChangeNotification
-		 object:nil];
+//    [[NSNotificationCenter defaultCenter]
+//		 addObserver:self
+//		 selector:@selector(moviePreloadDidFinish:) 
+//		// name:MPMoviePlayerContentPreloadDidFinishNotification
+//		 name:MPMoviePlayerLoadStateDidChangeNotification
+//		 object:nil];
   }
 	
   // Register to receive a notification when the movie has finished playing. 

@@ -14,5 +14,8 @@
 - (id)ds_objectAtIndex:(NSUInteger)index;
 
 - (NSArray *)imagesArray;
+
+/** @return array of arrays. Each array contains objects which has equal keyPath values */
+- (NSArray *)groupObjectsByKeyPath:(NSString *)keyPath;
 @end
 
