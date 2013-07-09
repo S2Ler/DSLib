@@ -1,5 +1,8 @@
 
+#if TARGET_OS_IPHONE
+
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 @class DSFetchedResultsControllerDelegate;
 
@@ -37,3 +40,5 @@ didInsertItemAtIndexPath:(NSIndexPath *)theIndexPath;
 - (id)initWithTableViewController:(id<DSConfigurableTableController>)controller;
 
 @end
+
+#endif

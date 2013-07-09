@@ -1,3 +1,5 @@
+
+#if TARGET_OS_IPHONE
 #import "DSFetchedResultsControllerDelegate.h"
 
 @implementation DSFetchedResultsControllerDelegate
@@ -125,3 +127,5 @@
 }
 
 @end
+
+#endif

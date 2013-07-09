@@ -17,6 +17,7 @@
 		0900F61E17883CAF00D92D39 /* UIDevice+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900F61C17883CAF00D92D39 /* UIDevice+Additions.m */; };
 		0922D3E0178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0922D3DE178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.h */; };
 		0922D3E1178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0922D3DF178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.m */; };
+		0922D3E3178C951900AAE05E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0922D3E2178C951900AAE05E /* CoreData.framework */; };
 		84444FE5176FB67A00602FCB /* CStringsFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 84444FDF176FB67A00602FCB /* CStringsFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84444FE6176FB67A00602FCB /* CStringsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84444FE0176FB67A00602FCB /* CStringsFunctions.m */; };
 		84444FE7176FB67A00602FCB /* DSRuntimeHacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 84444FE1176FB67A00602FCB /* DSRuntimeHacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -139,6 +140,7 @@
 		0900F61C17883CAF00D92D39 /* UIDevice+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Additions.m"; sourceTree = "<group>"; };
 		0922D3DE178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
 		0922D3DF178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
+		0922D3E2178C951900AAE05E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		84444FDF176FB67A00602FCB /* CStringsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CStringsFunctions.h; sourceTree = "<group>"; };
 		84444FE0176FB67A00602FCB /* CStringsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CStringsFunctions.m; sourceTree = "<group>"; };
 		84444FE1176FB67A00602FCB /* DSRuntimeHacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRuntimeHacker.h; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0922D3E3178C951900AAE05E /* CoreData.framework in Frameworks */,
 				AED6C20D1465E89800D9B44E /* UIKit.framework in Frameworks */,
 				AED6C1971465E55000D9B44E /* Foundation.framework in Frameworks */,
 			);
@@ -333,6 +336,7 @@
 		AED6C1951465E55000D9B44E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0922D3E2178C951900AAE05E /* CoreData.framework */,
 				AED6C20C1465E89800D9B44E /* UIKit.framework */,
 				AED6C1961465E55000D9B44E /* Foundation.framework */,
 			);
