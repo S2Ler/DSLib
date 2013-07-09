@@ -60,6 +60,8 @@
 		847FCAAC16F9F76700D03502 /* XibLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA7716F9F76700D03502 /* XibLoader.h */; };
 		847FCAAD16F9F76700D03502 /* XibLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCA7816F9F76700D03502 /* XibLoader.m */; };
 		847FCAAE16F9F76700D03502 /* UIDevice+Addittions.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCA7916F9F76700D03502 /* UIDevice+Addittions.h */; };
+		847FCAB116F9F86C00D03502 /* NSObject+Observing.h in Headers */ = {isa = PBXBuildFile; fileRef = 847FCAAF16F9F86C00D03502 /* NSObject+Observing.h */; };
+		847FCAB216F9F86C00D03502 /* NSObject+Observing.m in Sources */ = {isa = PBXBuildFile; fileRef = 847FCAB016F9F86C00D03502 /* NSObject+Observing.m */; };
 		AED6C1971465E55000D9B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1961465E55000D9B44E /* Foundation.framework */; };
 		AED6C1F21465E77600D9B44E /* DSCArray.h in Headers */ = {isa = PBXBuildFile; fileRef = AED6C1C11465E77600D9B44E /* DSCArray.h */; };
 		AED6C1F31465E77600D9B44E /* DSCArray.m in Sources */ = {isa = PBXBuildFile; fileRef = AED6C1C21465E77600D9B44E /* DSCArray.m */; };
@@ -170,6 +172,8 @@
 		847FCA7716F9F76700D03502 /* XibLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XibLoader.h; sourceTree = "<group>"; };
 		847FCA7816F9F76700D03502 /* XibLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XibLoader.m; sourceTree = "<group>"; };
 		847FCA7916F9F76700D03502 /* UIDevice+Addittions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Addittions.h"; sourceTree = "<group>"; };
+		847FCAAF16F9F86C00D03502 /* NSObject+Observing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Observing.h"; sourceTree = "<group>"; };
+		847FCAB016F9F86C00D03502 /* NSObject+Observing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Observing.m"; sourceTree = "<group>"; };
 		AED6C1931465E55000D9B44E /* libDSLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDSLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6C1961465E55000D9B44E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AED6C19A1465E55000D9B44E /* DSLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DSLib-Prefix.pch"; path = "DSLib/DSLib-Prefix.pch"; sourceTree = "<group>"; };
@@ -374,6 +378,8 @@
 				847FCA7716F9F76700D03502 /* XibLoader.h */,
 				847FCA7816F9F76700D03502 /* XibLoader.m */,
 				847FCA7916F9F76700D03502 /* UIDevice+Addittions.h */,
+				847FCAAF16F9F86C00D03502 /* NSObject+Observing.h */,
+				847FCAB016F9F86C00D03502 /* NSObject+Observing.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -664,6 +670,7 @@
 				847FCAAA16F9F76700D03502 /* UIView+Resizing.h in Headers */,
 				847FCAAC16F9F76700D03502 /* XibLoader.h in Headers */,
 				847FCAAE16F9F76700D03502 /* UIDevice+Addittions.h in Headers */,
+				847FCAB116F9F86C00D03502 /* NSObject+Observing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +775,7 @@
 				847FCAA916F9F76700D03502 /* UIView+Layout.m in Sources */,
 				847FCAAB16F9F76700D03502 /* UIView+Resizing.m in Sources */,
 				847FCAAD16F9F76700D03502 /* XibLoader.m in Sources */,
+				847FCAB216F9F86C00D03502 /* NSObject+Observing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
