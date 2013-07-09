@@ -15,6 +15,8 @@
 		0900F61817882D1D00D92D39 /* QWatchedOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900F61417882D1D00D92D39 /* QWatchedOperationQueue.m */; };
 		0900F61D17883CAF00D92D39 /* UIDevice+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0900F61B17883CAF00D92D39 /* UIDevice+Additions.h */; };
 		0900F61E17883CAF00D92D39 /* UIDevice+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900F61C17883CAF00D92D39 /* UIDevice+Additions.m */; };
+		0922D3E0178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0922D3DE178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.h */; };
+		0922D3E1178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0922D3DF178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.m */; };
 		84444FE5176FB67A00602FCB /* CStringsFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 84444FDF176FB67A00602FCB /* CStringsFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84444FE6176FB67A00602FCB /* CStringsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84444FE0176FB67A00602FCB /* CStringsFunctions.m */; };
 		84444FE7176FB67A00602FCB /* DSRuntimeHacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 84444FE1176FB67A00602FCB /* DSRuntimeHacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -135,6 +137,8 @@
 		0900F61417882D1D00D92D39 /* QWatchedOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWatchedOperationQueue.m; sourceTree = "<group>"; };
 		0900F61B17883CAF00D92D39 /* UIDevice+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Additions.h"; sourceTree = "<group>"; };
 		0900F61C17883CAF00D92D39 /* UIDevice+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Additions.m"; sourceTree = "<group>"; };
+		0922D3DE178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
+		0922D3DF178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
 		84444FDF176FB67A00602FCB /* CStringsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CStringsFunctions.h; sourceTree = "<group>"; };
 		84444FE0176FB67A00602FCB /* CStringsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CStringsFunctions.m; sourceTree = "<group>"; };
 		84444FE1176FB67A00602FCB /* DSRuntimeHacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRuntimeHacker.h; sourceTree = "<group>"; };
@@ -459,6 +463,8 @@
 		AED6C1C71465E77600D9B44E /* CoreDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				0922D3DE178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.h */,
+				0922D3DF178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.m */,
 				AED6C1C81465E77600D9B44E /* CoreDataManager.h */,
 				AED6C1C91465E77600D9B44E /* CoreDataManager.m */,
 			);
@@ -677,6 +683,7 @@
 				AED6C2761465EF3200D9B44E /* DSSlider.h in Headers */,
 				AED6C2781465EF3200D9B44E /* DSSliderDelegate.h in Headers */,
 				AED6C2791465EF3200D9B44E /* PGSlider.h in Headers */,
+				0922D3E0178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.h in Headers */,
 				AED6C27B1465EF3200D9B44E /* DSCheckButton.h in Headers */,
 				AED6C27D1465EF3200D9B44E /* DSCheckButtonProtocol.h in Headers */,
 				AED6C27E1465EF3200D9B44E /* UISwitch+DSCheckButton.h in Headers */,
@@ -819,6 +826,7 @@
 				847FCAA716F9F76700D03502 /* UITableView+DSAdditions.m in Sources */,
 				847FCAA916F9F76700D03502 /* UIView+Layout.m in Sources */,
 				847FCAAB16F9F76700D03502 /* UIView+Resizing.m in Sources */,
+				0922D3E1178C8ABA00AAE05E /* DSFetchedResultsControllerDelegate.m in Sources */,
 				847FCAAD16F9F76700D03502 /* XibLoader.m in Sources */,
 				84444FE6176FB67A00602FCB /* CStringsFunctions.m in Sources */,
 				84444FE8176FB67A00602FCB /* DSRuntimeHacker.m in Sources */,
