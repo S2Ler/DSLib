@@ -1,10 +1,3 @@
-//
-//  NSObject+Observing.h
-//  FlipDrive
-//
-//  Created by Alexander Belyavskiy on 12/30/11.
-//  Copyright (c) 2011 FlipDrive.com. All rights reserved.
-//
 
 typedef void (^NSObjectObserverBlock)(id object, NSString *keyPath);
 

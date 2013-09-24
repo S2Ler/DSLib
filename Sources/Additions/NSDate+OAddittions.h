@@ -1,8 +1,3 @@
-//
-//  NSDate+OAddittions.h
-//
-//  Created by Alexander Belyavskiy on 2/24/12.
-//
 
 #import <Foundation/Foundation.h>
 

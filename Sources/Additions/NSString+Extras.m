@@ -77,17 +77,6 @@ NSString *const EMAIL_REGEX = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
   return constrains;
 }
 
-- (id)loadPlistNamed
-{
-  NSString *plistPath = [[NSBundle mainBundle] pathForResource:self ofType:@"plist"];
-  if (plistPath) {
-    NSDictionary *plist = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-    return plist;
-  } else {
-    return nil;
-  }
-}
-
 - (BOOL)validateWithRegex:(NSString *)theRegex
 {
   

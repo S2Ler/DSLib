@@ -1,0 +1,200 @@
+"DSMessageDomainWebService.err_not_credits.title" = "Sorry";
+"DSMessageDomainWebService.err_not_credits.body" = "You don't have any credits. Buy some.";
+
+"DSMessageDomainWebService.err_login_incorr.title" = "Login Failed!";
+"DSMessageDomainWebService.err_login_incorr.body" = "Wrong credentials";
+
+"DSMessageDomainWebService.err_acc_exist.title" = "Account Exists!";
+"DSMessageDomainWebService.err_acc_exist.body" = "This email address is already signed up to use Snappy Recruit.";
+
+"DSMessageDomainWebService.err_unknown.title" = "Ooops...";
+"DSMessageDomainWebService.err_unknown.body" = "Something really bad happened. Please contact me by reception@ingeniuslabs.com.au";
+
+"DSMessageDomainWebService.err_job_not_exist.title" = "Ooops...";
+"DSMessageDomainWebService.err_job_not_exist.body" = "Something really bad happened. Please contact me by reception@ingeniuslabs.com.au";
+
+"DSMessageDomainWebService.err_subcategory_not_exist.title" = "Ooops...";
+"DSMessageDomainWebService.err_subcategory_not_exist.body" = "Something really bad happened. Please contact me by reception@ingeniuslabs.com.au";
+
+"DSMessageDomainWebService.err_jobAd_no_closed.title" = "Ooops...";
+"DSMessageDomainWebService.err_jobAd_no_closed.body" = "Something really bad happened. Please contact me by reception@ingeniuslabs.com.au";
+
+"DSMessageDomainWebService.err_acc_not_exist.title" = "Ooops...";
+"DSMessageDomainWebService.err_acc_not_exist.body" = "Something really bad happened. Please contact me by reception@ingeniuslabs.com.au";
+
+"DSMessageDomainWebService.err_employer_not_login.title" = "Unknown error";
+"DSMessageDomainWebService.err_employer_not_login.body" = "Please Logout and login again.";
+
+"DSMessageDomainWebService.err_countries_not_found.title" = "Unknown Error";
+"DSMessageDomainWebService.err_countries_not_found.body" = "Please try again.";
+
+"DSMessageDomainWebService.err_employeу_not_login.title" = "Unknown error";
+"DSMessageDomainWebService.err_employeу_not_login.body" = "Please Logout and login again.";
+
+"DSMessageDomainWebService.err_check_fails.title" = "Ooops...";
+"DSMessageDomainWebService.err_check_fails.body" = "Something really bad happened. Please contact me by reception@ingeniuslabs.com.au";
+
+"DSMessageDomainWebService.err_UID_incorr.title" = "Ooops...";
+"DSMessageDomainWebService.err_UID_incorr.body" = "Something really bad happened. Please contact me by reception@ingeniuslabs.com.au";
+
+"DSMessageDomainWebService.err_input_incorr.title" = "Ooops...";
+"DSMessageDomainWebService.err_input_incorr.body" = "Something really bad happened. Please contact me by reception@ingeniuslabs.com.au";
+
+"DSMessageDomainWebService.err_countries_not_found.title" = "Ooops...";
+"DSMessageDomainWebService.err_countries_not_found.body" = "Something really bad happened. Please contact me by reception@ingeniuslabs.com.au";
+
+"DSMessageDomainWebService.err_email_not_exist.title" = "Check you email";
+"DSMessageDomainWebService.err_email_not_exist.body" = "There is no an account with the specified email";
+
+"DSMessageDomainWebService.err_edit_timeout.title" = "Edit timeout";
+"DSMessageDomainWebService.err_edit_timeout.body" = "You can edit ad only during 15 minutes after creation";
+
+"DSMessageDomainWebService.code_expired.title" = "Code expired";
+"DSMessageDomainWebService.code_expired.body" = "Your verfication code has been expired. Please reset password again.";
+
+"DSMessageDomainWebService.code_not_valid.title" = "Code isn't valid";
+"DSMessageDomainWebService.code_not_valid.body" = "Verification code isn't valid. Please try again";
+
+"DSMessageDomainWebService.old_pass_not_valid.title" = "Old passcode is incorrect";
+"DSMessageDomainWebService.old_pass_not_valid.body" = "Please try again";
+
+"DSMessageDomainWebService.err_state_not_found.title" = "No State";
+"DSMessageDomainWebService.err_state_not_found.body" = "Selected Country doesn't have states";
+
+"DSMessageDomainNotifications.msg_new_items_in_inbox.title" = "Great news!";
+"DSMessageDomainNotifications.msg_new_items_in_inbox.body" = "You have %@ new job matches.";
+
+"DSMessageDomainNotifications.msg_new_item_in_inbox.title" = "Great news!";
+"DSMessageDomainNotifications.msg_new_item_in_inbox.body" = "You have a new job match.";
+
+"DSMessageDomainNotifications.msg_ad_closed.title" = "Hey!";
+"DSMessageDomainNotifications.msg_ad_closed.body" = "'%@' ad has been closed.";
+
+"DSPurchaseManagerErrorDomain.err_products_is_not_fetched.title" = "Products are not available";
+"DSPurchaseManagerErrorDomain.err_products_is_not_fetched.body" = "Please contact support team";
+
+"DSPurchaseManagerErrorDomain.err_in_app_purchase_disabled.title" = "InApp Purchase disabled";
+"DSPurchaseManagerErrorDomain.err_in_app_purchase_disabled.body" = "Please turn them on in the settings";
+
+"DSPurchaseManagerErrorDomain.err_check_internet_connection.title" = "No Internet";
+"DSPurchaseManagerErrorDomain.err_check_internet_connection.body" = "Check your Internet connection";
+
+"DSPurchaseManagerErrorDomain.err_receipt_invalid.title" = "Purchase invalid";
+"DSPurchaseManagerErrorDomain.err_receipt_invalid.body" = "Please don't use InApp Cracker";
+
+"DSPurchaseManagerErrorDomain.err_no_connection_to_apple.title" = "Apple's servers shut down";
+"DSPurchaseManagerErrorDomain.err_no_connection_to_apple.body" = "Cannot connect to Apple's servers";
+
+"DSPurchaseManagerErrorDomain.err_unknown.title" = "Ooopss.";
+"DSPurchaseManagerErrorDomain.err_unknown.body" = "Unknown error during communication with the server";
+
+"NSURLErrorDomain.-1001.title" = "No Internet";
+"NSURLErrorDomain.-1001.body" = "Please check your internet connection. This app is all about receiving up to the minute information so it's important to have an internet connection.";
+
+"NSURLErrorDomain.-1003.title" = "No Internet";
+"NSURLErrorDomain.-1003.body" = "Please check your internet connection. This app is all about receiving up to the minute information so it's important to have an internet connection.";
+
+"NSURLErrorDomain.-1009.title" = "No Internet";
+"NSURLErrorDomain.-1009.body" = "Please check your internet connection. This app is all about receiving up to the minute information so it's important to have an internet connection.";
+
+"NSURLErrorDomain.-1004.title" = "No Internet";
+"NSURLErrorDomain.-1004.body" = "Please check your internet connection. This app is all about receiving up to the minute information so it's important to have an internet connection.";
+
+"SKErrorDomain.0.title" = "Error";
+"SKErrorDomain.0.body" = "Please try again";
+
+"DSMessageDomainUI.ui_ads_delete_question.title" = "Delete";
+"DSMessageDomainUI.ui_ads_delete_question.body" = "Do you really want to delete these ads from inbox?";
+
+"DSMessageDomainUI.ui_pin_not_match.title" = "PIN Incorrect";
+"DSMessageDomainUI.ui_pin_not_match.body" = "Please try again";
+
+"DSMessageDomainUI.ui_pin_save_question.title" = "Do you want to set new passcode?";
+"DSMessageDomainUI.ui_pin_save_question.body" = "Your new passcode is: %@";
+
+"DSMessageDomainUI.ui_cv_delete_question.title" = "Delete CV?";
+"DSMessageDomainUI.ui_cv_delete_question.body" = "Are you sure you want to remove current CV";
+
+"DSMessageDomainUI.ui_cv_replace_question.title" = "Replace CV?";
+"DSMessageDomainUI.ui_cv_replace_question.body" = "Are you sure you want to replace current CV";
+
+"DSMessageDomainUI.ui_ask_for_unpublish.title" = "Unpublish";
+"DSMessageDomainUI.ui_ask_for_unpublish.body" = "Do you want to unpublish the ad?";
+
+"DSMessageDomainUI.ui_unpublish_success.title" = "Confirmation";
+"DSMessageDomainUI.ui_unpublish_success.body" = "Your ad has now been unpublished and is unavailable within the app.";
+
+"DSMessageDomainUI.err_email_format.title" = "Email Wrong";
+"DSMessageDomainUI.err_email_format.body" = "Check your email and try again";
+
+"DSMessageDomainUI.err_reset_password_email_empty.title" = "Enter Email!";
+"DSMessageDomainUI.err_reset_password_email_empty.body" = "Enter email into the email field and then press on the 'Forgot your password?' link.";
+
+"DSMessageDomainUI.ui_job_ad_description_required.title" = "Description is required";
+"DSMessageDomainUI.ui_job_ad_description_required.body" = "The description must be at least 20 characters in length.";
+
+"DSMessageDomainUI.ui_password_reset_success.title" = "Password Reset";
+"DSMessageDomainUI.ui_password_reset_success.body" = "If you have an account with us then an email with a reset code will be sent to you. Please wait a few minutes for it to arrive.";
+
+"DSMessageDomainUI.ui_password_changed.title" = "Password Changed";
+"DSMessageDomainUI.ui_password_changed.body" = "Your password has been changed successfully";
+
+"DSMessageDomainUI.ui_jobAlert_inList.title" = "Error";
+"DSMessageDomainUI.ui_jobAlert_inList.body" = "%@ '%@' has been already added to the list";
+
+"DSMessageDomainUI.ui_cv_downloaded.title" = "Congratulations";
+"DSMessageDomainUI.ui_cv_downloaded.body" = "Your CV has been successfully downloaded to this app.";
+
+"DSMessageDomainUI.ask_employee_for_logout.title" = "Warning";
+"DSMessageDomainUI.ask_employee_for_logout.body" = "If you logout your inbox will be lost. The only reason to logout would be if you wish to post a job and login as an employer instead.\n\nDo you wish to proceed?";
+
+"DSMessageDomainUI.ui_address_not_verified.title" = "Error";
+"DSMessageDomainUI.ui_address_not_verified.body" = "We can't seem to locate that address, please carefully check that the address you have entered is correct.";
+
+"DSMessageDomainUI.err_cant_send_email.title" = "Email Cannot be sent";
+"DSMessageDomainUI.err_cant_send_email.body" = "Please make sure you have setup mail account in Mail.app";
+
+"DSMessageDomainUI.err_cv_save_failed.title" = "Email Cannot be sent";
+"DSMessageDomainUI.err_cant_send_email.body" = "Please make sure you have setup mail account in Mail.app";
+
+"DSMessageDomainUI.ui_warn_profile_incorrect.title" = "Profile Incorrect";
+"DSMessageDomainUI.ui_warn_profile_incorrect.body" = "Please check your profile";
+
+"DSMessageDomainUI.err_no_contact_option_selected.title" = "Error";
+"DSMessageDomainUI.err_no_contact_option_selected.body" = "Please select at least one contact option";
+
+"DSMessageDomainUI.ui_add_search_criterio_to_job_alerts.title" = "Add this notification?";
+"DSMessageDomainUI.ui_add_search_criterio_to_job_alerts.body" = "Would you like us to add this search to your notifications so we can in future alert you when you receive a match?";
+
+"DSMessageDomainUI.err_username_invalid.title" = "Error";
+"DSMessageDomainUI.err_username_invalid.body" = "Please enter username";
+
+"DSMessageDomainUI.err_search_should_have_category.title" = "Sorry!";
+"DSMessageDomainUI.err_search_should_have_category.body" = "You will need to select at least a category to search on.";
+
+"DSMessageDomainUI.ui_ask_inactivate_account.title" = "Warning!";
+"DSMessageDomainUI.ui_ask_inactivate_account.body" = "Are you sure you wish to change your account to inactive?";
+
+"com.facebook.sdk.0.title" = "Error";
+"com.facebook.sdk.0.body" = "Please check your internet connection and try again";
+
+"DSMessageDomainUI.ui_alerts_delete_question.title" = "Delete";
+"DSMessageDomainUI.ui_alerts_delete_question.body" = "Do you really want to delete the selected job alerts?";
+
+"DSMessageDomainUI.ui_ask_share_employee_apply.title" = "Share";
+"DSMessageDomainUI.ui_ask_share_employee_apply.body" = "You have successfully applied for the position. Would you like to share the job details with others?";
+
+"DSMessageDomainUI.ui_ask_sahre_employer_ad_create.title" = "Share";
+"DSMessageDomainUI.ui_ask_sahre_employer_ad_create.body" = "Your ad has now been published. Would you like to share it?";
+
+"DSMessageDomainUI.ui_ask_add_job_title_to_alerts.title" = "Job Alerts";
+"DSMessageDomainUI.ui_ask_add_job_title_to_alerts.body" = "Would you like to add this subcategory to your alerts?";
+
+"DSMessageDomainUI.ui_trial_mode_description.title" = "Free Credits";
+"DSMessageDomainUI.ui_trial_mode_description.body" = "Lucky you, for a limited period we're allowing employers to post new jobs without charge";
+
+"DSMessageDomainUI.err_employee_login_incorrect.title" = "Login Failed!";
+"DSMessageDomainUI.err_employee_login_incorrect.body" = "Try again";
+
+
+

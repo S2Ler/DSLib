@@ -1,8 +1,3 @@
-//
-//  OCFunctions.h
-//
-//  Created by Alexander Belyavskiy on 4/27/12.
-//
 
 #import <Foundation/Foundation.h>
 

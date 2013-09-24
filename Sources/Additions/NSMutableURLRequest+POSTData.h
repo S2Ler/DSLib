@@ -1,7 +1,3 @@
-//
-//  NSMutableURLRequest(POSTData)
-//
-//  Created by Alexander Belyavskiy on 11/18/12.
 
 #import <Foundation/Foundation.h>
 

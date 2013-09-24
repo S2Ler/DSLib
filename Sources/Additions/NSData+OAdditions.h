@@ -1,7 +1,3 @@
-//
-//  NSData(OAdditions)
-//
-//  Created by Alexander Belyavskiy on 3/19/12
 
 #import <Foundation/Foundation.h>
 

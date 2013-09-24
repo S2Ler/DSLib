@@ -1,8 +1,3 @@
-//
-//  NSDictionary(JSONDictionary)
-//  RapidRecruitApp
-//
-//  Created by Alexander Belyavskiy on 12/20/12.
 
 #import "NSDictionary+JSONDictionary.h"
 

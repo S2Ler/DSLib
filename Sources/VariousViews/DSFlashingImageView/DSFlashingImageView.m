@@ -3,7 +3,7 @@
 #import "DSFlashingImageView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "CATransition+AnimationsBuilder.h"
-#import "PGTimeFunctions.h"
+#import "DSTimeFunctions.h"
 #import "NSArray+Extras.h"
 
 #define FADE_ANIMATION_KEY @"animation.fade"

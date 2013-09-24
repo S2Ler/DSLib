@@ -1,10 +1,3 @@
-//
-//  NSObject+Observing.m
-//  FlipDrive
-//
-//  Created by Alexander Belyavskiy on 12/30/11.
-//  Copyright (c) 2011 FlipDrive.com. All rights reserved.
-//
 
 #pragma mark - include
 #import "NSObject+Observing.h"

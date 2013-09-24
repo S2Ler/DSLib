@@ -19,8 +19,6 @@ extern NSString *const EMAIL_REGEX;
 
 - (BOOL)containsString:(NSString *)theString;
 
-- (id)loadPlistNamed;
-
 - (BOOL)beginsWithString:(NSString *)theString;
 - (unichar)lastChar;
 - (unichar)firstChar;

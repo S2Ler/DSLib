@@ -1,8 +1,3 @@
-//
-//  NSDate+OAddittions.m
-//
-//  Created by Alexander Belyavskiy on 2/24/12.
-//
 
 #import "NSDate+OAddittions.h"
 #import "DSDateFormatterCache.h"

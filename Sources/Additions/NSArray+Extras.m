@@ -1,6 +1,3 @@
-//
-// Adapted from: http://blog.jayway.com/2009/03/28/adding-sorted-inserts-to-uimutablearray/
-//
 
 #import "NSArray+Extras.h"
 
