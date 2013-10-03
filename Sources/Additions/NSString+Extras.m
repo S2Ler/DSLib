@@ -69,6 +69,13 @@ NSString *const EMAIL_REGEX = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
   return fixedString;
 }
 
+- (NSString *)stringWithFirstCharUpperCase
+{
+  NSString *capitalisedSentence = [self stringByReplacingCharactersInRange:NSMakeRange(0,1)
+                                                                withString:[[self  substringToIndex:1] capitalizedString]];
+  return capitalisedSentence;  
+}
+
 - (BOOL)containsString:(NSString *)theString
 {
   if (theString == nil) return NO;

@@ -1,8 +1,3 @@
-//
-//  DSArrayChangeCalculator
-//  uPrintX
-//
-//  Created by Alexander Belyavskiy on 6/3/13.
 
 #import "DSArrayChangeCalculator.h"
 #import "DSArrayChange.h"

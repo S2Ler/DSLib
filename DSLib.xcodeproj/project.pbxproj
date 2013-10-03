@@ -137,11 +137,68 @@
 		0903A41717F0C28300A21270 /* DSGPSTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A41217F0C28300A21270 /* DSGPSTracker.m */; };
 		0903A41817F0C28300A21270 /* DSGPSTrackerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A41317F0C28300A21270 /* DSGPSTrackerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0922D3E3178C951900AAE05E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0922D3E2178C951900AAE05E /* CoreData.framework */; };
+		0928CFCD17F2150100E494E1 /* DSAlertsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0928CFDE17F21C9C00E494E1 /* DSWebServiceFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0928CFDF17F21C9C00E494E1 /* DSWebServiceFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */; };
+		093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 093859D517F1FDD400E8AB0E /* JSONKit.h */; };
+		093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */; };
 		09B8663A17F1B82D003B1070 /* DSTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663817F1B82D003B1070 /* DSTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09B8663B17F1B82D003B1070 /* DSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8663917F1B82D003B1070 /* DSTableViewController.m */; };
 		09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663C17F1B990003B1070 /* DSKeyboardController.h */; };
 		09B8663F17F1B990003B1070 /* DSKeyboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8663D17F1B990003B1070 /* DSKeyboardController.m */; };
 		09B8664517F1BF30003B1070 /* DSKeyboardControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8664417F1BF2B003B1070 /* DSKeyboardControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B8669017F1E5C7003B1070 /* DSWebServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665017F1E5C7003B1070 /* DSWebServiceConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B8669117F1E5C7003B1070 /* DSWebServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8665117F1E5C7003B1070 /* DSWebServiceConfiguration.m */; };
+		09B8669217F1E5C7003B1070 /* DSWebServiceFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665317F1E5C7003B1070 /* DSWebServiceFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B8669317F1E5C7003B1070 /* NSError+DSWebService.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665517F1E5C7003B1070 /* NSError+DSWebService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B8669417F1E5C7003B1070 /* NSError+DSWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8665617F1E5C7003B1070 /* NSError+DSWebService.m */; };
+		09B8669517F1E5C7003B1070 /* DSWebServiceArrayParam.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665817F1E5C7003B1070 /* DSWebServiceArrayParam.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B8669617F1E5C7003B1070 /* DSWebServiceArrayParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8665917F1E5C7003B1070 /* DSWebServiceArrayParam.m */; };
+		09B8669717F1E5C7003B1070 /* DSWebServiceCompositeParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665A17F1E5C7003B1070 /* DSWebServiceCompositeParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B8669817F1E5C7003B1070 /* DSWebServiceCompositeParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8665B17F1E5C7003B1070 /* DSWebServiceCompositeParams.m */; };
+		09B8669917F1E5C7003B1070 /* DSWebServiceParam.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665C17F1E5C7003B1070 /* DSWebServiceParam.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B8669A17F1E5C7003B1070 /* DSWebServiceParamFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665D17F1E5C7003B1070 /* DSWebServiceParamFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B8669B17F1E5C7003B1070 /* DSWebServiceParamFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8665E17F1E5C7003B1070 /* DSWebServiceParamFactory.m */; };
+		09B8669C17F1E5C7003B1070 /* DSWebServiceStringParam.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665F17F1E5C7003B1070 /* DSWebServiceStringParam.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B8669D17F1E5C7003B1070 /* DSWebServiceStringParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8666017F1E5C7003B1070 /* DSWebServiceStringParam.m */; };
+		09B8669E17F1E5C7003B1070 /* DSWebServiceParamsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666217F1E5C7003B1070 /* DSWebServiceParamsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B8669F17F1E5C7003B1070 /* DSWebServiceParamsExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666317F1E5C7003B1070 /* DSWebServiceParamsExporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866A017F1E5C7003B1070 /* DSWebServiceParamsExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8666417F1E5C7003B1070 /* DSWebServiceParamsExporter.m */; };
+		09B866A117F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666517F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866A217F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8666617F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m */; };
+		09B866A317F1E5C7003B1070 /* DSWebServiceQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666817F1E5C7003B1070 /* DSWebServiceQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866A417F1E5C7003B1070 /* DSWebServiceQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8666917F1E5C7003B1070 /* DSWebServiceQueue.m */; };
+		09B866A517F1E5C7003B1070 /* DSWebServiceSerialQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666A17F1E5C7003B1070 /* DSWebServiceSerialQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866A617F1E5C7003B1070 /* DSWebServiceSerialQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8666B17F1E5C7003B1070 /* DSWebServiceSerialQueue.m */; };
+		09B866A717F1E5C7003B1070 /* DSWebServiceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666E17F1E5C7003B1070 /* DSWebServiceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866A817F1E5C7003B1070 /* DSWebServiceRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666F17F1E5C7003B1070 /* DSWebServiceRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866A917F1E5C7003B1070 /* DSWebServiceRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667017F1E5C7003B1070 /* DSWebServiceRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866AA17F1E5C7003B1070 /* DSWebServiceRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667117F1E5C7003B1070 /* DSWebServiceRequestOperation.m */; };
+		09B866AB17F1E5C7003B1070 /* DSFakeWebServiceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667317F1E5C7003B1070 /* DSFakeWebServiceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866AC17F1E5C7003B1070 /* DSFakeWebServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667417F1E5C7003B1070 /* DSFakeWebServiceRequest.m */; };
+		09B866AD17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667517F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866AE17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667617F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m */; };
+		09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667817F1E5C7003B1070 /* DSWebServiceNetRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866B017F1E5C7003B1070 /* DSWebServiceNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667917F1E5C7003B1070 /* DSWebServiceNetRequest.m */; };
+		09B866B117F1E5C7003B1070 /* DSEntityDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667B17F1E5C7003B1070 /* DSEntityDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866B217F1E5C7003B1070 /* DSEntityDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667C17F1E5C7003B1070 /* DSEntityDefinition.m */; };
+		09B866B317F1E5C7003B1070 /* DSWebServiceOperationType.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667D17F1E5C7003B1070 /* DSWebServiceOperationType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866B417F1E5C7003B1070 /* DSWebServiceOperationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667E17F1E5C7003B1070 /* DSWebServiceOperationType.m */; };
+		09B866B517F1E5C7003B1070 /* DSWebServiceRequestsFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667F17F1E5C7003B1070 /* DSWebServiceRequestsFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866B617F1E5C7003B1070 /* DSWebServiceRequestsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668017F1E5C7003B1070 /* DSWebServiceRequestsFactory.m */; };
+		09B866B717F1E5C7003B1070 /* NSManagedObject+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668117F1E5C7003B1070 /* NSManagedObject+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866B817F1E5C7003B1070 /* NSManagedObject+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668217F1E5C7003B1070 /* NSManagedObject+DSAdditions.m */; };
+		09B866B917F1E5C7003B1070 /* DSWebServiceParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668417F1E5C7003B1070 /* DSWebServiceParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866BA17F1E5C7003B1070 /* DSWebServiceParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668517F1E5C7003B1070 /* DSWebServiceParams.m */; };
+		09B866BD17F1E5C7003B1070 /* DSWebServiceResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668917F1E5C7003B1070 /* DSWebServiceResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866BE17F1E5C7003B1070 /* DSWebServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668A17F1E5C7003B1070 /* DSWebServiceResponse.m */; };
+		09B866BF17F1E5C7003B1070 /* DSWebServiceURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668C17F1E5C7003B1070 /* DSWebServiceURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866C017F1E5C7003B1070 /* DSWebServiceURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668D17F1E5C7003B1070 /* DSWebServiceURL.m */; };
+		09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668E17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668F17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m */; };
 		62DD1027E5C608DB51C6E9C6 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD186A895DB68C6D413C16 /* DSPlacemarkPickerViewControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD104144F45B7B8D974698 /* DSChoosePlacemarkAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1CE7615294FAF64B20F9 /* DSChoosePlacemarkAnnotation.m */; };
 		62DD1097F09955B4CD8A1BD6 /* DSChoosePlacemarkAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD134FD1FF9911EA4327A9 /* DSChoosePlacemarkAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -337,11 +394,71 @@
 		0903A41217F0C28300A21270 /* DSGPSTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGPSTracker.m; sourceTree = "<group>"; };
 		0903A41317F0C28300A21270 /* DSGPSTrackerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGPSTrackerDelegate.h; sourceTree = "<group>"; };
 		0922D3E2178C951900AAE05E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAlertsFramework.h; sourceTree = "<group>"; };
+		0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceFunctions.h; sourceTree = "<group>"; };
+		0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceFunctions.m; sourceTree = "<group>"; };
+		093859D517F1FDD400E8AB0E /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		093859D617F1FDD400E8AB0E /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSQueueBasedRequestSender+Private.h"; sourceTree = "<group>"; };
+		098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSQueueBasedRequestSender.h; sourceTree = "<group>"; };
+		098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueueBasedRequestSender.m; sourceTree = "<group>"; };
 		09B8663817F1B82D003B1070 /* DSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTableViewController.h; sourceTree = "<group>"; };
 		09B8663917F1B82D003B1070 /* DSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTableViewController.m; sourceTree = "<group>"; };
 		09B8663C17F1B990003B1070 /* DSKeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSKeyboardController.h; sourceTree = "<group>"; };
 		09B8663D17F1B990003B1070 /* DSKeyboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSKeyboardController.m; sourceTree = "<group>"; };
 		09B8664417F1BF2B003B1070 /* DSKeyboardControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSKeyboardControllerDelegate.h; sourceTree = "<group>"; };
+		09B8665017F1E5C7003B1070 /* DSWebServiceConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceConfiguration.h; sourceTree = "<group>"; };
+		09B8665117F1E5C7003B1070 /* DSWebServiceConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceConfiguration.m; sourceTree = "<group>"; };
+		09B8665217F1E5C7003B1070 /* DSWebServiceConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceConfiguration.plist; sourceTree = "<group>"; };
+		09B8665317F1E5C7003B1070 /* DSWebServiceFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceFramework.h; sourceTree = "<group>"; };
+		09B8665517F1E5C7003B1070 /* NSError+DSWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+DSWebService.h"; sourceTree = "<group>"; };
+		09B8665617F1E5C7003B1070 /* NSError+DSWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+DSWebService.m"; sourceTree = "<group>"; };
+		09B8665817F1E5C7003B1070 /* DSWebServiceArrayParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceArrayParam.h; sourceTree = "<group>"; };
+		09B8665917F1E5C7003B1070 /* DSWebServiceArrayParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceArrayParam.m; sourceTree = "<group>"; };
+		09B8665A17F1E5C7003B1070 /* DSWebServiceCompositeParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceCompositeParams.h; sourceTree = "<group>"; };
+		09B8665B17F1E5C7003B1070 /* DSWebServiceCompositeParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceCompositeParams.m; sourceTree = "<group>"; };
+		09B8665C17F1E5C7003B1070 /* DSWebServiceParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceParam.h; sourceTree = "<group>"; };
+		09B8665D17F1E5C7003B1070 /* DSWebServiceParamFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceParamFactory.h; sourceTree = "<group>"; };
+		09B8665E17F1E5C7003B1070 /* DSWebServiceParamFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceParamFactory.m; sourceTree = "<group>"; };
+		09B8665F17F1E5C7003B1070 /* DSWebServiceStringParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceStringParam.h; sourceTree = "<group>"; };
+		09B8666017F1E5C7003B1070 /* DSWebServiceStringParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceStringParam.m; sourceTree = "<group>"; };
+		09B8666217F1E5C7003B1070 /* DSWebServiceParamsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceParamsBuilder.h; sourceTree = "<group>"; };
+		09B8666317F1E5C7003B1070 /* DSWebServiceParamsExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceParamsExporter.h; sourceTree = "<group>"; };
+		09B8666417F1E5C7003B1070 /* DSWebServiceParamsExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceParamsExporter.m; sourceTree = "<group>"; };
+		09B8666517F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceParamsJSONBuilder.h; sourceTree = "<group>"; };
+		09B8666617F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceParamsJSONBuilder.m; sourceTree = "<group>"; };
+		09B8666817F1E5C7003B1070 /* DSWebServiceQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceQueue.h; sourceTree = "<group>"; };
+		09B8666917F1E5C7003B1070 /* DSWebServiceQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceQueue.m; sourceTree = "<group>"; };
+		09B8666A17F1E5C7003B1070 /* DSWebServiceSerialQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceSerialQueue.h; sourceTree = "<group>"; };
+		09B8666B17F1E5C7003B1070 /* DSWebServiceSerialQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceSerialQueue.m; sourceTree = "<group>"; };
+		09B8666C17F1E5C7003B1070 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		09B8666E17F1E5C7003B1070 /* DSWebServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceRequest.h; sourceTree = "<group>"; };
+		09B8666F17F1E5C7003B1070 /* DSWebServiceRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceRequestDelegate.h; sourceTree = "<group>"; };
+		09B8667017F1E5C7003B1070 /* DSWebServiceRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceRequestOperation.h; sourceTree = "<group>"; };
+		09B8667117F1E5C7003B1070 /* DSWebServiceRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceRequestOperation.m; sourceTree = "<group>"; };
+		09B8667317F1E5C7003B1070 /* DSFakeWebServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFakeWebServiceRequest.h; sourceTree = "<group>"; };
+		09B8667417F1E5C7003B1070 /* DSFakeWebServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFakeWebServiceRequest.m; sourceTree = "<group>"; };
+		09B8667517F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFakeWebServiceRequestBehaviour.h; sourceTree = "<group>"; };
+		09B8667617F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFakeWebServiceRequestBehaviour.m; sourceTree = "<group>"; };
+		09B8667817F1E5C7003B1070 /* DSWebServiceNetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceNetRequest.h; sourceTree = "<group>"; };
+		09B8667917F1E5C7003B1070 /* DSWebServiceNetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceNetRequest.m; sourceTree = "<group>"; };
+		09B8667B17F1E5C7003B1070 /* DSEntityDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEntityDefinition.h; sourceTree = "<group>"; };
+		09B8667C17F1E5C7003B1070 /* DSEntityDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEntityDefinition.m; sourceTree = "<group>"; };
+		09B8667D17F1E5C7003B1070 /* DSWebServiceOperationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceOperationType.h; sourceTree = "<group>"; };
+		09B8667E17F1E5C7003B1070 /* DSWebServiceOperationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceOperationType.m; sourceTree = "<group>"; };
+		09B8667F17F1E5C7003B1070 /* DSWebServiceRequestsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceRequestsFactory.h; sourceTree = "<group>"; };
+		09B8668017F1E5C7003B1070 /* DSWebServiceRequestsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceRequestsFactory.m; sourceTree = "<group>"; };
+		09B8668117F1E5C7003B1070 /* NSManagedObject+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+DSAdditions.h"; sourceTree = "<group>"; };
+		09B8668217F1E5C7003B1070 /* NSManagedObject+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+DSAdditions.m"; sourceTree = "<group>"; };
+		09B8668417F1E5C7003B1070 /* DSWebServiceParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceParams.h; sourceTree = "<group>"; };
+		09B8668517F1E5C7003B1070 /* DSWebServiceParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceParams.m; sourceTree = "<group>"; };
+		09B8668917F1E5C7003B1070 /* DSWebServiceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceResponse.h; sourceTree = "<group>"; };
+		09B8668A17F1E5C7003B1070 /* DSWebServiceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceResponse.m; sourceTree = "<group>"; };
+		09B8668C17F1E5C7003B1070 /* DSWebServiceURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceURL.h; sourceTree = "<group>"; };
+		09B8668D17F1E5C7003B1070 /* DSWebServiceURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceURL.m; sourceTree = "<group>"; };
+		09B8668E17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceURLHTTPMethod.h; sourceTree = "<group>"; };
+		09B8668F17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceURLHTTPMethod.m; sourceTree = "<group>"; };
+		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
 		62DD1034D65FEA7BE4837BAE /* DSCLPlacemarkTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCLPlacemarkTransformer.h; sourceTree = "<group>"; };
 		62DD10482694069BA9C5E531 /* DSUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUIAlertView.m; sourceTree = "<group>"; };
 		62DD11E47C44DDA0A2867834 /* DSFindCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFindCountry.m; sourceTree = "<group>"; };
@@ -413,6 +530,8 @@
 		0903A2D317F0AC8300A21270 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				093859D517F1FDD400E8AB0E /* JSONKit.h */,
+				093859D617F1FDD400E8AB0E /* JSONKit.m */,
 				0903A2D417F0AC8300A21270 /* ArrayChanges */,
 				0903A2DC17F0AC8300A21270 /* DSNetworkActivity.h */,
 				0903A2DD17F0AC8300A21270 /* DSNetworkActivity.m */,
@@ -428,7 +547,8 @@
 				09B8663D17F1B990003B1070 /* DSKeyboardController.m */,
 				09B8664417F1BF2B003B1070 /* DSKeyboardControllerDelegate.h */,
 			);
-			path = Sort;
+			name = Sort;
+			path = ../Sort;
 			sourceTree = "<group>";
 		};
 		0903A2D417F0AC8300A21270 /* ArrayChanges */ = {
@@ -748,6 +868,174 @@
 			path = GPSTracker;
 			sourceTree = "<group>";
 		};
+		098FB25B17F2008600DB9F49 /* DSQueueBasedRequestSender */ = {
+			isa = PBXGroup;
+			children = (
+				098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */,
+				098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */,
+				098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */,
+			);
+			path = DSQueueBasedRequestSender;
+			sourceTree = "<group>";
+		};
+		09B8664E17F1E5C7003B1070 /* ServerBridge */ = {
+			isa = PBXGroup;
+			children = (
+				098FB25B17F2008600DB9F49 /* DSQueueBasedRequestSender */,
+				09B8664F17F1E5C7003B1070 /* Configuration */,
+				09B8665317F1E5C7003B1070 /* DSWebServiceFramework.h */,
+				09B8665417F1E5C7003B1070 /* Error */,
+				09B8665717F1E5C7003B1070 /* Params */,
+				09B8666717F1E5C7003B1070 /* Queue */,
+				09B8666C17F1E5C7003B1070 /* README */,
+				09B8666D17F1E5C7003B1070 /* Requests */,
+				09B8667A17F1E5C7003B1070 /* RequestsFactory */,
+				09B8668617F1E5C7003B1070 /* Response */,
+				09B8668B17F1E5C7003B1070 /* URL */,
+			);
+			path = ServerBridge;
+			sourceTree = "<group>";
+		};
+		09B8664F17F1E5C7003B1070 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				09B8665017F1E5C7003B1070 /* DSWebServiceConfiguration.h */,
+				09B8665117F1E5C7003B1070 /* DSWebServiceConfiguration.m */,
+				09B8665217F1E5C7003B1070 /* DSWebServiceConfiguration.plist */,
+				0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */,
+				0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */,
+				09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		09B8665417F1E5C7003B1070 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				09B8665517F1E5C7003B1070 /* NSError+DSWebService.h */,
+				09B8665617F1E5C7003B1070 /* NSError+DSWebService.m */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		09B8665717F1E5C7003B1070 /* Params */ = {
+			isa = PBXGroup;
+			children = (
+				09B8665817F1E5C7003B1070 /* DSWebServiceArrayParam.h */,
+				09B8665917F1E5C7003B1070 /* DSWebServiceArrayParam.m */,
+				09B8665A17F1E5C7003B1070 /* DSWebServiceCompositeParams.h */,
+				09B8665B17F1E5C7003B1070 /* DSWebServiceCompositeParams.m */,
+				09B8665C17F1E5C7003B1070 /* DSWebServiceParam.h */,
+				09B8665D17F1E5C7003B1070 /* DSWebServiceParamFactory.h */,
+				09B8665E17F1E5C7003B1070 /* DSWebServiceParamFactory.m */,
+				09B8665F17F1E5C7003B1070 /* DSWebServiceStringParam.h */,
+				09B8666017F1E5C7003B1070 /* DSWebServiceStringParam.m */,
+				09B8666117F1E5C7003B1070 /* ParamsExporter */,
+			);
+			path = Params;
+			sourceTree = "<group>";
+		};
+		09B8666117F1E5C7003B1070 /* ParamsExporter */ = {
+			isa = PBXGroup;
+			children = (
+				09B8666217F1E5C7003B1070 /* DSWebServiceParamsBuilder.h */,
+				09B8666317F1E5C7003B1070 /* DSWebServiceParamsExporter.h */,
+				09B8666417F1E5C7003B1070 /* DSWebServiceParamsExporter.m */,
+				09B8666517F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h */,
+				09B8666617F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m */,
+			);
+			path = ParamsExporter;
+			sourceTree = "<group>";
+		};
+		09B8666717F1E5C7003B1070 /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				09B8666817F1E5C7003B1070 /* DSWebServiceQueue.h */,
+				09B8666917F1E5C7003B1070 /* DSWebServiceQueue.m */,
+				09B8666A17F1E5C7003B1070 /* DSWebServiceSerialQueue.h */,
+				09B8666B17F1E5C7003B1070 /* DSWebServiceSerialQueue.m */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		09B8666D17F1E5C7003B1070 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				09B8666E17F1E5C7003B1070 /* DSWebServiceRequest.h */,
+				09B8666F17F1E5C7003B1070 /* DSWebServiceRequestDelegate.h */,
+				09B8667017F1E5C7003B1070 /* DSWebServiceRequestOperation.h */,
+				09B8667117F1E5C7003B1070 /* DSWebServiceRequestOperation.m */,
+				09B8667217F1E5C7003B1070 /* Fake */,
+				09B8667717F1E5C7003B1070 /* Network */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		09B8667217F1E5C7003B1070 /* Fake */ = {
+			isa = PBXGroup;
+			children = (
+				09B8667317F1E5C7003B1070 /* DSFakeWebServiceRequest.h */,
+				09B8667417F1E5C7003B1070 /* DSFakeWebServiceRequest.m */,
+				09B8667517F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.h */,
+				09B8667617F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m */,
+			);
+			path = Fake;
+			sourceTree = "<group>";
+		};
+		09B8667717F1E5C7003B1070 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				09B8667817F1E5C7003B1070 /* DSWebServiceNetRequest.h */,
+				09B8667917F1E5C7003B1070 /* DSWebServiceNetRequest.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		09B8667A17F1E5C7003B1070 /* RequestsFactory */ = {
+			isa = PBXGroup;
+			children = (
+				09B8667B17F1E5C7003B1070 /* DSEntityDefinition.h */,
+				09B8667C17F1E5C7003B1070 /* DSEntityDefinition.m */,
+				09B8667D17F1E5C7003B1070 /* DSWebServiceOperationType.h */,
+				09B8667E17F1E5C7003B1070 /* DSWebServiceOperationType.m */,
+				09B8667F17F1E5C7003B1070 /* DSWebServiceRequestsFactory.h */,
+				09B8668017F1E5C7003B1070 /* DSWebServiceRequestsFactory.m */,
+				09B8668117F1E5C7003B1070 /* NSManagedObject+DSAdditions.h */,
+				09B8668217F1E5C7003B1070 /* NSManagedObject+DSAdditions.m */,
+				09B8668317F1E5C7003B1070 /* ParamsObjects */,
+			);
+			path = RequestsFactory;
+			sourceTree = "<group>";
+		};
+		09B8668317F1E5C7003B1070 /* ParamsObjects */ = {
+			isa = PBXGroup;
+			children = (
+				09B8668417F1E5C7003B1070 /* DSWebServiceParams.h */,
+				09B8668517F1E5C7003B1070 /* DSWebServiceParams.m */,
+			);
+			path = ParamsObjects;
+			sourceTree = "<group>";
+		};
+		09B8668617F1E5C7003B1070 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				09B8668917F1E5C7003B1070 /* DSWebServiceResponse.h */,
+				09B8668A17F1E5C7003B1070 /* DSWebServiceResponse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		09B8668B17F1E5C7003B1070 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				09B8668C17F1E5C7003B1070 /* DSWebServiceURL.h */,
+				09B8668D17F1E5C7003B1070 /* DSWebServiceURL.m */,
+				09B8668E17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h */,
+				09B8668F17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m */,
+			);
+			path = URL;
+			sourceTree = "<group>";
+		};
 		62DD11E92B10A6BB5D096A4D /* DSGeocoder */ = {
 			isa = PBXGroup;
 			children = (
@@ -793,6 +1081,7 @@
 				62DD157786FD5902D0D9B3A8 /* DSMessagesLocalization.strings */,
 				62DD13AE88A68CBC5259F586 /* DSAlertsHandler+SimplifiedAPI.h */,
 				62DD1534F0088E374A3A7597 /* DSAlertsHandler+SimplifiedAPI.m */,
+				0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -868,6 +1157,7 @@
 		AED6C1AB1465E77600D9B44E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				09B8664E17F1E5C7003B1070 /* ServerBridge */,
 				0903A41017F0C28300A21270 /* GPSTracker */,
 				0903A40717F0B4DA00A21270 /* Reachability.h */,
 				0903A40817F0B4DA00A21270 /* Reachability.m */,
@@ -905,6 +1195,8 @@
 				0903A2E017F0AC8300A21270 /* DSArrayChange.h in Headers */,
 				0903A3F117F0AC9100A21270 /* DSFlashingImageView.h in Headers */,
 				0903A3C117F0AC9100A21270 /* XibLoader.h in Headers */,
+				09B866AB17F1E5C7003B1070 /* DSFakeWebServiceRequest.h in Headers */,
+				09B866A317F1E5C7003B1070 /* DSWebServiceQueue.h in Headers */,
 				0903A3EF17F0AC9100A21270 /* DSActivityIndicator.h in Headers */,
 				0903A3FD17F0AC9100A21270 /* UISwitch+DSCheckButton.h in Headers */,
 				0903A3D717F0AC9100A21270 /* DependencyResolver+Private.h in Headers */,
@@ -915,16 +1207,19 @@
 				0903A3D517F0AC9100A21270 /* DependencyRegister.h in Headers */,
 				0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */,
 				0903A38C17F0AC9100A21270 /* CATransition+AnimationsBuilder.h in Headers */,
+				09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */,
 				0903A40217F0AC9100A21270 /* DSValueChooserViewController.h in Headers */,
 				09B8663A17F1B82D003B1070 /* DSTableViewController.h in Headers */,
 				0903A2E317F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.h in Headers */,
 				0903A39B17F0AC9100A21270 /* NSMutableArray+Additions.h in Headers */,
+				09B8669C17F1E5C7003B1070 /* DSWebServiceStringParam.h in Headers */,
 				0903A3B517F0AC9100A21270 /* UIScreen+Availability.h in Headers */,
 				0903A3A717F0AC9100A21270 /* NSString+Extras.h in Headers */,
 				0903A3B117F0AC9100A21270 /* UIDevice+Additions.h in Headers */,
 				0903A39F17F0AC9100A21270 /* NSObject+DeepCopy.h in Headers */,
 				0903A2E717F0AC8300A21270 /* DSNetworkActivity.h in Headers */,
 				0903A3AF17F0AC9100A21270 /* UIBarButtonItem+DSAdditions.h in Headers */,
+				09B8669E17F1E5C7003B1070 /* DSWebServiceParamsBuilder.h in Headers */,
 				0903A3E117F0AC9100A21270 /* DSSettings_impl.h in Headers */,
 				0903A40117F0AC9100A21270 /* PGVideoImageViewDelegate.h in Headers */,
 				0903A3A317F0AC9100A21270 /* NSObject+Observing.h in Headers */,
@@ -932,6 +1227,7 @@
 				0903A3F717F0AC9100A21270 /* DSSliderDelegate.h in Headers */,
 				0903A3C517F0AC9100A21270 /* DSCFLoatDictionary.h in Headers */,
 				0903A3C717F0AC9100A21270 /* DSQueue.h in Headers */,
+				09B866A817F1E5C7003B1070 /* DSWebServiceRequestDelegate.h in Headers */,
 				0903A39D17F0AC9100A21270 /* NSMutableURLRequest+POSTData.h in Headers */,
 				0903A39917F0AC9100A21270 /* NSFileManager+Directories.h in Headers */,
 				0903A39117F0AC9100A21270 /* NSArray+ObjectsQuery.h in Headers */,
@@ -940,14 +1236,19 @@
 				0903A2E217F0AC8300A21270 /* DSArrayChangeApplier.h in Headers */,
 				0903A39317F0AC9100A21270 /* NSData+OAdditions.h in Headers */,
 				0903A3D117F0AC9100A21270 /* DSCFunctions.h in Headers */,
+				09B8669317F1E5C7003B1070 /* NSError+DSWebService.h in Headers */,
 				0903A3BB17F0AC9100A21270 /* UIView+Resizing.h in Headers */,
 				0903A38E17F0AC9100A21270 /* DSTimeFunctions.h in Headers */,
+				09B866BD17F1E5C7003B1070 /* DSWebServiceResponse.h in Headers */,
 				0903A3F517F0AC9100A21270 /* DSSlider.h in Headers */,
 				0903A3DD17F0AC9100A21270 /* CStringsFunctions.h in Headers */,
 				0903A3CF17F0AC9100A21270 /* DSDateFormatterCache.h in Headers */,
 				0903A2E917F0AC8300A21270 /* UIView+ViewsEnumeration.h in Headers */,
+				09B866A517F1E5C7003B1070 /* DSWebServiceSerialQueue.h in Headers */,
 				0903A3CD17F0AC9100A21270 /* DSMacros.h in Headers */,
+				09B8669017F1E5C7003B1070 /* DSWebServiceConfiguration.h in Headers */,
 				0903A3A917F0AC9100A21270 /* UIAlertView+Additions.h in Headers */,
+				09B866A117F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h in Headers */,
 				0903A3A517F0AC9100A21270 /* NSString+Encoding.h in Headers */,
 				0903A3F817F0AC9100A21270 /* PGSlider.h in Headers */,
 				0903A39517F0AC9100A21270 /* NSDate+OAddittions.h in Headers */,
@@ -960,11 +1261,15 @@
 				0903A39717F0AC9100A21270 /* NSDictionary+JSONDictionary.h in Headers */,
 				0903A3FF17F0AC9100A21270 /* PGVideoImageView.h in Headers */,
 				0903A38F17F0AC9100A21270 /* NSArray+Extras.h in Headers */,
+				09B866B117F1E5C7003B1070 /* DSEntityDefinition.h in Headers */,
 				0903A3D917F0AC9100A21270 /* DependencyResolver+Register.h in Headers */,
 				0903A3FA17F0AC9100A21270 /* DSCheckButton.h in Headers */,
 				0903A3AB17F0AC9100A21270 /* UIApplication+DSAdditions.h in Headers */,
 				0903A3DB17F0AC9100A21270 /* DependencyResolver.h in Headers */,
+				09B8669517F1E5C7003B1070 /* DSWebServiceArrayParam.h in Headers */,
+				09B866A717F1E5C7003B1070 /* DSWebServiceRequest.h in Headers */,
 				0903A3A117F0AC9100A21270 /* NSObject+DSAdditions.h in Headers */,
+				09B866B517F1E5C7003B1070 /* DSWebServiceRequestsFactory.h in Headers */,
 				0903A3B317F0AC9100A21270 /* UIFont+FromString.h in Headers */,
 				0903A3ED17F0AC9100A21270 /* FontsDB.h in Headers */,
 				62DD1C90C4EBBDB2502CA983 /* DSAlert.h in Headers */,
@@ -973,28 +1278,45 @@
 				62DD1E915F2215F00929FC3C /* DSAlertButton.h in Headers */,
 				0903A40917F0B4DA00A21270 /* Reachability.h in Headers */,
 				62DD1C6C3614A89A5BF0FF1B /* DSUIAlertView.h in Headers */,
+				09B8669917F1E5C7003B1070 /* DSWebServiceParam.h in Headers */,
 				62DD17ADB8BFA1779019830E /* DSAlertsHandler.h in Headers */,
 				62DD1D2E90263BBAA1002A5B /* DSMessageContext.h in Headers */,
 				62DD10D8A5F859797CC11AF7 /* DSAlertViewFactory.h in Headers */,
 				62DD10D7C5D585E7DF32649A /* DSAlertsSupportCode.h in Headers */,
+				09B8669217F1E5C7003B1070 /* DSWebServiceFramework.h in Headers */,
+				098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */,
 				09B8664517F1BF30003B1070 /* DSKeyboardControllerDelegate.h in Headers */,
+				09B8669A17F1E5C7003B1070 /* DSWebServiceParamFactory.h in Headers */,
 				62DD14ABC283FD7DF3AD2734 /* DSAlertViewDelegate.h in Headers */,
 				62DD130527D6B094184E7AE6 /* DSAlertsHandlerConfiguration.h in Headers */,
+				09B8669717F1E5C7003B1070 /* DSWebServiceCompositeParams.h in Headers */,
 				62DD12A9BE582692B9643004 /* DSAlertsHandler+SimplifiedAPI.h in Headers */,
+				09B866A917F1E5C7003B1070 /* DSWebServiceRequestOperation.h in Headers */,
 				62DD13EB68EB018ACE1AC0F5 /* DSConfiguration.h in Headers */,
 				0903A41817F0C28300A21270 /* DSGPSTrackerDelegate.h in Headers */,
 				62DD1841C6225FE22AA92F1B /* DSAppDelegate.h in Headers */,
 				62DD19FF93EC85DB54E81188 /* DSBlockButton.h in Headers */,
+				093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */,
+				09B866B317F1E5C7003B1070 /* DSWebServiceOperationType.h in Headers */,
 				62DD13C9E2F182E4E22E7D24 /* DSBlockBarButtonItem.h in Headers */,
 				62DD130F46A501A7FFCD1BAE /* DSDataDetector.h in Headers */,
 				09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */,
+				0928CFCD17F2150100E494E1 /* DSAlertsFramework.h in Headers */,
+				09B866B917F1E5C7003B1070 /* DSWebServiceParams.h in Headers */,
 				62DD19B8D7F38D3DAD57B11E /* DSFindCountry.h in Headers */,
 				62DD1F1C5E02B4FD804E774A /* DSGeocoder.h in Headers */,
+				098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */,
 				62DD10B7927E58A293575A03 /* DSGeocoderDelegate.h in Headers */,
+				0928CFDE17F21C9C00E494E1 /* DSWebServiceFunctions.h in Headers */,
 				62DD1DA8BE66CE6176478E95 /* DSCLPlacemarkTransformer.h in Headers */,
+				09B8669F17F1E5C7003B1070 /* DSWebServiceParamsExporter.h in Headers */,
 				62DD1097F09955B4CD8A1BD6 /* DSChoosePlacemarkAnnotation.h in Headers */,
+				09B866AD17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.h in Headers */,
 				62DD188A0EF5C0CA42AAF675 /* DSPlacemarkPickerViewController.h in Headers */,
+				09B866BF17F1E5C7003B1070 /* DSWebServiceURL.h in Headers */,
+				09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */,
 				62DD1027E5C608DB51C6E9C6 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */,
+				09B866B717F1E5C7003B1070 /* NSManagedObject+DSAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1054,6 +1376,8 @@
 				0903A3C617F0AC9100A21270 /* DSCFLoatDictionary.m in Sources */,
 				0903A2EA17F0AC8300A21270 /* UIView+ViewsEnumeration.m in Sources */,
 				0903A3B417F0AC9100A21270 /* UIFont+FromString.m in Sources */,
+				09B866BA17F1E5C7003B1070 /* DSWebServiceParams.m in Sources */,
+				09B866A217F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m in Sources */,
 				0903A3D217F0AC9100A21270 /* DSCFunctions.m in Sources */,
 				0903A40A17F0B4DA00A21270 /* Reachability.m in Sources */,
 				0903A3DE17F0AC9100A21270 /* CStringsFunctions.m in Sources */,
@@ -1063,8 +1387,11 @@
 				0903A3BA17F0AC9100A21270 /* UIView+Layout.m in Sources */,
 				0903A3EE17F0AC9100A21270 /* FontsDB.m in Sources */,
 				0903A3C417F0AC9100A21270 /* DSCArray.m in Sources */,
+				09B8669D17F1E5C7003B1070 /* DSWebServiceStringParam.m in Sources */,
 				0903A39E17F0AC9100A21270 /* NSMutableURLRequest+POSTData.m in Sources */,
+				093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */,
 				0903A3E017F0AC9100A21270 /* DSRuntimeHacker.m in Sources */,
+				09B866B617F1E5C7003B1070 /* DSWebServiceRequestsFactory.m in Sources */,
 				0903A39617F0AC9100A21270 /* NSDate+OAddittions.m in Sources */,
 				0903A3D817F0AC9100A21270 /* DependencyResolver+Private.m in Sources */,
 				0903A3E617F0AC9100A21270 /* QRunLoopOperation.m in Sources */,
@@ -1076,11 +1403,15 @@
 				0903A3C017F0AC9100A21270 /* UIView+XibLoading.m in Sources */,
 				0903A3B217F0AC9100A21270 /* UIDevice+Additions.m in Sources */,
 				09B8663F17F1B990003B1070 /* DSKeyboardController.m in Sources */,
+				09B866AA17F1E5C7003B1070 /* DSWebServiceRequestOperation.m in Sources */,
+				0928CFDF17F21C9C00E494E1 /* DSWebServiceFunctions.m in Sources */,
 				0903A3F217F0AC9100A21270 /* DSFlashingImageView.m in Sources */,
 				0903A3F917F0AC9100A21270 /* PGSlider.m in Sources */,
 				0903A3F417F0AC9100A21270 /* DSRotatingImageView.m in Sources */,
 				0903A3F617F0AC9100A21270 /* DSSlider.m in Sources */,
+				09B866B017F1E5C7003B1070 /* DSWebServiceNetRequest.m in Sources */,
 				0903A39017F0AC9100A21270 /* NSArray+Extras.m in Sources */,
+				09B866C017F1E5C7003B1070 /* DSWebServiceURL.m in Sources */,
 				0903A3DA17F0AC9100A21270 /* DependencyResolver+Register.m in Sources */,
 				0903A3A017F0AC9100A21270 /* NSObject+DeepCopy.m in Sources */,
 				0903A40017F0AC9100A21270 /* PGVideoImageView.m in Sources */,
@@ -1093,6 +1424,8 @@
 				0903A3BE17F0AC9100A21270 /* UIView+Subviews.m in Sources */,
 				0903A39217F0AC9100A21270 /* NSArray+ObjectsQuery.m in Sources */,
 				0903A3FB17F0AC9100A21270 /* DSCheckButton.m in Sources */,
+				09B8669417F1E5C7003B1070 /* NSError+DSWebService.m in Sources */,
+				09B866A617F1E5C7003B1070 /* DSWebServiceSerialQueue.m in Sources */,
 				0903A3A217F0AC9100A21270 /* NSObject+DSAdditions.m in Sources */,
 				0903A3AE17F0AC9100A21270 /* UIApplication+KeyboardView.m in Sources */,
 				0903A2E617F0AC8300A21270 /* DSArrayChangeCalculator.m in Sources */,
@@ -1100,11 +1433,14 @@
 				0903A3BC17F0AC9100A21270 /* UIView+Resizing.m in Sources */,
 				0903A3E217F0AC9100A21270 /* DSSettings_impl.m in Sources */,
 				0903A3A417F0AC9100A21270 /* NSObject+Observing.m in Sources */,
+				09B866B417F1E5C7003B1070 /* DSWebServiceOperationType.m in Sources */,
+				09B866B817F1E5C7003B1070 /* NSManagedObject+DSAdditions.m in Sources */,
 				0903A3E817F0AC9100A21270 /* QWatchedOperationQueue.m in Sources */,
 				0903A3D617F0AC9100A21270 /* DependencyRegister.m in Sources */,
 				0903A3EA17F0AC9100A21270 /* DSVibrator.m in Sources */,
 				0903A3EC17F0AC9100A21270 /* DSFontManager.m in Sources */,
 				0903A3D017F0AC9100A21270 /* DSDateFormatterCache.m in Sources */,
+				09B866AC17F1E5C7003B1070 /* DSFakeWebServiceRequest.m in Sources */,
 				0903A3CE17F0AC9100A21270 /* DSMacros.m in Sources */,
 				0903A38D17F0AC9100A21270 /* CATransition+AnimationsBuilder.m in Sources */,
 				0903A39A17F0AC9100A21270 /* NSFileManager+Directories.m in Sources */,
@@ -1113,14 +1449,23 @@
 				0903A3C817F0AC9100A21270 /* DSQueue.m in Sources */,
 				62DD1F21D685DAF88DB40D0D /* DSAlert.m in Sources */,
 				62DD1AFD36B9F22FEFEB3170 /* DSMessage.m in Sources */,
+				098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */,
+				09B866A017F1E5C7003B1070 /* DSWebServiceParamsExporter.m in Sources */,
 				62DD12DB787C62A67B7990A4 /* DSAlertButton.m in Sources */,
+				09B866AE17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m in Sources */,
+				09B866A417F1E5C7003B1070 /* DSWebServiceQueue.m in Sources */,
 				62DD1E3872904802D5077B3F /* DSUIAlertView.m in Sources */,
 				62DD1569D576C442B9DF1889 /* DSAlertsHandler.m in Sources */,
+				09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */,
 				62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */,
 				62DD1E899DE35CD54E5DC2BF /* DSAlertViewFactory.m in Sources */,
 				62DD1FEFFC22374EBAC3044E /* DSAlertsSupportCode.m in Sources */,
+				09B8669817F1E5C7003B1070 /* DSWebServiceCompositeParams.m in Sources */,
 				62DD1E3812B21714B92C8ACF /* DSAlertsHandlerConfiguration.m in Sources */,
+				09B866BE17F1E5C7003B1070 /* DSWebServiceResponse.m in Sources */,
 				62DD1EF1B0929ACD16CFF64B /* DSAlertsHandler+SimplifiedAPI.m in Sources */,
+				09B8669617F1E5C7003B1070 /* DSWebServiceArrayParam.m in Sources */,
+				09B866B217F1E5C7003B1070 /* DSEntityDefinition.m in Sources */,
 				62DD1DB23EEF8D87DD0C9B15 /* DSConfiguration.m in Sources */,
 				62DD187C5A8A0492EB15FAEE /* DSAppDelegate.m in Sources */,
 				62DD152CB973B9C752B7120C /* DSBlockBarButtonItem.m in Sources */,
@@ -1129,6 +1474,8 @@
 				62DD1622AD022227DFD60F1E /* DSFindCountry.m in Sources */,
 				62DD19FEB4E286474E0B9849 /* DSGeocoder.m in Sources */,
 				09B8663B17F1B82D003B1070 /* DSTableViewController.m in Sources */,
+				09B8669117F1E5C7003B1070 /* DSWebServiceConfiguration.m in Sources */,
+				09B8669B17F1E5C7003B1070 /* DSWebServiceParamFactory.m in Sources */,
 				62DD150B77B3BF0740F534FA /* DSCLPlacemarkTransformer.m in Sources */,
 				62DD104144F45B7B8D974698 /* DSChoosePlacemarkAnnotation.m in Sources */,
 				62DD186A6C4C9F8D37904BC3 /* DSPlacemarkPickerViewController.m in Sources */,

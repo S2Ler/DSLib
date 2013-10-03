@@ -23,7 +23,7 @@ static NSDictionary *DSConfiguration_sharedConfiguration = nil;
 - (NSString *)keyForConfigurationKey:(NSString *)theConfigurationKey
                               scheme:(NSString *)theScheme
 {
-  NSArray *components = [theConfigurationKey componentsSeparatedByString:@"_"];
+  NSArray *components = [theConfigurationKey componentsSeparatedByString:@":"];
   if (theScheme == nil && [components count] == 1) {
     return [components objectAtIndex:0];
   }
@@ -53,17 +53,30 @@ static NSDictionary *DSConfiguration_sharedConfiguration = nil;
       if ([configKey containsString:schemePostfix] == YES || schemePostfix == nil) {
         NSString *key = [self keyForConfigurationKey:configKey scheme:schemePostfix];
         if (key != nil) {
-          [self setValue:obj forKey:key];
+          NSString *keySelectorString = [NSString stringWithFormat:@"set%@:", [key stringWithFirstCharUpperCase]];
+          if ([self respondsToSelector:NSSelectorFromString(keySelectorString)]) {
+            [self setValue:obj forKey:key];
+          }
         }
       }
     }];
+}
+
+- (id)valueForKey:(NSString *)key
+{
+  return [[self configuration] valueForKey:key];
+}
+
+- (id)valueForKeyPath:(NSString *)keyPath
+{
+  return [[self configuration] valueForKeyPath:keyPath];
 }
 
 - (id)initWithConfiguration:(NSDictionary *)theConfiguration
 {
   self = [super init];
   if (self) {
-    _configuration = theConfiguration;
+    _configuration = [theConfiguration copy];
 
     [self loadSettingsFromConfiguration:_configuration scheme:nil];
     [self addObserver:self
@@ -92,15 +105,24 @@ static NSDictionary *DSConfiguration_sharedConfiguration = nil;
   }
 }
 
++ (NSMutableDictionary *)sharedInstancesMap
+{
+    DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
+      return [[NSMutableDictionary alloc] init];
+    });
+}
+
 + (id)sharedInstance
 {
-  static dispatch_once_t isInited = 0;
-  __strong static id _sharedObject = nil;
-  _dispatch_once(&isInited, ^
-  {
-    _sharedObject = [[self alloc] init];
-  });
-  return _sharedObject;;
+  @synchronized(self) {
+    NSString *saveKey = NSStringFromClass([self class]);
+    id sharedInstance = [[self sharedInstancesMap] valueForKey:saveKey];
+    if (!sharedInstance) {
+      sharedInstance = [[self alloc] init];
+      [[self sharedInstancesMap] setValue:sharedInstance forKey:saveKey];
+    }
+    return sharedInstance;
+  }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath

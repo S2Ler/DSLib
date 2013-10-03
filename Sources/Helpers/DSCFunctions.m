@@ -1,6 +1,7 @@
 
 #import "DSCFunctions.h"
 
+
 #if TARGET_OS_IPHONE
 BOOL isIPadIdiom(void)
 {

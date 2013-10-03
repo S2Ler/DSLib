@@ -1,11 +1,6 @@
-//
-//  DSNetworkActivity
-//  RapidRecruitApp
-//
-//  Created by Alexander Belyavskiy on 12/4/12.
 
 #import "DSNetworkActivity.h"
-#import "GCDSingleton.h"
+#import "DSMacros.h"
 
 @interface DSNetworkActivity() {
   NSInteger _activitiesCount;

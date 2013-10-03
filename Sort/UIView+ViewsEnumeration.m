@@ -1,10 +1,3 @@
-//
-//  UIView+ViewsEnumeration.m
-//  uPrintX
-//
-//  Created by Alexander Belyavskiy on 7/23/13.
-//  Copyright (c) 2013 InGenius Labs. All rights reserved.
-//
 
 #import "UIView+ViewsEnumeration.h"
 
@@ -15,5 +8,15 @@
         block(subView);
         [subView enumerateViewsUsingBlock:block];
     }
+}
+
+- (UIView *)firstSuperviewOfClass:(Class)class
+{
+  if ([[self superview] isKindOfClass:class]) {
+    return [self superview];
+  }
+  else {
+    return [[self superview] firstSuperviewOfClass:class];
+  }
 }
 @end

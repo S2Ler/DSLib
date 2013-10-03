@@ -1,19 +1,14 @@
-//
-//  DSArrayChangeApplier_UICollectionView
-//  uPrintX
-//
-//  Created by Alexander Belyavskiy on 6/3/13.
 
 #import "DSArrayChangeApplier_UICollectionView.h"
 #import "DSArrayChange.h"
 
 
 @interface DSArrayChangeApplier_UICollectionView()
-@property (nonatomic, weak) PSUICollectionView *collectionView;
+@property (nonatomic, weak) UICollectionView *collectionView;
 @end
 
 @implementation DSArrayChangeApplier_UICollectionView
-- (id)initWithCollectionView:(PSUICollectionView *)collectionView {
+- (id)initWithCollectionView:(UICollectionView *)collectionView {
     self = [super init];
     if (self) {
         _collectionView = collectionView;

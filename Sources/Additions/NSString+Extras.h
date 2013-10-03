@@ -23,6 +23,7 @@ extern NSString *const EMAIL_REGEX;
 - (unichar)lastChar;
 - (unichar)firstChar;
 - (NSString *)stringForPhoneNumber;
+- (NSString *)stringWithFirstCharUpperCase;
 
 /** \important!!! theLeftDivider shouldn't be equal to theRightDivider */
 - (NSString *)stringBetweenString:(NSString *)theLeftDivider
