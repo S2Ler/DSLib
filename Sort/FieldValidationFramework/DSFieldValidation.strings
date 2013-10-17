@@ -1,0 +1,6 @@
+
+"criterion.email.title" = "Email Wrong";
+"criterion.email.body" = "Check email format";
+
+"criterion.requiredField.title" = "'%@' field is required";
+"criterion.requiredField.body" = "Please fill in '%@' field";

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DSKeyboardControllerDelegate.h"
 
-#define DSKeyboardControllerDebug 1
+#define DSKeyboardControllerDebug 0
 
 @interface DSKeyboardController : NSObject
 @property (nonatomic, weak) id<DSKeyboardControllerDelegate> delegate;

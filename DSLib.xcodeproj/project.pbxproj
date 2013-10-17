@@ -136,18 +136,45 @@
 		0903A41617F0C28300A21270 /* DSGPSTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A41117F0C28300A21270 /* DSGPSTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0903A41717F0C28300A21270 /* DSGPSTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A41217F0C28300A21270 /* DSGPSTracker.m */; };
 		0903A41817F0C28300A21270 /* DSGPSTrackerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A41317F0C28300A21270 /* DSGPSTrackerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C55180ED00C00A0DEEF /* DSCompas.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C53180ED00C00A0DEEF /* DSCompas.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C56180ED00C00A0DEEF /* DSCompas.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C54180ED00C00A0DEEF /* DSCompas.m */; };
+		09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C58180EE84900A0DEEF /* DSCriterionDescriptionViewController.h */; };
+		09162C68180EE84900A0DEEF /* DSFieldValidationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C5B180EE84900A0DEEF /* DSFieldValidationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C69180EE84900A0DEEF /* DSFieldValidationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C5C180EE84900A0DEEF /* DSFieldValidationController.m */; };
+		09162C6A180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C5D180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C6B180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C5E180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C6C180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C5F180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m */; };
+		09162C6D180EE84900A0DEEF /* DSFieldValidationCriterion.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C60180EE84900A0DEEF /* DSFieldValidationCriterion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C6E180EE84900A0DEEF /* DSFieldValidationCriterion.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C61180EE84900A0DEEF /* DSFieldValidationCriterion.m */; };
+		09162C6F180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C62180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C70180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C63180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m */; };
+		09162C71180EE84900A0DEEF /* DSTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C64180EE84900A0DEEF /* DSTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C72180EE84900A0DEEF /* DSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C65180EE84900A0DEEF /* DSTextField.m */; };
+		09162C76180EEB5900A0DEEF /* DSFieldValidationFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C74180EEB5900A0DEEF /* DSFieldValidationFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C93180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C7B180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C94180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C7C180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09162C95180EECC100A0DEEF /* WEPopoverContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C7D180EECC100A0DEEF /* WEPopoverContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C96180EECC100A0DEEF /* WEPopoverContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C7E180EECC100A0DEEF /* WEPopoverContainerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09162C97180EECC100A0DEEF /* WEPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C7F180EECC100A0DEEF /* WEPopoverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C98180EECC100A0DEEF /* WEPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C80180EECC100A0DEEF /* WEPopoverController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09162C99180EECC100A0DEEF /* WEPopoverParentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C81180EECC100A0DEEF /* WEPopoverParentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C9A180EECC100A0DEEF /* WETouchableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C82180EECC100A0DEEF /* WETouchableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09162C9B180EECC100A0DEEF /* WETouchableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C83180EECC100A0DEEF /* WETouchableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09162C9C180EEEB900A0DEEF /* DSCriterionDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C59180EE84900A0DEEF /* DSCriterionDescriptionViewController.m */; };
 		0922D3E3178C951900AAE05E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0922D3E2178C951900AAE05E /* CoreData.framework */; };
 		0928CFCD17F2150100E494E1 /* DSAlertsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0928CFDE17F21C9C00E494E1 /* DSWebServiceFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0928CFDF17F21C9C00E494E1 /* DSWebServiceFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */; };
 		093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 093859D517F1FDD400E8AB0E /* JSONKit.h */; };
 		093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0973572518041E3A00351055 /* DSCustomFontLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0973572618041E3A00351055 /* DSCustomFontLabel.m */; };
 		098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */; };
 		09B8663A17F1B82D003B1070 /* DSTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663817F1B82D003B1070 /* DSTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09B8663B17F1B82D003B1070 /* DSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8663917F1B82D003B1070 /* DSTableViewController.m */; };
-		09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663C17F1B990003B1070 /* DSKeyboardController.h */; };
+		09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663C17F1B990003B1070 /* DSKeyboardController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09B8663F17F1B990003B1070 /* DSKeyboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8663D17F1B990003B1070 /* DSKeyboardController.m */; };
 		09B8664517F1BF30003B1070 /* DSKeyboardControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8664417F1BF2B003B1070 /* DSKeyboardControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09B8669017F1E5C7003B1070 /* DSWebServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665017F1E5C7003B1070 /* DSWebServiceConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -199,6 +226,7 @@
 		09B866C017F1E5C7003B1070 /* DSWebServiceURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668D17F1E5C7003B1070 /* DSWebServiceURL.m */; };
 		09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668E17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668F17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m */; };
+		09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1027E5C608DB51C6E9C6 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD186A895DB68C6D413C16 /* DSPlacemarkPickerViewControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD104144F45B7B8D974698 /* DSChoosePlacemarkAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1CE7615294FAF64B20F9 /* DSChoosePlacemarkAnnotation.m */; };
 		62DD1097F09955B4CD8A1BD6 /* DSChoosePlacemarkAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD134FD1FF9911EA4327A9 /* DSChoosePlacemarkAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -218,8 +246,10 @@
 		62DD1569D576C442B9DF1889 /* DSAlertsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FF31DEBF389A0374834 /* DSAlertsHandler.m */; };
 		62DD156A5BCD9E8F54FAFD25 /* DSDataDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD199D2FC7139BB1616937 /* DSDataDetector.m */; };
 		62DD1622AD022227DFD60F1E /* DSFindCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD11E47C44DDA0A2867834 /* DSFindCountry.m */; };
+		62DD16F1B4C19E58049F683D /* DSDraggingDestinationContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1EBE1FD4CA47F4C2E4FF /* DSDraggingDestinationContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD17944D3580379A737D2A /* DSAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD15ACA99084F023C7B4AF /* DSAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD17ADB8BFA1779019830E /* DSAlertsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154F33AD8BF741BCB314 /* DSAlertsHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62DD17C01B3B707487A95F6D /* DSDragAndDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD13ED0EF18F1D1FD6F1A7 /* DSDragAndDropController.m */; };
 		62DD1841C6225FE22AA92F1B /* DSAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD18C9F54D0E5F44F3F6C6 /* DSAppDelegate.h */; };
 		62DD186A6C4C9F8D37904BC3 /* DSPlacemarkPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1AC3CC397A60D6D9A642 /* DSPlacemarkPickerViewController.m */; };
 		62DD187C5A8A0492EB15FAEE /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD138D9722CA655F636CCA /* DSAppDelegate.m */; };
@@ -227,10 +257,12 @@
 		62DD19B8D7F38D3DAD57B11E /* DSFindCountry.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD18BB1C71903CA44B9C0A /* DSFindCountry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD19FEB4E286474E0B9849 /* DSGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1D9D2B0F2A12DC53B054 /* DSGeocoder.m */; };
 		62DD19FF93EC85DB54E81188 /* DSBlockButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1AF5D211006BE9830590 /* DSBlockButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62DD1A1174BC68559EA4299F /* DSDragAndDropController.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1AFD36B9F22FEFEB3170 /* DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FC9FB79656CF9699964 /* DSMessage.m */; };
 		62DD1BC6C151EFA0696F8AC2 /* DSBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD145CE5D14120FE018CBA /* DSBlockButton.m */; };
 		62DD1C6C3614A89A5BF0FF1B /* DSUIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1615BF12DB35C9A214EC /* DSUIAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1C90C4EBBDB2502CA983 /* DSAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD15C51F9116575702C34B /* DSAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62DD1C9E769C375EB5D785FB /* DSDraggingSourceContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD123F1B7C97E47FFB0F7C /* DSDraggingSourceContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD14CA899B7E82F54CCD3C /* DSMessageContext.m */; };
 		62DD1D2E90263BBAA1002A5B /* DSMessageContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1A94EAF2AD8177958550 /* DSMessageContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1DA8BE66CE6176478E95 /* DSCLPlacemarkTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1034D65FEA7BE4837BAE /* DSCLPlacemarkTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -351,7 +383,6 @@
 		0903A35817F0AC9100A21270 /* QRunLoopOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRunLoopOperation.m; sourceTree = "<group>"; };
 		0903A35917F0AC9100A21270 /* QWatchedOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWatchedOperationQueue.h; sourceTree = "<group>"; };
 		0903A35A17F0AC9100A21270 /* QWatchedOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWatchedOperationQueue.m; sourceTree = "<group>"; };
-		0903A35B17F0AC9100A21270 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		0903A35E17F0AC9100A21270 /* DSVibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSVibrator.h; sourceTree = "<group>"; };
 		0903A35F17F0AC9100A21270 /* DSVibrator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSVibrator.m; sourceTree = "<group>"; };
 		0903A36217F0AC9100A21270 /* DSFontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFontManager.h; sourceTree = "<group>"; };
@@ -393,12 +424,55 @@
 		0903A41117F0C28300A21270 /* DSGPSTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGPSTracker.h; sourceTree = "<group>"; };
 		0903A41217F0C28300A21270 /* DSGPSTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGPSTracker.m; sourceTree = "<group>"; };
 		0903A41317F0C28300A21270 /* DSGPSTrackerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGPSTrackerDelegate.h; sourceTree = "<group>"; };
+		09162C53180ED00C00A0DEEF /* DSCompas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCompas.h; sourceTree = "<group>"; };
+		09162C54180ED00C00A0DEEF /* DSCompas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCompas.m; sourceTree = "<group>"; };
+		09162C58180EE84900A0DEEF /* DSCriterionDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCriterionDescriptionViewController.h; sourceTree = "<group>"; };
+		09162C59180EE84900A0DEEF /* DSCriterionDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCriterionDescriptionViewController.m; sourceTree = "<group>"; };
+		09162C5A180EE84900A0DEEF /* DSFieldValidation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = DSFieldValidation.strings; sourceTree = "<group>"; };
+		09162C5B180EE84900A0DEEF /* DSFieldValidationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFieldValidationController.h; sourceTree = "<group>"; };
+		09162C5C180EE84900A0DEEF /* DSFieldValidationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFieldValidationController.m; sourceTree = "<group>"; };
+		09162C5D180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFieldValidationControllerDelegate.h; sourceTree = "<group>"; };
+		09162C5E180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSFieldValidationCriterion+FactoryMethods.h"; sourceTree = "<group>"; };
+		09162C5F180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSFieldValidationCriterion+FactoryMethods.m"; sourceTree = "<group>"; };
+		09162C60180EE84900A0DEEF /* DSFieldValidationCriterion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFieldValidationCriterion.h; sourceTree = "<group>"; };
+		09162C61180EE84900A0DEEF /* DSFieldValidationCriterion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFieldValidationCriterion.m; sourceTree = "<group>"; };
+		09162C62180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFieldValidationCriterionDescription.h; sourceTree = "<group>"; };
+		09162C63180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFieldValidationCriterionDescription.m; sourceTree = "<group>"; };
+		09162C64180EE84900A0DEEF /* DSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTextField.h; sourceTree = "<group>"; };
+		09162C65180EE84900A0DEEF /* DSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTextField.m; sourceTree = "<group>"; };
+		09162C74180EEB5900A0DEEF /* DSFieldValidationFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFieldValidationFramework.h; sourceTree = "<group>"; };
+		09162C7B180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WEPopover.h"; sourceTree = "<group>"; };
+		09162C7C180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WEPopover.m"; sourceTree = "<group>"; };
+		09162C7D180EECC100A0DEEF /* WEPopoverContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEPopoverContainerView.h; sourceTree = "<group>"; };
+		09162C7E180EECC100A0DEEF /* WEPopoverContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEPopoverContainerView.m; sourceTree = "<group>"; };
+		09162C7F180EECC100A0DEEF /* WEPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEPopoverController.h; sourceTree = "<group>"; };
+		09162C80180EECC100A0DEEF /* WEPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEPopoverController.m; sourceTree = "<group>"; };
+		09162C81180EECC100A0DEEF /* WEPopoverParentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEPopoverParentView.h; sourceTree = "<group>"; };
+		09162C82180EECC100A0DEEF /* WETouchableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WETouchableView.h; sourceTree = "<group>"; };
+		09162C83180EECC100A0DEEF /* WETouchableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WETouchableView.m; sourceTree = "<group>"; };
+		09162C84180EECC100A0DEEF /* popoverArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowDown.png; sourceTree = "<group>"; };
+		09162C85180EECC100A0DEEF /* popoverArrowDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverArrowDown@2x.png"; sourceTree = "<group>"; };
+		09162C86180EECC100A0DEEF /* popoverArrowDownSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowDownSimple.png; sourceTree = "<group>"; };
+		09162C87180EECC100A0DEEF /* popoverArrowLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowLeft.png; sourceTree = "<group>"; };
+		09162C88180EECC100A0DEEF /* popoverArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverArrowLeft@2x.png"; sourceTree = "<group>"; };
+		09162C89180EECC100A0DEEF /* popoverArrowLeftSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowLeftSimple.png; sourceTree = "<group>"; };
+		09162C8A180EECC100A0DEEF /* popoverArrowRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowRight.png; sourceTree = "<group>"; };
+		09162C8B180EECC100A0DEEF /* popoverArrowRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverArrowRight@2x.png"; sourceTree = "<group>"; };
+		09162C8C180EECC100A0DEEF /* popoverArrowRightSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowRightSimple.png; sourceTree = "<group>"; };
+		09162C8D180EECC100A0DEEF /* popoverArrowUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowUp.png; sourceTree = "<group>"; };
+		09162C8E180EECC100A0DEEF /* popoverArrowUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverArrowUp@2x.png"; sourceTree = "<group>"; };
+		09162C8F180EECC100A0DEEF /* popoverArrowUpSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverArrowUpSimple.png; sourceTree = "<group>"; };
+		09162C90180EECC100A0DEEF /* popoverBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverBg.png; sourceTree = "<group>"; };
+		09162C91180EECC100A0DEEF /* popoverBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverBg@2x.png"; sourceTree = "<group>"; };
+		09162C92180EECC100A0DEEF /* popoverBgSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverBgSimple.png; sourceTree = "<group>"; };
 		0922D3E2178C951900AAE05E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAlertsFramework.h; sourceTree = "<group>"; };
 		0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceFunctions.h; sourceTree = "<group>"; };
 		0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceFunctions.m; sourceTree = "<group>"; };
 		093859D517F1FDD400E8AB0E /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		093859D617F1FDD400E8AB0E /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		0973572518041E3A00351055 /* DSCustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomFontLabel.h; sourceTree = "<group>"; };
+		0973572618041E3A00351055 /* DSCustomFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCustomFontLabel.m; sourceTree = "<group>"; };
 		098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSQueueBasedRequestSender+Private.h"; sourceTree = "<group>"; };
 		098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSQueueBasedRequestSender.h; sourceTree = "<group>"; };
 		098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueueBasedRequestSender.m; sourceTree = "<group>"; };
@@ -458,15 +532,19 @@
 		09B8668D17F1E5C7003B1070 /* DSWebServiceURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceURL.m; sourceTree = "<group>"; };
 		09B8668E17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceURLHTTPMethod.h; sourceTree = "<group>"; };
 		09B8668F17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceURLHTTPMethod.m; sourceTree = "<group>"; };
+		09C6BE521806BD760084C600 /* DSDragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDrop.h; sourceTree = "<group>"; };
 		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
 		62DD1034D65FEA7BE4837BAE /* DSCLPlacemarkTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCLPlacemarkTransformer.h; sourceTree = "<group>"; };
 		62DD10482694069BA9C5E531 /* DSUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUIAlertView.m; sourceTree = "<group>"; };
+		62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDropController.h; sourceTree = "<group>"; };
 		62DD11E47C44DDA0A2867834 /* DSFindCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFindCountry.m; sourceTree = "<group>"; };
+		62DD123F1B7C97E47FFB0F7C /* DSDraggingSourceContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDraggingSourceContainer.h; sourceTree = "<group>"; };
 		62DD1245A796A03C0561F8E3 /* DSChoosePlacemarkAnnotation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = DSChoosePlacemarkAnnotation.strings; sourceTree = "<group>"; };
 		62DD12A2DD6F6F278480844E /* DSConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = DSConfiguration.plist; sourceTree = "<group>"; };
 		62DD134FD1FF9911EA4327A9 /* DSChoosePlacemarkAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSChoosePlacemarkAnnotation.h; sourceTree = "<group>"; };
 		62DD138D9722CA655F636CCA /* DSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAppDelegate.m; sourceTree = "<group>"; };
 		62DD13AE88A68CBC5259F586 /* DSAlertsHandler+SimplifiedAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSAlertsHandler+SimplifiedAPI.h"; sourceTree = "<group>"; };
+		62DD13ED0EF18F1D1FD6F1A7 /* DSDragAndDropController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDragAndDropController.m; sourceTree = "<group>"; };
 		62DD1427633E33FD45C82818 /* DSAlertViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlertViewFactory.m; sourceTree = "<group>"; };
 		62DD145CE5D14120FE018CBA /* DSBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSBlockButton.m; sourceTree = "<group>"; };
 		62DD14CA899B7E82F54CCD3C /* DSMessageContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessageContext.m; sourceTree = "<group>"; };
@@ -503,6 +581,7 @@
 		62DD1D9D2B0F2A12DC53B054 /* DSGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGeocoder.m; sourceTree = "<group>"; };
 		62DD1E5EAE093487F56DFF15 /* DSBlockBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSBlockBarButtonItem.m; sourceTree = "<group>"; };
 		62DD1EA66CDBBDAFF760AB4F /* DSPlacemarkPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPlacemarkPickerViewController.h; sourceTree = "<group>"; };
+		62DD1EBE1FD4CA47F4C2E4FF /* DSDraggingDestinationContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDraggingDestinationContainer.h; sourceTree = "<group>"; };
 		62DD1FA1527704E3088180FA /* DSAlertsHandlerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlertsHandlerConfiguration.m; sourceTree = "<group>"; };
 		62DD1FC9FB79656CF9699964 /* DSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessage.m; sourceTree = "<group>"; };
 		62DD1FD23C5A66A4C692AA58 /* DSGeocoderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeocoderDelegate.h; sourceTree = "<group>"; };
@@ -530,6 +609,8 @@
 		0903A2D317F0AC8300A21270 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				09162C57180EE84900A0DEEF /* FieldValidationFramework */,
+				0992B7B31806ABB500F1A99C /* DragAndDrop */,
 				093859D517F1FDD400E8AB0E /* JSONKit.h */,
 				093859D617F1FDD400E8AB0E /* JSONKit.m */,
 				0903A2D417F0AC8300A21270 /* ArrayChanges */,
@@ -546,6 +627,10 @@
 				09B8663C17F1B990003B1070 /* DSKeyboardController.h */,
 				09B8663D17F1B990003B1070 /* DSKeyboardController.m */,
 				09B8664417F1BF2B003B1070 /* DSKeyboardControllerDelegate.h */,
+				0973572518041E3A00351055 /* DSCustomFontLabel.h */,
+				0973572618041E3A00351055 /* DSCustomFontLabel.m */,
+				09162C53180ED00C00A0DEEF /* DSCompas.h */,
+				09162C54180ED00C00A0DEEF /* DSCompas.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -868,6 +953,76 @@
 			path = GPSTracker;
 			sourceTree = "<group>";
 		};
+		09162C57180EE84900A0DEEF /* FieldValidationFramework */ = {
+			isa = PBXGroup;
+			children = (
+				09162C78180EECC100A0DEEF /* WEPopover-master */,
+				09162C58180EE84900A0DEEF /* DSCriterionDescriptionViewController.h */,
+				09162C59180EE84900A0DEEF /* DSCriterionDescriptionViewController.m */,
+				09162C5A180EE84900A0DEEF /* DSFieldValidation.strings */,
+				09162C5B180EE84900A0DEEF /* DSFieldValidationController.h */,
+				09162C5C180EE84900A0DEEF /* DSFieldValidationController.m */,
+				09162C5D180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h */,
+				09162C5E180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.h */,
+				09162C5F180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m */,
+				09162C60180EE84900A0DEEF /* DSFieldValidationCriterion.h */,
+				09162C61180EE84900A0DEEF /* DSFieldValidationCriterion.m */,
+				09162C62180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h */,
+				09162C63180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m */,
+				09162C64180EE84900A0DEEF /* DSTextField.h */,
+				09162C65180EE84900A0DEEF /* DSTextField.m */,
+				09162C74180EEB5900A0DEEF /* DSFieldValidationFramework.h */,
+			);
+			path = FieldValidationFramework;
+			sourceTree = "<group>";
+		};
+		09162C78180EECC100A0DEEF /* WEPopover-master */ = {
+			isa = PBXGroup;
+			children = (
+				09162C79180EECC100A0DEEF /* Classes */,
+				09162C84180EECC100A0DEEF /* popoverArrowDown.png */,
+				09162C85180EECC100A0DEEF /* popoverArrowDown@2x.png */,
+				09162C86180EECC100A0DEEF /* popoverArrowDownSimple.png */,
+				09162C87180EECC100A0DEEF /* popoverArrowLeft.png */,
+				09162C88180EECC100A0DEEF /* popoverArrowLeft@2x.png */,
+				09162C89180EECC100A0DEEF /* popoverArrowLeftSimple.png */,
+				09162C8A180EECC100A0DEEF /* popoverArrowRight.png */,
+				09162C8B180EECC100A0DEEF /* popoverArrowRight@2x.png */,
+				09162C8C180EECC100A0DEEF /* popoverArrowRightSimple.png */,
+				09162C8D180EECC100A0DEEF /* popoverArrowUp.png */,
+				09162C8E180EECC100A0DEEF /* popoverArrowUp@2x.png */,
+				09162C8F180EECC100A0DEEF /* popoverArrowUpSimple.png */,
+				09162C90180EECC100A0DEEF /* popoverBg.png */,
+				09162C91180EECC100A0DEEF /* popoverBg@2x.png */,
+				09162C92180EECC100A0DEEF /* popoverBgSimple.png */,
+			);
+			path = "WEPopover-master";
+			sourceTree = "<group>";
+		};
+		09162C79180EECC100A0DEEF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				09162C7A180EECC100A0DEEF /* Popover */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		09162C7A180EECC100A0DEEF /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				09162C7B180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h */,
+				09162C7C180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m */,
+				09162C7D180EECC100A0DEEF /* WEPopoverContainerView.h */,
+				09162C7E180EECC100A0DEEF /* WEPopoverContainerView.m */,
+				09162C7F180EECC100A0DEEF /* WEPopoverController.h */,
+				09162C80180EECC100A0DEEF /* WEPopoverController.m */,
+				09162C81180EECC100A0DEEF /* WEPopoverParentView.h */,
+				09162C82180EECC100A0DEEF /* WETouchableView.h */,
+				09162C83180EECC100A0DEEF /* WETouchableView.m */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
 		098FB25B17F2008600DB9F49 /* DSQueueBasedRequestSender */ = {
 			isa = PBXGroup;
 			children = (
@@ -876,6 +1031,18 @@
 				098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */,
 			);
 			path = DSQueueBasedRequestSender;
+			sourceTree = "<group>";
+		};
+		0992B7B31806ABB500F1A99C /* DragAndDrop */ = {
+			isa = PBXGroup;
+			children = (
+				62DD123F1B7C97E47FFB0F7C /* DSDraggingSourceContainer.h */,
+				62DD1EBE1FD4CA47F4C2E4FF /* DSDraggingDestinationContainer.h */,
+				62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */,
+				62DD13ED0EF18F1D1FD6F1A7 /* DSDragAndDropController.m */,
+				09C6BE521806BD760084C600 /* DSDragAndDrop.h */,
+			);
+			path = DragAndDrop;
 			sourceTree = "<group>";
 		};
 		09B8664E17F1E5C7003B1070 /* ServerBridge */ = {
@@ -1170,7 +1337,6 @@
 				0903A34017F0AC9100A21270 /* Managers */,
 				0903A35217F0AC9100A21270 /* Network */,
 				0903A35617F0AC9100A21270 /* QHTTPOperation */,
-				0903A35B17F0AC9100A21270 /* README */,
 				0903A35C17F0AC9100A21270 /* SystemClasses */,
 				0903A36017F0AC9100A21270 /* UI */,
 				0903A36717F0AC9100A21270 /* VariousViews */,
@@ -1190,36 +1356,43 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09162C6B180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.h in Headers */,
 				0903A3E917F0AC9100A21270 /* DSVibrator.h in Headers */,
 				0903A41617F0C28300A21270 /* DSGPSTracker.h in Headers */,
 				0903A2E017F0AC8300A21270 /* DSArrayChange.h in Headers */,
 				0903A3F117F0AC9100A21270 /* DSFlashingImageView.h in Headers */,
 				0903A3C117F0AC9100A21270 /* XibLoader.h in Headers */,
+				09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */,
 				09B866AB17F1E5C7003B1070 /* DSFakeWebServiceRequest.h in Headers */,
 				09B866A317F1E5C7003B1070 /* DSWebServiceQueue.h in Headers */,
 				0903A3EF17F0AC9100A21270 /* DSActivityIndicator.h in Headers */,
 				0903A3FD17F0AC9100A21270 /* UISwitch+DSCheckButton.h in Headers */,
 				0903A3D717F0AC9100A21270 /* DependencyResolver+Private.h in Headers */,
 				0903A40417F0AC9100A21270 /* DSValueChooserViewControllerDelegate.h in Headers */,
+				09162C68180EE84900A0DEEF /* DSFieldValidationController.h in Headers */,
 				0903A2E517F0AC8300A21270 /* DSArrayChangeCalculator.h in Headers */,
 				0903A3B717F0AC9100A21270 /* UITableView+DSAdditions.h in Headers */,
 				0903A3C317F0AC9100A21270 /* DSCArray.h in Headers */,
 				0903A3D517F0AC9100A21270 /* DependencyRegister.h in Headers */,
 				0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */,
+				09162C93180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h in Headers */,
 				0903A38C17F0AC9100A21270 /* CATransition+AnimationsBuilder.h in Headers */,
 				09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */,
+				09162C97180EECC100A0DEEF /* WEPopoverController.h in Headers */,
 				0903A40217F0AC9100A21270 /* DSValueChooserViewController.h in Headers */,
 				09B8663A17F1B82D003B1070 /* DSTableViewController.h in Headers */,
 				0903A2E317F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.h in Headers */,
 				0903A39B17F0AC9100A21270 /* NSMutableArray+Additions.h in Headers */,
 				09B8669C17F1E5C7003B1070 /* DSWebServiceStringParam.h in Headers */,
 				0903A3B517F0AC9100A21270 /* UIScreen+Availability.h in Headers */,
+				09162C71180EE84900A0DEEF /* DSTextField.h in Headers */,
 				0903A3A717F0AC9100A21270 /* NSString+Extras.h in Headers */,
 				0903A3B117F0AC9100A21270 /* UIDevice+Additions.h in Headers */,
 				0903A39F17F0AC9100A21270 /* NSObject+DeepCopy.h in Headers */,
 				0903A2E717F0AC8300A21270 /* DSNetworkActivity.h in Headers */,
 				0903A3AF17F0AC9100A21270 /* UIBarButtonItem+DSAdditions.h in Headers */,
 				09B8669E17F1E5C7003B1070 /* DSWebServiceParamsBuilder.h in Headers */,
+				09162C6A180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h in Headers */,
 				0903A3E117F0AC9100A21270 /* DSSettings_impl.h in Headers */,
 				0903A40117F0AC9100A21270 /* PGVideoImageViewDelegate.h in Headers */,
 				0903A3A317F0AC9100A21270 /* NSObject+Observing.h in Headers */,
@@ -1237,9 +1410,13 @@
 				0903A39317F0AC9100A21270 /* NSData+OAdditions.h in Headers */,
 				0903A3D117F0AC9100A21270 /* DSCFunctions.h in Headers */,
 				09B8669317F1E5C7003B1070 /* NSError+DSWebService.h in Headers */,
+				09162C99180EECC100A0DEEF /* WEPopoverParentView.h in Headers */,
 				0903A3BB17F0AC9100A21270 /* UIView+Resizing.h in Headers */,
 				0903A38E17F0AC9100A21270 /* DSTimeFunctions.h in Headers */,
 				09B866BD17F1E5C7003B1070 /* DSWebServiceResponse.h in Headers */,
+				09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */,
+				0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */,
+				09162C76180EEB5900A0DEEF /* DSFieldValidationFramework.h in Headers */,
 				0903A3F517F0AC9100A21270 /* DSSlider.h in Headers */,
 				0903A3DD17F0AC9100A21270 /* CStringsFunctions.h in Headers */,
 				0903A3CF17F0AC9100A21270 /* DSDateFormatterCache.h in Headers */,
@@ -1248,6 +1425,7 @@
 				0903A3CD17F0AC9100A21270 /* DSMacros.h in Headers */,
 				09B8669017F1E5C7003B1070 /* DSWebServiceConfiguration.h in Headers */,
 				0903A3A917F0AC9100A21270 /* UIAlertView+Additions.h in Headers */,
+				09162C9A180EECC100A0DEEF /* WETouchableView.h in Headers */,
 				09B866A117F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h in Headers */,
 				0903A3A517F0AC9100A21270 /* NSString+Encoding.h in Headers */,
 				0903A3F817F0AC9100A21270 /* PGSlider.h in Headers */,
@@ -1269,6 +1447,7 @@
 				09B8669517F1E5C7003B1070 /* DSWebServiceArrayParam.h in Headers */,
 				09B866A717F1E5C7003B1070 /* DSWebServiceRequest.h in Headers */,
 				0903A3A117F0AC9100A21270 /* NSObject+DSAdditions.h in Headers */,
+				09162C6D180EE84900A0DEEF /* DSFieldValidationCriterion.h in Headers */,
 				09B866B517F1E5C7003B1070 /* DSWebServiceRequestsFactory.h in Headers */,
 				0903A3B317F0AC9100A21270 /* UIFont+FromString.h in Headers */,
 				0903A3ED17F0AC9100A21270 /* FontsDB.h in Headers */,
@@ -1294,13 +1473,16 @@
 				09B866A917F1E5C7003B1070 /* DSWebServiceRequestOperation.h in Headers */,
 				62DD13EB68EB018ACE1AC0F5 /* DSConfiguration.h in Headers */,
 				0903A41817F0C28300A21270 /* DSGPSTrackerDelegate.h in Headers */,
+				09162C95180EECC100A0DEEF /* WEPopoverContainerView.h in Headers */,
 				62DD1841C6225FE22AA92F1B /* DSAppDelegate.h in Headers */,
 				62DD19FF93EC85DB54E81188 /* DSBlockButton.h in Headers */,
+				09162C55180ED00C00A0DEEF /* DSCompas.h in Headers */,
 				093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */,
 				09B866B317F1E5C7003B1070 /* DSWebServiceOperationType.h in Headers */,
 				62DD13C9E2F182E4E22E7D24 /* DSBlockBarButtonItem.h in Headers */,
 				62DD130F46A501A7FFCD1BAE /* DSDataDetector.h in Headers */,
 				09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */,
+				09162C6F180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h in Headers */,
 				0928CFCD17F2150100E494E1 /* DSAlertsFramework.h in Headers */,
 				09B866B917F1E5C7003B1070 /* DSWebServiceParams.h in Headers */,
 				62DD19B8D7F38D3DAD57B11E /* DSFindCountry.h in Headers */,
@@ -1317,6 +1499,9 @@
 				09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */,
 				62DD1027E5C608DB51C6E9C6 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */,
 				09B866B717F1E5C7003B1070 /* NSManagedObject+DSAdditions.h in Headers */,
+				62DD1C9E769C375EB5D785FB /* DSDraggingSourceContainer.h in Headers */,
+				62DD16F1B4C19E58049F683D /* DSDraggingDestinationContainer.h in Headers */,
+				62DD1A1174BC68559EA4299F /* DSDragAndDropController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1372,6 +1557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0903A3C217F0AC9100A21270 /* XibLoader.m in Sources */,
+				09162C69180EE84900A0DEEF /* DSFieldValidationController.m in Sources */,
 				0903A41717F0C28300A21270 /* DSGPSTracker.m in Sources */,
 				0903A3C617F0AC9100A21270 /* DSCFLoatDictionary.m in Sources */,
 				0903A2EA17F0AC8300A21270 /* UIView+ViewsEnumeration.m in Sources */,
@@ -1386,19 +1572,23 @@
 				0903A3B817F0AC9100A21270 /* UITableView+DSAdditions.m in Sources */,
 				0903A3BA17F0AC9100A21270 /* UIView+Layout.m in Sources */,
 				0903A3EE17F0AC9100A21270 /* FontsDB.m in Sources */,
+				09162C6C180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m in Sources */,
 				0903A3C417F0AC9100A21270 /* DSCArray.m in Sources */,
 				09B8669D17F1E5C7003B1070 /* DSWebServiceStringParam.m in Sources */,
 				0903A39E17F0AC9100A21270 /* NSMutableURLRequest+POSTData.m in Sources */,
 				093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */,
 				0903A3E017F0AC9100A21270 /* DSRuntimeHacker.m in Sources */,
 				09B866B617F1E5C7003B1070 /* DSWebServiceRequestsFactory.m in Sources */,
+				09162C72180EE84900A0DEEF /* DSTextField.m in Sources */,
 				0903A39617F0AC9100A21270 /* NSDate+OAddittions.m in Sources */,
 				0903A3D817F0AC9100A21270 /* DependencyResolver+Private.m in Sources */,
 				0903A3E617F0AC9100A21270 /* QRunLoopOperation.m in Sources */,
 				0903A2E117F0AC8300A21270 /* DSArrayChange.m in Sources */,
 				0903A3F017F0AC9100A21270 /* DSActivityIndicator.m in Sources */,
 				0903A39417F0AC9100A21270 /* NSData+OAdditions.m in Sources */,
+				09162C9C180EEEB900A0DEEF /* DSCriterionDescriptionViewController.m in Sources */,
 				0903A3AA17F0AC9100A21270 /* UIAlertView+Additions.m in Sources */,
+				09162C96180EECC100A0DEEF /* WEPopoverContainerView.m in Sources */,
 				0903A39817F0AC9100A21270 /* NSDictionary+JSONDictionary.m in Sources */,
 				0903A3C017F0AC9100A21270 /* UIView+XibLoading.m in Sources */,
 				0903A3B217F0AC9100A21270 /* UIDevice+Additions.m in Sources */,
@@ -1410,6 +1600,8 @@
 				0903A3F417F0AC9100A21270 /* DSRotatingImageView.m in Sources */,
 				0903A3F617F0AC9100A21270 /* DSSlider.m in Sources */,
 				09B866B017F1E5C7003B1070 /* DSWebServiceNetRequest.m in Sources */,
+				09162C98180EECC100A0DEEF /* WEPopoverController.m in Sources */,
+				09162C56180ED00C00A0DEEF /* DSCompas.m in Sources */,
 				0903A39017F0AC9100A21270 /* NSArray+Extras.m in Sources */,
 				09B866C017F1E5C7003B1070 /* DSWebServiceURL.m in Sources */,
 				0903A3DA17F0AC9100A21270 /* DependencyResolver+Register.m in Sources */,
@@ -1421,6 +1613,7 @@
 				0903A3A817F0AC9100A21270 /* NSString+Extras.m in Sources */,
 				0903A3AC17F0AC9100A21270 /* UIApplication+DSAdditions.m in Sources */,
 				0903A2E817F0AC8300A21270 /* DSNetworkActivity.m in Sources */,
+				09162C9B180EECC100A0DEEF /* WETouchableView.m in Sources */,
 				0903A3BE17F0AC9100A21270 /* UIView+Subviews.m in Sources */,
 				0903A39217F0AC9100A21270 /* NSArray+ObjectsQuery.m in Sources */,
 				0903A3FB17F0AC9100A21270 /* DSCheckButton.m in Sources */,
@@ -1448,6 +1641,7 @@
 				0903A2E417F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.m in Sources */,
 				0903A3C817F0AC9100A21270 /* DSQueue.m in Sources */,
 				62DD1F21D685DAF88DB40D0D /* DSAlert.m in Sources */,
+				0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */,
 				62DD1AFD36B9F22FEFEB3170 /* DSMessage.m in Sources */,
 				098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */,
 				09B866A017F1E5C7003B1070 /* DSWebServiceParamsExporter.m in Sources */,
@@ -1455,11 +1649,14 @@
 				09B866AE17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m in Sources */,
 				09B866A417F1E5C7003B1070 /* DSWebServiceQueue.m in Sources */,
 				62DD1E3872904802D5077B3F /* DSUIAlertView.m in Sources */,
+				09162C6E180EE84900A0DEEF /* DSFieldValidationCriterion.m in Sources */,
+				09162C94180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m in Sources */,
 				62DD1569D576C442B9DF1889 /* DSAlertsHandler.m in Sources */,
 				09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */,
 				62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */,
 				62DD1E899DE35CD54E5DC2BF /* DSAlertViewFactory.m in Sources */,
 				62DD1FEFFC22374EBAC3044E /* DSAlertsSupportCode.m in Sources */,
+				09162C70180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m in Sources */,
 				09B8669817F1E5C7003B1070 /* DSWebServiceCompositeParams.m in Sources */,
 				62DD1E3812B21714B92C8ACF /* DSAlertsHandlerConfiguration.m in Sources */,
 				09B866BE17F1E5C7003B1070 /* DSWebServiceResponse.m in Sources */,
@@ -1479,6 +1676,7 @@
 				62DD150B77B3BF0740F534FA /* DSCLPlacemarkTransformer.m in Sources */,
 				62DD104144F45B7B8D974698 /* DSChoosePlacemarkAnnotation.m in Sources */,
 				62DD186A6C4C9F8D37904BC3 /* DSPlacemarkPickerViewController.m in Sources */,
+				62DD17C01B3B707487A95F6D /* DSDragAndDropController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1550,7 +1748,10 @@
 				DSTROOT = /tmp/DSLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSLib/DSLib-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = include/DSLib;
 				SKIP_INSTALL = YES;
@@ -1565,7 +1766,10 @@
 				DSTROOT = /tmp/DSLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSLib/DSLib-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = include/DSLib;
 				SKIP_INSTALL = YES;
