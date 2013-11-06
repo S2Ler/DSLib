@@ -151,5 +151,11 @@
   DSQueue *copy = [[[self class] allocWithZone:zone] initWithCapacity:capacity_];
   [copy setQueue:queue_];
   return copy;
-}                               
+}
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len
+{
+  return [queue_ countByEnumeratingWithState:state objects:buffer count:len];
+}
+
 @end

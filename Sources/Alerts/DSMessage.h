@@ -13,7 +13,7 @@
 @property (nonatomic, strong) DSMessageContext *context;
 @property (nonatomic, strong, readonly) DSMessageDomain *domain;
 @property (nonatomic, strong, readonly) DSMessageCode *code;
-@property (nonatomic, retain, readonly) NSArray *params;
+@property (nonatomic, strong, readonly) NSArray *params;
 
 - (NSString *)localizedTitle;
 - (NSString *)localizedBody;
@@ -31,5 +31,7 @@
 + (id)messageWithError:(NSError *)theError;
 
 - (BOOL)isEqualToMessage:(id)theObj;
+
++ (DSMessage *)unknownError;
 
 @end

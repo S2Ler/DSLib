@@ -21,5 +21,7 @@
 #import "DSAlertViewDelegate.h"
 #import "DSAlertsHandlerConfiguration.h"
 #import "DSAlertsHandler+SimplifiedAPI.h"
+#import "DSAlertsQueue.h"
+#import "DSMessage+Parse.h"
 
 #endif

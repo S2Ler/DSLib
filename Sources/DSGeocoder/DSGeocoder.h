@@ -14,9 +14,14 @@
 /** When this method returns a single placemark, the placemark is saved and can be accessed via savedPlacemarkForAddressString: message */
 - (void)geocodeAddressString:(NSString *)addressString geocodeCompletionHandler:(CLGeocodeCompletionHandler)completionHandler;
 - (void)geocodeAddressString:(NSString *)addressString completionHandler:(ds_results_completion)completion;
+
+- (void)reverseGeocodeLocation:(CLLocation *)location geocodeCompletionHandler:(CLGeocodeCompletionHandler)completionHandler;
+- (void)reverseGeocodeLocation:(CLLocation *)location completionHandler:(ds_results_completion)completionHandler;
 @end
 
 @interface DSGeocoder(Abstract)
+/** Default implementation saves CLPlacemark to NSUserDefaults */
 - (CLPlacemark *)savedPlacemarkForAddressString:(NSString *)addressString;
+/** Default implementation saves CLPlacemark to NSUserDefaults */
 - (void)savePlacemark:(CLPlacemark *)placemark forAddressString:(NSString *)addressString;
 @end

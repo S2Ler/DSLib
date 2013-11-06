@@ -9,6 +9,8 @@
 #import "DSAlertButton.h"
 #import "Reachability.h"
 #import "DSMessage.h"
+#import "DSAlertsQueue.h"
+#import "DSAlertQueue+Private.h"
 
 #pragma mark - private
 @interface DSAlertsHandler ()
@@ -20,7 +22,6 @@
 @end
 
 @implementation DSAlertsHandler
-
 
 + (id)sharedInstance
 {
@@ -75,6 +76,13 @@
   NSAssert(isModalAlert == YES, @"Only modal alert is supported now");
 
   [self queueAlert:theAlert];
+}
+
+- (DSAlertsQueue *)detachAlertsQueue
+{
+  DSAlertsQueue *queue = [[DSAlertsQueue alloc] init];
+  [queue setAlertsHandler:self];
+  return queue;
 }
 
 #pragma mark - alert

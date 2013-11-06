@@ -8,7 +8,8 @@
 @interface DSQueue : NSObject
 <
 NSCoding,
-NSCopying
+NSCopying,
+NSFastEnumeration
 > {  
   /** Maximum number of objects in queue */
   NSUInteger capacity_;

@@ -1,17 +1,24 @@
 
 #pragma mark - include
+#import <objc/runtime.h>
 #import "DSMessage.h"
-
-#define LOCALIZATION_TABLE @"DSMessagesLocalization"
+#import "NSString+Extras.h"
+#import "DSAlertsHandlerConfiguration.h"
 
 #pragma mark - private
 @interface DSMessage ()
 @property (nonatomic, strong) DSMessageDomain *domain;
 @property (nonatomic, strong) DSMessageCode *code;
-@property (nonatomic, retain) NSArray *params;
+@property (nonatomic, strong) NSArray *params;
+@property (nonatomic, strong) NSError *error;
 @end
 
 @implementation DSMessage
+
+- (NSString *)localizationTable
+{
+  return [[DSAlertsHandlerConfiguration sharedInstance] messagesLocalizationTableName];
+}
 
 - (NSString *)keyForLocalizedTitle
 {
@@ -28,15 +35,24 @@
 - (NSString *)localizedTitle
 {
   NSString *localizationKey = [self keyForLocalizedTitle];
-  NSString *title = NSLocalizedStringFromTable(localizationKey, LOCALIZATION_TABLE, nil);
+  NSString *title = NSLocalizedStringFromTable(localizationKey, [self localizationTable], nil);
+  
+  if ([title isEqualToString:localizationKey] && [self error]) {
+    return [DSMessage messageTitleFromError:[self error]];
+  }
   
   return title;
+}
+
++ (NSString *)messageTitleFromError:(NSError *)error
+{
+    return [error helpAnchor] ? [error helpAnchor] : @"Error";
 }
 
 - (NSString *)localizedBody
 {
   NSString *localizationKey = [self keyForLocalizedBody];
-  NSString *body = NSLocalizedStringFromTable(localizationKey, LOCALIZATION_TABLE, nil);
+  NSString *body = NSLocalizedStringFromTable(localizationKey, [self localizationTable], nil);
   
   if ([[self params] count] > 0) {
     NSRange range = NSMakeRange(0, [[self params] count]);
@@ -44,13 +60,20 @@
     NSMutableData* data = [NSMutableData dataWithLength: sizeof(id) * [[self params] count]];
     
     [[self params] getObjects: (__unsafe_unretained id *)data.mutableBytes range:range];
-    
-    
+
     return [[NSString alloc] initWithFormat:body arguments:[data mutableBytes]];
+  }
+  else if ([body isEqualToString:localizationKey] && [self error]) {
+      return [DSMessage messageBodyFromError:[self error]];
   }
   else {
     return body;
   }
+}
+
++ (NSString *)messageBodyFromError:(NSError *)error
+{
+    return [error localizedDescription];
 }
 
 - (id)initWithDomain:(DSMessageDomain *)theDomain
@@ -96,8 +119,13 @@
   NSString *domain = [theError domain];
   NSInteger code = [theError code];
 
-  return [self initWithDomain:domain
+  self = [self initWithDomain:domain
                          code:[NSString stringWithFormat:@"%d", code]];
+  if (self) {
+      _error = theError;
+  }
+
+  return self;
 }
 
 + (id)messageWithError:(NSError *)theError
@@ -106,6 +134,13 @@
   return message;
 }
 
++ (DSMessage *)unknownError
+{
+  NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain
+                                       code:NSURLErrorUnknown
+                                   userInfo:@{NSLocalizedDescriptionKey: @"Unknown Error"}];
+  return [DSMessage messageWithError:error];
+}
 
 - (BOOL)isEqualToMessage:(DSMessage *)theObj
 {

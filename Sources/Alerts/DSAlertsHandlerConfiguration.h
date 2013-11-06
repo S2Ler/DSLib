@@ -7,4 +7,5 @@
 + (id)setupSharedInstanceWithConfigurationDictionary:(NSDictionary *)theConfiguration;
 
 @property (nonatomic, strong, readonly) NSString *modelAlertsClassName;
+@property (nonatomic, strong, readonly) NSString *messagesLocalizationTableName;
 @end

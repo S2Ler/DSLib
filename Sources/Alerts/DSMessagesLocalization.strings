@@ -103,98 +103,84 @@
 "SKErrorDomain.0.title" = "Error";
 "SKErrorDomain.0.body" = "Please try again";
 
-"DSMessageDomainUI.ui_ads_delete_question.title" = "Delete";
-"DSMessageDomainUI.ui_ads_delete_question.body" = "Do you really want to delete these ads from inbox?";
+"DSMessageDomainUI.ui_notification.title" = "Notification";
+"DSMessageDomainUI.ui_notification.body" = "%@";
 
-"DSMessageDomainUI.ui_pin_not_match.title" = "PIN Incorrect";
-"DSMessageDomainUI.ui_pin_not_match.body" = "Please try again";
+"DSMessageDomainUI.err_push_notification.title" = "Error";
+"DSMessageDomainUI.err_push_notification.body" = "%@";
 
-"DSMessageDomainUI.ui_pin_save_question.title" = "Do you want to set new passcode?";
-"DSMessageDomainUI.ui_pin_save_question.body" = "Your new passcode is: %@";
+"DSMessageDomainUI.ui_ask_unlink_dropbox.title" = "Unlink Dropbox";
+"DSMessageDomainUI.ui_ask_unlink_dropbox.body" = "Do you wish to unlink your dropbox account?";
 
-"DSMessageDomainUI.ui_cv_delete_question.title" = "Delete CV?";
-"DSMessageDomainUI.ui_cv_delete_question.body" = "Are you sure you want to remove current CV";
+"DSMessageDomainUI.err_template_setup.title" = "Error";
+"DSMessageDomainUI.err_template_setup.body" = "Template is not correctly setup in database, please add a file to download";
 
-"DSMessageDomainUI.ui_cv_replace_question.title" = "Replace CV?";
-"DSMessageDomainUI.ui_cv_replace_question.body" = "Are you sure you want to replace current CV";
+"DSMessageDomainUI.err_web_view.title" = "Error";
+"DSMessageDomainUI.err_web_view.body" = "%@";
 
-"DSMessageDomainUI.ui_ask_for_unpublish.title" = "Unpublish";
-"DSMessageDomainUI.ui_ask_for_unpublish.body" = "Do you want to unpublish the ad?";
+"DSMessageDomainUI.err_email_invalid.title" = "Invalid Email";
+"DSMessageDomainUI.err_email_invalid.body" = "Please enter a valid email address.";
 
-"DSMessageDomainUI.ui_unpublish_success.title" = "Confirmation";
-"DSMessageDomainUI.ui_unpublish_success.body" = "Your ad has now been unpublished and is unavailable within the app.";
+"DSMessageDomainUI.err_incomplete_info.title" = "Incomplete Info";
+"DSMessageDomainUI.err_incomplete_info.body" = "Please fill in all the required fields.";
 
-"DSMessageDomainUI.err_email_format.title" = "Email Wrong";
-"DSMessageDomainUI.err_email_format.body" = "Check your email and try again";
+"DSMessageDomainUI.err_phoneNumber_invalid.title" = "Invalid Phone Number";
+"DSMessageDomainUI.err_phoneNumber_invalid.body" = "Please enter a valid phone number.";
 
-"DSMessageDomainUI.err_reset_password_email_empty.title" = "Enter Email!";
-"DSMessageDomainUI.err_reset_password_email_empty.body" = "Enter email into the email field and then press on the 'Forgot your password?' link.";
+"DSMessageDomainUI.err_template_download.title" = "Error";
+"DSMessageDomainUI.err_template_download.body" = "Error while downloading template, please retry later. (%@)";
 
-"DSMessageDomainUI.ui_job_ad_description_required.title" = "Description is required";
-"DSMessageDomainUI.ui_job_ad_description_required.body" = "The description must be at least 20 characters in length.";
+"DSMessageDomainUI.err_design_creation.title" = "Error";
+"DSMessageDomainUI.err_design_creation.body" = "Impossible to create a new design";
 
-"DSMessageDomainUI.ui_password_reset_success.title" = "Password Reset";
-"DSMessageDomainUI.ui_password_reset_success.body" = "If you have an account with us then an email with a reset code will be sent to you. Please wait a few minutes for it to arrive.";
+"DSMessageDomainUI.ui_warn_before_logout.title" = "Warning";
+"DSMessageDomainUI.ui_warn_before_logout.body" = "Logging out from your local account will result in loss of all your data. Do you confirm?";
 
-"DSMessageDomainUI.ui_password_changed.title" = "Password Changed";
-"DSMessageDomainUI.ui_password_changed.body" = "Your password has been changed successfully";
+"DSMessageDomainUI.ui_order_completed.title" = "Confirmation";
+"DSMessageDomainUI.ui_order_completed.body" = "Your order has been processed. You will receive it in a few days.";
 
-"DSMessageDomainUI.ui_jobAlert_inList.title" = "Error";
-"DSMessageDomainUI.ui_jobAlert_inList.body" = "%@ '%@' has been already added to the list";
+"DSMessageDomainUI.err_refresh_data.title" = "Update Error";
+"DSMessageDomainUI.err_refresh_data.body" = "Failed to refresh data... %@";
 
-"DSMessageDomainUI.ui_cv_downloaded.title" = "Congratulations";
-"DSMessageDomainUI.ui_cv_downloaded.body" = "Your CV has been successfully downloaded to this app.";
+"DSMessageDomainUI.err_video_camera_not_available.title" = "Error";
+"DSMessageDomainUI.err_video_camera_not_available.body" = "Your device has no video recording capabilities. Please choose a video from your library instead.";
 
-"DSMessageDomainUI.ask_employee_for_logout.title" = "Warning";
-"DSMessageDomainUI.ask_employee_for_logout.body" = "If you logout your inbox will be lost. The only reason to logout would be if you wish to post a job and login as an employer instead.\n\nDo you wish to proceed?";
+"DSMessageDomainUI.err_video_recording_unknown_error.title" = "Error";
+"DSMessageDomainUI.err_video_recording_unknown_error.body" = "An error occured while playing a video.";
 
-"DSMessageDomainUI.ui_address_not_verified.title" = "Error";
-"DSMessageDomainUI.ui_address_not_verified.body" = "We can't seem to locate that address, please carefully check that the address you have entered is correct.";
+"DSMessageDomainUI.err_document_open.title" = "Error";
+"DSMessageDomainUI.err_document_open.body" = "Impossible to open Document at URL %@";
 
-"DSMessageDomainUI.err_cant_send_email.title" = "Email Cannot be sent";
-"DSMessageDomainUI.err_cant_send_email.body" = "Please make sure you have setup mail account in Mail.app";
+"DSMessageDomainUI.err_no_email_account.title" = "Error";
+"DSMessageDomainUI.err_no_email_account.body" = "You don't have email account. Please create one from Settings.app";
 
-"DSMessageDomainUI.err_cv_save_failed.title" = "Email Cannot be sent";
-"DSMessageDomainUI.err_cant_send_email.body" = "Please make sure you have setup mail account in Mail.app";
+"DSMessageDomainUI.err_description.title" = "Error";
+"DSMessageDomainUI.err_description.body" = "%@, %@";
 
-"DSMessageDomainUI.ui_warn_profile_incorrect.title" = "Profile Incorrect";
-"DSMessageDomainUI.ui_warn_profile_incorrect.body" = "Please check your profile";
+"DSMessageDomainUI.ui_facebook_posted.title" = "Successfully posted on facebook";
+"DSMessageDomainUI.ui_facebook_posted.body" = "";
 
-"DSMessageDomainUI.err_no_contact_option_selected.title" = "Error";
-"DSMessageDomainUI.err_no_contact_option_selected.body" = "Please select at least one contact option";
+"DSMessageDomainUI.err_document_delete.title" = "Error";
+"DSMessageDomainUI.err_document_delete.body" = "Something bad happened: %@";
 
-"DSMessageDomainUI.ui_add_search_criterio_to_job_alerts.title" = "Add this notification?";
-"DSMessageDomainUI.ui_add_search_criterio_to_job_alerts.body" = "Would you like us to add this search to your notifications so we can in future alert you when you receive a match?";
+"DSMessageDomainUI.ui_migration_ask.title" = "Migration";
+"DSMessageDomainUI.ui_migration_ask.body" = "Do you want to migration from previous storage?";
 
-"DSMessageDomainUI.err_username_invalid.title" = "Error";
-"DSMessageDomainUI.err_username_invalid.body" = "Please enter username";
+"DSMessageDomainUI.err_migration.title" = "Migration Failed";
+"DSMessageDomainUI.err_migration.body" = "%@";
 
-"DSMessageDomainUI.err_search_should_have_category.title" = "Sorry!";
-"DSMessageDomainUI.err_search_should_have_category.body" = "You will need to select at least a category to search on.";
+"DSMessageDomainUI.ui_new_doc_available.title" = "Document Updated";
+"DSMessageDomainUI.ui_new_doc_available.body" = "Modification date: %@";
 
-"DSMessageDomainUI.ui_ask_inactivate_account.title" = "Warning!";
-"DSMessageDomainUI.ui_ask_inactivate_account.body" = "Are you sure you wish to change your account to inactive?";
+"DSMessageDomainUI.err_fetch_controller.title" = "Load Error";
+"DSMessageDomainUI.err_fetch_controller.body" = "Can't open document";
 
-"com.facebook.sdk.0.title" = "Error";
-"com.facebook.sdk.0.body" = "Please check your internet connection and try again";
+"DSMessageDomainUI.ui_ask_delete_template.title" = "Delete";
+"DSMessageDomainUI.ui_ask_delete_template.body" = "Do you really want to delete selected template?";
 
-"DSMessageDomainUI.ui_alerts_delete_question.title" = "Delete";
-"DSMessageDomainUI.ui_alerts_delete_question.body" = "Do you really want to delete the selected job alerts?";
+"DSMessageDomainUI.ui_ask_delete_documents.title" = "Delete";
+"DSMessageDomainUI.ui_ask_delete_documents.body" = "Do you really want to delete selected documents?";
 
-"DSMessageDomainUI.ui_ask_share_employee_apply.title" = "Share";
-"DSMessageDomainUI.ui_ask_share_employee_apply.body" = "You have successfully applied for the position. Would you like to share the job details with others?";
-
-"DSMessageDomainUI.ui_ask_sahre_employer_ad_create.title" = "Share";
-"DSMessageDomainUI.ui_ask_sahre_employer_ad_create.body" = "Your ad has now been published. Would you like to share it?";
-
-"DSMessageDomainUI.ui_ask_add_job_title_to_alerts.title" = "Job Alerts";
-"DSMessageDomainUI.ui_ask_add_job_title_to_alerts.body" = "Would you like to add this subcategory to your alerts?";
-
-"DSMessageDomainUI.ui_trial_mode_description.title" = "Free Credits";
-"DSMessageDomainUI.ui_trial_mode_description.body" = "Lucky you, for a limited period we're allowing employers to post new jobs without charge";
-
-"DSMessageDomainUI.err_employee_login_incorrect.title" = "Login Failed!";
-"DSMessageDomainUI.err_employee_login_incorrect.body" = "Try again";
-
-
+"DSMessageDomainUI.err_shopping_cart_disabled.title" = "Warning";
+"DSMessageDomainUI.err_shopping_cart_disabled.body" = "There is an unfinished payment. Please go to shopping cart and finish it";
 

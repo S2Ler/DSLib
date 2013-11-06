@@ -4,11 +4,14 @@
 #import "NSString+Extras.h"
 #import "NSString+Encoding.h"
 
+#define DEFAULT_LOCALIZATION_TABLE @"DSMessagesLocalization"
+
 static NSDictionary *DSAlertsHandlerConfiguration_sharedConfiguration = nil;
 
 @interface DSAlertsHandlerConfiguration ()
 @property (strong) NSDictionary *configuration;
 @property (nonatomic, strong) NSString *modelAlertsClassName;
+@property (nonatomic, strong) NSString *messagesLocalizationTableName;
 
 - (NSString *)keyForConfigurationKey:(NSString *)theConfigurationKey;
 
@@ -31,6 +34,16 @@ static NSDictionary *DSAlertsHandlerConfiguration_sharedConfiguration = nil;
        [self setValue:obj forKey:key];
      }
    }];
+}
+
+- (NSString *)messagesLocalizationTableName
+{
+  if (_messagesLocalizationTableName) {
+    return _messagesLocalizationTableName;
+  }
+  else {
+    return DEFAULT_LOCALIZATION_TABLE;
+  }
 }
 
 - (id)initWithConfiguration:(NSDictionary *)theConfiguration

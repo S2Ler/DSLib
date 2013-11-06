@@ -6,6 +6,7 @@
 #import "NSArray+Extras.h"
 #import "DSMessage.h"
 #import "DSCFunctions.h"
+#import "DSCLPlacemarkTransformer.h"
 
 #pragma mark - private
 @interface DSGeocoder ()
@@ -37,6 +38,7 @@
   [[self geocoder] cancelGeocode];
 }
 
+#pragma mark - geocode
 - (void)geocodeAddressString:(NSString *)addressString geocodeCompletionHandler:(CLGeocodeCompletionHandler)completionHandler
 {
   NSAssert(completionHandler != nil, @"Completion shouldn't be nil", nil);
@@ -76,6 +78,105 @@
             }];
 }
 
+- (void)geocodeAddressString:(NSString *)addressString completionHandler:(ds_results_completion)completion
+{
+  void (^placemarkHandler)(NSArray *, NSError *) = ^(NSArray *placemarks, NSError *error)
+  {
+    if (!error || ([[error domain]
+                    isEqualToString:kCLErrorDomain] && ([error code] == kCLErrorGeocodeFoundNoResult || [error code] == kCLErrorGeocodeFoundPartialResult || [error code] == kCLErrorGeocodeCanceled))) {
+      CLPlacemark *placemark = [placemarks lastObject];
+      if (placemark) {
+        completion(SUCCEED_WITH_MESSAGE, NO_MESSAGE, placemark);
+      }
+      else {
+        completion(FAILED_WITH_MESSAGE, NO_MESSAGE, nil);
+      }
+    }
+    else {
+      completion(FAILED_WITH_MESSAGE, [DSMessage messageWithDomain:kCLErrorDomain code:[NSString stringWithFormat:@"%d", [error code]]], nil);
+    }
+  };
+  
+  CLPlacemark *savedPlacemarkForAddressString = [self savedPlacemarkForAddressString:addressString];
+  if (savedPlacemarkForAddressString) {
+    placemarkHandler(@[savedPlacemarkForAddressString], nil);
+  }
+  else {
+    [self geocodeAddressString:addressString geocodeCompletionHandler:placemarkHandler];
+  }
+}
+
+#pragma mark - reverse geocoder
+- (void)reverseGeocodeLocation:(CLLocation *)location
+      geocodeCompletionHandler:(CLGeocodeCompletionHandler)completionHandler
+{
+  NSAssert(completionHandler != nil, @"Completion shouldn't be nil", nil);
+  
+  __weak __block DSGeocoder *weakSelf = self;
+  __weak __block id<DSGeocoderDelegate> weakDelegate = [self delegate];
+  [[self geocoder]
+   reverseGeocodeLocation:location
+   completionHandler:^(NSArray *placemarks, NSError *error)
+   {
+     if ([placemarks count] <= 1) {
+       if ([placemarks lastObject]) {
+         [self savePlacemark:[placemarks lastObject] forLocation:location];
+       }
+       completionHandler(placemarks, error);
+     }
+     else {
+       BOOL showPlacemarkPicker = NO;
+       if ([weakDelegate respondsToSelector:@selector(isGeocoderShouldShowPickerIfMoreThanOnePlacemarkFoundForAddressString:)]) {
+         showPlacemarkPicker
+         = [weakDelegate isGeocoderShouldShowPickerIfMoreThanOnePlacemarkFoundForAddressString:weakSelf];
+       }
+       
+       if (showPlacemarkPicker) {
+         [weakSelf setCompletionHandler:completionHandler];
+         DSPlacemarkPickerViewController *pickerViewController
+         = [[DSPlacemarkPickerViewController alloc] initWithPlacemarks:placemarks delegate:self];
+         [pickerViewController setDelegate:self];
+         [pickerViewController setUserInfo:@{@"location" : location}];
+         [weakDelegate geocoder:self wantToShowPickerViewController:pickerViewController];
+       }
+       else {
+         //No save as here placemarks has more than one placemark and we save only if there is only one placemark
+         completionHandler(placemarks, error);
+       }
+     }
+   }];
+
+}
+- (void)reverseGeocodeLocation:(CLLocation *)location
+             completionHandler:(ds_results_completion)completionHandler
+{
+  void (^placemarkHandler)(NSArray *, NSError *) = ^(NSArray *placemarks, NSError *error)
+  {
+    if (!error || ([[error domain]
+                    isEqualToString:kCLErrorDomain] && ([error code] == kCLErrorGeocodeFoundNoResult || [error code] == kCLErrorGeocodeFoundPartialResult || [error code] == kCLErrorGeocodeCanceled))) {
+      CLPlacemark *placemark = [placemarks lastObject];
+      if (placemark) {
+        completionHandler(SUCCEED_WITH_MESSAGE, NO_MESSAGE, placemark);
+      }
+      else {
+        completionHandler(FAILED_WITH_MESSAGE, NO_MESSAGE, nil);
+      }
+    }
+    else {
+      completionHandler(FAILED_WITH_MESSAGE, [DSMessage messageWithDomain:kCLErrorDomain code:[NSString stringWithFormat:@"%d", [error code]]], nil);
+    }
+  };
+  
+  CLPlacemark *savedPlacemarkForAddressString = [self savedPlacemarkForLocation:location];
+  if (savedPlacemarkForAddressString) {
+    placemarkHandler(@[savedPlacemarkForAddressString], nil);
+  }
+  else {
+    [self reverseGeocodeLocation:location geocodeCompletionHandler:placemarkHandler];
+  }
+}
+
+#pragma mark - DSPlacemarkPickerViewControllerDelegate
 - (void)placemarkPickerViewController:(DSPlacemarkPickerViewController *)thePicker
                      didPickPlacemark:(CLPlacemark *)placemark
 {
@@ -92,47 +193,44 @@
                                                                         userInfo:nil]);
 }
 
+#pragma mark - Cache data
 //TODO: refactor to use https://github.com/ccgus/fmdb
 - (void)savePlacemark:(CLPlacemark *)placemark forAddressString:(NSString *)addressString
 {
   if (!addressString) {
     return;
   }
-  ASSERT_ABSTRACT_METHOD;
+  
+  NSData *transformedPlacemark = [[[DSCLPlacemarkTransformer alloc] init] transformedValue:placemark];
+  [[NSUserDefaults standardUserDefaults] setObject:transformedPlacemark
+                                            forKey:[self saveKeyForAddressString:addressString]];
 }
 
-- (void)geocodeAddressString:(NSString *)addressString completionHandler:(ds_results_completion)completion
+- (void)savePlacemark:(CLPlacemark *)placemark forLocation:(CLLocation *)location
 {
-  void (^placemarkHandler)(NSArray *, NSError *) = ^(NSArray *placemarks, NSError *error)
-  {
-    if (!error || ([[error domain]
-                           isEqualToString:kCLErrorDomain] && ([error code] == kCLErrorGeocodeFoundNoResult || [error code] == kCLErrorGeocodeFoundPartialResult || [error code] == kCLErrorGeocodeCanceled))) {
-      CLPlacemark *placemark = [placemarks lastObject];
-      if (placemark) {
-        completion(SUCCEED_WITH_MESSAGE, NO_MESSAGE, placemark);
-      }
-      else {
-        completion(FAILED_WITH_MESSAGE, NO_MESSAGE, nil);
-      }
-    }
-    else {
-      completion(FAILED_WITH_MESSAGE, [DSMessage messageWithDomain:kCLErrorDomain code:[NSString stringWithFormat:@"%d", [error code]]], nil);
-    }
-  };
-
-  CLPlacemark *savedPlacemarkForAddressString = [self savedPlacemarkForAddressString:addressString];
-  if (savedPlacemarkForAddressString) {
-    placemarkHandler(@[savedPlacemarkForAddressString], nil);
-  }
-  else {
-    [self geocodeAddressString:addressString geocodeCompletionHandler:placemarkHandler];
-  }
+  //TODO:
 }
 
 - (CLPlacemark *)savedPlacemarkForAddressString:(NSString *)addressString
 {
-    ASSERT_ABSTRACT_METHOD;
+  NSData *placemarkData = [[NSUserDefaults standardUserDefaults] objectForKey:[self saveKeyForAddressString:addressString]];
+  if (placemarkData) {
+    CLPlacemark *placemark = [[[DSCLPlacemarkTransformer alloc] init] reverseTransformedValue:placemarkData];
+    return placemark;
+  }
+  else {
     return nil;
+  }
+}
+
+- (CLPlacemark *)savedPlacemarkForLocation:(CLLocation *)location
+{
+  return nil;
+}
+
+- (NSString *)saveKeyForAddressString:(NSString *)addressString
+{
+  return [NSString stringWithFormat:@"DSGeocoder-%@", addressString];
 }
 
 @end

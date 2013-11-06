@@ -4,6 +4,7 @@
 
 @class DSAlert;
 @class Reachability;
+@class DSAlertsQueue;
 
 #define DSAlertsHandler_SHOW_NO_INTERNET_CONNECTION_POPUPS_ONCE 0
 
@@ -14,4 +15,6 @@
 + (id)sharedInstance;
 
 - (void)showAlert:(DSAlert *)theAlert modally:(BOOL)isModalAlert;
+
+- (DSAlertsQueue *)detachAlertsQueue;
 @end
