@@ -1,6 +1,6 @@
 
 
-extern NSString *const DSCriterionDescriptionViewController_ClassName;
+extern NSString *DSCriterionDescriptionViewController_ClassName;
 
 @class DSFieldValidationCriterionDescription;
 
