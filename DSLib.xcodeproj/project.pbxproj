@@ -85,14 +85,6 @@
 		0903A3D017F0AC9100A21270 /* DSDateFormatterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33B17F0AC9100A21270 /* DSDateFormatterCache.m */; };
 		0903A3D117F0AC9100A21270 /* DSCFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33C17F0AC9100A21270 /* DSCFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0903A3D217F0AC9100A21270 /* DSCFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33D17F0AC9100A21270 /* DSCFunctions.m */; };
-		0903A3D517F0AC9100A21270 /* DependencyRegister.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A34317F0AC9100A21270 /* DependencyRegister.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3D617F0AC9100A21270 /* DependencyRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A34417F0AC9100A21270 /* DependencyRegister.m */; };
-		0903A3D717F0AC9100A21270 /* DependencyResolver+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A34517F0AC9100A21270 /* DependencyResolver+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3D817F0AC9100A21270 /* DependencyResolver+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A34617F0AC9100A21270 /* DependencyResolver+Private.m */; };
-		0903A3D917F0AC9100A21270 /* DependencyResolver+Register.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A34717F0AC9100A21270 /* DependencyResolver+Register.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3DA17F0AC9100A21270 /* DependencyResolver+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A34817F0AC9100A21270 /* DependencyResolver+Register.m */; };
-		0903A3DB17F0AC9100A21270 /* DependencyResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A34917F0AC9100A21270 /* DependencyResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3DC17F0AC9100A21270 /* DependencyResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A34A17F0AC9100A21270 /* DependencyResolver.m */; };
 		0903A3DD17F0AC9100A21270 /* CStringsFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A34C17F0AC9100A21270 /* CStringsFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0903A3DE17F0AC9100A21270 /* CStringsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A34D17F0AC9100A21270 /* CStringsFunctions.m */; };
 		0903A3DF17F0AC9100A21270 /* DSRuntimeHacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A34E17F0AC9100A21270 /* DSRuntimeHacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -212,7 +204,6 @@
 		09A6042F182A65E100F57F89 /* DSWebServiceFunctions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */; };
 		09A60430182A65E700F57F89 /* DSFieldValidation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09162C5A180EE84900A0DEEF /* DSFieldValidation.strings */; };
 		09A60431182A663C00F57F89 /* DSWebServiceConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09B8665217F1E5C7003B1070 /* DSWebServiceConfiguration.plist */; };
-		09A60432182A663C00F57F89 /* DependencyMapDefinition.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0903A34217F0AC9100A21270 /* DependencyMapDefinition.plist */; };
 		09A60433182A663C00F57F89 /* UIFontsNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0903A36617F0AC9100A21270 /* UIFontsNames.plist */; };
 		09A60434182A663C00F57F89 /* slider_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37817F0AC9100A21270 /* slider_background.png */; };
 		09A60435182A663C00F57F89 /* slider_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37917F0AC9100A21270 /* slider_background@2x.png */; };
@@ -438,15 +429,6 @@
 		0903A33B17F0AC9100A21270 /* DSDateFormatterCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDateFormatterCache.m; sourceTree = "<group>"; };
 		0903A33C17F0AC9100A21270 /* DSCFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCFunctions.h; sourceTree = "<group>"; };
 		0903A33D17F0AC9100A21270 /* DSCFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCFunctions.m; sourceTree = "<group>"; };
-		0903A34217F0AC9100A21270 /* DependencyMapDefinition.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DependencyMapDefinition.plist; sourceTree = "<group>"; };
-		0903A34317F0AC9100A21270 /* DependencyRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependencyRegister.h; sourceTree = "<group>"; };
-		0903A34417F0AC9100A21270 /* DependencyRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependencyRegister.m; sourceTree = "<group>"; };
-		0903A34517F0AC9100A21270 /* DependencyResolver+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DependencyResolver+Private.h"; sourceTree = "<group>"; };
-		0903A34617F0AC9100A21270 /* DependencyResolver+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DependencyResolver+Private.m"; sourceTree = "<group>"; };
-		0903A34717F0AC9100A21270 /* DependencyResolver+Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DependencyResolver+Register.h"; sourceTree = "<group>"; };
-		0903A34817F0AC9100A21270 /* DependencyResolver+Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DependencyResolver+Register.m"; sourceTree = "<group>"; };
-		0903A34917F0AC9100A21270 /* DependencyResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependencyResolver.h; sourceTree = "<group>"; };
-		0903A34A17F0AC9100A21270 /* DependencyResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependencyResolver.m; sourceTree = "<group>"; };
 		0903A34C17F0AC9100A21270 /* CStringsFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CStringsFunctions.h; sourceTree = "<group>"; };
 		0903A34D17F0AC9100A21270 /* CStringsFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CStringsFunctions.m; sourceTree = "<group>"; };
 		0903A34E17F0AC9100A21270 /* DSRuntimeHacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRuntimeHacker.h; sourceTree = "<group>"; };
@@ -889,26 +871,9 @@
 		0903A34017F0AC9100A21270 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				0903A34117F0AC9100A21270 /* IoSDependencyResolver */,
 				0903A34B17F0AC9100A21270 /* Settings */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		0903A34117F0AC9100A21270 /* IoSDependencyResolver */ = {
-			isa = PBXGroup;
-			children = (
-				0903A34217F0AC9100A21270 /* DependencyMapDefinition.plist */,
-				0903A34317F0AC9100A21270 /* DependencyRegister.h */,
-				0903A34417F0AC9100A21270 /* DependencyRegister.m */,
-				0903A34517F0AC9100A21270 /* DependencyResolver+Private.h */,
-				0903A34617F0AC9100A21270 /* DependencyResolver+Private.m */,
-				0903A34717F0AC9100A21270 /* DependencyResolver+Register.h */,
-				0903A34817F0AC9100A21270 /* DependencyResolver+Register.m */,
-				0903A34917F0AC9100A21270 /* DependencyResolver.h */,
-				0903A34A17F0AC9100A21270 /* DependencyResolver.m */,
-			);
-			path = IoSDependencyResolver;
 			sourceTree = "<group>";
 		};
 		0903A34B17F0AC9100A21270 /* Settings */ = {
@@ -1557,14 +1522,12 @@
 				09B866A317F1E5C7003B1070 /* DSWebServiceQueue.h in Headers */,
 				0903A3EF17F0AC9100A21270 /* DSActivityIndicator.h in Headers */,
 				0903A3FD17F0AC9100A21270 /* UISwitch+DSCheckButton.h in Headers */,
-				0903A3D717F0AC9100A21270 /* DependencyResolver+Private.h in Headers */,
 				0903A40417F0AC9100A21270 /* DSValueChooserViewControllerDelegate.h in Headers */,
 				09162C68180EE84900A0DEEF /* DSFieldValidationController.h in Headers */,
 				0903A2E517F0AC8300A21270 /* DSArrayChangeCalculator.h in Headers */,
 				0903A3B717F0AC9100A21270 /* UITableView+DSAdditions.h in Headers */,
 				09067F311818055900C8F48F /* DSAlertQueue+Private.h in Headers */,
 				0903A3C317F0AC9100A21270 /* DSCArray.h in Headers */,
-				0903A3D517F0AC9100A21270 /* DependencyRegister.h in Headers */,
 				0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */,
 				09162C93180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h in Headers */,
 				0903A38C17F0AC9100A21270 /* CATransition+AnimationsBuilder.h in Headers */,
@@ -1645,10 +1608,8 @@
 				0903A38F17F0AC9100A21270 /* NSArray+Extras.h in Headers */,
 				09B6DCEA1858F5C500FB1825 /* DSGeocoder+Factory.h in Headers */,
 				09B866B117F1E5C7003B1070 /* DSEntityDefinition.h in Headers */,
-				0903A3D917F0AC9100A21270 /* DependencyResolver+Register.h in Headers */,
 				0903A3FA17F0AC9100A21270 /* DSCheckButton.h in Headers */,
 				0903A3AB17F0AC9100A21270 /* UIApplication+DSAdditions.h in Headers */,
-				0903A3DB17F0AC9100A21270 /* DependencyResolver.h in Headers */,
 				09B8669517F1E5C7003B1070 /* DSWebServiceArrayParam.h in Headers */,
 				09B866A717F1E5C7003B1070 /* DSWebServiceRequest.h in Headers */,
 				0903A3A117F0AC9100A21270 /* NSObject+DSAdditions.h in Headers */,
@@ -1784,7 +1745,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A60431182A663C00F57F89 /* DSWebServiceConfiguration.plist in Resources */,
-				09A60432182A663C00F57F89 /* DependencyMapDefinition.plist in Resources */,
 				09A60433182A663C00F57F89 /* UIFontsNames.plist in Resources */,
 				09A60434182A663C00F57F89 /* slider_background.png in Resources */,
 				09A60435182A663C00F57F89 /* slider_background@2x.png in Resources */,
@@ -1860,7 +1820,6 @@
 				09B866B617F1E5C7003B1070 /* DSWebServiceRequestsFactory.m in Sources */,
 				09162C72180EE84900A0DEEF /* DSTextField.m in Sources */,
 				0903A39617F0AC9100A21270 /* NSDate+OAddittions.m in Sources */,
-				0903A3D817F0AC9100A21270 /* DependencyResolver+Private.m in Sources */,
 				0903A3E617F0AC9100A21270 /* QRunLoopOperation.m in Sources */,
 				0903A2E117F0AC8300A21270 /* DSArrayChange.m in Sources */,
 				0903A3F017F0AC9100A21270 /* DSActivityIndicator.m in Sources */,
@@ -1885,13 +1844,11 @@
 				09162C56180ED00C00A0DEEF /* DSCompas.m in Sources */,
 				0903A39017F0AC9100A21270 /* NSArray+Extras.m in Sources */,
 				09B866C017F1E5C7003B1070 /* DSWebServiceURL.m in Sources */,
-				0903A3DA17F0AC9100A21270 /* DependencyResolver+Register.m in Sources */,
 				0903A3A017F0AC9100A21270 /* NSObject+DeepCopy.m in Sources */,
 				0903A40017F0AC9100A21270 /* PGVideoImageView.m in Sources */,
 				0969F92E18328AE100B3C4B2 /* UIImage+Resize.m in Sources */,
 				0903A3B017F0AC9100A21270 /* UIBarButtonItem+DSAdditions.m in Sources */,
 				0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */,
-				0903A3DC17F0AC9100A21270 /* DependencyResolver.m in Sources */,
 				0903A40317F0AC9100A21270 /* DSValueChooserViewController.m in Sources */,
 				0903A3A817F0AC9100A21270 /* NSString+Extras.m in Sources */,
 				0903A3AC17F0AC9100A21270 /* UIApplication+DSAdditions.m in Sources */,
@@ -1915,7 +1872,6 @@
 				09B866B417F1E5C7003B1070 /* DSWebServiceOperationType.m in Sources */,
 				09B866B817F1E5C7003B1070 /* NSManagedObject+DSAdditions.m in Sources */,
 				0903A3E817F0AC9100A21270 /* QWatchedOperationQueue.m in Sources */,
-				0903A3D617F0AC9100A21270 /* DependencyRegister.m in Sources */,
 				0903A3EA17F0AC9100A21270 /* DSVibrator.m in Sources */,
 				0903A3EC17F0AC9100A21270 /* DSFontManager.m in Sources */,
 				0903A3D017F0AC9100A21270 /* DSDateFormatterCache.m in Sources */,
