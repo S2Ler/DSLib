@@ -171,8 +171,18 @@
 		0928CFDF17F21C9C00E494E1 /* DSWebServiceFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */; };
 		093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 093859D517F1FDD400E8AB0E /* JSONKit.h */; };
 		093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		094C0208184D139900890D67 /* DSFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 094C0206184D139900890D67 /* DSFetchedResultsControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		094C0209184D139900890D67 /* DSFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 094C0207184D139900890D67 /* DSFetchedResultsControllerDelegate.m */; };
 		0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */; };
+		0969F92B18328AE100B3C4B2 /* UIImage+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92518328AE100B3C4B2 /* UIImage+Alpha.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0969F92C18328AE100B3C4B2 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F92618328AE100B3C4B2 /* UIImage+Alpha.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		0969F92D18328AE100B3C4B2 /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92718328AE100B3C4B2 /* UIImage+Resize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0969F92E18328AE100B3C4B2 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F92818328AE100B3C4B2 /* UIImage+Resize.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		0969F92F18328AE100B3C4B2 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92918328AE100B3C4B2 /* UIImage+RoundedCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0969F93018328AE100B3C4B2 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F92A18328AE100B3C4B2 /* UIImage+RoundedCorner.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		0969F93318329C3C00B3C4B2 /* DSAskForTextController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F93118329C3C00B3C4B2 /* DSAskForTextController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0969F93418329C3C00B3C4B2 /* DSAskForTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F93218329C3C00B3C4B2 /* DSAskForTextController.m */; };
 		096C87AD18290ADA0024D734 /* DSMessage+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 096C87AB18290ADA0024D734 /* DSMessage+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		096C87AE18290ADA0024D734 /* DSMessage+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 096C87AC18290ADA0024D734 /* DSMessage+Parse.m */; };
 		0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0973572518041E3A00351055 /* DSCustomFontLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -180,6 +190,39 @@
 		098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */; };
+		09A6040D182A657000F57F89 /* NSBundle+DSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */; };
+		09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */; };
+		09A60415182A65CF00F57F89 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A60414182A65CF00F57F89 /* CoreFoundation.framework */; };
+		09A6041B182A65CF00F57F89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09A60419182A65CF00F57F89 /* InfoPlist.strings */; };
+		09A60420182A65D900F57F89 /* popoverArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C84180EECC100A0DEEF /* popoverArrowDown.png */; };
+		09A60421182A65D900F57F89 /* popoverArrowDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C85180EECC100A0DEEF /* popoverArrowDown@2x.png */; };
+		09A60422182A65D900F57F89 /* popoverArrowDownSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C86180EECC100A0DEEF /* popoverArrowDownSimple.png */; };
+		09A60423182A65D900F57F89 /* popoverArrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C87180EECC100A0DEEF /* popoverArrowLeft.png */; };
+		09A60424182A65D900F57F89 /* popoverArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C88180EECC100A0DEEF /* popoverArrowLeft@2x.png */; };
+		09A60425182A65D900F57F89 /* popoverArrowLeftSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C89180EECC100A0DEEF /* popoverArrowLeftSimple.png */; };
+		09A60426182A65D900F57F89 /* popoverArrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C8A180EECC100A0DEEF /* popoverArrowRight.png */; };
+		09A60427182A65D900F57F89 /* popoverArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C8B180EECC100A0DEEF /* popoverArrowRight@2x.png */; };
+		09A60428182A65D900F57F89 /* popoverArrowRightSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C8C180EECC100A0DEEF /* popoverArrowRightSimple.png */; };
+		09A60429182A65D900F57F89 /* popoverArrowUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C8D180EECC100A0DEEF /* popoverArrowUp.png */; };
+		09A6042A182A65D900F57F89 /* popoverArrowUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C8E180EECC100A0DEEF /* popoverArrowUp@2x.png */; };
+		09A6042B182A65D900F57F89 /* popoverArrowUpSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C8F180EECC100A0DEEF /* popoverArrowUpSimple.png */; };
+		09A6042C182A65D900F57F89 /* popoverBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C90180EECC100A0DEEF /* popoverBg.png */; };
+		09A6042D182A65D900F57F89 /* popoverBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C91180EECC100A0DEEF /* popoverBg@2x.png */; };
+		09A6042E182A65D900F57F89 /* popoverBgSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C92180EECC100A0DEEF /* popoverBgSimple.png */; };
+		09A6042F182A65E100F57F89 /* DSWebServiceFunctions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */; };
+		09A60430182A65E700F57F89 /* DSFieldValidation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09162C5A180EE84900A0DEEF /* DSFieldValidation.strings */; };
+		09A60431182A663C00F57F89 /* DSWebServiceConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09B8665217F1E5C7003B1070 /* DSWebServiceConfiguration.plist */; };
+		09A60432182A663C00F57F89 /* DependencyMapDefinition.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0903A34217F0AC9100A21270 /* DependencyMapDefinition.plist */; };
+		09A60433182A663C00F57F89 /* UIFontsNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0903A36617F0AC9100A21270 /* UIFontsNames.plist */; };
+		09A60434182A663C00F57F89 /* slider_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37817F0AC9100A21270 /* slider_background.png */; };
+		09A60435182A663C00F57F89 /* slider_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37917F0AC9100A21270 /* slider_background@2x.png */; };
+		09A60436182A663C00F57F89 /* sliderthumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37A17F0AC9100A21270 /* sliderthumb.png */; };
+		09A60437182A663C00F57F89 /* slidertrack.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37B17F0AC9100A21270 /* slidertrack.png */; };
+		09A60438182A663C00F57F89 /* slidertrack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37C17F0AC9100A21270 /* slidertrack@2x.png */; };
+		09A60439182A663C00F57F89 /* DSValueChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0903A38A17F0AC9100A21270 /* DSValueChooserViewController.xib */; };
+		09A6043A182A663C00F57F89 /* DSMessagesLocalization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62DD157786FD5902D0D9B3A8 /* DSMessagesLocalization.strings */; };
+		09A6043B182A663C00F57F89 /* DSConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DD12A2DD6F6F278480844E /* DSConfiguration.plist */; };
+		09A6043C182A663C00F57F89 /* DSChoosePlacemarkAnnotation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62DD1245A796A03C0561F8E3 /* DSChoosePlacemarkAnnotation.strings */; };
 		09B8663A17F1B82D003B1070 /* DSTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663817F1B82D003B1070 /* DSTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09B8663B17F1B82D003B1070 /* DSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8663917F1B82D003B1070 /* DSTableViewController.m */; };
 		09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663C17F1B990003B1070 /* DSKeyboardController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -288,6 +331,16 @@
 		AED6C1971465E55000D9B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1961465E55000D9B44E /* Foundation.framework */; };
 		AED6C20D1465E89800D9B44E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C20C1465E89800D9B44E /* UIKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09A60447182A787C00F57F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09A60412182A65CF00F57F89;
+			remoteInfo = DSLibBundle;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0903A2D517F0AC8300A21270 /* DSArrayChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSArrayChange.h; sourceTree = "<group>"; };
@@ -485,8 +538,18 @@
 		0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceFunctions.m; sourceTree = "<group>"; };
 		093859D517F1FDD400E8AB0E /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		093859D617F1FDD400E8AB0E /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		094C0206184D139900890D67 /* DSFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
+		094C0207184D139900890D67 /* DSFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
 		0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DSAdditions.h"; sourceTree = "<group>"; };
 		0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DSAdditions.m"; sourceTree = "<group>"; };
+		0969F92518328AE100B3C4B2 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		0969F92618328AE100B3C4B2 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		0969F92718328AE100B3C4B2 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		0969F92818328AE100B3C4B2 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		0969F92918328AE100B3C4B2 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		0969F92A18328AE100B3C4B2 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		0969F93118329C3C00B3C4B2 /* DSAskForTextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAskForTextController.h; sourceTree = "<group>"; };
+		0969F93218329C3C00B3C4B2 /* DSAskForTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAskForTextController.m; sourceTree = "<group>"; };
 		096C87AB18290ADA0024D734 /* DSMessage+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSMessage+Parse.h"; sourceTree = "<group>"; };
 		096C87AC18290ADA0024D734 /* DSMessage+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSMessage+Parse.m"; sourceTree = "<group>"; };
 		0973572518041E3A00351055 /* DSCustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomFontLabel.h; sourceTree = "<group>"; };
@@ -494,6 +557,13 @@
 		098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSQueueBasedRequestSender+Private.h"; sourceTree = "<group>"; };
 		098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSQueueBasedRequestSender.h; sourceTree = "<group>"; };
 		098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueueBasedRequestSender.m; sourceTree = "<group>"; };
+		09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DSBundle.h"; sourceTree = "<group>"; };
+		09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DSBundle.m"; sourceTree = "<group>"; };
+		09A60413182A65CF00F57F89 /* DSLibBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLibBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		09A60414182A65CF00F57F89 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		09A60418182A65CF00F57F89 /* DSLibBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DSLibBundle-Info.plist"; sourceTree = "<group>"; };
+		09A6041A182A65CF00F57F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		09A6041C182A65CF00F57F89 /* DSLibBundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLibBundle-Prefix.pch"; sourceTree = "<group>"; };
 		09B8663817F1B82D003B1070 /* DSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTableViewController.h; sourceTree = "<group>"; };
 		09B8663917F1B82D003B1070 /* DSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTableViewController.m; sourceTree = "<group>"; };
 		09B8663C17F1B990003B1070 /* DSKeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSKeyboardController.h; sourceTree = "<group>"; };
@@ -613,6 +683,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		09A60410182A65CF00F57F89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A60415182A65CF00F57F89 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AED6C1901465E55000D9B44E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -629,6 +707,7 @@
 		0903A2D317F0AC8300A21270 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				0969F92418328AE100B3C4B2 /* UIImage-categories */,
 				09162C57180EE84900A0DEEF /* FieldValidationFramework */,
 				0992B7B31806ABB500F1A99C /* DragAndDrop */,
 				093859D517F1FDD400E8AB0E /* JSONKit.h */,
@@ -653,6 +732,12 @@
 				09162C54180ED00C00A0DEEF /* DSCompas.m */,
 				0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */,
 				0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */,
+				09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */,
+				09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */,
+				0969F93118329C3C00B3C4B2 /* DSAskForTextController.h */,
+				0969F93218329C3C00B3C4B2 /* DSAskForTextController.m */,
+				094C0206184D139900890D67 /* DSFetchedResultsControllerDelegate.h */,
+				094C0207184D139900890D67 /* DSFetchedResultsControllerDelegate.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1045,6 +1130,19 @@
 			path = Popover;
 			sourceTree = "<group>";
 		};
+		0969F92418328AE100B3C4B2 /* UIImage-categories */ = {
+			isa = PBXGroup;
+			children = (
+				0969F92518328AE100B3C4B2 /* UIImage+Alpha.h */,
+				0969F92618328AE100B3C4B2 /* UIImage+Alpha.m */,
+				0969F92718328AE100B3C4B2 /* UIImage+Resize.h */,
+				0969F92818328AE100B3C4B2 /* UIImage+Resize.m */,
+				0969F92918328AE100B3C4B2 /* UIImage+RoundedCorner.h */,
+				0969F92A18328AE100B3C4B2 /* UIImage+RoundedCorner.m */,
+			);
+			path = "UIImage-categories";
+			sourceTree = "<group>";
+		};
 		098FB25B17F2008600DB9F49 /* DSQueueBasedRequestSender */ = {
 			isa = PBXGroup;
 			children = (
@@ -1065,6 +1163,24 @@
 				09C6BE521806BD760084C600 /* DSDragAndDrop.h */,
 			);
 			path = DragAndDrop;
+			sourceTree = "<group>";
+		};
+		09A60416182A65CF00F57F89 /* DSLibBundle */ = {
+			isa = PBXGroup;
+			children = (
+				09A60417182A65CF00F57F89 /* Supporting Files */,
+			);
+			path = DSLibBundle;
+			sourceTree = "<group>";
+		};
+		09A60417182A65CF00F57F89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09A60418182A65CF00F57F89 /* DSLibBundle-Info.plist */,
+				09A60419182A65CF00F57F89 /* InfoPlist.strings */,
+				09A6041C182A65CF00F57F89 /* DSLibBundle-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		09B8664E17F1E5C7003B1070 /* ServerBridge */ = {
@@ -1308,6 +1424,7 @@
 			isa = PBXGroup;
 			children = (
 				AED6C1981465E55000D9B44E /* DSLib */,
+				09A60416182A65CF00F57F89 /* DSLibBundle */,
 				AED6C1951465E55000D9B44E /* Frameworks */,
 				AED6C1941465E55000D9B44E /* Products */,
 			);
@@ -1319,6 +1436,7 @@
 			isa = PBXGroup;
 			children = (
 				AED6C1931465E55000D9B44E /* libDSLib.a */,
+				09A60413182A65CF00F57F89 /* DSLibBundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1329,6 +1447,7 @@
 				0922D3E2178C951900AAE05E /* CoreData.framework */,
 				AED6C20C1465E89800D9B44E /* UIKit.framework */,
 				AED6C1961465E55000D9B44E /* Foundation.framework */,
+				09A60414182A65CF00F57F89 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1430,6 +1549,7 @@
 				0903A3A317F0AC9100A21270 /* NSObject+Observing.h in Headers */,
 				0903A3F317F0AC9100A21270 /* DSRotatingImageView.h in Headers */,
 				0903A3F717F0AC9100A21270 /* DSSliderDelegate.h in Headers */,
+				0969F93318329C3C00B3C4B2 /* DSAskForTextController.h in Headers */,
 				0903A3C517F0AC9100A21270 /* DSCFLoatDictionary.h in Headers */,
 				0903A3C717F0AC9100A21270 /* DSQueue.h in Headers */,
 				09B866A817F1E5C7003B1070 /* DSWebServiceRequestDelegate.h in Headers */,
@@ -1442,6 +1562,7 @@
 				0903A39317F0AC9100A21270 /* NSData+OAdditions.h in Headers */,
 				0903A3D117F0AC9100A21270 /* DSCFunctions.h in Headers */,
 				09B8669317F1E5C7003B1070 /* NSError+DSWebService.h in Headers */,
+				0969F92B18328AE100B3C4B2 /* UIImage+Alpha.h in Headers */,
 				09162C99180EECC100A0DEEF /* WEPopoverParentView.h in Headers */,
 				0903A3BB17F0AC9100A21270 /* UIView+Resizing.h in Headers */,
 				0903A38E17F0AC9100A21270 /* DSTimeFunctions.h in Headers */,
@@ -1453,6 +1574,7 @@
 				0903A3DD17F0AC9100A21270 /* CStringsFunctions.h in Headers */,
 				0903A3CF17F0AC9100A21270 /* DSDateFormatterCache.h in Headers */,
 				0903A2E917F0AC8300A21270 /* UIView+ViewsEnumeration.h in Headers */,
+				0969F92D18328AE100B3C4B2 /* UIImage+Resize.h in Headers */,
 				09B866A517F1E5C7003B1070 /* DSWebServiceSerialQueue.h in Headers */,
 				0903A3CD17F0AC9100A21270 /* DSMacros.h in Headers */,
 				0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */,
@@ -1460,6 +1582,7 @@
 				0903A3A917F0AC9100A21270 /* UIAlertView+Additions.h in Headers */,
 				09162C9A180EECC100A0DEEF /* WETouchableView.h in Headers */,
 				09B866A117F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h in Headers */,
+				0969F92F18328AE100B3C4B2 /* UIImage+RoundedCorner.h in Headers */,
 				0903A3A517F0AC9100A21270 /* NSString+Encoding.h in Headers */,
 				0903A3F817F0AC9100A21270 /* PGSlider.h in Headers */,
 				0903A39517F0AC9100A21270 /* NSDate+OAddittions.h in Headers */,
@@ -1490,6 +1613,7 @@
 				62DD1E915F2215F00929FC3C /* DSAlertButton.h in Headers */,
 				0903A40917F0B4DA00A21270 /* Reachability.h in Headers */,
 				62DD1C6C3614A89A5BF0FF1B /* DSUIAlertView.h in Headers */,
+				09A6040D182A657000F57F89 /* NSBundle+DSBundle.h in Headers */,
 				09B8669917F1E5C7003B1070 /* DSWebServiceParam.h in Headers */,
 				62DD17ADB8BFA1779019830E /* DSAlertsHandler.h in Headers */,
 				62DD1D2E90263BBAA1002A5B /* DSMessageContext.h in Headers */,
@@ -1529,6 +1653,7 @@
 				09B866AD17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.h in Headers */,
 				62DD188A0EF5C0CA42AAF675 /* DSPlacemarkPickerViewController.h in Headers */,
 				09B866BF17F1E5C7003B1070 /* DSWebServiceURL.h in Headers */,
+				094C0208184D139900890D67 /* DSFetchedResultsControllerDelegate.h in Headers */,
 				09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */,
 				62DD1027E5C608DB51C6E9C6 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */,
 				09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */,
@@ -1543,6 +1668,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		09A60412182A65CF00F57F89 /* DSLibBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09A6041D182A65CF00F57F89 /* Build configuration list for PBXNativeTarget "DSLibBundle" */;
+			buildPhases = (
+				09A6040F182A65CF00F57F89 /* Sources */,
+				09A60410182A65CF00F57F89 /* Frameworks */,
+				09A60411182A65CF00F57F89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DSLibBundle;
+			productName = DSLibBundle;
+			productReference = 09A60413182A65CF00F57F89 /* DSLibBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		AED6C1921465E55000D9B44E /* DSLib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AED6C1A01465E55000D9B44E /* Build configuration list for PBXNativeTarget "DSLib" */;
@@ -1554,6 +1696,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				09A60448182A787C00F57F89 /* PBXTargetDependency */,
 			);
 			name = DSLib;
 			productName = DSLib;
@@ -1582,11 +1725,59 @@
 			projectRoot = "";
 			targets = (
 				AED6C1921465E55000D9B44E /* DSLib */,
+				09A60412182A65CF00F57F89 /* DSLibBundle */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		09A60411182A65CF00F57F89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A60431182A663C00F57F89 /* DSWebServiceConfiguration.plist in Resources */,
+				09A60432182A663C00F57F89 /* DependencyMapDefinition.plist in Resources */,
+				09A60433182A663C00F57F89 /* UIFontsNames.plist in Resources */,
+				09A60434182A663C00F57F89 /* slider_background.png in Resources */,
+				09A60435182A663C00F57F89 /* slider_background@2x.png in Resources */,
+				09A60436182A663C00F57F89 /* sliderthumb.png in Resources */,
+				09A60437182A663C00F57F89 /* slidertrack.png in Resources */,
+				09A60438182A663C00F57F89 /* slidertrack@2x.png in Resources */,
+				09A60439182A663C00F57F89 /* DSValueChooserViewController.xib in Resources */,
+				09A6043A182A663C00F57F89 /* DSMessagesLocalization.strings in Resources */,
+				09A6043B182A663C00F57F89 /* DSConfiguration.plist in Resources */,
+				09A6043C182A663C00F57F89 /* DSChoosePlacemarkAnnotation.strings in Resources */,
+				09A60430182A65E700F57F89 /* DSFieldValidation.strings in Resources */,
+				09A6042F182A65E100F57F89 /* DSWebServiceFunctions.plist in Resources */,
+				09A60420182A65D900F57F89 /* popoverArrowDown.png in Resources */,
+				09A60421182A65D900F57F89 /* popoverArrowDown@2x.png in Resources */,
+				09A60422182A65D900F57F89 /* popoverArrowDownSimple.png in Resources */,
+				09A60423182A65D900F57F89 /* popoverArrowLeft.png in Resources */,
+				09A60424182A65D900F57F89 /* popoverArrowLeft@2x.png in Resources */,
+				09A60425182A65D900F57F89 /* popoverArrowLeftSimple.png in Resources */,
+				09A60426182A65D900F57F89 /* popoverArrowRight.png in Resources */,
+				09A60427182A65D900F57F89 /* popoverArrowRight@2x.png in Resources */,
+				09A60428182A65D900F57F89 /* popoverArrowRightSimple.png in Resources */,
+				09A60429182A65D900F57F89 /* popoverArrowUp.png in Resources */,
+				09A6042A182A65D900F57F89 /* popoverArrowUp@2x.png in Resources */,
+				09A6042B182A65D900F57F89 /* popoverArrowUpSimple.png in Resources */,
+				09A6042C182A65D900F57F89 /* popoverBg.png in Resources */,
+				09A6042D182A65D900F57F89 /* popoverBg@2x.png in Resources */,
+				09A6042E182A65D900F57F89 /* popoverBgSimple.png in Resources */,
+				09A6041B182A65CF00F57F89 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		09A6040F182A65CF00F57F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AED6C18F1465E55000D9B44E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1610,6 +1801,7 @@
 				09162C6C180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m in Sources */,
 				0903A3C417F0AC9100A21270 /* DSCArray.m in Sources */,
 				09B8669D17F1E5C7003B1070 /* DSWebServiceStringParam.m in Sources */,
+				09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */,
 				0903A39E17F0AC9100A21270 /* NSMutableURLRequest+POSTData.m in Sources */,
 				093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */,
 				0903A3E017F0AC9100A21270 /* DSRuntimeHacker.m in Sources */,
@@ -1643,6 +1835,7 @@
 				0903A3DA17F0AC9100A21270 /* DependencyResolver+Register.m in Sources */,
 				0903A3A017F0AC9100A21270 /* NSObject+DeepCopy.m in Sources */,
 				0903A40017F0AC9100A21270 /* PGVideoImageView.m in Sources */,
+				0969F92E18328AE100B3C4B2 /* UIImage+Resize.m in Sources */,
 				0903A3B017F0AC9100A21270 /* UIBarButtonItem+DSAdditions.m in Sources */,
 				0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */,
 				0903A3DC17F0AC9100A21270 /* DependencyResolver.m in Sources */,
@@ -1650,6 +1843,7 @@
 				0903A3A817F0AC9100A21270 /* NSString+Extras.m in Sources */,
 				0903A3AC17F0AC9100A21270 /* UIApplication+DSAdditions.m in Sources */,
 				0903A2E817F0AC8300A21270 /* DSNetworkActivity.m in Sources */,
+				0969F92C18328AE100B3C4B2 /* UIImage+Alpha.m in Sources */,
 				09162C9B180EECC100A0DEEF /* WETouchableView.m in Sources */,
 				0903A3BE17F0AC9100A21270 /* UIView+Subviews.m in Sources */,
 				0903A39217F0AC9100A21270 /* NSArray+ObjectsQuery.m in Sources */,
@@ -1674,6 +1868,7 @@
 				09B866AC17F1E5C7003B1070 /* DSFakeWebServiceRequest.m in Sources */,
 				0903A3CE17F0AC9100A21270 /* DSMacros.m in Sources */,
 				0903A38D17F0AC9100A21270 /* CATransition+AnimationsBuilder.m in Sources */,
+				0969F93018328AE100B3C4B2 /* UIImage+RoundedCorner.m in Sources */,
 				0903A39A17F0AC9100A21270 /* NSFileManager+Directories.m in Sources */,
 				0903A39C17F0AC9100A21270 /* NSMutableArray+Additions.m in Sources */,
 				09067F321818055900C8F48F /* DSAlertQueue+Private.m in Sources */,
@@ -1689,6 +1884,7 @@
 				09B866A417F1E5C7003B1070 /* DSWebServiceQueue.m in Sources */,
 				62DD1E3872904802D5077B3F /* DSUIAlertView.m in Sources */,
 				09162C6E180EE84900A0DEEF /* DSFieldValidationCriterion.m in Sources */,
+				094C0209184D139900890D67 /* DSFetchedResultsControllerDelegate.m in Sources */,
 				09162C94180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m in Sources */,
 				62DD1569D576C442B9DF1889 /* DSAlertsHandler.m in Sources */,
 				09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */,
@@ -1700,6 +1896,7 @@
 				62DD1E3812B21714B92C8ACF /* DSAlertsHandlerConfiguration.m in Sources */,
 				09B866BE17F1E5C7003B1070 /* DSWebServiceResponse.m in Sources */,
 				62DD1EF1B0929ACD16CFF64B /* DSAlertsHandler+SimplifiedAPI.m in Sources */,
+				0969F93418329C3C00B3C4B2 /* DSAskForTextController.m in Sources */,
 				09B8669617F1E5C7003B1070 /* DSWebServiceArrayParam.m in Sources */,
 				09B866B217F1E5C7003B1070 /* DSEntityDefinition.m in Sources */,
 				62DD1DB23EEF8D87DD0C9B15 /* DSConfiguration.m in Sources */,
@@ -1722,7 +1919,78 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		09A60448182A787C00F57F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09A60412182A65CF00F57F89 /* DSLibBundle */;
+			targetProxy = 09A60447182A787C00F57F89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		09A60419182A65CF00F57F89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09A6041A182A65CF00F57F89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		09A6041E182A65CF00F57F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DSLibBundle/DSLibBundle-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = "DSLibBundle/DSLibBundle-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		09A6041F182A65CF00F57F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DSLibBundle/DSLibBundle-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				INFOPLIST_FILE = "DSLibBundle/DSLibBundle-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		AED6C19E1465E55000D9B44E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1743,6 +2011,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1768,6 +2037,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1819,6 +2089,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		09A6041D182A65CF00F57F89 /* Build configuration list for PBXNativeTarget "DSLibBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09A6041E182A65CF00F57F89 /* Debug */,
+				09A6041F182A65CF00F57F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AED6C18D1465E55000D9B44E /* Build configuration list for PBXProject "DSLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

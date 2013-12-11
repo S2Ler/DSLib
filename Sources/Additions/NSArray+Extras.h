@@ -17,5 +17,7 @@
 
 /** @return array of arrays. Each array contains objects which has equal keyPath values */
 - (NSArray *)groupObjectsByKeyPath:(NSString *)keyPath;
+
+- (NSUInteger)countObject:(id)object;
 @end
 

@@ -34,4 +34,5 @@ static char kDSTouchHandlerKey;
 {
   return objc_getAssociatedObject(self, &kDSTouchHandlerKey);
 }
+
 @end

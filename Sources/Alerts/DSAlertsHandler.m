@@ -106,7 +106,7 @@
   }
 
   BOOL alertInQueue = NO;
-  for (DSAlert *queueAlert in [[self alertsQueue] objectEnumerator]) {
+  for (DSAlert *queueAlert in [self alertsQueue]) {
     if ([queueAlert isAlertMessageEqualWith:theAlert] == YES) {
       alertInQueue = YES;
       break;
@@ -114,6 +114,18 @@
   }
 
   return alertInQueue;
+}
+
+- (BOOL)isMessage:(DSMessage *)message inCollection:(id<NSFastEnumeration>)collection {
+  BOOL alertInCollection = NO;
+  for (DSMessage *collectionMessage in collection) {
+    if ([collectionMessage isEqualToMessage:message] == YES) {
+      alertInCollection = YES;
+      break;
+    }
+  }
+  
+  return alertInCollection;
 }
 
 - (void)queueAlert:(DSAlert *)theAlert
@@ -127,7 +139,11 @@
     return;
   }
 
-  if ([[[theAlert message] domain] isEqualToString:NSURLErrorDomain] &&
+  if ([self isMessage:[theAlert message]
+         inCollection:[self filterOutMessages]]) {
+    return;
+  }
+  else if ([[[theAlert message] domain] isEqualToString:NSURLErrorDomain] &&
     [[[theAlert message] code] integerValue] == NSURLErrorNotConnectedToInternet) {
 
     if ([self shouldShowNotReachableAlerts]) {

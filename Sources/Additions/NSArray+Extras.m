@@ -104,4 +104,15 @@
     return groups;
 }
 
+- (NSUInteger)countObject:(id)object
+{
+  __block NSUInteger count = 0;
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    if ([object isEqualToString:obj]) {
+      count++;
+    }
+  }];
+  
+  return count;
+}
 @end

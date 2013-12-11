@@ -1,4 +1,5 @@
 #import "NSString+Extras.h"
+#import "NSString+Encoding.h"
 
 NSString *const EMAIL_REGEX = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
 
@@ -258,4 +259,13 @@ NSString *const EMAIL_REGEX = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
   return fixedString;
 }
 
+- (NSString *)perlSearchRegex
+{
+  NSMutableString *searchRegex = [NSMutableString string];
+  [[[[self lowercaseString] trimWhiteSpaces] componentsSeparatedByString:@" "] enumerateObjectsUsingBlock:
+   ^(NSString *keyword, NSUInteger idx, BOOL *stop) {
+     [searchRegex appendFormat:@"(?=.*%@)", keyword];
+   }];
+  return searchRegex;
+}
 @end

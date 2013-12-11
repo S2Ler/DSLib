@@ -11,6 +11,9 @@
 
 
 @interface DSDragAndDropController : NSObject
+/** Default is of course = YES */
+@property (nonatomic, assign) BOOL dragAndDropEnabled;
+
 - (id)initWithSource:(UIView<DSDraggingSourceContainer> *)source
          destination:(UIView<DSDraggingDestinationContainer> *)destination
         draggingArea:(UIView *)draggingArea;

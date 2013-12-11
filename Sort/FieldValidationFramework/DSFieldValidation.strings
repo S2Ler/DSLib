@@ -4,3 +4,6 @@
 
 "criterion.requiredField.title" = "'%@' field is required";
 "criterion.requiredField.body" = "Please fill in '%@' field";
+
+"criterion.charsRange.title" = "'%@' is incorrect";
+"criterion.charsRange.body" = "'%@' should be %d-%d symbols";

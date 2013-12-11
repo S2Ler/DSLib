@@ -2,7 +2,7 @@
 #import "DSCriterionDescriptionViewController.h"
 #import "DSFieldValidationCriterionDescription.h"
 
-NSString *const DSCriterionDescriptionViewController_ClassName;
+//NSString *const DSCriterionDescriptionViewController_ClassName = @"DSCriterionDescriptionViewController";
 
 @interface DSCriterionDescriptionViewController ()
 

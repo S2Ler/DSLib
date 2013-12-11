@@ -43,4 +43,6 @@ extern NSString *const EMAIL_REGEX;
 
 /** \param setter looks like: setParamName */
 + (NSString *)propertyNameFromSetter:(SEL)setter;
+
+- (NSString *)perlSearchRegex;
 @end

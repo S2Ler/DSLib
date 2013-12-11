@@ -29,6 +29,7 @@
     _source = source;
     _destination = destination;
     _draggingArea = draggingArea;
+    _dragAndDropEnabled = YES;
     
     [self setupGestures];
   }
@@ -44,8 +45,11 @@
 
 - (void)sourceLongPressedGesture:(UILongPressGestureRecognizer *)gesture
 {
+  if (![self dragAndDropEnabled]) {
+    return;
+  }
+  
   if ([gesture state] == UIGestureRecognizerStateBegan) {
-    
     id modelObject = nil;
     UIView *draggingView = [[self source] dragginViewAtLocation:[gesture locationInView:[self source]]
                                                  getModelObject:&modelObject];

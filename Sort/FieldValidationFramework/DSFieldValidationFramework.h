@@ -5,3 +5,5 @@
 #import "DSFieldValidationCriterion.h"
 #import "DSFieldValidationCriterionDescription.h"
 #import "DSTextField.h"
+#import "DSFieldValidationControllerDelegate.h"
+
