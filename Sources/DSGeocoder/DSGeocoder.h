@@ -3,11 +3,14 @@
 #import <CoreLocation/CoreLocation.h>
 #import "DSPlacemarkPickerViewControllerDelegate.h"
 #import "DSAlertsSupportCode.h"
+#import "DSGeocodeProvider.h"
 @protocol DSGeocoderDelegate;
 
 
 @interface DSGeocoder: NSObject<DSPlacemarkPickerViewControllerDelegate>
 @property (nonatomic, weak) id<DSGeocoderDelegate> delegate;
+
+- (id)initWithGeocodeProvider:(id<DSGeocodeProvider>)geocodeProvider;
 
 - (void)cancelGeocode;
 

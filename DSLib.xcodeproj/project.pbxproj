@@ -222,7 +222,28 @@
 		09A60439182A663C00F57F89 /* DSValueChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0903A38A17F0AC9100A21270 /* DSValueChooserViewController.xib */; };
 		09A6043A182A663C00F57F89 /* DSMessagesLocalization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62DD157786FD5902D0D9B3A8 /* DSMessagesLocalization.strings */; };
 		09A6043B182A663C00F57F89 /* DSConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DD12A2DD6F6F278480844E /* DSConfiguration.plist */; };
-		09A6043C182A663C00F57F89 /* DSChoosePlacemarkAnnotation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62DD1245A796A03C0561F8E3 /* DSChoosePlacemarkAnnotation.strings */; };
+		09B6DCE51858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCCD1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B6DCE61858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCCE1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m */; };
+		09B6DCE71858F5C500FB1825 /* DSCLPlacemarkTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD01858F5C500FB1825 /* DSCLPlacemarkTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B6DCE81858F5C500FB1825 /* DSCLPlacemarkTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCD11858F5C500FB1825 /* DSCLPlacemarkTransformer.m */; };
+		09B6DCE91858F5C500FB1825 /* DSGeocodeProviderType.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD21858F5C500FB1825 /* DSGeocodeProviderType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B6DCEA1858F5C500FB1825 /* DSGeocoder+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD31858F5C500FB1825 /* DSGeocoder+Factory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B6DCEB1858F5C500FB1825 /* DSGeocoder+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCD41858F5C500FB1825 /* DSGeocoder+Factory.m */; };
+		09B6DCEC1858F5C500FB1825 /* DSGeocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD51858F5C500FB1825 /* DSGeocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B6DCED1858F5C500FB1825 /* DSGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCD61858F5C500FB1825 /* DSGeocoder.m */; };
+		09B6DCEE1858F5C500FB1825 /* DSGeocoderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD71858F5C500FB1825 /* DSGeocoderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B6DCEF1858F5C500FB1825 /* DSGeocoderFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD81858F5C500FB1825 /* DSGeocoderFramework.h */; };
+		09B6DCF01858F5C500FB1825 /* DSPlacemarkPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD91858F5C500FB1825 /* DSPlacemarkPickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B6DCF11858F5C500FB1825 /* DSPlacemarkPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCDA1858F5C500FB1825 /* DSPlacemarkPickerViewController.m */; };
+		09B6DCF21858F5C500FB1825 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCDC1858F5C500FB1825 /* DSPlacemarkPickerViewControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09B6DCF31858F5C500FB1825 /* DSGeocodeProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCDE1858F5C500FB1825 /* DSGeocodeProvider.h */; };
+		09B6DCF41858F5C500FB1825 /* DSGeocodeProviderApple.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCDF1858F5C500FB1825 /* DSGeocodeProviderApple.h */; };
+		09B6DCF51858F5C500FB1825 /* DSGeocodeProviderApple.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCE01858F5C500FB1825 /* DSGeocodeProviderApple.m */; };
+		09B6DCF61858F5C500FB1825 /* DSGeocodeProviderOpenmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCE11858F5C500FB1825 /* DSGeocodeProviderOpenmap.h */; };
+		09B6DCF71858F5C500FB1825 /* DSGeocodeProviderOpenmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCE21858F5C500FB1825 /* DSGeocodeProviderOpenmap.m */; };
+		09B6DCF81858F5C500FB1825 /* DSPlacemark.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCE31858F5C500FB1825 /* DSPlacemark.h */; };
+		09B6DCF91858F5C500FB1825 /* DSPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCE41858F5C500FB1825 /* DSPlacemark.m */; };
+		09B6DCFA1858F5DE00FB1825 /* DSChoosePlacemarkAnnotation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09B6DCCF1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.strings */; };
 		09B8663A17F1B82D003B1070 /* DSTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663817F1B82D003B1070 /* DSTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09B8663B17F1B82D003B1070 /* DSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8663917F1B82D003B1070 /* DSTableViewController.m */; };
 		09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663C17F1B990003B1070 /* DSKeyboardController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -280,10 +301,6 @@
 		09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
-		62DD1027E5C608DB51C6E9C6 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD186A895DB68C6D413C16 /* DSPlacemarkPickerViewControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD104144F45B7B8D974698 /* DSChoosePlacemarkAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1CE7615294FAF64B20F9 /* DSChoosePlacemarkAnnotation.m */; };
-		62DD1097F09955B4CD8A1BD6 /* DSChoosePlacemarkAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD134FD1FF9911EA4327A9 /* DSChoosePlacemarkAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD10B7927E58A293575A03 /* DSGeocoderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1FD23C5A66A4C692AA58 /* DSGeocoderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD10D7C5D585E7DF32649A /* DSAlertsSupportCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154696C25DDF7CB90594 /* DSAlertsSupportCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD10D8A5F859797CC11AF7 /* DSAlertViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD17A21471C20C738E6BAA /* DSAlertViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD12341D52C3E5516F6D85 /* DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD174C1D46388A8A79AF76 /* DSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -294,7 +311,6 @@
 		62DD13C9E2F182E4E22E7D24 /* DSBlockBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1A7E79FEFB570DEAAA5E /* DSBlockBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD13EB68EB018ACE1AC0F5 /* DSConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1C0631C240FC26D7C2E3 /* DSConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD14ABC283FD7DF3AD2734 /* DSAlertViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD16FE95C8F802F4E5BB13 /* DSAlertViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD150B77B3BF0740F534FA /* DSCLPlacemarkTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD195CFE70AE2ADB63A8A6 /* DSCLPlacemarkTransformer.m */; };
 		62DD152CB973B9C752B7120C /* DSBlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1E5EAE093487F56DFF15 /* DSBlockBarButtonItem.m */; };
 		62DD1569D576C442B9DF1889 /* DSAlertsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FF31DEBF389A0374834 /* DSAlertsHandler.m */; };
 		62DD156A5BCD9E8F54FAFD25 /* DSDataDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD199D2FC7139BB1616937 /* DSDataDetector.m */; };
@@ -304,11 +320,8 @@
 		62DD17ADB8BFA1779019830E /* DSAlertsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154F33AD8BF741BCB314 /* DSAlertsHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD17C01B3B707487A95F6D /* DSDragAndDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD13ED0EF18F1D1FD6F1A7 /* DSDragAndDropController.m */; };
 		62DD1841C6225FE22AA92F1B /* DSAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD18C9F54D0E5F44F3F6C6 /* DSAppDelegate.h */; };
-		62DD186A6C4C9F8D37904BC3 /* DSPlacemarkPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1AC3CC397A60D6D9A642 /* DSPlacemarkPickerViewController.m */; };
 		62DD187C5A8A0492EB15FAEE /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD138D9722CA655F636CCA /* DSAppDelegate.m */; };
-		62DD188A0EF5C0CA42AAF675 /* DSPlacemarkPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1EA66CDBBDAFF760AB4F /* DSPlacemarkPickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD19B8D7F38D3DAD57B11E /* DSFindCountry.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD18BB1C71903CA44B9C0A /* DSFindCountry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD19FEB4E286474E0B9849 /* DSGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1D9D2B0F2A12DC53B054 /* DSGeocoder.m */; };
 		62DD19FF93EC85DB54E81188 /* DSBlockButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1AF5D211006BE9830590 /* DSBlockButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1A1174BC68559EA4299F /* DSDragAndDropController.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1AFD36B9F22FEFEB3170 /* DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FC9FB79656CF9699964 /* DSMessage.m */; };
@@ -318,14 +331,12 @@
 		62DD1C9E769C375EB5D785FB /* DSDraggingSourceContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD123F1B7C97E47FFB0F7C /* DSDraggingSourceContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD14CA899B7E82F54CCD3C /* DSMessageContext.m */; };
 		62DD1D2E90263BBAA1002A5B /* DSMessageContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1A94EAF2AD8177958550 /* DSMessageContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD1DA8BE66CE6176478E95 /* DSCLPlacemarkTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1034D65FEA7BE4837BAE /* DSCLPlacemarkTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1DB23EEF8D87DD0C9B15 /* DSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1A0DD9DE7CA23881E72F /* DSConfiguration.m */; };
 		62DD1E3812B21714B92C8ACF /* DSAlertsHandlerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FA1527704E3088180FA /* DSAlertsHandlerConfiguration.m */; };
 		62DD1E3872904802D5077B3F /* DSUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD10482694069BA9C5E531 /* DSUIAlertView.m */; };
 		62DD1E899DE35CD54E5DC2BF /* DSAlertViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1427633E33FD45C82818 /* DSAlertViewFactory.m */; };
 		62DD1E915F2215F00929FC3C /* DSAlertButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD17F6B8F2871E6F283957 /* DSAlertButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1EF1B0929ACD16CFF64B /* DSAlertsHandler+SimplifiedAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1534F0088E374A3A7597 /* DSAlertsHandler+SimplifiedAPI.m */; };
-		62DD1F1C5E02B4FD804E774A /* DSGeocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD197730C84007DB31D282 /* DSGeocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD1F21D685DAF88DB40D0D /* DSAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD18B2AEF6C1DFD60B1B8E /* DSAlert.m */; };
 		62DD1FEFFC22374EBAC3044E /* DSAlertsSupportCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1596489ABB2F0A7DF235 /* DSAlertsSupportCode.m */; };
 		AED6C1971465E55000D9B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1961465E55000D9B44E /* Foundation.framework */; };
@@ -564,6 +575,29 @@
 		09A60418182A65CF00F57F89 /* DSLibBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DSLibBundle-Info.plist"; sourceTree = "<group>"; };
 		09A6041A182A65CF00F57F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		09A6041C182A65CF00F57F89 /* DSLibBundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLibBundle-Prefix.pch"; sourceTree = "<group>"; };
+		09B6DCCD1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSChoosePlacemarkAnnotation.h; sourceTree = "<group>"; };
+		09B6DCCE1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSChoosePlacemarkAnnotation.m; sourceTree = "<group>"; };
+		09B6DCCF1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = DSChoosePlacemarkAnnotation.strings; sourceTree = "<group>"; };
+		09B6DCD01858F5C500FB1825 /* DSCLPlacemarkTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCLPlacemarkTransformer.h; sourceTree = "<group>"; };
+		09B6DCD11858F5C500FB1825 /* DSCLPlacemarkTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCLPlacemarkTransformer.m; sourceTree = "<group>"; };
+		09B6DCD21858F5C500FB1825 /* DSGeocodeProviderType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeocodeProviderType.h; sourceTree = "<group>"; };
+		09B6DCD31858F5C500FB1825 /* DSGeocoder+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSGeocoder+Factory.h"; sourceTree = "<group>"; };
+		09B6DCD41858F5C500FB1825 /* DSGeocoder+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSGeocoder+Factory.m"; sourceTree = "<group>"; };
+		09B6DCD51858F5C500FB1825 /* DSGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeocoder.h; sourceTree = "<group>"; };
+		09B6DCD61858F5C500FB1825 /* DSGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGeocoder.m; sourceTree = "<group>"; };
+		09B6DCD71858F5C500FB1825 /* DSGeocoderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeocoderDelegate.h; sourceTree = "<group>"; };
+		09B6DCD81858F5C500FB1825 /* DSGeocoderFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeocoderFramework.h; sourceTree = "<group>"; };
+		09B6DCD91858F5C500FB1825 /* DSPlacemarkPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPlacemarkPickerViewController.h; sourceTree = "<group>"; };
+		09B6DCDA1858F5C500FB1825 /* DSPlacemarkPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPlacemarkPickerViewController.m; sourceTree = "<group>"; };
+		09B6DCDB1858F5C500FB1825 /* DSPlacemarkPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSPlacemarkPickerViewController.xib; sourceTree = "<group>"; };
+		09B6DCDC1858F5C500FB1825 /* DSPlacemarkPickerViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPlacemarkPickerViewControllerDelegate.h; sourceTree = "<group>"; };
+		09B6DCDE1858F5C500FB1825 /* DSGeocodeProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeocodeProvider.h; sourceTree = "<group>"; };
+		09B6DCDF1858F5C500FB1825 /* DSGeocodeProviderApple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeocodeProviderApple.h; sourceTree = "<group>"; };
+		09B6DCE01858F5C500FB1825 /* DSGeocodeProviderApple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGeocodeProviderApple.m; sourceTree = "<group>"; };
+		09B6DCE11858F5C500FB1825 /* DSGeocodeProviderOpenmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeocodeProviderOpenmap.h; sourceTree = "<group>"; };
+		09B6DCE21858F5C500FB1825 /* DSGeocodeProviderOpenmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGeocodeProviderOpenmap.m; sourceTree = "<group>"; };
+		09B6DCE31858F5C500FB1825 /* DSPlacemark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPlacemark.h; sourceTree = "<group>"; };
+		09B6DCE41858F5C500FB1825 /* DSPlacemark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPlacemark.m; sourceTree = "<group>"; };
 		09B8663817F1B82D003B1070 /* DSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTableViewController.h; sourceTree = "<group>"; };
 		09B8663917F1B82D003B1070 /* DSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTableViewController.m; sourceTree = "<group>"; };
 		09B8663C17F1B990003B1070 /* DSKeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSKeyboardController.h; sourceTree = "<group>"; };
@@ -624,14 +658,11 @@
 		09D6223E1817DDF900A252D9 /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Parse.h"; sourceTree = "<group>"; };
 		09D6223F1817DDF900A252D9 /* NSError+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Parse.m"; sourceTree = "<group>"; };
 		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
-		62DD1034D65FEA7BE4837BAE /* DSCLPlacemarkTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCLPlacemarkTransformer.h; sourceTree = "<group>"; };
 		62DD10482694069BA9C5E531 /* DSUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUIAlertView.m; sourceTree = "<group>"; };
 		62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDropController.h; sourceTree = "<group>"; };
 		62DD11E47C44DDA0A2867834 /* DSFindCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFindCountry.m; sourceTree = "<group>"; };
 		62DD123F1B7C97E47FFB0F7C /* DSDraggingSourceContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDraggingSourceContainer.h; sourceTree = "<group>"; };
-		62DD1245A796A03C0561F8E3 /* DSChoosePlacemarkAnnotation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = DSChoosePlacemarkAnnotation.strings; sourceTree = "<group>"; };
 		62DD12A2DD6F6F278480844E /* DSConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = DSConfiguration.plist; sourceTree = "<group>"; };
-		62DD134FD1FF9911EA4327A9 /* DSChoosePlacemarkAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSChoosePlacemarkAnnotation.h; sourceTree = "<group>"; };
 		62DD138D9722CA655F636CCA /* DSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAppDelegate.m; sourceTree = "<group>"; };
 		62DD13AE88A68CBC5259F586 /* DSAlertsHandler+SimplifiedAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSAlertsHandler+SimplifiedAPI.h"; sourceTree = "<group>"; };
 		62DD13ED0EF18F1D1FD6F1A7 /* DSDragAndDropController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDragAndDropController.m; sourceTree = "<group>"; };
@@ -651,30 +682,21 @@
 		62DD174C1D46388A8A79AF76 /* DSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMessage.h; sourceTree = "<group>"; };
 		62DD17A21471C20C738E6BAA /* DSAlertViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAlertViewFactory.h; sourceTree = "<group>"; };
 		62DD17F6B8F2871E6F283957 /* DSAlertButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAlertButton.h; sourceTree = "<group>"; };
-		62DD186A895DB68C6D413C16 /* DSPlacemarkPickerViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPlacemarkPickerViewControllerDelegate.h; sourceTree = "<group>"; };
 		62DD18B2AEF6C1DFD60B1B8E /* DSAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlert.m; sourceTree = "<group>"; };
 		62DD18BB1C71903CA44B9C0A /* DSFindCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFindCountry.h; sourceTree = "<group>"; };
 		62DD18C9F54D0E5F44F3F6C6 /* DSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAppDelegate.h; sourceTree = "<group>"; };
-		62DD195CFE70AE2ADB63A8A6 /* DSCLPlacemarkTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCLPlacemarkTransformer.m; sourceTree = "<group>"; };
-		62DD197730C84007DB31D282 /* DSGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeocoder.h; sourceTree = "<group>"; };
 		62DD19823F32B27120690FE2 /* DSAlertButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlertButton.m; sourceTree = "<group>"; };
 		62DD199D2FC7139BB1616937 /* DSDataDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDataDetector.m; sourceTree = "<group>"; };
-		62DD1A06B50B0639568BA218 /* DSPlacemarkPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSPlacemarkPickerViewController.xib; sourceTree = "<group>"; };
 		62DD1A0DD9DE7CA23881E72F /* DSConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSConfiguration.m; sourceTree = "<group>"; };
 		62DD1A7504C46E8DBB5D1BF9 /* DSAlertsHandlerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAlertsHandlerConfiguration.h; sourceTree = "<group>"; };
 		62DD1A7E79FEFB570DEAAA5E /* DSBlockBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBlockBarButtonItem.h; sourceTree = "<group>"; };
 		62DD1A94EAF2AD8177958550 /* DSMessageContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMessageContext.h; sourceTree = "<group>"; };
-		62DD1AC3CC397A60D6D9A642 /* DSPlacemarkPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPlacemarkPickerViewController.m; sourceTree = "<group>"; };
 		62DD1AF5D211006BE9830590 /* DSBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBlockButton.h; sourceTree = "<group>"; };
 		62DD1C0631C240FC26D7C2E3 /* DSConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSConfiguration.h; sourceTree = "<group>"; };
-		62DD1CE7615294FAF64B20F9 /* DSChoosePlacemarkAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSChoosePlacemarkAnnotation.m; sourceTree = "<group>"; };
-		62DD1D9D2B0F2A12DC53B054 /* DSGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGeocoder.m; sourceTree = "<group>"; };
 		62DD1E5EAE093487F56DFF15 /* DSBlockBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSBlockBarButtonItem.m; sourceTree = "<group>"; };
-		62DD1EA66CDBBDAFF760AB4F /* DSPlacemarkPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPlacemarkPickerViewController.h; sourceTree = "<group>"; };
 		62DD1EBE1FD4CA47F4C2E4FF /* DSDraggingDestinationContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDraggingDestinationContainer.h; sourceTree = "<group>"; };
 		62DD1FA1527704E3088180FA /* DSAlertsHandlerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlertsHandlerConfiguration.m; sourceTree = "<group>"; };
 		62DD1FC9FB79656CF9699964 /* DSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessage.m; sourceTree = "<group>"; };
-		62DD1FD23C5A66A4C692AA58 /* DSGeocoderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeocoderDelegate.h; sourceTree = "<group>"; };
 		62DD1FF31DEBF389A0374834 /* DSAlertsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlertsHandler.m; sourceTree = "<group>"; };
 		AED6C1931465E55000D9B44E /* libDSLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDSLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6C1961465E55000D9B44E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1183,6 +1205,44 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		09B6DCCC1858F5C500FB1825 /* DSGeocoder */ = {
+			isa = PBXGroup;
+			children = (
+				09B6DCCD1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h */,
+				09B6DCCE1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m */,
+				09B6DCCF1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.strings */,
+				09B6DCD01858F5C500FB1825 /* DSCLPlacemarkTransformer.h */,
+				09B6DCD11858F5C500FB1825 /* DSCLPlacemarkTransformer.m */,
+				09B6DCD21858F5C500FB1825 /* DSGeocodeProviderType.h */,
+				09B6DCD31858F5C500FB1825 /* DSGeocoder+Factory.h */,
+				09B6DCD41858F5C500FB1825 /* DSGeocoder+Factory.m */,
+				09B6DCD51858F5C500FB1825 /* DSGeocoder.h */,
+				09B6DCD61858F5C500FB1825 /* DSGeocoder.m */,
+				09B6DCD71858F5C500FB1825 /* DSGeocoderDelegate.h */,
+				09B6DCD81858F5C500FB1825 /* DSGeocoderFramework.h */,
+				09B6DCD91858F5C500FB1825 /* DSPlacemarkPickerViewController.h */,
+				09B6DCDA1858F5C500FB1825 /* DSPlacemarkPickerViewController.m */,
+				09B6DCDB1858F5C500FB1825 /* DSPlacemarkPickerViewController.xib */,
+				09B6DCDC1858F5C500FB1825 /* DSPlacemarkPickerViewControllerDelegate.h */,
+				09B6DCDD1858F5C500FB1825 /* GeocodingProvider */,
+			);
+			path = DSGeocoder;
+			sourceTree = "<group>";
+		};
+		09B6DCDD1858F5C500FB1825 /* GeocodingProvider */ = {
+			isa = PBXGroup;
+			children = (
+				09B6DCDE1858F5C500FB1825 /* DSGeocodeProvider.h */,
+				09B6DCDF1858F5C500FB1825 /* DSGeocodeProviderApple.h */,
+				09B6DCE01858F5C500FB1825 /* DSGeocodeProviderApple.m */,
+				09B6DCE11858F5C500FB1825 /* DSGeocodeProviderOpenmap.h */,
+				09B6DCE21858F5C500FB1825 /* DSGeocodeProviderOpenmap.m */,
+				09B6DCE31858F5C500FB1825 /* DSPlacemark.h */,
+				09B6DCE41858F5C500FB1825 /* DSPlacemark.m */,
+			);
+			path = GeocodingProvider;
+			sourceTree = "<group>";
+		};
 		09B8664E17F1E5C7003B1070 /* ServerBridge */ = {
 			isa = PBXGroup;
 			children = (
@@ -1341,25 +1401,6 @@
 			path = URL;
 			sourceTree = "<group>";
 		};
-		62DD11E92B10A6BB5D096A4D /* DSGeocoder */ = {
-			isa = PBXGroup;
-			children = (
-				62DD197730C84007DB31D282 /* DSGeocoder.h */,
-				62DD1D9D2B0F2A12DC53B054 /* DSGeocoder.m */,
-				62DD1FD23C5A66A4C692AA58 /* DSGeocoderDelegate.h */,
-				62DD1034D65FEA7BE4837BAE /* DSCLPlacemarkTransformer.h */,
-				62DD195CFE70AE2ADB63A8A6 /* DSCLPlacemarkTransformer.m */,
-				62DD134FD1FF9911EA4327A9 /* DSChoosePlacemarkAnnotation.h */,
-				62DD1CE7615294FAF64B20F9 /* DSChoosePlacemarkAnnotation.m */,
-				62DD1EA66CDBBDAFF760AB4F /* DSPlacemarkPickerViewController.h */,
-				62DD1AC3CC397A60D6D9A642 /* DSPlacemarkPickerViewController.m */,
-				62DD1245A796A03C0561F8E3 /* DSChoosePlacemarkAnnotation.strings */,
-				62DD1A06B50B0639568BA218 /* DSPlacemarkPickerViewController.xib */,
-				62DD186A895DB68C6D413C16 /* DSPlacemarkPickerViewControllerDelegate.h */,
-			);
-			path = DSGeocoder;
-			sourceTree = "<group>";
-		};
 		62DD12589D387E03B1BB24F5 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1473,6 +1514,7 @@
 		AED6C1AB1465E77600D9B44E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				09B6DCCC1858F5C500FB1825 /* DSGeocoder */,
 				09B8664E17F1E5C7003B1070 /* ServerBridge */,
 				0903A41017F0C28300A21270 /* GPSTracker */,
 				0903A40717F0B4DA00A21270 /* Reachability.h */,
@@ -1493,7 +1535,6 @@
 				62DD1AF78BF96C7A832CCD6F /* Configuration */,
 				62DD18C9F54D0E5F44F3F6C6 /* DSAppDelegate.h */,
 				62DD138D9722CA655F636CCA /* DSAppDelegate.m */,
-				62DD11E92B10A6BB5D096A4D /* DSGeocoder */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -1543,6 +1584,7 @@
 				0903A2E717F0AC8300A21270 /* DSNetworkActivity.h in Headers */,
 				0903A3AF17F0AC9100A21270 /* UIBarButtonItem+DSAdditions.h in Headers */,
 				09B8669E17F1E5C7003B1070 /* DSWebServiceParamsBuilder.h in Headers */,
+				09B6DCE51858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h in Headers */,
 				09162C6A180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h in Headers */,
 				0903A3E117F0AC9100A21270 /* DSSettings_impl.h in Headers */,
 				0903A40117F0AC9100A21270 /* PGVideoImageViewDelegate.h in Headers */,
@@ -1553,7 +1595,9 @@
 				0903A3C517F0AC9100A21270 /* DSCFLoatDictionary.h in Headers */,
 				0903A3C717F0AC9100A21270 /* DSQueue.h in Headers */,
 				09B866A817F1E5C7003B1070 /* DSWebServiceRequestDelegate.h in Headers */,
+				09B6DCEC1858F5C500FB1825 /* DSGeocoder.h in Headers */,
 				0903A39D17F0AC9100A21270 /* NSMutableURLRequest+POSTData.h in Headers */,
+				09B6DCF61858F5C500FB1825 /* DSGeocodeProviderOpenmap.h in Headers */,
 				0903A39917F0AC9100A21270 /* NSFileManager+Directories.h in Headers */,
 				0903A39117F0AC9100A21270 /* NSArray+ObjectsQuery.h in Headers */,
 				0903A3E717F0AC9100A21270 /* QWatchedOperationQueue.h in Headers */,
@@ -1565,14 +1609,17 @@
 				0969F92B18328AE100B3C4B2 /* UIImage+Alpha.h in Headers */,
 				09162C99180EECC100A0DEEF /* WEPopoverParentView.h in Headers */,
 				0903A3BB17F0AC9100A21270 /* UIView+Resizing.h in Headers */,
+				09B6DCF21858F5C500FB1825 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */,
 				0903A38E17F0AC9100A21270 /* DSTimeFunctions.h in Headers */,
 				09B866BD17F1E5C7003B1070 /* DSWebServiceResponse.h in Headers */,
 				09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */,
 				0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */,
 				09162C76180EEB5900A0DEEF /* DSFieldValidationFramework.h in Headers */,
+				09B6DCF01858F5C500FB1825 /* DSPlacemarkPickerViewController.h in Headers */,
 				0903A3F517F0AC9100A21270 /* DSSlider.h in Headers */,
 				0903A3DD17F0AC9100A21270 /* CStringsFunctions.h in Headers */,
 				0903A3CF17F0AC9100A21270 /* DSDateFormatterCache.h in Headers */,
+				09B6DCF41858F5C500FB1825 /* DSGeocodeProviderApple.h in Headers */,
 				0903A2E917F0AC8300A21270 /* UIView+ViewsEnumeration.h in Headers */,
 				0969F92D18328AE100B3C4B2 /* UIImage+Resize.h in Headers */,
 				09B866A517F1E5C7003B1070 /* DSWebServiceSerialQueue.h in Headers */,
@@ -1593,8 +1640,10 @@
 				0903A3AD17F0AC9100A21270 /* UIApplication+KeyboardView.h in Headers */,
 				0903A3BF17F0AC9100A21270 /* UIView+XibLoading.h in Headers */,
 				0903A39717F0AC9100A21270 /* NSDictionary+JSONDictionary.h in Headers */,
+				09B6DCE71858F5C500FB1825 /* DSCLPlacemarkTransformer.h in Headers */,
 				0903A3FF17F0AC9100A21270 /* PGVideoImageView.h in Headers */,
 				0903A38F17F0AC9100A21270 /* NSArray+Extras.h in Headers */,
+				09B6DCEA1858F5C500FB1825 /* DSGeocoder+Factory.h in Headers */,
 				09B866B117F1E5C7003B1070 /* DSEntityDefinition.h in Headers */,
 				0903A3D917F0AC9100A21270 /* DependencyResolver+Register.h in Headers */,
 				0903A3FA17F0AC9100A21270 /* DSCheckButton.h in Headers */,
@@ -1605,6 +1654,7 @@
 				0903A3A117F0AC9100A21270 /* NSObject+DSAdditions.h in Headers */,
 				09162C6D180EE84900A0DEEF /* DSFieldValidationCriterion.h in Headers */,
 				09B866B517F1E5C7003B1070 /* DSWebServiceRequestsFactory.h in Headers */,
+				09B6DCEF1858F5C500FB1825 /* DSGeocoderFramework.h in Headers */,
 				0903A3B317F0AC9100A21270 /* UIFont+FromString.h in Headers */,
 				0903A3ED17F0AC9100A21270 /* FontsDB.h in Headers */,
 				62DD1C90C4EBBDB2502CA983 /* DSAlert.h in Headers */,
@@ -1626,9 +1676,11 @@
 				62DD14ABC283FD7DF3AD2734 /* DSAlertViewDelegate.h in Headers */,
 				62DD130527D6B094184E7AE6 /* DSAlertsHandlerConfiguration.h in Headers */,
 				09B8669717F1E5C7003B1070 /* DSWebServiceCompositeParams.h in Headers */,
+				09B6DCE91858F5C500FB1825 /* DSGeocodeProviderType.h in Headers */,
 				62DD12A9BE582692B9643004 /* DSAlertsHandler+SimplifiedAPI.h in Headers */,
 				09B866A917F1E5C7003B1070 /* DSWebServiceRequestOperation.h in Headers */,
 				62DD13EB68EB018ACE1AC0F5 /* DSConfiguration.h in Headers */,
+				09B6DCF81858F5C500FB1825 /* DSPlacemark.h in Headers */,
 				0903A41817F0C28300A21270 /* DSGPSTrackerDelegate.h in Headers */,
 				09162C95180EECC100A0DEEF /* WEPopoverContainerView.h in Headers */,
 				62DD1841C6225FE22AA92F1B /* DSAppDelegate.h in Headers */,
@@ -1643,23 +1695,19 @@
 				0928CFCD17F2150100E494E1 /* DSAlertsFramework.h in Headers */,
 				09B866B917F1E5C7003B1070 /* DSWebServiceParams.h in Headers */,
 				62DD19B8D7F38D3DAD57B11E /* DSFindCountry.h in Headers */,
-				62DD1F1C5E02B4FD804E774A /* DSGeocoder.h in Headers */,
 				098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */,
-				62DD10B7927E58A293575A03 /* DSGeocoderDelegate.h in Headers */,
 				0928CFDE17F21C9C00E494E1 /* DSWebServiceFunctions.h in Headers */,
-				62DD1DA8BE66CE6176478E95 /* DSCLPlacemarkTransformer.h in Headers */,
 				09B8669F17F1E5C7003B1070 /* DSWebServiceParamsExporter.h in Headers */,
-				62DD1097F09955B4CD8A1BD6 /* DSChoosePlacemarkAnnotation.h in Headers */,
 				09B866AD17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.h in Headers */,
-				62DD188A0EF5C0CA42AAF675 /* DSPlacemarkPickerViewController.h in Headers */,
 				09B866BF17F1E5C7003B1070 /* DSWebServiceURL.h in Headers */,
 				094C0208184D139900890D67 /* DSFetchedResultsControllerDelegate.h in Headers */,
+				09B6DCF31858F5C500FB1825 /* DSGeocodeProvider.h in Headers */,
 				09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */,
-				62DD1027E5C608DB51C6E9C6 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */,
 				09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */,
 				09B866B717F1E5C7003B1070 /* NSManagedObject+DSAdditions.h in Headers */,
 				62DD1C9E769C375EB5D785FB /* DSDraggingSourceContainer.h in Headers */,
 				09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */,
+				09B6DCEE1858F5C500FB1825 /* DSGeocoderDelegate.h in Headers */,
 				62DD16F1B4C19E58049F683D /* DSDraggingDestinationContainer.h in Headers */,
 				62DD1A1174BC68559EA4299F /* DSDragAndDropController.h in Headers */,
 			);
@@ -1746,7 +1794,6 @@
 				09A60439182A663C00F57F89 /* DSValueChooserViewController.xib in Resources */,
 				09A6043A182A663C00F57F89 /* DSMessagesLocalization.strings in Resources */,
 				09A6043B182A663C00F57F89 /* DSConfiguration.plist in Resources */,
-				09A6043C182A663C00F57F89 /* DSChoosePlacemarkAnnotation.strings in Resources */,
 				09A60430182A65E700F57F89 /* DSFieldValidation.strings in Resources */,
 				09A6042F182A65E100F57F89 /* DSWebServiceFunctions.plist in Resources */,
 				09A60420182A65D900F57F89 /* popoverArrowDown.png in Resources */,
@@ -1765,6 +1812,7 @@
 				09A6042D182A65D900F57F89 /* popoverBg@2x.png in Resources */,
 				09A6042E182A65D900F57F89 /* popoverBgSimple.png in Resources */,
 				09A6041B182A65CF00F57F89 /* InfoPlist.strings in Resources */,
+				09B6DCFA1858F5DE00FB1825 /* DSChoosePlacemarkAnnotation.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1786,15 +1834,18 @@
 				09162C69180EE84900A0DEEF /* DSFieldValidationController.m in Sources */,
 				0903A41717F0C28300A21270 /* DSGPSTracker.m in Sources */,
 				0903A3C617F0AC9100A21270 /* DSCFLoatDictionary.m in Sources */,
+				09B6DCE81858F5C500FB1825 /* DSCLPlacemarkTransformer.m in Sources */,
 				0903A2EA17F0AC8300A21270 /* UIView+ViewsEnumeration.m in Sources */,
 				0903A3B417F0AC9100A21270 /* UIFont+FromString.m in Sources */,
 				09B866BA17F1E5C7003B1070 /* DSWebServiceParams.m in Sources */,
 				09B866A217F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m in Sources */,
 				0903A3D217F0AC9100A21270 /* DSCFunctions.m in Sources */,
+				09B6DCF71858F5C500FB1825 /* DSGeocodeProviderOpenmap.m in Sources */,
 				0903A40A17F0B4DA00A21270 /* Reachability.m in Sources */,
 				0903A3DE17F0AC9100A21270 /* CStringsFunctions.m in Sources */,
 				0903A3B617F0AC9100A21270 /* UIScreen+Availability.m in Sources */,
 				0903A3FE17F0AC9100A21270 /* UISwitch+DSCheckButton.m in Sources */,
+				09B6DCED1858F5C500FB1825 /* DSGeocoder.m in Sources */,
 				0903A3B817F0AC9100A21270 /* UITableView+DSAdditions.m in Sources */,
 				0903A3BA17F0AC9100A21270 /* UIView+Layout.m in Sources */,
 				0903A3EE17F0AC9100A21270 /* FontsDB.m in Sources */,
@@ -1805,6 +1856,7 @@
 				0903A39E17F0AC9100A21270 /* NSMutableURLRequest+POSTData.m in Sources */,
 				093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */,
 				0903A3E017F0AC9100A21270 /* DSRuntimeHacker.m in Sources */,
+				09B6DCEB1858F5C500FB1825 /* DSGeocoder+Factory.m in Sources */,
 				09B866B617F1E5C7003B1070 /* DSWebServiceRequestsFactory.m in Sources */,
 				09162C72180EE84900A0DEEF /* DSTextField.m in Sources */,
 				0903A39617F0AC9100A21270 /* NSDate+OAddittions.m in Sources */,
@@ -1825,6 +1877,7 @@
 				0928CFDF17F21C9C00E494E1 /* DSWebServiceFunctions.m in Sources */,
 				0903A3F217F0AC9100A21270 /* DSFlashingImageView.m in Sources */,
 				0903A3F917F0AC9100A21270 /* PGSlider.m in Sources */,
+				09B6DCF91858F5C500FB1825 /* DSPlacemark.m in Sources */,
 				0903A3F417F0AC9100A21270 /* DSRotatingImageView.m in Sources */,
 				0903A3F617F0AC9100A21270 /* DSSlider.m in Sources */,
 				09B866B017F1E5C7003B1070 /* DSWebServiceNetRequest.m in Sources */,
@@ -1844,6 +1897,7 @@
 				0903A3AC17F0AC9100A21270 /* UIApplication+DSAdditions.m in Sources */,
 				0903A2E817F0AC8300A21270 /* DSNetworkActivity.m in Sources */,
 				0969F92C18328AE100B3C4B2 /* UIImage+Alpha.m in Sources */,
+				09B6DCE61858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m in Sources */,
 				09162C9B180EECC100A0DEEF /* WETouchableView.m in Sources */,
 				0903A3BE17F0AC9100A21270 /* UIView+Subviews.m in Sources */,
 				0903A39217F0AC9100A21270 /* NSArray+ObjectsQuery.m in Sources */,
@@ -1889,12 +1943,14 @@
 				62DD1569D576C442B9DF1889 /* DSAlertsHandler.m in Sources */,
 				09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */,
 				62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */,
+				09B6DCF51858F5C500FB1825 /* DSGeocodeProviderApple.m in Sources */,
 				62DD1E899DE35CD54E5DC2BF /* DSAlertViewFactory.m in Sources */,
 				62DD1FEFFC22374EBAC3044E /* DSAlertsSupportCode.m in Sources */,
 				09162C70180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m in Sources */,
 				09B8669817F1E5C7003B1070 /* DSWebServiceCompositeParams.m in Sources */,
 				62DD1E3812B21714B92C8ACF /* DSAlertsHandlerConfiguration.m in Sources */,
 				09B866BE17F1E5C7003B1070 /* DSWebServiceResponse.m in Sources */,
+				09B6DCF11858F5C500FB1825 /* DSPlacemarkPickerViewController.m in Sources */,
 				62DD1EF1B0929ACD16CFF64B /* DSAlertsHandler+SimplifiedAPI.m in Sources */,
 				0969F93418329C3C00B3C4B2 /* DSAskForTextController.m in Sources */,
 				09B8669617F1E5C7003B1070 /* DSWebServiceArrayParam.m in Sources */,
@@ -1905,14 +1961,10 @@
 				62DD1BC6C151EFA0696F8AC2 /* DSBlockButton.m in Sources */,
 				62DD156A5BCD9E8F54FAFD25 /* DSDataDetector.m in Sources */,
 				62DD1622AD022227DFD60F1E /* DSFindCountry.m in Sources */,
-				62DD19FEB4E286474E0B9849 /* DSGeocoder.m in Sources */,
 				09B8663B17F1B82D003B1070 /* DSTableViewController.m in Sources */,
 				09B8669117F1E5C7003B1070 /* DSWebServiceConfiguration.m in Sources */,
 				09B8669B17F1E5C7003B1070 /* DSWebServiceParamFactory.m in Sources */,
-				62DD150B77B3BF0740F534FA /* DSCLPlacemarkTransformer.m in Sources */,
-				62DD104144F45B7B8D974698 /* DSChoosePlacemarkAnnotation.m in Sources */,
 				09067F2E181804CA00C8F48F /* DSAlertsQueue.m in Sources */,
-				62DD186A6C4C9F8D37904BC3 /* DSPlacemarkPickerViewController.m in Sources */,
 				62DD17C01B3B707487A95F6D /* DSDragAndDropController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

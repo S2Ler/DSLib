@@ -7,10 +7,11 @@
 #import "DSMessage.h"
 #import "DSCFunctions.h"
 #import "DSCLPlacemarkTransformer.h"
+#import "DSGeocodeProvider.h"
 
 #pragma mark - private
 @interface DSGeocoder ()
-@property (nonatomic, strong) CLGeocoder *geocoder;
+@property (nonatomic, strong) id<DSGeocodeProvider> geocodeProvider;
 
 @property (nonatomic, strong) CLGeocodeCompletionHandler completionHandler;
 
@@ -20,14 +21,14 @@
 
 - (void)dealloc
 {
-  [[self geocoder] cancelGeocode];
+  [[self geocodeProvider] cancelGeocode];
 }
 
-- (id)init
+- (id)initWithGeocodeProvider:(id<DSGeocodeProvider>)geocodeProvider
 {
   self = [super init];
   if (self) {
-    _geocoder = [[CLGeocoder alloc] init];
+    _geocodeProvider = geocodeProvider;
   }
 
   return self;
@@ -35,7 +36,7 @@
 
 - (void)cancelGeocode
 {
-  [[self geocoder] cancelGeocode];
+  [[self geocodeProvider] cancelGeocode];
 }
 
 #pragma mark - geocode
@@ -45,7 +46,7 @@
 
   __weak __block DSGeocoder *weakSelf = self;
   __weak __block id<DSGeocoderDelegate> weakDelegate = [self delegate];
-  [[self geocoder]
+  [[self geocodeProvider]
          geocodeAddressString:addressString
             completionHandler:^(NSArray *placemarks, NSError *error)
             {
@@ -114,7 +115,7 @@
   
   __weak __block DSGeocoder *weakSelf = self;
   __weak __block id<DSGeocoderDelegate> weakDelegate = [self delegate];
-  [[self geocoder]
+  [[self geocodeProvider]
    reverseGeocodeLocation:location
    completionHandler:^(NSArray *placemarks, NSError *error)
    {
