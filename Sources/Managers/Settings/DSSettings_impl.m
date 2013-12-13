@@ -101,19 +101,28 @@
     return NSStringFromClass([self class]);
 }
 
+- (NSString *)saveKeyFromKey:(NSString *)key
+{
+  return [[self settingsPrefix] stringByAppendingFormat:@"_%@", key];
+}
 
 - (void)saveObject:(id)theObject forKey:(NSString *)theKey
 {
-  [[NSUserDefaults standardUserDefaults] setObject:theObject 
-                                            forKey:[[self settingsPrefix] stringByAppendingFormat:@"_%@", theKey]];
-  [[NSUserDefaults standardUserDefaults] synchronize];
+  if ([theObject isEqual:[NSNull null]]) {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:[self saveKeyFromKey:theKey]];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+  }
+  else {
+    [[NSUserDefaults standardUserDefaults] setObject:theObject
+                                              forKey:[self saveKeyFromKey:theKey]];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+  }
 }
 
 - (id)savedObjectForKey:(NSString *)theKey
 {
   if (theKey != nil) {    
-    id object = [[NSUserDefaults standardUserDefaults] objectForKey:[[self settingsPrefix] stringByAppendingFormat:@"_%@",
-                                                                                                                   theKey]];
+    id object = [[NSUserDefaults standardUserDefaults] objectForKey:[self saveKeyFromKey:theKey]];
     return object;  
   }
   else {
@@ -134,4 +143,15 @@
     [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
   }
 }
+
+- (void)setObject:(id)object forKey:(NSString *)key
+{
+  [self saveObject:object forKey:key];
+}
+
+- (id)objectForKey:(NSString *)key
+{
+  return [self savedObjectForKey:key];
+}
+
 @end

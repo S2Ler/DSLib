@@ -9,4 +9,7 @@
 /** You can overwrite this method to use your own settings prefix.
  * Default implementation uses the class name */
 - (NSString *)settingsPrefix;
+
+- (void)setObject:(id)object forKey:(NSString *)key;
+- (id)objectForKey:(NSString *)key;
 @end
