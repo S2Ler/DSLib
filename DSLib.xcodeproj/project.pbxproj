@@ -310,7 +310,7 @@
 		62DD17944D3580379A737D2A /* DSAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD15ACA99084F023C7B4AF /* DSAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD17ADB8BFA1779019830E /* DSAlertsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154F33AD8BF741BCB314 /* DSAlertsHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD17C01B3B707487A95F6D /* DSDragAndDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD13ED0EF18F1D1FD6F1A7 /* DSDragAndDropController.m */; };
-		62DD1841C6225FE22AA92F1B /* DSAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD18C9F54D0E5F44F3F6C6 /* DSAppDelegate.h */; };
+		62DD1841C6225FE22AA92F1B /* DSAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD18C9F54D0E5F44F3F6C6 /* DSAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD187C5A8A0492EB15FAEE /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD138D9722CA655F636CCA /* DSAppDelegate.m */; };
 		62DD19B8D7F38D3DAD57B11E /* DSFindCountry.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD18BB1C71903CA44B9C0A /* DSFindCountry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD19FF93EC85DB54E81188 /* DSBlockButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1AF5D211006BE9830590 /* DSBlockButton.h */; settings = {ATTRIBUTES = (Public, ); }; };

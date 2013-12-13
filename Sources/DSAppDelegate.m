@@ -8,7 +8,7 @@
 @end
 
 @implementation DSAppDelegate
-+ (id)instance
++ (instancetype)instance
 {
   return [[UIApplication sharedApplication] delegate];
 }

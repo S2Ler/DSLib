@@ -3,7 +3,7 @@
 #import "DSAlertsSupportCode.h"
 
 @interface DSAppDelegate: UIResponder<UIApplicationDelegate>
-+ (id)instance;
++ (instancetype)instance;
 
 /** Device token NSData is passed to completion as the result */
 - (void)registerForRemoteNotificationTypes:(UIRemoteNotificationType)types
