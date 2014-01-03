@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1552C6A4-B000-4926-BDE7-3EC86B2E64E5</string>
+	<string>4BCD7453-45BC-4102-9AD6-AF523B1BD548</string>
 	<key>IDESourceControlProjectName</key>
 	<string>DSLib</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B1FF0895-B63B-4C7B-A819-F190934CF846</key>
-		<string>https://github.com/diejmon/DSLib.git</string>
+		<key>B7375880-3D30-4428-AF76-A37F14DE1AA6</key>
+		<string>https://bitbucket.org/diejmon/dslib.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DSLib.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B1FF0895-B63B-4C7B-A819-F190934CF846</key>
+		<key>B7375880-3D30-4428-AF76-A37F14DE1AA6</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/diejmon/DSLib.git</string>
+	<string>https://bitbucket.org/diejmon/dslib.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B1FF0895-B63B-4C7B-A819-F190934CF846</string>
+	<string>B7375880-3D30-4428-AF76-A37F14DE1AA6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B1FF0895-B63B-4C7B-A819-F190934CF846</string>
+			<string>B7375880-3D30-4428-AF76-A37F14DE1AA6</string>
 			<key>IDESourceControlWCCName</key>
 			<string>DSLib</string>
 		</dict>
