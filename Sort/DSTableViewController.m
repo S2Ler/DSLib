@@ -48,11 +48,13 @@
 
 - (void)setIndexPathForFirstResponderCell:(NSIndexPath *)indexPathForFirstResponderCell
 {
-  _indexPathForFirstResponderCell = indexPathForFirstResponderCell;
+  if (_indexPathForFirstResponderCell) {
+    [[self tableView] scrollToRowAtIndexPath:indexPathForFirstResponderCell
+                            atScrollPosition:UITableViewScrollPositionMiddle
+                                    animated:YES];
+  }
   
-  [[self tableView] scrollToRowAtIndexPath:indexPathForFirstResponderCell
-                          atScrollPosition:UITableViewScrollPositionTop
-                                  animated:YES];
+  _indexPathForFirstResponderCell = indexPathForFirstResponderCell;
 }
 
 #pragma mark - DSKeyboardControllerDelegate
@@ -62,30 +64,25 @@ keyboardWillShowWithFrameBegin:(CGRect)frameBegin
              animationDuration:(double)animationDuration
                 animationCurve:(UIViewAnimationCurve)animationCurve
 {
-    const CGRect keyboardEndFrame = [keyboardController convertRect:frameEnd
-                                                             toView:[self tableView]];
-    const CGRect tableCurrentFrame = [[self tableView] frame];
-    CGRect tableNewFrame = tableCurrentFrame;
-    if (tableCurrentFrame.size.width > keyboardEndFrame.origin.y) {
-        tableNewFrame.size.height = keyboardEndFrame.origin.y;
-    }
-    [UIView animateWithDuration:animationDuration
-                     animations:^
-                     {
-                         [UIView setAnimationCurve:animationCurve];
-                         [[self tableView] setFrame:tableNewFrame];
-                     }];
+  const CGFloat keyboardHeight = frameEnd.size.height;
+  
+  [UIView animateWithDuration:animationDuration
+                   animations:^
+   {
+     [UIView setAnimationCurve:animationCurve];
+     [[self tableView] setContentInset:UIEdgeInsetsMake(0, 0, keyboardHeight, 0)];
+   }];
 }
 
 - (void)   keyboardController:(DSKeyboardController *)keyboardController
 keyboardDidShowWithFrameBegin:(CGRect)frameBegin
                      frameEnd:(CGRect)frameEnd
 {
-    if ([self indexPathForFirstResponderCell]) {
-        [[self tableView] scrollToRowAtIndexPath:[self indexPathForFirstResponderCell]
-                                atScrollPosition:UITableViewScrollPositionTop
-                                        animated:YES];
-    }
+//    if ([self indexPathForFirstResponderCell]) {
+//        [[self tableView] scrollToRowAtIndexPath:[self indexPathForFirstResponderCell]
+//                                atScrollPosition:UITableViewScrollPositionMiddle
+//                                        animated:YES];
+//    }
 }
 
 - (void)    keyboardController:(DSKeyboardController *)keyboardController
@@ -94,16 +91,11 @@ keyboardWillHideWithFrameBegin:(CGRect)frameBegin
              animationDuration:(double)animationDuration
                 animationCurve:(UIViewAnimationCurve)animationCurve
 {
-    const CGRect keyboardEndFrame = [keyboardController convertRect:frameEnd
-                                                             toView:[self tableView]];
-    const CGRect tableCurrentFrame = [[self tableView] frame];
-    CGRect tableNewFrame = tableCurrentFrame;
-    tableNewFrame.size.height = keyboardEndFrame.origin.y;
     [UIView animateWithDuration:animationDuration
                      animations:^
                      {
                          [UIView setAnimationCurve:animationCurve];
-                         [[self tableView] setFrame:tableNewFrame];
+                       [[self tableView] setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
                      }];
 }
 
@@ -111,7 +103,7 @@ keyboardWillHideWithFrameBegin:(CGRect)frameBegin
 keyboardDidHideWithFrameBegin:(CGRect)frameBegin
                      frameEnd:(CGRect)frameEnd
 {
-
+  [self setIndexPathForFirstResponderCell:nil];
 }
 
 - (void)keyboardController:(DSKeyboardController *)keyboardController
