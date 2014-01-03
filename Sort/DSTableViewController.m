@@ -30,9 +30,12 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+  [super viewDidAppear:animated];
+    
+  if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
     [self setKeyboardController:[[DSKeyboardController alloc] init]];
     [[self keyboardController] setDelegate:self];
+  }
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -78,11 +81,6 @@ keyboardWillShowWithFrameBegin:(CGRect)frameBegin
 keyboardDidShowWithFrameBegin:(CGRect)frameBegin
                      frameEnd:(CGRect)frameEnd
 {
-//    if ([self indexPathForFirstResponderCell]) {
-//        [[self tableView] scrollToRowAtIndexPath:[self indexPathForFirstResponderCell]
-//                                atScrollPosition:UITableViewScrollPositionMiddle
-//                                        animated:YES];
-//    }
 }
 
 - (void)    keyboardController:(DSKeyboardController *)keyboardController
