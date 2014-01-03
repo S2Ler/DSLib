@@ -8,8 +8,12 @@
 
 #import "DSTableViewController.h"
 #import "DSKeyboardController.h"
+#import <DSLib/DSFieldValidationController.h>
 
-@interface DSTableViewController ()
+@interface DSTableViewController () {
+  DSFieldValidationController *_validationController;
+}
+
 @property (nonatomic, strong) DSKeyboardController *keyboardController;
 @end
 
@@ -122,6 +126,15 @@ keyboardDidHideWithFrameBegin:(CGRect)frameBegin
                         to:(CGRect)frameEnd
 {
 
+}
+
+- (DSFieldValidationController *)validationController
+{
+  if (!_validationController) {
+    _validationController = [[DSFieldValidationController alloc] init];
+  }
+  
+  return _validationController;
 }
 
 

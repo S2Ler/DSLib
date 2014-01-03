@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "DSKeyboardControllerDelegate.h"
+@class DSFieldValidationController;
 
 @interface DSTableViewController : UITableViewController<DSKeyboardControllerDelegate>
 @property (nonatomic, strong) NSIndexPath *indexPathForFirstResponderCell;
 - (IBAction)resignActive:(id)sender;
+
+- (DSFieldValidationController *)validationController;
 @end
