@@ -22,6 +22,8 @@ CGFloat CGFloatNotFound = CGFLOAT_MAX;
   
   if (self) 
   {
+    NSParameterAssert(theCapacity > 0);
+    
     _capacity = theCapacity;
     _objectsCapacity = theObjectsCapacity;
     
