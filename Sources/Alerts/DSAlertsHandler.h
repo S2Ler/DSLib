@@ -6,17 +6,15 @@
 @class Reachability;
 @class DSAlertsQueue;
 
-#define DSAlertsHandler_SHOW_NO_INTERNET_CONNECTION_POPUPS_ONCE 1
+#define DSAlertsHandler_SHOW_NO_INTERNET_CONNECTION_POPUPS_ONCE 0
 
 @interface DSAlertsHandler: NSObject<DSAlertViewDelegate>
 
 @property (nonatomic, weak) Reachability *reachability;
-@property (nonatomic, strong) NSArray *filterOutMessages;
 
 + (id)sharedInstance;
 
 - (void)showAlert:(DSAlert *)theAlert modally:(BOOL)isModalAlert;
 
 - (DSAlertsQueue *)detachAlertsQueue;
-
 @end
