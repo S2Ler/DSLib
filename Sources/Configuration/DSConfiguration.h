@@ -7,10 +7,7 @@
  * Subclass Notes:
   * Implement properties for all configuration keys in configuration dictionary.
   * If you don't implement properties, the values from configuration are always accessible with KVC methods, with support for keypaths.
-  * Use setupSharedInstanceWithConfigurationDictionary: to provide your configuration dictionary which matches properties,
-  * you've implemented in you subclass.
- 
- 
+  * Use setupSharedInstanceWithConfigurationDictionary: to provide your configuration dictionary which matches properties, you've implemented in you subclass.
 */
 @interface DSConfiguration: NSObject
 /**
