@@ -194,7 +194,8 @@
   return [self sendRequestWithParams:params
                           completion:completion
             requestSuccessfulHandler:requestSuccessfulHandler
-                requestFailedHandler:nil userInfo:userInfo];
+                requestFailedHandler:nil
+                            userInfo:userInfo];
 }
 
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params

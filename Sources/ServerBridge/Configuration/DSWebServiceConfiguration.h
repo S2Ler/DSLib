@@ -17,6 +17,7 @@
 - (NSString *)paramsDataOutputType;
 - (NSString *)classPrefix;
 - (BOOL)isFactoryShouldGenerateFakeRequests;
+- (BOOL)HTTPSEnabled;
 @end
 
 @interface DSWebServiceConfiguration (UnitTests)

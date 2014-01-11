@@ -10,9 +10,10 @@ static NSDictionary *DSWebServiceConfiguration_sharedConfiguration = nil;
 @interface DSWebServiceConfiguration()
 @property (strong) NSString *serverURL;
 @property (strong) NSString *paramsDataOutputType;
-@property (strong) NSDictionary *configuration;
+@property (strong) NSMutableDictionary *configuration;
 @property (strong) NSString *classPrefix;
 @property (strong) NSNumber *generateFakeRequests;
+@property (strong) NSNumber *useHTTPS;
 
 - (NSString *)keyForConfigurationKey:(NSString *)theConfigurationKey
                               scheme:(NSString *)theScheme;
@@ -68,7 +69,7 @@ static NSDictionary *DSWebServiceConfiguration_sharedConfiguration = nil;
 {
   self = [super init];
   if (self) {
-    _configuration = theConfiguration;
+    _configuration = [theConfiguration mutableCopy];
     
     [self loadSettingsFromConfiguration:_configuration scheme:nil];
     [self addObserver:self
@@ -92,6 +93,10 @@ static NSDictionary *DSWebServiceConfiguration_sharedConfiguration = nil;
   return [[self generateFakeRequests] boolValue];
 }
 
+- (BOOL)HTTPSEnabled
+{
+  return [[self useHTTPS] boolValue];
+}
 
 - (id)init {
   if (DSWebServiceConfiguration_sharedConfiguration) {

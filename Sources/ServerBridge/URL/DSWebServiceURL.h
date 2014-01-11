@@ -11,12 +11,14 @@
 @property (nonatomic, strong, readonly) NSString *functionName;
 
 + (id)urlWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
-           functionName:(NSString *)theFunctionName;
+           functionName:(NSString *)theFunctionName
+             forceHTTPS:(BOOL)forceHTTPS;
 /**
 * Designated init
  */
 - (id)initWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
-            functionName:(NSString *)theFunctionName;
+            functionName:(NSString *)theFunctionName
+              forceHTTPS:(BOOL)forceHTTPS;
 
 - (void)applyParams:(id<DSWebServiceParam>)theParams;
 

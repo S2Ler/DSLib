@@ -112,7 +112,7 @@ static NSDictionary *DSConfiguration_sharedConfiguration = nil;
     });
 }
 
-+ (id)sharedInstance
++ (instancetype)sharedInstance
 {
   @synchronized(self) {
     NSString *saveKey = NSStringFromClass([self class]);

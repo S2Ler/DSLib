@@ -4,5 +4,9 @@
 <dict>
 	<key>DSWebServiceParams</key>
 	<string>your function here</string>
+	<key>HTTPSOnly</key>
+	<array>
+		<string>DSWebServiceParams</string>
+	</array>
 </dict>
 </plist>

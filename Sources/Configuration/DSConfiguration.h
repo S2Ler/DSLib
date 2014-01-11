@@ -17,9 +17,9 @@
 @property (strong) NSString *configurationScheme;
 
 /** DSConfiguration.plist is used if setupSharedInstanceWithConfigurationDictionary: wasn't called before */
-+ (id)sharedInstance;
++ (instancetype)sharedInstance;
 
 /** Use your own custom configuration dictionary to configure shared instance */
-+ (id)setupSharedInstanceWithConfigurationDictionary:(NSDictionary *)theConfiguration;
++ (instancetype)setupSharedInstanceWithConfigurationDictionary:(NSDictionary *)theConfiguration;
 
 @end
