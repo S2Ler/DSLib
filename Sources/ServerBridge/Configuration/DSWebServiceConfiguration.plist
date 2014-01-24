@@ -18,5 +18,7 @@
 	<string>DS</string>
 	<key>generateFakeRequests</key>
 	<false/>
+	<key>useHTTPS</key>
+	<true/>
 </dict>
 </plist>

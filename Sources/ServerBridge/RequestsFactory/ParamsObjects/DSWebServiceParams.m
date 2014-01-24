@@ -8,6 +8,7 @@
 #import "DSCFunctions.h"
 #import "DSFakeWebServiceRequest.h"
 #import "DSWebServiceConfiguration.h"
+#import "DSWebServiceFunctions.h"
 
 @implementation DSWebServiceParams
 - (void)loadPropertiesFromClass:(Class)class intoDictionary:(NSMutableDictionary *)dictionary
@@ -75,11 +76,12 @@
   return params;
 }
 
-
 - (NSString *)functionName
 {
-  ASSERT_ABSTRACT_METHOD;
-  return nil;
+  NSString *function = [[DSWebServiceFunctions sharedInstance] functionForParams:self];
+  NSAssert([function hasValue], @"DSWebServiceFunctions doesn't contain definition for %@ params",
+           NSStringFromClass([self class]));
+  return function;
 }
 
 - (DSWebServiceURLHTTPMethod)HTTPMethod
@@ -102,7 +104,6 @@
 {
   return nil;
 }
-
 
 + (BOOL)isCorrespondsToRequest:(id<DSWebServiceRequest>)theRequest
 {

@@ -6,6 +6,22 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0904155A1892E4D600302A2F /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0904155B1892E4D600302A2F /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				090415601892E4F700302A2F /* ShellScript */,
+			);
+			dependencies = (
+				090415621892E5EE00302A2F /* PBXTargetDependency */,
+				0904155F1892E4DF00302A2F /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0903A2E017F0AC8300A21270 /* DSArrayChange.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2D517F0AC8300A21270 /* DSArrayChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0903A2E117F0AC8300A21270 /* DSArrayChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2D617F0AC8300A21270 /* DSArrayChange.m */; };
@@ -167,8 +183,6 @@
 		094C0209184D139900890D67 /* DSFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 094C0207184D139900890D67 /* DSFetchedResultsControllerDelegate.m */; };
 		0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */; };
-		0967E4D21875CAA5003A2269 /* DSFieldsValidationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0967E4D01875CAA5003A2269 /* DSFieldsValidationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0967E4D31875CAA5003A2269 /* DSFieldsValidationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0967E4D11875CAA5003A2269 /* DSFieldsValidationViewController.m */; };
 		0969F92B18328AE100B3C4B2 /* UIImage+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92518328AE100B3C4B2 /* UIImage+Alpha.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0969F92C18328AE100B3C4B2 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F92618328AE100B3C4B2 /* UIImage+Alpha.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		0969F92D18328AE100B3C4B2 /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92718328AE100B3C4B2 /* UIImage+Resize.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -337,7 +351,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		09A60447182A787C00F57F89 /* PBXContainerItemProxy */ = {
+		0904155E1892E4DF00302A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AED6C1921465E55000D9B44E;
+			remoteInfo = DSLib;
+		};
+		090415611892E5EE00302A2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
 			proxyType = 1;
@@ -537,8 +558,6 @@
 		094C0207184D139900890D67 /* DSFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
 		0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DSAdditions.h"; sourceTree = "<group>"; };
 		0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DSAdditions.m"; sourceTree = "<group>"; };
-		0967E4D01875CAA5003A2269 /* DSFieldsValidationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFieldsValidationViewController.h; sourceTree = "<group>"; };
-		0967E4D11875CAA5003A2269 /* DSFieldsValidationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFieldsValidationViewController.m; sourceTree = "<group>"; };
 		0969F92518328AE100B3C4B2 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
 		0969F92618328AE100B3C4B2 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
 		0969F92718328AE100B3C4B2 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -556,7 +575,7 @@
 		098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueueBasedRequestSender.m; sourceTree = "<group>"; };
 		09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DSBundle.h"; sourceTree = "<group>"; };
 		09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DSBundle.m"; sourceTree = "<group>"; };
-		09A60413182A65CF00F57F89 /* DSLibBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLibBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		09A60413182A65CF00F57F89 /* DSLib.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A60414182A65CF00F57F89 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		09A60418182A65CF00F57F89 /* DSLibBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DSLibBundle-Info.plist"; sourceTree = "<group>"; };
 		09A6041A182A65CF00F57F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1070,8 +1089,6 @@
 				09162C64180EE84900A0DEEF /* DSTextField.h */,
 				09162C65180EE84900A0DEEF /* DSTextField.m */,
 				09162C74180EEB5900A0DEEF /* DSFieldValidationFramework.h */,
-				0967E4D01875CAA5003A2269 /* DSFieldsValidationViewController.h */,
-				0967E4D11875CAA5003A2269 /* DSFieldsValidationViewController.m */,
 			);
 			path = FieldValidationFramework;
 			sourceTree = "<group>";
@@ -1448,7 +1465,7 @@
 			isa = PBXGroup;
 			children = (
 				AED6C1931465E55000D9B44E /* libDSLib.a */,
-				09A60413182A65CF00F57F89 /* DSLibBundle.bundle */,
+				09A60413182A65CF00F57F89 /* DSLib.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1658,7 +1675,6 @@
 				62DD13C9E2F182E4E22E7D24 /* DSBlockBarButtonItem.h in Headers */,
 				62DD130F46A501A7FFCD1BAE /* DSDataDetector.h in Headers */,
 				09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */,
-				0967E4D21875CAA5003A2269 /* DSFieldsValidationViewController.h in Headers */,
 				09162C6F180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h in Headers */,
 				0928CFCD17F2150100E494E1 /* DSAlertsFramework.h in Headers */,
 				09B866B917F1E5C7003B1070 /* DSWebServiceParams.h in Headers */,
@@ -1698,7 +1714,7 @@
 			);
 			name = DSLibBundle;
 			productName = DSLibBundle;
-			productReference = 09A60413182A65CF00F57F89 /* DSLibBundle.bundle */;
+			productReference = 09A60413182A65CF00F57F89 /* DSLib.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		AED6C1921465E55000D9B44E /* DSLib */ = {
@@ -1708,11 +1724,11 @@
 				AED6C18F1465E55000D9B44E /* Sources */,
 				AED6C1901465E55000D9B44E /* Frameworks */,
 				AED6C1911465E55000D9B44E /* Headers */,
+				090415591892E47900302A2F /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				09A60448182A787C00F57F89 /* PBXTargetDependency */,
 			);
 			name = DSLib;
 			productName = DSLib;
@@ -1742,6 +1758,7 @@
 			targets = (
 				AED6C1921465E55000D9B44E /* DSLib */,
 				09A60412182A65CF00F57F89 /* DSLibBundle */,
+				0904155A1892E4D600302A2F /* Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -1784,6 +1801,35 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		090415591892E47900302A2F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
+		};
+		090415601892E4F700302A2F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09A6040F182A65CF00F57F89 /* Sources */ = {
@@ -1893,7 +1939,6 @@
 				0903A3C817F0AC9100A21270 /* DSQueue.m in Sources */,
 				62DD1F21D685DAF88DB40D0D /* DSAlert.m in Sources */,
 				0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */,
-				0967E4D31875CAA5003A2269 /* DSFieldsValidationViewController.m in Sources */,
 				62DD1AFD36B9F22FEFEB3170 /* DSMessage.m in Sources */,
 				098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */,
 				09B866A017F1E5C7003B1070 /* DSWebServiceParamsExporter.m in Sources */,
@@ -1936,10 +1981,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		09A60448182A787C00F57F89 /* PBXTargetDependency */ = {
+		0904155F1892E4DF00302A2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AED6C1921465E55000D9B44E /* DSLib */;
+			targetProxy = 0904155E1892E4DF00302A2F /* PBXContainerItemProxy */;
+		};
+		090415621892E5EE00302A2F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 09A60412182A65CF00F57F89 /* DSLibBundle */;
-			targetProxy = 09A60447182A787C00F57F89 /* PBXContainerItemProxy */;
+			targetProxy = 090415611892E5EE00302A2F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1955,6 +2005,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0904155C1892E4D600302A2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0904155D1892E4D600302A2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		09A6041E182A65CF00F57F89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1963,7 +2027,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSLibBundle/DSLibBundle-Prefix.pch";
@@ -1975,8 +2038,8 @@
 				INFOPLIST_FILE = "DSLibBundle/DSLibBundle-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = DSLib;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -1990,7 +2053,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -2000,8 +2062,8 @@
 				INFOPLIST_FILE = "DSLibBundle/DSLibBundle-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = DSLib;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -2071,16 +2133,20 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/DSLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSLib/DSLib-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = include/DSLib;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
 		};
@@ -2089,22 +2155,34 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/DSLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSLib/DSLib-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = include/DSLib;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0904155B1892E4D600302A2F /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0904155C1892E4D600302A2F /* Debug */,
+				0904155D1892E4D600302A2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		09A6041D182A65CF00F57F89 /* Build configuration list for PBXNativeTarget "DSLibBundle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

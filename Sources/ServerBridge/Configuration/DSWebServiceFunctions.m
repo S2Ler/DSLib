@@ -13,4 +13,11 @@
 {
   return [self valueForKey:NSStringFromClass([params class])];
 }
+
+- (BOOL)isHTTPSForcedForParams:(DSWebServiceParams *)params
+{
+  NSArray *HTTPSOnlyParams = [self valueForKey:@"HTTPSOnly"];
+  BOOL isHTTPSForced = [HTTPSOnlyParams containsObject:NSStringFromClass([params class])];
+  return isHTTPSForced;
+}
 @end

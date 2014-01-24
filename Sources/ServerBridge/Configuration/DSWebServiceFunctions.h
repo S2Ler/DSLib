@@ -13,4 +13,5 @@
 
 @interface DSWebServiceFunctions : DSConfiguration
 - (NSString *)functionForParams:(DSWebServiceParams *)params;
+- (BOOL)isHTTPSForcedForParams:(DSWebServiceParams *)params;
 @end

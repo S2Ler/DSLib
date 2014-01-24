@@ -15,7 +15,7 @@
 - (void)addField:(DSTextField *)field
         criteria:(NSArray *)criteria;
 
-- (void)validateAllFields;
+- (BOOL)validateAllFields;
 - (void)validateField:(DSTextField *)field;
 
 - (void)resetValidateOnTextChangeFlag;

@@ -25,6 +25,11 @@
   return self;
 }
 
+- (id)init
+{
+  return [self initWithDelegate:nil];
+}
+
 - (void)resignAllFields
 {
   [[self fields] enumerateObjectsUsingBlock:^(DSTextField *field, NSUInteger idx, BOOL *stop) {
@@ -42,9 +47,7 @@
     [field setValidationCriteria:criteria];
     [[self fields] addObject:field];
     [field setDelegate:self];
-    [field addTarget:self
-              action:@selector(fieldChanged:)
-    forControlEvents:UIControlEventEditingChanged];
+    [field addTarget:self action:@selector(fieldChanged:) forControlEvents:UIControlEventEditingChanged];
     [field setDiscriptionButtonPressedHandler:^{
       [weakSelf resignAllFields];
     }];
@@ -52,20 +55,22 @@
 }
 
 #pragma mark - validation
-- (void)validateAllFields
+- (BOOL)validateAllFields
 {
   [[self fields] enumerateObjectsUsingBlock:^(DSTextField *field, NSUInteger idx, BOOL *stop)
   {
     [self validateField:field];
   }];
   [self update_allFieldsPassedValidation_property];
+  return [self allFieldsPassedValidation];
 }
 
 - (void)validateField:(DSTextField *)field
 {
   NSArray *nonPassedCriteria = [self nonPassedCriteriaInField:field];
   if ([nonPassedCriteria count] > 0) {
-    NSArray *nonPassedCriteriaDescriptions = [nonPassedCriteria valueForKeyPath:@"@unionOfObjects.criterionDescription"];
+    NSArray *nonPassedCriteriaDescriptions
+    = [nonPassedCriteria valueForKeyPath:@"@unionOfObjects.criterionDescription"];
     [field setValidationFailedWithDescriptions:nonPassedCriteriaDescriptions];
   }
   else {
@@ -106,6 +111,14 @@
 {
   for (DSTextField *field in [self fields]) {
     [field setShouldValidateOnTextChange:NO];
+  }
+}
+
+- (void)setAllFieldsPassedValidation:(BOOL)allFieldsPassedValidation
+{
+  if (_allFieldsPassedValidation != allFieldsPassedValidation) {
+    _allFieldsPassedValidation = allFieldsPassedValidation;
+    [[self delegate] fieldValidationController:self allFieldsValidationChangedTo:allFieldsPassedValidation];
   }
 }
 

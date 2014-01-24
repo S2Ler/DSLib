@@ -1,6 +1,7 @@
 
 #pragma mark - include
 #import "DSWebServiceRequestsFactory.h"
+#import "DSWebServiceFunctions.h"
 #import "NSDate+OAddittions.h"
 #import "DSWebServiceConfiguration.h"
 #import "DSFakeWebServiceRequest.h"
@@ -70,8 +71,10 @@
   if (![[DSWebServiceConfiguration sharedInstance] isFactoryShouldGenerateFakeRequests]) {
     NSString *functionName = [theParams functionName];
     DSWebServiceURLHTTPMethod HTTPMethod = [theParams HTTPMethod];
+    BOOL isHTTPSOnlyParams = [[DSWebServiceFunctions sharedInstance] isHTTPSForcedForParams:theParams];
     DSWebServiceURL *url = [DSWebServiceURL urlWithHTTPMethod:HTTPMethod
-                                                 functionName:functionName];
+                                                 functionName:functionName
+                                                   forceHTTPS:isHTTPSOnlyParams];
 
     NSDictionary *paramValues = [theParams allParams];
     NSArray *paramsEmbeddedInURL = [theParams paramsEmbeddedInURL];

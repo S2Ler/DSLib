@@ -5,36 +5,41 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1552C6A4-B000-4926-BDE7-3EC86B2E64E5</string>
+	<string>729E28D0-88E0-4FFE-8A40-E1D3EA6B7528</string>
 	<key>IDESourceControlProjectName</key>
 	<string>DSLib</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B1FF0895-B63B-4C7B-A819-F190934CF846</key>
-		<string>https://github.com/diejmon/DSLib.git</string>
+		<key>245B65C8-EA6B-4796-9B7B-9556403CD789</key>
+		<string>svn://216.66.51.68/default_ios</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DSLib.xcodeproj/project.xcworkspace</string>
+	<string>DSLib/DSLib.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B1FF0895-B63B-4C7B-A819-F190934CF846</key>
-		<string>../..</string>
+		<key>245B65C8-EA6B-4796-9B7B-9556403CD789</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>245B65C8-EA6B-4796-9B7B-9556403CD789</key>
+		<string>svn://216.66.51.68/default_ios</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/diejmon/DSLib.git</string>
+	<string>svn://216.66.51.68/default_ios/DSLib/DSLib.xcodeproj</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B1FF0895-B63B-4C7B-A819-F190934CF846</string>
+	<string>245B65C8-EA6B-4796-9B7B-9556403CD789</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
+			<string>public.vcs.subversion</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B1FF0895-B63B-4C7B-A819-F190934CF846</string>
+			<string>245B65C8-EA6B-4796-9B7B-9556403CD789</string>
 			<key>IDESourceControlWCCName</key>
-			<string>DSLib</string>
+			<string>default_ios</string>
 		</dict>
 	</array>
 </dict>

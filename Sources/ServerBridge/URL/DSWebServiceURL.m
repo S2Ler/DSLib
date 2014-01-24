@@ -2,6 +2,7 @@
 #import "DSWebServiceURL.h"
 #import "DSWebServiceCompositeParams.h"
 #import "DSWebServiceConfiguration.h"
+#import "DSWebServiceFunctions.h"
 #import "DSWebServiceParamsExporter.h"
 #import "NSString+Encoding.h"
 #import "NSString+Extras.h"
@@ -12,7 +13,7 @@
 @property (nonatomic, strong) NSString *urlString;
 @property (nonatomic, strong) NSData *paramsDataForPOST;
 @property (nonatomic, strong) NSString *functionName;
-
+@property (nonatomic, assign) BOOL forceHTTPS;
 @end
 
 #pragma mark - private
@@ -27,29 +28,61 @@
 @synthesize functionName = _functionName;
 @synthesize HTTPMethod = _HTTPMethod;
 
-
-
 #pragma mark - init
 - (id)init
 {
   return [self initWithHTTPMethod:DSWebServiceURLHTTPMethodGET
-                     functionName:nil];
+                     functionName:nil
+                       forceHTTPS:NO];
+}
+
+- (NSString *)urlWithoutParamsForceHTTPS:(BOOL)forceHTTPS
+{
+  NSMutableString *serverURL = [[[DSWebServiceConfiguration sharedInstance] serverURL] mutableCopy];
+  BOOL HTTPSEnabled = [[DSWebServiceConfiguration sharedInstance] HTTPSEnabled];
+  
+  if ((HTTPSEnabled || forceHTTPS) && ![serverURL hasPrefix:@"https://"]) {
+    if ([serverURL hasPrefix:@"http://"]) {
+      [serverURL replaceOccurrencesOfString:@"http://"
+                                 withString:@"https://"
+                                    options:NSAnchoredSearch
+                                      range:NSMakeRange(0, [serverURL length])];
+    }
+    else {
+      [serverURL insertString:@"https://" atIndex:0];
+    }
+  }
+  else if (!HTTPSEnabled && !forceHTTPS && ![serverURL hasPrefix:@"http://"]) {
+    if ([serverURL hasPrefix:@"https://"]) {
+      [serverURL replaceOccurrencesOfString:@"https://"
+                                 withString:@"http://"
+                                    options:NSAnchoredSearch
+                                      range:NSMakeRange(0, [serverURL length])];
+    }
+    else {
+      [serverURL insertString:@"http://" atIndex:0];
+    }
+  }
+  
+  return [self appendFunctionName:[self functionName]
+                     toServerName:serverURL];
 }
 
 - (NSString *)urlWithoutParams
 {
-  return [self appendFunctionName:[self functionName]
-               toServerName:[[DSWebServiceConfiguration sharedInstance] serverURL]];
+  return [self urlWithoutParamsForceHTTPS:[self forceHTTPS]];
 }
 
 - (id)initWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
             functionName:(NSString *)theFunctionName
+              forceHTTPS:(BOOL)forceHTTPS;
 {
   self = [super init];
 
   if (self) {
     _functionName = theFunctionName;
     _HTTPMethod = theHTTPMethod;
+    _forceHTTPS = forceHTTPS;
 
     NSString *fullURL = [self urlWithoutParams];
     [self setUrlString:fullURL];
@@ -60,9 +93,11 @@
 
 + (id)urlWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
            functionName:(NSString *)theFunctionName
+             forceHTTPS:(BOOL)forceHTTPS
 {
   DSWebServiceURL *url = [[DSWebServiceURL alloc] initWithHTTPMethod:theHTTPMethod
-                                                        functionName:theFunctionName];
+                                                        functionName:theFunctionName
+                                                          forceHTTPS:forceHTTPS];
 
   return url;
 }
@@ -80,16 +115,12 @@
 
     __block NSUInteger paramIndex = 0;
     [theParams enumerateParamsAndParamNamesWithBlock:
-                 ^void(id<DSWebServiceParam> param,
-                       NSString *paramName)
+                 ^void(id<DSWebServiceParam> param, NSString *paramName)
                  {
                    NSString *value = [param stringValueForParamName:paramName];
 
                    if ([param embeddedIndex] == DSWebServiceParamEmbeddedIndexNotSet) {
-                     NSString *string
-                       = [NSString stringWithFormat:@"%@=%@",
-                                                    paramName,
-                                                    [value urlCompliantString]];
+                     NSString *string = [NSString stringWithFormat:@"%@=%@", paramName, [value urlCompliantString]];
                      [GETParams appendString:string];
 
                      if (paramIndex < paramsCount - 1) {
@@ -196,6 +227,7 @@
   [encoder encodeInt:self.HTTPMethod forKey:@"HTTPMethod"];
   [encoder encodeObject:self.functionName forKey:@"functionName"];
   [encoder encodeObject:self.paramsDataForPOST forKey:@"paramsDataForPOST"];
+  [encoder encodeBool:self.forceHTTPS forKey:@"forceHTTPS"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -203,7 +235,8 @@
   NSString *functionName = [decoder decodeObjectForKey:@"functionName"];
   DSWebServiceURLHTTPMethod HTTPMethod
     = (DSWebServiceURLHTTPMethod)[decoder decodeIntForKey:@"HTTPMethod"];
-  self = [self initWithHTTPMethod:HTTPMethod functionName:functionName];
+  BOOL forceHTTPS = [decoder decodeBoolForKey:@"forceHTTPS"];
+  self = [self initWithHTTPMethod:HTTPMethod functionName:functionName forceHTTPS:forceHTTPS];
 
   if (self) {
     _urlString = [decoder decodeObjectForKey:@"urlString"];
