@@ -5,41 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>729E28D0-88E0-4FFE-8A40-E1D3EA6B7528</string>
+	<string>5B694AB7-37C8-4845-9096-2A62C56EC60B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>DSLib</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>245B65C8-EA6B-4796-9B7B-9556403CD789</key>
-		<string>svn://216.66.51.68/default_ios</string>
+		<key>3436080B-9ABE-4680-B920-A82F025A840D</key>
+		<string>ssh://bitbucket.org/diejmon/dslib.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DSLib/DSLib.xcodeproj/project.xcworkspace</string>
+	<string>DSLib.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>245B65C8-EA6B-4796-9B7B-9556403CD789</key>
-		<string>../../..</string>
-	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>245B65C8-EA6B-4796-9B7B-9556403CD789</key>
-		<string>svn://216.66.51.68/default_ios</string>
+		<key>3436080B-9ABE-4680-B920-A82F025A840D</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>svn://216.66.51.68/default_ios/DSLib/DSLib.xcodeproj</string>
+	<string>ssh://bitbucket.org/diejmon/dslib.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>245B65C8-EA6B-4796-9B7B-9556403CD789</string>
+	<string>3436080B-9ABE-4680-B920-A82F025A840D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>245B65C8-EA6B-4796-9B7B-9556403CD789</string>
+			<string>3436080B-9ABE-4680-B920-A82F025A840D</string>
 			<key>IDESourceControlWCCName</key>
-			<string>default_ios</string>
+			<string>DSLib</string>
 		</dict>
 	</array>
 </dict>
