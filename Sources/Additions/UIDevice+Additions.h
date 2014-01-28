@@ -13,4 +13,6 @@
 - (NSString *)appUUID;
 
 + (unsigned int)countProcessors;
+
+- (NSString *)machineCode;
 @end

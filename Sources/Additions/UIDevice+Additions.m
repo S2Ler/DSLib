@@ -1,5 +1,6 @@
 
 #import "UIDevice+Additions.h"
+#import <sys/sysctl.h>
 
 
 @implementation UIDevice (Additions)
@@ -53,6 +54,34 @@
             (host_info_t)&hostInfo, &infoCount);
 	
 	return (unsigned int)(hostInfo.max_cpus);
+}
+
+- (NSString *)machineCode
+{
+  //	NSDictionary*models = [NSDictionary
+  //						   dictionaryWithObjects:[NSArray arrayWithObjects:@"iPhone", @"iPhone 3G", @"iPhone 3GS", @"iPhone 4", nil]
+  //						   forKeys:[NSArray arrayWithObjects:@"iPhone1,1", @"iPhone1,2", @"iPhone2,1", @"iPhone3,1", nil]
+  //						   ];
+	size_t size;
+	
+	// Set 'oldp' parameter to NULL to get the size of the data
+	// returned so we can allocate appropriate amount of space
+	sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+	
+	// Allocate the space to store name
+	char *name = malloc(size);
+	
+	// Get the platform name
+	sysctlbyname("hw.machine", name, &size, NULL, 0);
+	
+	// Place name into a string
+	NSString *machine = [NSString stringWithFormat:@"%s",name];
+	
+	
+	// Done with this
+	free(name);
+	
+	return machine;
 }
 
 @end
