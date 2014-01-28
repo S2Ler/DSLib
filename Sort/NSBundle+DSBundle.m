@@ -13,7 +13,7 @@
   static dispatch_once_t onceToken;
   static NSBundle *bundle = nil;
   dispatch_once(&onceToken, ^{
-    bundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"DSLibBundle" withExtension:@"bundle"]];
+    bundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"DSLib" withExtension:@"bundle"]];
   });
   return bundle;
 }
