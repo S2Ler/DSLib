@@ -6,4 +6,6 @@ typedef void (^proccedView_block_t)(UIView *theView);
 - (void)enumerateSubviewsUsingBlock:(proccedView_block_t)theBlock;
 
 - (UIImage *)getSnapshot NS_AVAILABLE_IOS(7_0);
+
+- (UIView *)findFirstResponder;
 @end
