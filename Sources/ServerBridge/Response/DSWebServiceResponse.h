@@ -26,4 +26,12 @@
 
 - (NSString *)errorCode;
 - (DSMessage *)APIErrorMessage;
+
+/** Needed for dynamic getter resolution.
+ Usage:
+ - create readonly property
+ - overwrite keypathForGetter: method to return keypath in responseDictionary for this property
+ - look into forwardInvocation: if some of the property types isn't supported and add a new handler
+ */
+- (NSString *)keypathForGetter:(NSString *)getter;
 @end
