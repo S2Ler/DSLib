@@ -81,7 +81,8 @@
     id<DSWebServiceParam> params = [self paramsFromValues:paramValues
                                            embeddedParams:paramsEmbeddedInURL];
 
-    id<DSWebServiceRequest> request = [DSWebServiceNetRequest requestWithServer:url params:params];
+    DSWebServiceNetRequest *request = [DSWebServiceNetRequest requestWithServer:url params:params];
+//    [request setRunLoopThread:[self networkRequestThread]];
     [request setSendRawPOSTData:NO];
     [request setPOSTDataKey:@"key"];
     return request;
@@ -101,5 +102,26 @@
   }
 }
 
+//#pragma mark - request thread
+//+ (void)networkRequestThreadEntryPoint:(id)__unused object {
+//  @autoreleasepool {
+//    [[NSThread currentThread] setName:@"DSWebService"];
+//    
+//    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+//    [runLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
+//    [runLoop run];
+//  }
+//}
+//
+//+ (NSThread *)networkRequestThread {
+//  static NSThread *_networkRequestThread = nil;
+//  static dispatch_once_t oncePredicate;
+//  dispatch_once(&oncePredicate, ^{
+//    _networkRequestThread = [[NSThread alloc] initWithTarget:self selector:@selector(networkRequestThreadEntryPoint:) object:nil];
+//    [_networkRequestThread start];
+//  });
+//  
+//  return _networkRequestThread;
+//}
 
 @end
