@@ -359,13 +359,9 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
                  encoding:NSStringEncodingConversionExternalRepresentation];
 
   DSWebServiceResponse *webServiceResponse = [self response];
-  BOOL parseSucceed = [webServiceResponse parse];
 
   if (responseString) {
     NSData *data = [self responseData];
-    if (parseSucceed == NO) {
-      data = [data truncatedDataToLength:MAX_RAW_DATA_BYTES_LOG];
-    }
 
     NSLog(@"\nURL: %@\nParams: %@\nServer Response: %@",
               [self url],

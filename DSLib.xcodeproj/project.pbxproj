@@ -195,6 +195,18 @@
 		096C87AE18290ADA0024D734 /* DSMessage+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 096C87AC18290ADA0024D734 /* DSMessage+Parse.m */; };
 		0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0973572518041E3A00351055 /* DSCustomFontLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0973572618041E3A00351055 /* DSCustomFontLabel.m */; };
+		097FCD76189FAAF300B9B041 /* MARTNSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD60189FAAF300B9B041 /* MARTNSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097FCD77189FAAF300B9B041 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD61189FAAF300B9B041 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		097FCD78189FAAF300B9B041 /* RTIvar.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD63189FAAF300B9B041 /* RTIvar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097FCD79189FAAF300B9B041 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD64189FAAF300B9B041 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		097FCD7A189FAAF300B9B041 /* RTMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD65189FAAF300B9B041 /* RTMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097FCD7B189FAAF300B9B041 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD66189FAAF300B9B041 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		097FCD7C189FAAF300B9B041 /* RTProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD67189FAAF300B9B041 /* RTProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097FCD7D189FAAF300B9B041 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD68189FAAF300B9B041 /* RTProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		097FCD7E189FAAF300B9B041 /* RTProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD69189FAAF300B9B041 /* RTProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097FCD7F189FAAF300B9B041 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6A189FAAF300B9B041 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		097FCD80189FAAF300B9B041 /* RTUnregisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD6B189FAAF300B9B041 /* RTUnregisteredClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */; };
@@ -570,6 +582,18 @@
 		096C87AC18290ADA0024D734 /* DSMessage+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSMessage+Parse.m"; sourceTree = "<group>"; };
 		0973572518041E3A00351055 /* DSCustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomFontLabel.h; sourceTree = "<group>"; };
 		0973572618041E3A00351055 /* DSCustomFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCustomFontLabel.m; sourceTree = "<group>"; };
+		097FCD60189FAAF300B9B041 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
+		097FCD61189FAAF300B9B041 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTNSObject.m; sourceTree = "<group>"; };
+		097FCD63189FAAF300B9B041 /* RTIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTIvar.h; sourceTree = "<group>"; };
+		097FCD64189FAAF300B9B041 /* RTIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTIvar.m; sourceTree = "<group>"; };
+		097FCD65189FAAF300B9B041 /* RTMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMethod.h; sourceTree = "<group>"; };
+		097FCD66189FAAF300B9B041 /* RTMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMethod.m; sourceTree = "<group>"; };
+		097FCD67189FAAF300B9B041 /* RTProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProperty.h; sourceTree = "<group>"; };
+		097FCD68189FAAF300B9B041 /* RTProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProperty.m; sourceTree = "<group>"; };
+		097FCD69189FAAF300B9B041 /* RTProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProtocol.h; sourceTree = "<group>"; };
+		097FCD6A189FAAF300B9B041 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProtocol.m; sourceTree = "<group>"; };
+		097FCD6B189FAAF300B9B041 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUnregisteredClass.h; sourceTree = "<group>"; };
+		097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
 		098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSQueueBasedRequestSender+Private.h"; sourceTree = "<group>"; };
 		098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSQueueBasedRequestSender.h; sourceTree = "<group>"; };
 		098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueueBasedRequestSender.m; sourceTree = "<group>"; };
@@ -1153,6 +1177,25 @@
 			path = "UIImage-categories";
 			sourceTree = "<group>";
 		};
+		097FCD5B189FAAF300B9B041 /* MAObjCRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				097FCD60189FAAF300B9B041 /* MARTNSObject.h */,
+				097FCD61189FAAF300B9B041 /* MARTNSObject.m */,
+				097FCD63189FAAF300B9B041 /* RTIvar.h */,
+				097FCD64189FAAF300B9B041 /* RTIvar.m */,
+				097FCD65189FAAF300B9B041 /* RTMethod.h */,
+				097FCD66189FAAF300B9B041 /* RTMethod.m */,
+				097FCD67189FAAF300B9B041 /* RTProperty.h */,
+				097FCD68189FAAF300B9B041 /* RTProperty.m */,
+				097FCD69189FAAF300B9B041 /* RTProtocol.h */,
+				097FCD6A189FAAF300B9B041 /* RTProtocol.m */,
+				097FCD6B189FAAF300B9B041 /* RTUnregisteredClass.h */,
+				097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */,
+			);
+			path = MAObjCRuntime;
+			sourceTree = SOURCE_ROOT;
+		};
 		098FB25B17F2008600DB9F49 /* DSQueueBasedRequestSender */ = {
 			isa = PBXGroup;
 			children = (
@@ -1484,6 +1527,7 @@
 		AED6C1981465E55000D9B44E /* DSLib */ = {
 			isa = PBXGroup;
 			children = (
+				097FCD5B189FAAF300B9B041 /* MAObjCRuntime */,
 				0903A2D317F0AC8300A21270 /* Sort */,
 				AED6C1AB1465E77600D9B44E /* Sources */,
 				AED6C1991465E55000D9B44E /* Supporting Files */,
@@ -1563,6 +1607,7 @@
 				09B8669C17F1E5C7003B1070 /* DSWebServiceStringParam.h in Headers */,
 				0903A3B517F0AC9100A21270 /* UIScreen+Availability.h in Headers */,
 				09067F2D181804CA00C8F48F /* DSAlertsQueue.h in Headers */,
+				097FCD7C189FAAF300B9B041 /* RTProperty.h in Headers */,
 				09162C71180EE84900A0DEEF /* DSTextField.h in Headers */,
 				0903A3A717F0AC9100A21270 /* NSString+Extras.h in Headers */,
 				0903A3B117F0AC9100A21270 /* UIDevice+Additions.h in Headers */,
@@ -1639,6 +1684,7 @@
 				09162C6D180EE84900A0DEEF /* DSFieldValidationCriterion.h in Headers */,
 				09B866B517F1E5C7003B1070 /* DSWebServiceRequestsFactory.h in Headers */,
 				09B6DCEF1858F5C500FB1825 /* DSGeocoderFramework.h in Headers */,
+				097FCD7E189FAAF300B9B041 /* RTProtocol.h in Headers */,
 				0903A3B317F0AC9100A21270 /* UIFont+FromString.h in Headers */,
 				0903A3ED17F0AC9100A21270 /* FontsDB.h in Headers */,
 				62DD1C90C4EBBDB2502CA983 /* DSAlert.h in Headers */,
@@ -1648,6 +1694,7 @@
 				0903A40917F0B4DA00A21270 /* Reachability.h in Headers */,
 				62DD1C6C3614A89A5BF0FF1B /* DSUIAlertView.h in Headers */,
 				09A6040D182A657000F57F89 /* NSBundle+DSBundle.h in Headers */,
+				097FCD80189FAAF300B9B041 /* RTUnregisteredClass.h in Headers */,
 				09B8669917F1E5C7003B1070 /* DSWebServiceParam.h in Headers */,
 				62DD17ADB8BFA1779019830E /* DSAlertsHandler.h in Headers */,
 				62DD1D2E90263BBAA1002A5B /* DSMessageContext.h in Headers */,
@@ -1662,6 +1709,7 @@
 				09B8669717F1E5C7003B1070 /* DSWebServiceCompositeParams.h in Headers */,
 				09B6DCE91858F5C500FB1825 /* DSGeocodeProviderType.h in Headers */,
 				62DD12A9BE582692B9643004 /* DSAlertsHandler+SimplifiedAPI.h in Headers */,
+				097FCD78189FAAF300B9B041 /* RTIvar.h in Headers */,
 				09B866A917F1E5C7003B1070 /* DSWebServiceRequestOperation.h in Headers */,
 				62DD13EB68EB018ACE1AC0F5 /* DSConfiguration.h in Headers */,
 				09B6DCF81858F5C500FB1825 /* DSPlacemark.h in Headers */,
@@ -1673,6 +1721,7 @@
 				093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */,
 				09B866B317F1E5C7003B1070 /* DSWebServiceOperationType.h in Headers */,
 				62DD13C9E2F182E4E22E7D24 /* DSBlockBarButtonItem.h in Headers */,
+				097FCD76189FAAF300B9B041 /* MARTNSObject.h in Headers */,
 				62DD130F46A501A7FFCD1BAE /* DSDataDetector.h in Headers */,
 				09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */,
 				09162C6F180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h in Headers */,
@@ -1689,6 +1738,7 @@
 				09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */,
 				09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */,
 				09B866B717F1E5C7003B1070 /* NSManagedObject+DSAdditions.h in Headers */,
+				097FCD7A189FAAF300B9B041 /* RTMethod.h in Headers */,
 				62DD1C9E769C375EB5D785FB /* DSDraggingSourceContainer.h in Headers */,
 				09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */,
 				09B6DCEE1858F5C500FB1825 /* DSGeocoderDelegate.h in Headers */,
@@ -1852,6 +1902,7 @@
 				0903A3B417F0AC9100A21270 /* UIFont+FromString.m in Sources */,
 				09B866BA17F1E5C7003B1070 /* DSWebServiceParams.m in Sources */,
 				09B866A217F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m in Sources */,
+				097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */,
 				0903A3D217F0AC9100A21270 /* DSCFunctions.m in Sources */,
 				09B6DCF71858F5C500FB1825 /* DSGeocodeProviderOpenmap.m in Sources */,
 				0903A40A17F0B4DA00A21270 /* Reachability.m in Sources */,
@@ -1867,6 +1918,7 @@
 				09B8669D17F1E5C7003B1070 /* DSWebServiceStringParam.m in Sources */,
 				09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */,
 				0903A39E17F0AC9100A21270 /* NSMutableURLRequest+POSTData.m in Sources */,
+				097FCD77189FAAF300B9B041 /* MARTNSObject.m in Sources */,
 				093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */,
 				0903A3E017F0AC9100A21270 /* DSRuntimeHacker.m in Sources */,
 				09B6DCEB1858F5C500FB1825 /* DSGeocoder+Factory.m in Sources */,
@@ -1874,6 +1926,7 @@
 				09162C72180EE84900A0DEEF /* DSTextField.m in Sources */,
 				0903A39617F0AC9100A21270 /* NSDate+OAddittions.m in Sources */,
 				0903A3E617F0AC9100A21270 /* QRunLoopOperation.m in Sources */,
+				097FCD7F189FAAF300B9B041 /* RTProtocol.m in Sources */,
 				0903A2E117F0AC8300A21270 /* DSArrayChange.m in Sources */,
 				0903A3F017F0AC9100A21270 /* DSActivityIndicator.m in Sources */,
 				09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */,
@@ -1914,6 +1967,7 @@
 				096C87AE18290ADA0024D734 /* DSMessage+Parse.m in Sources */,
 				0903A3FB17F0AC9100A21270 /* DSCheckButton.m in Sources */,
 				09B8669417F1E5C7003B1070 /* NSError+DSWebService.m in Sources */,
+				097FCD7D189FAAF300B9B041 /* RTProperty.m in Sources */,
 				09B866A617F1E5C7003B1070 /* DSWebServiceSerialQueue.m in Sources */,
 				0903A3A217F0AC9100A21270 /* NSObject+DSAdditions.m in Sources */,
 				0903A3AE17F0AC9100A21270 /* UIApplication+KeyboardView.m in Sources */,
@@ -1953,8 +2007,10 @@
 				09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */,
 				62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */,
 				09B6DCF51858F5C500FB1825 /* DSGeocodeProviderApple.m in Sources */,
+				097FCD7B189FAAF300B9B041 /* RTMethod.m in Sources */,
 				62DD1E899DE35CD54E5DC2BF /* DSAlertViewFactory.m in Sources */,
 				62DD1FEFFC22374EBAC3044E /* DSAlertsSupportCode.m in Sources */,
+				097FCD79189FAAF300B9B041 /* RTIvar.m in Sources */,
 				09162C70180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m in Sources */,
 				09B8669817F1E5C7003B1070 /* DSWebServiceCompositeParams.m in Sources */,
 				62DD1E3812B21714B92C8ACF /* DSAlertsHandlerConfiguration.m in Sources */,
@@ -2182,6 +2238,7 @@
 				0904155D1892E4D600302A2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09A6041D182A65CF00F57F89 /* Build configuration list for PBXNativeTarget "DSLibBundle" */ = {
 			isa = XCConfigurationList;
