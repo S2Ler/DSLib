@@ -15,8 +15,7 @@
 
 @property (nonatomic, retain) DSWebServiceURL *url;
 @property (nonatomic, retain) NSURLConnection *connection;
-@property (nonatomic, retain) NSMutableData *responseData;
-
+@property (nonatomic, retain) NSOutputStream *outputStream;
 
 @end
 
@@ -31,7 +30,6 @@
 @synthesize connection = _connection;
 @synthesize delegate = _delegate;
 @synthesize timeoutInterval = _timeoutInterval;
-@synthesize responseData = _responseData;
 @synthesize POSTData = _POSTData;
 @synthesize POSTDataPath = _POSTDataPath;
 @synthesize POSTDataKey = _POSTDataKey;
@@ -61,11 +59,36 @@
     }
 
     [self setTimeoutInterval:DEFAULT_TIMEOUT];
-    _responseData = [[NSMutableData alloc] init];
   }
 
   return self;
 }
+
+- (void)setOutputPath:(NSString *)outputPath
+{
+  NSAssert(![self outputPath], @"Shouldn't happen due to logic");
+  
+  if (outputPath) {
+    [[self userInfo] setValue:outputPath forKey:@"__outputPath"];
+    NSAssert(![self outputStream], @"Shouldn't happen due to logic");
+    [self setOutputStream:[[NSOutputStream alloc] initToFileAtPath:outputPath append:NO]];
+  }
+}
+
+- (NSString *)outputPath
+{
+  return [[self userInfo] valueForKey:@"__outputPath"];
+}
+
+- (NSData *)responseData
+{
+  if ([self outputPath]) {
+    return [NSData dataWithContentsOfMappedFile:[self outputPath]];
+  }
+  else {
+    return [[self outputStream] propertyForKey:NSStreamDataWrittenToMemoryStreamKey];;
+  }
+} 
 
 - (id)initWithServer:(DSWebServiceURL *)theWebServiceURL
               params:(id<DSWebServiceParam>)theParams
@@ -193,7 +216,6 @@
 {
   [super operationDidStart];
 
-  [self setResponseData:[NSMutableData data]];
   [[self url] applyParams:_params];
 
   if ([[self url] HTTPMethod] == DSWebServiceURLHTTPMethodPOST &&
@@ -317,6 +339,11 @@
 - (void)connection:(NSURLConnection *)connection
 didReceiveResponse:(NSURLResponse *)response
 {
+  if (![self outputStream]) {
+    [self setOutputStream:[[NSOutputStream alloc] initToMemory]];
+  }
+  
+  [[self outputStream] open];
   _expectedDownloadSize = [response expectedContentLength];
 
   if ([[self delegate]
@@ -330,16 +357,43 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
 - (void)connection:(NSURLConnection *)connection
     didReceiveData:(NSData *)data
 {
-  [[self responseData] appendData:data];
+  NSUInteger length = [data length];
+  while (YES) {
+    NSInteger totalNumberOfBytesWritten = 0;
+    if ([self.outputStream hasSpaceAvailable]) {
+      const uint8_t *dataBuffer = (uint8_t *)[data bytes];
+      
+      NSInteger numberOfBytesWritten = 0;
+      while (totalNumberOfBytesWritten < (NSInteger)length) {
+        numberOfBytesWritten = [self.outputStream write:&dataBuffer[(NSUInteger)totalNumberOfBytesWritten] maxLength:(length - (NSUInteger)totalNumberOfBytesWritten)];
+        if (numberOfBytesWritten == -1) {
+          break;
+        }
+        
+        totalNumberOfBytesWritten += numberOfBytesWritten;
+      }
+      
+      break;
+    }
+    
+    if (self.outputStream.streamError) {
+      [self.connection cancel];
+      [self performSelector:@selector(connection:didFailWithError:)
+                 withObject:self.connection
+                 withObject:self.outputStream.streamError];
+      return;
+    }
+  }
 }
 
 - (void)connection:(NSURLConnection *)conn
   didFailWithError:(NSError *)error
 {
+  [[self outputStream] close];
+  
   NSLog(@"Connection error code: {%i}\nDescription: {%@}",
   [error code], [error localizedDescription]);
 
-  [self setResponseData:nil];
   [self setConnection:nil];
 
   if ([[self delegate] respondsToSelector:
@@ -379,6 +433,8 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
   [self setConnection:nil];
 
   [self finishWithError:nil];
+  
+  [[self outputStream] close];
 }
 
 #pragma mark - HTTPS workaround
@@ -409,41 +465,5 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
   return result;
 }
 
-
-//===========================================================
-//  Keyed Archiving
-//
-//===========================================================
-- (void)encodeWithCoder:(NSCoder *)encoder
-{
-  [encoder encodeBool:self.sendRawPOSTData forKey:@"sendRawPOSTData"];
-  [encoder encodeObject:self.responseData forKey:@"responseData"];
-  [encoder encodeObject:self.userInfo forKey:@"userInfo"];
-  [encoder encodeObject:self.POSTData forKey:@"POSTData"];
-  [encoder encodeObject:self.POSTDataPath forKey:@"POSTDataPath"];
-  [encoder encodeObject:self.POSTDataKey forKey:@"POSTDataKey"];
-  [encoder encodeObject:self.POSTDataFileName forKey:@"POSTDataFileName"];
-  [encoder encodeDouble:self.timeoutInterval forKey:@"timeoutInterval"];
-  [encoder encodeObject:self.url forKey:@"url"];
-  [encoder encodeObject:self.params forKey:@"params"];
-}
-
-- (id)initWithCoder:(NSCoder *)decoder
-{
-  self = [super init];
-  if (self) {
-    self.sendRawPOSTData = [decoder decodeBoolForKey:@"sendRawPOSTData"];
-    self.responseData = [decoder decodeObjectForKey:@"responseData"];
-    self.userInfo = [decoder decodeObjectForKey:@"userInfo"];
-    self.POSTData = [decoder decodeObjectForKey:@"POSTData"];
-    self.POSTDataPath = [decoder decodeObjectForKey:@"POSTDataPath"];
-    self.POSTDataKey = [decoder decodeObjectForKey:@"POSTDataKey"];
-    self.POSTDataFileName = [decoder decodeObjectForKey:@"POSTDataFileName"];
-    [self setTimeoutInterval:[decoder decodeDoubleForKey:@"timeoutInterval"]];
-    self.url = [decoder decodeObjectForKey:@"url"];
-    self.params = [decoder decodeObjectForKey:@"params"];
-  }
-  return self;
-}
 @end
 

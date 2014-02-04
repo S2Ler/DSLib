@@ -4,15 +4,18 @@
 #import "QRunLoopOperation.h"
 
 @protocol DSWebServiceParam;
+@protocol DSWebServiceRequestDelegate;
 @class DSWebServiceURL;
 @class DSWebServiceResponse;
-@protocol DSWebServiceRequestDelegate;
 
 #define MAX_RAW_DATA_BYTES_LOG NSUIntegerMax
 
 @interface DSWebServiceNetRequest : QRunLoopOperation <DSWebServiceRequest>
 
 @property (nonatomic, retain, readonly) DSWebServiceURL *url;
+
+/** Response data will be written to output stream */
+@property (nonatomic, strong) NSString *outputPath;
 
 #pragma mark - init
 - (id)initWithServer:(DSWebServiceURL *)theWebServiceURL

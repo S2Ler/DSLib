@@ -41,6 +41,9 @@
 - (DSWebServiceURLHTTPMethod)HTTPMethod;
 - (NSData *)POSTData;
 
+/** If not nil, the response data will be written to this path */
+- (NSString *)outputPath;
+
 /** The ordered list of param names which should be embedded in main URL scheme:
 * The example:
 * http://www.server.net/functionName/paramValue1/paramValue2?paraName3=paramValue3

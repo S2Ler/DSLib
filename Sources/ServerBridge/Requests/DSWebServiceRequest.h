@@ -5,7 +5,7 @@
 @class DSWebServiceURL;
 @class DSWebServiceResponse;
 
-@protocol DSWebServiceRequest<NSObject, NSCoding>
+@protocol DSWebServiceRequest<NSObject>
 
 @property (nonatomic, weak) id<DSWebServiceRequestDelegate> delegate;
 

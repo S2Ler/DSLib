@@ -95,6 +95,11 @@
   return nil;
 }
 
+- (NSString *)outputPath
+{
+  return nil;
+}
+
 - (NSArray *)paramsEmbeddedInURL
 {
   return [NSArray array];

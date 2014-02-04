@@ -82,6 +82,7 @@
                                            embeddedParams:paramsEmbeddedInURL];
 
     DSWebServiceNetRequest *request = [DSWebServiceNetRequest requestWithServer:url params:params];
+    [request setOutputPath:[theParams outputPath]];
 //    [request setRunLoopThread:[self networkRequestThread]];
     [request setSendRawPOSTData:NO];
     [request setPOSTDataKey:@"key"];

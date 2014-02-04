@@ -1357,12 +1357,12 @@
 		09B8666D17F1E5C7003B1070 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				09B8667217F1E5C7003B1070 /* Fake */,
+				09B8667717F1E5C7003B1070 /* Network */,
 				09B8666E17F1E5C7003B1070 /* DSWebServiceRequest.h */,
 				09B8666F17F1E5C7003B1070 /* DSWebServiceRequestDelegate.h */,
 				09B8667017F1E5C7003B1070 /* DSWebServiceRequestOperation.h */,
 				09B8667117F1E5C7003B1070 /* DSWebServiceRequestOperation.m */,
-				09B8667217F1E5C7003B1070 /* Fake */,
-				09B8667717F1E5C7003B1070 /* Network */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
