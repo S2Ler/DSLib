@@ -1,17 +1,21 @@
 
 #import <Foundation/Foundation.h>
+#import "DSMacros.h"
 
 @class DSMessage;
 
 @interface DSWebServiceResponse : NSObject
 
-@property (nonatomic, retain, readonly) NSData *data;
+@property (nonatomic, strong, readonly) NSData *data;
+- (instancetype)initWithData:(NSData *)theData DS_DESIGNATED_INIT;
++ (instancetype)responseWithData:(NSData *)theData;
 
-- (id)initWithData:(NSData *)theData;
-+ (id)responseWithData:(NSData *)theData;
+@property (nonatomic, strong, readonly) NSString *path;
+- (instancetype)initWithPath:(NSString *)path DS_DESIGNATED_INIT;
++ (instancetype)responseWithPath:(NSString *)path DS_DESIGNATED_INIT;
 
-- (id)initWithResponse:(DSWebServiceResponse *)response;
-+ (id)responseWithResponse:(DSWebServiceResponse *)response;
+- (instancetype)initWithResponse:(DSWebServiceResponse *)response DS_DESIGNATED_INIT;
++ (instancetype)responseWithResponse:(DSWebServiceResponse *)response;
 
 - (BOOL)parse;
 

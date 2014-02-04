@@ -14,27 +14,13 @@
 
 @property (nonatomic, strong) NSDictionary *parsedDocument;
 @property (assign) BOOL parseCalled;
+
+@property (nonatomic, strong) NSData *data;
+@property (nonatomic, strong) NSString *path;
 @end
 
-#pragma mark - props
-@interface DSWebServiceResponse ()
-@property (nonatomic, retain) NSData *data;
-@end
-
-#pragma mark - private
-@interface DSWebServiceResponse (Private)
-@end
 
 @implementation DSWebServiceResponse
-#pragma mark - synth
-
-@synthesize parsedDocument = _parsedDocument;
-
-@synthesize data = _data;
-
-- (void)dealloc 
-{
-}
 
 #pragma mark - init
 - (id)initWithData:(NSData *)theData
@@ -63,6 +49,7 @@
     _data = [response data];
     _parsedDocument = [response parsedDocument];
     _parseCalled = [response parseCalled];
+    _path = [response path];
   }
   return self;
 }
@@ -71,6 +58,34 @@
 {
   id newResponse = [[self alloc] initWithResponse:response];
   return newResponse;
+}
+
+- (instancetype)initWithPath:(NSString *)path
+{
+  self = [super init];
+  if (self) {
+    _path = path;
+  }
+  return self;
+}
+
++ (instancetype)responseWithPath:(NSString *)path
+{
+  return [[self alloc] initWithPath:path];
+}
+
+- (NSData *)data
+{
+  if (_data) {
+    return _data;
+  }
+  
+  if (_path) {
+    _data = [NSData dataWithContentsOfMappedFile:_path];
+    return _data;
+  }
+  
+  return _data;  
 }
 
 #pragma mark - public

@@ -82,13 +82,8 @@
 
 - (NSData *)responseData
 {
-  if ([self outputPath]) {
-    return [NSData dataWithContentsOfMappedFile:[self outputPath]];
-  }
-  else {
-    return [[self outputStream] propertyForKey:NSStreamDataWrittenToMemoryStreamKey];;
-  }
-} 
+  return [[self outputStream] propertyForKey:NSStreamDataWrittenToMemoryStreamKey];;
+}
 
 - (id)initWithServer:(DSWebServiceURL *)theWebServiceURL
               params:(id<DSWebServiceParam>)theParams
@@ -318,7 +313,13 @@
 
 - (DSWebServiceResponse *)response
 {
-  DSWebServiceResponse *response = [DSWebServiceResponse responseWithData:[self responseData]];
+  DSWebServiceResponse *response = nil;
+  if ([self outputPath]) {
+    response = [DSWebServiceResponse responseWithPath:[self outputPath]];
+  }
+  if ([self responseData]) {
+    response = [DSWebServiceResponse responseWithData:[self responseData]];
+  }
 
   return response;
 }
@@ -407,22 +408,13 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-  NSString *responseString
-    = [[NSString alloc]
-                 initWithData:[self responseData]
-                 encoding:NSStringEncodingConversionExternalRepresentation];
-
   DSWebServiceResponse *webServiceResponse = [self response];
 
-  if (responseString) {
-    NSData *data = [self responseData];
-
-    NSLog(@"\nURL: %@\nParams: %@\nServer Response: %@",
-              [self url],
-              [self params],
-              [[NSString alloc] initWithData:data
-                                    encoding:NSStringEncodingConversionExternalRepresentation]);
-  }
+  NSLog(@"\nURL: %@\nParams: %@\nServer Response: %@",
+        [self url],
+        [self params],
+        [[NSString alloc] initWithData:[self responseData]
+                              encoding:NSStringEncodingConversionExternalRepresentation]);
 
   if ([[self delegate] respondsToSelector:
     @selector(webServiceRequest:didEndLoadWithResponse:)]) {
