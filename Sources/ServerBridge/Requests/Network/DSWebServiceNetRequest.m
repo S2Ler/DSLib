@@ -424,9 +424,8 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
 
   [self setConnection:nil];
 
-  [self finishWithError:nil];
-  
   [[self outputStream] close];
+  [self finishWithError:nil];  
 }
 
 #pragma mark - HTTPS workaround

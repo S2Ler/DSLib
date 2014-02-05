@@ -153,9 +153,11 @@
     [invocation setTarget:self];
     [invocation setSelector:selector];
     [self forwardInvocation:invocation];
-    id value;
+    __autoreleasing id value;
     [invocation getReturnValue:&value];
-    values[[property name]] = value;
+    if (value) {
+      values[[property name]] = value;
+    }
   }
   
   return values;
