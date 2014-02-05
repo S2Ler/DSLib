@@ -320,6 +320,8 @@
 		09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
+		09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09F7389E18A22EE6003FE0C2 /* DSDynamicPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */; };
 		62DD10D7C5D585E7DF32649A /* DSAlertsSupportCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154696C25DDF7CB90594 /* DSAlertsSupportCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD10D8A5F859797CC11AF7 /* DSAlertViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD17A21471C20C738E6BAA /* DSAlertViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD12341D52C3E5516F6D85 /* DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD174C1D46388A8A79AF76 /* DSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -511,7 +513,7 @@
 		0903A38A17F0AC9100A21270 /* DSValueChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSValueChooserViewController.xib; sourceTree = "<group>"; };
 		0903A38B17F0AC9100A21270 /* DSValueChooserViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSValueChooserViewControllerDelegate.h; sourceTree = "<group>"; };
 		0903A40717F0B4DA00A21270 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		0903A40817F0B4DA00A21270 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0903A40817F0B4DA00A21270 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Reachability.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0903A41117F0C28300A21270 /* DSGPSTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGPSTracker.h; sourceTree = "<group>"; };
 		0903A41217F0C28300A21270 /* DSGPSTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGPSTracker.m; sourceTree = "<group>"; };
 		0903A41317F0C28300A21270 /* DSGPSTrackerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGPSTrackerDelegate.h; sourceTree = "<group>"; };
@@ -687,6 +689,8 @@
 		09D6223E1817DDF900A252D9 /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Parse.h"; sourceTree = "<group>"; };
 		09D6223F1817DDF900A252D9 /* NSError+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Parse.m"; sourceTree = "<group>"; };
 		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
+		09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDynamicPropertyObject.h; sourceTree = "<group>"; };
+		09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDynamicPropertyObject.m; sourceTree = "<group>"; };
 		62DD10482694069BA9C5E531 /* DSUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUIAlertView.m; sourceTree = "<group>"; };
 		62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDropController.h; sourceTree = "<group>"; };
 		62DD11E47C44DDA0A2867834 /* DSFindCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFindCountry.m; sourceTree = "<group>"; };
@@ -789,6 +793,8 @@
 				0969F93218329C3C00B3C4B2 /* DSAskForTextController.m */,
 				094C0206184D139900890D67 /* DSFetchedResultsControllerDelegate.h */,
 				094C0207184D139900890D67 /* DSFetchedResultsControllerDelegate.m */,
+				09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */,
+				09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1699,6 +1705,7 @@
 				62DD17ADB8BFA1779019830E /* DSAlertsHandler.h in Headers */,
 				62DD1D2E90263BBAA1002A5B /* DSMessageContext.h in Headers */,
 				62DD10D8A5F859797CC11AF7 /* DSAlertViewFactory.h in Headers */,
+				09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */,
 				62DD10D7C5D585E7DF32649A /* DSAlertsSupportCode.h in Headers */,
 				09B8669217F1E5C7003B1070 /* DSWebServiceFramework.h in Headers */,
 				098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */,
@@ -2008,6 +2015,7 @@
 				62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */,
 				09B6DCF51858F5C500FB1825 /* DSGeocodeProviderApple.m in Sources */,
 				097FCD7B189FAAF300B9B041 /* RTMethod.m in Sources */,
+				09F7389E18A22EE6003FE0C2 /* DSDynamicPropertyObject.m in Sources */,
 				62DD1E899DE35CD54E5DC2BF /* DSAlertViewFactory.m in Sources */,
 				62DD1FEFFC22374EBAC3044E /* DSAlertsSupportCode.m in Sources */,
 				097FCD79189FAAF300B9B041 /* RTIvar.m in Sources */,

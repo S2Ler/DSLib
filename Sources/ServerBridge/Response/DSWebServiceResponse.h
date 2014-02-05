@@ -1,10 +1,11 @@
 
 #import <Foundation/Foundation.h>
 #import "DSMacros.h"
+#import "DSDynamicPropertyObject.h"
 
 @class DSMessage;
 
-@interface DSWebServiceResponse : NSObject
+@interface DSWebServiceResponse : DSDynamicPropertyObject
 
 @property (nonatomic, strong, readonly) NSData *data;
 - (instancetype)initWithData:(NSData *)theData DS_DESIGNATED_INIT;
@@ -30,12 +31,4 @@
 
 - (NSString *)errorCode;
 - (DSMessage *)APIErrorMessage;
-
-/** Needed for dynamic getter resolution.
- Usage:
- - create readonly property
- - overwrite keypathForGetter: method to return keypath in responseDictionary for this property
- - look into forwardInvocation: if some of the property types isn't supported and add a new handler
- */
-- (NSString *)keypathForGetter:(NSString *)getter;
 @end

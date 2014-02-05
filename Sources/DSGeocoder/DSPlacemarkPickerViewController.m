@@ -4,7 +4,7 @@
 #import "DSChoosePlacemarkAnnotation.h"
 #import "NSString+Encoding.h"
 #import "DSPlacemarkPickerViewControllerDelegate.h"
-#import "DSCFunctions.h"
+#import "DSMacros.h"
 
 #pragma mark - private
 @interface DSPlacemarkPickerViewController ()

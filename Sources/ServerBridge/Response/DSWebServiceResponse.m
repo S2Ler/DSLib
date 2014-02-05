@@ -5,8 +5,7 @@
 #import "DSMessage.h"
 #import "DSCFunctions.h"
 #import "NSError+DSWebService.h"
-#import "MARTNSObject.h"
-#import "RTProperty.h"
+
 #import "DSMacros.h"
 
 #pragma mark - props
@@ -32,6 +31,11 @@
   }
   
   return self;
+}
+
+- (id)container
+{
+  return [self responseDictionary];
 }
 
 + (id)responseWithData:(NSData *)theData
@@ -161,92 +165,6 @@
   return errorMessage;
 }
 
-#pragma mark - dynamic properties
-- (void)forwardInvocation:(NSInvocation *)anInvocation
-{
-  NSString *getterName = NSStringFromSelector([anInvocation selector]);
-  
-  NSInteger lastParamIndex = 1;
-  [anInvocation setArgument:&getterName atIndex:lastParamIndex + 1];
-  
-  NSString *type = [self typeForPropertyWithName:getterName];
-  if ([type hasPrefix:@"@"]) {
-    [anInvocation setSelector:@selector(handleObjectGetterWithName:)];
-  }
-  else if ([type hasPrefix:@"I"]) {
-    [anInvocation setSelector:@selector(handleUnsignedIntegerWithName:)];
-  }
-  else if ([type hasPrefix:@"Q"]) {
-    [anInvocation setSelector:@selector(handleUnsignedLongLongWithName:)];
-  }
-  UNHANDLED_IF;
-  
-  [anInvocation invokeWithTarget:self];
-}
 
-- (NSString *)typeForPropertyWithName:(NSString *)propertyName
-{
-  RTProperty *property = [[self class] rt_propertyForName:propertyName];
-  NSAssert([property isReadOnly], @"Custom accessors to response dictionary should be readonly properties");
-  if (property) {
-    NSString *typeEncoding = [property typeEncoding];
-    return typeEncoding;
-  }
-  return nil;
-}
-
-+ (NSNumberFormatter *)numberFormatter
-{
-  DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
-    return [[NSNumberFormatter alloc] init];
-  });
-}
-
-- (NSNumber *)numberForPropertyName:(NSString *)propertyName
-{
-  id numberObject = [[self responseDictionary] valueForKeyPath:[self keypathForGetter:propertyName]];
-  NSNumber *number = nil;
-  
-  if ([numberObject isKindOfClass:[NSNumber class]]) {
-    number = numberObject;
-  }
-  else if ([numberObject isKindOfClass:[NSString class]]) {
-    number = [[[self class] numberFormatter] numberFromString:numberObject];
-  }
-  return number;
-}
-
-- (NSUInteger)handleUnsignedIntegerWithName:(NSString *)propertyName
-{
-  NSNumber *number = [self numberForPropertyName:propertyName];
-  return [number unsignedIntegerValue];
-}
-
-- (unsigned long long)handleUnsignedLongLongWithName:(NSString *)propertyName
-{
-  NSNumber *number = [self numberForPropertyName:propertyName];
-  return [number unsignedLongLongValue];
-}
-
-/** \param theSetter looks like: setParamName */
-- (id)handleObjectGetterWithName:(NSString *)getterName
-{
-  NSString *value = [[self responseDictionary] valueForKeyPath:[self keypathForGetter:getterName]];
-  return value;
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
-{
-  NSMethodSignature *signature = [super methodSignatureForSelector:selector];
-  
-  if (!signature) {
-    NSString *typeEncoding = [self typeForPropertyWithName:NSStringFromSelector(selector)];
-    if (typeEncoding) {
-      signature = [NSMethodSignature signatureWithObjCTypes:[[NSString stringWithFormat:@"%@@:@", typeEncoding]cStringUsingEncoding:NSUTF8StringEncoding]];
-    }
-  }
-  
-  return signature;
-}
 
 @end

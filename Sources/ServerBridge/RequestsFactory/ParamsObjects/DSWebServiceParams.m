@@ -6,6 +6,7 @@
 #import "DSWebServiceParam.h"
 #import "NSString+Extras.h"
 #import "DSCFunctions.h"
+#import "DSMacros.h"
 #import "DSFakeWebServiceRequest.h"
 #import "DSWebServiceConfiguration.h"
 #import "DSWebServiceFunctions.h"

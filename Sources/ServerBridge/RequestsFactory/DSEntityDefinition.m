@@ -8,7 +8,7 @@
 #import "NSDate+OAddittions.h"
 #import "NSString+Extras.h"
 #import "DSWebServiceConfiguration.h"
-#import "DSCFunctions.h"
+#import "DSMacros.h"
 
 #pragma mark - private
 @interface DSEntityDefinition ()

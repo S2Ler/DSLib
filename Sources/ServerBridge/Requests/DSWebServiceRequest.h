@@ -7,6 +7,8 @@
 
 @protocol DSWebServiceRequest<NSObject>
 
+@property (copy, readonly) NSError *error;
+
 @property (nonatomic, weak) id<DSWebServiceRequestDelegate> delegate;
 
 @property (nonatomic, strong) NSMutableDictionary *userInfo;
@@ -48,5 +50,7 @@
 - (void)removeDependency:(NSOperation *)op;
 
 - (NSArray *)dependencies;
+
+- (void)setCompletionBlock:(void (^)(void))block;
 
 @end

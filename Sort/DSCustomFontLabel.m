@@ -7,7 +7,7 @@
 //
 
 #import "DSCustomFontLabel.h"
-#import "DSCFunctions.h"
+#import "DSMacros.h"
 
 @implementation DSCustomFontLabel
 

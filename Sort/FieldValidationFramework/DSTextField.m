@@ -7,6 +7,8 @@
 #import "DSCriterionDescriptionViewController.h"
 #import "DSFieldValidationCriterion.h"
 #import "DSCFunctions.h"
+#import "DSMacros.h"
+
 
 #pragma mark - private
 @interface DSTextField()

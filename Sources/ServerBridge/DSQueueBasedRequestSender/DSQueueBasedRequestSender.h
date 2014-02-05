@@ -11,7 +11,7 @@ typedef void (^request_failed_block_t)(id<DSWebServiceRequest> request, DSMessag
 
 
 @interface DSQueueBasedRequestSender: NSObject<DSWebServiceRequestDelegate>
-@property (nonatomic, strong, readonly) DSWebServiceQueue *queue;
+@property (strong, readonly) DSWebServiceQueue *queue;
 - (NSArray *)activeRequests;
 - (NSInteger)requestCount;
 @property (nonatomic, assign, getter=isSuspended) BOOL suspended;
