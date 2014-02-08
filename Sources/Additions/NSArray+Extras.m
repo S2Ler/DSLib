@@ -3,7 +3,7 @@
 
 @implementation NSArray (Extras)
 
--(NSUInteger)indexForInsertingObject:(id)anObject 
+-(NSUInteger)indexForInsertingObject:(id)anObject
 										sortedUsingBlock: (NSInteger (^)(id a, id b)) compare;
 {
 	NSUInteger index = 0;
@@ -12,11 +12,11 @@
 	{
 		NSUInteger midIndex = ((NSUInteger)index + topIndex) / 2;
 		id testObject = [self objectAtIndex:midIndex];
-		if (compare(anObject, testObject) < 0) 
+		if (compare(anObject, testObject) < 0)
 		{
 			index = midIndex + 1;
-		} 
-		else 
+		}
+		else
 		{
 			topIndex = midIndex;
 		}
@@ -35,11 +35,11 @@
 		NSInteger resCompare = compare(anObject, testObject);
 		if(!resCompare)
 			return index;
-		if (resCompare < 0) 
+		if (resCompare < 0)
 		{
 			index = midIndex + 1;
-		} 
-		else 
+		}
+		else
 		{
 			topIndex = midIndex;
 		}
@@ -78,41 +78,82 @@
 }
 
 - (NSArray *)groupObjectsByKeyPath:(NSString *)keyPath
+         sortedWithSortDescriptors:(NSArray *)sortDescriptors
 {
-    NSMutableArray *groups = [NSMutableArray array];
-    
-    NSMutableArray *(^groupWithKeyPathValue) (id) = ^NSMutableArray *(id value)
-    {
-        for (NSMutableArray *group in groups) {
-            id anyObject = [group lastObject];
-            if ([[anyObject valueForKeyPath:keyPath] isEqual:value]) {
-                return group;
-            }
-        }
-
-        NSMutableArray *newGroup = [NSMutableArray array];
-        [groups addObject:newGroup];
-        return newGroup;
-    };
-
-    //Start reading here
-    for (id object in self) {
-        NSMutableArray *group = groupWithKeyPathValue([object valueForKeyPath:keyPath]);
-        [group addObject:object];
+  NSMutableArray *groups = [NSMutableArray array];
+  
+  NSMutableArray *(^groupWithKeyPathValue) (id) = ^NSMutableArray *(id value)
+  {
+    for (NSMutableArray *group in groups) {
+      id anyObject = [group lastObject];
+      if ([[anyObject valueForKeyPath:keyPath] isEqual:value]) {
+        return group;
+      }
     }
+    
+    NSMutableArray *newGroup = [NSMutableArray array];
+    [groups addObject:newGroup];
+    return newGroup;
+  };
+  
+  //Start reading here
+  
+  NSArray *objects = self;
+  if ([sortDescriptors count] > 0) {
+    objects = [self sortedArrayUsingDescriptors:sortDescriptors];
+  }
+  
+  for (id object in objects) {
+    NSMutableArray *group = groupWithKeyPathValue([object valueForKeyPath:keyPath]);
+    [group addObject:object];
+  }
+  
+  return groups;
+}
 
-    return groups;
+- (NSArray *)groupObjectsByKeyPath:(NSString *)keyPath
+{
+  return [self groupObjectsByKeyPath:keyPath sortedWithSortDescriptors:nil];
+}
+
+- (NSDictionary *)mapObjectsByKeyPath:(NSString *)keyPath
+{
+  return [self mapObjectsByKeyPath:keyPath sortedWithSortDescriptors:nil];
+}
+
+- (NSDictionary *)mapObjectsByKeyPath:(NSString *)keyPath
+            sortedWithSortDescriptors:(NSArray *)sortDescriptors
+{
+  NSArray *groupedObjects = [self groupObjectsByKeyPath:keyPath sortedWithSortDescriptors:sortDescriptors];
+  
+  NSMutableDictionary *mappedObjects = [NSMutableDictionary dictionary];
+  
+  for (NSArray *group in groupedObjects) {
+    id<NSObject, NSCopying> mapObject = [[group firstObject] valueForKeyPath:keyPath];
+    NSAssert([mapObject conformsToProtocol:@protocol(NSCopying)], @"objects at keyPath should conform to NSCopying protocol");
+    [mappedObjects setObject:group forKey:mapObject];
+  }
+  
+  return mappedObjects;
 }
 
 - (NSUInteger)countObject:(id)object
 {
   __block NSUInteger count = 0;
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-    if ([object isEqualToString:obj]) {
+    if ([object isEqual:obj]) {
       count++;
     }
   }];
   
   return count;
+}
+
+- (NSArray *)filteredArrayUsingBlock:(BOOL(^)(id evaluatedObject))block;
+{
+  return [self filteredArrayUsingPredicate:
+          [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+    return block(evaluatedObject);
+  }]];
 }
 @end
