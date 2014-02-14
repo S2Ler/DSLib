@@ -4,6 +4,7 @@
 #import "DSWebServiceURL.h"
 #import "DSWebServiceResponse.h"
 #import "NSData+OAdditions.h"
+#import "NSNumber+DSAdditions.h"
 
 #define DEFAULT_TIMEOUT 30
 
@@ -343,8 +344,8 @@ didReceiveResponse:(NSURLResponse *)response
   if (![self outputStream]) {
     [self setOutputStream:[[NSOutputStream alloc] initToMemory]];
   }
-  
   [[self outputStream] open];
+  
   _expectedDownloadSize = [response expectedContentLength];
 
   if ([[self delegate]
@@ -384,6 +385,13 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
                  withObject:self.outputStream.streamError];
       return;
     }
+  }
+  
+  if ([[self delegate] respondsToSelector:@selector(webServiceRequest:didReceiveSize:expectedReceiveSize:)]) {
+    NSNumber *offset = [[self outputStream] propertyForKey:NSStreamFileCurrentOffsetKey];
+    [[self delegate] webServiceRequest:self
+                        didReceiveSize:[offset fileSizeValue]
+                   expectedReceiveSize:_expectedDownloadSize];
   }
 }
 

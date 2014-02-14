@@ -36,6 +36,7 @@
              forKeyPath:@"operationCount"
                 options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                 context:(__bridge void *)self];
+    ASSERT_MAIN_THREAD;//BUG: should be inited on main thread otherwise requests isn't deallocated. Can't find why
   }
 
   return self;
@@ -152,6 +153,8 @@
                                    callbackQueue:(dispatch_queue_t)callbackQueue
 {
   id<DSWebServiceRequest> request = [DSWebServiceRequestsFactory requestWithParams:params];
+  [request setDelegate:self];
+  
   __weak id<DSWebServiceRequest> weakRequest = request;
   if (userInfo) {
     [request setUserInfo:[userInfo mutableCopy]];

@@ -1,6 +1,5 @@
 
 #import "DSWebServiceParams.h"
-#import "DSRuntimeHacker.h"
 #import "DSEntityDefinition.h"
 #import "DSWebServiceRequest.h"
 #import "DSWebServiceParam.h"
@@ -10,6 +9,8 @@
 #import "DSFakeWebServiceRequest.h"
 #import "DSWebServiceConfiguration.h"
 #import "DSWebServiceFunctions.h"
+#import "MARTNSObject.h"
+#import "RTProperty.h"
 
 @implementation DSWebServiceParams
 - (void)loadPropertiesFromClass:(Class)class intoDictionary:(NSMutableDictionary *)dictionary
@@ -25,14 +26,16 @@
 
   free(properties);
 }
+
 - (NSDictionary *)allParams
 {
-  Class class = [self class];
+  NSArray *allParamNames = [self allParamNames];
   NSMutableDictionary *params = [NSMutableDictionary dictionary];
-  while (class != [NSObject class]) {
-    [self loadPropertiesFromClass:class intoDictionary:params];
-    class = [class superclass];
+  
+  for (NSString *paramName in allParamNames) {
+    params[paramName] = [self valueForKeyPath:paramName];
   }
+  
   return params;
 }
 
@@ -108,7 +111,18 @@
 
 - (NSArray *)allParamNames
 {
-  return nil;
+  Class class = [self class];
+  
+  NSMutableArray *properties = [NSMutableArray array];
+  
+  while (class != [DSWebServiceParams class]) {
+    NSArray *classProperties = [class rt_properties];
+    [properties addObjectsFromArray:[classProperties valueForKeyPath:@"name"]];
+    
+    class = [class superclass];
+  };
+  
+  return properties;
 }
 
 + (BOOL)isCorrespondsToRequest:(id<DSWebServiceRequest>)theRequest

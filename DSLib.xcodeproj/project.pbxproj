@@ -207,6 +207,8 @@
 		097FCD7F189FAAF300B9B041 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6A189FAAF300B9B041 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		097FCD80189FAAF300B9B041 /* RTUnregisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD6B189FAAF300B9B041 /* RTUnregisteredClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		098F666118ACD09600E479E5 /* DSPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098F665F18ACD09600E479E5 /* DSPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		098F666218ACD09600E479E5 /* DSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098F666018ACD09600E479E5 /* DSPhotoView.m */; };
 		098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */; };
@@ -241,6 +243,8 @@
 		09A60439182A663C00F57F89 /* DSValueChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0903A38A17F0AC9100A21270 /* DSValueChooserViewController.xib */; };
 		09A6043A182A663C00F57F89 /* DSMessagesLocalization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62DD157786FD5902D0D9B3A8 /* DSMessagesLocalization.strings */; };
 		09A6043B182A663C00F57F89 /* DSConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DD12A2DD6F6F278480844E /* DSConfiguration.plist */; };
+		09AD5B2018A8F0E3001FC5D1 /* DSConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 09AD5B1E18A8F0E3001FC5D1 /* DSConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09AD5B2118A8F0E3001FC5D1 /* DSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD5B1F18A8F0E3001FC5D1 /* DSConstants.m */; };
 		09B6DCE51858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCCD1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09B6DCE61858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCCE1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m */; };
 		09B6DCE71858F5C500FB1825 /* DSCLPlacemarkTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD01858F5C500FB1825 /* DSCLPlacemarkTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -322,6 +326,8 @@
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
 		09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09F7389E18A22EE6003FE0C2 /* DSDynamicPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */; };
+		09F8C87618A93A7500960CC8 /* NSNumber+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F8C87418A93A7500960CC8 /* NSNumber+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09F8C87718A93A7500960CC8 /* NSNumber+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8C87518A93A7500960CC8 /* NSNumber+DSAdditions.m */; };
 		62DD10D7C5D585E7DF32649A /* DSAlertsSupportCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154696C25DDF7CB90594 /* DSAlertsSupportCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD10D8A5F859797CC11AF7 /* DSAlertViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD17A21471C20C738E6BAA /* DSAlertViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DD12341D52C3E5516F6D85 /* DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD174C1D46388A8A79AF76 /* DSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -596,6 +602,8 @@
 		097FCD6A189FAAF300B9B041 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProtocol.m; sourceTree = "<group>"; };
 		097FCD6B189FAAF300B9B041 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUnregisteredClass.h; sourceTree = "<group>"; };
 		097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
+		098F665F18ACD09600E479E5 /* DSPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPhotoView.h; sourceTree = "<group>"; };
+		098F666018ACD09600E479E5 /* DSPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPhotoView.m; sourceTree = "<group>"; };
 		098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSQueueBasedRequestSender+Private.h"; sourceTree = "<group>"; };
 		098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSQueueBasedRequestSender.h; sourceTree = "<group>"; };
 		098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueueBasedRequestSender.m; sourceTree = "<group>"; };
@@ -606,6 +614,8 @@
 		09A60418182A65CF00F57F89 /* DSLibBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DSLibBundle-Info.plist"; sourceTree = "<group>"; };
 		09A6041A182A65CF00F57F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		09A6041C182A65CF00F57F89 /* DSLibBundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLibBundle-Prefix.pch"; sourceTree = "<group>"; };
+		09AD5B1E18A8F0E3001FC5D1 /* DSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSConstants.h; sourceTree = "<group>"; };
+		09AD5B1F18A8F0E3001FC5D1 /* DSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSConstants.m; sourceTree = "<group>"; };
 		09B6DCCD1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSChoosePlacemarkAnnotation.h; sourceTree = "<group>"; };
 		09B6DCCE1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSChoosePlacemarkAnnotation.m; sourceTree = "<group>"; };
 		09B6DCCF1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = DSChoosePlacemarkAnnotation.strings; sourceTree = "<group>"; };
@@ -691,6 +701,8 @@
 		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
 		09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDynamicPropertyObject.h; sourceTree = "<group>"; };
 		09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDynamicPropertyObject.m; sourceTree = "<group>"; };
+		09F8C87418A93A7500960CC8 /* NSNumber+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+DSAdditions.h"; sourceTree = "<group>"; };
+		09F8C87518A93A7500960CC8 /* NSNumber+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+DSAdditions.m"; sourceTree = "<group>"; };
 		62DD10482694069BA9C5E531 /* DSUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUIAlertView.m; sourceTree = "<group>"; };
 		62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDropController.h; sourceTree = "<group>"; };
 		62DD11E47C44DDA0A2867834 /* DSFindCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFindCountry.m; sourceTree = "<group>"; };
@@ -795,6 +807,10 @@
 				094C0207184D139900890D67 /* DSFetchedResultsControllerDelegate.m */,
 				09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */,
 				09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */,
+				09AD5B1E18A8F0E3001FC5D1 /* DSConstants.h */,
+				09AD5B1F18A8F0E3001FC5D1 /* DSConstants.m */,
+				09F8C87418A93A7500960CC8 /* NSNumber+DSAdditions.h */,
+				09F8C87518A93A7500960CC8 /* NSNumber+DSAdditions.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1001,6 +1017,7 @@
 		0903A36717F0AC9100A21270 /* VariousViews */ = {
 			isa = PBXGroup;
 			children = (
+				098F665E18ACD09600E479E5 /* DSPhotoView */,
 				0903A36817F0AC9100A21270 /* DSActivityIndicator */,
 				0903A36B17F0AC9100A21270 /* DSFlashingImageView */,
 				0903A36E17F0AC9100A21270 /* DSRotatingImageView */,
@@ -1201,6 +1218,15 @@
 			);
 			path = MAObjCRuntime;
 			sourceTree = SOURCE_ROOT;
+		};
+		098F665E18ACD09600E479E5 /* DSPhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				098F665F18ACD09600E479E5 /* DSPhotoView.h */,
+				098F666018ACD09600E479E5 /* DSPhotoView.m */,
+			);
+			path = DSPhotoView;
+			sourceTree = "<group>";
 		};
 		098FB25B17F2008600DB9F49 /* DSQueueBasedRequestSender */ = {
 			isa = PBXGroup;
@@ -1653,6 +1679,7 @@
 				0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */,
 				09162C76180EEB5900A0DEEF /* DSFieldValidationFramework.h in Headers */,
 				09B6DCF01858F5C500FB1825 /* DSPlacemarkPickerViewController.h in Headers */,
+				09F8C87618A93A7500960CC8 /* NSNumber+DSAdditions.h in Headers */,
 				0903A3F517F0AC9100A21270 /* DSSlider.h in Headers */,
 				0903A3DD17F0AC9100A21270 /* CStringsFunctions.h in Headers */,
 				0903A3CF17F0AC9100A21270 /* DSDateFormatterCache.h in Headers */,
@@ -1727,6 +1754,8 @@
 				09162C55180ED00C00A0DEEF /* DSCompas.h in Headers */,
 				093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */,
 				09B866B317F1E5C7003B1070 /* DSWebServiceOperationType.h in Headers */,
+				09AD5B2018A8F0E3001FC5D1 /* DSConstants.h in Headers */,
+				098F666118ACD09600E479E5 /* DSPhotoView.h in Headers */,
 				62DD13C9E2F182E4E22E7D24 /* DSBlockBarButtonItem.h in Headers */,
 				097FCD76189FAAF300B9B041 /* MARTNSObject.h in Headers */,
 				62DD130F46A501A7FFCD1BAE /* DSDataDetector.h in Headers */,
@@ -1904,6 +1933,7 @@
 				09162C69180EE84900A0DEEF /* DSFieldValidationController.m in Sources */,
 				0903A41717F0C28300A21270 /* DSGPSTracker.m in Sources */,
 				0903A3C617F0AC9100A21270 /* DSCFLoatDictionary.m in Sources */,
+				09AD5B2118A8F0E3001FC5D1 /* DSConstants.m in Sources */,
 				09B6DCE81858F5C500FB1825 /* DSCLPlacemarkTransformer.m in Sources */,
 				0903A2EA17F0AC8300A21270 /* UIView+ViewsEnumeration.m in Sources */,
 				0903A3B417F0AC9100A21270 /* UIFont+FromString.m in Sources */,
@@ -1997,6 +2027,7 @@
 				0903A39C17F0AC9100A21270 /* NSMutableArray+Additions.m in Sources */,
 				09067F321818055900C8F48F /* DSAlertQueue+Private.m in Sources */,
 				0903A2E417F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.m in Sources */,
+				098F666218ACD09600E479E5 /* DSPhotoView.m in Sources */,
 				0903A3C817F0AC9100A21270 /* DSQueue.m in Sources */,
 				62DD1F21D685DAF88DB40D0D /* DSAlert.m in Sources */,
 				0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */,
@@ -2019,6 +2050,7 @@
 				62DD1E899DE35CD54E5DC2BF /* DSAlertViewFactory.m in Sources */,
 				62DD1FEFFC22374EBAC3044E /* DSAlertsSupportCode.m in Sources */,
 				097FCD79189FAAF300B9B041 /* RTIvar.m in Sources */,
+				09F8C87718A93A7500960CC8 /* NSNumber+DSAdditions.m in Sources */,
 				09162C70180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m in Sources */,
 				09B8669817F1E5C7003B1070 /* DSWebServiceCompositeParams.m in Sources */,
 				62DD1E3812B21714B92C8ACF /* DSAlertsHandlerConfiguration.m in Sources */,

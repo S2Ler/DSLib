@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "DSConstants.h"
 
 @protocol DSWebServiceRequest;
 @class DSWebServiceResponse;
@@ -9,8 +10,8 @@
 didReceiveResponseWithExpectedDownloadSize:(long long)theExpectedSize;
 
 - (void)webServiceRequest:(id <DSWebServiceRequest>)theRequest
-      didReceiveTotalSize:(long long)theReceivedSize
-      expectedReceiveSize:(long long)theExpectedSize;
+           didReceiveSize:(DSFileSize)theReceivedSize
+      expectedReceiveSize:(DSFileSize)theExpectedSize;
 
 - (void)webServiceRequest:(id <DSWebServiceRequest>)theRequest
          didFailWithError:(NSError *)theError;

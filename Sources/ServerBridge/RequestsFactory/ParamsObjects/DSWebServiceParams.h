@@ -3,9 +3,6 @@
 #import "DSWebServiceURLHTTPMethod.h"
 #import "DSWebServiceOperationType.h"
 
-#define SYNTHESIZE_ALL_PARAM_NAMES(...) - (NSArray *)allParamNames { return [NSArray arrayWithObjects:__VA_ARGS__];}
-
-
 @class DSEntityDefinition;
 @protocol DSWebServiceRequest;
 @class DSWebServiceResponse;
