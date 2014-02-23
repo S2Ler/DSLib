@@ -5,6 +5,7 @@
 
 @class DSWebServiceParams;
 
+/** Requests with params where outputPath isn't nil will be always treated as succesful responses */
 @interface DSQueueBasedRequestSender (Private)
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
                                       completion:(ds_results_completion)completion

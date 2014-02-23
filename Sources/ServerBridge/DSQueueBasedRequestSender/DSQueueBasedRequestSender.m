@@ -7,6 +7,7 @@
 #import "DSMessage.h"
 #import "DSQueueBasedRequestSender+Private.h"
 #import "NSError+DSWebService.h"
+#import "NSString+Extras.h"
 
 #define COMPLETION_USER_INFO_KEY @"Completion"
 #define REQUEST_SUCCESSFUL_HANDLER_USER_INFO_KEY @"Request Successful"
@@ -177,8 +178,10 @@
       }
       
       DSWebServiceResponse *response = [weakRequest response];
-      if ([response isServerResponse]) {
-        if ([response isSuccessfulResponse]) {
+      BOOL isRequestWithOutputPath = [[params outputPath] hasValue];
+      
+      if ([response isServerResponse] || isRequestWithOutputPath) {
+        if ([response isSuccessfulResponse] || isRequestWithOutputPath) {
           if (requestSuccessfulHandler) {
             requestSuccessfulHandler(weakRequest, response, completion);
           }

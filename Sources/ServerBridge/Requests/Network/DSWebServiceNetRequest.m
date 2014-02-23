@@ -116,13 +116,11 @@
 
 - (void)setUserInfo:(NSMutableDictionary *)userInfo
 {
-  if (userInfo != _userInfo) {
-    if ([userInfo isKindOfClass:[NSMutableDictionary class]] == NO) {
-      _userInfo = [userInfo mutableCopy];
-    }
-    else {
-      _userInfo = userInfo;
-    }
+  if (_userInfo) {
+    [_userInfo addEntriesFromDictionary:userInfo];
+  }
+  else {
+    _userInfo = [userInfo mutableCopy];
   }
 }
 
