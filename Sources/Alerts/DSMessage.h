@@ -8,7 +8,7 @@
 #define FAILED_WITH_MESSAGE NO
 #define SUCCEED_WITH_MESSAGE YES
 
-@interface DSMessage: NSObject
+@interface DSMessage: NSObject<NSCoding>
 
 @property (nonatomic, strong) DSMessageContext *context;
 @property (nonatomic, strong, readonly) DSMessageDomain *domain;

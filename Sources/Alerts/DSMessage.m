@@ -175,4 +175,31 @@
                                              [self domain], [self code]];
   return str;
 }
+
+
+//===========================================================
+//  Keyed Archiving
+//
+//===========================================================
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+  [encoder encodeObject:self.context forKey:@"context"];
+  [encoder encodeObject:self.domain forKey:@"domain"];
+  [encoder encodeObject:self.code forKey:@"code"];
+  [encoder encodeObject:self.params forKey:@"params"];
+  [encoder encodeObject:self.error forKey:@"error"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder
+{
+  self = [super init];
+  if (self) {
+    self.context = [decoder decodeObjectForKey:@"context"];
+    self.domain = [decoder decodeObjectForKey:@"domain"];
+    self.code = [decoder decodeObjectForKey:@"code"];
+    self.params = [decoder decodeObjectForKey:@"params"];
+    self.error = [decoder decodeObjectForKey:@"error"];
+  }
+  return self;
+}
 @end
