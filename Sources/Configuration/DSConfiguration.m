@@ -98,7 +98,9 @@ static NSDictionary *DSConfiguration_sharedConfiguration = nil;
 - (id)init
 {
   if (DSConfiguration_sharedConfiguration) {
-    return [self initWithConfiguration:DSConfiguration_sharedConfiguration];
+    self = [self initWithConfiguration:DSConfiguration_sharedConfiguration];
+    DSConfiguration_sharedConfiguration = nil;
+    return self;
   }
   else {
     return [self initWithConfiguration:[NSStringFromClass([self class]) loadPlistFromBundle]];
