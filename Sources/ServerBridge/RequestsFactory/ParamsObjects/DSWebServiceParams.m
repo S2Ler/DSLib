@@ -33,7 +33,10 @@
   NSMutableDictionary *params = [NSMutableDictionary dictionary];
   
   for (NSString *paramName in allParamNames) {
-    params[paramName] = [self valueForKeyPath:paramName];
+    id value = [self valueForKeyPath:paramName];
+    if (value) {
+      params[paramName] = value;
+    }
   }
   
   return params;
