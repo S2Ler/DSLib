@@ -12,3 +12,5 @@
 typedef int64_t DSFileSize;
 extern const DSFileSize DSFileSize_Max;
 extern DSFileSize NSSizeUndefined;
+
+typedef int64_t DSRecID;
