@@ -403,6 +403,8 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
   didFailWithError:(NSError *)error
 {
   [[self outputStream] close];
+  [[NSFileManager defaultManager] removeItemAtPath:[self outputPath]
+                                             error:nil];
   
   NSLog(@"Connection error code: {%i}\nDescription: {%@}",
   [error code], [error localizedDescription]);
