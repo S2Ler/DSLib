@@ -2,5 +2,5 @@
 #import <Foundation/Foundation.h>
 
 
-@interface DSMessageContext: NSObject
+@interface DSMessageContext: NSObject<NSCoding>
 @end
