@@ -1,7 +1,6 @@
 
 typedef void (^NSObjectObserverBlock)(id object, NSString *keyPath);
 
-
 @interface NSObject (Observing)
 - (void)addObserver:(NSObject *)theObserver
         forKeyPaths:(NSString *)theKeyPath,...;

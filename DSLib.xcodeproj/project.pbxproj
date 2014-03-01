@@ -207,6 +207,8 @@
 		097FCD7F189FAAF300B9B041 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6A189FAAF300B9B041 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		097FCD80189FAAF300B9B041 /* RTUnregisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD6B189FAAF300B9B041 /* RTUnregisteredClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		098783CF18C1F39700C838A2 /* DSMessageTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSMessageTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		098783D018C1F39700C838A2 /* DSMessageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSMessageTransformer.m */; };
 		098F666118ACD09600E479E5 /* DSPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098F665F18ACD09600E479E5 /* DSPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098F666218ACD09600E479E5 /* DSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098F666018ACD09600E479E5 /* DSPhotoView.m */; };
 		098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -602,6 +604,8 @@
 		097FCD6A189FAAF300B9B041 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProtocol.m; sourceTree = "<group>"; };
 		097FCD6B189FAAF300B9B041 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUnregisteredClass.h; sourceTree = "<group>"; };
 		097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
+		098783CD18C1F39700C838A2 /* DSMessageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMessageTransformer.h; sourceTree = "<group>"; };
+		098783CE18C1F39700C838A2 /* DSMessageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessageTransformer.m; sourceTree = "<group>"; };
 		098F665F18ACD09600E479E5 /* DSPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPhotoView.h; sourceTree = "<group>"; };
 		098F666018ACD09600E479E5 /* DSPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPhotoView.m; sourceTree = "<group>"; };
 		098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSQueueBasedRequestSender+Private.h"; sourceTree = "<group>"; };
@@ -1499,6 +1503,8 @@
 				62DD13AE88A68CBC5259F586 /* DSAlertsHandler+SimplifiedAPI.h */,
 				62DD1534F0088E374A3A7597 /* DSAlertsHandler+SimplifiedAPI.m */,
 				0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */,
+				098783CD18C1F39700C838A2 /* DSMessageTransformer.h */,
+				098783CE18C1F39700C838A2 /* DSMessageTransformer.m */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -1643,6 +1649,7 @@
 				09162C71180EE84900A0DEEF /* DSTextField.h in Headers */,
 				0903A3A717F0AC9100A21270 /* NSString+Extras.h in Headers */,
 				0903A3B117F0AC9100A21270 /* UIDevice+Additions.h in Headers */,
+				098783CF18C1F39700C838A2 /* DSMessageTransformer.h in Headers */,
 				0903A39F17F0AC9100A21270 /* NSObject+DeepCopy.h in Headers */,
 				0903A2E717F0AC8300A21270 /* DSNetworkActivity.h in Headers */,
 				0903A3AF17F0AC9100A21270 /* UIBarButtonItem+DSAdditions.h in Headers */,
@@ -2045,6 +2052,7 @@
 				09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */,
 				62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */,
 				09B6DCF51858F5C500FB1825 /* DSGeocodeProviderApple.m in Sources */,
+				098783D018C1F39700C838A2 /* DSMessageTransformer.m in Sources */,
 				097FCD7B189FAAF300B9B041 /* RTMethod.m in Sources */,
 				09F7389E18A22EE6003FE0C2 /* DSDynamicPropertyObject.m in Sources */,
 				62DD1E899DE35CD54E5DC2BF /* DSAlertViewFactory.m in Sources */,

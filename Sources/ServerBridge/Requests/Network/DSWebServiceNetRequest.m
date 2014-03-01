@@ -37,6 +37,12 @@
 @synthesize POSTDataFileName = _POSTDataFileName;
 @synthesize sendRawPOSTData = _sendRawPOSTData;
 
+
+- (void)dealloc
+{
+  NSLog(@"");
+}
+
 #pragma mark - init
 - (id)initWithServer:(DSWebServiceURL *)theWebServiceURL
               params:(id<DSWebServiceParam>)theParams
