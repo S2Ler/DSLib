@@ -171,7 +171,7 @@
   };
 
   [request setCompletionBlock:^{
-    dispatch_async(callbackQueue, ^{
+    void (^finish)() = ^{
       if ([weakRequest error]) {
         finishWithErrorBlock([DSMessage messageWithError:[weakRequest error]]);
         return;
@@ -180,8 +180,8 @@
       DSWebServiceResponse *response = [weakRequest response];
       BOOL isRequestWithOutputPath = [[params outputPath] hasValue];
       
-      if ([response isServerResponse] || isRequestWithOutputPath) {
-        if ([response isSuccessfulResponse] || isRequestWithOutputPath) {
+      if (isRequestWithOutputPath || [response isServerResponse]) {
+        if (isRequestWithOutputPath || [response isSuccessfulResponse]) {
           if (requestSuccessfulHandler) {
             requestSuccessfulHandler(weakRequest, response, completion);
           }
@@ -199,7 +199,9 @@
         
         finishWithErrorBlock(unknownErrorMessage);
       }
-    });
+    };
+    
+    dispatch_sync(callbackQueue, finish);
   }];
   
   
