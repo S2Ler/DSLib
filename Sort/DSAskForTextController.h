@@ -10,6 +10,13 @@
 
 typedef void (^DSAskForTextControllerCompletion) (BOOL success, NSString *text);
 
+typedef NS_OPTIONS(NSUInteger, DSAskForTextControllerOptions) {
+  DSAskForTextControllerOptionNone = 0,
+  DSAskForTextControllerOptionSecure = 1 << 0,
+  DSAskForTextControllerOptionTrimWhiteSpace = 1 << 1,
+  DSAskForTextControllerOptionPlaceholderIsValidText = 1 << 2
+};
+
 @interface DSAskForTextController : NSObject
 + (instancetype)shareInstance;
 
@@ -18,4 +25,12 @@ typedef void (^DSAskForTextControllerCompletion) (BOOL success, NSString *text);
                 placeholder:(NSString *)placeholder
                 initialText:(NSString *)initialText
              withCompletion:(DSAskForTextControllerCompletion)completion;
+
+- (void)askForTextWithTitle:(NSString *)title
+                placeholder:(NSString *)placeholder
+                initialText:(NSString *)initialText
+                    options:(DSAskForTextControllerOptions)options
+             withCompletion:(DSAskForTextControllerCompletion)completion;
+
+
 @end

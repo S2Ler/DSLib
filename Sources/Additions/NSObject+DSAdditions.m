@@ -69,4 +69,19 @@
 
   return propertyNames;
 }
+
+static char OBJECT_USER_INFO_KEY;
+
+- (NSMutableDictionary*) objectUserInfo
+{
+	NSMutableDictionary* objectUserInfo = objc_getAssociatedObject(self, &OBJECT_USER_INFO_KEY);
+  
+	if(objectUserInfo == nil) {
+		objectUserInfo = [[NSMutableDictionary alloc] init];
+		objc_setAssociatedObject(self, &OBJECT_USER_INFO_KEY, objectUserInfo, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+	}
+  
+	return objectUserInfo;
+}
+
 @end

@@ -11,4 +11,6 @@
 #endif
 
 + (NSArray *)propertyNames;
+
+- (NSMutableDictionary*)objectUserInfo;
 @end
