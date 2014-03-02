@@ -50,6 +50,12 @@
   else if ([type hasPrefix:@"Q"]) {
     [anInvocation setSelector:@selector(handleUnsignedLongLongWithName:)];
   }
+  else if ([type hasPrefix:@"d"]) {
+    [anInvocation setSelector:@selector(handleDoubleWithName:)];
+  }
+  else if ([type hasPrefix:@"q"]) {
+    [anInvocation setSelector:@selector(handleLongLongWithName:)];
+  }
   UNHANDLED_IF;
   
   [anInvocation invokeWithTarget:self];
@@ -73,9 +79,9 @@
   });
 }
 
-- (NSNumber *)numberForPropertyName:(NSString *)propertyName
+- (NSNumber *)numberForGetterName:(NSString *)getterName
 {
-  id numberObject = [[self container] valueForKeyPath:[self keypathForGetter:propertyName]];
+  id numberObject = [[self container] valueForKeyPath:[self keypathForGetter:getterName]];
   NSNumber *number = nil;
   
   if ([numberObject isKindOfClass:[NSNumber class]]) {
@@ -87,16 +93,28 @@
   return number;
 }
 
-- (NSUInteger)handleUnsignedIntegerWithName:(NSString *)propertyName
+- (NSUInteger)handleUnsignedIntegerWithName:(NSString *)getterName
 {
-  NSNumber *number = [self numberForPropertyName:propertyName];
+  NSNumber *number = [self numberForGetterName:getterName];
   return [number unsignedIntegerValue];
 }
 
-- (unsigned long long)handleUnsignedLongLongWithName:(NSString *)propertyName
+- (unsigned long long)handleUnsignedLongLongWithName:(NSString *)getterName
 {
-  NSNumber *number = [self numberForPropertyName:propertyName];
+  NSNumber *number = [self numberForGetterName:getterName];
   return [number unsignedLongLongValue];
+}
+
+- (double)handleDoubleWithName:(NSString *)getterName
+{
+  NSNumber *number = [self numberForGetterName:getterName];
+  return [number doubleValue];
+}
+
+- (long long)handleLongLongWithName:(NSString *)getterName
+{
+  NSNumber *number = [self numberForGetterName:getterName];
+  return [number longLongValue];
 }
 
 /** \param theSetter looks like: setParamName */
@@ -108,7 +126,7 @@
 
 - (id)handleStringToNumberGetterWithName:(NSString *)getterName
 {
-  NSNumber *number = [self numberForPropertyName:getterName];
+  NSNumber *number = [self numberForGetterName:getterName];
   return number;
 }
 
@@ -126,7 +144,6 @@
 
   return date;
 }
-
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
