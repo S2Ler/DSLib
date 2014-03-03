@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 //Custom types
-typedef int64_t DSFileSize;
+typedef off_t DSFileSize;
 extern const DSFileSize DSFileSize_Max;
 extern DSFileSize NSSizeUndefined;
 
