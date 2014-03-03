@@ -13,4 +13,11 @@
 + (NSArray *)propertyNames;
 
 - (NSMutableDictionary*)objectUserInfo;
+
++ (NSArray *)propertiesPassingTest:(BOOL(^)(Class propertyClass))test;
+- (NSDictionary *)keysAndValuesForPropertiesPassingTest:(BOOL (^)(Class propertyClass))test;
+- (NSDictionary *)keysAndValuesForPropertiesPassingTest:(BOOL (^)(Class propertyClass))test
+                                    includeSuperClasses:(BOOL)includeSuperClasses
+                                           includeDepth:(NSUInteger)depth;
+- (NSDictionary *)filterOutNonRespondingKeys:(NSDictionary *)keysAndValues;
 @end

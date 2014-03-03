@@ -84,4 +84,85 @@ static char OBJECT_USER_INFO_KEY;
 	return objectUserInfo;
 }
 
++ (NSArray *)propertiesPassingTest:(BOOL(^)(Class propertyClass))test
+{
+  NSMutableArray *parseProperties = [NSMutableArray array];
+  NSArray *properties = [self rt_properties];
+  
+  for (RTProperty *property in properties) {
+    NSString *propertyTypeEncoded = [property typeEncoding];
+    
+    //NOTE: propertyTypeEncoded for Parse class looks like: @"@"CLASS_NAME"", so we need to remove @"" in order to get class name
+    propertyTypeEncoded = [propertyTypeEncoded stringByTrimmingCharactersInSet:
+                           [NSCharacterSet characterSetWithCharactersInString:@"@\""]];
+    Class propertyClass = NSClassFromString(propertyTypeEncoded);
+    
+    if (propertyClass && test(propertyClass)) {
+      [parseProperties addObject:property];
+    }
+  }
+  
+  return parseProperties;
+}
+
+- (NSDictionary *)keysAndValuesForPropertiesPassingTest:(BOOL (^)(Class propertyClass))test
+{
+  return [self keysAndValuesForPropertiesPassingTest:test
+                                 includeSuperClasses:NO
+                                        includeDepth:0];
+}
+
+- (NSDictionary *)keysAndValuesForPropertiesPassingTest:(BOOL (^)(Class propertyClass))test
+                                    includeSuperClasses:(BOOL)includeSuperClasses
+                                           includeDepth:(NSUInteger)depth
+{
+  NSMutableDictionary *keysAndValues = [NSMutableDictionary dictionary];
+  [self __keysAndValuesForPropertiesPassingTest:test
+                            includeSuperClasses:includeSuperClasses
+                                   currentClass:[self class]
+                                   includeDepth:depth
+                                  keysAndValues:keysAndValues];
+  return keysAndValues;
+}
+
+- (NSDictionary *)__keysAndValuesForPropertiesPassingTest:(BOOL (^)(Class propertyClass))test
+                                      includeSuperClasses:(BOOL)includeSuperClasses
+                                             currentClass:(Class)currentClass
+                                             includeDepth:(NSUInteger)depth
+                                            keysAndValues:(NSMutableDictionary *)keysAndValues
+{
+  NSArray *properties = [currentClass propertiesPassingTest:test];
+  
+  for (RTProperty *property in properties) {
+    NSString *propertyName = [property name];
+    id value = [self valueForKey:propertyName];
+    if (!value) {
+      value = [NSNull null];
+    }
+    
+    keysAndValues[propertyName] = value;
+  }
+  
+  if (includeSuperClasses && currentClass && depth > 0) {
+    [self __keysAndValuesForPropertiesPassingTest:test
+                              includeSuperClasses:includeSuperClasses
+                                     currentClass:[currentClass superclass]
+                                     includeDepth:depth - 1
+                                    keysAndValues:keysAndValues];
+  }
+  
+  return keysAndValues;
+}
+
+- (NSDictionary *)filterOutNonRespondingKeys:(NSDictionary *)keysAndValues
+{
+  NSMutableDictionary *filteredKeysAndValues = [NSMutableDictionary dictionary];
+  for (NSString *key in [keysAndValues allKeys]) {
+    
+    if ([self respondsToSelector:NSSelectorFromString(key)]) {
+      filteredKeysAndValues[key] = keysAndValues[key];
+    }
+  }
+  return filteredKeysAndValues;
+}
 @end
