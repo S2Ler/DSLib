@@ -1,6 +1,8 @@
 
 #import "NSObject+DSAdditions.h"
 #import "objc/runtime.h"
+#import "MARTNSObject.h"
+#import "RTProperty.h"
 
 @implementation NSObject (DSAdditions)
 #if OVERWRITE_DESCRIPTION
