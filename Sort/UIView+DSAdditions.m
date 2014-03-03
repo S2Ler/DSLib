@@ -23,16 +23,34 @@ static char kDSTouchHandlerKey;
 - (void)_dsTouchedHandler:(UIGestureRecognizer *)tapGesture
 {
   if ([tapGesture state] == UIGestureRecognizerStateRecognized) {
-    DSViewTouchHandler touchHandler = [self touchHandler];
+    DSViewTouchHandler touchHandler = [self _touchHandler];
     if (touchHandler) {
       touchHandler(self);
     }
   }
 }
 
-- (DSViewTouchHandler)touchHandler
+- (DSViewTouchHandler)_touchHandler
 {
   return objc_getAssociatedObject(self, &kDSTouchHandlerKey);
+}
+
+- (void)dimOutViewWithTapHandler:(void(^)())handler
+{
+  UIView *dimOutView = [[UIView alloc] init];
+  [dimOutView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+  [dimOutView setTranslatesAutoresizingMaskIntoConstraints:YES];
+  [dimOutView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.2]];
+  [dimOutView setTouchHandler:^(UIView *view) {
+    if (handler) {
+      handler();
+    }
+    
+    [view removeFromSuperview];
+  }];
+  
+  [dimOutView setFrame:[self bounds]];
+  [self addSubview:dimOutView];
 }
 
 @end

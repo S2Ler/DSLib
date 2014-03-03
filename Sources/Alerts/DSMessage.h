@@ -4,10 +4,6 @@
 
 @class DSMessageContext;
 
-#define NO_MESSAGE nil
-#define FAILED_WITH_MESSAGE NO
-#define SUCCEED_WITH_MESSAGE YES
-
 @interface DSMessage: NSObject<NSCoding>
 
 @property (nonatomic, strong) DSMessageContext *context;

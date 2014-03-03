@@ -2,7 +2,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "DSPlacemarkPickerViewControllerDelegate.h"
-#import "DSAlertsSupportCode.h"
 #import "DSGeocodeProvider.h"
 @protocol DSGeocoderDelegate;
 
