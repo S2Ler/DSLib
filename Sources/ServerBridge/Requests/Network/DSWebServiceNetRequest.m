@@ -5,6 +5,7 @@
 #import "DSWebServiceResponse.h"
 #import "NSData+OAdditions.h"
 #import "NSNumber+DSAdditions.h"
+#import "AFStreamingMultipartFormData.h"
 
 #define DEFAULT_TIMEOUT 30
 
@@ -140,71 +141,25 @@
 }
 
 #pragma mark - public
-- (NSMutableData *)postDataForRequest:(NSMutableURLRequest *)request
+- (void)configureFormData:(AFStreamingMultipartFormData *)formData
 {
-  NSString *boundary
-    = @"----WebKitFormBoundaryYA9vSekClgZaHxyb";
-
-  NSString *contentType
-    = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
-
-  [request addValue:contentType
- forHTTPHeaderField:@"Content-Type"];
-
-  NSString *boundaryString
-    = [NSString stringWithFormat:@"\r\n--%@\r\n", boundary];
-
-  NSString *boundaryStringFinal
-    = [NSString stringWithFormat:@"\r\n--%@--\r\n", boundary];
-
-  NSMutableData *postData = [NSMutableData data];
-
-  [postData appendData:[boundaryString dataUsingEncoding:NSUTF8StringEncoding]];
-
-  NSString *formDataHeader = nil;
-
-  if ([self POSTDataFileName]) {
-    if ([self POSTDataKey]) {
-      formDataHeader
-        = [NSString stringWithFormat:
-                      @"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\nContent-Type: application/octet-stream\r\n\r\n",
-                      [self POSTDataKey], [self POSTDataFileName]];
-    }
-    else {
-      formDataHeader
-        = [NSString stringWithFormat:
-                      @"Content-Disposition: form-data; name=\"file\"; filename=\"%@\"\r\nContent-Type: application/octet-stream\r\n\r\n",
-                      [self POSTDataFileName]];
-    }
+  if (![self POSTDataKey]) {
+    [self setPOSTDataKey:@"file"];
   }
-  else if ([self POSTDataKey]) {
-    formDataHeader = [NSString stringWithFormat:
-                                 @"Content-Disposition: form-data; name=\"%@\"\r\n\r\n",
-                                 [self POSTDataKey]];
-  }
-  else {
-    formDataHeader
-      = [NSString stringWithFormat:
-                    @"Content-Disposition: form-data; name=\"file\"; filename=\"%@\"\r\nContent-Type: application/octet-stream\r\n\r\n",
-                    @"POST.dat"];
-  }
-
-  [postData appendData:
-              [formDataHeader dataUsingEncoding:NSUTF8StringEncoding]];
-
+  
   NSData *mainPostData = nil;
 
   if ([self POSTData]) {
     mainPostData = [self POSTData];
+    [formData appendPartWithFormData:[self POSTData] name:[self POSTDataKey]];
   }
   else if ([self POSTDataPath]) {
+    [formData appendPartWithFileURL:[NSURL fileURLWithPath:[self POSTDataPath]]
+                               name:[self POSTDataFileName]
+                              error:nil];
+    
     mainPostData = [NSData dataWithContentsOfMappedFile:[self POSTDataPath]];
   }
-
-  [postData appendData:mainPostData];
-  [postData appendData:
-              [boundaryStringFinal dataUsingEncoding:NSUTF8StringEncoding]];
-  return postData;
 }
 
 - (void)send
@@ -241,20 +196,18 @@
 
     NSData *postData = nil;
     if ([self sendRawPOSTData] == YES) {
-      postData = [self POSTData];
+      [request setHTTPBody:[self POSTData]];
+      NSString *dataLength = [NSString stringWithFormat:@"%d", [postData length]];
+      
+      [request addValue:dataLength forHTTPHeaderField:@"Content-Length"];
     }
     else {
-      postData = [self postDataForRequest:request];
+      AFStreamingMultipartFormData *formData
+      = [[AFStreamingMultipartFormData alloc] initWithURLRequest:request
+                                                  stringEncoding:NSUTF8StringEncoding];
+      
+      [self configureFormData:formData];
     }
-
-    // setting the body of the post to the request
-    [request setHTTPBody:postData];
-
-    NSString *dataLength
-      = [NSString stringWithFormat:@"%d", [postData length]];
-
-    [request addValue:dataLength
-   forHTTPHeaderField:@"Content-Length"];
 
     [request setTimeoutInterval:DEFAULT_TIMEOUT];
     [request setCachePolicy:NSURLRequestUseProtocolCachePolicy];
