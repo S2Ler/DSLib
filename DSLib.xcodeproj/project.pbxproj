@@ -328,6 +328,15 @@
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
 		09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09F7389E18A22EE6003FE0C2 /* DSDynamicPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */; };
+		09F84FDC18C5FA380047AA16 /* AFMultipartBodyStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FDA18C5FA380047AA16 /* AFMultipartBodyStream.h */; };
+		09F84FDD18C5FA380047AA16 /* AFMultipartBodyStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F84FDB18C5FA380047AA16 /* AFMultipartBodyStream.m */; };
+		09F84FE018C5FA900047AA16 /* AFStreamingMultipartFormData.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FDE18C5FA900047AA16 /* AFStreamingMultipartFormData.h */; };
+		09F84FE118C5FA900047AA16 /* AFStreamingMultipartFormData.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F84FDF18C5FA900047AA16 /* AFStreamingMultipartFormData.m */; };
+		09F84FE518C5FB0B0047AA16 /* AFHTTPBodyPart.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FE318C5FB0B0047AA16 /* AFHTTPBodyPart.h */; };
+		09F84FE618C5FB0B0047AA16 /* AFHTTPBodyPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F84FE418C5FB0B0047AA16 /* AFHTTPBodyPart.m */; };
+		09F84FE918C5FBD70047AA16 /* AFHTTPBodyPartReadPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FE718C5FBD70047AA16 /* AFHTTPBodyPartReadPhase.h */; };
+		09F84FED18C5FCB60047AA16 /* AFFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FEB18C5FCB60047AA16 /* AFFunctions.h */; };
+		09F84FEE18C5FCB60047AA16 /* AFFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F84FEC18C5FCB60047AA16 /* AFFunctions.m */; };
 		09F8C87618A93A7500960CC8 /* NSNumber+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F8C87418A93A7500960CC8 /* NSNumber+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09F8C87718A93A7500960CC8 /* NSNumber+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8C87518A93A7500960CC8 /* NSNumber+DSAdditions.m */; };
 		62DD10D7C5D585E7DF32649A /* DSAlertsSupportCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154696C25DDF7CB90594 /* DSAlertsSupportCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -705,6 +714,16 @@
 		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
 		09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDynamicPropertyObject.h; sourceTree = "<group>"; };
 		09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDynamicPropertyObject.m; sourceTree = "<group>"; };
+		09F84FDA18C5FA380047AA16 /* AFMultipartBodyStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMultipartBodyStream.h; sourceTree = "<group>"; };
+		09F84FDB18C5FA380047AA16 /* AFMultipartBodyStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMultipartBodyStream.m; sourceTree = "<group>"; };
+		09F84FDE18C5FA900047AA16 /* AFStreamingMultipartFormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFStreamingMultipartFormData.h; sourceTree = "<group>"; };
+		09F84FDF18C5FA900047AA16 /* AFStreamingMultipartFormData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFStreamingMultipartFormData.m; sourceTree = "<group>"; };
+		09F84FE218C5FABB0047AA16 /* AFMultipartFormData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFMultipartFormData.h; sourceTree = "<group>"; };
+		09F84FE318C5FB0B0047AA16 /* AFHTTPBodyPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPBodyPart.h; sourceTree = "<group>"; };
+		09F84FE418C5FB0B0047AA16 /* AFHTTPBodyPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPBodyPart.m; sourceTree = "<group>"; };
+		09F84FE718C5FBD70047AA16 /* AFHTTPBodyPartReadPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPBodyPartReadPhase.h; sourceTree = "<group>"; };
+		09F84FEB18C5FCB60047AA16 /* AFFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFunctions.h; sourceTree = "<group>"; };
+		09F84FEC18C5FCB60047AA16 /* AFFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFunctions.m; sourceTree = "<group>"; };
 		09F8C87418A93A7500960CC8 /* NSNumber+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+DSAdditions.h"; sourceTree = "<group>"; };
 		09F8C87518A93A7500960CC8 /* NSNumber+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+DSAdditions.m"; sourceTree = "<group>"; };
 		62DD10482694069BA9C5E531 /* DSUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUIAlertView.m; sourceTree = "<group>"; };
@@ -1419,6 +1438,16 @@
 			children = (
 				09B8667817F1E5C7003B1070 /* DSWebServiceNetRequest.h */,
 				09B8667917F1E5C7003B1070 /* DSWebServiceNetRequest.m */,
+				09F84FDA18C5FA380047AA16 /* AFMultipartBodyStream.h */,
+				09F84FDB18C5FA380047AA16 /* AFMultipartBodyStream.m */,
+				09F84FDE18C5FA900047AA16 /* AFStreamingMultipartFormData.h */,
+				09F84FDF18C5FA900047AA16 /* AFStreamingMultipartFormData.m */,
+				09F84FE218C5FABB0047AA16 /* AFMultipartFormData.h */,
+				09F84FE318C5FB0B0047AA16 /* AFHTTPBodyPart.h */,
+				09F84FE418C5FB0B0047AA16 /* AFHTTPBodyPart.m */,
+				09F84FE718C5FBD70047AA16 /* AFHTTPBodyPartReadPhase.h */,
+				09F84FEB18C5FCB60047AA16 /* AFFunctions.h */,
+				09F84FEC18C5FCB60047AA16 /* AFFunctions.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1619,6 +1648,7 @@
 				09162C6B180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.h in Headers */,
 				0903A3E917F0AC9100A21270 /* DSVibrator.h in Headers */,
 				0903A41617F0C28300A21270 /* DSGPSTracker.h in Headers */,
+				09F84FED18C5FCB60047AA16 /* AFFunctions.h in Headers */,
 				0903A2E017F0AC8300A21270 /* DSArrayChange.h in Headers */,
 				096C87AD18290ADA0024D734 /* DSMessage+Parse.h in Headers */,
 				0903A3F117F0AC9100A21270 /* DSFlashingImageView.h in Headers */,
@@ -1633,6 +1663,7 @@
 				0903A3B717F0AC9100A21270 /* UITableView+DSAdditions.h in Headers */,
 				09067F311818055900C8F48F /* DSAlertQueue+Private.h in Headers */,
 				0903A3C317F0AC9100A21270 /* DSCArray.h in Headers */,
+				09F84FE018C5FA900047AA16 /* AFStreamingMultipartFormData.h in Headers */,
 				0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */,
 				09162C93180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h in Headers */,
 				0903A38C17F0AC9100A21270 /* CATransition+AnimationsBuilder.h in Headers */,
@@ -1657,6 +1688,7 @@
 				09B6DCE51858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h in Headers */,
 				09162C6A180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h in Headers */,
 				0903A3E117F0AC9100A21270 /* DSSettings_impl.h in Headers */,
+				09F84FE518C5FB0B0047AA16 /* AFHTTPBodyPart.h in Headers */,
 				0903A40117F0AC9100A21270 /* PGVideoImageViewDelegate.h in Headers */,
 				0903A3A317F0AC9100A21270 /* NSObject+Observing.h in Headers */,
 				0903A3F317F0AC9100A21270 /* DSRotatingImageView.h in Headers */,
@@ -1713,6 +1745,7 @@
 				0903A39717F0AC9100A21270 /* NSDictionary+JSONDictionary.h in Headers */,
 				09B6DCE71858F5C500FB1825 /* DSCLPlacemarkTransformer.h in Headers */,
 				0903A3FF17F0AC9100A21270 /* PGVideoImageView.h in Headers */,
+				09F84FE918C5FBD70047AA16 /* AFHTTPBodyPartReadPhase.h in Headers */,
 				0903A38F17F0AC9100A21270 /* NSArray+Extras.h in Headers */,
 				09B6DCEA1858F5C500FB1825 /* DSGeocoder+Factory.h in Headers */,
 				09B866B117F1E5C7003B1070 /* DSEntityDefinition.h in Headers */,
@@ -1724,6 +1757,7 @@
 				09162C6D180EE84900A0DEEF /* DSFieldValidationCriterion.h in Headers */,
 				09B866B517F1E5C7003B1070 /* DSWebServiceRequestsFactory.h in Headers */,
 				09B6DCEF1858F5C500FB1825 /* DSGeocoderFramework.h in Headers */,
+				09F84FDC18C5FA380047AA16 /* AFMultipartBodyStream.h in Headers */,
 				097FCD7E189FAAF300B9B041 /* RTProtocol.h in Headers */,
 				0903A3B317F0AC9100A21270 /* UIFont+FromString.h in Headers */,
 				0903A3ED17F0AC9100A21270 /* FontsDB.h in Headers */,
@@ -1969,6 +2003,7 @@
 				09B866B617F1E5C7003B1070 /* DSWebServiceRequestsFactory.m in Sources */,
 				09162C72180EE84900A0DEEF /* DSTextField.m in Sources */,
 				0903A39617F0AC9100A21270 /* NSDate+OAddittions.m in Sources */,
+				09F84FEE18C5FCB60047AA16 /* AFFunctions.m in Sources */,
 				0903A3E617F0AC9100A21270 /* QRunLoopOperation.m in Sources */,
 				097FCD7F189FAAF300B9B041 /* RTProtocol.m in Sources */,
 				0903A2E117F0AC8300A21270 /* DSArrayChange.m in Sources */,
@@ -2017,6 +2052,7 @@
 				0903A3AE17F0AC9100A21270 /* UIApplication+KeyboardView.m in Sources */,
 				0903A2E617F0AC8300A21270 /* DSArrayChangeCalculator.m in Sources */,
 				0903A3A617F0AC9100A21270 /* NSString+Encoding.m in Sources */,
+				09F84FE618C5FB0B0047AA16 /* AFHTTPBodyPart.m in Sources */,
 				0903A3BC17F0AC9100A21270 /* UIView+Resizing.m in Sources */,
 				0903A3E217F0AC9100A21270 /* DSSettings_impl.m in Sources */,
 				0903A3A417F0AC9100A21270 /* NSObject+Observing.m in Sources */,
@@ -2048,6 +2084,7 @@
 				09162C6E180EE84900A0DEEF /* DSFieldValidationCriterion.m in Sources */,
 				094C0209184D139900890D67 /* DSFetchedResultsControllerDelegate.m in Sources */,
 				09162C94180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m in Sources */,
+				09F84FE118C5FA900047AA16 /* AFStreamingMultipartFormData.m in Sources */,
 				62DD1569D576C442B9DF1889 /* DSAlertsHandler.m in Sources */,
 				09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */,
 				62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */,
@@ -2069,6 +2106,7 @@
 				09B8669617F1E5C7003B1070 /* DSWebServiceArrayParam.m in Sources */,
 				09B866B217F1E5C7003B1070 /* DSEntityDefinition.m in Sources */,
 				62DD1DB23EEF8D87DD0C9B15 /* DSConfiguration.m in Sources */,
+				09F84FDD18C5FA380047AA16 /* AFMultipartBodyStream.m in Sources */,
 				62DD187C5A8A0492EB15FAEE /* DSAppDelegate.m in Sources */,
 				62DD152CB973B9C752B7120C /* DSBlockBarButtonItem.m in Sources */,
 				62DD1BC6C151EFA0696F8AC2 /* DSBlockButton.m in Sources */,

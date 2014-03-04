@@ -8,5 +8,5 @@
 
 #import "DSConstants.h"
 
-const DSFileSize DSFileSize_Max = INT64_MAX;
-DSFileSize NSSizeUndefined = DSFileSize_Max;
+const DSFileSize DSFileSize_Max = OFF_MAX;
+DSFileSize DSFileSizeUndefined = -1;
