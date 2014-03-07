@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DSMessageTransformer : NSValueTransformer
+@interface DSCodingTransformer : NSValueTransformer
 
 @end

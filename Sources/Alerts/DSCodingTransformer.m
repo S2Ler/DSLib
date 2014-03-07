@@ -7,14 +7,14 @@
 //
 
 #pragma mark - include
-#import "DSMessageTransformer.h"
+#import "DSCodingTransformer.h"
 #import "DSMessage.h"
 
-@implementation DSMessageTransformer
+@implementation DSCodingTransformer
 
 + (void)initialize
 {
-	DSMessageTransformer *transformer = [[DSMessageTransformer alloc] init];
+	DSCodingTransformer *transformer = [[DSCodingTransformer alloc] init];
   [NSValueTransformer setValueTransformer:transformer forName:NSStringFromClass([self class])];
 }
 
@@ -28,13 +28,12 @@
   return [NSData class];
 }
 
-- (id)transformedValue:(id)value
+- (id)transformedValue:(id<NSCoding>)value
 {
-  DSMessage *message = value;
-  return [NSKeyedArchiver archivedDataWithRootObject:message];
+  return [NSKeyedArchiver archivedDataWithRootObject:value];
 }
 
-- (id)reverseTransformedValue:(id)value
+- (id)reverseTransformedValue:(NSData *)value
 {
   return [NSKeyedUnarchiver unarchiveObjectWithData:value];
 }
