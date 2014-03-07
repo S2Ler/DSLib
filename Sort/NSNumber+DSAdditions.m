@@ -13,4 +13,11 @@
 {
   return [self longLongValue];
 }
+
++ (instancetype)numberWithFileSize:(DSFileSize)fileSize
+{
+  return [NSNumber numberWithLongLong:fileSize];
+}
+
+
 @end

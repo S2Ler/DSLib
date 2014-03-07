@@ -11,4 +11,5 @@
 
 @interface NSNumber (DSAdditions)
 - (DSFileSize)fileSizeValue;
++ (instancetype)numberWithFileSize:(DSFileSize)fileSize;
 @end

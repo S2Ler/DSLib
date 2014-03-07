@@ -40,7 +40,7 @@
   return formatter;
 }
 
-+ (NSString *)sizePrettyStringWithBytes:(unsigned long long)theSizeInBytes 
++ (NSString *)sizePrettyStringWithBytes:(DSFileSize)theSizeInBytes
 {
   NSString* sizeUnit = @"bytes";
   

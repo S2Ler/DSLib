@@ -22,7 +22,7 @@
 
 /** Creates a string from the bytes in form:
  100 bytes 10 KB, 20 MB, 30 GB, 40 TB, 50 PB */
-+ (NSString *)sizePrettyStringWithBytes:(unsigned long long)theSizeInBytes;
++ (NSString *)sizePrettyStringWithBytes:(DSFileSize)theSizeInBytes;
 
 /** Apply NSLocalizedString to the target string */
 - (NSString *)localized;
