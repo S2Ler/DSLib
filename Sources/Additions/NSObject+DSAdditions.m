@@ -3,20 +3,25 @@
 #import "objc/runtime.h"
 #import "MARTNSObject.h"
 #import "RTProperty.h"
+#import "DSMacros.h"
 
 @implementation NSObject (DSAdditions)
+
++ (void)load
+{
 #if OVERWRITE_DESCRIPTION
-- (NSString *)description
-#else
-- (NSString *)longDescription
+  SWAP_METHODS(@selector(description), @selector(longDescription));
 #endif
+}
+
+- (NSString *)longDescription
 {
   return [self __descriptionWithoutObjects:nil];
 }
 
 - (NSString *)__descriptionWithoutObjects:(NSArray *)objectsToExclude
 {
-  NSMutableString *description = [NSMutableString stringWithFormat:@"\nDescription for class: %@\n\tparams:",
+  NSMutableString *description = [NSMutableString stringWithFormat:@"{\"class\": %@, \"params\":{",
                                                                    NSStringFromClass([self class])];
 
   unsigned int count;
@@ -37,14 +42,14 @@
     }
 
     if (!shouldExcludePropertyValue) {
-      NSString *propertyDescription = propertyValue;
+      NSString *propertyDescription = [propertyValue description];
 
-      [description appendFormat:@"\n\t\t%@: %@",
+      [description appendFormat:@"\"%@\": %@",
                                 propertyName,
                                 propertyDescription];
     }
   }
-  [description appendFormat:@"\n\tend_params"];
+  [description appendFormat:@"}"];
 
   free(properties);
 
