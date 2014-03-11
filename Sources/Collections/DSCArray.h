@@ -1,19 +1,15 @@
 #import <Foundation/Foundation.h>
 
 
-@interface DSCArray : NSObject {
-  unsigned int _capacity;
-  unsigned int _count;
-  float *_values;
-}
+@interface DSCArray : NSObject 
 
-- (id)initWithCapacity:(unsigned int)theCapacity;
+- (id)initWithCapacity:(NSUInteger)theCapacity;
 - (void)addValue:(float)theValue;
 - (void)setValue:(float)theValue
-         atIndex:(unsigned int)theIndex;
-- (float)valueAtIndex:(unsigned int)theIndex;
-- (unsigned int)capacity;
-- (unsigned int)count;
+         atIndex:(NSUInteger)theIndex;
+- (float)valueAtIndex:(NSUInteger)theIndex;
+- (NSUInteger)capacity;
+- (NSUInteger)count;
 - (void)clear;
 
 - (float)sumWithRange:(NSRange)theRange;

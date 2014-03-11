@@ -120,7 +120,7 @@
   NSInteger code = [theError code];
 
   self = [self initWithDomain:domain
-                         code:[NSString stringWithFormat:@"%d", code]];
+                         code:[NSString stringWithFormat:@"%lld", (long long)code]];
   if (self) {
       _error = theError;
   }

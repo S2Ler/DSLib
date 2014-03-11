@@ -45,7 +45,7 @@
   NSUInteger minChars = range.location;
   NSUInteger maxChars = minChars + range.length;
   [passwordCriterionDescription setBody:[NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"criterion.charsRange.body", DSFieldValidationLocalizedTable, [NSBundle DSLibBundle], nil), fieldName, minChars, maxChars]];
-  NSString *regex = [NSString stringWithFormat:@".{%d,%d}", minChars, maxChars];
+  NSString *regex = [NSString stringWithFormat:@".{%lu,%lu}", (unsigned long)minChars, (unsigned long)maxChars];
   DSFieldValidationCriterion *passwordCriterion
     = [[DSFieldValidationCriterion alloc]
                                    initWithPredicate:[NSString predicateWithRegex:regex]

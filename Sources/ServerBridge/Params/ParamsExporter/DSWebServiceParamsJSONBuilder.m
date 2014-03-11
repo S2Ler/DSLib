@@ -16,7 +16,7 @@
 @property (nonatomic, strong) id currentLeaf;
 
 /** Used to test balancing startLeaf, endLeaf methods */
-@property (nonatomic, assign) NSInteger openCloseCounter;
+@property (nonatomic, assign) int16_t openCloseCounter;
 
 - (void)checkConsistency;
 - (void)checkFinalConsistency;
@@ -116,7 +116,7 @@ static char PREV_LEAF_KEY;
 {
   if ([self openCloseCounter] < 0) {
     [NSException raise:NSInternalInconsistencyException 
-                format:@"startLeaf, endLeaf methods isn't balanced; openCloseCounter = %d", 
+                format:@"startLeaf, endLeaf methods isn't balanced; openCloseCounter = %d",
      [self openCloseCounter]];
     return;
   }

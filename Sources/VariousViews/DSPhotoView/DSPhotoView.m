@@ -249,7 +249,7 @@
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView
                        withView:(UIView *)view
-                        atScale:(float)scale
+                        atScale:(CGFloat)scale
 {
 	if( self.zoomScale == self.minimumZoomScale ) _isZoomed = NO;
 	else _isZoomed = YES;

@@ -12,7 +12,7 @@ typedef BOOL (^__class_block_t)(Class theClass);
 @interface DSRuntimeHacker()  
 @property (nonatomic, weak) id client;
 @property (nonatomic, assign) Ivar *ivars;
-@property (nonatomic, assign) NSUInteger numIvars;
+@property (nonatomic, assign) unsigned int numIvars;
 
 - (NSDictionary *)parsePropertyAttributes:(objc_property_t)theProperty;
 

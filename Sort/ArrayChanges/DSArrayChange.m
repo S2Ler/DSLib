@@ -47,6 +47,6 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"DSArrayChange of type: %d index: %d to index: %d", [self type], [self index], [self toIndex]];
+    return [NSString stringWithFormat:@"DSArrayChange of type: %d index: %lu to index: %lu", [self type], (unsigned long)[self index], (unsigned long)[self toIndex]];
 }
 @end

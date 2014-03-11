@@ -173,7 +173,7 @@ static NSCalendar *gregorianCalendar;
       [components setYear:added];
       break;
     default:
-      NSAssert(FALSE, @"Adding to calendar unit %d not supported", unit);
+      NSAssert(FALSE, @"Adding to calendar unit %lld not supported", (long long)unit);
   }
 
   return components;

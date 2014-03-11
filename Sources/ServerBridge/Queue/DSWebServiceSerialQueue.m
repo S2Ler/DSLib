@@ -242,7 +242,7 @@
 {
   NSMutableDictionary *newUserInfo = [theUserInfo mutableCopy];
   
-  [newUserInfo setObject:[NSNumber numberWithUnsignedInt:theCount]
+  [newUserInfo setObject:[NSNumber numberWithUnsignedInteger:theCount]
                   forKey:RETRY_KEY];
   return newUserInfo;
 }

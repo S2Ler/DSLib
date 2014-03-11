@@ -2,12 +2,18 @@
 
 
 @implementation DSCArray
+{
+  NSUInteger _capacity;
+  NSUInteger _count;
+  float *_values;
+}
+
 - (void)dealloc
 {
   free(_values);
 }
 
-- (id)initWithCapacity:(unsigned int)theCapacity 
+- (id)initWithCapacity:(NSUInteger)theCapacity
 {
   self = [super init];
   
@@ -35,7 +41,7 @@
 }
 
 - (void)setValue:(float)theValue
-         atIndex:(unsigned int)theIndex
+         atIndex:(NSUInteger)theIndex
 {
   if (theIndex < _capacity && theIndex < _count) 
   {
@@ -48,7 +54,7 @@
   
 }
 
-- (float)valueAtIndex:(unsigned int)theIndex
+- (float)valueAtIndex:(NSUInteger)theIndex
 {
   if (theIndex < _count) 
   {
@@ -59,12 +65,12 @@
   }
 }
 
-- (unsigned int)capacity
+- (NSUInteger)capacity
 {
   return _capacity;
 }
 
-- (unsigned int)count
+- (NSUInteger)count
 {
   return _count;
 }
@@ -80,7 +86,7 @@
   if (theRange.location + theRange.length < [self count]) 
   {
     float sum = 0.0;
-    for (int idx = theRange.location;
+    for (NSUInteger idx = theRange.location;
          idx < theRange.location + theRange.length;
          idx++)
     {

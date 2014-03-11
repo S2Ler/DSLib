@@ -16,7 +16,7 @@
 - (NSData *)SHA256
 {
   unsigned char hash[CC_SHA256_DIGEST_LENGTH];
-  if (CC_SHA256([self bytes], [self length], hash)) {
+  if (CC_SHA256([self bytes], (CC_LONG)[self length], hash)) {
     NSData *sha256 = [NSData dataWithBytes:hash length:CC_SHA256_DIGEST_LENGTH];
     return sha256;
   }
@@ -31,7 +31,7 @@
   const unsigned char *dataBuffer = [self bytes];
   NSInteger i;
   for (i = 0; i < [self length]; ++i) {
-    [stringBuffer appendFormat:@"%02X", (NSUInteger)dataBuffer[i]];
+    [stringBuffer appendFormat:@"%02lX", (unsigned long)dataBuffer[i]];
   }
   return [NSString stringWithString:stringBuffer];
 }

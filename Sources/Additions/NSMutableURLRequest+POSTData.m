@@ -62,7 +62,7 @@
   [postData appendData:[boundaryStringFinal dataUsingEncoding:NSUTF8StringEncoding]];
   [self setHTTPBody:postData];
 
-  NSString *dataLength = [NSString stringWithFormat:@"%d", [postData length]];
+  NSString *dataLength = [NSString stringWithFormat:@"%llu", (unsigned long long)[postData length]];
 
   [self addValue:dataLength forHTTPHeaderField:@"Content-Length"];
 }

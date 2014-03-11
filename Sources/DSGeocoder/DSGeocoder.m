@@ -94,7 +94,7 @@
       }
     }
     else {
-      completion(FAILED_WITH_MESSAGE, [DSMessage messageWithDomain:kCLErrorDomain code:[NSString stringWithFormat:@"%d", [error code]]], nil);
+      completion(FAILED_WITH_MESSAGE, [DSMessage messageWithDomain:kCLErrorDomain code:[NSString stringWithFormat:@"%ld", (long)[error code]]], nil);
     }
   };
   
@@ -164,7 +164,7 @@
       }
     }
     else {
-      completionHandler(FAILED_WITH_MESSAGE, [DSMessage messageWithDomain:kCLErrorDomain code:[NSString stringWithFormat:@"%d", [error code]]], nil);
+      completionHandler(FAILED_WITH_MESSAGE, [DSMessage messageWithDomain:kCLErrorDomain code:[NSString stringWithFormat:@"%ld", (long)[error code]]], nil);
     }
   };
   
