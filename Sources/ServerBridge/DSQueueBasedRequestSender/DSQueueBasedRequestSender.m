@@ -31,7 +31,7 @@
   self = [super init];
   if (self) {
     _queue = [[DSWebServiceQueue alloc] initWithTarget:self];
-    [_queue setName:@"DSQueueBasedRequestSender requests queue"];
+    [_queue setName:NSStringFromClass([self class])];
     [_queue setSuspended:NO];
     [_queue addObserver:self
              forKeyPath:@"operationCount"
