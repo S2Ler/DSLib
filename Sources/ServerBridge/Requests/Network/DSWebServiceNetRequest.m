@@ -147,18 +147,13 @@
     [self setPOSTDataKey:@"file"];
   }
   
-  NSData *mainPostData = nil;
-
   if ([self POSTData]) {
-    mainPostData = [self POSTData];
     [formData appendPartWithFormData:[self POSTData] name:[self POSTDataKey]];
   }
   else if ([self POSTDataPath]) {
     [formData appendPartWithFileURL:[NSURL fileURLWithPath:[self POSTDataPath]]
                                name:[self POSTDataFileName]
                               error:nil];
-    
-    mainPostData = [NSData dataWithContentsOfMappedFile:[self POSTDataPath]];
   }
 }
 
