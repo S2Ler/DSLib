@@ -46,7 +46,7 @@ NSUInteger DSNumberOfParamsInSelector(SEL theSelector)
 }
 
 DSFileSize getFreeDiskspace(NSError **errorRef) {
-  DSFileSize totalSpace = DSFileSizeUndefined;
+  DSFileSize totalSpace;
   DSFileSize totalFreeSpace = DSFileSizeUndefined;
   NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
   NSDictionary *dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[paths lastObject]
