@@ -177,6 +177,10 @@
 		0928CFCD17F2150100E494E1 /* DSAlertsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0928CFDE17F21C9C00E494E1 /* DSWebServiceFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0928CFDF17F21C9C00E494E1 /* DSWebServiceFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */; };
+		092D8A6518D09ACE00EA56F0 /* ALAsset+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 092D8A6318D09ACE00EA56F0 /* ALAsset+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		092D8A6618D09ACE00EA56F0 /* ALAsset+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D8A6418D09ACE00EA56F0 /* ALAsset+DSAdditions.m */; };
+		092D8A6D18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 092D8A6B18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h */; };
+		092D8A6E18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */; };
 		093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 093859D517F1FDD400E8AB0E /* JSONKit.h */; };
 		093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		094C0208184D139900890D67 /* DSFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 094C0206184D139900890D67 /* DSFetchedResultsControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -585,6 +589,10 @@
 		0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAlertsFramework.h; sourceTree = "<group>"; };
 		0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceFunctions.h; sourceTree = "<group>"; };
 		0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceFunctions.m; sourceTree = "<group>"; };
+		092D8A6318D09ACE00EA56F0 /* ALAsset+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+DSAdditions.h"; sourceTree = "<group>"; };
+		092D8A6418D09ACE00EA56F0 /* ALAsset+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+DSAdditions.m"; sourceTree = "<group>"; };
+		092D8A6B18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOutputStream+DSAdditions.h"; sourceTree = "<group>"; };
+		092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOutputStream+DSAdditions.m"; sourceTree = "<group>"; };
 		093859D517F1FDD400E8AB0E /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		093859D617F1FDD400E8AB0E /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		094C0206184D139900890D67 /* DSFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
@@ -840,6 +848,10 @@
 				09F8C87518A93A7500960CC8 /* NSNumber+DSAdditions.m */,
 				0961834018C4E571006BBF89 /* DSReplaceRootViewControllerSegue.h */,
 				0961834118C4E571006BBF89 /* DSReplaceRootViewControllerSegue.m */,
+				092D8A6318D09ACE00EA56F0 /* ALAsset+DSAdditions.h */,
+				092D8A6418D09ACE00EA56F0 /* ALAsset+DSAdditions.m */,
+				092D8A6B18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h */,
+				092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1713,6 +1725,7 @@
 				0903A2E217F0AC8300A21270 /* DSArrayChangeApplier.h in Headers */,
 				0903A39317F0AC9100A21270 /* NSData+OAdditions.h in Headers */,
 				0903A3D117F0AC9100A21270 /* DSCFunctions.h in Headers */,
+				092D8A6D18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h in Headers */,
 				09B8669317F1E5C7003B1070 /* NSError+DSWebService.h in Headers */,
 				0969F92B18328AE100B3C4B2 /* UIImage+Alpha.h in Headers */,
 				09162C99180EECC100A0DEEF /* WEPopoverParentView.h in Headers */,
@@ -1766,6 +1779,7 @@
 				09F84FDC18C5FA380047AA16 /* AFMultipartBodyStream.h in Headers */,
 				097FCD7E189FAAF300B9B041 /* RTProtocol.h in Headers */,
 				0903A3B317F0AC9100A21270 /* UIFont+FromString.h in Headers */,
+				092D8A6518D09ACE00EA56F0 /* ALAsset+DSAdditions.h in Headers */,
 				0903A3ED17F0AC9100A21270 /* FontsDB.h in Headers */,
 				62DD1C90C4EBBDB2502CA983 /* DSAlert.h in Headers */,
 				62DD12341D52C3E5516F6D85 /* DSMessage.h in Headers */,
@@ -2033,6 +2047,7 @@
 				0903A3F617F0AC9100A21270 /* DSSlider.m in Sources */,
 				09B866B017F1E5C7003B1070 /* DSWebServiceNetRequest.m in Sources */,
 				09162C98180EECC100A0DEEF /* WEPopoverController.m in Sources */,
+				092D8A6618D09ACE00EA56F0 /* ALAsset+DSAdditions.m in Sources */,
 				09162C56180ED00C00A0DEEF /* DSCompas.m in Sources */,
 				0903A39017F0AC9100A21270 /* NSArray+Extras.m in Sources */,
 				09B866C017F1E5C7003B1070 /* DSWebServiceURL.m in Sources */,
@@ -2076,6 +2091,7 @@
 				0903A39A17F0AC9100A21270 /* NSFileManager+Directories.m in Sources */,
 				0903A39C17F0AC9100A21270 /* NSMutableArray+Additions.m in Sources */,
 				09067F321818055900C8F48F /* DSAlertQueue+Private.m in Sources */,
+				092D8A6E18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m in Sources */,
 				0903A2E417F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.m in Sources */,
 				098F666218ACD09600E479E5 /* DSPhotoView.m in Sources */,
 				0903A3C817F0AC9100A21270 /* DSQueue.m in Sources */,
