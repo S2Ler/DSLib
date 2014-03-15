@@ -19,5 +19,14 @@
   return [NSNumber numberWithLongLong:fileSize];
 }
 
+- (DSRecID)recIDValue
+{
+  return [self longLongValue];
+}
+
++ (instancetype)numberWithRecID:(DSRecID)recID
+{
+  return [self numberWithLongLong:recID];
+}
 
 @end

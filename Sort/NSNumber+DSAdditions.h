@@ -12,4 +12,8 @@
 @interface NSNumber (DSAdditions)
 - (DSFileSize)fileSizeValue;
 + (instancetype)numberWithFileSize:(DSFileSize)fileSize;
+
+- (DSRecID)recIDValue;
++ (instancetype)numberWithRecID:(DSRecID)recID;
 @end
+
