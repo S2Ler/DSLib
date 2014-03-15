@@ -215,6 +215,8 @@
 		097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		098783CF18C1F39700C838A2 /* DSCodingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSCodingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098783D018C1F39700C838A2 /* DSCodingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSCodingTransformer.m */; };
+		098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */; };
+		098A63E718D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */; };
 		098F666118ACD09600E479E5 /* DSPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098F665F18ACD09600E479E5 /* DSPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098F666218ACD09600E479E5 /* DSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098F666018ACD09600E479E5 /* DSPhotoView.m */; };
 		098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -627,6 +629,8 @@
 		097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
 		098783CD18C1F39700C838A2 /* DSCodingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCodingTransformer.h; sourceTree = "<group>"; };
 		098783CE18C1F39700C838A2 /* DSCodingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCodingTransformer.m; sourceTree = "<group>"; };
+		098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+DSAdditions.h"; sourceTree = "<group>"; };
+		098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+DSAdditions.m"; sourceTree = "<group>"; };
 		098F665F18ACD09600E479E5 /* DSPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPhotoView.h; sourceTree = "<group>"; };
 		098F666018ACD09600E479E5 /* DSPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPhotoView.m; sourceTree = "<group>"; };
 		098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSQueueBasedRequestSender+Private.h"; sourceTree = "<group>"; };
@@ -852,6 +856,8 @@
 				092D8A6418D09ACE00EA56F0 /* ALAsset+DSAdditions.m */,
 				092D8A6B18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h */,
 				092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */,
+				098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */,
+				098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1748,6 +1754,7 @@
 				0903A3CD17F0AC9100A21270 /* DSMacros.h in Headers */,
 				0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */,
 				09B8669017F1E5C7003B1070 /* DSWebServiceConfiguration.h in Headers */,
+				098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */,
 				0903A3A917F0AC9100A21270 /* UIAlertView+Additions.h in Headers */,
 				09162C9A180EECC100A0DEEF /* WETouchableView.h in Headers */,
 				09B866A117F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h in Headers */,
@@ -1999,6 +2006,7 @@
 				09B6DCE81858F5C500FB1825 /* DSCLPlacemarkTransformer.m in Sources */,
 				0903A2EA17F0AC8300A21270 /* UIView+ViewsEnumeration.m in Sources */,
 				0903A3B417F0AC9100A21270 /* UIFont+FromString.m in Sources */,
+				098A63E718D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m in Sources */,
 				09B866BA17F1E5C7003B1070 /* DSWebServiceParams.m in Sources */,
 				09B866A217F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m in Sources */,
 				097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */,
