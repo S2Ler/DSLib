@@ -34,7 +34,9 @@
     readChunkSize = [representation getBytes:buffer fromOffset:offset length:COPY_BUFFER_SIZE error:&writeError];
     
     if (!writeError) {
-      [outputStream writeData:[NSData dataWithBytesNoCopy:buffer length:(NSUInteger)readChunkSize] error:&writeError];
+      [outputStream writeData:[NSData dataWithBytesNoCopy:buffer
+                                                   length:(NSUInteger)readChunkSize
+                                             freeWhenDone:NO] error:&writeError];
       offset = offset + readChunkSize;
     }
     else {
