@@ -13,9 +13,19 @@
 + (id)urlWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
            functionName:(NSString *)theFunctionName
              forceHTTPS:(BOOL)forceHTTPS;
++ (id)urlWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
+           functionName:(NSString *)theFunctionName
+             forceHTTPS:(BOOL)forceHTTPS
+        customServerURL:(NSString *)serverURL;
+
 /**
-* Designated init
+ * Designated init
  */
+- (id)initWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
+            functionName:(NSString *)theFunctionName
+              forceHTTPS:(BOOL)forceHTTPS
+         customServerURL:(NSString *)serverURL;
+
 - (id)initWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
             functionName:(NSString *)theFunctionName
               forceHTTPS:(BOOL)forceHTTPS;

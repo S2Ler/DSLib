@@ -6,6 +6,7 @@
 #import "NSData+OAdditions.h"
 #import "NSNumber+DSAdditions.h"
 #import "AFStreamingMultipartFormData.h"
+#import "AFFunctions.h"
 
 #define DEFAULT_TIMEOUT 30
 
@@ -150,10 +151,16 @@
   if ([self POSTData]) {
     [formData appendPartWithFormData:[self POSTData] name:[self POSTDataKey]];
   }
-  else if ([self POSTDataPath]) {
-    [formData appendPartWithFileURL:[NSURL fileURLWithPath:[self POSTDataPath]]
-                               name:[self POSTDataFileName]
-                              error:nil];
+  
+  if ([self POSTDataPath]) {
+    if (![self POSTDataFileName]) {
+      [self setPOSTDataFileName:@"file"];
+    }
+    NSURL *fileURL = [NSURL fileURLWithPath:[self POSTDataPath]];
+    NSString *fileName = [self POSTDataFileName];
+    NSString *mimeType = AFContentTypeForPathExtension([fileURL pathExtension]);
+    
+    [formData appendPartWithFileURL:fileURL name:@"file" fileName:fileName mimeType:mimeType error:nil];
   }
 }
 
@@ -170,7 +177,7 @@
 
   if ([[self url] HTTPMethod] == DSWebServiceURLHTTPMethodPOST &&
     [self POSTData] == nil) {
-    [self setPOSTData:[[self url] paramsDataForPOST]];
+//    [self setPOSTData:[[self url] paramsDataForPOST]];
   }
   NSString *urlString = [[self url] urlString];
 
@@ -179,10 +186,9 @@
   NSMutableURLRequest *request = nil;
 
   if ([self POSTData] == nil && [self POSTDataPath] == nil) {
-    request
-      = [NSMutableURLRequest requestWithURL:nsURL
-                                cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
-                            timeoutInterval:_timeoutInterval];
+    request = [NSMutableURLRequest requestWithURL:nsURL
+                                      cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
+                                  timeoutInterval:_timeoutInterval];
   }
   else {
     request = [[NSMutableURLRequest alloc] init];
@@ -200,8 +206,8 @@
       AFStreamingMultipartFormData *formData
       = [[AFStreamingMultipartFormData alloc] initWithURLRequest:request
                                                   stringEncoding:NSUTF8StringEncoding];
-      
       [self configureFormData:formData];
+      request = [formData requestByFinalizingMultipartFormData];
     }
 
     [request setTimeoutInterval:DEFAULT_TIMEOUT];

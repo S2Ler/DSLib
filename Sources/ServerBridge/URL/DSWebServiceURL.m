@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSData *paramsDataForPOST;
 @property (nonatomic, strong) NSString *functionName;
 @property (nonatomic, assign) BOOL forceHTTPS;
+@property (nonatomic, strong) NSString *customServerURL;
 @end
 
 #pragma mark - private
@@ -23,10 +24,6 @@
 @end
 
 @implementation DSWebServiceURL
-@synthesize paramsDataForPOST = _paramsDataForPOST;
-@synthesize urlString = _urlString;
-@synthesize functionName = _functionName;
-@synthesize HTTPMethod = _HTTPMethod;
 
 #pragma mark - init
 - (id)init
@@ -38,7 +35,14 @@
 
 - (NSString *)urlWithoutParamsForceHTTPS:(BOOL)forceHTTPS
 {
-  NSMutableString *serverURL = [[[DSWebServiceConfiguration sharedInstance] serverURL] mutableCopy];
+  NSMutableString *serverURL;
+  if ([self customServerURL]) {
+    serverURL = [[self customServerURL] mutableCopy];
+  }
+  else {
+    serverURL = [[[DSWebServiceConfiguration sharedInstance] serverURL] mutableCopy];
+  }
+  
   BOOL HTTPSEnabled = [[DSWebServiceConfiguration sharedInstance] HTTPSEnabled];
   
   if ((HTTPSEnabled || forceHTTPS) && ![serverURL hasPrefix:@"https://"]) {
@@ -75,7 +79,8 @@
 
 - (id)initWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
             functionName:(NSString *)theFunctionName
-              forceHTTPS:(BOOL)forceHTTPS;
+              forceHTTPS:(BOOL)forceHTTPS
+         customServerURL:(NSString *)serverURL
 {
   self = [super init];
 
@@ -83,12 +88,33 @@
     _functionName = theFunctionName;
     _HTTPMethod = theHTTPMethod;
     _forceHTTPS = forceHTTPS;
+    _customServerURL = serverURL;
 
     NSString *fullURL = [self urlWithoutParams];
     [self setUrlString:fullURL];
   }
 
   return self;
+}
+
+- (id)initWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
+            functionName:(NSString *)theFunctionName
+              forceHTTPS:(BOOL)forceHTTPS
+{
+  return [self initWithHTTPMethod:theHTTPMethod functionName:theFunctionName forceHTTPS:forceHTTPS customServerURL:nil];
+}
+
++ (id)urlWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
+           functionName:(NSString *)theFunctionName
+             forceHTTPS:(BOOL)forceHTTPS
+        customServerURL:(NSString *)serverURL
+{
+  DSWebServiceURL *url = [[DSWebServiceURL alloc] initWithHTTPMethod:theHTTPMethod
+                                                        functionName:theFunctionName
+                                                          forceHTTPS:forceHTTPS
+                                                     customServerURL:serverURL];
+  
+  return url;
 }
 
 + (id)urlWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
@@ -107,7 +133,7 @@
 {
   NSMutableString *urlStringWithParams = [[self urlWithoutParams] mutableCopy];
 
-  if ([self HTTPMethod] != DSWebServiceURLHTTPMethodPOST) {
+  if (YES || [self HTTPMethod] != DSWebServiceURLHTTPMethodPOST) {
     NSMutableString *GETParams = [NSMutableString string];
 
     NSUInteger paramsCount = [[theParams stringParamNames] count];

@@ -37,6 +37,9 @@
 - (NSString *)functionName;
 - (DSWebServiceURLHTTPMethod)HTTPMethod;
 - (NSData *)POSTData;
+- (NSString *)POSTDataPath;
+- (NSString *)POSTDataFileName;
+- (NSString *)customServerURL;
 
 /** If not nil, the response data will be written to this path */
 - (NSString *)outputPath;

@@ -74,7 +74,8 @@
     BOOL isHTTPSOnlyParams = [[DSWebServiceFunctions sharedInstance] isHTTPSForcedForParams:theParams];
     DSWebServiceURL *url = [DSWebServiceURL urlWithHTTPMethod:HTTPMethod
                                                  functionName:functionName
-                                                   forceHTTPS:isHTTPSOnlyParams];
+                                                   forceHTTPS:isHTTPSOnlyParams
+                                              customServerURL:[theParams customServerURL]];
 
     NSDictionary *paramValues = [theParams allParams];
     NSArray *paramsEmbeddedInURL = [theParams paramsEmbeddedInURL];
@@ -83,7 +84,9 @@
 
     DSWebServiceNetRequest *request = [DSWebServiceNetRequest requestWithServer:url params:params];
     [request setOutputPath:[theParams outputPath]];
+    [request setPOSTDataPath:[theParams POSTDataPath]];
     [request setRunLoopThread:[self networkRequestThread]];
+    [request setPOSTDataFileName:[theParams POSTDataFileName]];
     [request setSendRawPOSTData:NO];
     [request setPOSTDataKey:@"key"];
     return request;

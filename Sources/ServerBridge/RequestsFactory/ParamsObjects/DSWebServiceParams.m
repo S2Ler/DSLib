@@ -102,6 +102,21 @@
   return nil;
 }
 
+- (NSString *)POSTDataPath
+{
+  return nil;
+}
+
+- (NSString *)POSTDataFileName
+{
+  return nil;
+}
+
+- (NSString *)customServerURL
+{
+  return nil;
+}
+
 - (NSString *)outputPath
 {
   return nil;
