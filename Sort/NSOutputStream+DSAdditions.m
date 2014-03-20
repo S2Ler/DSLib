@@ -31,7 +31,9 @@
     }
     
     if ([self streamError]) {
-      *error = [self streamError];
+      if (error) {
+        *error = [self streamError];
+      }
       return totalNumberOfBytesWritten;
     }
   }

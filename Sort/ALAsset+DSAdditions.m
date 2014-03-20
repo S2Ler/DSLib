@@ -17,7 +17,9 @@
   
   BOOL createSucceeded = [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
   if (!createSucceeded) {
-    *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorBadURL userInfo:nil];
+    if (error) {
+      *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorBadURL userInfo:nil];
+    }
     return NO;
   }
   
