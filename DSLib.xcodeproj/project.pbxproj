@@ -179,7 +179,7 @@
 		0928CFDF17F21C9C00E494E1 /* DSWebServiceFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */; };
 		092D8A6518D09ACE00EA56F0 /* ALAsset+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 092D8A6318D09ACE00EA56F0 /* ALAsset+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		092D8A6618D09ACE00EA56F0 /* ALAsset+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D8A6418D09ACE00EA56F0 /* ALAsset+DSAdditions.m */; };
-		092D8A6D18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 092D8A6B18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h */; };
+		092D8A6D18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 092D8A6B18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		092D8A6E18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */; };
 		093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 093859D517F1FDD400E8AB0E /* JSONKit.h */; };
 		093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
@@ -215,7 +215,7 @@
 		097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		098783CF18C1F39700C838A2 /* DSCodingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSCodingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098783D018C1F39700C838A2 /* DSCodingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSCodingTransformer.m */; };
-		098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */; };
+		098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098A63E718D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */; };
 		098F666118ACD09600E479E5 /* DSPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098F665F18ACD09600E479E5 /* DSPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098F666218ACD09600E479E5 /* DSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098F666018ACD09600E479E5 /* DSPhotoView.m */; };
@@ -331,6 +331,8 @@
 		09B866C017F1E5C7003B1070 /* DSWebServiceURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668D17F1E5C7003B1070 /* DSWebServiceURL.m */; };
 		09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668E17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668F17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m */; };
+		09C15FD518DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09C15FD618DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */; };
 		09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
@@ -724,6 +726,8 @@
 		09B8668D17F1E5C7003B1070 /* DSWebServiceURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceURL.m; sourceTree = "<group>"; };
 		09B8668E17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceURLHTTPMethod.h; sourceTree = "<group>"; };
 		09B8668F17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceURLHTTPMethod.m; sourceTree = "<group>"; };
+		09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+DSAdditions.h"; sourceTree = "<group>"; };
+		09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+DSAdditions.m"; sourceTree = "<group>"; };
 		09C6BE521806BD760084C600 /* DSDragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDrop.h; sourceTree = "<group>"; };
 		09D6223E1817DDF900A252D9 /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Parse.h"; sourceTree = "<group>"; };
 		09D6223F1817DDF900A252D9 /* NSError+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Parse.m"; sourceTree = "<group>"; };
@@ -858,6 +862,8 @@
 				092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */,
 				098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */,
 				098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */,
+				09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */,
+				09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1776,6 +1782,7 @@
 				09B6DCEA1858F5C500FB1825 /* DSGeocoder+Factory.h in Headers */,
 				09B866B117F1E5C7003B1070 /* DSEntityDefinition.h in Headers */,
 				0903A3FA17F0AC9100A21270 /* DSCheckButton.h in Headers */,
+				09C15FD518DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h in Headers */,
 				0903A3AB17F0AC9100A21270 /* UIApplication+DSAdditions.h in Headers */,
 				09B8669517F1E5C7003B1070 /* DSWebServiceArrayParam.h in Headers */,
 				09B866A717F1E5C7003B1070 /* DSWebServiceRequest.h in Headers */,
@@ -2140,6 +2147,7 @@
 				09F84FDD18C5FA380047AA16 /* AFMultipartBodyStream.m in Sources */,
 				62DD187C5A8A0492EB15FAEE /* DSAppDelegate.m in Sources */,
 				62DD152CB973B9C752B7120C /* DSBlockBarButtonItem.m in Sources */,
+				09C15FD618DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m in Sources */,
 				62DD1BC6C151EFA0696F8AC2 /* DSBlockButton.m in Sources */,
 				62DD156A5BCD9E8F54FAFD25 /* DSDataDetector.m in Sources */,
 				62DD1622AD022227DFD60F1E /* DSFindCountry.m in Sources */,
