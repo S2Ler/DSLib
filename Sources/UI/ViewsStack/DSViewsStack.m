@@ -7,25 +7,18 @@
 //
 
 #import "DSViewsStack.h"
+#import "DSViewsStackDataSource.h"
 
 @implementation DSViewsStack
 
-- (id)initWithFrame:(CGRect)frame
+- (NSUInteger)numberOfViews
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+  return [[self dataSource] numberOfViewsInViewsStack:self];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (UIView *)viewForIndex:(NSUInteger)index
 {
-    // Drawing code
+  return [[self dataSource] viewsStack:self viewForIndex:index];
 }
-*/
 
 @end

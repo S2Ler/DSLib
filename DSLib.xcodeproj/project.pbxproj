@@ -213,6 +213,9 @@
 		097FCD7F189FAAF300B9B041 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6A189FAAF300B9B041 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		097FCD80189FAAF300B9B041 /* RTUnregisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD6B189FAAF300B9B041 /* RTUnregisteredClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0982EB7D18E1E97500F9DFF2 /* DSViewsStackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0982EB7F18E1EA6000F9DFF2 /* DSViewsStackDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */; };
+		0982EB8918E1F40A00F9DFF2 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0982EB8118E1F40A00F9DFF2 /* libOCMock.a */; };
 		098783CF18C1F39700C838A2 /* DSCodingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSCodingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098783D018C1F39700C838A2 /* DSCodingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSCodingTransformer.m */; };
 		098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -644,6 +647,15 @@
 		097FCD6A189FAAF300B9B041 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProtocol.m; sourceTree = "<group>"; };
 		097FCD6B189FAAF300B9B041 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUnregisteredClass.h; sourceTree = "<group>"; };
 		097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
+		0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSViewsStackDelegate.h; sourceTree = "<group>"; };
+		0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStackDataSource.h; sourceTree = "<group>"; };
+		0982EB8118E1F40A00F9DFF2 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		0982EB8318E1F40A00F9DFF2 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		0982EB8418E1F40A00F9DFF2 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		0982EB8518E1F40A00F9DFF2 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		0982EB8618E1F40A00F9DFF2 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		0982EB8718E1F40A00F9DFF2 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		0982EB8818E1F40A00F9DFF2 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		098783CD18C1F39700C838A2 /* DSCodingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCodingTransformer.h; sourceTree = "<group>"; };
 		098783CE18C1F39700C838A2 /* DSCodingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCodingTransformer.m; sourceTree = "<group>"; };
 		098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+DSAdditions.h"; sourceTree = "<group>"; };
@@ -829,6 +841,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09CEE81B18E1E6EB00B090F9 /* XCTest.framework in Frameworks */,
+				0982EB8918E1F40A00F9DFF2 /* libOCMock.a in Frameworks */,
 				09CEE81D18E1E6EB00B090F9 /* UIKit.framework in Frameworks */,
 				09CEE81C18E1E6EB00B090F9 /* Foundation.framework in Frameworks */,
 			);
@@ -1306,6 +1319,28 @@
 			path = MAObjCRuntime;
 			sourceTree = SOURCE_ROOT;
 		};
+		0982EB8018E1F40400F9DFF2 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				0982EB8118E1F40A00F9DFF2 /* libOCMock.a */,
+				0982EB8218E1F40A00F9DFF2 /* OCMock */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		0982EB8218E1F40A00F9DFF2 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				0982EB8318E1F40A00F9DFF2 /* NSNotificationCenter+OCMAdditions.h */,
+				0982EB8418E1F40A00F9DFF2 /* OCMArg.h */,
+				0982EB8518E1F40A00F9DFF2 /* OCMConstraint.h */,
+				0982EB8618E1F40A00F9DFF2 /* OCMock.h */,
+				0982EB8718E1F40A00F9DFF2 /* OCMockObject.h */,
+				0982EB8818E1F40A00F9DFF2 /* OCMockRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
 		098F665E18ACD09600E479E5 /* DSPhotoView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1564,6 +1599,7 @@
 		09CEE81E18E1E6EB00B090F9 /* DSLib Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0982EB8018E1F40400F9DFF2 /* Libs */,
 				09CEE83118E1E75800B090F9 /* DSViewsStack */,
 				09CEE81F18E1E6EB00B090F9 /* Supporting Files */,
 			);
@@ -1585,6 +1621,8 @@
 			children = (
 				09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */,
 				09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */,
+				0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */,
+				0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */,
 			);
 			path = ViewsStack;
 			sourceTree = "<group>";
@@ -1768,6 +1806,7 @@
 				0903A3C317F0AC9100A21270 /* DSCArray.h in Headers */,
 				09F84FE018C5FA900047AA16 /* AFStreamingMultipartFormData.h in Headers */,
 				0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */,
+				0982EB7F18E1EA6000F9DFF2 /* DSViewsStackDataSource.h in Headers */,
 				09162C93180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h in Headers */,
 				0903A38C17F0AC9100A21270 /* CATransition+AnimationsBuilder.h in Headers */,
 				09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */,
@@ -1809,6 +1848,7 @@
 				0903A3E517F0AC9100A21270 /* QRunLoopOperation.h in Headers */,
 				0903A2E217F0AC8300A21270 /* DSArrayChangeApplier.h in Headers */,
 				0903A39317F0AC9100A21270 /* NSData+OAdditions.h in Headers */,
+				0982EB7D18E1E97500F9DFF2 /* DSViewsStackDelegate.h in Headers */,
 				0903A3D117F0AC9100A21270 /* DSCFunctions.h in Headers */,
 				092D8A6D18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h in Headers */,
 				09B8669317F1E5C7003B1070 /* NSError+DSWebService.h in Headers */,
@@ -2402,8 +2442,26 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/DSLib Tests/Libs\"",
+				);
 				INFOPLIST_FILE = "DSLib Tests/DSLib Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DSLib",
+					"\"$(SRCROOT)/DSLib Tests/Libs\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"\"$(SRCROOT)/DSLib Tests/Libs/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -2428,8 +2486,26 @@
 				GCC_PREFIX_HEADER = "DSLib Tests/DSLib Tests-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/DSLib Tests/Libs\"",
+				);
 				INFOPLIST_FILE = "DSLib Tests/DSLib Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DSLib",
+					"\"$(SRCROOT)/DSLib Tests/Libs\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"\"$(SRCROOT)/DSLib Tests/Libs/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -2570,6 +2646,7 @@
 				09CEE82A18E1E6EB00B090F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AED6C18D1465E55000D9B44E /* Build configuration list for PBXProject "DSLib" */ = {
 			isa = XCConfigurationList;

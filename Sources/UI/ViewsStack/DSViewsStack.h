@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DSViewsStack : UIView
+@protocol DSViewsStackDelegate;
+@protocol DSViewsStackDataSource;
 
+@interface DSViewsStack : UIView
+@property (nonatomic, weak) id<DSViewsStackDelegate> delegate;
+@property (nonatomic, weak) id<DSViewsStackDataSource> dataSource;
+
+- (NSUInteger)numberOfViews;
+- (UIView *)viewForIndex:(NSUInteger)index;
 @end
