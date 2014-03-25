@@ -17,4 +17,6 @@
 
 - (NSUInteger)numberOfViews;
 - (UIView *)viewForIndex:(NSUInteger)index;
+
+- (void)reloadData;
 @end
