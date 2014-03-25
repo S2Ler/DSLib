@@ -67,6 +67,11 @@
   }
 }
 
+- (void)testThatOnlyTwoViewsLoadedAtAnyGivenTime
+{
+  
+}
+
 #pragma mark - DSViewsStackDataSource, DSViewsStackDelegate
 - (NSUInteger)numberOfViewsInViewsStack:(DSViewsStack *)viewsStack
 {

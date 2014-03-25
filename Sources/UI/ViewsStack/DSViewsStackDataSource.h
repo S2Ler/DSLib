@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @protocol DSViewsStackDataSource <NSObject>
-
+- (NSUInteger)numberOfViewsInViewsStack:(DSViewsStack *)viewsStack;
+- (UIView *)viewsStack:(DSViewsStack *)viewsStack viewForIndex:(NSUInteger)viewIndex;
 @end
