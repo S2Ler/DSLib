@@ -334,6 +334,14 @@
 		09C15FD518DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09C15FD618DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */; };
 		09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09CEE81B18E1E6EB00B090F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CEE81A18E1E6EB00B090F9 /* XCTest.framework */; };
+		09CEE81C18E1E6EB00B090F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1961465E55000D9B44E /* Foundation.framework */; };
+		09CEE81D18E1E6EB00B090F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C20C1465E89800D9B44E /* UIKit.framework */; };
+		09CEE82318E1E6EB00B090F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09CEE82118E1E6EB00B090F9 /* InfoPlist.strings */; };
+		09CEE82F18E1E73E00B090F9 /* DSViewsStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09CEE83018E1E73E00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
+		09CEE83318E1E76B00B090F9 /* DSViewsStack_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */; };
+		09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
 		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
 		09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -405,6 +413,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 09A60412182A65CF00F57F89;
 			remoteInfo = DSLibBundle;
+		};
+		09CEE82718E1E6EB00B090F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AED6C1921465E55000D9B44E;
+			remoteInfo = DSLib;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -729,6 +744,14 @@
 		09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+DSAdditions.h"; sourceTree = "<group>"; };
 		09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+DSAdditions.m"; sourceTree = "<group>"; };
 		09C6BE521806BD760084C600 /* DSDragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDrop.h; sourceTree = "<group>"; };
+		09CEE81918E1E6EB00B090F9 /* DSLib Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DSLib Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09CEE81A18E1E6EB00B090F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		09CEE82018E1E6EB00B090F9 /* DSLib Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DSLib Tests-Info.plist"; sourceTree = "<group>"; };
+		09CEE82218E1E6EB00B090F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		09CEE82618E1E6EB00B090F9 /* DSLib Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLib Tests-Prefix.pch"; sourceTree = "<group>"; };
+		09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStack.h; sourceTree = "<group>"; };
+		09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack.m; sourceTree = "<group>"; };
+		09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack_Tests.m; sourceTree = "<group>"; };
 		09D6223E1817DDF900A252D9 /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Parse.h"; sourceTree = "<group>"; };
 		09D6223F1817DDF900A252D9 /* NSError+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Parse.m"; sourceTree = "<group>"; };
 		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
@@ -798,6 +821,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A60415182A65CF00F57F89 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09CEE81618E1E6EB00B090F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09CEE81B18E1E6EB00B090F9 /* XCTest.framework in Frameworks */,
+				09CEE81D18E1E6EB00B090F9 /* UIKit.framework in Frameworks */,
+				09CEE81C18E1E6EB00B090F9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1049,6 +1082,7 @@
 		0903A36017F0AC9100A21270 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				09CEE82C18E1E72B00B090F9 /* ViewsStack */,
 				0903A36117F0AC9100A21270 /* FontsManager */,
 				62DD1988724946C5FAAA2A77 /* Buttons */,
 			);
@@ -1527,6 +1561,42 @@
 			path = URL;
 			sourceTree = "<group>";
 		};
+		09CEE81E18E1E6EB00B090F9 /* DSLib Tests */ = {
+			isa = PBXGroup;
+			children = (
+				09CEE83118E1E75800B090F9 /* DSViewsStack */,
+				09CEE81F18E1E6EB00B090F9 /* Supporting Files */,
+			);
+			path = "DSLib Tests";
+			sourceTree = "<group>";
+		};
+		09CEE81F18E1E6EB00B090F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09CEE82018E1E6EB00B090F9 /* DSLib Tests-Info.plist */,
+				09CEE82118E1E6EB00B090F9 /* InfoPlist.strings */,
+				09CEE82618E1E6EB00B090F9 /* DSLib Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09CEE82C18E1E72B00B090F9 /* ViewsStack */ = {
+			isa = PBXGroup;
+			children = (
+				09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */,
+				09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */,
+			);
+			path = ViewsStack;
+			sourceTree = "<group>";
+		};
+		09CEE83118E1E75800B090F9 /* DSViewsStack */ = {
+			isa = PBXGroup;
+			children = (
+				09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */,
+			);
+			path = DSViewsStack;
+			sourceTree = "<group>";
+		};
 		62DD12589D387E03B1BB24F5 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1594,6 +1664,7 @@
 			children = (
 				AED6C1981465E55000D9B44E /* DSLib */,
 				09A60416182A65CF00F57F89 /* DSLibBundle */,
+				09CEE81E18E1E6EB00B090F9 /* DSLib Tests */,
 				AED6C1951465E55000D9B44E /* Frameworks */,
 				AED6C1941465E55000D9B44E /* Products */,
 			);
@@ -1606,6 +1677,7 @@
 			children = (
 				AED6C1931465E55000D9B44E /* libDSLib.a */,
 				09A60413182A65CF00F57F89 /* DSLib.bundle */,
+				09CEE81918E1E6EB00B090F9 /* DSLib Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1617,6 +1689,7 @@
 				AED6C20C1465E89800D9B44E /* UIKit.framework */,
 				AED6C1961465E55000D9B44E /* Foundation.framework */,
 				09A60414182A65CF00F57F89 /* CoreFoundation.framework */,
+				09CEE81A18E1E6EB00B090F9 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1810,6 +1883,7 @@
 				09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */,
 				62DD10D7C5D585E7DF32649A /* DSAlertsSupportCode.h in Headers */,
 				09B8669217F1E5C7003B1070 /* DSWebServiceFramework.h in Headers */,
+				09CEE82F18E1E73E00B090F9 /* DSViewsStack.h in Headers */,
 				098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */,
 				09B8664517F1BF30003B1070 /* DSKeyboardControllerDelegate.h in Headers */,
 				09B8669A17F1E5C7003B1070 /* DSWebServiceParamFactory.h in Headers */,
@@ -1879,6 +1953,24 @@
 			productReference = 09A60413182A65CF00F57F89 /* DSLib.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
+		09CEE81818E1E6EB00B090F9 /* DSLib Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09CEE82B18E1E6EB00B090F9 /* Build configuration list for PBXNativeTarget "DSLib Tests" */;
+			buildPhases = (
+				09CEE81518E1E6EB00B090F9 /* Sources */,
+				09CEE81618E1E6EB00B090F9 /* Frameworks */,
+				09CEE81718E1E6EB00B090F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09CEE82818E1E6EB00B090F9 /* PBXTargetDependency */,
+			);
+			name = "DSLib Tests";
+			productName = "DSLib Tests";
+			productReference = 09CEE81918E1E6EB00B090F9 /* DSLib Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AED6C1921465E55000D9B44E /* DSLib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AED6C1A01465E55000D9B44E /* Build configuration list for PBXNativeTarget "DSLib" */;
@@ -1905,6 +1997,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "DS ltd.";
+				TargetAttributes = {
+					09CEE81818E1E6EB00B090F9 = {
+						TestTargetID = AED6C1921465E55000D9B44E;
+					};
+				};
 			};
 			buildConfigurationList = AED6C18D1465E55000D9B44E /* Build configuration list for PBXProject "DSLib" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1921,6 +2018,7 @@
 				AED6C1921465E55000D9B44E /* DSLib */,
 				09A60412182A65CF00F57F89 /* DSLibBundle */,
 				0904155A1892E4D600302A2F /* Framework */,
+				09CEE81818E1E6EB00B090F9 /* DSLib Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -1962,6 +2060,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09CEE81718E1E6EB00B090F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09CEE82318E1E6EB00B090F9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1998,6 +2104,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09CEE81518E1E6EB00B090F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09CEE83318E1E76B00B090F9 /* DSViewsStack_Tests.m in Sources */,
+				09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2100,6 +2215,7 @@
 				0903A3EC17F0AC9100A21270 /* DSFontManager.m in Sources */,
 				0903A3D017F0AC9100A21270 /* DSDateFormatterCache.m in Sources */,
 				09B866AC17F1E5C7003B1070 /* DSFakeWebServiceRequest.m in Sources */,
+				09CEE83018E1E73E00B090F9 /* DSViewsStack.m in Sources */,
 				0903A3CE17F0AC9100A21270 /* DSMacros.m in Sources */,
 				0903A38D17F0AC9100A21270 /* CATransition+AnimationsBuilder.m in Sources */,
 				0969F93018328AE100B3C4B2 /* UIImage+RoundedCorner.m in Sources */,
@@ -2173,6 +2289,11 @@
 			target = 09A60412182A65CF00F57F89 /* DSLibBundle */;
 			targetProxy = 090415611892E5EE00302A2F /* PBXContainerItemProxy */;
 		};
+		09CEE82818E1E6EB00B090F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AED6C1921465E55000D9B44E /* DSLib */;
+			targetProxy = 09CEE82718E1E6EB00B090F9 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -2180,6 +2301,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				09A6041A182A65CF00F57F89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		09CEE82118E1E6EB00B090F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09CEE82218E1E6EB00B090F9 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2248,6 +2377,61 @@
 				PRODUCT_NAME = DSLib;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		09CEE82918E1E6EB00B090F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DSLib Tests/DSLib Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "DSLib Tests/DSLib Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		09CEE82A18E1E6EB00B090F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DSLib Tests/DSLib Tests-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "DSLib Tests/DSLib Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -2320,12 +2504,17 @@
 				DSTROOT = /tmp/DSLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSLib/DSLib-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -2339,12 +2528,17 @@
 				DSTROOT = /tmp/DSLib.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSLib/DSLib-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -2368,6 +2562,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		09CEE82B18E1E6EB00B090F9 /* Build configuration list for PBXNativeTarget "DSLib Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09CEE82918E1E6EB00B090F9 /* Debug */,
+				09CEE82A18E1E6EB00B090F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		AED6C18D1465E55000D9B44E /* Build configuration list for PBXProject "DSLib" */ = {
 			isa = XCConfigurationList;
