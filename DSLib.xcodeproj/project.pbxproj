@@ -216,6 +216,7 @@
 		0982EB7D18E1E97500F9DFF2 /* DSViewsStackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0982EB7F18E1EA6000F9DFF2 /* DSViewsStackDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0982EB8918E1F40A00F9DFF2 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0982EB8118E1F40A00F9DFF2 /* libOCMock.a */; };
+		0985A14418E33143009F9F33 /* DSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33017F0AC9100A21270 /* DSQueue.m */; };
 		098783CF18C1F39700C838A2 /* DSCodingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSCodingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098783D018C1F39700C838A2 /* DSCodingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSCodingTransformer.m */; };
 		098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2151,6 +2152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0985A14418E33143009F9F33 /* DSQueue.m in Sources */,
 				09CEE83318E1E76B00B090F9 /* DSViewsStack_Tests.m in Sources */,
 				09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */,
 			);

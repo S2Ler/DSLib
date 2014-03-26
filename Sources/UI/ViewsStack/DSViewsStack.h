@@ -15,8 +15,11 @@
 @property (nonatomic, weak) id<DSViewsStackDelegate> delegate;
 @property (nonatomic, weak) id<DSViewsStackDataSource> dataSource;
 
+- (UIView *)dequeueReusableView;
+
 - (NSUInteger)numberOfViews;
 - (UIView *)viewForIndex:(NSUInteger)index;
+- (BOOL)showNextViewAnimated:(BOOL)animated;
 
 - (void)reloadData;
 @end

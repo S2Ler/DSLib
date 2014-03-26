@@ -20,6 +20,7 @@
 {
   NSUInteger _viewsReturnedCount;
   NSUInteger _viewsCount;
+  NSUInteger _viewsCreatedCount;
 }
 
 - (void)setUp
@@ -30,6 +31,7 @@
   [[self viewsStack] setDataSource:self];
   _viewsReturnedCount = 0;
   _viewsCount = 10;
+  _viewsCreatedCount = 0;
 }
 
 - (void)tearDown
@@ -93,6 +95,35 @@
   XCTAssertEqual(_viewsReturnedCount, 0, @"On empty stack no views should be asked");
 }
 
+- (void)testNextViewAnimated
+{
+  _viewsCount = 5;
+  [[self viewsStack] reloadData];
+  BOOL showedNextView = [[self viewsStack] showNextViewAnimated:NO];
+  XCTAssertEqual(_viewsReturnedCount, 3, @"Should load next view, but didn't");
+  XCTAssertEqual(showedNextView, YES, @"There are more than 3 views in datasource. Should be able to show next view");
+}
+
+- (void)testNextViewAnimatedWhenThereIsNoMoreViews
+{
+  _viewsCount = 2;
+  [[self viewsStack] reloadData];
+  BOOL showedNextView = [[self viewsStack] showNextViewAnimated:NO];
+  XCTAssertEqual(_viewsReturnedCount, 2, @"Shouldn't load next view as it already loaded");
+  XCTAssertEqual(showedNextView, YES, @"We showing first view now. Should be able to show next view");
+  showedNextView = [[self viewsStack] showNextViewAnimated:NO];
+  XCTAssertEqual(showedNextView, NO, @"We showing second view now. Should be able to show next view");
+}
+
+- (void)testDequeueReusableView
+{
+  [[self viewsStack] reloadData];
+  [[self viewsStack] showNextViewAnimated:NO];
+  UIView *reusableView = [[self viewsStack] dequeueReusableView];
+  XCTAssertNil(reusableView, @"Reusable view API doesn't work correctly");
+  XCTAssert(_viewsCreatedCount == 2, @"Only two views should be created at any given time");
+}
+
 #pragma mark - DSViewsStackDataSource, DSViewsStackDelegate
 - (NSUInteger)numberOfViewsInViewsStack:(DSViewsStack *)viewsStack
 {
@@ -102,7 +133,16 @@
 - (UIView *)viewsStack:(DSViewsStack *)viewsStack viewForIndex:(NSUInteger)viewIndex
 {
   _viewsReturnedCount++;
-  return [[UIView alloc] init];
+  
+  UIView *view = [viewsStack dequeueReusableView];
+  
+  if (view) {
+    return view;
+  }
+  else {
+    _viewsCreatedCount = 2;
+    return [[UIView alloc] init];
+  }
 }
 
 @end
