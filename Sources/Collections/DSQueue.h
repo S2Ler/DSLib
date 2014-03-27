@@ -26,7 +26,9 @@ NSFastEnumeration
 /** \return Poped object from the queue. The one which pushed last. */
 - (id)pop;
 
-/** Adds theObject to the end of queue */
+/** Adds theObject to the end of queue. 
+ @param theObject nil values ignored
+ */
 - (void)push:(id)theObject;
 /** Adds theObject to the beginning of the queue */
 - (void)pushBack:(id)theObject;

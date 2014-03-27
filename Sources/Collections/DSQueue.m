@@ -74,6 +74,10 @@
 
 - (void)push:(id)anObject
 {
+  if (!anObject) {
+    return;
+  }
+  
   if ([queue_ count] == capacity_) {
     [queue_ removeObjectAtIndex:0];
     [self updatedIsFullVariable];

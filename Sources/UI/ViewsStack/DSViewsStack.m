@@ -66,16 +66,18 @@
   return reusableView;
 }
 
-- (BOOL)showNextViewAnimated:(BOOL)animated
+- (BOOL)showNextViewAnimated:(BOOL)animated animationDirection:(DSViewsStackAnimationDirection)direction;
 {
-  UIView *removedView = [self removeViewFromTopAnimated:animated];
-  [[self reusableViews] push:removedView];
-  
   BOOL increased = [self increaseCurrentIndex];
   
-  if (increased) {
-    [self preloadViewAtIndex:[self currentIndex] + 1 animated:animated];
-  }
+  [self removeViewFromTopAnimated:animated
+                       completion:^(UIView *removedView) {
+                         if (increased) {
+                           [[self reusableViews] push:removedView];
+                           [self preloadViewAtIndex:[self currentIndex] + 1 animated:NO];
+                         }
+                       }
+               animationDirection:direction];
   
   return increased;
 }
@@ -108,11 +110,54 @@
 }
 
 /** @return removed view */
-- (UIView *)removeViewFromTopAnimated:(BOOL)animated
+- (void)removeViewFromTopAnimated:(BOOL)animated
+                       completion:(void(^)(UIView *))completion
+               animationDirection:(DSViewsStackAnimationDirection)direction
 {
   UIView *topView = [[self subviews] lastObject];
-  [topView removeFromSuperview];
-  return topView;
+  
+  if (animated && topView) {
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    [UIView animateWithDuration:0.25 animations:^{
+      CGFloat x = 0;// = -[topView frame].size.width/2.0;
+      CGFloat y = 0;// = [self frame].size.height/2.0;
+      
+      if (direction == DSViewsStackAnimationDirectionTop
+          || direction == DSViewsStackAnimationDirectionBottom) {
+        x = [self frame].size.width/2.0;
+        if (direction == DSViewsStackAnimationDirectionTop) {
+          y = -[topView frame].size.height/2.0;
+        }
+        else {
+          y = [self frame].size.height + [topView frame].size.height/2.0;
+        }
+      }
+      
+      if (direction == DSViewsStackAnimationDirectionLeft ||
+          direction == DSViewsStackAnimationDirectionRight) {
+        y = [self frame].size.height/2.0;
+        if (direction == DSViewsStackAnimationDirectionLeft) {
+          x = -[topView frame].size.width/2.0;
+        }
+        else {
+          x = +[self frame].size.width + [topView frame].size.width/2.0;
+        }
+      }
+      
+      [topView setCenter:CGPointMake(x, y)];
+    } completion:^(BOOL finished) {
+      [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+      [topView removeFromSuperview];
+      completion(topView);
+    }];
+  }
+  else if (topView) {
+    [topView removeFromSuperview];
+    completion(topView);
+  }
+  else {
+    completion(nil);
+  }
 }
 
 #pragma mark - views moving
@@ -166,11 +211,13 @@
       break;
     case UIGestureRecognizerStateEnded:
     case UIGestureRecognizerStateCancelled: {
-      if ([self isViewDraggedOut:view]) {
-        [self showNextViewAnimated:YES];
+      DSViewsStackAnimationDirection draggedSide = [self isViewDraggedOut:view];
+      
+      if (draggedSide == DSViewsStackAnimationDirectionNone) {
+        [self moveViewToInitialPosition:view animated:YES];
       }
       else {
-        [self moveViewToInitialPosition:view animated:YES];
+        [self showNextViewAnimated:YES animationDirection:draggedSide];
       }
     }
       
@@ -181,14 +228,22 @@
   }
 }
 
-- (BOOL)isViewDraggedOut:(UIView *)view
+- (DSViewsStackAnimationDirection)isViewDraggedOut:(UIView *)view
 {
   CGRect viewFrame = [view frame];
   CGRect boundsFrame = [self bounds];
   
   BOOL leftIntersection = viewFrame.origin.x < boundsFrame.origin.x;
   BOOL rightIntersection = CGRectGetMaxX(viewFrame) > CGRectGetMaxX(boundsFrame);
-  return leftIntersection || rightIntersection;
+  
+  if (leftIntersection) {
+    return DSViewsStackAnimationDirectionLeft;
+  }
+  else if (rightIntersection) {
+    return DSViewsStackAnimationDirectionRight;
+  }
+  
+  return DSViewsStackAnimationDirectionNone;
 }
 
 - (void)moveViewToInitialPosition:(UIView *)view animated:(BOOL)animated
