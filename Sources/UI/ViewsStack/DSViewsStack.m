@@ -11,6 +11,8 @@
 #import "DSViewsStackDataSource.h"
 #import "DSQueue.h"
 
+#define ROTATION_RADIUS 400
+
 @interface DSViewsStack ()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) DSQueue *reusableViews;
 @property (nonatomic, assign) NSUInteger currentIndex;
@@ -155,6 +157,10 @@
     case UIGestureRecognizerStateChanged: {
       CGPoint location = [recognizer locationInView:self];
       [view setCenter:location];
+      
+      double tangensAlpha = (location.x - [self getViewsCenter].x)/ROTATION_RADIUS;
+      double alpha = atan(tangensAlpha);
+      [view setTransform:CGAffineTransformMakeRotation(alpha)];
     }
       break;
     case UIGestureRecognizerStateEnded:
@@ -179,12 +185,19 @@
   CGRect viewFrame = [view frame];
   CGRect boundsFrame = [self bounds];
   
-  CGRect intersection = CGRectIntersection(viewFrame, boundsFrame);
-  return !CGRectEqualToRect(intersection, viewFrame);
+  BOOL leftIntersection = viewFrame.origin.x < boundsFrame.origin.x;
+  BOOL rightIntersection = CGRectGetMaxX(viewFrame) > CGRectGetMaxX(boundsFrame);
+  return leftIntersection || rightIntersection;
 }
 
 - (void)moveViewToInitialPosition:(UIView *)view animated:(BOOL)animated
 {
-  [view setCenter:CGPointMake([self frame].size.width/2.0, [self frame].size.height/2.0)];
+  [view setCenter:[self getViewsCenter]];
+  [view setTransform:CGAffineTransformIdentity];
+}
+
+- (CGPoint)getViewsCenter
+{
+  return CGPointMake([self frame].size.width/2.0, [self frame].size.height/2.0);
 }
 @end
