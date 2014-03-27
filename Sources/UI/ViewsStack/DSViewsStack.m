@@ -101,6 +101,7 @@
 {
   [self insertSubview:view atIndex:0];
   
+  [view setCenter:CGPointMake(-[view frame].size.width/2.0, [self frame].size.height/2.0)];
   [self moveViewToInitialPosition:view animated:animated];
   
   [self setupDraggingForView:view];
@@ -192,8 +193,15 @@
 
 - (void)moveViewToInitialPosition:(UIView *)view animated:(BOOL)animated
 {
-  [view setCenter:[self getViewsCenter]];
+  if (animated) {
+    [UIView beginAnimations:nil context:nil];
+  }
+    [view setCenter:[self getViewsCenter]];
   [view setTransform:CGAffineTransformIdentity];
+  
+  if (animated) {
+    [UIView commitAnimations];
+  }
 }
 
 - (CGPoint)getViewsCenter
