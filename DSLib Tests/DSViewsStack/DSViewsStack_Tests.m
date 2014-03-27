@@ -26,7 +26,10 @@
 - (void)setUp
 {
   [super setUp];
-  [self setViewsStack:[[DSViewsStack alloc] init]];
+  
+  [self setViewsStack:[[DSViewsStack alloc] initWithFrame:CGRectMake(100, 100, 120, 130)]];
+  [[[[UIApplication sharedApplication] delegate] window] addSubview:[self viewsStack]];
+  
   [[self viewsStack] setDelegate:self];
   [[self viewsStack] setDataSource:self];
   _viewsReturnedCount = 0;
@@ -121,7 +124,23 @@
   [[self viewsStack] showNextViewAnimated:NO];
   UIView *reusableView = [[self viewsStack] dequeueReusableView];
   XCTAssertNil(reusableView, @"Reusable view API doesn't work correctly");
-  XCTAssert(_viewsCreatedCount == 2, @"Only two views should be created at any given time");
+  XCTAssertEqual(_viewsCreatedCount, 2, @"Only two views should be created at any given time");
+}
+
+- (void)testAddedViewsCentered
+{
+  _viewsCount = 4;
+  [[self viewsStack] reloadData];
+  
+  for (UIView *testView in [[self viewsStack] subviews]) {
+    CGPoint testViewCenter = CGPointMake(CGRectGetMidX([testView frame]), CGRectGetMidY([testView frame]));
+    BOOL isCentered = CGPointEqualToPoint(testViewCenter,
+                                          CGPointMake([[self viewsStack] frame].size.width/2.0,
+                                                      [[self viewsStack] frame].size.height/2.0));
+    XCTAssert(isCentered == YES, @"View: %@, not centered in frame: %@",
+              testView,
+              NSStringFromCGRect([[self viewsStack] bounds]));
+  }
 }
 
 #pragma mark - DSViewsStackDataSource, DSViewsStackDelegate
@@ -140,8 +159,8 @@
     return view;
   }
   else {
-    _viewsCreatedCount = 2;
-    return [[UIView alloc] init];
+    _viewsCreatedCount++;
+    return [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 100)];
   }
 }
 

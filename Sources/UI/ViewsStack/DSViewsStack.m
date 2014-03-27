@@ -11,18 +11,32 @@
 #import "DSViewsStackDataSource.h"
 #import "DSQueue.h"
 
-@interface DSViewsStack ()
+@interface DSViewsStack ()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) DSQueue *reusableViews;
 @property (nonatomic, assign) NSUInteger currentIndex;
 @end
 
 @implementation DSViewsStack
 
-- (instancetype)init
+- (void)sharedInit
 {
-  self = [super init];
+  _reusableViews = [[DSQueue alloc] init];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+  self = [super initWithFrame:frame];
   if (self) {
-    _reusableViews = [[DSQueue alloc] init];
+    [self sharedInit];
+  }
+  return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+  self = [super initWithCoder:aDecoder];
+  if (self) {
+    [self sharedInit];
   }
   return self;
 }
@@ -84,6 +98,10 @@
 - (void)addView:(UIView *)view toBackAnimated:(BOOL)animated
 {
   [self insertSubview:view atIndex:0];
+  
+  [self moveViewToInitialPosition:view animated:animated];
+  
+  [self setupDraggingForView:view];
 }
 
 /** @return removed view */
@@ -113,4 +131,60 @@
   }
 }
 
+#pragma mark - dragging
+- (void)setupDraggingForView:(UIView *)view
+{
+  NSArray *gestureRecognizer = [view gestureRecognizers];
+  for (UIGestureRecognizer *recognizer in gestureRecognizer) {
+    if ([recognizer delegate] == self && [recognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
+      return;//already set up
+    }
+  }
+  
+  UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                                               action:@selector(viewDragging:)];
+  [panGesture setDelegate:self];
+  [view addGestureRecognizer:panGesture];
+}
+
+- (void)viewDragging:(UIPanGestureRecognizer *)recognizer
+{
+  UIView *view = [recognizer view];
+  
+  switch ([recognizer state]) {
+    case UIGestureRecognizerStateChanged: {
+      CGPoint location = [recognizer locationInView:self];
+      [view setCenter:location];
+    }
+      break;
+    case UIGestureRecognizerStateEnded:
+    case UIGestureRecognizerStateCancelled: {
+      if ([self isViewDraggedOut:view]) {
+        [self showNextViewAnimated:YES];
+      }
+      else {
+        [self moveViewToInitialPosition:view animated:YES];
+      }
+    }
+      
+      break;
+      
+    default:
+      break;
+  }
+}
+
+- (BOOL)isViewDraggedOut:(UIView *)view
+{
+  CGRect viewFrame = [view frame];
+  CGRect boundsFrame = [self bounds];
+  
+  CGRect intersection = CGRectIntersection(viewFrame, boundsFrame);
+  return !CGRectEqualToRect(intersection, viewFrame);
+}
+
+- (void)moveViewToInitialPosition:(UIView *)view animated:(BOOL)animated
+{
+  [view setCenter:CGPointMake([self frame].size.width/2.0, [self frame].size.height/2.0)];
+}
 @end
