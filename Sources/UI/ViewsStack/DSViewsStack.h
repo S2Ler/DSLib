@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, DSViewsStackAnimationDirection) {
 - (NSUInteger)numberOfViews;
 - (UIView *)viewForIndex:(NSUInteger)index;
 - (BOOL)showNextViewAnimated:(BOOL)animated animationDirection:(DSViewsStackAnimationDirection)direction;
+- (BOOL)showNextViewWithoutAnimation;
 
 - (void)reloadData;
 @end

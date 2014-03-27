@@ -102,7 +102,7 @@
 {
   _viewsCount = 5;
   [[self viewsStack] reloadData];
-  BOOL showedNextView = [[self viewsStack] showNextViewAnimated:NO];
+  BOOL showedNextView = [[self viewsStack] showNextViewWithoutAnimation];
   XCTAssertEqual(_viewsReturnedCount, 3, @"Should load next view, but didn't");
   XCTAssertEqual(showedNextView, YES, @"There are more than 3 views in datasource. Should be able to show next view");
 }
@@ -111,17 +111,17 @@
 {
   _viewsCount = 2;
   [[self viewsStack] reloadData];
-  BOOL showedNextView = [[self viewsStack] showNextViewAnimated:NO];
+  BOOL showedNextView = [[self viewsStack] showNextViewWithoutAnimation];
   XCTAssertEqual(_viewsReturnedCount, 2, @"Shouldn't load next view as it already loaded");
   XCTAssertEqual(showedNextView, YES, @"We showing first view now. Should be able to show next view");
-  showedNextView = [[self viewsStack] showNextViewAnimated:NO];
+  showedNextView = [[self viewsStack] showNextViewWithoutAnimation];
   XCTAssertEqual(showedNextView, NO, @"We showing second view now. Should be able to show next view");
 }
 
 - (void)testDequeueReusableView
 {
   [[self viewsStack] reloadData];
-  [[self viewsStack] showNextViewAnimated:NO];
+  [[self viewsStack] showNextViewWithoutAnimation];
   UIView *reusableView = [[self viewsStack] dequeueReusableView];
   XCTAssertNil(reusableView, @"Reusable view API doesn't work correctly");
   XCTAssertEqual(_viewsCreatedCount, 2, @"Only two views should be created at any given time");

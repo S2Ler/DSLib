@@ -82,6 +82,11 @@
   return increased;
 }
 
+- (BOOL)showNextViewWithoutAnimation
+{
+  return [self showNextViewAnimated:NO animationDirection:DSViewsStackAnimationDirectionNone];
+}
+
 #pragma mark - private
 - (void)resetCurrentIndex
 {
