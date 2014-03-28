@@ -150,6 +150,7 @@
       }
       
       [topView setCenter:CGPointMake(x, y)];
+      [self updateViewRotation:topView];
     } completion:^(BOOL finished) {
       [[UIApplication sharedApplication] endIgnoringInteractionEvents];
       [topView removeFromSuperview];
@@ -208,10 +209,8 @@
     case UIGestureRecognizerStateChanged: {
       CGPoint location = [recognizer locationInView:self];
       [view setCenter:location];
-      
-      double tangensAlpha = (location.x - [self getViewsCenter].x)/ROTATION_RADIUS;
-      double alpha = atan(tangensAlpha);
-      [view setTransform:CGAffineTransformMakeRotation(alpha)];
+
+      [self updateViewRotation:view];
     }
       break;
     case UIGestureRecognizerStateEnded:
@@ -268,4 +267,11 @@
 {
   return CGPointMake([self frame].size.width/2.0, [self frame].size.height/2.0);
 }
+
+- (void)updateViewRotation:(UIView *)view {
+  double tangensAlpha = ([view center].x - [self getViewsCenter].x)/ROTATION_RADIUS;
+  double alpha = atan(tangensAlpha);
+  [view setTransform:CGAffineTransformMakeRotation(alpha)];
+}
+
 @end
