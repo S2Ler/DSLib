@@ -5,6 +5,7 @@
 
 @class DSMessage;
 @class DSWebServiceQueue;
+@class DSMessageInterceptor;
 
 typedef void (^request_successful_block_t)(id<DSWebServiceRequest> request, DSWebServiceResponse *response, ds_results_completion completion);
 typedef void (^request_failed_block_t)(id<DSWebServiceRequest> request, DSMessage *errorMessage, ds_results_completion completion);
@@ -15,6 +16,9 @@ typedef void (^request_failed_block_t)(id<DSWebServiceRequest> request, DSMessag
 - (NSArray *)activeRequests;
 - (NSInteger)requestCount;
 @property (nonatomic, assign, getter=isSuspended) BOOL suspended;
+
++ (void)addMessageInterceptor:(DSMessageInterceptor *)interceptor;
+
 @end
 
 @interface DSQueueBasedRequestSender(Callbacks)

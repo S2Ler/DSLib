@@ -8,10 +8,13 @@
 #import "DSQueueBasedRequestSender+Private.h"
 #import "NSError+DSWebService.h"
 #import "NSString+Extras.h"
+#import "DSMessageInterceptor.h"
 
 #define COMPLETION_USER_INFO_KEY @"Completion"
 #define REQUEST_SUCCESSFUL_HANDLER_USER_INFO_KEY @"Request Successful"
 #define REQUEST_FAILED_HANDLER_USER_INFO_KEY @"Request Failed"
+
+static NSMapTable *interceptorsMap = nil;
 
 #pragma mark - private
 @interface DSQueueBasedRequestSender ()
@@ -100,6 +103,36 @@
   
   return _waitCompletionQueue;
 }
+
+#pragma mark - Message Interception
++ (NSMapTable *)interceptorsMap
+{
+  static dispatch_once_t pred = 0;
+  dispatch_once(&pred, ^{
+    interceptorsMap = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsStrongMemory
+                                                valueOptions:NSPointerFunctionsCopyIn
+                                                    capacity:2];
+  });
+  
+  return interceptorsMap;
+}
+
++ (void)addMessageInterceptor:(DSMessageInterceptor *)interceptor;
+{
+  DSMessage *message = [DSMessage messageWithDomain:[interceptor domain] code:[interceptor code]];
+  [[self interceptorsMap] setObject:[interceptor handler] forKey:message];
+}
+
++ (BOOL)hasInterceptorForMessage:(DSMessage *)message
+{
+  return [[self interceptorsMap] objectForKey:message] != nil;
+}
+
++ (ds_completion_handler)interceptorHandlerForMessage:(DSMessage *)message
+{
+  return [[self interceptorsMap] objectForKey:message];
+}
+
 @end
 
 
@@ -162,6 +195,13 @@
   }
   
   void (^finishWithErrorBlock)(DSMessage *errorMessage) = ^(DSMessage *errorMessage) {
+    BOOL thereIsGlobalHandler = [DSQueueBasedRequestSender hasInterceptorForMessage:errorMessage];
+    if (thereIsGlobalHandler) {
+      ds_completion_handler handler = [DSQueueBasedRequestSender interceptorHandlerForMessage:errorMessage];
+      handler(FAILED_WITH_MESSAGE, errorMessage);
+      errorMessage = nil;
+    }
+    
     if (requestFailedHandler) {
       requestFailedHandler(weakRequest, errorMessage, completion);
     }

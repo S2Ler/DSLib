@@ -183,6 +183,8 @@
 		092D8A6E18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */; };
 		093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 093859D517F1FDD400E8AB0E /* JSONKit.h */; };
 		093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		09423C7818E8244000F1B9E2 /* DSMessageInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09423C7918E8244000F1B9E2 /* DSMessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */; };
 		094C0208184D139900890D67 /* DSFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 094C0206184D139900890D67 /* DSFetchedResultsControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		094C0209184D139900890D67 /* DSFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 094C0207184D139900890D67 /* DSFetchedResultsControllerDelegate.m */; };
 		0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -348,6 +350,9 @@
 		09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
 		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
+		09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */; };
+		09EB9F9718ED680A0098CAFF /* DSPassCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */; };
+		09EB9F9818ED680A0098CAFF /* DSPassCodeControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */; };
 		09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09F7389E18A22EE6003FE0C2 /* DSDynamicPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */; };
 		09F84FDC18C5FA380047AA16 /* AFMultipartBodyStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FDA18C5FA380047AA16 /* AFMultipartBodyStream.h */; };
@@ -618,6 +623,8 @@
 		092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOutputStream+DSAdditions.m"; sourceTree = "<group>"; };
 		093859D517F1FDD400E8AB0E /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		093859D617F1FDD400E8AB0E /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMessageInterceptor.h; sourceTree = "<group>"; };
+		09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessageInterceptor.m; sourceTree = "<group>"; };
 		094C0206184D139900890D67 /* DSFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
 		094C0207184D139900890D67 /* DSFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
 		0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DSAdditions.h"; sourceTree = "<group>"; };
@@ -768,6 +775,9 @@
 		09D6223E1817DDF900A252D9 /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Parse.h"; sourceTree = "<group>"; };
 		09D6223F1817DDF900A252D9 /* NSError+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Parse.m"; sourceTree = "<group>"; };
 		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
+		09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPassCodeController.h; sourceTree = "<group>"; };
+		09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPassCodeController.m; sourceTree = "<group>"; };
+		09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPassCodeControllerDelegate.h; sourceTree = "<group>"; };
 		09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDynamicPropertyObject.h; sourceTree = "<group>"; };
 		09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDynamicPropertyObject.m; sourceTree = "<group>"; };
 		09F84FDA18C5FA380047AA16 /* AFMultipartBodyStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMultipartBodyStream.h; sourceTree = "<group>"; };
@@ -864,6 +874,7 @@
 		0903A2D317F0AC8300A21270 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				09EB9F9218ED680A0098CAFF /* PassCodeLock */,
 				0969F92418328AE100B3C4B2 /* UIImage-categories */,
 				09162C57180EE84900A0DEEF /* FieldValidationFramework */,
 				0992B7B31806ABB500F1A99C /* DragAndDrop */,
@@ -1357,6 +1368,8 @@
 				098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */,
 				098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */,
 				098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */,
+				09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */,
+				09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */,
 			);
 			path = DSQueueBasedRequestSender;
 			sourceTree = "<group>";
@@ -1636,6 +1649,16 @@
 			path = DSViewsStack;
 			sourceTree = "<group>";
 		};
+		09EB9F9218ED680A0098CAFF /* PassCodeLock */ = {
+			isa = PBXGroup;
+			children = (
+				09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */,
+				09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */,
+				09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */,
+			);
+			path = PassCodeLock;
+			sourceTree = "<group>";
+		};
 		62DD12589D387E03B1BB24F5 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1895,12 +1918,14 @@
 				0903A38F17F0AC9100A21270 /* NSArray+Extras.h in Headers */,
 				09B6DCEA1858F5C500FB1825 /* DSGeocoder+Factory.h in Headers */,
 				09B866B117F1E5C7003B1070 /* DSEntityDefinition.h in Headers */,
+				09423C7818E8244000F1B9E2 /* DSMessageInterceptor.h in Headers */,
 				0903A3FA17F0AC9100A21270 /* DSCheckButton.h in Headers */,
 				09C15FD518DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h in Headers */,
 				0903A3AB17F0AC9100A21270 /* UIApplication+DSAdditions.h in Headers */,
 				09B8669517F1E5C7003B1070 /* DSWebServiceArrayParam.h in Headers */,
 				09B866A717F1E5C7003B1070 /* DSWebServiceRequest.h in Headers */,
 				0903A3A117F0AC9100A21270 /* NSObject+DSAdditions.h in Headers */,
+				09EB9F9818ED680A0098CAFF /* DSPassCodeControllerDelegate.h in Headers */,
 				09162C6D180EE84900A0DEEF /* DSFieldValidationCriterion.h in Headers */,
 				09B866B517F1E5C7003B1070 /* DSWebServiceRequestsFactory.h in Headers */,
 				09B6DCEF1858F5C500FB1825 /* DSGeocoderFramework.h in Headers */,
@@ -1961,6 +1986,7 @@
 				09B866BF17F1E5C7003B1070 /* DSWebServiceURL.h in Headers */,
 				094C0208184D139900890D67 /* DSFetchedResultsControllerDelegate.h in Headers */,
 				09B6DCF31858F5C500FB1825 /* DSGeocodeProvider.h in Headers */,
+				09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */,
 				09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */,
 				0961834218C4E571006BBF89 /* DSReplaceRootViewControllerSegue.h in Headers */,
 				09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */,
@@ -2176,6 +2202,7 @@
 				097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */,
 				0903A3D217F0AC9100A21270 /* DSCFunctions.m in Sources */,
 				09B6DCF71858F5C500FB1825 /* DSGeocodeProviderOpenmap.m in Sources */,
+				09EB9F9718ED680A0098CAFF /* DSPassCodeController.m in Sources */,
 				0903A40A17F0B4DA00A21270 /* Reachability.m in Sources */,
 				0903A3DE17F0AC9100A21270 /* CStringsFunctions.m in Sources */,
 				0903A3B617F0AC9100A21270 /* UIScreen+Availability.m in Sources */,
@@ -2192,6 +2219,7 @@
 				097FCD77189FAAF300B9B041 /* MARTNSObject.m in Sources */,
 				093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */,
 				0903A3E017F0AC9100A21270 /* DSRuntimeHacker.m in Sources */,
+				09423C7918E8244000F1B9E2 /* DSMessageInterceptor.m in Sources */,
 				09B6DCEB1858F5C500FB1825 /* DSGeocoder+Factory.m in Sources */,
 				09B866B617F1E5C7003B1070 /* DSWebServiceRequestsFactory.m in Sources */,
 				09162C72180EE84900A0DEEF /* DSTextField.m in Sources */,

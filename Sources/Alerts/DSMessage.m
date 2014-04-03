@@ -169,6 +169,21 @@
   return (domainsEqual && codesEqual && paramsEqual);
 }
 
+- (BOOL)isEqual:(id)object
+{
+  if (![object isKindOfClass:[DSMessage class]]) {
+    return NO;
+  }
+  
+  return [self isEqualToMessage:object];
+}
+
+- (NSUInteger)hash
+{
+  NSString *hashString = [NSString stringWithFormat:@"%@%@%@", [self domain], [self code], [self params]];
+  return [hashString hash];
+}
+
 - (NSString *)description
 {
   NSString *str = [NSString stringWithFormat:@"domain: %@; code: %@",
