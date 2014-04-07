@@ -350,9 +350,9 @@
 		09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
 		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
-		09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */; };
+		09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09EB9F9718ED680A0098CAFF /* DSPassCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */; };
-		09EB9F9818ED680A0098CAFF /* DSPassCodeControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */; };
+		09EB9F9818ED680A0098CAFF /* DSPassCodeControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09F7389E18A22EE6003FE0C2 /* DSDynamicPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */; };
 		09F84FDC18C5FA380047AA16 /* AFMultipartBodyStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FDA18C5FA380047AA16 /* AFMultipartBodyStream.h */; };

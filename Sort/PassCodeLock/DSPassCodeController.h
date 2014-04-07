@@ -9,6 +9,8 @@
 @property (nonatomic, strong) NSString *uniqueID;
 @property (nonatomic, weak) id<DSPassCodeControllerDelegate> delegate;
 
+- (id)initWithUniqueID:(NSString *)uniqueID serviceName:(NSString *)serviceName;
+
 /** Store aPass to secure storage */
 - (void)storePassword:(NSString *)aPass;
 
@@ -20,8 +22,6 @@
 
 /** \return YES if PassCodeStorage was unlocked with unlockWithPassword: or unlock selectors or there is no stored passcode */
 - (BOOL)unlocked;
-
-- (void)lockIfNeeded;
 
 /** unlock PassCodeStorage if aPass is equal to stored in the secure storage */
 - (void)unlockWithPassCode:(NSString *)aPass;
