@@ -130,8 +130,7 @@
 
 - (BOOL)isPasswordMatchWithStored:(NSString *)aMatchPassword
 {
-  NSData *passwordData = [self searchKeychainDataCopyMatching:[self PASSCODE_IDENTIFIER]];
-  NSString *storedPassCode = [[NSString alloc] initWithData:passwordData encoding:NSUTF8StringEncoding];
+  NSString *storedPassCode = (NSString *)[self searchKeychainValueCopyMatching:[self PASSCODE_IDENTIFIER]];
   BOOL isMatch = [aMatchPassword isEqualToString:storedPassCode];
   return isMatch;
 }
