@@ -55,13 +55,15 @@
   NSString *body = NSLocalizedStringFromTable(localizationKey, [self localizationTable], nil);
   
   if ([[self params] count] > 0) {
-    __unsafe_unretained id  * argList = (__unsafe_unretained id  *) calloc(1UL, sizeof(id) * [[self params] count]);
-    for (NSInteger i = 0; i < [[self params] count]; i++) {
-      argList[i] = [[self params] objectAtIndex:i];
-    }
+    NSString *find = @"%@";
     
-    NSString* result = [[NSString alloc] initWithFormat:body, *argList];
-    free (argList);
+    NSString *result = body;
+    for (NSString *arg in [self params]) {
+      NSRange range = [result rangeOfString:find]; // this will find the first occurrence of the string
+      if (range.location != NSNotFound) {
+        result = [result stringByReplacingCharactersInRange:range withString:arg];
+      }
+    }
     return result;
   }
   else if ([body isEqualToString:localizationKey] && [self error]) {
