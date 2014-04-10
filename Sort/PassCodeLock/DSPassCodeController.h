@@ -24,6 +24,6 @@
 - (BOOL)unlocked;
 
 /** unlock PassCodeStorage if aPass is equal to stored in the secure storage */
-- (void)unlockWithPassCode:(NSString *)aPass;
+- (BOOL)unlockWithPassCode:(NSString *)aPass;
 
 @end

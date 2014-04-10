@@ -146,12 +146,13 @@
   return ![self isPassCodeEntered] || [self isUnlocked];
 }
 
-- (void)unlockWithPassCode:(NSString *)aPass
+- (BOOL)unlockWithPassCode:(NSString *)aPass
 {
   BOOL isPassesMatch = [self isPasswordMatchWithStored:aPass];
   if (isPassesMatch) {
     [self setIsUnlocked:YES];
   }
+  return isPassesMatch;
 }
 
 - (void)lock
