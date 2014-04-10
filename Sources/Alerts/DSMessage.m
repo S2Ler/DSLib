@@ -55,13 +55,14 @@
   NSString *body = NSLocalizedStringFromTable(localizationKey, [self localizationTable], nil);
   
   if ([[self params] count] > 0) {
-    NSRange range = NSMakeRange(0, [[self params] count]);
+    __unsafe_unretained id  * argList = (__unsafe_unretained id  *) calloc(1UL, sizeof(id) * [[self params] count]);
+    for (NSInteger i = 0; i < [[self params] count]; i++) {
+      argList[i] = [[self params] objectAtIndex:i];
+    }
     
-    NSMutableData* data = [NSMutableData dataWithLength: sizeof(id) * [[self params] count]];
-    
-    [[self params] getObjects: (__unsafe_unretained id *)data.mutableBytes range:range];
-
-    return [[NSString alloc] initWithFormat:body arguments:[data mutableBytes]];
+    NSString* result = [[NSString alloc] initWithFormat:body, *argList];
+    free (argList);
+    return result;
   }
   else if ([body isEqualToString:localizationKey] && [self error]) {
       return [DSMessage messageBodyFromError:[self error]];
