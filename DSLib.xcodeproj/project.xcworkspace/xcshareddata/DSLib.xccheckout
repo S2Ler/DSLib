@@ -5,13 +5,15 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5B694AB7-37C8-4845-9096-2A62C56EC60B</string>
+	<string>CE334091-40E7-4C6C-BB87-CE2136CE3D6E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>DSLib</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3436080B-9ABE-4680-B920-A82F025A840D</key>
 		<string>ssh://bitbucket.org/diejmon/dslib.git</string>
+		<key>7013BDBB-E368-4B78-85E8-9CE8F5C92EC6</key>
+		<string>https://github.com/diejmon/MAObjCRuntime.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DSLib.xcodeproj/project.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>3436080B-9ABE-4680-B920-A82F025A840D</key>
 		<string>../..</string>
+		<key>7013BDBB-E368-4B78-85E8-9CE8F5C92EC6</key>
+		<string>../../MAObjCRuntime</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://bitbucket.org/diejmon/dslib.git</string>
@@ -35,6 +39,14 @@
 			<string>3436080B-9ABE-4680-B920-A82F025A840D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>DSLib</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7013BDBB-E368-4B78-85E8-9CE8F5C92EC6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MAObjCRuntime</string>
 		</dict>
 	</array>
 </dict>

@@ -61,7 +61,7 @@
     for (NSString *arg in [self params]) {
       NSRange range = [result rangeOfString:find]; // this will find the first occurrence of the string
       if (range.location != NSNotFound) {
-        result = [result stringByReplacingCharactersInRange:range withString:arg];
+        result = [result stringByReplacingCharactersInRange:range withString:[arg description]];
       }
     }
     return result;
