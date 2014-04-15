@@ -1,16 +1,12 @@
-// UIImage+Alpha.m
-// Created by Trevor Harmon on 9/20/09.
-// Free for personal or commercial use, with or without modification.
-// No warranty is expressed or implied.
 
-#import "UIImage+Alpha.h"
+#import "UIImage+DSAdditions.h"
 
 // Private helper methods
 @interface UIImage ()
 - (CGImageRef)newBorderMask:(NSUInteger)borderSize size:(CGSize)size;
 @end
 
-@implementation UIImage (Alpha)
+@implementation UIImage (DSAdditions)
 
 // Returns true if the image has an alpha layer
 - (BOOL)hasAlpha {
@@ -88,6 +84,34 @@
     return transparentBorderImage;
 }
 
+- (UIImage *)maskedImageWithColor:(UIColor *)color
+{
+  //create context
+  UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
+  CGContextRef context = UIGraphicsGetCurrentContext();
+  
+  //drawingcode
+  //bg
+  CGRect rect = CGRectMake(0.0, 0.0, self.size.width, self.size.height);
+  
+  [self drawInRect:rect];
+  
+  //fg
+  CGContextSetBlendMode(context, kCGBlendModeMultiply);
+  
+  CGContextSetFillColorWithColor(context, color.CGColor);
+  CGContextFillRect(context, rect);
+  
+  //mask
+  [self drawInRect:rect blendMode:kCGBlendModeDestinationIn alpha:1.0];
+  
+  //end
+  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  
+  return image;
+}
+
 #pragma mark -
 #pragma mark Private helper methods
 
@@ -123,5 +147,6 @@
     
     return maskImageRef;
 }
+
 
 @end

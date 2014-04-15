@@ -4,7 +4,7 @@
 // No warranty is expressed or implied.
 
 #import "UIImage+RoundedCorner.h"
-#import "UIImage+Alpha.h"
+#import "UIImage+DSAdditions.h"
 
 // Private helper methods
 @interface UIImage ()
