@@ -43,6 +43,11 @@
   return self;
 }
 
+- (id)init
+{
+  return [self initWithFrame:CGRectZero];
+}
+
 - (NSUInteger)numberOfViews
 {
   return [[self dataSource] numberOfViewsInViewsStack:self];
@@ -204,10 +209,17 @@
 - (void)viewDragging:(UIPanGestureRecognizer *)recognizer
 {
   UIView *view = [recognizer view];
-  
+  static CGPoint startPoint;
   switch ([recognizer state]) {
+    case UIGestureRecognizerStateBegan: {
+      CGPoint location = [recognizer locationInView:self];
+      startPoint = location;
+    }
     case UIGestureRecognizerStateChanged: {
       CGPoint location = [recognizer locationInView:self];
+      CGPoint center = CGPointMake(CGRectGetMidX([self bounds]), CGRectGetMidY([self bounds]));;
+      location.x -= startPoint.x - center.x;
+      location.y -= startPoint.y - center.y;
       [view setCenter:location];
 
       [self updateViewRotation:view];
@@ -237,8 +249,8 @@
   CGRect viewFrame = [view frame];
   CGRect boundsFrame = [self bounds];
   
-  BOOL leftIntersection = viewFrame.origin.x < boundsFrame.origin.x;
-  BOOL rightIntersection = CGRectGetMaxX(viewFrame) > CGRectGetMaxX(boundsFrame);
+  BOOL leftIntersection = viewFrame.origin.x + 200 < boundsFrame.origin.x;
+  BOOL rightIntersection = CGRectGetMaxX(viewFrame) - 200 > CGRectGetMaxX(boundsFrame);
   
   if (leftIntersection) {
     return DSViewsStackAnimationDirectionLeft;
