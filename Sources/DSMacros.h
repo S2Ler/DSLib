@@ -10,7 +10,7 @@ _sharedObject = block(); \
 }); \
 return _sharedObject;
 
-#define iOS7 ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 7)
+#define iOS7orHigher ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 7)
 
 #define ASSERT_MAIN_THREAD NSAssert([[NSThread currentThread] isEqual:[NSThread mainThread]], @"%@:%@ should run main thread.", NSStringFromClass([self class]), NSStringFromSelector(_cmd))
 
