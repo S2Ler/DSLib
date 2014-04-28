@@ -21,7 +21,7 @@
 
 - (NSString *)__descriptionWithoutObjects:(NSArray *)objectsToExclude
 {
-  NSMutableString *description = [NSMutableString stringWithFormat:@"{\"class\": %@, \"params\":{",
+  NSMutableString *description = [NSMutableString stringWithFormat:@"{\"class\": \"%@\", \"params\":{",
                                                                    NSStringFromClass([self class])];
 
   unsigned int count;
@@ -44,12 +44,15 @@
     if (!shouldExcludePropertyValue) {
       NSString *propertyDescription = [propertyValue description];
 
-      [description appendFormat:@"\"%@\": %@",
+      [description appendFormat:@"\"%@\": \"%@\"",
                                 propertyName,
                                 propertyDescription];
+      if (idx < count - 1) {
+        [description appendString:@", "];
+      }
     }
   }
-  [description appendFormat:@"}"];
+  [description appendFormat:@"}}"];
 
   free(properties);
 
