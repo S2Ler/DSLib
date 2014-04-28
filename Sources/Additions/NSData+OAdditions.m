@@ -25,7 +25,7 @@
 }
 
 - (NSString *)hexString
-{
+{  
   NSUInteger capacity = [self length] * 2;
   NSMutableString *stringBuffer = [NSMutableString stringWithCapacity:capacity];
   const unsigned char *dataBuffer = [self bytes];

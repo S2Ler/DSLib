@@ -353,6 +353,8 @@
 		09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09EB9F9718ED680A0098CAFF /* DSPassCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */; };
 		09EB9F9818ED680A0098CAFF /* DSPassCodeControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09F1B7831909983A0031B0F6 /* FBEncryptorAES.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F1B7811909983A0031B0F6 /* FBEncryptorAES.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09F1B7841909983A0031B0F6 /* FBEncryptorAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F1B7821909983A0031B0F6 /* FBEncryptorAES.m */; };
 		09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09F7389E18A22EE6003FE0C2 /* DSDynamicPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */; };
 		09F84FDC18C5FA380047AA16 /* AFMultipartBodyStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FDA18C5FA380047AA16 /* AFMultipartBodyStream.h */; };
@@ -778,6 +780,8 @@
 		09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPassCodeController.h; sourceTree = "<group>"; };
 		09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPassCodeController.m; sourceTree = "<group>"; };
 		09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPassCodeControllerDelegate.h; sourceTree = "<group>"; };
+		09F1B7811909983A0031B0F6 /* FBEncryptorAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBEncryptorAES.h; sourceTree = "<group>"; };
+		09F1B7821909983A0031B0F6 /* FBEncryptorAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBEncryptorAES.m; sourceTree = "<group>"; };
 		09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDynamicPropertyObject.h; sourceTree = "<group>"; };
 		09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDynamicPropertyObject.m; sourceTree = "<group>"; };
 		09F84FDA18C5FA380047AA16 /* AFMultipartBodyStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMultipartBodyStream.h; sourceTree = "<group>"; };
@@ -1659,6 +1663,15 @@
 			path = PassCodeLock;
 			sourceTree = "<group>";
 		};
+		09F1B7801909983A0031B0F6 /* FBEncryptor */ = {
+			isa = PBXGroup;
+			children = (
+				09F1B7811909983A0031B0F6 /* FBEncryptorAES.h */,
+				09F1B7821909983A0031B0F6 /* FBEncryptorAES.m */,
+			);
+			path = FBEncryptor;
+			sourceTree = "<group>";
+		};
 		62DD12589D387E03B1BB24F5 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1759,6 +1772,7 @@
 		AED6C1981465E55000D9B44E /* DSLib */ = {
 			isa = PBXGroup;
 			children = (
+				09F1B7801909983A0031B0F6 /* FBEncryptor */,
 				097FCD5B189FAAF300B9B041 /* MAObjCRuntime */,
 				0903A2D317F0AC8300A21270 /* Sort */,
 				AED6C1AB1465E77600D9B44E /* Sources */,
@@ -1831,6 +1845,7 @@
 				09F84FE018C5FA900047AA16 /* AFStreamingMultipartFormData.h in Headers */,
 				0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */,
 				0982EB7F18E1EA6000F9DFF2 /* DSViewsStackDataSource.h in Headers */,
+				09F1B7831909983A0031B0F6 /* FBEncryptorAES.h in Headers */,
 				09162C93180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h in Headers */,
 				0903A38C17F0AC9100A21270 /* CATransition+AnimationsBuilder.h in Headers */,
 				09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */,
@@ -2234,6 +2249,7 @@
 				09162C9C180EEEB900A0DEEF /* DSCriterionDescriptionViewController.m in Sources */,
 				0903A3AA17F0AC9100A21270 /* UIAlertView+Additions.m in Sources */,
 				09162C96180EECC100A0DEEF /* WEPopoverContainerView.m in Sources */,
+				09F1B7841909983A0031B0F6 /* FBEncryptorAES.m in Sources */,
 				0903A39817F0AC9100A21270 /* NSDictionary+JSONDictionary.m in Sources */,
 				0903A3C017F0AC9100A21270 /* UIView+XibLoading.m in Sources */,
 				0903A3B217F0AC9100A21270 /* UIDevice+Additions.m in Sources */,
