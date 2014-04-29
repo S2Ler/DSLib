@@ -55,7 +55,9 @@
 
 - (UIView *)viewForIndex:(NSUInteger)index
 {
-  return [[self dataSource] viewsStack:self viewForIndex:index];
+  UIView *view = [[self dataSource] viewsStack:self viewForIndex:index];
+  [view setTransform:CGAffineTransformIdentity];
+  return view;
 }
 
 - (void)reloadData
