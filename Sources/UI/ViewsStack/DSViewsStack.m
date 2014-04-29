@@ -114,6 +114,7 @@
   [self insertSubview:view atIndex:0];
   
   [view setCenter:CGPointMake(-[view frame].size.width/2.0, [self frame].size.height/2.0)];
+  [view setFrame:[self bounds]];
   [self moveViewToInitialPosition:view animated:animated];
   
   [self setupDraggingForView:view];
