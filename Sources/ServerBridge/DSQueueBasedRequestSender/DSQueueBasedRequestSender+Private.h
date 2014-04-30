@@ -10,6 +10,10 @@
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
                                       completion:(ds_results_completion)completion
                         requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler;
+- (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
+                                      completion:(ds_results_completion)completion
+                        requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler
+                                   callbackQueue:(dispatch_queue_t)callbackQueue;
 
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
                                       completion:(ds_results_completion)completion;

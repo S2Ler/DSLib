@@ -176,8 +176,8 @@
   [[self url] applyParams:_params];
 
   if ([[self url] HTTPMethod] == DSWebServiceURLHTTPMethodPOST &&
-    [self POSTData] == nil) {
-//    [self setPOSTData:[[self url] paramsDataForPOST]];
+    [self POSTData] == nil && ![self POSTDataPath]) {
+    [self setPOSTData:[[self url] paramsDataForPOST]];
   }
   NSString *urlString = [[self url] urlString];
 

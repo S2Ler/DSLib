@@ -133,7 +133,7 @@
 {
   NSMutableString *urlStringWithParams = [[self urlWithoutParams] mutableCopy];
 
-  if (YES || [self HTTPMethod] != DSWebServiceURLHTTPMethodPOST) {
+  if ([self HTTPMethod] != DSWebServiceURLHTTPMethodPOST) {
     NSMutableString *GETParams = [NSMutableString string];
 
     NSUInteger paramsCount = [[theParams stringParamNames] count];

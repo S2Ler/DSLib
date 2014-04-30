@@ -156,6 +156,19 @@ static NSMapTable *interceptorsMap = nil;
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
                                       completion:(ds_results_completion)completion
                         requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler
+                                   callbackQueue:(dispatch_queue_t)callbackQueue;
+{
+  return [self sendRequestWithParams:params
+                          completion:completion
+            requestSuccessfulHandler:requestSuccessfulHandler
+                requestFailedHandler:nil
+                            userInfo:nil
+                       callbackQueue:callbackQueue];
+}
+
+- (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
+                                      completion:(ds_results_completion)completion
+                        requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler
                                         userInfo:(NSDictionary *)userInfo
 {
   return [self sendRequestWithParams:params

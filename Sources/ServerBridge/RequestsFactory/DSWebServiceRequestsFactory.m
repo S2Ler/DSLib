@@ -88,7 +88,7 @@
     [request setRunLoopThread:[self networkRequestThread]];
     [request setPOSTDataFileName:[theParams POSTDataFileName]];
     [request setSendRawPOSTData:NO];
-    [request setPOSTDataKey:@"key"];
+    [request setPOSTDataKey:@"json_request"];
     return request;
   }
   else {//FakeRequests
