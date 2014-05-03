@@ -26,4 +26,5 @@
  */
 - (NSString *)keypathForGetter:(NSString *)getter;
 
+- (NSString *)dateFormatForGetter:(NSString *)getter;
 @end

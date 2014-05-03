@@ -13,7 +13,7 @@
 #import "DSMacros.h"
 
 @interface DSDynamicPropertyObject ()
-
+@property (nonatomic, strong) NSMutableDictionary *dateFormatters;
 @end
 
 @implementation DSDynamicPropertyObject
@@ -22,6 +22,7 @@
   self = [super init];
   if (self) {
     _container = container;
+    _dateFormatters = [[NSMutableDictionary alloc] initWithCapacity:2];
   }
   return self;
 }
@@ -139,7 +140,20 @@
     date = dateObject;
   }
   else if ([dateObject isKindOfClass:[NSString class]]) {
-    date = [NSDate dateWithTimeIntervalSince1970:[dateObject doubleValue]];
+    NSString *customDateFormat = [self dateFormatForGetter:getterName];
+    
+    if (customDateFormat) {
+      NSDateFormatter *dateFormatter = [[self dateFormatters] objectForKey:customDateFormat];
+      if (!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:customDateFormat];
+        [[self dateFormatters] setObject:dateFormatter forKey:customDateFormat];
+      }
+      date = [dateFormatter dateFromString:dateObject];
+    }
+    else {
+      date = [NSDate dateWithTimeIntervalSince1970:[dateObject doubleValue]];
+    }
   }
 
   return date;
@@ -178,5 +192,16 @@
   }
   
   return values;
+}
+
+- (NSString *)dateFormatForGetter:(NSString *)getter
+{
+  return nil;
+}
+
+- (NSString *)keypathForGetter:(NSString *)getter
+{
+  ASSERT_ABSTRACT_METHOD;
+  return nil;
 }
 @end
