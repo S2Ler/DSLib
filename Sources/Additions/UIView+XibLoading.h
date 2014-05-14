@@ -3,6 +3,6 @@
 
 @interface UIView (XibLoading)
 /** Class name and xib name should be the same. */
-+ (id)newViewFromXib;
-
++ (instancetype)newViewFromXib;
++ (id)newViewFromXibAtIndex:(NSUInteger)index;
 @end
