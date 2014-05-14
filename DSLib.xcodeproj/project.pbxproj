@@ -257,6 +257,8 @@
 		09A60439182A663C00F57F89 /* DSValueChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0903A38A17F0AC9100A21270 /* DSValueChooserViewController.xib */; };
 		09A6043A182A663C00F57F89 /* DSMessagesLocalization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62DD157786FD5902D0D9B3A8 /* DSMessagesLocalization.strings */; };
 		09A6043B182A663C00F57F89 /* DSConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DD12A2DD6F6F278480844E /* DSConfiguration.plist */; };
+		09A83F3B19238ABE008DE30F /* DSRedirectLogs.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A83F3919238ABE008DE30F /* DSRedirectLogs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09A83F3C19238ABE008DE30F /* DSRedirectLogs.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A83F3A19238ABE008DE30F /* DSRedirectLogs.m */; };
 		09AD5B2018A8F0E3001FC5D1 /* DSConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 09AD5B1E18A8F0E3001FC5D1 /* DSConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09AD5B2118A8F0E3001FC5D1 /* DSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD5B1F18A8F0E3001FC5D1 /* DSConstants.m */; };
 		09B6DCE51858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCCD1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -678,6 +680,8 @@
 		09A60418182A65CF00F57F89 /* DSLibBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DSLibBundle-Info.plist"; sourceTree = "<group>"; };
 		09A6041A182A65CF00F57F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		09A6041C182A65CF00F57F89 /* DSLibBundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLibBundle-Prefix.pch"; sourceTree = "<group>"; };
+		09A83F3919238ABE008DE30F /* DSRedirectLogs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRedirectLogs.h; sourceTree = "<group>"; };
+		09A83F3A19238ABE008DE30F /* DSRedirectLogs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRedirectLogs.m; sourceTree = "<group>"; };
 		09AD5B1E18A8F0E3001FC5D1 /* DSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSConstants.h; sourceTree = "<group>"; };
 		09AD5B1F18A8F0E3001FC5D1 /* DSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSConstants.m; sourceTree = "<group>"; };
 		09B6DCCD1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSChoosePlacemarkAnnotation.h; sourceTree = "<group>"; };
@@ -1402,6 +1406,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		09A83F3819238A49008DE30F /* LogsRedirect */ = {
+			isa = PBXGroup;
+			children = (
+				09A83F3919238ABE008DE30F /* DSRedirectLogs.h */,
+				09A83F3A19238ABE008DE30F /* DSRedirectLogs.m */,
+			);
+			path = LogsRedirect;
+			sourceTree = "<group>";
+		};
 		09B6DCCC1858F5C500FB1825 /* DSGeocoder */ = {
 			isa = PBXGroup;
 			children = (
@@ -1766,6 +1779,7 @@
 		AED6C1981465E55000D9B44E /* DSLib */ = {
 			isa = PBXGroup;
 			children = (
+				09A83F3819238A49008DE30F /* LogsRedirect */,
 				09F1B7801909983A0031B0F6 /* FBEncryptor */,
 				097FCD5B189FAAF300B9B041 /* MAObjCRuntime */,
 				0903A2D317F0AC8300A21270 /* Sort */,
@@ -1878,6 +1892,7 @@
 				0903A39917F0AC9100A21270 /* NSFileManager+Directories.h in Headers */,
 				0903A39117F0AC9100A21270 /* NSArray+ObjectsQuery.h in Headers */,
 				0903A3E717F0AC9100A21270 /* QWatchedOperationQueue.h in Headers */,
+				09A83F3B19238ABE008DE30F /* DSRedirectLogs.h in Headers */,
 				0903A3E517F0AC9100A21270 /* QRunLoopOperation.h in Headers */,
 				0903A2E217F0AC8300A21270 /* DSArrayChangeApplier.h in Headers */,
 				0903A39317F0AC9100A21270 /* NSData+OAdditions.h in Headers */,
@@ -2285,6 +2300,7 @@
 				0903A3A617F0AC9100A21270 /* NSString+Encoding.m in Sources */,
 				09F84FE618C5FB0B0047AA16 /* AFHTTPBodyPart.m in Sources */,
 				0903A3BC17F0AC9100A21270 /* UIView+Resizing.m in Sources */,
+				09A83F3C19238ABE008DE30F /* DSRedirectLogs.m in Sources */,
 				0903A3E217F0AC9100A21270 /* DSSettings_impl.m in Sources */,
 				0903A3A417F0AC9100A21270 /* NSObject+Observing.m in Sources */,
 				09B866B417F1E5C7003B1070 /* DSWebServiceOperationType.m in Sources */,

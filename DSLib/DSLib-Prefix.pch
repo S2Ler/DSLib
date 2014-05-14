@@ -6,4 +6,7 @@
   #import <Foundation/Foundation.h>
   #import <UIKit/UIKit.h>
 #import "DSConstants.h"
+
+#import "DSRedirectLogs.h"
+#define NSLog(__FORMAT__, ...) DSRedirectLog(__FORMAT__, ##__VA_ARGS__)
 #endif
