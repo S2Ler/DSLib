@@ -9,7 +9,9 @@
 #pragma mark - include
 #import "DSViewsStack.h"
 #import "DSViewsStackDataSource.h"
+#import "DSViewsStackDelegate.h"
 #import "DSQueue.h"
+#import "DSMacros.h"
 
 #define ROTATION_RADIUS 400
 
@@ -131,39 +133,49 @@
   
   if (animated && topView) {
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    [UIView animateWithDuration:0.25 animations:^{
-      CGFloat x = 0;// = -[topView frame].size.width/2.0;
-      CGFloat y = 0;// = [self frame].size.height/2.0;
-      
-      if (direction == DSViewsStackAnimationDirectionTop
-          || direction == DSViewsStackAnimationDirectionBottom) {
-        x = [self frame].size.width/2.0;
-        if (direction == DSViewsStackAnimationDirectionTop) {
-          y = -[topView frame].size.height/2.0;
-        }
-        else {
-          y = [self frame].size.height + [topView frame].size.height/2.0;
-        }
-      }
-      
-      if (direction == DSViewsStackAnimationDirectionLeft ||
-          direction == DSViewsStackAnimationDirectionRight) {
-        y = [self frame].size.height/2.0;
-        if (direction == DSViewsStackAnimationDirectionLeft) {
-          x = -[topView frame].size.width/2.0;
-        }
-        else {
-          x = +[self frame].size.width + [topView frame].size.width/2.0;
-        }
-      }
-      
-      [topView setCenter:CGPointMake(x, y)];
-      [self updateViewRotation:topView];
-    } completion:^(BOOL finished) {
-      [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-      [topView removeFromSuperview];
-      completion(topView);
-    }];
+    
+    if ([[self delegate] respondsToSelector:@selector(viewsStack:willAutomaticallyMoveViewOutOfScreen:direction:)]) {
+      [[self delegate] viewsStack:self willAutomaticallyMoveViewOutOfScreen:topView direction:direction];
+    }
+
+    DISPATCH_AFTER_SECONDS(1, ^{
+      [UIView animateWithDuration:0.25
+                       animations:^{
+                         CGFloat x = 0;// = -[topView frame].size.width/2.0;
+                         CGFloat y = 0;// = [self frame].size.height/2.0;
+                         
+                         if (direction == DSViewsStackAnimationDirectionTop
+                             || direction == DSViewsStackAnimationDirectionBottom) {
+                           x = [self frame].size.width/2.0;
+                           if (direction == DSViewsStackAnimationDirectionTop) {
+                             y = -[topView frame].size.height/2.0;
+                           }
+                           else {
+                             y = [self frame].size.height + [topView frame].size.height/2.0;
+                           }
+                         }
+                         
+                         if (direction == DSViewsStackAnimationDirectionLeft ||
+                             direction == DSViewsStackAnimationDirectionRight) {
+                           y = [self frame].size.height/2.0;
+                           if (direction == DSViewsStackAnimationDirectionLeft) {
+                             x = -[topView frame].size.width/2.0;
+                           }
+                           else {
+                             x = +[self frame].size.width + [topView frame].size.width/2.0;
+                           }
+                         }
+                         
+                         [topView setCenter:CGPointMake(x, y)];
+                         [self updateViewRotation:topView];
+                       } completion:^(BOOL finished) {
+                         [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+                         [topView removeFromSuperview];
+                         completion(topView);
+                       }];
+    });
+    
+    
   }
   else if (topView) {
     [topView removeFromSuperview];

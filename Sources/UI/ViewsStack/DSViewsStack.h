@@ -7,17 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DSViewsStackAnimationDirection.h"
 
 @protocol DSViewsStackDelegate;
 @protocol DSViewsStackDataSource;
-
-typedef NS_ENUM(NSUInteger, DSViewsStackAnimationDirection) {
-  DSViewsStackAnimationDirectionNone = 0,
-  DSViewsStackAnimationDirectionLeft,
-  DSViewsStackAnimationDirectionBottom,
-  DSViewsStackAnimationDirectionRight,
-  DSViewsStackAnimationDirectionTop
-};
 
 @interface DSViewsStack : UIView
 @property (nonatomic, weak) id<DSViewsStackDelegate> delegate;

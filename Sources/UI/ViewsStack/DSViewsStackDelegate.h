@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol DSViewsStackDelegate <NSObject>
-
+@optional
+- (void)                   viewsStack:(DSViewsStack *)viewsStack
+ willAutomaticallyMoveViewOutOfScreen:(UIView *)view
+                            direction:(DSViewsStackAnimationDirection)direction;
 @end
