@@ -3,6 +3,8 @@
 #import "DSCoreDataObjectsObserver.h"
 @import CoreData;
 
+static __strong DSCoreDataObjectsObserver *shared = nil;
+
 @interface DSCoreDataObjectsObserver ()
 @property (nonatomic, strong) NSMapTable *delegates;
 @end
@@ -12,6 +14,20 @@
 - (void)dealloc
 {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
++ (void)setSharedObserver:(DSCoreDataObjectsObserver *)observer
+{
+  @synchronized(self) {
+    shared = observer;
+  }
+}
+
++ (instancetype)sharedObserver
+{
+  @synchronized(self) {
+    return shared;
+  }
 }
 
 - (id)initWithContext:(NSManagedObjectContext *)context
