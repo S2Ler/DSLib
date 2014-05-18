@@ -4,7 +4,7 @@
 @import CoreData;
 
 @interface DSCoreDataObjectsObserver ()
-@property (nonatomic, strong) NSPredicate *objectsFilter;
+@property (nonatomic, strong) NSMapTable *delegates;
 @end
 
 @implementation DSCoreDataObjectsObserver
@@ -14,12 +14,14 @@
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (id)initWithPredicate:(NSPredicate *)objectsFilter context:(NSManagedObjectContext *)context
+- (id)initWithContext:(NSManagedObjectContext *)context
 {
   self = [super init];
   if (self) {
-    _objectsFilter = objectsFilter;
-
+    _delegates = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsWeakMemory
+                                           valueOptions:NSPointerFunctionsStrongMemory
+                                               capacity:3];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(contextDidSave:)
                                                  name:NSManagedObjectContextDidSaveNotification
@@ -28,27 +30,48 @@
   return self;
 }
 
+- (void)addDelegate:(id<DSCoreDataObjectsObserverDelegate>)delegate filteringPredicate:(NSPredicate *)predicate
+{
+  [[self delegates] setObject:predicate forKey:delegate];
+}
+
+- (void)removeDelegate:(id<DSCoreDataObjectsObserverDelegate>)delegate
+{
+  [[self delegates] removeObjectForKey:delegate];
+}
+
 - (void)contextDidSave:(NSNotification *)notification
 {
   NSManagedObjectContext *context = [notification object];
   
-  NSSet *updatedObjects = [[context updatedObjects] filteredSetUsingPredicate:[self objectsFilter]];
-  if ([updatedObjects count] > 0 &&
-      [[self delegate] respondsToSelector:@selector(coreDataObjectsObserver:didUpdateObjects:)]) {
-    [[self delegate] coreDataObjectsObserver:self didUpdateObjects:updatedObjects];
+  for (id<DSCoreDataObjectsObserverDelegate> delegate in [[self delegates] keyEnumerator]) {
+    @autoreleasepool {
+      NSPredicate *predicate = [self predicateForDelegate:delegate];
+      
+      NSSet *updatedObjects = [[context updatedObjects] filteredSetUsingPredicate:predicate];
+      if ([updatedObjects count] > 0 &&
+          [delegate respondsToSelector:@selector(coreDataObjectsObserver:didUpdateObjects:)]) {
+        [delegate coreDataObjectsObserver:self didUpdateObjects:updatedObjects];
+      }
+      
+      NSSet *deletedObjects = [[context deletedObjects] filteredSetUsingPredicate:predicate];
+      if ([deletedObjects count] > 0 &&
+          [delegate respondsToSelector:@selector(coreDataObjectsObserver:didDeleteObjects:)]) {
+        [delegate coreDataObjectsObserver:self didDeleteObjects:deletedObjects];
+      }
+      
+      NSSet *insertedObjects = [[context insertedObjects] filteredSetUsingPredicate:predicate];
+      if ([insertedObjects count] > 0 &&
+          [delegate respondsToSelector:@selector(coreDataObjectsObserver:didInsertObjects:)]) {
+        [delegate coreDataObjectsObserver:self didInsertObjects:insertedObjects];
+      }
+    }
   }
-  
-  NSSet *deletedObjects = [[context deletedObjects] filteredSetUsingPredicate:[self objectsFilter]];
-  if ([deletedObjects count] > 0 &&
-      [[self delegate] respondsToSelector:@selector(coreDataObjectsObserver:didDeleteObjects:)]) {
-    [[self delegate] coreDataObjectsObserver:self didDeleteObjects:deletedObjects];
-  }
-  
-  NSSet *insertedObjects = [[context insertedObjects] filteredSetUsingPredicate:[self objectsFilter]];
-  if ([insertedObjects count] > 0 &&
-      [[self delegate] respondsToSelector:@selector(coreDataObjectsObserver:didInsertObjects:)]) {
-    [[self delegate] coreDataObjectsObserver:self didInsertObjects:insertedObjects];
-  }
+}
+
+- (NSPredicate *)predicateForDelegate:(id<DSCoreDataObjectsObserverDelegate>)delegate
+{
+  return [[self delegates] objectForKey:delegate];
 }
 
 @end

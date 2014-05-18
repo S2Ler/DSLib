@@ -3,7 +3,8 @@
 #import "DSCoreDataObjectsObserverDelegate.h"
 
 @interface DSCoreDataObjectsObserver : NSObject
-@property (nonatomic, weak) id<DSCoreDataObjectsObserverDelegate> delegate;
+- (id)initWithContext:(NSManagedObjectContext *)context;
 
-- (id)initWithPredicate:(NSPredicate *)objectsFilter context:(NSManagedObjectContext *)context;
+- (void)addDelegate:(id<DSCoreDataObjectsObserverDelegate>)delegate filteringPredicate:(NSPredicate *)predicate;
+- (void)removeDelegate:(id<DSCoreDataObjectsObserverDelegate>)delegate;
 @end
