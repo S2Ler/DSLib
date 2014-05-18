@@ -226,6 +226,9 @@
 		098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */; };
+		0998E21D1928E962004D9BD1 /* DSCoreDataObjectsObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E21A1928E962004D9BD1 /* DSCoreDataObjectsObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0998E21E1928E962004D9BD1 /* DSCoreDataObjectsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998E21B1928E962004D9BD1 /* DSCoreDataObjectsObserver.m */; };
+		0998E21F1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E21C1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09A6040D182A657000F57F89 /* NSBundle+DSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */; };
 		09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */; };
 		09A60415182A65CF00F57F89 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A60414182A65CF00F57F89 /* CoreFoundation.framework */; };
@@ -675,6 +678,9 @@
 		098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSQueueBasedRequestSender+Private.h"; sourceTree = "<group>"; };
 		098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSQueueBasedRequestSender.h; sourceTree = "<group>"; };
 		098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueueBasedRequestSender.m; sourceTree = "<group>"; };
+		0998E21A1928E962004D9BD1 /* DSCoreDataObjectsObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCoreDataObjectsObserver.h; sourceTree = "<group>"; };
+		0998E21B1928E962004D9BD1 /* DSCoreDataObjectsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCoreDataObjectsObserver.m; sourceTree = "<group>"; };
+		0998E21C1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCoreDataObjectsObserverDelegate.h; sourceTree = "<group>"; };
 		09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DSBundle.h"; sourceTree = "<group>"; };
 		09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DSBundle.m"; sourceTree = "<group>"; };
 		09A60413182A65CF00F57F89 /* DSLib.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -928,6 +934,9 @@
 				098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */,
 				09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */,
 				09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */,
+				0998E21A1928E962004D9BD1 /* DSCoreDataObjectsObserver.h */,
+				0998E21B1928E962004D9BD1 /* DSCoreDataObjectsObserver.m */,
+				0998E21C1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1903,6 +1912,7 @@
 				0903A3E517F0AC9100A21270 /* QRunLoopOperation.h in Headers */,
 				0903A2E217F0AC8300A21270 /* DSArrayChangeApplier.h in Headers */,
 				0903A39317F0AC9100A21270 /* NSData+OAdditions.h in Headers */,
+				0998E21D1928E962004D9BD1 /* DSCoreDataObjectsObserver.h in Headers */,
 				0982EB7D18E1E97500F9DFF2 /* DSViewsStackDelegate.h in Headers */,
 				0903A3D117F0AC9100A21270 /* DSCFunctions.h in Headers */,
 				092D8A6D18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h in Headers */,
@@ -1922,6 +1932,7 @@
 				0903A3DD17F0AC9100A21270 /* CStringsFunctions.h in Headers */,
 				0903A3CF17F0AC9100A21270 /* DSDateFormatterCache.h in Headers */,
 				09B6DCF41858F5C500FB1825 /* DSGeocodeProviderApple.h in Headers */,
+				0998E21F1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h in Headers */,
 				0903A2E917F0AC8300A21270 /* UIView+ViewsEnumeration.h in Headers */,
 				0969F92D18328AE100B3C4B2 /* UIImage+Resize.h in Headers */,
 				09B866A517F1E5C7003B1070 /* DSWebServiceSerialQueue.h in Headers */,
@@ -2290,6 +2301,7 @@
 				0903A40317F0AC9100A21270 /* DSValueChooserViewController.m in Sources */,
 				0903A3A817F0AC9100A21270 /* NSString+Extras.m in Sources */,
 				0903A3AC17F0AC9100A21270 /* UIApplication+DSAdditions.m in Sources */,
+				0998E21E1928E962004D9BD1 /* DSCoreDataObjectsObserver.m in Sources */,
 				0903A2E817F0AC8300A21270 /* DSNetworkActivity.m in Sources */,
 				0969F92C18328AE100B3C4B2 /* UIImage+DSAdditions.m in Sources */,
 				09B6DCE61858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m in Sources */,
