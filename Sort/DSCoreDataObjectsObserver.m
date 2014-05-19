@@ -40,7 +40,7 @@ static __strong DSCoreDataObjectsObserver *shared = nil;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(contextDidSave:)
-                                                 name:NSManagedObjectContextDidSaveNotification
+                                                 name:NSManagedObjectContextWillSaveNotification
                                                object:context];
   }
   return self;
