@@ -20,7 +20,9 @@
 
 - (NSUInteger)numberOfViews;
 - (UIView *)viewForIndex:(NSUInteger)index;
-- (BOOL)showNextViewAnimated:(BOOL)animated animationDirection:(DSViewsStackAnimationDirection)direction;
+- (BOOL)showNextViewAnimated:(BOOL)animated
+          animationDirection:(DSViewsStackAnimationDirection)direction
+                       delay:(NSTimeInterval)delay;
 - (BOOL)showNextViewWithoutAnimation;
 
 - (void)reloadData;

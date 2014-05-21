@@ -75,7 +75,9 @@
   return reusableView;
 }
 
-- (BOOL)showNextViewAnimated:(BOOL)animated animationDirection:(DSViewsStackAnimationDirection)direction;
+- (BOOL)showNextViewAnimated:(BOOL)animated
+          animationDirection:(DSViewsStackAnimationDirection)direction
+                       delay:(NSTimeInterval)delay
 {
   BOOL increased = [self increaseCurrentIndex];
   
@@ -86,14 +88,16 @@
                            [self preloadViewAtIndex:[self currentIndex] + 1 animated:NO];
                          }
                        }
-               animationDirection:direction];
+               animationDirection:direction
+                            delay:delay
+];
   
   return increased;
 }
 
 - (BOOL)showNextViewWithoutAnimation
 {
-  return [self showNextViewAnimated:NO animationDirection:DSViewsStackAnimationDirectionNone];
+  return [self showNextViewAnimated:NO animationDirection:DSViewsStackAnimationDirectionNone delay:0];
 }
 
 #pragma mark - private
@@ -128,6 +132,7 @@
 - (void)removeViewFromTopAnimated:(BOOL)animated
                        completion:(void(^)(UIView *))completion
                animationDirection:(DSViewsStackAnimationDirection)direction
+                            delay:(NSTimeInterval)delay
 {
   UIView *topView = [[self subviews] lastObject];
   
@@ -138,7 +143,7 @@
       [[self delegate] viewsStack:self willAutomaticallyMoveViewOutOfScreen:topView direction:direction];
     }
 
-    DISPATCH_AFTER_SECONDS(1, ^{
+    DISPATCH_AFTER_SECONDS(delay, ^{
       [UIView animateWithDuration:0.25
                        animations:^{
                          CGFloat x = 0;// = -[topView frame].size.width/2.0;
@@ -248,7 +253,7 @@
         [self moveViewToInitialPosition:view animated:YES];
       }
       else {
-        [self showNextViewAnimated:YES animationDirection:draggedSide];
+        [self showNextViewAnimated:YES animationDirection:draggedSide delay:0];
       }
     }
       
