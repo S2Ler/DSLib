@@ -10,6 +10,11 @@
 
 @protocol DSViewsStackDelegate <NSObject>
 @optional
+
+- (void)    viewsStack:(DSViewsStack *)viewsStack
+ willRemoveViewAtIndex:(NSUInteger)viewIndex
+           inDirection:(DSViewsStackAnimationDirection)direction;
+
 - (void)                   viewsStack:(DSViewsStack *)viewsStack
  willAutomaticallyMoveViewOutOfScreen:(UIView *)view
                             direction:(DSViewsStackAnimationDirection)direction;

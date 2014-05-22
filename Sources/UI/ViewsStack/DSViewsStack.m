@@ -79,6 +79,12 @@
           animationDirection:(DSViewsStackAnimationDirection)direction
                        delay:(NSTimeInterval)delay
 {
+  if ([[self delegate] respondsToSelector:@selector(viewsStack:willRemoveViewAtIndex:inDirection:)]) {
+    [[self delegate] viewsStack:self
+          willRemoveViewAtIndex:[self currentIndex]
+                    inDirection:direction];
+  }
+  
   BOOL increased = [self increaseCurrentIndex];
   
   [self removeViewFromTopAnimated:animated
@@ -113,6 +119,12 @@
   }
   
   [self setCurrentIndex:[self currentIndex] + 1];
+  return YES;
+}
+
+- (BOOL)decreaseCurrentIndex
+{
+  [self setCurrentIndex:[self currentIndex] - 1];
   return YES;
 }
 
@@ -209,6 +221,21 @@
     [self addView:[self viewForIndex:index] toBackAnimated:animated];
   }
 }
+
+- (void)removeViewAtIndex:(NSUInteger)index
+{
+  if ([self currentIndex] > index) {
+    [self decreaseCurrentIndex];
+  }
+  else if ([self currentIndex] == index) {
+    [self showNextViewWithoutAnimation];
+  }
+  else if ([self currentIndex] == index - 1){
+    [[[self subviews] firstObject] removeFromSuperview];
+    [self preloadViews];
+  }
+}
+
 
 #pragma mark - dragging
 - (void)setupDraggingForView:(UIView *)view

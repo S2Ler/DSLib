@@ -26,4 +26,7 @@
 - (BOOL)showNextViewWithoutAnimation;
 
 - (void)reloadData;
+
+- (void)removeViewAtIndex:(NSUInteger)index;
+
 @end
