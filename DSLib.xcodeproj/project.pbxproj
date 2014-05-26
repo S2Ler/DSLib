@@ -343,6 +343,10 @@
 		09C15FD518DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09C15FD618DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */; };
 		09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09CB5DFF1933357100637BE6 /* DSLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CB5DFB1933357100637BE6 /* DSLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09CB5E001933357100637BE6 /* DSLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CB5DFC1933357100637BE6 /* DSLogFormatter.m */; };
+		09CB5E011933357100637BE6 /* TestFlightLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CB5DFD1933357100637BE6 /* TestFlightLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09CB5E021933357100637BE6 /* TestFlightLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CB5DFE1933357100637BE6 /* TestFlightLogger.m */; };
 		09CDC39419260E4600C49EEA /* DSViewsStackAnimationDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09CDC39519260E4600C49EEA /* DSViewsStackAnimationDirection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */; };
 		09CEE81B18E1E6EB00B090F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CEE81A18E1E6EB00B090F9 /* XCTest.framework */; };
@@ -774,6 +778,10 @@
 		09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+DSAdditions.h"; sourceTree = "<group>"; };
 		09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+DSAdditions.m"; sourceTree = "<group>"; };
 		09C6BE521806BD760084C600 /* DSDragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDrop.h; sourceTree = "<group>"; };
+		09CB5DFB1933357100637BE6 /* DSLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLogFormatter.h; sourceTree = "<group>"; };
+		09CB5DFC1933357100637BE6 /* DSLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLogFormatter.m; sourceTree = "<group>"; };
+		09CB5DFD1933357100637BE6 /* TestFlightLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlightLogger.h; sourceTree = "<group>"; };
+		09CB5DFE1933357100637BE6 /* TestFlightLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFlightLogger.m; sourceTree = "<group>"; };
 		09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStackAnimationDirection.h; sourceTree = "<group>"; };
 		09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStackAnimationDirection.m; sourceTree = "<group>"; };
 		09CEE81918E1E6EB00B090F9 /* DSLib Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DSLib Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -888,6 +896,10 @@
 		0903A2D317F0AC8300A21270 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				09CB5DFB1933357100637BE6 /* DSLogFormatter.h */,
+				09CB5DFC1933357100637BE6 /* DSLogFormatter.m */,
+				09CB5DFD1933357100637BE6 /* TestFlightLogger.h */,
+				09CB5DFE1933357100637BE6 /* TestFlightLogger.m */,
 				0998E239192A595C004D9BD1 /* DSFetchedResultsControllerDelegate */,
 				09EB9F9218ED680A0098CAFF /* PassCodeLock */,
 				0969F92418328AE100B3C4B2 /* UIImage-categories */,
@@ -2002,6 +2014,7 @@
 				09B8669217F1E5C7003B1070 /* DSWebServiceFramework.h in Headers */,
 				09CEE82F18E1E73E00B090F9 /* DSViewsStack.h in Headers */,
 				098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */,
+				09CB5DFF1933357100637BE6 /* DSLogFormatter.h in Headers */,
 				09B8664517F1BF30003B1070 /* DSKeyboardControllerDelegate.h in Headers */,
 				09B8669A17F1E5C7003B1070 /* DSWebServiceParamFactory.h in Headers */,
 				62DD14ABC283FD7DF3AD2734 /* DSAlertViewDelegate.h in Headers */,
@@ -2039,6 +2052,7 @@
 				09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */,
 				09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */,
 				09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */,
+				09CB5E011933357100637BE6 /* TestFlightLogger.h in Headers */,
 				09B866B717F1E5C7003B1070 /* NSManagedObject+DSAdditions.h in Headers */,
 				097FCD7A189FAAF300B9B041 /* RTMethod.h in Headers */,
 				62DD1C9E769C375EB5D785FB /* DSDraggingSourceContainer.h in Headers */,
@@ -2312,6 +2326,7 @@
 				0903A3AC17F0AC9100A21270 /* UIApplication+DSAdditions.m in Sources */,
 				0998E21E1928E962004D9BD1 /* DSCoreDataObjectsObserver.m in Sources */,
 				0903A2E817F0AC8300A21270 /* DSNetworkActivity.m in Sources */,
+				09CB5E021933357100637BE6 /* TestFlightLogger.m in Sources */,
 				0969F92C18328AE100B3C4B2 /* UIImage+DSAdditions.m in Sources */,
 				09B6DCE61858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m in Sources */,
 				09162C9B180EECC100A0DEEF /* WETouchableView.m in Sources */,
@@ -2382,6 +2397,7 @@
 				09B8669617F1E5C7003B1070 /* DSWebServiceArrayParam.m in Sources */,
 				09B866B217F1E5C7003B1070 /* DSEntityDefinition.m in Sources */,
 				62DD1DB23EEF8D87DD0C9B15 /* DSConfiguration.m in Sources */,
+				09CB5E001933357100637BE6 /* DSLogFormatter.m in Sources */,
 				09F84FDD18C5FA380047AA16 /* AFMultipartBodyStream.m in Sources */,
 				62DD187C5A8A0492EB15FAEE /* DSAppDelegate.m in Sources */,
 				62DD152CB973B9C752B7120C /* DSBlockBarButtonItem.m in Sources */,
