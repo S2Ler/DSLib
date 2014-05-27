@@ -83,6 +83,17 @@ static NSMapTable *interceptorsMap = nil;
   return [[self queue] operations];
 }
 
+- (id<DSWebServiceRequest>)activeRequestForParamsClass:(Class)paramsClass
+{
+  for (id<DSWebServiceRequest> activeRequest in [self activeRequests]) {
+    if ([paramsClass isCorrespondsToRequest:activeRequest]) {
+      return activeRequest;
+    }
+  }
+  
+  return nil;
+}
+
 - (NSInteger)requestCount
 {
   return [[self queue] operationCount];

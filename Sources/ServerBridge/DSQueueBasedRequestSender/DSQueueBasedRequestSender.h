@@ -14,7 +14,10 @@ typedef void (^request_failed_block_t)(id<DSWebServiceRequest> request, DSMessag
 @property (strong, readonly) DSWebServiceQueue *queue;
 /** @return array of id<DSWebServiceRequest> objects */
 - (NSArray *)activeRequests;
+- (id<DSWebServiceRequest>)activeRequestForParamsClass:(Class)paramsClass;
 - (NSInteger)requestCount;
+//- (BOOL)hasActiveRequest
+
 @property (nonatomic, assign, getter=isSuspended) BOOL suspended;
 
 + (void)addMessageInterceptor:(DSMessageInterceptor *)interceptor;
