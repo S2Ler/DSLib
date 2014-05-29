@@ -227,7 +227,7 @@
 		0998E21D1928E962004D9BD1 /* DSCoreDataObjectsObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E21A1928E962004D9BD1 /* DSCoreDataObjectsObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0998E21E1928E962004D9BD1 /* DSCoreDataObjectsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998E21B1928E962004D9BD1 /* DSCoreDataObjectsObserver.m */; };
 		0998E21F1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E21C1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0998E23C192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E23A192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h */; };
+		0998E23C192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E23A192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0998E23D192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998E23B192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m */; };
 		09A6040D182A657000F57F89 /* NSBundle+DSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */; };
 		09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */; };
