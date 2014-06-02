@@ -353,6 +353,8 @@
 		09CEE83018E1E73E00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
 		09CEE83318E1E76B00B090F9 /* DSViewsStack_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */; };
 		09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
+		09D35A33193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D35A31193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09D35A34193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D35A32193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m */; };
 		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
 		09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -784,6 +786,8 @@
 		09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStack.h; sourceTree = "<group>"; };
 		09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack.m; sourceTree = "<group>"; };
 		09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack_Tests.m; sourceTree = "<group>"; };
+		09D35A31193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+NSFetchedResultsController.h"; sourceTree = "<group>"; };
+		09D35A32193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+NSFetchedResultsController.m"; sourceTree = "<group>"; };
 		09D6223E1817DDF900A252D9 /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Parse.h"; sourceTree = "<group>"; };
 		09D6223F1817DDF900A252D9 /* NSError+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Parse.m"; sourceTree = "<group>"; };
 		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
@@ -888,6 +892,8 @@
 		0903A2D317F0AC8300A21270 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				09D35A31193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h */,
+				09D35A32193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m */,
 				0998E239192A595C004D9BD1 /* DSFetchedResultsControllerDelegate */,
 				09EB9F9218ED680A0098CAFF /* PassCodeLock */,
 				0969F92418328AE100B3C4B2 /* UIImage-categories */,
@@ -1948,6 +1954,7 @@
 				0903A3CD17F0AC9100A21270 /* DSMacros.h in Headers */,
 				0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */,
 				09B8669017F1E5C7003B1070 /* DSWebServiceConfiguration.h in Headers */,
+				09D35A33193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h in Headers */,
 				098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */,
 				0903A3A917F0AC9100A21270 /* UIAlertView+Additions.h in Headers */,
 				09162C9A180EECC100A0DEEF /* WETouchableView.h in Headers */,
@@ -2264,6 +2271,7 @@
 				09162C6C180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m in Sources */,
 				0903A3C417F0AC9100A21270 /* DSCArray.m in Sources */,
 				09B8669D17F1E5C7003B1070 /* DSWebServiceStringParam.m in Sources */,
+				09D35A34193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m in Sources */,
 				09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */,
 				0903A39E17F0AC9100A21270 /* NSMutableURLRequest+POSTData.m in Sources */,
 				097FCD77189FAAF300B9B041 /* MARTNSObject.m in Sources */,
