@@ -1,7 +1,8 @@
 
 #import "UIDevice+Additions.h"
 #import <sys/sysctl.h>
-
+#include <mach/mach_host.h>
+#include <mach/host_info.h>
 
 @implementation UIDevice (Additions)
 + (NSString *)deviceIOSVersion {
@@ -42,8 +43,7 @@
   return deviceUuid;
 }
 
-#include <mach/mach_host.h>
-#include <mach/host_info.h>
+
 + (unsigned int)countProcessors
 {
 	host_basic_info_data_t hostInfo;
