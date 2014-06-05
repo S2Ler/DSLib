@@ -12,19 +12,13 @@
 @property (nonatomic, assign) NSTimeInterval lastServerSyncTimestamp;
 @property (nonatomic, assign) BOOL isUpdatingLocation;
 @property (nonatomic, assign) BOOL shouldStopAfterObtainingLocation;
+@property (nonatomic, copy) DSGPSTrackerBlock delegateBlock;
 
 - (CLLocationManager *)locationManager;
 
 @end
 
 @implementation DSGPSTracker
-@synthesize currentLocation = _currentLocation;
-@synthesize lastServerSyncTimestamp = _lastServerSyncTimestamp;
-@synthesize desiredAccuracy = _desiredAccuracy;
-@synthesize delegate = _delegate;
-@synthesize distanceFilter = _distanceFilter;
-@synthesize isUpdatingLocation = _isUpdatingLocation;
-@synthesize shouldStopAfterObtainingLocation = _shouldStopAfterObtainingLocation;
 
 - (void)dealloc
 {

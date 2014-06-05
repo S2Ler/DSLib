@@ -13,7 +13,7 @@ typedef void (^DSGPSTrackerBlock)(DSGPSTracker *gpsTracker, CLLocation *location
 @interface DSGPSTracker : NSObject<CLLocationManagerDelegate> 
 
 @property (nonatomic, weak) id<DSGPSTrackerDelegate> delegate;
-@property (nonatomic, copy) DSGPSTrackerBlock delegateBlock;
+- (void)setDelegateBlock:(DSGPSTrackerBlock)delegateBlock;
 
 /** Default is Three Kilometers */
 @property (nonatomic, assign) CLLocationAccuracy desiredAccuracy;
