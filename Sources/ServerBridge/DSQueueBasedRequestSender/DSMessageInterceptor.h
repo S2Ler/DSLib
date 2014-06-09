@@ -13,5 +13,7 @@
 @interface DSMessageInterceptor : NSObject
 @property (nonatomic, strong) DSMessageDomain *domain;
 @property (nonatomic, strong) DSMessageCode *code;
-@property (nonatomic, copy) ds_completion_handler handler;
+
+- (void)setHandler:(ds_completion_handler)handler;
+- (ds_completion_handler)handler;
 @end

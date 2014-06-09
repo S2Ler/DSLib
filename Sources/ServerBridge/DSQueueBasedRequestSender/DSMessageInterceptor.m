@@ -8,6 +8,10 @@
 
 #import "DSMessageInterceptor.h"
 
-@implementation DSMessageInterceptor
 
+@interface DSMessageInterceptor ()
+@property (nonatomic, copy) ds_completion_handler handler;
+@end
+
+@implementation DSMessageInterceptor
 @end
