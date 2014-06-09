@@ -44,6 +44,7 @@
   if (self) {
     _desiredAccuracy = kCLLocationAccuracyThreeKilometers;
     _distanceFilter = 10;
+    _delegateQueue = dispatch_get_main_queue();
   }
   return self;
 }
@@ -79,12 +80,14 @@
     }
   }
 
-  [[self delegate] gpsTracker:self
-            didGetNewLocation:currentLocation
-isLocationWithDesiredAccuracy:isLocationWithDesiredAccuracy];
-  if ([self delegateBlock]) {
-    [self delegateBlock](self, currentLocation, isLocationWithDesiredAccuracy, NO);
-  }
+  dispatch_async([self delegateQueue], ^{
+    [[self delegate] gpsTracker:self
+              didGetNewLocation:currentLocation
+  isLocationWithDesiredAccuracy:isLocationWithDesiredAccuracy];
+    if ([self delegateBlock]) {
+      [self delegateBlock](self, currentLocation, isLocationWithDesiredAccuracy, NO);
+    }
+  });
 }
 
 #pragma mark - activation
@@ -148,10 +151,12 @@ isLocationWithDesiredAccuracy:isLocationWithDesiredAccuracy];
 {
   NSLog(@"%@", error);
   if ([error code] == kCLErrorDenied) {
-    [[self delegate] gpsTrackerIsDeniedAccess:self];
-    if ([self delegateBlock]) {
-      [self delegateBlock](self, nil, NO, YES);
-    }
+    dispatch_async([self delegateQueue], ^{
+      [[self delegate] gpsTrackerIsDeniedAccess:self];
+      if ([self delegateBlock]) {
+        [self delegateBlock](self, nil, NO, YES);
+      }
+    });
     [self deactivate];
   }
 }

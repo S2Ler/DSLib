@@ -14,6 +14,8 @@ typedef void (^DSGPSTrackerBlock)(DSGPSTracker *gpsTracker, CLLocation *location
 
 @property (nonatomic, weak) id<DSGPSTrackerDelegate> delegate;
 - (void)setDelegateBlock:(DSGPSTrackerBlock)delegateBlock;
+/** Default is main queue */
+@property (nonatomic, strong) dispatch_queue_t delegateQueue;
 
 /** Default is Three Kilometers */
 @property (nonatomic, assign) CLLocationAccuracy desiredAccuracy;
