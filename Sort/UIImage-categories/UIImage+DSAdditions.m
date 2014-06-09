@@ -86,6 +86,11 @@
 
 - (UIImage *)maskedImageWithColor:(UIColor *)color
 {
+  return [self maskedImageWithColor:color blendMode:kCGBlendModeMultiply];
+}
+
+- (UIImage *)maskedImageWithColor:(UIColor *)color blendMode:(CGBlendMode)mode
+{
   //create context
   UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
   CGContextRef context = UIGraphicsGetCurrentContext();
@@ -97,7 +102,7 @@
   [self drawInRect:rect];
   
   //fg
-  CGContextSetBlendMode(context, kCGBlendModeMultiply);
+  CGContextSetBlendMode(context, mode);
   
   CGContextSetFillColorWithColor(context, color.CGColor);
   CGContextFillRect(context, rect);
