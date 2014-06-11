@@ -18,6 +18,7 @@
 @interface DSViewsStack ()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) DSQueue *reusableViews;
 @property (nonatomic, assign) NSUInteger currentIndex;
+@property (nonatomic, assign) CGPoint dragStartPoint;
 @end
 
 @implementation DSViewsStack
@@ -256,17 +257,16 @@
 - (void)viewDragging:(UIPanGestureRecognizer *)recognizer
 {
   UIView *view = [recognizer view];
-  static CGPoint startPoint;
   switch ([recognizer state]) {
     case UIGestureRecognizerStateBegan: {
       CGPoint location = [recognizer locationInView:self];
-      startPoint = location;
+      [self setDragStartPoint:location];
     }
     case UIGestureRecognizerStateChanged: {
       CGPoint location = [recognizer locationInView:self];
       CGPoint center = CGPointMake(CGRectGetMidX([self bounds]), CGRectGetMidY([self bounds]));;
-      location.x -= startPoint.x - center.x;
-      location.y -= startPoint.y - center.y;
+      location.x -= [self dragStartPoint].x - center.x;
+      location.y -= [self dragStartPoint].y - center.y;
       [view setCenter:location];
 
       [self updateViewRotation:view];
@@ -329,7 +329,13 @@
 
 - (void)updateViewRotation:(UIView *)view {
   double tangensAlpha = ([view center].x - [self getViewsCenter].x)/ROTATION_RADIUS;
-  double alpha = atan(tangensAlpha);
+  const CGFloat verticalDelta = ([self dragStartPoint].y -[self getViewsCenter].y);
+  const CGFloat verticalAlphaParameter = verticalDelta/([self frame].size.width/2.0);
+  
+  double alpha = atan(tangensAlpha) * ((verticalAlphaParameter > 0)
+                                       ? MAX(verticalAlphaParameter, 0.5)
+                                       : MIN (verticalAlphaParameter, -0.5));
+  
   [view setTransform:CGAffineTransformMakeRotation(alpha)];
 }
 
