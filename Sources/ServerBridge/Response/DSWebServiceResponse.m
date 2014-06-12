@@ -38,10 +38,9 @@
   return [self responseDictionary];
 }
 
-+ (id)responseWithData:(NSData *)theData
++ (instancetype)responseWithData:(NSData *)theData
 {
-  DSWebServiceResponse *response 
-  = [[DSWebServiceResponse alloc] initWithData:theData];
+  DSWebServiceResponse *response = [[self alloc] initWithData:theData];
   
   return response;
 }
