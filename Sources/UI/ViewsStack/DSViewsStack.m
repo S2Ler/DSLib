@@ -296,8 +296,8 @@
   CGRect viewFrame = [view frame];
   CGRect boundsFrame = [self bounds];
   
-  BOOL leftIntersection = viewFrame.origin.x + 150 < boundsFrame.origin.x;
-  BOOL rightIntersection = CGRectGetMaxX(viewFrame) - 150 > CGRectGetMaxX(boundsFrame);
+  BOOL leftIntersection = viewFrame.origin.x + 70 < boundsFrame.origin.x;
+  BOOL rightIntersection = CGRectGetMaxX(viewFrame) - 70 > CGRectGetMaxX(boundsFrame);
   
   if (leftIntersection) {
     return DSViewsStackAnimationDirectionLeft;

@@ -148,6 +148,8 @@
 		09067F2E181804CA00C8F48F /* DSAlertsQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F2C181804CA00C8F48F /* DSAlertsQueue.m */; };
 		09067F311818055900C8F48F /* DSAlertQueue+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 09067F2F1818055900C8F48F /* DSAlertQueue+Private.h */; };
 		09067F321818055900C8F48F /* DSAlertQueue+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F301818055900C8F48F /* DSAlertQueue+Private.m */; };
+		0907D3BF194C4CC30035C075 /* UINavigationController+Inspection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0907D3BD194C4CC30035C075 /* UINavigationController+Inspection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0907D3C0194C4CC30035C075 /* UINavigationController+Inspection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */; };
 		09162C55180ED00C00A0DEEF /* DSCompas.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C53180ED00C00A0DEEF /* DSCompas.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09162C56180ED00C00A0DEEF /* DSCompas.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C54180ED00C00A0DEEF /* DSCompas.m */; };
 		09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C58180EE84900A0DEEF /* DSCriterionDescriptionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -581,6 +583,8 @@
 		09067F2C181804CA00C8F48F /* DSAlertsQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlertsQueue.m; sourceTree = "<group>"; };
 		09067F2F1818055900C8F48F /* DSAlertQueue+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSAlertQueue+Private.h"; sourceTree = "<group>"; };
 		09067F301818055900C8F48F /* DSAlertQueue+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSAlertQueue+Private.m"; sourceTree = "<group>"; };
+		0907D3BD194C4CC30035C075 /* UINavigationController+Inspection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Inspection.h"; sourceTree = "<group>"; };
+		0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Inspection.m"; sourceTree = "<group>"; };
 		09162C53180ED00C00A0DEEF /* DSCompas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCompas.h; sourceTree = "<group>"; };
 		09162C54180ED00C00A0DEEF /* DSCompas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCompas.m; sourceTree = "<group>"; };
 		09162C58180EE84900A0DEEF /* DSCriterionDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCriterionDescriptionViewController.h; sourceTree = "<group>"; };
@@ -942,6 +946,8 @@
 				0998E21A1928E962004D9BD1 /* DSCoreDataObjectsObserver.h */,
 				0998E21B1928E962004D9BD1 /* DSCoreDataObjectsObserver.m */,
 				0998E21C1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h */,
+				0907D3BD194C4CC30035C075 /* UINavigationController+Inspection.h */,
+				0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -2037,6 +2043,7 @@
 				0928CFCD17F2150100E494E1 /* DSAlertsFramework.h in Headers */,
 				09B866B917F1E5C7003B1070 /* DSWebServiceParams.h in Headers */,
 				62DD19B8D7F38D3DAD57B11E /* DSFindCountry.h in Headers */,
+				0907D3BF194C4CC30035C075 /* UINavigationController+Inspection.h in Headers */,
 				098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */,
 				0928CFDE17F21C9C00E494E1 /* DSWebServiceFunctions.h in Headers */,
 				09B8669F17F1E5C7003B1070 /* DSWebServiceParamsExporter.h in Headers */,
@@ -2323,6 +2330,7 @@
 				0969F92C18328AE100B3C4B2 /* UIImage+DSAdditions.m in Sources */,
 				09B6DCE61858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m in Sources */,
 				09162C9B180EECC100A0DEEF /* WETouchableView.m in Sources */,
+				0907D3C0194C4CC30035C075 /* UINavigationController+Inspection.m in Sources */,
 				0903A3BE17F0AC9100A21270 /* UIView+Subviews.m in Sources */,
 				0903A39217F0AC9100A21270 /* NSArray+ObjectsQuery.m in Sources */,
 				096C87AE18290ADA0024D734 /* DSMessage+Parse.m in Sources */,
