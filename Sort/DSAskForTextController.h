@@ -32,5 +32,12 @@ typedef NS_OPTIONS(NSUInteger, DSAskForTextControllerOptions) {
                     options:(DSAskForTextControllerOptions)options
              withCompletion:(DSAskForTextControllerCompletion)completion;
 
+- (void)askForTextWithTitle:(NSString *)title
+                placeholder:(NSString *)placeholder
+                initialText:(NSString *)initialText
+                    options:(DSAskForTextControllerOptions)options
+          isTextValidTester:(BOOL(^)(NSString *))isTextValid
+             withCompletion:(DSAskForTextControllerCompletion)completion;
+
 
 @end

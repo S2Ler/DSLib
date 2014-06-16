@@ -22,6 +22,7 @@ didInsertItemAtIndexPath:(NSIndexPath *)theIndexPath;
 
 - (void)fetchDelegateStartedUpdateTable:(DSFetchedResultsControllerDelegate *)theDelegate;
 - (void)fetchDelegateAboutToEndTableUpdate:(DSFetchedResultsControllerDelegate *)theDelegate;
+- (void)fetchDelegateEndedTableUpdate:(DSFetchedResultsControllerDelegate *)theDelegate;
 
 @end
 

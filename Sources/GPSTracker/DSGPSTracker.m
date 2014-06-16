@@ -13,6 +13,7 @@
 @property (nonatomic, assign) BOOL isUpdatingLocation;
 @property (nonatomic, assign) BOOL shouldStopAfterObtainingLocation;
 @property (nonatomic, copy) DSGPSTrackerBlock delegateBlock;
+@property (nonatomic, copy) void (^failedBlock)(NSError *);
 
 - (CLLocationManager *)locationManager;
 
@@ -159,6 +160,17 @@
     });
     [self deactivate];
   }
+  else {
+    dispatch_async([self delegateQueue], ^{
+      if ([self failedBlock]) {
+        [self failedBlock](error);
+      }
+    });
+  }
 }
 
+- (void)setFailedBlock:(void(^)(NSError *))failedBlock
+{
+  _failedBlock = failedBlock;
+}
 @end

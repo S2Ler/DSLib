@@ -14,6 +14,7 @@ typedef void (^DSGPSTrackerBlock)(DSGPSTracker *gpsTracker, CLLocation *location
 
 @property (nonatomic, weak) id<DSGPSTrackerDelegate> delegate;
 - (void)setDelegateBlock:(DSGPSTrackerBlock)delegateBlock;
+- (void)setFailedBlock:(void(^)(NSError *))failedBlock;
 /** Default is main queue */
 @property (nonatomic, strong) dispatch_queue_t delegateQueue;
 

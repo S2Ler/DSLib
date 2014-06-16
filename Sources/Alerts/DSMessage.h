@@ -11,6 +11,8 @@
 @property (nonatomic, strong, readonly) DSMessageCode *code;
 @property (nonatomic, strong, readonly) NSArray *params;
 
+@property (nonatomic, strong) NSArray *titleParams;
+
 - (NSString *)localizedTitle;
 - (NSString *)localizedBody;
 

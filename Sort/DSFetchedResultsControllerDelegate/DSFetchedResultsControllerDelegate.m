@@ -121,7 +121,12 @@
   if ([[self delegate] respondsToSelector:@selector(fetchDelegateAboutToEndTableUpdate:)]) {
     [[self delegate] fetchDelegateAboutToEndTableUpdate:self];
   }
+  
   [[self tableView] endUpdates];
+  
+  if ([[self delegate] respondsToSelector:@selector(fetchDelegateEndedTableUpdate:)]) {
+    [[self delegate] fetchDelegateEndedTableUpdate:self];
+  }
 }
 
 @end

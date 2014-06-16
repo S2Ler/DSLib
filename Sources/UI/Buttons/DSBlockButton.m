@@ -1,6 +1,10 @@
 
+#pragma mark - include
 #import "DSBlockButton.h"
 
+@interface DSBlockButton ()
+@property (nonatomic, copy) ds_action_block_t actionBlock;
+@end
 
 @implementation DSBlockButton
 - (void)setActionBlock:(ds_action_block_t)actionBlock
@@ -15,4 +19,5 @@
     [self actionBlock](self);
   }
 }
+
 @end

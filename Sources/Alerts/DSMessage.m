@@ -37,6 +37,19 @@
   NSString *localizationKey = [self keyForLocalizedTitle];
   NSString *title = NSLocalizedStringFromTable(localizationKey, [self localizationTable], nil);
   
+  if ([[self titleParams] count] > 0) {
+    NSString *find = @"%@";
+    
+    NSString *result = title;
+    for (NSString *arg in [self titleParams]) {
+      NSRange range = [result rangeOfString:find]; // this will find the first occurrence of the string
+      if (range.location != NSNotFound) {
+        result = [result stringByReplacingCharactersInRange:range withString:[arg description]];
+      }
+    }
+    return result;
+  }
+  
   if ([title isEqualToString:localizationKey] && [self error]) {
     return [DSMessage messageTitleFromError:[self error]];
   }
@@ -168,6 +181,19 @@
       }
     }
   }
+  
+  for (id param in [self titleParams]) {
+    for (id comparedParam in [theObj titleParams]) {
+      if (!paramsEqual) {
+        break;
+      }
+      
+      if (![param isEqual:comparedParam]) {
+        paramsEqual = NO;
+        break;
+      }
+    }
+  }
 
   return (domainsEqual && codesEqual && paramsEqual);
 }
@@ -183,7 +209,7 @@
 
 - (NSUInteger)hash
 {
-  NSString *hashString = [NSString stringWithFormat:@"%@%@%@", [self domain], [self code], [self params]];
+  NSString *hashString = [NSString stringWithFormat:@"%@%@%@%@", [self domain], [self code], [self params], [self titleParams]];
   return [hashString hash];
 }
 
@@ -206,6 +232,7 @@
   [encoder encodeObject:self.code forKey:@"code"];
   [encoder encodeObject:self.params forKey:@"params"];
   [encoder encodeObject:self.error forKey:@"error"];
+  [encoder encodeObject:self.titleParams forKey:@"titleParams"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -217,6 +244,7 @@
     self.code = [decoder decodeObjectForKey:@"code"];
     self.params = [decoder decodeObjectForKey:@"params"];
     self.error = [decoder decodeObjectForKey:@"error"];
+    self.titleParams = [decoder decodeObjectForKey:@"titleParams"];
   }
   return self;
 }

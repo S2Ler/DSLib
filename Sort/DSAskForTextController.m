@@ -53,6 +53,21 @@
                     options:(DSAskForTextControllerOptions)options
              withCompletion:(DSAskForTextControllerCompletion)completion
 {
+  [self askForTextWithTitle:title
+                placeholder:placeholder
+                initialText:initialText
+                    options:options
+          isTextValidTester:nil
+             withCompletion:completion];
+}
+
+- (void)askForTextWithTitle:(NSString *)title
+                placeholder:(NSString *)placeholder
+                initialText:(NSString *)initialText
+                    options:(DSAskForTextControllerOptions)options
+          isTextValidTester:(BOOL(^)(NSString *))isTextValid
+             withCompletion:(DSAskForTextControllerCompletion)completion
+{
   UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
                                                       message:nil
                                                      delegate:self
@@ -62,6 +77,7 @@
   NSMutableDictionary *userInfo = [alertView objectUserInfo];
   userInfo[@"completion"] = completion;
   userInfo[@"options"] = @(options);
+  userInfo[@"isTextValidTester"] = isTextValid;
   
   if (options & DSAskForTextControllerOptionSecure) {
     [alertView setAlertViewStyle:UIAlertViewStyleSecureTextInput];
@@ -85,12 +101,21 @@
 - (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
 {
   DSAskForTextControllerOptions options = [[[alertView objectUserInfo] objectForKey:@"options"] unsignedIntegerValue];
+  BOOL (^isTextValid)(NSString *text) = [[alertView objectUserInfo] objectForKey:@"isTextValidTester"];
+  
+  NSString *const alertViewText = [[alertView textFieldAtIndex:0] text];
+  NSString *const alertViewPlaceHolder = [[alertView textFieldAtIndex:0] placeholder];
+  
+  if (!isTextValid(alertViewText)) {
+    return NO;
+  }
+  
   if ((options & DSAskForTextControllerOptionPlaceholderIsValidText)
-      && [[[alertView textFieldAtIndex:0] placeholder] length] > 0) {
+      && [alertViewPlaceHolder length] > 0) {
     return YES;
   }
   
-  return [[[alertView textFieldAtIndex:0] text] length] > 0;
+  return [alertViewText length] > 0;
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
