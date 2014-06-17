@@ -100,7 +100,7 @@
   [label setTextColor:[UIColor whiteColor]];
   [label setTextAlignment:NSTextAlignmentCenter];
   [label setAdjustsFontSizeToFitWidth:YES];
-  [label setMinimumFontSize:10.0];
+  [label setMinimumScaleFactor:10.0];
   [label setBackgroundColor:[UIColor clearColor]];
   [label setFont:labelFont];
   [label setText:text];

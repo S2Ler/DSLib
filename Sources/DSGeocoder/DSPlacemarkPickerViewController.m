@@ -56,7 +56,7 @@
     [[self navigationController] popViewControllerAnimated:YES];
   }
   else if ([self presentingViewController]) {
-    [[self presentingViewController] dismissModalViewControllerAnimated:YES];
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
   }
   UNHANDLED_IF;
 }

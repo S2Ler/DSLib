@@ -133,8 +133,7 @@
 - (void)exportWithCompletionHandler:(params_exported_handler_t)theHandler
 {
   [self setCompletionHandler:theHandler];
-  [self setCallerDispatchQueue:dispatch_get_current_queue()];
-  
+  [self setCallerDispatchQueue:dispatch_get_main_queue()];
   
   NSOperation *exportOperation 
   = [[NSInvocationOperation alloc] initWithTarget:self 
