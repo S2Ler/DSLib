@@ -150,6 +150,8 @@
 		09067F321818055900C8F48F /* DSAlertQueue+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F301818055900C8F48F /* DSAlertQueue+Private.m */; };
 		0907D3BF194C4CC30035C075 /* UINavigationController+Inspection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0907D3BD194C4CC30035C075 /* UINavigationController+Inspection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0907D3C0194C4CC30035C075 /* UINavigationController+Inspection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */; };
+		0908940A195326D4002CCCB8 /* UITextView+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 09089408195326D4002CCCB8 /* UITextView+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0908940B195326D4002CCCB8 /* UITextView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 09089409195326D4002CCCB8 /* UITextView+Size.m */; };
 		09162C55180ED00C00A0DEEF /* DSCompas.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C53180ED00C00A0DEEF /* DSCompas.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09162C56180ED00C00A0DEEF /* DSCompas.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C54180ED00C00A0DEEF /* DSCompas.m */; };
 		09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C58180EE84900A0DEEF /* DSCriterionDescriptionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -585,6 +587,8 @@
 		09067F301818055900C8F48F /* DSAlertQueue+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSAlertQueue+Private.m"; sourceTree = "<group>"; };
 		0907D3BD194C4CC30035C075 /* UINavigationController+Inspection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Inspection.h"; sourceTree = "<group>"; };
 		0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Inspection.m"; sourceTree = "<group>"; };
+		09089408195326D4002CCCB8 /* UITextView+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Size.h"; sourceTree = "<group>"; };
+		09089409195326D4002CCCB8 /* UITextView+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Size.m"; sourceTree = "<group>"; };
 		09162C53180ED00C00A0DEEF /* DSCompas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCompas.h; sourceTree = "<group>"; };
 		09162C54180ED00C00A0DEEF /* DSCompas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCompas.m; sourceTree = "<group>"; };
 		09162C58180EE84900A0DEEF /* DSCriterionDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCriterionDescriptionViewController.h; sourceTree = "<group>"; };
@@ -948,6 +952,8 @@
 				0998E21C1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h */,
 				0907D3BD194C4CC30035C075 /* UINavigationController+Inspection.h */,
 				0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */,
+				09089408195326D4002CCCB8 /* UITextView+Size.h */,
+				09089409195326D4002CCCB8 /* UITextView+Size.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -2052,6 +2058,7 @@
 				09B6DCF31858F5C500FB1825 /* DSGeocodeProvider.h in Headers */,
 				09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */,
 				09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */,
+				0908940A195326D4002CCCB8 /* UITextView+Size.h in Headers */,
 				09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */,
 				09B866B717F1E5C7003B1070 /* NSManagedObject+DSAdditions.h in Headers */,
 				097FCD7A189FAAF300B9B041 /* RTMethod.h in Headers */,
@@ -2343,6 +2350,7 @@
 				0903A2E617F0AC8300A21270 /* DSArrayChangeCalculator.m in Sources */,
 				0903A3A617F0AC9100A21270 /* NSString+Encoding.m in Sources */,
 				09F84FE618C5FB0B0047AA16 /* AFHTTPBodyPart.m in Sources */,
+				0908940B195326D4002CCCB8 /* UITextView+Size.m in Sources */,
 				0903A3BC17F0AC9100A21270 /* UIView+Resizing.m in Sources */,
 				09A83F3C19238ABE008DE30F /* DSRedirectLogs.m in Sources */,
 				0903A3E217F0AC9100A21270 /* DSSettings_impl.m in Sources */,
