@@ -150,7 +150,11 @@
   
   if ([self POSTData]) {
     [formData appendPartWithFormData:[self POSTData] name:[self POSTDataKey]];
+#ifdef DEBUG
+    NSLog(@"Form Data: %@", [[NSString alloc] initWithData:[self POSTData] encoding:NSUTF8StringEncoding]);
+#endif
   }
+  
   
   if ([self POSTDataPath]) {
     if (![self POSTDataFileName]) {
