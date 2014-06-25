@@ -50,8 +50,20 @@
     return result;
   }
   
-  if ([title isEqualToString:localizationKey] && [self error]) {
-    return [DSMessage messageTitleFromError:[self error]];
+  if ([title isEqualToString:localizationKey]) {
+    if ([self error]) {
+      return [DSMessage messageTitleFromError:[self error]];
+    }
+    else if ([[[DSAlertsHandlerConfiguration sharedInstance] showGeneralMessageForUnknownCodes] boolValue]) {
+      NSString *generalErrorTitleLocalizationKey = [NSString stringWithFormat:@"%@.%@.title",
+                                                   DSAlertsGeneralDomain, DSAlertsGeneralCode];
+      NSString *generalErrorTitle = NSLocalizedStringFromTable(generalErrorTitleLocalizationKey,
+                                                              [self localizationTable], nil);
+      return generalErrorTitle;
+    }
+    else {
+      return title;
+    }
   }
   
   return title;
@@ -79,8 +91,20 @@
     }
     return result;
   }
-  else if ([body isEqualToString:localizationKey] && [self error]) {
+  else if ([body isEqualToString:localizationKey]) {
+    if ([self error]) {
       return [DSMessage messageBodyFromError:[self error]];
+    }
+    else if ([[[DSAlertsHandlerConfiguration sharedInstance] showGeneralMessageForUnknownCodes] boolValue]) {
+      NSString *generalErrorBodyLocalizationKey = [NSString stringWithFormat:@"%@.%@.body",
+                                                   DSAlertsGeneralDomain, DSAlertsGeneralCode];
+      NSString *generalErrorBody = NSLocalizedStringFromTable(generalErrorBodyLocalizationKey,
+                                                              [self localizationTable], nil);
+      return generalErrorBody;
+    }
+    else {
+      return body;
+    }
   }
   else {
     return body;

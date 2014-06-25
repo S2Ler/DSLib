@@ -8,4 +8,5 @@
 
 @property (nonatomic, strong, readonly) NSString *modelAlertsClassName;
 @property (nonatomic, strong, readonly) NSString *messagesLocalizationTableName;
+@property (nonatomic, assign, readonly) NSNumber *showGeneralMessageForUnknownCodes;
 @end
