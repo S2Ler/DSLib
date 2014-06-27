@@ -191,6 +191,8 @@
 		09423C7918E8244000F1B9E2 /* DSMessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */; };
 		0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */; };
+		095568D7195D61710081A268 /* DSEmailSharer.h in Headers */ = {isa = PBXBuildFile; fileRef = 095568D5195D61710081A268 /* DSEmailSharer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		095568D8195D61710081A268 /* DSEmailSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = 095568D6195D61710081A268 /* DSEmailSharer.m */; };
 		0969F92B18328AE100B3C4B2 /* UIImage+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92518328AE100B3C4B2 /* UIImage+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0969F92C18328AE100B3C4B2 /* UIImage+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F92618328AE100B3C4B2 /* UIImage+DSAdditions.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		0969F92D18328AE100B3C4B2 /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92718328AE100B3C4B2 /* UIImage+Resize.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -644,6 +646,8 @@
 		09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessageInterceptor.m; sourceTree = "<group>"; };
 		0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DSAdditions.h"; sourceTree = "<group>"; };
 		0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DSAdditions.m"; sourceTree = "<group>"; };
+		095568D5195D61710081A268 /* DSEmailSharer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEmailSharer.h; sourceTree = "<group>"; };
+		095568D6195D61710081A268 /* DSEmailSharer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEmailSharer.m; sourceTree = "<group>"; };
 		0969F92518328AE100B3C4B2 /* UIImage+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DSAdditions.h"; sourceTree = "<group>"; };
 		0969F92618328AE100B3C4B2 /* UIImage+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DSAdditions.m"; sourceTree = "<group>"; };
 		0969F92718328AE100B3C4B2 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -900,6 +904,8 @@
 		0903A2D317F0AC8300A21270 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				095568D5195D61710081A268 /* DSEmailSharer.h */,
+				095568D6195D61710081A268 /* DSEmailSharer.m */,
 				09D35A31193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h */,
 				09D35A32193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m */,
 				0998E239192A595C004D9BD1 /* DSFetchedResultsControllerDelegate */,
@@ -1894,6 +1900,7 @@
 				09F84FE018C5FA900047AA16 /* AFStreamingMultipartFormData.h in Headers */,
 				0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */,
 				0982EB7F18E1EA6000F9DFF2 /* DSViewsStackDataSource.h in Headers */,
+				095568D7195D61710081A268 /* DSEmailSharer.h in Headers */,
 				09F1B7831909983A0031B0F6 /* FBEncryptorAES.h in Headers */,
 				09162C93180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h in Headers */,
 				0903A38C17F0AC9100A21270 /* CATransition+AnimationsBuilder.h in Headers */,
@@ -2366,6 +2373,7 @@
 				0903A3CE17F0AC9100A21270 /* DSMacros.m in Sources */,
 				0903A38D17F0AC9100A21270 /* CATransition+AnimationsBuilder.m in Sources */,
 				0969F93018328AE100B3C4B2 /* UIImage+RoundedCorner.m in Sources */,
+				095568D8195D61710081A268 /* DSEmailSharer.m in Sources */,
 				0903A39A17F0AC9100A21270 /* NSFileManager+Directories.m in Sources */,
 				0903A39C17F0AC9100A21270 /* NSMutableArray+Additions.m in Sources */,
 				09067F321818055900C8F48F /* DSAlertQueue+Private.m in Sources */,
