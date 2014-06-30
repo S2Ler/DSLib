@@ -16,20 +16,25 @@
 - (NSString *)localizedTitle;
 - (NSString *)localizedBody;
 
-- (id)initWithDomain:(DSMessageDomain *)theDomain
+- (instancetype)initWithDomain:(DSMessageDomain *)theDomain
                 code:(DSMessageCode *)theCode
               params:(id)theParam, ... NS_REQUIRES_NIL_TERMINATION;
 
-- (id)initWithDomain:(DSMessageDomain *)theDomain
+- (instancetype)initWithDomain:(DSMessageDomain *)theDomain
                 code:(DSMessageCode *)theCode;
-+ (id)messageWithDomain:(DSMessageDomain *)theDomain
++ (instancetype)messageWithDomain:(DSMessageDomain *)theDomain
                    code:(DSMessageCode *)theCode;
 
-- (id)initWithError:(NSError *)theError;
-+ (id)messageWithError:(NSError *)theError;
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message;
++ (instancetype)messageWithTitle:(NSString *)title
+                         message:(NSString *)message;
+
+- (instancetype)initWithError:(NSError *)theError;
++ (instancetype)messageWithError:(NSError *)theError;
 
 - (BOOL)isEqualToMessage:(id)theObj;
 
-+ (DSMessage *)unknownError;
++ (instancetype)unknownError;
 
 @end

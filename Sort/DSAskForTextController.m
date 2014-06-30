@@ -77,7 +77,9 @@
   NSMutableDictionary *userInfo = [alertView objectUserInfo];
   userInfo[@"completion"] = completion;
   userInfo[@"options"] = @(options);
-  userInfo[@"isTextValidTester"] = isTextValid;
+  if (isTextValid) {
+    userInfo[@"isTextValidTester"] = isTextValid;
+  }
   
   if (options & DSAskForTextControllerOptionSecure) {
     [alertView setAlertViewStyle:UIAlertViewStyleSecureTextInput];

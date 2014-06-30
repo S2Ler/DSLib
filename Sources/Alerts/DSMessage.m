@@ -4,6 +4,7 @@
 #import "DSMessage.h"
 #import "NSString+Extras.h"
 #import "DSAlertsHandlerConfiguration.h"
+#import "NSError+DSMessage.h"
 
 #pragma mark - private
 @interface DSMessage ()
@@ -71,7 +72,7 @@
 
 + (NSString *)messageTitleFromError:(NSError *)error
 {
-    return [error helpAnchor] ? [error helpAnchor] : @"Error";
+    return [error title] ? [error title] : @"Error";
 }
 
 - (NSString *)localizedBody
@@ -116,7 +117,7 @@
     return [error localizedDescription];
 }
 
-- (id)initWithDomain:(DSMessageDomain *)theDomain
+- (instancetype)initWithDomain:(DSMessageDomain *)theDomain
                 code:(DSMessageCode *)theCode
               params:(id)theParam, ...
 {
@@ -140,21 +141,21 @@
   return self;
 }
 
-- (id)initWithDomain:(DSMessageDomain *)theDomain code:(DSMessageCode *)theCode
+- (instancetype)initWithDomain:(DSMessageDomain *)theDomain code:(DSMessageCode *)theCode
 {
   return [self initWithDomain:theDomain
                          code:theCode
                        params:nil];
 }
 
-+ (id)messageWithDomain:(DSMessageDomain *)theDomain code:(DSMessageCode *)theCode
++ (instancetype)messageWithDomain:(DSMessageDomain *)theDomain code:(DSMessageCode *)theCode
 {
   DSMessage *message = [[DSMessage alloc] initWithDomain:theDomain
                                                   code:theCode];
   return message;
 }
 
-- (id)initWithError:(NSError *)theError
+- (instancetype)initWithError:(NSError *)theError
 {
   NSString *domain = [theError domain];
   NSInteger code = [theError code];
@@ -168,18 +169,30 @@
   return self;
 }
 
-+ (id)messageWithError:(NSError *)theError
++ (instancetype)messageWithError:(NSError *)theError
 {
   DSMessage *message = [[DSMessage alloc] initWithError:theError];
   return message;
 }
 
-+ (DSMessage *)unknownError
++ (instancetype)unknownError
 {
   NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain
                                        code:NSURLErrorUnknown
                                    userInfo:@{NSLocalizedDescriptionKey: @"Unknown Error"}];
   return [DSMessage messageWithError:error];
+}
+
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message
+{
+  return [self initWithError:[NSError errorWithTitle:title description:message]];
+}
+
++ (instancetype)messageWithTitle:(NSString *)title
+                         message:(NSString *)message
+{
+  return [[self alloc] initWithTitle:title message:message];
 }
 
 - (BOOL)isEqualToMessage:(DSMessage *)theObj

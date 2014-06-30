@@ -205,6 +205,8 @@
 		096C87AE18290ADA0024D734 /* DSMessage+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 096C87AC18290ADA0024D734 /* DSMessage+Parse.m */; };
 		0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0973572518041E3A00351055 /* DSCustomFontLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0973572618041E3A00351055 /* DSCustomFontLabel.m */; };
+		097CA65B195DCAA900A2EC56 /* NSError+DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */; };
+		097CA65C195DCAA900A2EC56 /* NSError+DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */; };
 		097FCD76189FAAF300B9B041 /* MARTNSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD60189FAAF300B9B041 /* MARTNSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		097FCD77189FAAF300B9B041 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD61189FAAF300B9B041 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		097FCD78189FAAF300B9B041 /* RTIvar.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD63189FAAF300B9B041 /* RTIvar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -660,6 +662,8 @@
 		096C87AC18290ADA0024D734 /* DSMessage+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSMessage+Parse.m"; sourceTree = "<group>"; };
 		0973572518041E3A00351055 /* DSCustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomFontLabel.h; sourceTree = "<group>"; };
 		0973572618041E3A00351055 /* DSCustomFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCustomFontLabel.m; sourceTree = "<group>"; };
+		097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+DSMessage.h"; sourceTree = "<group>"; };
+		097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+DSMessage.m"; sourceTree = "<group>"; };
 		097FCD60189FAAF300B9B041 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
 		097FCD61189FAAF300B9B041 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTNSObject.m; sourceTree = "<group>"; };
 		097FCD63189FAAF300B9B041 /* RTIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTIvar.h; sourceTree = "<group>"; };
@@ -1735,6 +1739,8 @@
 				62DD18B2AEF6C1DFD60B1B8E /* DSAlert.m */,
 				62DD174C1D46388A8A79AF76 /* DSMessage.h */,
 				62DD1FC9FB79656CF9699964 /* DSMessage.m */,
+				097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */,
+				097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */,
 				096C87AB18290ADA0024D734 /* DSMessage+Parse.h */,
 				096C87AC18290ADA0024D734 /* DSMessage+Parse.m */,
 				62DD15ACA99084F023C7B4AF /* DSAlertView.h */,
@@ -1926,6 +1932,7 @@
 				09B6DCE51858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h in Headers */,
 				09162C6A180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h in Headers */,
 				0903A3E117F0AC9100A21270 /* DSSettings_impl.h in Headers */,
+				097CA65B195DCAA900A2EC56 /* NSError+DSMessage.h in Headers */,
 				09F84FE518C5FB0B0047AA16 /* AFHTTPBodyPart.h in Headers */,
 				0903A40117F0AC9100A21270 /* PGVideoImageViewDelegate.h in Headers */,
 				0903A3A317F0AC9100A21270 /* NSObject+Observing.h in Headers */,
@@ -2277,6 +2284,7 @@
 				09B866BA17F1E5C7003B1070 /* DSWebServiceParams.m in Sources */,
 				09B866A217F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m in Sources */,
 				097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */,
+				097CA65C195DCAA900A2EC56 /* NSError+DSMessage.m in Sources */,
 				0903A3D217F0AC9100A21270 /* DSCFunctions.m in Sources */,
 				09B6DCF71858F5C500FB1825 /* DSGeocodeProviderOpenmap.m in Sources */,
 				09EB9F9718ED680A0098CAFF /* DSPassCodeController.m in Sources */,
