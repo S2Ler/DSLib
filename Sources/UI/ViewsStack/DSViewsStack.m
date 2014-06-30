@@ -276,12 +276,31 @@
     case UIGestureRecognizerStateCancelled: {
       DSViewsStackAnimationDirection draggedSide = [self isViewDraggedOut:view];
       
+      __weak DSViewsStack *weakSelf = self;
+      
+      void (^block)() = ^{
+        [weakSelf showNextViewAnimated:YES animationDirection:draggedSide delay:0];
+      };
+      
       if (draggedSide == DSViewsStackAnimationDirectionNone) {
-        [self moveViewToInitialPosition:view animated:YES];
+        [weakSelf moveViewToInitialPosition:view animated:YES];
       }
       else {
-        [self showNextViewAnimated:YES animationDirection:draggedSide delay:0];
-      }
+        if ([[self delegate] respondsToSelector:
+             @selector(viewsStack:completionForPreDragReleasedAction:animationDirection:viewIndex:)]) {
+          [[self delegate] viewsStack:self completionForPreDragReleasedAction:^(BOOL shouldCancel) {
+            if (shouldCancel) {
+              [self moveViewToInitialPosition:view animated:YES];
+            }
+            else {
+              block();
+            }
+          } animationDirection:draggedSide viewIndex:[self currentIndex]];
+        }
+        else {
+          block();
+        }
+      }      
     }
       
       break;

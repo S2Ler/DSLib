@@ -18,4 +18,10 @@
 - (void)                   viewsStack:(DSViewsStack *)viewsStack
  willAutomaticallyMoveViewOutOfScreen:(UIView *)view
                             direction:(DSViewsStackAnimationDirection)direction;
+
+- (void)                 viewsStack:(DSViewsStack *)viewsStack
+ completionForPreDragReleasedAction:(void(^)(BOOL shouldCancel))completion
+                 animationDirection:(DSViewsStackAnimationDirection)direction
+                          viewIndex:(NSUInteger)viewIndex;
+
 @end
