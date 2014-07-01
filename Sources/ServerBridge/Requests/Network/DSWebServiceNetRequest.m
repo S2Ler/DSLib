@@ -221,7 +221,6 @@
   [request setHTTPMethod:
              NSStringFromDSWebServiceURLHTTPMethod([[self url] HTTPMethod])];
 
-#ifdef DEBUG
   NSString *logString = nil;
 
   if ([[self url] HTTPMethod] == DSWebServiceURLHTTPMethodPOST) {
@@ -237,7 +236,6 @@
   if (logString) {
     NSLog(@"%@", logString);
   }
-#endif
 
 
   NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request
