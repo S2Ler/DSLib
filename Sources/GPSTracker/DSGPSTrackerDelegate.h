@@ -5,8 +5,9 @@
 @class DSGPSTracker;
 
 @protocol DSGPSTrackerDelegate <NSObject>
+@optional
 
-/** 
+/**
  \param theDesiredAccuracyFlag show whether theLocation has the accuracy asked from theTracker 
  */
 - (void)             gpsTracker:(DSGPSTracker *)theTracker
@@ -18,6 +19,7 @@
 
 //- (void)gpsTracker:(DSGPSTracker *)theTracker
 //  didFailWithError:(NSError *)theError;
-                   
+
+- (void)gpsTracker:(DSGPSTracker *)theTracker changeAuthorizationStatus:(CLAuthorizationStatus)newStatus;
 
 @end

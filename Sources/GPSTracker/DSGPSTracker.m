@@ -6,6 +6,7 @@
 @interface DSGPSTracker ()
 {
   CLLocationManager *_locationManager;
+  CLAuthorizationStatus _lastAuthrizationStatus;
 }
 
 @property (nonatomic, retain) CLLocation *currentLocation;
@@ -46,6 +47,7 @@
     _desiredAccuracy = kCLLocationAccuracyThreeKilometers;
     _distanceFilter = 10;
     _delegateQueue = dispatch_get_main_queue();
+    _lastAuthrizationStatus = [CLLocationManager authorizationStatus];
   }
   return self;
 }
@@ -82,9 +84,12 @@
   }
 
   dispatch_async([self delegateQueue], ^{
-    [[self delegate] gpsTracker:self
-              didGetNewLocation:currentLocation
-  isLocationWithDesiredAccuracy:isLocationWithDesiredAccuracy];
+    if ([[self delegate] respondsToSelector:@selector(gpsTracker:didGetNewLocation:isLocationWithDesiredAccuracy:)]) {
+      [[self delegate] gpsTracker:self
+                didGetNewLocation:currentLocation
+    isLocationWithDesiredAccuracy:isLocationWithDesiredAccuracy];
+    }
+    
     if ([self delegateBlock]) {
       [self delegateBlock](self, currentLocation, isLocationWithDesiredAccuracy, NO);
     }
@@ -153,7 +158,10 @@
   NSLog(@"%@", error);
   if ([error code] == kCLErrorDenied) {
     dispatch_async([self delegateQueue], ^{
-      [[self delegate] gpsTrackerIsDeniedAccess:self];
+      if ([[self delegate] respondsToSelector:@selector(gpsTrackerIsDeniedAccess:)]) {
+        [[self delegate] gpsTrackerIsDeniedAccess:self];
+      }
+      
       if ([self delegateBlock]) {
         [self delegateBlock](self, nil, NO, YES);
       }
@@ -167,6 +175,16 @@
       }
     });
   }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+  if (status != _lastAuthrizationStatus &&
+      status != kCLAuthorizationStatusNotDetermined &&
+      [[self delegate] respondsToSelector:@selector(gpsTracker:changeAuthorizationStatus:)]) {
+    [[self delegate] gpsTracker:self changeAuthorizationStatus:status];
+  }
+  _lastAuthrizationStatus = status;
 }
 
 - (void)setFailedBlock:(void(^)(NSError *))failedBlock
