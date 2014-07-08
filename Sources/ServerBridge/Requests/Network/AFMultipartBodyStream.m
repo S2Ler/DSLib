@@ -9,9 +9,14 @@
 #import "AFMultipartBodyStream.h"
 #import "AFHTTPBodyPart.h"
 
+@interface NSStream ()
+@property (readwrite) NSStreamStatus streamStatus;
+@property (readwrite, copy) NSError *streamError;
+@end
+
 @interface AFMultipartBodyStream () <NSCopying>
-@property (readwrite, nonatomic, assign) NSStreamStatus streamStatus;
-@property (readwrite, nonatomic, strong) NSError *streamError;
+//@property (readwrite, nonatomic, assign) NSStreamStatus streamStatus;
+//@property (readwrite, nonatomic, strong) NSError *streamError;
 @property (readwrite, nonatomic, assign) NSStringEncoding stringEncoding;
 @property (readwrite, nonatomic, strong) NSMutableArray *HTTPBodyParts;
 @property (readwrite, nonatomic, strong) NSEnumerator *HTTPBodyPartEnumerator;
@@ -21,6 +26,11 @@
 @end
 
 @implementation AFMultipartBodyStream
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wimplicit-atomic-properties"
+@synthesize streamStatus;
+@synthesize streamError;
+#pragma clang diagnostic pop
 
 - (id)initWithStringEncoding:(NSStringEncoding)encoding {
   self = [super init];
