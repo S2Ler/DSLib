@@ -7,6 +7,28 @@
 #import "DSFakeWebServiceRequest.h"
 
 @implementation DSWebServiceRequestsFactory
++ (void)fillParam:(id)createdParam withSubValue:(id)subValue key:(NSString *)key
+{
+  if ([subValue isKindOfClass:[NSDictionary class]]) {
+    id<DSWebServiceParam> subParams = [self paramsFromValues:subValue embeddedParams:nil];
+    [createdParam addParam:subParams forParamName:key];
+  }
+  else if ([subValue isKindOfClass:[NSString class]]) {
+    [createdParam addStringValue:subValue forParamName:key];
+  }
+  else if ([subValue isKindOfClass:[NSDate class]]) {
+    NSString *datetimeString = [(NSDate *)subValue webServiceDateString];
+    [createdParam addStringValue:datetimeString forParamName:key];
+  }
+  else if ([subValue isKindOfClass:[NSURL class]]) {
+    [createdParam addStringValue:[subValue absoluteString] forParamName:key];
+  }
+  else {
+    NSString *stringValue = [NSString stringWithFormat:@"%@", subValue];
+    [createdParam addStringValue:stringValue forParamName:key];
+  }
+}
+
 + (id<DSWebServiceParam>)paramsFromValues:(NSDictionary *)theValues
                            embeddedParams:(NSArray *)theEmbeddedParams
 {
@@ -26,24 +48,21 @@
       createdParam = [params addStringValue:datetimeString
                                forParamName:paramName];
     }
+    else if ([value isKindOfClass:[NSURL class]]) {
+      createdParam = [params addStringValue:[value absoluteString] forParamName:paramName];
+    }
     else if ([value isKindOfClass:[NSArray class]]) {
       createdParam = [DSWebServiceParamFactory paramWithType:DSWebServiceParamTypeArray];
       for (id subValue in (NSArray *)value) {
-        if ([subValue isKindOfClass:[NSDictionary class]]) {
-          id<DSWebServiceParam> subParams = [self paramsFromValues:subValue embeddedParams:nil];
-          [createdParam addParam:subParams forParamName:nil];
-        }
-        else if ([subValue isKindOfClass:[NSString class]]) {
-          [createdParam addStringValue:subValue forParamName:nil];
-        }
-        else if ([subValue isKindOfClass:[NSDate class]]) {
-          NSString *datetimeString = [(NSDate *)subValue webServiceDateString];
-          [createdParam addStringValue:datetimeString forParamName:nil];
-        }
-        else {
-          NSString *stringValue = [NSString stringWithFormat:@"%@", subValue];
-          [createdParam addStringValue:stringValue forParamName:nil];
-        }
+        [self fillParam:createdParam withSubValue:subValue key:nil];
+      }
+      [params addParam:createdParam forParamName:paramName];
+    }
+    else if ([value isKindOfClass:[NSDictionary class]]) {
+      createdParam = [DSWebServiceParamFactory paramWithType:DSWebServiceParamTypeDictionary];
+      for (NSString *key in [(NSDictionary *)value allKeys]) {
+        id subValue = [value valueForKey:key];
+        [self fillParam:createdParam withSubValue:subValue key:key];
       }
       [params addParam:createdParam forParamName:paramName];
     }
