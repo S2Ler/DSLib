@@ -43,6 +43,15 @@
                CGRectMake(0, 0, frame.size.width, frame.size.height)];
 	imageView.contentMode = UIViewContentModeScaleAspectFit;
 	[self addSubview:imageView];
+  [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView]|"
+                                                               options:0
+                                                               metrics:nil
+                                                                 views:@{@"imageView": imageView}]];
+  [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[imageView]|"
+                                                               options:0
+                                                               metrics:nil
+                                                                 views:@{@"imageView": imageView}]];
+
 	
 	// create an activity inidicator
 	_activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
