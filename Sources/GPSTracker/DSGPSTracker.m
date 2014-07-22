@@ -148,8 +148,9 @@
                newLocation.coordinate.latitude,
                newLocation.coordinate.longitude,
                newLocation.horizontalAccuracy);
-
-  [self setCurrentLocation:newLocation];
+  if (_locationManager) {
+    [self setCurrentLocation:newLocation];
+  }
 }
 
 - (void)locationManager:(CLLocationManager *)manager

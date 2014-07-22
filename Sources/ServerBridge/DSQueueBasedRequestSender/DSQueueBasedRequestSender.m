@@ -130,8 +130,16 @@ static NSMapTable *interceptorsMap = nil;
 
 + (void)addMessageInterceptor:(DSMessageInterceptor *)interceptor;
 {
-  DSMessage *message = [DSMessage messageWithDomain:[interceptor domain] code:[interceptor code]];
-  [[self interceptorsMap] setObject:[interceptor handler] forKey:message];
+  if ([interceptor code]) {
+    DSMessage *message = [DSMessage messageWithDomain:[interceptor domain] code:[interceptor code]];
+    [[self interceptorsMap] setObject:[interceptor handler] forKey:message];
+  }
+  else {
+    for (DSMessageCode *code in [interceptor codes]) {
+      DSMessage *message = [DSMessage messageWithDomain:[interceptor domain] code:code];
+      [[self interceptorsMap] setObject:[[interceptor handler] copy] forKey:message];
+    }
+  }
 }
 
 + (BOOL)hasInterceptorForMessage:(DSMessage *)message

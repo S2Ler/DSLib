@@ -67,6 +67,8 @@
 {
   [self resetCurrentIndex];
   
+  [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+  
   [self preloadViews];
 }
 

@@ -11,7 +11,19 @@
 
 @interface DSMessageInterceptor ()
 @property (nonatomic, copy) ds_completion_handler handler;
+
 @end
 
 @implementation DSMessageInterceptor
+- (void)setCode:(NSString *)code
+{
+  _code = code;
+  _codes = nil;
+}
+
+- (void)setCodes:(NSArray *)codes
+{
+  _codes = codes;
+  _code = nil;
+}
 @end
