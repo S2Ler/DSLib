@@ -197,7 +197,7 @@ didDismissWithButtonIndex:(NSInteger)theButtonIndex
   }
   else {
     clickedButton = [[[self currentAlert] otherButtons]
-                            objectAtIndex:(NSUInteger)(theButtonIndex - 1)];
+                     objectAtIndex:(NSUInteger)(theButtonIndex - ([[self currentAlert] cancelButton] ? 1: 0))];
   }
 
   [clickedButton invoke];
