@@ -60,6 +60,11 @@
 	return self;
 }
 
+- (void)layoutSubviews
+{
+  [super layoutSubviews];
+  [self setFrame:[self frame]];
+}
 
 - (id)initWithFrame:(CGRect)frame target:(id)target action:(SEL)action
 {

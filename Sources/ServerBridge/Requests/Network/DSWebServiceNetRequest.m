@@ -39,12 +39,6 @@
 @synthesize POSTDataFileName = _POSTDataFileName;
 @synthesize sendRawPOSTData = _sendRawPOSTData;
 
-
-- (void)dealloc
-{
-  NSLog(@"");
-}
-
 #pragma mark - init
 - (id)initWithServer:(DSWebServiceURL *)theWebServiceURL
               params:(id<DSWebServiceParam>)theParams
@@ -142,6 +136,74 @@
 }
 
 #pragma mark - public
+#pragma mark - public
+- (NSMutableData *)postDataForRequest:(NSMutableURLRequest *)request
+{
+  NSString *boundary
+  = @"----WebKitFormBoundaryYA9vSekClgZaHxyb";
+  
+  NSString *contentType
+  = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+  
+  [request addValue:contentType
+ forHTTPHeaderField:@"Content-Type"];
+  
+  NSString *boundaryString
+  = [NSString stringWithFormat:@"\r\n--%@\r\n", boundary];
+  
+  NSString *boundaryStringFinal
+  = [NSString stringWithFormat:@"\r\n--%@--\r\n", boundary];
+  
+  NSMutableData *postData = [NSMutableData data];
+  
+  [postData appendData:[boundaryString dataUsingEncoding:NSUTF8StringEncoding]];
+  
+  NSString *formDataHeader = nil;
+  
+  if ([self POSTDataFileName]) {
+    if ([self POSTDataKey]) {
+      formDataHeader
+      = [NSString stringWithFormat:
+         @"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\nContent-Type: application/octet-stream\r\n\r\n",
+         [self POSTDataKey], [self POSTDataFileName]];
+    }
+    else {
+      formDataHeader
+      = [NSString stringWithFormat:
+         @"Content-Disposition: form-data; name=\"file\"; filename=\"%@\"\r\nContent-Type: application/octet-stream\r\n\r\n",
+         [self POSTDataFileName]];
+    }
+  }
+  else if ([self POSTDataKey]) {
+    formDataHeader = [NSString stringWithFormat:
+                      @"Content-Disposition: form-data; name=\"%@\"\r\n\r\n",
+                      [self POSTDataKey]];
+  }
+  else {
+    formDataHeader
+    = [NSString stringWithFormat:
+       @"Content-Disposition: form-data; name=\"file\"; filename=\"%@\"\r\nContent-Type: application/octet-stream\r\n\r\n",
+       @"POST.dat"];
+  }
+  
+  [postData appendData:
+   [formDataHeader dataUsingEncoding:NSUTF8StringEncoding]];
+  
+  NSData *mainPostData = nil;
+  
+  if ([self POSTData]) {
+    mainPostData = [self POSTData];
+  }
+  else if ([self POSTDataPath]) {
+    mainPostData = [NSData dataWithContentsOfMappedFile:[self POSTDataPath]];
+  }
+  
+  [postData appendData:mainPostData];
+  [postData appendData:
+   [boundaryStringFinal dataUsingEncoding:NSUTF8StringEncoding]];
+  return postData;
+}
+
 - (void)configureFormData:(AFStreamingMultipartFormData *)formData
 {
   if (![self POSTDataKey]) {
@@ -154,7 +216,6 @@
     NSLog(@"Form Data: %@", [[NSString alloc] initWithData:[self POSTData] encoding:NSUTF8StringEncoding]);
 #endif
   }
-  
   
   if ([self POSTDataPath]) {
     if (![self POSTDataFileName]) {
@@ -196,24 +257,43 @@
   }
   else {
     request = [[NSMutableURLRequest alloc] init];
-
+    
     [request setURL:nsURL];
-
+    
     NSData *postData = nil;
-    if ([self sendRawPOSTData] == YES) {
-      [request setHTTPBody:[self POSTData]];
-      NSString *dataLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
-      
-      [request addValue:dataLength forHTTPHeaderField:@"Content-Length"];
+    if (0) {
+      if ([self sendRawPOSTData] == YES) {
+        [request setHTTPBody:[self POSTData]];
+        NSString *dataLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+        
+        [request addValue:dataLength forHTTPHeaderField:@"Content-Length"];
+      }
+      else {
+        AFStreamingMultipartFormData *formData
+        = [[AFStreamingMultipartFormData alloc] initWithURLRequest:request
+                                                    stringEncoding:NSUTF8StringEncoding];
+        [self configureFormData:formData];
+        request = [formData requestByFinalizingMultipartFormData];
+      }
     }
     else {
-      AFStreamingMultipartFormData *formData
-      = [[AFStreamingMultipartFormData alloc] initWithURLRequest:request
-                                                  stringEncoding:NSUTF8StringEncoding];
-      [self configureFormData:formData];
-      request = [formData requestByFinalizingMultipartFormData];
+      if ([self sendRawPOSTData] == YES) {
+        postData = [self POSTData];
+      }
+      else {
+        postData = [self postDataForRequest:request];
+      }
+      
+      // setting the body of the post to the request
+      [request setHTTPBody:postData];
+      
+      NSString *dataLength
+      = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+      
+      [request addValue:dataLength
+     forHTTPHeaderField:@"Content-Length"];
     }
-
+    
     [request setTimeoutInterval:DEFAULT_TIMEOUT];
     [request setCachePolicy:NSURLRequestUseProtocolCachePolicy];
   }
@@ -427,4 +507,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 }
 
 @end
+
+//&& ![self POSTDataPath]
+
 
