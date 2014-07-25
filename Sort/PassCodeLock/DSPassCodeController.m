@@ -16,6 +16,11 @@
 
 @implementation DSPassCodeController
 
+- (void)dealloc
+{
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (NSString *)PASSCODE_IDENTIFIER
 {
   if (!_PASSCODE_IDENTIFIER) {
@@ -59,11 +64,6 @@
 {
   NSAssert(FALSE, @"Please use initWithUniqueID:serviceName: selector");
   return [self initWithUniqueID:nil serviceName:@"DEFAULT_SERVICE_NAME"];
-}
-
-- (void)dealloc
-{
-  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)setResignActiveDate:(NSDate *)resignActiveDate

@@ -23,6 +23,11 @@
 
 @implementation DSAlertsHandler
 
+- (void)dealloc
+{
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 + (id)sharedInstance
 {
   DEFINE_SHARED_INSTANCE_USING_BLOCK(^
@@ -197,7 +202,7 @@ didDismissWithButtonIndex:(NSInteger)theButtonIndex
   }
   else {
     clickedButton = [[[self currentAlert] otherButtons]
-                            objectAtIndex:(NSUInteger)(theButtonIndex - 1)];
+                     objectAtIndex:(NSUInteger)(theButtonIndex - ([[self currentAlert] cancelButton] ? 1: 0))];
   }
 
   [clickedButton invoke];
