@@ -23,6 +23,11 @@
 
 @implementation DSAlertsHandler
 
+- (void)dealloc
+{
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 + (id)sharedInstance
 {
   DEFINE_SHARED_INSTANCE_USING_BLOCK(^
