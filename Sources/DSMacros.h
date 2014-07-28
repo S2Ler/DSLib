@@ -32,3 +32,5 @@ return _sharedObject;
 #define DSRGB(r,g,b) [UIColor colorWithRed:r/255. green:g/255. blue:b/255. alpha:1.0]
 #define DSRGB_CG(r,g,b) [DSRGB(r,g,b) CGColor]
 #define DSRGBA_CG(r,g,b,a) [DSRGBA(r,g,b,a) CGColor]
+
+#define DSWEAK_SELF __weak typeof(self)

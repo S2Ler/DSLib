@@ -24,7 +24,6 @@
 @synthesize activity = _activity;
 @synthesize button = _button;
 
-
 - (id)initWithFrame:(CGRect)frame
 {
 	self = [super initWithFrame:frame];
@@ -58,12 +57,6 @@
 	[self addSubview:_activity];
 	
 	return self;
-}
-
-- (void)layoutSubviews
-{
-  [super layoutSubviews];
-  [self setFrame:[self frame]];
 }
 
 - (id)initWithFrame:(CGRect)frame target:(id)target action:(SEL)action
@@ -280,10 +273,7 @@
 - (void)dealloc {
 	[self stopTapTimer];
 	
-	
 	[self killActivityIndicator];
-	
-	
 }
 
 
