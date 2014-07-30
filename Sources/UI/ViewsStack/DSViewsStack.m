@@ -356,8 +356,9 @@
   double alpha = atan(tangensAlpha) * ((verticalAlphaParameter > 0)
                                        ? MAX(verticalAlphaParameter, 0.5)
                                        : MIN (verticalAlphaParameter, -0.5));
-  
-  [view setTransform:CGAffineTransformMakeRotation(alpha)];
+  if (iOS7orHigher) {
+    [view setTransform:CGAffineTransformMakeRotation(alpha)];
+  }
 }
 
 @end
