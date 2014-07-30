@@ -10,12 +10,14 @@
 
 @implementation UITextView (Size)
 - (void)updateTextViewSizeForText:(NSString *)text {
-  CGRect textRect = [[self layoutManager] usedRectForTextContainer:[self textContainer]];
-  CGFloat sizeAdjustment = [[self font] lineHeight] * [UIScreen mainScreen].scale;
-  
-  if (textRect.size.height >= self.frame.size.height - sizeAdjustment) {
-    if ([text isEqualToString:@"\n"]) {
-      [self setContentOffset:CGPointMake(self.contentOffset.x, self.contentOffset.y + sizeAdjustment+4)];
+  if ([self respondsToSelector:@selector(layoutManager)]) {
+    CGRect textRect = [[self layoutManager] usedRectForTextContainer:[self textContainer]];
+    CGFloat sizeAdjustment = [[self font] lineHeight] * [UIScreen mainScreen].scale;
+    
+    if (textRect.size.height >= self.frame.size.height - sizeAdjustment) {
+      if ([text isEqualToString:@"\n"]) {
+        [self setContentOffset:CGPointMake(self.contentOffset.x, self.contentOffset.y + sizeAdjustment+4)];
+      }
     }
   }
 }
