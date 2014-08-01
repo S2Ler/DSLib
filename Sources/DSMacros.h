@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "DSCFunctions.h"
 
 #define DS_SAVE_RELEASE(obj) [obj release]; obj = nil;
 
@@ -11,6 +12,7 @@ _sharedObject = block(); \
 return _sharedObject;
 
 #define iOS7orHigher ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 7)
+#define isScreenSizeHigherThanIPhone4 ([[UIScreen mainScreen] preferredMode].size.height > 480 * [[UIScreen mainScreen] scale] && !isIPadIdiom())
 
 #define ASSERT_MAIN_THREAD NSAssert([[NSThread currentThread] isEqual:[NSThread mainThread]], @"%@:%@ should run main thread.", NSStringFromClass([self class]), NSStringFromSelector(_cmd))
 
