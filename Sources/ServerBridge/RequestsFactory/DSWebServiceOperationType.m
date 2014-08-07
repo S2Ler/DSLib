@@ -15,7 +15,6 @@ NSString *NSStringFromDSWebServiceOperationType(DSWebServiceOperationType theTyp
     case DSWebServiceOperationTypeDelete:
       return @"Delete";
     default: {
-      assert(FALSE);
       return nil;
     }
   }
