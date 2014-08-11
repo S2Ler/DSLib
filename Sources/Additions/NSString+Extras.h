@@ -45,4 +45,6 @@ extern NSString *const EMAIL_REGEX;
 + (NSString *)propertyNameFromSetter:(SEL)setter;
 
 - (NSString *)perlSearchRegex;
+
+- (NSString *)truncateToLength:(NSUInteger)lenght;
 @end

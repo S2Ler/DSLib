@@ -268,4 +268,16 @@ NSString *const EMAIL_REGEX = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
    }];
   return searchRegex;
 }
+
+- (NSString *)truncateToLength:(NSUInteger)lenght
+{
+  if ([self length] <= lenght) {
+    return [self copy];
+  }
+  else {
+    NSString *substring = [self substringToIndex:MAX(lenght - 3, 0)];
+    NSString *truncated = [NSString stringWithFormat:@"%@...", substring];
+    return truncated;
+  }
+}
 @end
