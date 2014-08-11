@@ -35,4 +35,4 @@ return _sharedObject;
 #define DSRGB_CG(r,g,b) [DSRGB(r,g,b) CGColor]
 #define DSRGBA_CG(r,g,b,a) [DSRGBA(r,g,b,a) CGColor]
 
-#define DSWEAK_SELF __weak typeof(self)
+#define DSWEAK_SELF(variable_name) __weak typeof(self) variable_name = self
