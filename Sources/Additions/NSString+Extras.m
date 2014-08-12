@@ -124,7 +124,12 @@ NSString *const EMAIL_REGEX = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}
 
 - (NSString *)stringByRemovingPrefix:(NSString *)thePrefixName
 {
-  return [self stringByRemovingNFirstChars:[thePrefixName length]];
+  if ([self hasPrefix:thePrefixName]) {
+    return [self stringByRemovingNFirstChars:[thePrefixName length]];
+  }
+  else {
+    return [self copy];
+  }
 }
 
 + (NSString *)stringWithComponents:(NSArray *)components concatenatedBy:(NSString *)separator
