@@ -42,6 +42,10 @@
   if (self != nil) {
     _alertsQueue = [DSQueue queue];
     _shouldShowNotReachableAlerts = YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationDidResignActive:)
+                                                 name:UIApplicationWillResignActiveNotification
+                                               object:nil];
   }
   return self;
 }
@@ -187,7 +191,7 @@
 }
 
 #pragma mark - UIAlertViewDelegate
-- (void)alertViewCancel:(UIAlertView *)alertView
+- (void)alertViewCancel:(id<DSAlertView>)alertView
 {
   [self alertDismissed];
 }
@@ -207,6 +211,13 @@ didDismissWithButtonIndex:(NSInteger)theButtonIndex
 
   [clickedButton invoke];
   [self alertDismissed];
+}
+
+#pragma mark - Notifications
+- (void)applicationDidResignActive:(NSNotification *)notification
+{
+  [[self alertsQueue] removeAll];
+  [[self currentAlertView] dismissAnimated:NO];
 }
 
 @end

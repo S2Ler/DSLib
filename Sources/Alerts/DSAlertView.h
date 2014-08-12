@@ -10,6 +10,7 @@
 
 - (void)setDelegate:(id<DSAlertViewDelegate>)theDelegate;
 - (void)show;
+- (void)dismissAnimated:(BOOL)animated;
 
 - (BOOL)isCancelButtonAtIndex:(NSInteger)theButtonIndex;
 @end

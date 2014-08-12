@@ -68,6 +68,11 @@
   [super show];
 }
 
+- (void)dismissAnimated:(BOOL)animated
+{
+  [super dismissWithClickedButtonIndex:[self cancelButtonIndex] animated:YES];
+}
+
 - (BOOL)isCancelButtonAtIndex:(NSInteger)theButtonIndex
 {
   return [self cancelButtonIndex] == theButtonIndex;
