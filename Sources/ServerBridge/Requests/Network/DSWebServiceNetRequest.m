@@ -261,7 +261,7 @@
     [request setURL:nsURL];
     
     NSData *postData = nil;
-    if (0) {
+    if ([self POSTDataPath] || [[self POSTData] length] > 625000) {
       if ([self sendRawPOSTData] == YES) {
         [request setHTTPBody:[self POSTData]];
         NSString *dataLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
