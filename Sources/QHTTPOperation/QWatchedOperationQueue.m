@@ -109,12 +109,6 @@
   else {
     assert(NO);
   }
-  if (NO) {
-    [super observeValueForKeyPath:keyPath
-                         ofObject:object
-                           change:change
-                          context:context];
-  }
 }
 
 - (void)didFinishOperation:(NSOperation *)op
