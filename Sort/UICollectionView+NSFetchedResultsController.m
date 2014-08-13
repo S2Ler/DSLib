@@ -11,22 +11,28 @@
 
 @implementation UICollectionView (NSFetchedResultsController)
 
-- (void)addChangeForSection:(id <NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+- (void)addChangeForSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
+                    atIndex:(NSUInteger)sectionIndex
+              forChangeType:(NSFetchedResultsChangeType)type
 {
   
   NSMutableDictionary *change = [NSMutableDictionary new];
   
   switch(type) {
-      case NSFetchedResultsChangeInsert:
-      case NSFetchedResultsChangeDelete:
-          change[@(type)] = @(sectionIndex);
-          break;
+    case NSFetchedResultsChangeInsert:
+    case NSFetchedResultsChangeDelete:
+      change[@(type)] = @(sectionIndex);
+      break;
+    default:
+      break;
   }
   
   [self.sectionChanges addObject:change];
 }
 
-- (void)addChangeForObjectAtIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+- (void)addChangeForObjectAtIndexPath:(NSIndexPath *)indexPath
+                        forChangeType:(NSFetchedResultsChangeType)type
+                         newIndexPath:(NSIndexPath *)newIndexPath
 {
   
   NSMutableDictionary *change = [NSMutableDictionary new];
@@ -70,11 +76,13 @@
             case NSFetchedResultsChangeUpdate:
               [self reloadSections:[NSIndexSet indexSetWithIndex:[obj unsignedIntegerValue]]];
               break;
+            default:
+              break;
           }
         }];
       }
     } completion:^(BOOL finished) {
-        NSLog(@"finished updating sections!");
+      NSLog(@"finished updating sections!");
     }];
   }
   
@@ -105,7 +113,7 @@
         }];
       }
     } completion:^(BOOL finished) {
-        NSLog(@"finished updating objects!");
+      NSLog(@"finished updating objects!");
     }];
   }
   
