@@ -11,7 +11,7 @@
 #define DEFAULT_TIMEOUT 30
 
 #pragma mark - props
-@interface DSWebServiceNetRequest ()
+@interface DSWebServiceNetRequest ()<NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 {
   long long _expectedDownloadSize;
 }
