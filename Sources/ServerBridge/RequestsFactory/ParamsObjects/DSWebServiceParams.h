@@ -40,6 +40,8 @@
 - (NSString *)POSTDataPath;
 - (NSString *)POSTDataFileName;
 - (NSString *)customServerURL;
+/** Default NO */
+- (BOOL)embedParamsInURLForPOSTRequest;
 
 /** If not nil, the response data will be written to this path */
 - (NSString *)outputPath;

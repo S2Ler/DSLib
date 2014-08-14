@@ -9,6 +9,7 @@
 @property (nonatomic, strong, readonly) NSString *urlString;
 @property (nonatomic, assign) DSWebServiceURLHTTPMethod HTTPMethod;
 @property (nonatomic, strong, readonly) NSString *functionName;
+@property (nonatomic, assign) BOOL embedParamsInURLForPOSTRequest;
 
 + (id)urlWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
            functionName:(NSString *)theFunctionName
