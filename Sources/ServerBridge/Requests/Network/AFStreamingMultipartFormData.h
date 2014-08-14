@@ -12,6 +12,8 @@
 @interface AFStreamingMultipartFormData : NSObject <AFMultipartFormData>
 - (instancetype)initWithURLRequest:(NSMutableURLRequest *)urlRequest
                     stringEncoding:(NSStringEncoding)encoding;
-
 - (NSMutableURLRequest *)requestByFinalizingMultipartFormData;
+
+- (instancetype)initWithStringEncoding:(NSStringEncoding)encoding;
+- (NSInputStream *)createInputStream;
 @end

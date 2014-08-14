@@ -261,37 +261,18 @@
     [request setURL:nsURL];
     
     NSData *postData = nil;
-    if (0) {
-      if ([self sendRawPOSTData] == YES) {
-        [request setHTTPBody:[self POSTData]];
-        NSString *dataLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
-        
-        [request addValue:dataLength forHTTPHeaderField:@"Content-Length"];
-      }
-      else {
-        AFStreamingMultipartFormData *formData
-        = [[AFStreamingMultipartFormData alloc] initWithURLRequest:request
-                                                    stringEncoding:NSUTF8StringEncoding];
-        [self configureFormData:formData];
-        request = [formData requestByFinalizingMultipartFormData];
-      }
+    if ([self sendRawPOSTData] == YES) {
+      [request setHTTPBody:[self POSTData]];
+      NSString *dataLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+      
+      [request addValue:dataLength forHTTPHeaderField:@"Content-Length"];
     }
     else {
-      if ([self sendRawPOSTData] == YES) {
-        postData = [self POSTData];
-      }
-      else {
-        postData = [self postDataForRequest:request];
-      }
-      
-      // setting the body of the post to the request
-      [request setHTTPBody:postData];
-      
-      NSString *dataLength
-      = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
-      
-      [request addValue:dataLength
-     forHTTPHeaderField:@"Content-Length"];
+      AFStreamingMultipartFormData *formData
+      = [[AFStreamingMultipartFormData alloc] initWithURLRequest:request
+                                                  stringEncoding:NSUTF8StringEncoding];
+      [self configureFormData:formData];
+      request = [formData requestByFinalizingMultipartFormData];
     }
     
     [request setTimeoutInterval:DEFAULT_TIMEOUT];
@@ -476,6 +457,16 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
 
   [[self outputStream] close];
   [self finishWithError:nil];  
+}
+
+- (NSInputStream *)connection:(NSURLConnection *)connection needNewBodyStream:(NSURLRequest *)request
+{
+  AFStreamingMultipartFormData *formData
+  = [[AFStreamingMultipartFormData alloc] initWithStringEncoding:NSUTF8StringEncoding];
+
+  [self configureFormData:formData];
+  NSInputStream *inputStream = [formData createInputStream];
+  return inputStream;
 }
 
 #pragma mark - HTTPS workaround

@@ -24,15 +24,25 @@
           stringEncoding:(NSStringEncoding)encoding
 {
   self = [super init];
-  if (!self) {
-    return nil;
+  
+  if (self) {
+    self.request = urlRequest;
+    self.stringEncoding = encoding;
+    self.boundary = AFCreateMultipartFormBoundary();
+    self.bodyStream = [[AFMultipartBodyStream alloc] initWithStringEncoding:encoding];
   }
   
-  self.request = urlRequest;
-  self.stringEncoding = encoding;
-  self.boundary = AFCreateMultipartFormBoundary();
-  self.bodyStream = [[AFMultipartBodyStream alloc] initWithStringEncoding:encoding];
-  
+  return self;
+}
+
+- (instancetype)initWithStringEncoding:(NSStringEncoding)encoding
+{
+  self = [super init];
+  if (self) {
+    self.stringEncoding = encoding;
+    self.boundary = AFCreateMultipartFormBoundary();
+    self.bodyStream = [[AFMultipartBodyStream alloc] initWithStringEncoding:encoding];
+  }
   return self;
 }
 
@@ -183,6 +193,11 @@
   [self.request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[self.bodyStream contentLength]] forHTTPHeaderField:@"Content-Length"];
   
   return self.request;
+}
+
+- (NSInputStream *)createInputStream
+{
+  return [self bodyStream];
 }
 
 @end
