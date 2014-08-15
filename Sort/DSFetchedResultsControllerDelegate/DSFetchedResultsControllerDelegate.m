@@ -63,14 +63,11 @@
         updatedPath = indexPath;
       }
       
-      [[self tableView]
-       insertRowsAtIndexPaths:[NSArray arrayWithObject:updatedPath]
-       withRowAnimation:UITableViewRowAnimationFade];
+      [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:updatedPath]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
       
-      if ([[self delegate] respondsToSelector:
-           @selector(fetchDelegate:didInsertItemAtIndexPath:)]) {
-        [[self delegate] fetchDelegate:self
-              didInsertItemAtIndexPath:updatedPath];
+      if ([[self delegate] respondsToSelector: @selector(fetchDelegate:didInsertItemAtIndexPath:)]) {
+        [[self delegate] fetchDelegate:self didInsertItemAtIndexPath:updatedPath];
       }
     }
       break;
@@ -81,14 +78,11 @@
         updatedPath = newIndexPath;
       }
       
-      [[self tableView]
-       deleteRowsAtIndexPaths:[NSArray arrayWithObject:updatedPath]
-       withRowAnimation:UITableViewRowAnimationFade];
+      [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:updatedPath]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
       
-      if ([[self delegate] respondsToSelector:
-           @selector(fetchDelegate:didDeleteItemAtIndexPath:)]) {
-        [[self delegate] fetchDelegate:self
-              didDeleteItemAtIndexPath:updatedPath];
+      if ([[self delegate] respondsToSelector:@selector(fetchDelegate:didDeleteItemAtIndexPath:)]) {
+        [[self delegate] fetchDelegate:self didDeleteItemAtIndexPath:updatedPath];
       }
     }
       break;
@@ -103,13 +97,11 @@
       break;
       
     case NSFetchedResultsChangeMove:
-      [[self tableView]
-       deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-       withRowAnimation:UITableViewRowAnimationFade];
-      [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+      [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                               withRowAnimation:UITableViewRowAnimationFade];
-      if ([[self delegate] respondsToSelector:
-           @selector(fetchDelegate:didMoveItemFromIndexPath:toIndexPath:)]) {
+      [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+      if ([[self delegate] respondsToSelector:@selector(fetchDelegate:didMoveItemFromIndexPath:toIndexPath:)]) {
         [[self delegate] fetchDelegate:self
               didMoveItemFromIndexPath:indexPath
                            toIndexPath:newIndexPath];
