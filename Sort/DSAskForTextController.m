@@ -108,7 +108,7 @@
   NSString *const alertViewText = [[alertView textFieldAtIndex:0] text];
   NSString *const alertViewPlaceHolder = [[alertView textFieldAtIndex:0] placeholder];
   
-  if (!isTextValid(alertViewText)) {
+  if (isTextValid && !isTextValid(alertViewText)) {
     return NO;
   }
   
