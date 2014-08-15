@@ -1,280 +1,150 @@
 
 #import "DSPhotoView.h"
+#import "CATransition+AnimationsBuilder.h"
 
-@interface DSPhotoView () {	
-	UIImageView *imageView;
-	UIActivityIndicatorView *_activity;
-	UIButton *_button;
-	BOOL _isZoomed;
-	NSTimer *_tapTimer;
-	NSObject <DSPhotoViewDelegate> *__weak photoDelegate;
-}
+@interface DSPhotoView ()
+@property (nonatomic, assign, getter=isZoomed) BOOL zoomed;
+@property (nonatomic, strong) NSTimer *tapTimer;
 
-- (UIImage*)createHighlightImageWithFrame:(CGRect)rect;
-- (void)killActivityIndicator;
-- (void)startTapTimer;
-- (void)stopTapTimer;
+//TODO: setup constraints
+@property (weak, nonatomic) NSLayoutConstraint *constraintLeft;
+@property (weak, nonatomic) NSLayoutConstraint *constraintRight;
+@property (weak, nonatomic) NSLayoutConstraint *constraintTop;
+@property (weak, nonatomic) NSLayoutConstraint *constraintBottom;
+
+@property (nonatomic) CGFloat lastZoomScale;
 @end
 
-
-
 @implementation DSPhotoView
-@synthesize photoDelegate;
-@synthesize imageView;
-@synthesize activity = _activity;
-@synthesize button = _button;
+
+- (void)dealloc
+{
+  [[self imageView] removeObserver:self forKeyPath:@"image"];
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
-	self = [super initWithFrame:frame];
-	
-	self.userInteractionEnabled = YES;
-	self.clipsToBounds = YES;
-	self.delegate = self;
-	self.contentMode = UIViewContentModeCenter;
-	self.maximumZoomScale = 3.0;
-	self.minimumZoomScale = 1.0;
-	self.decelerationRate = .85;
-	self.contentSize = CGSizeMake(frame.size.width, frame.size.height);
-	
-	// create the image view
-	imageView = [[UIImageView alloc] initWithFrame:
-               CGRectMake(0, 0, frame.size.width, frame.size.height)];
-	imageView.contentMode = UIViewContentModeScaleAspectFit;
-	[self addSubview:imageView];
-  [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView]|"
-                                                               options:0
-                                                               metrics:nil
-                                                                 views:@{@"imageView": imageView}]];
-  [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[imageView]|"
-                                                               options:0
-                                                               metrics:nil
-                                                                 views:@{@"imageView": imageView}]];
-
-	
-	// create an activity inidicator
-	_activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-	[self addSubview:_activity];
-	
-	return self;
-}
-
-- (id)initWithFrame:(CGRect)frame target:(id)target action:(SEL)action
-{
-	self = [self initWithFrame:frame];
-	
-	// fit them images!
-	imageView.contentMode = UIViewContentModeScaleAspectFill;
-	
-	// disable zooming
-	self.minimumZoomScale = 1.0;
-	self.maximumZoomScale = 1.0;
-	
-	// allow buttons to be clicked
-	[self setUserInteractionEnabled:YES];
-	
-	// but don't allow zooming/panning
-	self.scrollEnabled = NO;
-	
-	// create button
-	_button = [[UIButton alloc] initWithFrame:CGRectZero];
-	[_button setBackgroundColor:[UIColor clearColor]];
-	[_button addTarget:target 
-              action:action
-    forControlEvents:UIControlEventTouchUpInside];
+  self = [super initWithFrame:frame];
   
-	[self addSubview:_button];
-	
-	// create outline
-	[self.layer setBorderWidth:1.0];
-	[self.layer setBorderColor:
-   [[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:.25] CGColor]];
-	
-	return self;
+  [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+  self.userInteractionEnabled = YES;
+  self.clipsToBounds = YES;
+  self.delegate = self;
+  self.contentMode = UIViewContentModeScaleToFill;
+  self.maximumZoomScale = 3.0;
+  self.minimumZoomScale = 1;
+  self.decelerationRate = .85;
+  
+  UIImageView *imageView = [[UIImageView alloc] initWithFrame: CGRectMake(0, 0, frame.size.width, frame.size.height)];
+  imageView.translatesAutoresizingMaskIntoConstraints = NO;
+  imageView.contentMode = UIViewContentModeScaleAspectFit;
+  _imageView = imageView;
+  [self addSubview:imageView];
+  
+  [[self imageView] addObserver:self forKeyPath:@"image" options:NSKeyValueObservingOptionNew context:nil];
+  
+  NSLayoutConstraint *constraintLeft = [NSLayoutConstraint constraintWithItem:[self imageView]
+                                                                    attribute:NSLayoutAttributeLeft
+                                                                    relatedBy:NSLayoutRelationEqual
+                                                                       toItem:self
+                                                                    attribute:NSLayoutAttributeLeft
+                                                                   multiplier:1
+                                                                     constant:100];
+  NSLayoutConstraint *constraintRight = [NSLayoutConstraint constraintWithItem:[self imageView]
+                                                                     attribute:NSLayoutAttributeRight
+                                                                     relatedBy:NSLayoutRelationEqual
+                                                                        toItem:self
+                                                                     attribute:NSLayoutAttributeRight
+                                                                    multiplier:1
+                                                                      constant:100];
+  NSLayoutConstraint *constraintTop = [NSLayoutConstraint constraintWithItem:[self imageView]
+                                                                   attribute:NSLayoutAttributeTop
+                                                                   relatedBy:NSLayoutRelationEqual
+                                                                      toItem:self
+                                                                   attribute:NSLayoutAttributeTop
+                                                                  multiplier:1
+                                                                    constant:100];
+  NSLayoutConstraint *constraintBottom = [NSLayoutConstraint constraintWithItem:[self imageView]
+                                                                      attribute:NSLayoutAttributeBottom
+                                                                      relatedBy:NSLayoutRelationEqual
+                                                                         toItem:self
+                                                                      attribute:NSLayoutAttributeBottom
+                                                                     multiplier:1
+                                                                       constant:100];
+
+  [self addConstraints:@[constraintLeft, constraintRight, constraintTop, constraintBottom]];
+  
+  [self setConstraintLeft:constraintLeft];
+  [self setConstraintRight:constraintRight];
+  [self setConstraintTop:constraintTop];
+  [self setConstraintBottom:constraintBottom];
+  
+  return self;
 }
 
-- (void)resetZoom
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	_isZoomed = NO;
-	[self stopTapTimer];
-	[self setZoomScale:self.minimumZoomScale animated:NO];
-	[self zoomToRect:
-   CGRectMake(0, 0, self.frame.size.width, self.frame.size.height ) animated:NO];
-	self.contentSize
-  = CGSizeMake(self.frame.size.width * self.zoomScale, 
-               self.frame.size.height * self.zoomScale );
+  if (context == nil) {
+    [[self imageView] setAlpha:0];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+      [[self layer] addAnimation:[CATransition transationForFadeWithDuration:0.25] forKey:nil];
+      [[self imageView] setAlpha:1];
+      [self updateZoom];
+      [self updateConstraints];
+    });
+  } else {
+    [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+  }
 }
 
-- (void)setFrame:(CGRect)theFrame
-{
-	// store position of the image view if we're scaled or panned so we can stay at that point
-	CGPoint imagePoint = imageView.frame.origin;
-	
-	[super setFrame:theFrame];
-	
-	// update content size
-	self.contentSize = CGSizeMake(theFrame.size.width * self.zoomScale, 
-                                theFrame.size.height * self.zoomScale );
-	
-	// resize image view and keep it proportional to the current zoom scale
-	imageView.frame = CGRectMake(imagePoint.x, 
-                               imagePoint.y, 
-                               theFrame.size.width * self.zoomScale,
-                               theFrame.size.height * self.zoomScale);
-	
-	// center the activity indicator
-	[_activity setCenter:CGPointMake(theFrame.size.width * .5,
-                                   theFrame.size.height * .5)];
-	
-	// update button
-	if( _button )
-	{
-		// resize the button
-		_button.frame = CGRectMake(0, 0, 
-                               theFrame.size.width, theFrame.size.height);
-		
-		// create a fresh image for button highlight state
-		[_button setImage:[self createHighlightImageWithFrame:theFrame]
-             forState:UIControlStateHighlighted];
-	}
+#pragma mark - Layout
+- (void) updateConstraints {
+  
+  float imageWidth = self.imageView.image.size.width;
+  float imageHeight = self.imageView.image.size.height;
+  
+  float viewWidth = self.superview.bounds.size.width;
+  float viewHeight = self.superview.bounds.size.height;
+  
+  // center image if it is smaller than screen
+  float hPadding = (viewWidth - self.zoomScale * imageWidth) / 2;
+  if (hPadding < 0) hPadding = 0;
+  
+  float vPadding = (viewHeight - self.zoomScale * imageHeight) / 2;
+  if (vPadding < 0) vPadding = 0;
+  
+  self.constraintLeft.constant = hPadding;
+  self.constraintRight.constant = hPadding;
+  
+  self.constraintTop.constant = vPadding;
+  self.constraintBottom.constant = vPadding;
+  
+  [super updateConstraints];
 }
 
-
-- (UIImage*)createHighlightImageWithFrame:(CGRect)rect
-{
-	if( rect.size.width == 0 || rect.size.height == 0 ) return nil;
-	
-	// create a tint layer for the selected state of the button
-	UIGraphicsBeginImageContext(CGSizeMake(rect.size.width, rect.size.height));
-	CALayer *blankLayer = [CALayer layer];
-	[blankLayer setFrame:CGRectMake(0, 0, rect.size.width, rect.size.height)];
-	[blankLayer setBackgroundColor:
-   [[UIColor colorWithRed:0 green:0 blue:0 alpha:.4] CGColor]];
-	[blankLayer renderInContext: UIGraphicsGetCurrentContext()];
-	UIImage *clearImg = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
-	return clearImg;
+// Zoom to show as much image as possible unless image is smaller than screen
+- (void) updateZoom {
+  float minZoom = MIN(self.superview.bounds.size.width / self.imageView.image.size.width,
+                      self.superview.bounds.size.height / self.imageView.image.size.height);
+  
+  if (minZoom > 1) minZoom = 1;
+  
+  self.minimumZoomScale = minZoom;
+  
+  // Force scrollViewDidZoom fire if zoom did not change
+  if (minZoom == self.lastZoomScale) minZoom += 0.000001;
+  
+  self.lastZoomScale = self.zoomScale = minZoom;
 }
 
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	UITouch *touch = [[event allTouches] anyObject];
-	
-	if (touch.tapCount == 2) {
-		[self stopTapTimer];
-		
-		if( _isZoomed ) 
-		{
-			_isZoomed = NO;
-			[self setZoomScale:self.minimumZoomScale animated:YES];
-		}
-		else {
-			
-			_isZoomed = YES;
-			
-			// define a rect to zoom to. 
-			CGPoint touchCenter = [touch locationInView:self];
-			CGSize zoomRectSize 
-      = CGSizeMake(self.frame.size.width / self.maximumZoomScale, 
-                   self.frame.size.height / self.maximumZoomScale );
-			CGRect zoomRect = CGRectMake(touchCenter.x - zoomRectSize.width * .5, 
-                                   touchCenter.y - zoomRectSize.height * .5,
-                                   zoomRectSize.width, 
-                                   zoomRectSize.height );
-			
-			// correct too far left
-			if( zoomRect.origin.x < 0 )
-				zoomRect = CGRectMake(0, zoomRect.origin.y,
-                              zoomRect.size.width, zoomRect.size.height );
-			
-			// correct too far up
-			if( zoomRect.origin.y < 0 )
-				zoomRect = CGRectMake(zoomRect.origin.x, 0, 
-                              zoomRect.size.width, zoomRect.size.height );
-			
-			// correct too far right
-			if( zoomRect.origin.x + zoomRect.size.width > self.frame.size.width )
-				zoomRect = CGRectMake(self.frame.size.width - zoomRect.size.width, zoomRect.origin.y, zoomRect.size.width, zoomRect.size.height );
-			
-			// correct too far down
-			if( zoomRect.origin.y + zoomRect.size.height > self.frame.size.height )
-				zoomRect = CGRectMake( zoomRect.origin.x, 
-                              self.frame.size.height - zoomRect.size.height, 
-                              zoomRect.size.width, 
-                              zoomRect.size.height );
-			
-			// zoom to it.
-			[self zoomToRect:zoomRect animated:YES];
-		}
-	}
-}
-
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	if([[event allTouches] count] == 1 ) {
-		UITouch *touch = [[event allTouches] anyObject];
-		if( touch.tapCount == 1 ) {
-			
-			if(_tapTimer ) [self stopTapTimer];
-			[self startTapTimer];
-		}
-	}
-}
-
-- (void)startTapTimer
-{
-	_tapTimer = [[NSTimer alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:.5] 
-                                       interval:0.5
-                                         target:self
-                                       selector:@selector(handleTap) 
-                                       userInfo:nil
-                                        repeats:NO];
-	[[NSRunLoop currentRunLoop] addTimer:_tapTimer forMode:NSDefaultRunLoopMode];
-	
-}
-- (void)stopTapTimer
-{
-	if([_tapTimer isValid])
-		[_tapTimer invalidate];
-	
-	_tapTimer = nil;
-}
-
-- (void)handleTap
-{
-	// tell the controller
-	if([photoDelegate respondsToSelector:@selector(didTapPhotoView:)])
-		[photoDelegate didTapPhotoView:self];
-}
-
-
+#pragma mark - UIScrollViewDelegate
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-	return imageView;
+  return [self imageView];
 }
 
-- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView
-                       withView:(UIView *)view
-                        atScale:(CGFloat)scale
-{
-	if( self.zoomScale == self.minimumZoomScale ) _isZoomed = NO;
-	else _isZoomed = YES;
+- (void) scrollViewDidZoom:(UIScrollView *)scrollView {
+  [self updateConstraints];
 }
-
-
-- (void)killActivityIndicator
-{
-	[_activity stopAnimating];
-	[_activity removeFromSuperview];
-	_activity = nil;
-}
-
-- (void)dealloc {
-	[self stopTapTimer];
-	
-	[self killActivityIndicator];
-}
-
 
 @end

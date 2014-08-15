@@ -6,17 +6,12 @@
 
 @interface DSPhotoView : UIScrollView <UIScrollViewDelegate> 
 
-- (void)killActivityIndicator;
+@property (nonatomic, weak) id<DSPhotoViewDelegate> photoDelegate;
 
-// inits this view to have a button over the image
-- (id)initWithFrame:(CGRect)frame target:(id)target action:(SEL)action;
+@property (nonatomic, weak) UIImageView *imageView;
 
-- (void)resetZoom;
-
-@property (nonatomic, weak) NSObject <DSPhotoViewDelegate> *photoDelegate;
-@property (nonatomic, readonly) UIImageView *imageView;
-@property (nonatomic, readonly) UIButton *button;
-@property (nonatomic, readonly) UIActivityIndicatorView *activity;
+//Call on rotation
+- (void)updateZoom;
 
 @end
 
