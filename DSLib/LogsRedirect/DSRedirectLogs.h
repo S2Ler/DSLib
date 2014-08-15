@@ -11,7 +11,7 @@
 typedef void (^DSRedirectLogsHandler) (NSString *format, va_list args_list);
 
 @interface DSRedirectLogs : NSObject
-@property (nonatomic, copy) DSRedirectLogsHandler customLogger;
+@property (nonatomic, copy) void (^customLogger)(NSString *format, va_list args_list);
 + (instancetype)sharedInstance;
 
 - (void)log:(NSString *)format args:(va_list)args;

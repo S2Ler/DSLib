@@ -95,6 +95,7 @@
                                                  functionName:functionName
                                                    forceHTTPS:isHTTPSOnlyParams
                                               customServerURL:[theParams customServerURL]];
+    [url setEmbedParamsInURLForPOSTRequest:[theParams embedParamsInURLForPOSTRequest]];
 
     NSDictionary *paramValues = [theParams allParams];
     NSArray *paramsEmbeddedInURL = [theParams paramsEmbeddedInURL];
@@ -108,6 +109,7 @@
     [request setPOSTDataFileName:[theParams POSTDataFileName]];
     [request setSendRawPOSTData:NO];
     [request setPOSTDataKey:@"json_request"];
+
     return request;
   }
   else {//FakeRequests

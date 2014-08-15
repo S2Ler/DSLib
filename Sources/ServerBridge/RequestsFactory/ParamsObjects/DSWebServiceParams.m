@@ -122,6 +122,11 @@
   return nil;
 }
 
+- (BOOL)embedParamsInURLForPOSTRequest
+{
+  return NO;
+}
+
 - (NSArray *)paramsEmbeddedInURL
 {
   return [NSArray array];

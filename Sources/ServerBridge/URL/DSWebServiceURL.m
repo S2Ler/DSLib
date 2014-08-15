@@ -133,7 +133,8 @@
 {
   NSMutableString *urlStringWithParams = [[self urlWithoutParams] mutableCopy];
 
-  if ([self HTTPMethod] != DSWebServiceURLHTTPMethodPOST) {
+  if ([self HTTPMethod] != DSWebServiceURLHTTPMethodPOST
+      || ([self HTTPMethod] == DSWebServiceURLHTTPMethodPOST && [self embedParamsInURLForPOSTRequest])) {
     NSMutableString *GETParams = [NSMutableString string];
 
     NSUInteger paramsCount = [[theParams stringParamNames] count];
@@ -254,6 +255,7 @@
   [encoder encodeObject:self.functionName forKey:@"functionName"];
   [encoder encodeObject:self.paramsDataForPOST forKey:@"paramsDataForPOST"];
   [encoder encodeBool:self.forceHTTPS forKey:@"forceHTTPS"];
+  [encoder encodeBool:self.embedParamsInURLForPOSTRequest forKey:@"embedParamsInURLForPOSTRequest"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -267,6 +269,7 @@
   if (self) {
     _urlString = [decoder decodeObjectForKey:@"urlString"];
     _paramsDataForPOST = [decoder decodeObjectForKey:@"paramsDataForPOST"];
+    _embedParamsInURLForPOSTRequest = [decoder decodeBoolForKey:@"embedParamsInURLForPOSTRequest"];
   }
   return self;
 }
