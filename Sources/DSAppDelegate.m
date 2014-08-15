@@ -43,9 +43,8 @@
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
-  [[self class] cancelPreviousPerformRequestsWithTarget:self];
-
-  NSLog(@"");
+  [[self class] cancelPreviousPerformRequestsWithTarget:self];  
+  
   DSMessage *errorMessage = [DSMessage messageWithError:error];
   if ([self registerForRemoteNotificationsCompletion]) {
     [self registerForRemoteNotificationsCompletion](FAILED_WITH_MESSAGE, errorMessage, NO_RESULTS);
