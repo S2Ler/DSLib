@@ -470,11 +470,11 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
 }
 
 #pragma mark - HTTPS workaround
+#if DSWebServiceNetRequest_ValidateCertificate == 0
 - (BOOL)                   connection:(NSURLConnection *)connection
 canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
 {
-  return [protectionSpace.authenticationMethod
-    isEqualToString:NSURLAuthenticationMethodServerTrust];
+  return [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
 }
 
 - (void)               connection:(NSURLConnection *)connection
@@ -489,6 +489,46 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
   [[challenge sender]
               continueWithoutCredentialForAuthenticationChallenge:challenge];
 }
+#else
+- (BOOL)shouldTrustProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
+  // Load up the bundled certificate.
+  NSString *certPath = [[NSBundle mainBundle] pathForResource:DSWebServiceNetRequest_CertificateName ofType:@"der"];
+  NSData *certData = [[NSData alloc] initWithContentsOfFile:certPath];
+  CFDataRef certDataRef = (__bridge_retained CFDataRef)certData;
+  SecCertificateRef cert = SecCertificateCreateWithData(NULL, certDataRef);
+  
+  // Establish a chain of trust anchored on our bundled certificate.
+  CFArrayRef certArrayRef = CFArrayCreate(NULL, (void *)&cert, 1, NULL);
+  SecTrustRef serverTrust = protectionSpace.serverTrust;
+  SecTrustSetAnchorCertificates(serverTrust, certArrayRef);
+  
+  // Verify that trust.
+  SecTrustResultType trustResult;
+  SecTrustEvaluate(serverTrust, &trustResult);
+  
+  // Clean up.
+  CFRelease(certArrayRef);
+  CFRelease(cert);
+  CFRelease(certDataRef);
+  
+	// Did our custom trust chain evaluate successfully?
+  return trustResult == kSecTrustResultUnspecified;
+}
+
+- (BOOL)                   connection:(NSURLConnection *)connection
+canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
+{
+  return [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+  if ([self shouldTrustProtectionSpace:challenge.protectionSpace]) {
+    [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
+  } else {
+    [challenge.sender performDefaultHandlingForAuthenticationChallenge:challenge];
+  }
+}
+#endif
 
 #pragma mark - request userinfo
 - (NSString *)description
