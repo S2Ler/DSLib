@@ -40,6 +40,8 @@
                                  otherTitles:otherButtonsTitles];
   }
 
+  [alertView setAlert:theAlert];
+  
   return alertView;
 }
 

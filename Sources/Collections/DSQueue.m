@@ -162,4 +162,8 @@
   return [queue_ countByEnumeratingWithState:state objects:buffer count:len];
 }
 
+- (void)filterWithPredicate:(NSPredicate *)predicate
+{
+  [[self queue] filterUsingPredicate:predicate];
+}
 @end

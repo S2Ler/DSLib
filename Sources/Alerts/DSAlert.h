@@ -11,6 +11,9 @@
 @property (nonatomic, strong, readonly) NSArray *otherButtons;
 @property (nonatomic, strong, readonly) DSMessage *message;
 
+/** Default is YES */
+@property (nonatomic, assign) BOOL shouldDismissOnApplicationDidResignActive;
+
 - (id)initWithMessage:(DSMessage *)theMessage
          cancelButton:(DSAlertButton *)theCancelButton
          otherButtons:(DSAlertButton *)theButtons, ... NS_REQUIRES_NIL_TERMINATION;

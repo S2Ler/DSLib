@@ -9,6 +9,7 @@
 @end
 
 @implementation DSUIAlertView
+@synthesize alert = _alert;
 
 - (id)initWithTitle:(NSString *)title
             message:(NSString *)message

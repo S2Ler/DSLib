@@ -64,6 +64,8 @@ NSFastEnumeration
 - (NSEnumerator *)reverseObjectEnumerator;
 
 - (id)firstObjectWhichEqualsTo:(id)object;
+
+- (void)filterWithPredicate:(NSPredicate *)predicate;
 @end
 
 /** For internal and subclass use */

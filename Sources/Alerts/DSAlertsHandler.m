@@ -216,8 +216,13 @@ didDismissWithButtonIndex:(NSInteger)theButtonIndex
 #pragma mark - Notifications
 - (void)applicationDidResignActive:(NSNotification *)notification
 {
-  [[self alertsQueue] removeAll];
-  [[self currentAlertView] dismissAnimated:NO];
+  [[self alertsQueue] filterWithPredicate:[NSPredicate predicateWithBlock:^BOOL(DSAlert *alert, NSDictionary *bindings) {
+    return [alert shouldDismissOnApplicationDidResignActive] == NO;
+  }]];
+  
+  if ([[[self currentAlertView] alert] shouldDismissOnApplicationDidResignActive]) {
+    [[self currentAlertView] dismissAnimated:NO];
+  }
 }
 
 @end

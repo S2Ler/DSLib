@@ -1,7 +1,10 @@
 
 @protocol DSAlertViewDelegate;
+@class DSAlert;
 
 @protocol DSAlertView<NSObject>
+@property (nonatomic, strong) DSAlert *alert;
+
 - (id)initWithTitle:(NSString *)title
             message:(NSString *)message
            delegate:(id<DSAlertViewDelegate>)delegate

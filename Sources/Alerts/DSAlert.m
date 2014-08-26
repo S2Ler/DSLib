@@ -35,6 +35,7 @@
     va_end(buttonsList);
 
     _otherButtons = buttons;
+    _shouldDismissOnApplicationDidResignActive = YES;
   }
 
   return self;
