@@ -36,20 +36,49 @@
   [self gradientLayer];
 }
 
-- (void)forwardInvocation:(NSInvocation *)anInvocation
-{
-  [anInvocation invokeWithTarget:[self gradientLayer]];
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
-{
-  return [[self gradientLayer] methodSignatureForSelector:aSelector];
-}
-
 - (void)layoutSubviews
 {
   [super layoutSubviews];
   [[self gradientLayer] setFrame:[self bounds]];
 }
 
+- (void)setColors:(NSArray *)colors
+{
+  [[self gradientLayer] setColors:colors];
+}
+
+- (NSArray *)colors
+{
+  return [[self gradientLayer] colors];
+}
+
+- (NSArray *)locations
+{
+  return [[self gradientLayer]locations];
+}
+
+- (CGPoint)startPoint
+{
+  return [[self gradientLayer] startPoint];
+}
+
+- (CGPoint)endPoint
+{
+  return [[self gradientLayer] endPoint];
+}
+
+- (void)setLocations:(NSArray *)locations
+{
+  [[self gradientLayer] setLocations:locations];
+}
+
+- (void)setStartPoint:(CGPoint)startPoint
+{
+  [[self gradientLayer] setStartPoint:startPoint];
+}
+
+- (void)setEndPoint:(CGPoint)endPoint
+{
+  [[self gradientLayer] setEndPoint:endPoint];
+}
 @end
