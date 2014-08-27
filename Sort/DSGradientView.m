@@ -10,75 +10,73 @@
 #import "DSGradientView.h"
 
 @interface DSGradientView ()
-@property (nonatomic, weak) CAGradientLayer *gradientLayer;
 @end
 
 @implementation DSGradientView
-@dynamic colors;
-@dynamic locations;
-@dynamic startPoint, endPoint;
 
-- (CAGradientLayer *)gradientLayer
+- (void)sharedInit
 {
-  if (!_gradientLayer) {
-    _gradientLayer = [CAGradientLayer layer];
-    [self.layer insertSublayer:_gradientLayer atIndex:0];
+  [self setStartPoint:CGPointMake(0.5, 0)];
+  [self setEndPoint:CGPointMake(0.5, 1)];
+}
+
+- (id)init
+{
+  self = [super init];
+  if (self) {
+    [self sharedInit];
   }
   
-  return _gradientLayer;
+  return self;
 }
 
-- (void)willMoveToWindow:(UIWindow *)newWindow
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-  [super willMoveToWindow:newWindow];
+  self = [super initWithCoder:aDecoder];
+  if (self) {
+    [self sharedInit];
+  }
+  return self;
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+  self = [super initWithFrame:frame];
+  if (self) {
+    [self sharedInit];
+  }
+  return self;
+}
+
+- (void)drawRect:(CGRect)rect
+{
+  CGContextRef context = UIGraphicsGetCurrentContext();
+  CGGradientRef gradient;
+  CGColorSpaceRef colorspace;
+  CGFloat *locations = calloc([[self locations] count] ? [[self locations] count] : 2, sizeof(CGFloat));
+  if ([[self locations] count]) {
+    [[self locations] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+      locations[idx] = [obj floatValue];
+    }];
+  }
+  else {
+    locations[0] = 0;
+    locations[1] = 1;
+  }
   
-  //Trigger creation
-  [self gradientLayer];
+  colorspace = CGColorSpaceCreateDeviceRGB();
+  
+  gradient = CGGradientCreateWithColors(colorspace,
+                                        (CFArrayRef)[self colors], NULL);
+  CGPoint startPoint, endPoint;
+  startPoint.x = rect.size.width * [self startPoint].x;
+  startPoint.y = rect.size.height * [self startPoint].y;
+  
+  endPoint.x = rect.size.width * [self endPoint].x;
+  endPoint.y = rect.size.height * [self endPoint].y;
+  
+  CGContextDrawLinearGradient(context, gradient,
+                              startPoint, endPoint, 0);
 }
 
-- (void)layoutSubviews
-{
-  [super layoutSubviews];
-  [[self gradientLayer] setFrame:[self bounds]];
-}
-
-- (void)setColors:(NSArray *)colors
-{
-  [[self gradientLayer] setColors:colors];
-}
-
-- (NSArray *)colors
-{
-  return [[self gradientLayer] colors];
-}
-
-- (NSArray *)locations
-{
-  return [[self gradientLayer]locations];
-}
-
-- (CGPoint)startPoint
-{
-  return [[self gradientLayer] startPoint];
-}
-
-- (CGPoint)endPoint
-{
-  return [[self gradientLayer] endPoint];
-}
-
-- (void)setLocations:(NSArray *)locations
-{
-  [[self gradientLayer] setLocations:locations];
-}
-
-- (void)setStartPoint:(CGPoint)startPoint
-{
-  [[self gradientLayer] setStartPoint:startPoint];
-}
-
-- (void)setEndPoint:(CGPoint)endPoint
-{
-  [[self gradientLayer] setEndPoint:endPoint];
-}
 @end
