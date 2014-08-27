@@ -34,6 +34,10 @@ return _sharedObject;
 #define DSRGB(r,g,b) [UIColor colorWithRed:r/255. green:g/255. blue:b/255. alpha:1.0]
 #define DSRGB_CG(r,g,b) [DSRGB(r,g,b) CGColor]
 #define DSRGBA_CG(r,g,b,a) [DSRGBA(r,g,b,a) CGColor]
+#define DSRGB_CG_ID(r,g,b) ((__bridge id)[DSRGB(r,g,b) CGColor])
+#define DSRGBA_CG_ID(r,g,b,a) ((__bridge id)[DSRGBA(r,g,b,a) CGColor])
+#define DSGRAY(gray) [UIColor colorWithWhite:gray/255. alpha:1.]
+#define DSGRAYA(gray, alpha) [UIColor colorWithWhite:gray/255. alpha:alpha]
 
 #define DSWEAK_SELF(variable_name) __weak typeof(self) variable_name = self
 #define DSWEAK(variable_name, variable) __weak typeof(variable) variable_name = variable;
