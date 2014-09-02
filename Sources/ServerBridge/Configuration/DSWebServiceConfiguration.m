@@ -30,7 +30,7 @@ static NSDictionary *DSWebServiceConfiguration_sharedConfiguration = nil;
 - (NSString *)keyForConfigurationKey:(NSString *)theConfigurationKey
                               scheme:(NSString *)theScheme
 {
-  NSArray *components = [theConfigurationKey componentsSeparatedByString:@"_"];
+  NSArray *components = [theConfigurationKey componentsSeparatedByString:@":"];
   if (theScheme == nil && [components count] == 1) {
     return [components objectAtIndex:0];
   }
@@ -48,7 +48,7 @@ static NSDictionary *DSWebServiceConfiguration_sharedConfiguration = nil;
 {
   NSString *schemePostfix = nil;
   if (theScheme != nil) {
-    schemePostfix = [NSString stringWithFormat:@"_%@", theScheme];    
+    schemePostfix = [NSString stringWithFormat:@":%@", theScheme];    
   }
   else {
     schemePostfix = nil;
@@ -65,7 +65,7 @@ static NSDictionary *DSWebServiceConfiguration_sharedConfiguration = nil;
    }];
 }
 
-- (id)initWithConfiguration:(NSDictionary *)theConfiguration
+- (instancetype)initWithConfiguration:(NSDictionary *)theConfiguration
 {
   self = [super init];
   if (self) {
@@ -81,7 +81,7 @@ static NSDictionary *DSWebServiceConfiguration_sharedConfiguration = nil;
   
 }
 
-+ (id)setupSharedInstanceWithConfigurationDictionary:(NSDictionary *)theConfiguration
++ (instancetype)setupSharedInstanceWithConfigurationDictionary:(NSDictionary *)theConfiguration
 {
   DSWebServiceConfiguration_sharedConfiguration = theConfiguration;
   
@@ -98,7 +98,7 @@ static NSDictionary *DSWebServiceConfiguration_sharedConfiguration = nil;
   return [[self useHTTPS] boolValue];
 }
 
-- (id)init {
+- (instancetype)init {
   if (DSWebServiceConfiguration_sharedConfiguration) {
     return [self initWithConfiguration:DSWebServiceConfiguration_sharedConfiguration];    
   }
@@ -108,7 +108,7 @@ static NSDictionary *DSWebServiceConfiguration_sharedConfiguration = nil;
   }
 }
 
-+ (id)sharedInstance
++ (instancetype)sharedInstance
 {
   DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
     return [[self alloc] init];

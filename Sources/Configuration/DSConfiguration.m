@@ -41,7 +41,7 @@ static NSDictionary *DSConfiguration_sharedConfiguration = nil;
 {
   NSString *schemePostfix = nil;
   if (theScheme != nil) {
-    schemePostfix = [NSString stringWithFormat:@"_%@", theScheme];
+    schemePostfix = [NSString stringWithFormat:@":%@", theScheme];
   }
   else {
     schemePostfix = nil;

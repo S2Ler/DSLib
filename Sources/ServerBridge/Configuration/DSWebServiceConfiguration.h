@@ -10,8 +10,8 @@
    default scheme will be loaded. */
 @property (strong) NSString *configurationScheme;
 
-+ (id)sharedInstance;
-+ (id)setupSharedInstanceWithConfigurationDictionary:(NSDictionary *)theConfiguration;
++ (instancetype)sharedInstance;
++ (instancetype)setupSharedInstanceWithConfigurationDictionary:(NSDictionary *)theConfiguration;
 
 - (NSString *)serverURL;
 - (NSString *)paramsDataOutputType;
@@ -21,5 +21,5 @@
 @end
 
 @interface DSWebServiceConfiguration (UnitTests)
-- (id)initWithConfiguration:(NSDictionary *)theConfiguration;
+- (instancetype)initWithConfiguration:(NSDictionary *)theConfiguration;
 @end
