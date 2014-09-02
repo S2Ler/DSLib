@@ -207,6 +207,8 @@
 		096C87AE18290ADA0024D734 /* DSMessage+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 096C87AC18290ADA0024D734 /* DSMessage+Parse.m */; };
 		0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0973572518041E3A00351055 /* DSCustomFontLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0973572618041E3A00351055 /* DSCustomFontLabel.m */; };
+		097C81B019B5C31F00E9F48E /* UIButton+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 097C81AE19B5C31F00E9F48E /* UIButton+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097C81B119B5C31F00E9F48E /* UIButton+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */; };
 		097CA65B195DCAA900A2EC56 /* NSError+DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */; };
 		097CA65C195DCAA900A2EC56 /* NSError+DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */; };
 		097FCD76189FAAF300B9B041 /* MARTNSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD60189FAAF300B9B041 /* MARTNSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -666,6 +668,8 @@
 		096C87AC18290ADA0024D734 /* DSMessage+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSMessage+Parse.m"; sourceTree = "<group>"; };
 		0973572518041E3A00351055 /* DSCustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomFontLabel.h; sourceTree = "<group>"; };
 		0973572618041E3A00351055 /* DSCustomFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCustomFontLabel.m; sourceTree = "<group>"; };
+		097C81AE19B5C31F00E9F48E /* UIButton+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DSAdditions.h"; sourceTree = "<group>"; };
+		097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DSAdditions.m"; sourceTree = "<group>"; };
 		097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+DSMessage.h"; sourceTree = "<group>"; };
 		097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+DSMessage.m"; sourceTree = "<group>"; };
 		097FCD60189FAAF300B9B041 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
@@ -970,6 +974,8 @@
 				09089409195326D4002CCCB8 /* UITextView+Size.m */,
 				0906D6B919ADAC9D00E2F7F6 /* DSGradientView.h */,
 				0906D6BA19ADAC9D00E2F7F6 /* DSGradientView.m */,
+				097C81AE19B5C31F00E9F48E /* UIButton+DSAdditions.h */,
+				097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1926,6 +1932,7 @@
 				0903A3B517F0AC9100A21270 /* UIScreen+Availability.h in Headers */,
 				09067F2D181804CA00C8F48F /* DSAlertsQueue.h in Headers */,
 				097FCD7C189FAAF300B9B041 /* RTProperty.h in Headers */,
+				097C81B019B5C31F00E9F48E /* UIButton+DSAdditions.h in Headers */,
 				09162C71180EE84900A0DEEF /* DSTextField.h in Headers */,
 				0903A3A717F0AC9100A21270 /* NSString+Extras.h in Headers */,
 				0903A3B117F0AC9100A21270 /* UIDevice+Additions.h in Headers */,
@@ -2405,6 +2412,7 @@
 				62DD12DB787C62A67B7990A4 /* DSAlertButton.m in Sources */,
 				09B866AE17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m in Sources */,
 				09B866A417F1E5C7003B1070 /* DSWebServiceQueue.m in Sources */,
+				097C81B119B5C31F00E9F48E /* UIButton+DSAdditions.m in Sources */,
 				62DD1E3872904802D5077B3F /* DSUIAlertView.m in Sources */,
 				09162C6E180EE84900A0DEEF /* DSFieldValidationCriterion.m in Sources */,
 				09162C94180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m in Sources */,
