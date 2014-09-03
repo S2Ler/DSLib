@@ -148,6 +148,8 @@
 		09067F2E181804CA00C8F48F /* DSAlertsQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F2C181804CA00C8F48F /* DSAlertsQueue.m */; };
 		09067F311818055900C8F48F /* DSAlertQueue+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 09067F2F1818055900C8F48F /* DSAlertQueue+Private.h */; };
 		09067F321818055900C8F48F /* DSAlertQueue+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F301818055900C8F48F /* DSAlertQueue+Private.m */; };
+		0906D6BB19ADAC9D00E2F7F6 /* DSGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0906D6B919ADAC9D00E2F7F6 /* DSGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0906D6BC19ADAC9D00E2F7F6 /* DSGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0906D6BA19ADAC9D00E2F7F6 /* DSGradientView.m */; };
 		0907D3BF194C4CC30035C075 /* UINavigationController+Inspection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0907D3BD194C4CC30035C075 /* UINavigationController+Inspection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0907D3C0194C4CC30035C075 /* UINavigationController+Inspection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */; };
 		0908940A195326D4002CCCB8 /* UITextView+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 09089408195326D4002CCCB8 /* UITextView+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -222,6 +224,8 @@
 		0972E34019B6FCB1005D00F2 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0972E32319B6FA9F005D00F2 /* DateTools.bundle */; };
 		0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0973572518041E3A00351055 /* DSCustomFontLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0973572618041E3A00351055 /* DSCustomFontLabel.m */; };
+		097C81B019B5C31F00E9F48E /* UIButton+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 097C81AE19B5C31F00E9F48E /* UIButton+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097C81B119B5C31F00E9F48E /* UIButton+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */; };
 		097CA65B195DCAA900A2EC56 /* NSError+DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */; };
 		097CA65C195DCAA900A2EC56 /* NSError+DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */; };
 		097FCD76189FAAF300B9B041 /* MARTNSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD60189FAAF300B9B041 /* MARTNSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -606,6 +610,8 @@
 		09067F2C181804CA00C8F48F /* DSAlertsQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlertsQueue.m; sourceTree = "<group>"; };
 		09067F2F1818055900C8F48F /* DSAlertQueue+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSAlertQueue+Private.h"; sourceTree = "<group>"; };
 		09067F301818055900C8F48F /* DSAlertQueue+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSAlertQueue+Private.m"; sourceTree = "<group>"; };
+		0906D6B919ADAC9D00E2F7F6 /* DSGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGradientView.h; sourceTree = "<group>"; };
+		0906D6BA19ADAC9D00E2F7F6 /* DSGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGradientView.m; sourceTree = "<group>"; };
 		0907D3BD194C4CC30035C075 /* UINavigationController+Inspection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Inspection.h"; sourceTree = "<group>"; };
 		0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Inspection.m"; sourceTree = "<group>"; };
 		09089408195326D4002CCCB8 /* UITextView+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Size.h"; sourceTree = "<group>"; };
@@ -696,6 +702,8 @@
 		0972E33119B6FA9F005D00F2 /* NSDate+DateTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateTools.m"; sourceTree = "<group>"; };
 		0973572518041E3A00351055 /* DSCustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomFontLabel.h; sourceTree = "<group>"; };
 		0973572618041E3A00351055 /* DSCustomFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCustomFontLabel.m; sourceTree = "<group>"; };
+		097C81AE19B5C31F00E9F48E /* UIButton+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DSAdditions.h"; sourceTree = "<group>"; };
+		097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DSAdditions.m"; sourceTree = "<group>"; };
 		097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+DSMessage.h"; sourceTree = "<group>"; };
 		097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+DSMessage.m"; sourceTree = "<group>"; };
 		097FCD60189FAAF300B9B041 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
@@ -1000,6 +1008,10 @@
 				0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */,
 				09089408195326D4002CCCB8 /* UITextView+Size.h */,
 				09089409195326D4002CCCB8 /* UITextView+Size.m */,
+				0906D6B919ADAC9D00E2F7F6 /* DSGradientView.h */,
+				0906D6BA19ADAC9D00E2F7F6 /* DSGradientView.m */,
+				097C81AE19B5C31F00E9F48E /* UIButton+DSAdditions.h */,
+				097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1984,6 +1996,7 @@
 				0903A3B517F0AC9100A21270 /* UIScreen+Availability.h in Headers */,
 				09067F2D181804CA00C8F48F /* DSAlertsQueue.h in Headers */,
 				097FCD7C189FAAF300B9B041 /* RTProperty.h in Headers */,
+				097C81B019B5C31F00E9F48E /* UIButton+DSAdditions.h in Headers */,
 				09162C71180EE84900A0DEEF /* DSTextField.h in Headers */,
 				0903A3A717F0AC9100A21270 /* NSString+Extras.h in Headers */,
 				0972E33C19B6FA9F005D00F2 /* DTTimePeriodGroup.h in Headers */,
@@ -2102,6 +2115,7 @@
 				09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */,
 				62DD10D7C5D585E7DF32649A /* DSAlertsSupportCode.h in Headers */,
 				09B8669217F1E5C7003B1070 /* DSWebServiceFramework.h in Headers */,
+				0906D6BB19ADAC9D00E2F7F6 /* DSGradientView.h in Headers */,
 				09CEE82F18E1E73E00B090F9 /* DSViewsStack.h in Headers */,
 				098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */,
 				09B8664517F1BF30003B1070 /* DSKeyboardControllerDelegate.h in Headers */,
@@ -2370,6 +2384,7 @@
 				0903A3EE17F0AC9100A21270 /* FontsDB.m in Sources */,
 				09162C6C180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m in Sources */,
 				0903A3C417F0AC9100A21270 /* DSCArray.m in Sources */,
+				0906D6BC19ADAC9D00E2F7F6 /* DSGradientView.m in Sources */,
 				09B8669D17F1E5C7003B1070 /* DSWebServiceStringParam.m in Sources */,
 				09D35A34193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m in Sources */,
 				09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */,
@@ -2473,6 +2488,7 @@
 				62DD12DB787C62A67B7990A4 /* DSAlertButton.m in Sources */,
 				09B866AE17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m in Sources */,
 				09B866A417F1E5C7003B1070 /* DSWebServiceQueue.m in Sources */,
+				097C81B119B5C31F00E9F48E /* UIButton+DSAdditions.m in Sources */,
 				62DD1E3872904802D5077B3F /* DSUIAlertView.m in Sources */,
 				09162C6E180EE84900A0DEEF /* DSFieldValidationCriterion.m in Sources */,
 				09162C94180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m in Sources */,
