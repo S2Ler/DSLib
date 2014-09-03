@@ -193,6 +193,8 @@
 		0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */; };
 		095568D7195D61710081A268 /* DSEmailSharer.h in Headers */ = {isa = PBXBuildFile; fileRef = 095568D5195D61710081A268 /* DSEmailSharer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		095568D8195D61710081A268 /* DSEmailSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = 095568D6195D61710081A268 /* DSEmailSharer.m */; };
+		095D116C19B6F96D004604BE /* NSDate+TimeAgoFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 095D116A19B6F96D004604BE /* NSDate+TimeAgoFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		095D116D19B6F96D004604BE /* NSDate+TimeAgoFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D116B19B6F96D004604BE /* NSDate+TimeAgoFormatter.m */; };
 		0969F92B18328AE100B3C4B2 /* UIImage+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92518328AE100B3C4B2 /* UIImage+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0969F92C18328AE100B3C4B2 /* UIImage+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F92618328AE100B3C4B2 /* UIImage+DSAdditions.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		0969F92D18328AE100B3C4B2 /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92718328AE100B3C4B2 /* UIImage+Resize.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -203,6 +205,21 @@
 		0969F93418329C3C00B3C4B2 /* DSAskForTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F93218329C3C00B3C4B2 /* DSAskForTextController.m */; };
 		096C87AD18290ADA0024D734 /* DSMessage+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 096C87AB18290ADA0024D734 /* DSMessage+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		096C87AE18290ADA0024D734 /* DSMessage+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 096C87AC18290ADA0024D734 /* DSMessage+Parse.m */; };
+		0972E33219B6FA9F005D00F2 /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32419B6FA9F005D00F2 /* DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0972E33319B6FA9F005D00F2 /* DTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32519B6FA9F005D00F2 /* DTConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0972E33419B6FA9F005D00F2 /* DTError.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32619B6FA9F005D00F2 /* DTError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0972E33519B6FA9F005D00F2 /* DTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E32719B6FA9F005D00F2 /* DTError.m */; };
+		0972E33619B6FA9F005D00F2 /* DTTimePeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32819B6FA9F005D00F2 /* DTTimePeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0972E33719B6FA9F005D00F2 /* DTTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E32919B6FA9F005D00F2 /* DTTimePeriod.m */; };
+		0972E33819B6FA9F005D00F2 /* DTTimePeriodChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32A19B6FA9F005D00F2 /* DTTimePeriodChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0972E33919B6FA9F005D00F2 /* DTTimePeriodChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E32B19B6FA9F005D00F2 /* DTTimePeriodChain.m */; };
+		0972E33A19B6FA9F005D00F2 /* DTTimePeriodCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32C19B6FA9F005D00F2 /* DTTimePeriodCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0972E33B19B6FA9F005D00F2 /* DTTimePeriodCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E32D19B6FA9F005D00F2 /* DTTimePeriodCollection.m */; };
+		0972E33C19B6FA9F005D00F2 /* DTTimePeriodGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32E19B6FA9F005D00F2 /* DTTimePeriodGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0972E33D19B6FA9F005D00F2 /* DTTimePeriodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E32F19B6FA9F005D00F2 /* DTTimePeriodGroup.m */; };
+		0972E33E19B6FA9F005D00F2 /* NSDate+DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E33019B6FA9F005D00F2 /* NSDate+DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0972E33F19B6FA9F005D00F2 /* NSDate+DateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E33119B6FA9F005D00F2 /* NSDate+DateTools.m */; };
+		0972E34019B6FCB1005D00F2 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0972E32319B6FA9F005D00F2 /* DateTools.bundle */; };
 		0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0973572518041E3A00351055 /* DSCustomFontLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0973572618041E3A00351055 /* DSCustomFontLabel.m */; };
 		097CA65B195DCAA900A2EC56 /* NSError+DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */; };
@@ -650,6 +667,8 @@
 		0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DSAdditions.m"; sourceTree = "<group>"; };
 		095568D5195D61710081A268 /* DSEmailSharer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEmailSharer.h; sourceTree = "<group>"; };
 		095568D6195D61710081A268 /* DSEmailSharer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEmailSharer.m; sourceTree = "<group>"; };
+		095D116A19B6F96D004604BE /* NSDate+TimeAgoFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgoFormatter.h"; sourceTree = "<group>"; };
+		095D116B19B6F96D004604BE /* NSDate+TimeAgoFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgoFormatter.m"; sourceTree = "<group>"; };
 		0969F92518328AE100B3C4B2 /* UIImage+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DSAdditions.h"; sourceTree = "<group>"; };
 		0969F92618328AE100B3C4B2 /* UIImage+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DSAdditions.m"; sourceTree = "<group>"; };
 		0969F92718328AE100B3C4B2 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -660,6 +679,21 @@
 		0969F93218329C3C00B3C4B2 /* DSAskForTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAskForTextController.m; sourceTree = "<group>"; };
 		096C87AB18290ADA0024D734 /* DSMessage+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSMessage+Parse.h"; sourceTree = "<group>"; };
 		096C87AC18290ADA0024D734 /* DSMessage+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DSMessage+Parse.m"; sourceTree = "<group>"; };
+		0972E32319B6FA9F005D00F2 /* DateTools.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DateTools.bundle; sourceTree = "<group>"; };
+		0972E32419B6FA9F005D00F2 /* DateTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTools.h; sourceTree = "<group>"; };
+		0972E32519B6FA9F005D00F2 /* DTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTConstants.h; sourceTree = "<group>"; };
+		0972E32619B6FA9F005D00F2 /* DTError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTError.h; sourceTree = "<group>"; };
+		0972E32719B6FA9F005D00F2 /* DTError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTError.m; sourceTree = "<group>"; };
+		0972E32819B6FA9F005D00F2 /* DTTimePeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTimePeriod.h; sourceTree = "<group>"; };
+		0972E32919B6FA9F005D00F2 /* DTTimePeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTimePeriod.m; sourceTree = "<group>"; };
+		0972E32A19B6FA9F005D00F2 /* DTTimePeriodChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTimePeriodChain.h; sourceTree = "<group>"; };
+		0972E32B19B6FA9F005D00F2 /* DTTimePeriodChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTimePeriodChain.m; sourceTree = "<group>"; };
+		0972E32C19B6FA9F005D00F2 /* DTTimePeriodCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTimePeriodCollection.h; sourceTree = "<group>"; };
+		0972E32D19B6FA9F005D00F2 /* DTTimePeriodCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTimePeriodCollection.m; sourceTree = "<group>"; };
+		0972E32E19B6FA9F005D00F2 /* DTTimePeriodGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTimePeriodGroup.h; sourceTree = "<group>"; };
+		0972E32F19B6FA9F005D00F2 /* DTTimePeriodGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTimePeriodGroup.m; sourceTree = "<group>"; };
+		0972E33019B6FA9F005D00F2 /* NSDate+DateTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateTools.h"; sourceTree = "<group>"; };
+		0972E33119B6FA9F005D00F2 /* NSDate+DateTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateTools.m"; sourceTree = "<group>"; };
 		0973572518041E3A00351055 /* DSCustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomFontLabel.h; sourceTree = "<group>"; };
 		0973572618041E3A00351055 /* DSCustomFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCustomFontLabel.m; sourceTree = "<group>"; };
 		097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+DSMessage.h"; sourceTree = "<group>"; };
@@ -908,6 +942,8 @@
 		0903A2D317F0AC8300A21270 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				095D116A19B6F96D004604BE /* NSDate+TimeAgoFormatter.h */,
+				095D116B19B6F96D004604BE /* NSDate+TimeAgoFormatter.m */,
 				095568D5195D61710081A268 /* DSEmailSharer.h */,
 				095568D6195D61710081A268 /* DSEmailSharer.m */,
 				09D35A31193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h */,
@@ -1353,6 +1389,29 @@
 			);
 			path = "UIImage-categories";
 			sourceTree = "<group>";
+		};
+		0972E32219B6FA9F005D00F2 /* DateTools */ = {
+			isa = PBXGroup;
+			children = (
+				0972E32319B6FA9F005D00F2 /* DateTools.bundle */,
+				0972E32419B6FA9F005D00F2 /* DateTools.h */,
+				0972E32519B6FA9F005D00F2 /* DTConstants.h */,
+				0972E32619B6FA9F005D00F2 /* DTError.h */,
+				0972E32719B6FA9F005D00F2 /* DTError.m */,
+				0972E32819B6FA9F005D00F2 /* DTTimePeriod.h */,
+				0972E32919B6FA9F005D00F2 /* DTTimePeriod.m */,
+				0972E32A19B6FA9F005D00F2 /* DTTimePeriodChain.h */,
+				0972E32B19B6FA9F005D00F2 /* DTTimePeriodChain.m */,
+				0972E32C19B6FA9F005D00F2 /* DTTimePeriodCollection.h */,
+				0972E32D19B6FA9F005D00F2 /* DTTimePeriodCollection.m */,
+				0972E32E19B6FA9F005D00F2 /* DTTimePeriodGroup.h */,
+				0972E32F19B6FA9F005D00F2 /* DTTimePeriodGroup.m */,
+				0972E33019B6FA9F005D00F2 /* NSDate+DateTools.h */,
+				0972E33119B6FA9F005D00F2 /* NSDate+DateTools.m */,
+			);
+			name = DateTools;
+			path = DateTools/DateTools;
+			sourceTree = SOURCE_ROOT;
 		};
 		097FCD5B189FAAF300B9B041 /* MAObjCRuntime */ = {
 			isa = PBXGroup;
@@ -1832,6 +1891,7 @@
 		AED6C1981465E55000D9B44E /* DSLib */ = {
 			isa = PBXGroup;
 			children = (
+				0972E32219B6FA9F005D00F2 /* DateTools */,
 				09A83F3819238A49008DE30F /* LogsRedirect */,
 				09F1B7801909983A0031B0F6 /* FBEncryptor */,
 				097FCD5B189FAAF300B9B041 /* MAObjCRuntime */,
@@ -1898,6 +1958,7 @@
 				0903A3EF17F0AC9100A21270 /* DSActivityIndicator.h in Headers */,
 				0903A3FD17F0AC9100A21270 /* UISwitch+DSCheckButton.h in Headers */,
 				0903A40417F0AC9100A21270 /* DSValueChooserViewControllerDelegate.h in Headers */,
+				0972E33E19B6FA9F005D00F2 /* NSDate+DateTools.h in Headers */,
 				09162C68180EE84900A0DEEF /* DSFieldValidationController.h in Headers */,
 				0903A2E517F0AC8300A21270 /* DSArrayChangeCalculator.h in Headers */,
 				0903A3B717F0AC9100A21270 /* UITableView+DSAdditions.h in Headers */,
@@ -1909,10 +1970,13 @@
 				095568D7195D61710081A268 /* DSEmailSharer.h in Headers */,
 				09F1B7831909983A0031B0F6 /* FBEncryptorAES.h in Headers */,
 				09162C93180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h in Headers */,
+				0972E33819B6FA9F005D00F2 /* DTTimePeriodChain.h in Headers */,
 				0903A38C17F0AC9100A21270 /* CATransition+AnimationsBuilder.h in Headers */,
 				09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */,
+				0972E33A19B6FA9F005D00F2 /* DTTimePeriodCollection.h in Headers */,
 				09162C97180EECC100A0DEEF /* WEPopoverController.h in Headers */,
 				0903A40217F0AC9100A21270 /* DSValueChooserViewController.h in Headers */,
+				0972E33219B6FA9F005D00F2 /* DateTools.h in Headers */,
 				09B8663A17F1B82D003B1070 /* DSTableViewController.h in Headers */,
 				0903A2E317F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.h in Headers */,
 				0903A39B17F0AC9100A21270 /* NSMutableArray+Additions.h in Headers */,
@@ -1922,6 +1986,7 @@
 				097FCD7C189FAAF300B9B041 /* RTProperty.h in Headers */,
 				09162C71180EE84900A0DEEF /* DSTextField.h in Headers */,
 				0903A3A717F0AC9100A21270 /* NSString+Extras.h in Headers */,
+				0972E33C19B6FA9F005D00F2 /* DTTimePeriodGroup.h in Headers */,
 				0903A3B117F0AC9100A21270 /* UIDevice+Additions.h in Headers */,
 				098783CF18C1F39700C838A2 /* DSCodingTransformer.h in Headers */,
 				09CDC39419260E4600C49EEA /* DSViewsStackAnimationDirection.h in Headers */,
@@ -1934,6 +1999,7 @@
 				0903A3E117F0AC9100A21270 /* DSSettings_impl.h in Headers */,
 				097CA65B195DCAA900A2EC56 /* NSError+DSMessage.h in Headers */,
 				09F84FE518C5FB0B0047AA16 /* AFHTTPBodyPart.h in Headers */,
+				095D116C19B6F96D004604BE /* NSDate+TimeAgoFormatter.h in Headers */,
 				0903A40117F0AC9100A21270 /* PGVideoImageViewDelegate.h in Headers */,
 				0903A3A317F0AC9100A21270 /* NSObject+Observing.h in Headers */,
 				0903A3F317F0AC9100A21270 /* DSRotatingImageView.h in Headers */,
@@ -1948,6 +2014,7 @@
 				0903A39917F0AC9100A21270 /* NSFileManager+Directories.h in Headers */,
 				0903A39117F0AC9100A21270 /* NSArray+ObjectsQuery.h in Headers */,
 				0903A3E717F0AC9100A21270 /* QWatchedOperationQueue.h in Headers */,
+				0972E33419B6FA9F005D00F2 /* DTError.h in Headers */,
 				09A83F3B19238ABE008DE30F /* DSRedirectLogs.h in Headers */,
 				0903A3E517F0AC9100A21270 /* QRunLoopOperation.h in Headers */,
 				0903A2E217F0AC8300A21270 /* DSArrayChangeApplier.h in Headers */,
@@ -1959,6 +2026,7 @@
 				09B8669317F1E5C7003B1070 /* NSError+DSWebService.h in Headers */,
 				0969F92B18328AE100B3C4B2 /* UIImage+DSAdditions.h in Headers */,
 				09162C99180EECC100A0DEEF /* WEPopoverParentView.h in Headers */,
+				0972E33619B6FA9F005D00F2 /* DTTimePeriod.h in Headers */,
 				0903A3BB17F0AC9100A21270 /* UIView+Resizing.h in Headers */,
 				09B6DCF21858F5C500FB1825 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */,
 				0903A38E17F0AC9100A21270 /* DSTimeFunctions.h in Headers */,
@@ -2018,6 +2086,7 @@
 				0903A3B317F0AC9100A21270 /* UIFont+FromString.h in Headers */,
 				092D8A6518D09ACE00EA56F0 /* ALAsset+DSAdditions.h in Headers */,
 				0903A3ED17F0AC9100A21270 /* FontsDB.h in Headers */,
+				0972E33319B6FA9F005D00F2 /* DTConstants.h in Headers */,
 				62DD1C90C4EBBDB2502CA983 /* DSAlert.h in Headers */,
 				62DD12341D52C3E5516F6D85 /* DSMessage.h in Headers */,
 				62DD17944D3580379A737D2A /* DSAlertView.h in Headers */,
@@ -2179,6 +2248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0972E34019B6FCB1005D00F2 /* DateTools.bundle in Resources */,
 				09A60431182A663C00F57F89 /* DSWebServiceConfiguration.plist in Resources */,
 				09A60433182A663C00F57F89 /* UIFontsNames.plist in Resources */,
 				09A60434182A663C00F57F89 /* slider_background.png in Resources */,
@@ -2280,6 +2350,7 @@
 				09B6DCE81858F5C500FB1825 /* DSCLPlacemarkTransformer.m in Sources */,
 				0903A2EA17F0AC8300A21270 /* UIView+ViewsEnumeration.m in Sources */,
 				0903A3B417F0AC9100A21270 /* UIFont+FromString.m in Sources */,
+				095D116D19B6F96D004604BE /* NSDate+TimeAgoFormatter.m in Sources */,
 				098A63E718D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m in Sources */,
 				09B866BA17F1E5C7003B1070 /* DSWebServiceParams.m in Sources */,
 				09B866A217F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m in Sources */,
@@ -2320,6 +2391,7 @@
 				0903A39417F0AC9100A21270 /* NSData+OAdditions.m in Sources */,
 				09162C9C180EEEB900A0DEEF /* DSCriterionDescriptionViewController.m in Sources */,
 				0903A3AA17F0AC9100A21270 /* UIAlertView+Additions.m in Sources */,
+				0972E33719B6FA9F005D00F2 /* DTTimePeriod.m in Sources */,
 				09162C96180EECC100A0DEEF /* WEPopoverContainerView.m in Sources */,
 				09F1B7841909983A0031B0F6 /* FBEncryptorAES.m in Sources */,
 				0903A39817F0AC9100A21270 /* NSDictionary+JSONDictionary.m in Sources */,
@@ -2331,6 +2403,7 @@
 				0903A3F217F0AC9100A21270 /* DSFlashingImageView.m in Sources */,
 				0903A3F917F0AC9100A21270 /* PGSlider.m in Sources */,
 				09B6DCF91858F5C500FB1825 /* DSPlacemark.m in Sources */,
+				0972E33919B6FA9F005D00F2 /* DTTimePeriodChain.m in Sources */,
 				0903A3F417F0AC9100A21270 /* DSRotatingImageView.m in Sources */,
 				0903A3F617F0AC9100A21270 /* DSSlider.m in Sources */,
 				09B866B017F1E5C7003B1070 /* DSWebServiceNetRequest.m in Sources */,
@@ -2347,6 +2420,7 @@
 				0903A40317F0AC9100A21270 /* DSValueChooserViewController.m in Sources */,
 				0903A3A817F0AC9100A21270 /* NSString+Extras.m in Sources */,
 				0903A3AC17F0AC9100A21270 /* UIApplication+DSAdditions.m in Sources */,
+				0972E33F19B6FA9F005D00F2 /* NSDate+DateTools.m in Sources */,
 				0998E21E1928E962004D9BD1 /* DSCoreDataObjectsObserver.m in Sources */,
 				0903A2E817F0AC8300A21270 /* DSNetworkActivity.m in Sources */,
 				0969F92C18328AE100B3C4B2 /* UIImage+DSAdditions.m in Sources */,
@@ -2376,6 +2450,7 @@
 				0903A3EA17F0AC9100A21270 /* DSVibrator.m in Sources */,
 				0903A3EC17F0AC9100A21270 /* DSFontManager.m in Sources */,
 				0903A3D017F0AC9100A21270 /* DSDateFormatterCache.m in Sources */,
+				0972E33519B6FA9F005D00F2 /* DTError.m in Sources */,
 				09B866AC17F1E5C7003B1070 /* DSFakeWebServiceRequest.m in Sources */,
 				09CEE83018E1E73E00B090F9 /* DSViewsStack.m in Sources */,
 				0903A3CE17F0AC9100A21270 /* DSMacros.m in Sources */,
@@ -2389,6 +2464,7 @@
 				0903A2E417F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.m in Sources */,
 				098F666218ACD09600E479E5 /* DSPhotoView.m in Sources */,
 				0903A3C817F0AC9100A21270 /* DSQueue.m in Sources */,
+				0972E33B19B6FA9F005D00F2 /* DTTimePeriodCollection.m in Sources */,
 				62DD1F21D685DAF88DB40D0D /* DSAlert.m in Sources */,
 				0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */,
 				62DD1AFD36B9F22FEFEB3170 /* DSMessage.m in Sources */,
@@ -2428,6 +2504,7 @@
 				09CDC39519260E4600C49EEA /* DSViewsStackAnimationDirection.m in Sources */,
 				09C15FD618DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m in Sources */,
 				62DD1BC6C151EFA0696F8AC2 /* DSBlockButton.m in Sources */,
+				0972E33D19B6FA9F005D00F2 /* DTTimePeriodGroup.m in Sources */,
 				62DD156A5BCD9E8F54FAFD25 /* DSDataDetector.m in Sources */,
 				62DD1622AD022227DFD60F1E /* DSFindCountry.m in Sources */,
 				09B8663B17F1B82D003B1070 /* DSTableViewController.m in Sources */,
