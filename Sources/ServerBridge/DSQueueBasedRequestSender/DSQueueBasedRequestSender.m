@@ -200,6 +200,36 @@ static NSMapTable *interceptorsMap = nil;
   return [[self interceptorsMap] objectForKey:message];
 }
 
+#pragma mark - Recurrent Requests
+- (void)processRecurrentRequests
+{
+  NSDate *now = [NSDate now];
+  for (DSQueueRecurrentRequestData *requestData in [[self recurrentRequestsData] allValues]) {
+    [self processRecurrentRequestData:requestData withNow:now];
+  }
+}
+
+- (void)processRecurrentRequestData:(DSQueueRecurrentRequestData *)data withNow:(NSDate *)now
+{
+  if ([[data nextFireDate] isLaterThan:now]) {
+    return;
+  }
+  
+  [self sendRequestFromData:data];
+  [data updateNextFireDate];
+}
+
+- (void)sendRequestFromData:(DSQueueRecurrentRequestData *)data
+{
+  [self sendRequestWithParams:data.params
+                   completion:data.completion
+     requestSuccessfulHandler:data.requestSuccessfulHandler
+         requestFailedHandler:data.requestFailedHandler
+                     userInfo:data.userInfo
+                callbackQueue:data.callbackQueue];
+}
+
+
 @end
 
 
@@ -361,7 +391,6 @@ static NSMapTable *interceptorsMap = nil;
   [[self recurrentRequestsData] removeAllObjects];
 }
 
-#pragma mark - Recurrent Requests
 - (void)addRecurrentRequestWithParams:(DSWebServiceParams *)params
                            completion:(ds_results_completion)completion
              requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler
@@ -394,33 +423,6 @@ static NSMapTable *interceptorsMap = nil;
   });
 }
 
-- (void)processRecurrentRequests
-{
-  NSDate *now = [NSDate now];
-  for (DSQueueRecurrentRequestData *requestData in [[self recurrentRequestsData] allValues]) {
-    [self processRecurrentRequestData:requestData withNow:now];
-  }
-}
-
-- (void)processRecurrentRequestData:(DSQueueRecurrentRequestData *)data withNow:(NSDate *)now
-{
-  if ([[data nextFireDate] isLaterThan:now]) {
-    return;
-  }
-  
-  [self sendRequestFromData:data];
-  [data updateNextFireDate];
-}
-
-- (void)sendRequestFromData:(DSQueueRecurrentRequestData *)data
-{
-  [self sendRequestWithParams:data.params
-                   completion:data.completion
-     requestSuccessfulHandler:data.requestSuccessfulHandler
-         requestFailedHandler:data.requestFailedHandler
-                     userInfo:data.userInfo
-                callbackQueue:data.callbackQueue];
-}
 
 @end
 
