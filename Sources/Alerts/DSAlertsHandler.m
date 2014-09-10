@@ -84,7 +84,16 @@
 {
   NSAssert(isModalAlert == YES, @"Only modal alert is supported now");
 
-  [self queueAlert:theAlert];
+  void (^block)() = ^{
+    [self queueAlert:theAlert];
+  };
+  
+  if ([NSThread isMainThread]) {
+    block();
+  }
+  else {
+    dispatch_async(dispatch_get_main_queue(), block);
+  }
 }
 
 - (DSAlertsQueue *)detachAlertsQueue
@@ -97,6 +106,7 @@
 #pragma mark - alert
 - (void)showModalAlert:(DSAlert *)theAlert
 {
+  ASSERT_MAIN_THREAD;
   id<DSAlertView> alertView = [DSAlertViewFactory modalAlertViewWithAlert:theAlert
                                                                  delegate:self];
 
@@ -139,6 +149,8 @@
 
 - (void)queueAlert:(DSAlert *)theAlert
 {
+  ASSERT_MAIN_THREAD;
+
   if (!theAlert) {
     return;
   }
@@ -173,6 +185,8 @@
 
 - (void)processNextAlertFromQueue
 {
+  ASSERT_MAIN_THREAD;
+
   if ([self currentAlertView] == nil) {
     DSAlert *nextAlert = [[self alertsQueue] pop];
     if (nextAlert != nil) {
@@ -183,6 +197,8 @@
 
 - (void)alertDismissed
 {
+  ASSERT_MAIN_THREAD;
+
   //Cleanup
   [self setCurrentAlertView:nil];
   [self setCurrentAlert:nil];
@@ -199,6 +215,8 @@
 - (void)        alertView:(id<DSAlertView>)theAlertView
 didDismissWithButtonIndex:(NSInteger)theButtonIndex
 {
+  ASSERT_MAIN_THREAD;
+
   DSAlertButton *clickedButton = nil;
 
   if ([theAlertView isCancelButtonAtIndex:theButtonIndex]) {
@@ -216,6 +234,8 @@ didDismissWithButtonIndex:(NSInteger)theButtonIndex
 #pragma mark - Notifications
 - (void)applicationDidResignActive:(NSNotification *)notification
 {
+  ASSERT_MAIN_THREAD;
+
   [[self alertsQueue] filterWithPredicate:[NSPredicate predicateWithBlock:^BOOL(DSAlert *alert, NSDictionary *bindings) {
     return [alert shouldDismissOnApplicationDidResignActive] == NO;
   }]];
