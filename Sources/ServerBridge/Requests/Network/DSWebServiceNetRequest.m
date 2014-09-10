@@ -423,8 +423,9 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
   [[NSFileManager defaultManager] removeItemAtPath:[self outputPath]
                                              error:nil];
   
-  NSLog(@"Connection error code: {%li}\nDescription: {%@}",
-  (long)[error code], [error localizedDescription]);
+
+  NSLog(@"\nURL: %@\nParams: %@\nConnection error code: {%li}\nDescription: {%@}",
+  [self url], [self params], (long)[error code], [error localizedDescription]);
 
   [self setConnection:nil];
 
