@@ -1,6 +1,7 @@
 
 #pragma mark - include
 #import "DSGPSTracker.h"
+#import <objc/message.h>
 
 #pragma mark - Private
 @interface DSGPSTracker ()
@@ -99,7 +100,15 @@
 #pragma mark - activation
 - (void)startUpdatingLocation
 {
-  [[self locationManager] startUpdatingLocation];
+  SEL requestSelector = NSSelectorFromString(@"requestWhenInUseAuthorization");
+  if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined &&
+      [self.locationManager respondsToSelector:requestSelector]) {
+    ((void (*)(id, SEL))[self.locationManager methodForSelector:requestSelector])(self.locationManager, requestSelector);
+    [self.locationManager startUpdatingLocation];
+  } else {
+    [self.locationManager startUpdatingLocation];
+  }
+  
   [self setIsUpdatingLocation:YES];
 }
 
@@ -137,7 +146,13 @@
 {
   [self locationManager];//trigger creation if hasn't before 
 
-  return [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized;
+  return [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse;
+}
+
+- (BOOL)isTrackingAvailableInBackground
+{
+  [self locationManager];//trigger creation if hasn't before
+  return [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways;
 }
 
 - (void)locationManager:(CLLocationManager *)manager

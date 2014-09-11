@@ -24,6 +24,7 @@ typedef void (^DSGPSTrackerBlock)(DSGPSTracker *gpsTracker, CLLocation *location
 @property (nonatomic, assign) CLLocationDistance distanceFilter;
 
 - (BOOL)isTrackingAvailable;
+- (BOOL)isTrackingAvailableInBackground;
 
 + (DSGPSTracker *)sharedInstance;
 
