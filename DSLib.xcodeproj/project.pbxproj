@@ -228,6 +228,8 @@
 		097C81B119B5C31F00E9F48E /* UIButton+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */; };
 		097CA65B195DCAA900A2EC56 /* NSError+DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */; };
 		097CA65C195DCAA900A2EC56 /* NSError+DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */; };
+		097F7A0C19B84F8A004B4129 /* NSTimer+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 097F7A0A19B84F8A004B4129 /* NSTimer+DSAdditions.h */; };
+		097F7A0D19B84F8A004B4129 /* NSTimer+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 097F7A0B19B84F8A004B4129 /* NSTimer+DSAdditions.m */; };
 		097FCD76189FAAF300B9B041 /* MARTNSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD60189FAAF300B9B041 /* MARTNSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		097FCD77189FAAF300B9B041 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD61189FAAF300B9B041 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		097FCD78189FAAF300B9B041 /* RTIvar.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD63189FAAF300B9B041 /* RTIvar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -389,6 +391,8 @@
 		09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09EB9F9718ED680A0098CAFF /* DSPassCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */; };
 		09EB9F9818ED680A0098CAFF /* DSPassCodeControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09EFCEEA19B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EFCEE819B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09EFCEEB19B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCEE919B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.m */; };
 		09F1B7831909983A0031B0F6 /* FBEncryptorAES.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F1B7811909983A0031B0F6 /* FBEncryptorAES.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09F1B7841909983A0031B0F6 /* FBEncryptorAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F1B7821909983A0031B0F6 /* FBEncryptorAES.m */; };
 		09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -706,6 +710,8 @@
 		097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DSAdditions.m"; sourceTree = "<group>"; };
 		097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+DSMessage.h"; sourceTree = "<group>"; };
 		097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+DSMessage.m"; sourceTree = "<group>"; };
+		097F7A0A19B84F8A004B4129 /* NSTimer+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+DSAdditions.h"; sourceTree = "<group>"; };
+		097F7A0B19B84F8A004B4129 /* NSTimer+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+DSAdditions.m"; sourceTree = "<group>"; };
 		097FCD60189FAAF300B9B041 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
 		097FCD61189FAAF300B9B041 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTNSObject.m; sourceTree = "<group>"; };
 		097FCD63189FAAF300B9B041 /* RTIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTIvar.h; sourceTree = "<group>"; };
@@ -852,6 +858,8 @@
 		09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPassCodeController.h; sourceTree = "<group>"; };
 		09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPassCodeController.m; sourceTree = "<group>"; };
 		09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPassCodeControllerDelegate.h; sourceTree = "<group>"; };
+		09EFCEE819B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSQueueRecurrentRequestPolicy.h; sourceTree = "<group>"; };
+		09EFCEE919B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueueRecurrentRequestPolicy.m; sourceTree = "<group>"; };
 		09F1B7811909983A0031B0F6 /* FBEncryptorAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBEncryptorAES.h; sourceTree = "<group>"; };
 		09F1B7821909983A0031B0F6 /* FBEncryptorAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBEncryptorAES.m; sourceTree = "<group>"; };
 		09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDynamicPropertyObject.h; sourceTree = "<group>"; };
@@ -1012,6 +1020,8 @@
 				0906D6BA19ADAC9D00E2F7F6 /* DSGradientView.m */,
 				097C81AE19B5C31F00E9F48E /* UIButton+DSAdditions.h */,
 				097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */,
+				097F7A0A19B84F8A004B4129 /* NSTimer+DSAdditions.h */,
+				097F7A0B19B84F8A004B4129 /* NSTimer+DSAdditions.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1483,6 +1493,8 @@
 				098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */,
 				09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */,
 				09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */,
+				09EFCEE819B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.h */,
+				09EFCEE919B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.m */,
 			);
 			path = DSQueueBasedRequestSender;
 			sourceTree = "<group>";
@@ -1960,6 +1972,7 @@
 				09162C6B180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.h in Headers */,
 				0903A3E917F0AC9100A21270 /* DSVibrator.h in Headers */,
 				0903A41617F0C28300A21270 /* DSGPSTracker.h in Headers */,
+				097F7A0C19B84F8A004B4129 /* NSTimer+DSAdditions.h in Headers */,
 				09F84FED18C5FCB60047AA16 /* AFFunctions.h in Headers */,
 				0903A2E017F0AC8300A21270 /* DSArrayChange.h in Headers */,
 				096C87AD18290ADA0024D734 /* DSMessage+Parse.h in Headers */,
@@ -1977,6 +1990,7 @@
 				09067F311818055900C8F48F /* DSAlertQueue+Private.h in Headers */,
 				0903A3C317F0AC9100A21270 /* DSCArray.h in Headers */,
 				09F84FE018C5FA900047AA16 /* AFStreamingMultipartFormData.h in Headers */,
+				09EFCEEA19B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.h in Headers */,
 				0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */,
 				0982EB7F18E1EA6000F9DFF2 /* DSViewsStackDataSource.h in Headers */,
 				095568D7195D61710081A268 /* DSEmailSharer.h in Headers */,
@@ -2423,6 +2437,7 @@
 				0903A3F617F0AC9100A21270 /* DSSlider.m in Sources */,
 				09B866B017F1E5C7003B1070 /* DSWebServiceNetRequest.m in Sources */,
 				09162C98180EECC100A0DEEF /* WEPopoverController.m in Sources */,
+				097F7A0D19B84F8A004B4129 /* NSTimer+DSAdditions.m in Sources */,
 				092D8A6618D09ACE00EA56F0 /* ALAsset+DSAdditions.m in Sources */,
 				09162C56180ED00C00A0DEEF /* DSCompas.m in Sources */,
 				0903A39017F0AC9100A21270 /* NSArray+Extras.m in Sources */,
@@ -2471,6 +2486,7 @@
 				0903A3CE17F0AC9100A21270 /* DSMacros.m in Sources */,
 				0903A38D17F0AC9100A21270 /* CATransition+AnimationsBuilder.m in Sources */,
 				0969F93018328AE100B3C4B2 /* UIImage+RoundedCorner.m in Sources */,
+				09EFCEEB19B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.m in Sources */,
 				095568D8195D61710081A268 /* DSEmailSharer.m in Sources */,
 				0903A39A17F0AC9100A21270 /* NSFileManager+Directories.m in Sources */,
 				0903A39C17F0AC9100A21270 /* NSMutableArray+Additions.m in Sources */,
