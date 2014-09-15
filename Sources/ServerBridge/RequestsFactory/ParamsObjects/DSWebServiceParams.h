@@ -6,6 +6,7 @@
 @class DSEntityDefinition;
 @protocol DSWebServiceRequest;
 @class DSWebServiceResponse;
+@class DSRelativePath;
 
 /** 
  Create concrete subclass which should contain defined properties for all params. 
@@ -44,7 +45,7 @@
 - (BOOL)embedParamsInURLForPOSTRequest;
 
 /** If not nil, the response data will be written to this path */
-- (NSString *)outputPath;
+- (DSRelativePath *)outputPath;
 
 /** The ordered list of param names which should be embedded in main URL scheme:
 * The example:

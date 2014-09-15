@@ -19,13 +19,10 @@
              forceHTTPS:(BOOL)forceHTTPS
         customServerURL:(NSString *)serverURL;
 
-/**
- * Designated init
- */
 - (id)initWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
             functionName:(NSString *)theFunctionName
               forceHTTPS:(BOOL)forceHTTPS
-         customServerURL:(NSString *)serverURL;
+         customServerURL:(NSString *)serverURL NS_DESIGNATED_INITIALIZER;
 
 - (id)initWithHTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod
             functionName:(NSString *)theFunctionName

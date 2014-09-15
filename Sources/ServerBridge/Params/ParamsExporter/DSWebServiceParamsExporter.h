@@ -6,9 +6,8 @@
 typedef void (^params_exported_handler_t)(NSData *paramsData);
 
 @interface DSWebServiceParamsExporter : NSObject
-/** Designated initialized */
 - (id)initWithParams:(DSWebServiceCompositeParams *)theParams
-             builder:(id<DSWebServiceParamsBuilder>)theBuilder;
+             builder:(id<DSWebServiceParamsBuilder>)theBuilder NS_DESIGNATED_INITIALIZER;
 /** Builder will be chosen based on
  DSWebServiceConfiguration paramsDataOutputType property */
 - (id)initWithParams:(DSWebServiceCompositeParams *)theParams;

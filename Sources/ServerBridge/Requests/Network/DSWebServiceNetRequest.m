@@ -67,18 +67,18 @@
   return self;
 }
 
-- (void)setOutputPath:(NSString *)outputPath
+- (void)setOutputPath:(DSRelativePath *)outputPath
 {
   NSAssert(![self outputPath], @"Shouldn't happen due to logic");
   
   if (outputPath) {
     [[self userInfo] setValue:outputPath forKey:@"__outputPath"];
     NSAssert(![self outputStream], @"Shouldn't happen due to logic");
-    [self setOutputStream:[[NSOutputStream alloc] initToFileAtPath:outputPath append:NO]];
+    [self setOutputStream:[[NSOutputStream alloc] initToFileAtPath:[outputPath fullPath] append:NO]];
   }
 }
 
-- (NSString *)outputPath
+- (DSRelativePath *)outputPath
 {
   return [[self userInfo] valueForKey:@"__outputPath"];
 }
@@ -420,7 +420,7 @@ didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
   didFailWithError:(NSError *)error
 {
   [[self outputStream] close];
-  [[NSFileManager defaultManager] removeItemAtPath:[self outputPath]
+  [[NSFileManager defaultManager] removeItemAtPath:[[self outputPath] fullPath]
                                              error:nil];
   
 

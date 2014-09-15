@@ -5,7 +5,7 @@
 #import "DSMessage.h"
 #import "DSCFunctions.h"
 #import "NSError+DSWebService.h"
-
+#import "DSRelativePath.h"
 #import "DSMacros.h"
 
 #pragma mark - props
@@ -15,7 +15,7 @@
 @property (assign) BOOL parseCalled;
 
 @property (nonatomic, strong) NSData *data;
-@property (nonatomic, strong) NSString *path;
+@property (nonatomic, strong) DSRelativePath *path;
 @end
 
 
@@ -63,7 +63,7 @@
   return newResponse;
 }
 
-- (instancetype)initWithPath:(NSString *)path
+- (instancetype)initWithPath:(DSRelativePath *)path
 {
   self = [super init];
   if (self) {
@@ -72,9 +72,9 @@
   return self;
 }
 
-+ (instancetype)responseWithPath:(NSString *)path
++ (instancetype)responseWithPath:(DSRelativePath *)path
 {
-  return [[self alloc] initWithPath:path];
+  return [(DSWebServiceResponse *)[self alloc] initWithPath:path];
 }
 
 - (NSData *)data
@@ -84,7 +84,7 @@
   }
   
   if (_path) {
-    _data = [NSData dataWithContentsOfMappedFile:_path];
+    _data = [NSData dataWithContentsOfMappedFile:[_path fullPath]];
     return _data;
   }
   
