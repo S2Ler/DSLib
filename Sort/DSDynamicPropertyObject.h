@@ -13,6 +13,8 @@
 
 - (id)initWithContainer:(id)container;
 
+- (id)containerValueForKeyPath:(NSString *)keyPath;
+
 - (NSDictionary *)allValues;
 @end
 

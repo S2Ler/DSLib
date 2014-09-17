@@ -204,4 +204,9 @@
   ASSERT_ABSTRACT_METHOD;
   return nil;
 }
+
+- (id)containerValueForKeyPath:(NSString *)keyPath
+{
+  return [[self container] valueForKeyPath:keyPath];
+}
 @end
