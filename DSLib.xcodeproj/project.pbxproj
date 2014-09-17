@@ -248,6 +248,8 @@
 		0985A14418E33143009F9F33 /* DSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33017F0AC9100A21270 /* DSQueue.m */; };
 		098783CF18C1F39700C838A2 /* DSCodingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSCodingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098783D018C1F39700C838A2 /* DSCodingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSCodingTransformer.m */; };
+		0987FB7419C6E15A007D1C55 /* DSRelativePath.h in Headers */ = {isa = PBXBuildFile; fileRef = 0987FB7219C6E15A007D1C55 /* DSRelativePath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0987FB7519C6E15A007D1C55 /* DSRelativePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 0987FB7319C6E15A007D1C55 /* DSRelativePath.m */; };
 		098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098A63E718D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */; };
 		098F666118ACD09600E479E5 /* DSPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098F665F18ACD09600E479E5 /* DSPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -735,6 +737,8 @@
 		0982EB8818E1F40A00F9DFF2 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		098783CD18C1F39700C838A2 /* DSCodingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCodingTransformer.h; sourceTree = "<group>"; };
 		098783CE18C1F39700C838A2 /* DSCodingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCodingTransformer.m; sourceTree = "<group>"; };
+		0987FB7219C6E15A007D1C55 /* DSRelativePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRelativePath.h; sourceTree = "<group>"; };
+		0987FB7319C6E15A007D1C55 /* DSRelativePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRelativePath.m; sourceTree = "<group>"; };
 		098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+DSAdditions.h"; sourceTree = "<group>"; };
 		098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+DSAdditions.m"; sourceTree = "<group>"; };
 		098F665F18ACD09600E479E5 /* DSPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPhotoView.h; sourceTree = "<group>"; };
@@ -1476,6 +1480,15 @@
 			path = OCMock;
 			sourceTree = "<group>";
 		};
+		0987FB7119C6E149007D1C55 /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				0987FB7219C6E15A007D1C55 /* DSRelativePath.h */,
+				0987FB7319C6E15A007D1C55 /* DSRelativePath.m */,
+			);
+			path = Path;
+			sourceTree = "<group>";
+		};
 		098F665E18ACD09600E479E5 /* DSPhotoView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1588,6 +1601,7 @@
 		09B8664E17F1E5C7003B1070 /* ServerBridge */ = {
 			isa = PBXGroup;
 			children = (
+				0987FB7119C6E149007D1C55 /* Path */,
 				098FB25B17F2008600DB9F49 /* DSQueueBasedRequestSender */,
 				09B8664F17F1E5C7003B1070 /* Configuration */,
 				09B8665317F1E5C7003B1070 /* DSWebServiceFramework.h */,
@@ -2081,6 +2095,7 @@
 				09162C9A180EECC100A0DEEF /* WETouchableView.h in Headers */,
 				09B866A117F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h in Headers */,
 				0969F92F18328AE100B3C4B2 /* UIImage+RoundedCorner.h in Headers */,
+				0987FB7419C6E15A007D1C55 /* DSRelativePath.h in Headers */,
 				0903A3A517F0AC9100A21270 /* NSString+Encoding.h in Headers */,
 				0903A3F817F0AC9100A21270 /* PGSlider.h in Headers */,
 				0903A39517F0AC9100A21270 /* NSDate+OAddittions.h in Headers */,
@@ -2497,6 +2512,7 @@
 				0903A3C817F0AC9100A21270 /* DSQueue.m in Sources */,
 				0972E33B19B6FA9F005D00F2 /* DTTimePeriodCollection.m in Sources */,
 				62DD1F21D685DAF88DB40D0D /* DSAlert.m in Sources */,
+				0987FB7519C6E15A007D1C55 /* DSRelativePath.m in Sources */,
 				0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */,
 				62DD1AFD36B9F22FEFEB3170 /* DSMessage.m in Sources */,
 				098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */,

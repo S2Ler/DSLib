@@ -2,6 +2,7 @@
 #import <Foundation/Foundation.h>
 #import "DSWebServiceRequest.h"
 #import "QRunLoopOperation.h"
+#import "DSRelativePath.h"
 
 @protocol DSWebServiceParam;
 @protocol DSWebServiceRequestDelegate;
@@ -23,7 +24,7 @@
 @property (nonatomic, retain, readonly) DSWebServiceURL *url;
 
 /** Response data will be written to output stream */
-@property (nonatomic, strong) NSString *outputPath;
+@property (nonatomic, strong) DSRelativePath *outputPath;
 
 #pragma mark - init
 - (id)initWithServer:(DSWebServiceURL *)theWebServiceURL

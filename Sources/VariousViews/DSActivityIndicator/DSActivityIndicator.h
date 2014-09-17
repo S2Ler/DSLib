@@ -7,9 +7,8 @@
 	BOOL isAnimating_;
 }
 
-//Designated initializer
 - (id)initWithFrame:(CGRect)frame
-              style:(UIActivityIndicatorViewStyle)aStyle;
+              style:(UIActivityIndicatorViewStyle)aStyle NS_DESIGNATED_INITIALIZER;
 
 - (void)setStopAnimatingImage:(UIImage *)anImage;
 

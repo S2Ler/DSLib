@@ -4,18 +4,19 @@
 #import "DSDynamicPropertyObject.h"
 
 @class DSMessage;
+@class DSRelativePath;
 
 @interface DSWebServiceResponse : DSDynamicPropertyObject
 
 @property (nonatomic, strong, readonly) NSData *data;
-- (instancetype)initWithData:(NSData *)theData DS_DESIGNATED_INIT;
+- (instancetype)initWithData:(NSData *)theData NS_DESIGNATED_INITIALIZER;
 + (instancetype)responseWithData:(NSData *)theData;
 
-@property (nonatomic, strong, readonly) NSString *path;
-- (instancetype)initWithPath:(NSString *)path DS_DESIGNATED_INIT;
-+ (instancetype)responseWithPath:(NSString *)path DS_DESIGNATED_INIT;
+@property (nonatomic, strong, readonly) DSRelativePath *path;
+- (instancetype)initWithPath:(DSRelativePath *)path NS_DESIGNATED_INITIALIZER;
++ (instancetype)responseWithPath:(DSRelativePath *)path;
 
-- (instancetype)initWithResponse:(DSWebServiceResponse *)response DS_DESIGNATED_INIT;
+- (instancetype)initWithResponse:(DSWebServiceResponse *)response NS_DESIGNATED_INITIALIZER;
 + (instancetype)responseWithResponse:(DSWebServiceResponse *)response;
 
 - (BOOL)parse;

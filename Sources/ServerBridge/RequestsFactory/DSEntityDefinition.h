@@ -25,8 +25,7 @@
   "[classPrefix][NSManagedObject subclasses name without prefix [classPrefix]]Definition"
 */
 @interface DSEntityDefinition: NSObject
-/** Designated Init */
-- (id)initWithDictionary:(NSDictionary *)theDictionary;
+- (id)initWithDictionary:(NSDictionary *)theDictionary NS_DESIGNATED_INITIALIZER;
 + (id)definitionWithDictionary:(NSDictionary *)theDictionary;
 
 + (id)definitionWithEntity:(NSManagedObject *)theEntity;

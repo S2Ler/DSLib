@@ -328,7 +328,7 @@ static NSMapTable *interceptorsMap = nil;
       }
       
       DSWebServiceResponse *response = [weakRequest response];
-      BOOL isRequestWithOutputPath = [[params outputPath] hasValue];
+      BOOL isRequestWithOutputPath = [params outputPath] != nil;
       
       if (isRequestWithOutputPath || [response isServerResponse]) {
         if (isRequestWithOutputPath || [response isSuccessfulResponse]) {

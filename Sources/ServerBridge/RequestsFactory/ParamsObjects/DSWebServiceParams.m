@@ -117,7 +117,7 @@
   return nil;
 }
 
-- (NSString *)outputPath
+- (DSRelativePath *)outputPath
 {
   return nil;
 }
