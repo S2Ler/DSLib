@@ -201,7 +201,6 @@
 
 - (NSString *)keypathForGetter:(NSString *)getter
 {
-  ASSERT_ABSTRACT_METHOD;
-  return nil;
+  return getter;
 }
 @end
