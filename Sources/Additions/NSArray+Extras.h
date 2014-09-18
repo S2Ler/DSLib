@@ -25,5 +25,7 @@
 - (NSUInteger)countObject:(id)object;
 
 - (NSArray *)filteredArrayUsingBlock:(BOOL(^)(id evaluatedObject))block;
+
+- (id)randomObject;
 @end
 

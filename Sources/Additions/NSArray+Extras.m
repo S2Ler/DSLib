@@ -156,4 +156,10 @@
     return block(evaluatedObject);
   }]];
 }
+
+- (id)randomObject
+{
+  id randomObject = [self count] ? self[arc4random_uniform([self count])] : nil;
+  return randomObject;
+}
 @end
