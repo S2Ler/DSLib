@@ -203,4 +203,9 @@
 {
   return getter;
 }
+
+- (id)containerValueForKeyPath:(NSString *)keyPath
+{
+  return [[self container] valueForKeyPath:keyPath];
+}
 @end
