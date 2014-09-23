@@ -4,15 +4,38 @@
 #import "DSAlertButton.h"
 #import "DSAlertsHandler+SimplifiedAPI.h"
 #import "NSError+Parse.h"
-
+#import <objc/runtime.h>
 
 @implementation DSAlertsHandler (SimplifiedAPI)
+static char simplifiedAPIDelegateKey;
+
+- (void)setSimpleAPIDelegate:(id<DSAlertsHandlerSimplifiedAPIDelegate>)simplifiedAPIDelegate
+{
+  objc_setAssociatedObject(self, &simplifiedAPIDelegateKey, simplifiedAPIDelegate, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (id<DSAlertsHandlerSimplifiedAPIDelegate>)simpleAPIDelegate
+{
+  return objc_getAssociatedObject(self, &simplifiedAPIDelegateKey);
+}
+
 - (void)showSimpleMessageAlert:(DSMessage *)theMessage
 {
-  DSAlert *alert = [[DSAlert alloc]
-    initWithMessage:theMessage
-       cancelButton:[DSAlertButton OKButton]
-       otherButtons:nil];
+  DSAlert *alert = nil;
+  
+  if ([theMessage isGeneralErrorMessage]) {
+    alert = [[self simpleAPIDelegate] customAlertForGeneralError:theMessage];
+  }
+  else if ([[self simpleAPIDelegate] respondsToSelector:@selector(customAlertMessage:)]){
+    alert = [[self simpleAPIDelegate] customAlertMessage:theMessage];
+  }
+  
+  if (!alert) {
+    alert = [[DSAlert alloc] initWithMessage:theMessage
+                                cancelButton:[DSAlertButton OKButton]
+                                otherButtons:nil];
+  }
+  
   [self showAlert:alert modally:YES];
 }
 

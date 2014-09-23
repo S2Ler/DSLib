@@ -37,4 +37,6 @@
 
 + (instancetype)unknownError;
 
+- (BOOL)isGeneralErrorMessage;
+
 @end
