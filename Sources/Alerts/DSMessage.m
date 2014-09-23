@@ -75,6 +75,15 @@
     return [error title] ? [error title] : @"Error";
 }
 
+- (NSString *)generalErrorBody
+{
+  NSString *generalErrorBodyLocalizationKey = [NSString stringWithFormat:@"%@.%@.body",
+                                               DSAlertsGeneralDomain, DSAlertsGeneralCode];
+  NSString *generalErrorBody = NSLocalizedStringFromTable(generalErrorBodyLocalizationKey,
+                                                          [self localizationTable], nil);
+  return generalErrorBody;
+}
+
 - (NSString *)localizedBody
 {
   NSString *localizationKey = [self keyForLocalizedBody];
@@ -97,10 +106,7 @@
       return [DSMessage messageBodyFromError:[self error]];
     }
     else if ([[[DSAlertsHandlerConfiguration sharedInstance] showGeneralMessageForUnknownCodes] boolValue]) {
-      NSString *generalErrorBodyLocalizationKey = [NSString stringWithFormat:@"%@.%@.body",
-                                                   DSAlertsGeneralDomain, DSAlertsGeneralCode];
-      NSString *generalErrorBody = NSLocalizedStringFromTable(generalErrorBodyLocalizationKey,
-                                                              [self localizationTable], nil);
+      NSString *generalErrorBody = [self generalErrorBody];
       return generalErrorBody;
     }
     else {
@@ -110,6 +116,11 @@
   else {
     return body;
   }
+}
+
+- (BOOL)isGeneralErrorMessage
+{
+  return [[self localizedBody] isEqualToString:[self generalErrorBody]];
 }
 
 + (NSString *)messageBodyFromError:(NSError *)error
