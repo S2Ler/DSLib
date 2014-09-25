@@ -18,7 +18,7 @@
 {
   DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"hhmm"
+    [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"jjmm"
                                                                  options:0
                                                                   locale:[NSLocale currentLocale]]];
     return dateFormatter;
@@ -29,7 +29,7 @@
 {
   DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"yyyyddMMMMhhmm"
+    [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"yyyyddMMMMjjmm"
                                                                  options:0
                                                                   locale:[NSLocale currentLocale]]];
     return dateFormatter;
