@@ -23,5 +23,6 @@
 - (NSString *)fullPath;
 
 - (instancetype)objectForKeyedSubscript:(NSString *)pathToAppend;
+- (instancetype)relativePathByRemovingLastPathComponent;
 //- (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key;
 @end

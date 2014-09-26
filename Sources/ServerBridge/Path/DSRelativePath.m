@@ -96,6 +96,13 @@
   return copy;
 }
 
+- (instancetype)relativePathByRemovingLastPathComponent
+{
+  DSRelativePath *copy = [self copy];
+  copy.relativePath = [copy.relativePath stringByDeletingLastPathComponent];
+  return copy;
+}
+
 #pragma mark - Debug
 - (NSString *)debugDescription
 {
