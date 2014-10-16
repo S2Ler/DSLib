@@ -19,6 +19,8 @@
 @property (nonatomic, strong) DSQueue *reusableViews;
 @property (nonatomic, assign) NSUInteger currentIndex;
 @property (nonatomic, assign) CGPoint dragStartPoint;
+
+@property (nonatomic, strong) UIView *draggingView;
 @end
 
 @implementation DSViewsStack
@@ -67,9 +69,22 @@
 {
   [self resetCurrentIndex];
   
-  [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+  NSLog(@"!!!!!!before hashes: %@", [[self subviews] valueForKeyPath:@"user.object_hash"]);
+
+  UIView *firstView = [self viewForIndex:0];
+  UIView *dontRemoveView = nil;
+  if ([[self dataSource] viewStack:self isView:firstView equalToView:self.draggingView]) {
+    dontRemoveView = self.draggingView;
+  }
   
-  [self preloadViews];
+  for (UIView *subView in self.subviews) {
+    if (subView != dontRemoveView) {
+      [subView removeFromSuperview];
+    }
+  }
+  
+  [self preloadViewsSkipFirst:dontRemoveView != nil];
+  NSLog(@"!!!!!!after hashes: %@", [[self subviews] valueForKeyPath:@"user.object_hash"]);
 }
 
 - (UIView *)dequeueReusableView
@@ -207,9 +222,9 @@
 }
 
 #pragma mark - views moving
-- (void)preloadViews
+- (void)preloadViewsSkipFirst:(BOOL)skipFrist
 {
-  if ([self currentIndex] < [self numberOfViews]) {
+  if ([self currentIndex] < [self numberOfViews] && !skipFrist) {
     UIView *viewForCurrentIndex = [self viewForIndex:[self currentIndex]];
     [self addView:viewForCurrentIndex toBackAnimated:NO];
   }
@@ -235,7 +250,7 @@
   }
   else if ([self currentIndex] == index - 1){
     [[[self subviews] firstObject] removeFromSuperview];
-    [self preloadViews];
+    [self preloadViewsSkipFirst:NO];
   }
 }
 
@@ -259,10 +274,12 @@
 - (void)viewDragging:(UIPanGestureRecognizer *)recognizer
 {
   UIView *view = [recognizer view];
+  
   switch ([recognizer state]) {
     case UIGestureRecognizerStateBegan: {
       CGPoint location = [recognizer locationInView:self];
       [self setDragStartPoint:location];
+      self.draggingView = view;
     }
     case UIGestureRecognizerStateChanged: {
       CGPoint location = [recognizer locationInView:self];
@@ -276,6 +293,8 @@
       break;
     case UIGestureRecognizerStateEnded:
     case UIGestureRecognizerStateCancelled: {
+      self.draggingView = nil;
+      
       DSViewsStackAnimationDirection draggedSide = [self isViewDraggedOut:view];
       
       __weak DSViewsStack *weakSelf = self;
