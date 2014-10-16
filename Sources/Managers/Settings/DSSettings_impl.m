@@ -111,18 +111,26 @@
   if ([theObject isEqual:[NSNull null]]) {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:[self saveKeyFromKey:theKey]];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    return;
   }
-  else {
-    [[NSUserDefaults standardUserDefaults] setObject:theObject
-                                              forKey:[self saveKeyFromKey:theKey]];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+
+  if ([theObject conformsToProtocol:@protocol(NSCoding)]) {
+    theObject = [NSKeyedArchiver archivedDataWithRootObject:theObject];
   }
+  
+  [[NSUserDefaults standardUserDefaults] setObject:theObject
+                                            forKey:[self saveKeyFromKey:theKey]];
+  [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (id)savedObjectForKey:(NSString *)theKey
 {
   if (theKey != nil) {    
     id object = [[NSUserDefaults standardUserDefaults] objectForKey:[self saveKeyFromKey:theKey]];
+    if ([object isKindOfClass:[NSData class]]) {
+      object = [NSKeyedUnarchiver unarchiveObjectWithData:object];
+    }
+    
     return object;  
   }
   else {
