@@ -74,7 +74,7 @@
               [[self yesterdayDateFormatter] stringFromDate:startDate]];
     }
     else {
-      return @"Yesterday";
+      return NSLocalizedString(@"time.ago.yersterday", nil);
     }
   }
   else if ([now daysFrom:startDate calendar:calendar] == 1) {
