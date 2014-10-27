@@ -9,7 +9,7 @@
 @property (nonatomic, strong) NSString *uniqueID;
 @property (nonatomic, weak) id<DSPassCodeControllerDelegate> delegate;
 
-- (id)initWithUniqueID:(NSString *)uniqueID serviceName:(NSString *)serviceName;
+- (id)initWithUniqueID:(NSString *)uniqueID serviceName:(NSString *)serviceName NS_DESIGNATED_INITIALIZER;
 
 /** Store aPass to secure storage */
 - (void)storePassword:(NSString *)aPass;

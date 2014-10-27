@@ -21,6 +21,26 @@
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)setLockTimeInterval:(NSTimeInterval)lockTimeInterval
+{
+  _lockTimeInterval = lockTimeInterval;
+  
+  //iOS 8 work around
+  NSNumber *number = @(lockTimeInterval);
+  NSData *data = [NSKeyedArchiver archivedDataWithRootObject:number];
+  [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"DSPassCodeController_lockTimeInterval"];
+  [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)loadSavedTimeInterval
+{
+  NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"DSPassCodeController_lockTimeInterval"];
+  if (data) {
+    NSNumber *number = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    _lockTimeInterval = [number doubleValue];
+  }
+}
+
 - (NSString *)PASSCODE_IDENTIFIER
 {
   if (!_PASSCODE_IDENTIFIER) {
@@ -55,6 +75,7 @@
                                                  name:UIApplicationWillTerminateNotification
                                                object:nil];
     _isUnlocked = YES;
+    [self loadSavedTimeInterval];
   }
 
   return self;
