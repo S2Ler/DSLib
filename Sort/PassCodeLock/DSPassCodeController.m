@@ -213,7 +213,7 @@
   CFDataRef result = nil;
   SecItemCopyMatching((__bridge CFDictionaryRef) searchDictionary, (CFTypeRef *) &result);
 
-  return (NSData *) CFBridgingRelease(result);
+  return CFBridgingRelease(result);
 }
 
 - (id<NSCoding>)searchKeychainValueCopyMatching:(NSString *)identifier
