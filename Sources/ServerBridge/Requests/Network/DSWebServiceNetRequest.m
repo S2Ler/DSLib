@@ -359,6 +359,17 @@
 }
 
 #pragma mark NSURLConnection delegate methods
+- (NSURLRequest *)connection:(NSURLConnection *)connection
+             willSendRequest:(NSURLRequest *)request
+            redirectResponse:(NSURLResponse *)response
+{
+  if ([[self delegate] respondsToSelector:@selector(webServiceRequest:willSendRequest:redirectResponse:)]) {
+    [[self delegate] webServiceRequest:self willSendRequest:request redirectResponse:response];
+  }
+  
+  return request;
+}
+
 - (void)connection:(NSURLConnection *)connection
 didReceiveResponse:(NSURLResponse *)response
 {
@@ -374,6 +385,19 @@ didReceiveResponse:(NSURLResponse *)response
                @selector(webServiceRequest:didReceiveResponseWithExpectedDownloadSize:)]) {
     [[self delegate]     webServiceRequest:self
 didReceiveResponseWithExpectedDownloadSize:_expectedDownloadSize];
+  }
+}
+
+- (void)connection:(NSURLConnection *)connection
+   didSendBodyData:(NSInteger)bytesWritten
+ totalBytesWritten:(NSInteger)totalBytesWritten
+totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
+{
+  if ([[self delegate] respondsToSelector:@selector(webServiceRequest:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite:)]) {
+    [[self delegate] webServiceRequest:self
+                       didSendBodyData:bytesWritten
+                     totalBytesWritten:totalBytesWritten
+             totalBytesExpectedToWrite:totalBytesExpectedToWrite];
   }
 }
 
