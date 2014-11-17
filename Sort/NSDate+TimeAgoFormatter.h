@@ -12,5 +12,7 @@
 - (NSString *)getTimeAgoStringShort;
 - (NSString *)getTimeAgoStringLong;
 + (NSString *)testAM_getTimeAgoStringLong;
+
+- (NSString *)getShortDateString;
 @end
 

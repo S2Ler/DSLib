@@ -25,6 +25,51 @@
   });
 }
 
++ (NSDateFormatter *)timeDateFormatter
+{
+  DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"jjmm"
+                                                                 options:0
+                                                                  locale:[NSLocale autoupdatingCurrentLocale]]];
+    return dateFormatter;
+  });
+}
+
++ (NSDateFormatter *)weekdayDateFormatter
+{
+  DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"EEE"
+                                                                 options:0
+                                                                  locale:[NSLocale autoupdatingCurrentLocale]]];
+    return dateFormatter;
+  });
+}
+
++ (NSDateFormatter *)monthDayDateFormatter
+{
+  DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"ddMMM"
+                                                                 options:0
+                                                                  locale:[NSLocale autoupdatingCurrentLocale]]];
+    return dateFormatter;
+  });
+}
+
++ (NSDateFormatter *)fullShortDateFormatter
+{
+  DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"ddMMyyyy"
+                                                                 options:0
+                                                                  locale:[NSLocale autoupdatingCurrentLocale]]];
+    return dateFormatter;
+  });
+}
+
+
 + (NSDateFormatter *)fullDateFormatter
 {
   DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
@@ -161,6 +206,22 @@
   }
   else {
     return [[self fullDateFormatter] stringFromDate:startDate];
+  }
+}
+
+- (NSString *)getShortDateString
+{
+  if ([self isToday]) {
+    return [[[self class] timeDateFormatter] stringFromDate:self];
+  }
+  else if (fabs([self timeIntervalSinceNow]) < 60*60*24*6) {
+    return [[[self class] weekdayDateFormatter] stringFromDate:self];
+  }
+  else if (self.year == [NSDate date].year) {
+    return [[[self class] monthDayDateFormatter] stringFromDate:self];
+  }
+  else {
+    return [[[self class] fullShortDateFormatter] stringFromDate:self];
   }
 }
 
