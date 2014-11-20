@@ -15,6 +15,7 @@
 @interface DSViewsStack : UIView
 @property (nonatomic, weak) id<DSViewsStackDelegate> delegate;
 @property (nonatomic, weak) id<DSViewsStackDataSource> dataSource;
+@property (nonatomic, assign, readonly) NSUInteger currentIndex;
 
 - (UIView *)dequeueReusableView;
 
