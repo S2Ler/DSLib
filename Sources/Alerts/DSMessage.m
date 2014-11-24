@@ -72,7 +72,7 @@
 
 + (NSString *)messageTitleFromError:(NSError *)error
 {
-    return [error title] ? [error title] : @"Error";
+    return [error title] ? [error title] : NSLocalizedString(@"general.error.title", nil);
 }
 
 - (NSString *)generalErrorBody
