@@ -20,7 +20,7 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"jjmm"
                                                                  options:0
-                                                                  locale:[NSLocale currentLocale]]];
+                                                                  locale:[NSLocale autoupdatingCurrentLocale]]];
     return dateFormatter;
   });
 }
@@ -76,7 +76,7 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"yyyyddMMMMjjmm"
                                                                  options:0
-                                                                  locale:[NSLocale currentLocale]]];
+                                                                  locale:[NSLocale autoupdatingCurrentLocale]]];
     return dateFormatter;
   });
 }
@@ -214,7 +214,7 @@
   if ([self isToday]) {
     return [[[self class] timeDateFormatter] stringFromDate:self];
   }
-  else if (fabs([self timeIntervalSinceNow]) < 60*60*24*6) {
+  else if (fabs([self timeIntervalSinceNow]) < 60*60*24*6 + [[NSDate date] hour] * 60 *60) {
     return [[[self class] weekdayDateFormatter] stringFromDate:self];
   }
   else if (self.year == [NSDate date].year) {
