@@ -42,38 +42,48 @@
 
 + (NSString *)sizePrettyStringWithBytes:(DSFileSize)theSizeInBytes
 {
+  return [self sizePrettyStringWithBytes:theSizeInBytes divider:1024];
+}
+
++ (NSString *)sizePrettyString1000NominationWithBytes:(DSFileSize)theSizeInBytes
+{
+  return [self sizePrettyStringWithBytes:theSizeInBytes divider:1000];
+}
+
++ (NSString *)sizePrettyStringWithBytes:(DSFileSize)theSizeInBytes divider:(float)divider
+{
   NSString* sizeUnit = @"bytes";
   
   long double size = theSizeInBytes;
   
-  if (size > 1024)
+  if (size > divider)
   {
-    size /= 1024.;
+    size /= divider;
     sizeUnit = @"KB";
   }
-  if (size > 1024)
+  if (size > divider)
   {
-    size /= 1024.;
+    size /= divider;
     sizeUnit = @"MB";
   }
-  if (size > 1024)
+  if (size > divider)
   {
-    size /= 1024.;
+    size /= divider;
     sizeUnit = @"GB";
   }
-  if (size > 1024) {
-    size /= 1024.;
+  if (size > divider) {
+    size /= divider;
     sizeUnit = @"TB";
   }
-  if (size > 1024) {
-    size /= 1024.;
+  if (size > divider) {
+    size /= divider;
     sizeUnit = @"PB";
   }
   
-  NSString *prettyString 
-  = [NSString stringWithFormat:@"%@ %@", 
+  NSString *prettyString
+  = [NSString stringWithFormat:@"%@ %@",
      [[self sizeFormatter] stringFromNumber:
-      [NSNumber numberWithFloat:size]], 
+      [NSNumber numberWithFloat:size]],
      sizeUnit];
   
   return prettyString;
