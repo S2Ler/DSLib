@@ -2,6 +2,12 @@
 #pragma mark - include
 #import "NSObject+Observing.h"
 #import <objc/runtime.h>
+#import "DSMacros.h"
+
+@interface DSAggregatedChange : NSObject
+@property (nonatomic, strong) NSMutableArray *changedKeypaths;
+@property (nonatomic, copy) NSObjectAggregatedObserverBlock block;
+@end
 
 @implementation NSObject (Observing)
 static char BLOCK_OBSERVING_CONTEXT;
@@ -107,5 +113,45 @@ static const char observerBlocksDictionaryKey;
     }
 }
 
+#pragma mark - Aggregated observing
+- (void)addAggregatedObserverForKeyPaths:(NSArray *)keypaths block:(NSObjectAggregatedObserverBlock)block
+{
+  DSAggregatedChange *changeObject = [[DSAggregatedChange alloc] init];
+  changeObject.changedKeypaths = [NSMutableArray array];
+  changeObject.block = block;
+
+  [[self observerBlocksDictionary] setObject:changeObject
+                                      forKey:keypaths];
+  
+  DSWEAK(weakSelf, self);
+  
+  for (NSString *keypath in keypaths) {
+    [self addObserverForKeyPath:keypath block:^(id object, NSString *keyPath) {
+      [changeObject.changedKeypaths addObject:keypath];
+      [[weakSelf class] cancelPreviousPerformRequestsWithTarget:weakSelf selector:@selector(purgeAggregatedChanges:) object:keypaths];
+      [weakSelf performSelector:@selector(purgeAggregatedChanges:) withObject:keypaths afterDelay:0];
+    }];
+  }
+}
+
+- (void)removeObserverForKeyPaths:(NSArray *)keypaths
+{
+  for (NSString *keypath in keypaths) {
+    [self removeObserverForKeyPath:keypath];
+  }
+  
+  [[self observerBlocksDictionary] removeObjectForKey:keypaths];
+}
+
+- (void)purgeAggregatedChanges:(NSArray *)keypaths
+{
+  DSAggregatedChange *changeObject = [[self observerBlocksDictionary] objectForKey:keypaths];
+  
+  changeObject.block(self, changeObject.changedKeypaths);
+  [changeObject.changedKeypaths removeAllObjects];
+}
+@end
+
+@implementation DSAggregatedChange
 
 @end
