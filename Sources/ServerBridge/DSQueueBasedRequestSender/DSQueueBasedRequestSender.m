@@ -14,6 +14,7 @@
 #import "NSDate+OAddittions.h"
 #import "NSTimer+DSAdditions.h"
 #import "NSDate+DateTools.h"
+#import "DSWeakTimerTarget.h"
 
 #define COMPLETION_USER_INFO_KEY @"Completion"
 #define REQUEST_SUCCESSFUL_HANDLER_USER_INFO_KEY @"Request Successful"
@@ -50,6 +51,7 @@ static NSMapTable *interceptorsMap = nil;
 - (void)dealloc
 {
   [[self queue] removeObserver:self forKeyPath:@"operationCount"];
+  [self.recurrentRequestsTimer invalidate];
 }
 
 #pragma mark - Props
@@ -80,10 +82,13 @@ static NSMapTable *interceptorsMap = nil;
                 options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                 context:(__bridge void *)self];
     _recurrentRequestsData = [NSMutableDictionary dictionary];
+
     dispatch_sync([self workingQueue], ^{
+      DSWeakTimerTarget *weakTarget = [[DSWeakTimerTarget alloc] initWithTarget:self
+                                                                       selector:@selector(processRecurrentRequests)];
       _recurrentRequestsTimer = [NSTimer scheduledTimerWithTimeInterval:NSTimeIntervalWithMinutes(1)
-                                                                 target:self
-                                                               selector:@selector(processRecurrentRequests)
+                                                                 target:weakTarget
+                                                               selector:@selector(timerDidFire:)
                                                                userInfo:nil
                                                                 repeats:YES];
     });

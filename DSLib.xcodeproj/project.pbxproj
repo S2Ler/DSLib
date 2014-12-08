@@ -295,6 +295,8 @@
 		09A6043B182A663C00F57F89 /* DSConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DD12A2DD6F6F278480844E /* DSConfiguration.plist */; };
 		09A83F3B19238ABE008DE30F /* DSRedirectLogs.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A83F3919238ABE008DE30F /* DSRedirectLogs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09A83F3C19238ABE008DE30F /* DSRedirectLogs.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A83F3A19238ABE008DE30F /* DSRedirectLogs.m */; };
+		09AAD18F1A35F82800DAE9E4 /* DSWeakTimerTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 09AAD18D1A35F82800DAE9E4 /* DSWeakTimerTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09AAD1901A35F82800DAE9E4 /* DSWeakTimerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AAD18E1A35F82800DAE9E4 /* DSWeakTimerTarget.m */; };
 		09AD5B2018A8F0E3001FC5D1 /* DSConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 09AD5B1E18A8F0E3001FC5D1 /* DSConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09AD5B2118A8F0E3001FC5D1 /* DSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD5B1F18A8F0E3001FC5D1 /* DSConstants.m */; };
 		09B6DCE51858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCCD1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -760,6 +762,8 @@
 		09A6041C182A65CF00F57F89 /* DSLibBundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLibBundle-Prefix.pch"; sourceTree = "<group>"; };
 		09A83F3919238ABE008DE30F /* DSRedirectLogs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRedirectLogs.h; sourceTree = "<group>"; };
 		09A83F3A19238ABE008DE30F /* DSRedirectLogs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRedirectLogs.m; sourceTree = "<group>"; };
+		09AAD18D1A35F82800DAE9E4 /* DSWeakTimerTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWeakTimerTarget.h; sourceTree = "<group>"; };
+		09AAD18E1A35F82800DAE9E4 /* DSWeakTimerTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWeakTimerTarget.m; sourceTree = "<group>"; };
 		09AD5B1E18A8F0E3001FC5D1 /* DSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSConstants.h; sourceTree = "<group>"; };
 		09AD5B1F18A8F0E3001FC5D1 /* DSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSConstants.m; sourceTree = "<group>"; };
 		09B6DCCD1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSChoosePlacemarkAnnotation.h; sourceTree = "<group>"; };
@@ -1026,6 +1030,8 @@
 				097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */,
 				097F7A0A19B84F8A004B4129 /* NSTimer+DSAdditions.h */,
 				097F7A0B19B84F8A004B4129 /* NSTimer+DSAdditions.m */,
+				09AAD18D1A35F82800DAE9E4 /* DSWeakTimerTarget.h */,
+				09AAD18E1A35F82800DAE9E4 /* DSWeakTimerTarget.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -2015,6 +2021,7 @@
 				09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */,
 				0972E33A19B6FA9F005D00F2 /* DTTimePeriodCollection.h in Headers */,
 				09162C97180EECC100A0DEEF /* WEPopoverController.h in Headers */,
+				09AAD18F1A35F82800DAE9E4 /* DSWeakTimerTarget.h in Headers */,
 				0903A40217F0AC9100A21270 /* DSValueChooserViewController.h in Headers */,
 				0972E33219B6FA9F005D00F2 /* DateTools.h in Headers */,
 				09B8663A17F1B82D003B1070 /* DSTableViewController.h in Headers */,
@@ -2550,6 +2557,7 @@
 				62DD187C5A8A0492EB15FAEE /* DSAppDelegate.m in Sources */,
 				62DD152CB973B9C752B7120C /* DSBlockBarButtonItem.m in Sources */,
 				09CDC39519260E4600C49EEA /* DSViewsStackAnimationDirection.m in Sources */,
+				09AAD1901A35F82800DAE9E4 /* DSWeakTimerTarget.m in Sources */,
 				09C15FD618DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m in Sources */,
 				62DD1BC6C151EFA0696F8AC2 /* DSBlockButton.m in Sources */,
 				0972E33D19B6FA9F005D00F2 /* DTTimePeriodGroup.m in Sources */,
