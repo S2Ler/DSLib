@@ -19,7 +19,7 @@ typedef enum
 
 @implementation DSAlertButton
 
-- (id)initWithTitle:(NSString *)theTitle target:(id)theTarget action:(SEL)theAction
+- (instancetype)initWithTitle:(NSString *)theTitle target:(id)theTarget action:(SEL)theAction
 {
   self = [super init];
   if (self) {
@@ -28,21 +28,21 @@ typedef enum
     _action = theAction;
     _invocationType = OAlertButtonTargetActionInvocationType;
   }
-
+  
   return self;
 }
 
-+ (id)buttonWithTitle:(NSString *)theTitle target:(id)theTarget action:(SEL)theAction
++ (instancetype)buttonWithTitle:(NSString *)theTitle target:(id)theTarget action:(SEL)theAction
 {
   DSAlertButton *button = [[DSAlertButton alloc] initWithTitle:theTitle
-                                                      target:theTarget
-                                                      action:theAction];
+                                                        target:theTarget
+                                                        action:theAction];
   return button;
 }
 
 
-- (id)initWithTitle:(NSString *)theTitle
-    invocationBlock:(ds_action_block_t)theBlock
+- (instancetype)initWithTitle:(NSString *)theTitle
+              invocationBlock:(ds_action_block_t)theBlock
 {
   self = [super init];
   if (self) {
@@ -50,15 +50,15 @@ typedef enum
     _block = theBlock;
     _invocationType = OAlertButtonBlockInvocationType;
   }
-
+  
   return self;
 }
 
 
-+ (id)buttonWithTitle:(NSString *)theTitle invocationBlock:(ds_action_block_t)theBlock
++ (instancetype)buttonWithTitle:(NSString *)theTitle invocationBlock:(ds_action_block_t)theBlock
 {
   DSAlertButton *button = [[DSAlertButton alloc] initWithTitle:theTitle
-                                             invocationBlock:theBlock];
+                                               invocationBlock:theBlock];
   return button;
 }
 
@@ -80,21 +80,26 @@ typedef enum
 @end
 
 @implementation DSAlertButton (FactoryMethods)
-+ (id)cancelButton
++ (instancetype)cancelButton
+{
+  return [self cancelButtonWithBlock:nil];
+}
+
++ (instancetype)cancelButtonWithBlock:(ds_action_block_t)block
 {
   DSAlertButton *button = [DSAlertButton buttonWithTitle:NSLocalizedString(@"Cancel", nil)
-                                         invocationBlock:NULL];
+                                         invocationBlock:block];
   return button;
 }
 
-+ (id)NOButton
++ (instancetype)NOButton
 {
   DSAlertButton *button = [DSAlertButton buttonWithTitle:NSLocalizedString(@"NO", nil)
                                          invocationBlock:NULL];
   return button;
 }
 
-+ (id)OKButton
++ (instancetype)OKButton
 {
   DSAlertButton *button = [DSAlertButton buttonWithTitle:NSLocalizedString(@"OK", nil)
                                          invocationBlock:NULL];
