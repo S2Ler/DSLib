@@ -12,6 +12,9 @@
 <
 MFMailComposeViewControllerDelegate
 >
+
+@property (nonatomic, assign) UIModalPresentationStyle modalPresentationStyle;
+
 - (id)initWithRootViewController:(UIViewController *)theController;
 
 - (void)setSubject:(NSString*)theSubject;

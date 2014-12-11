@@ -37,7 +37,7 @@
 - (void)share
 {
   [[self mailComposer] setToRecipients:[self recipients]];
-  
+  self.mailComposer.modalPresentationStyle = self.modalPresentationStyle;
   [[self rootViewController] presentViewController:[self mailComposer] animated:YES completion:nil];
  }
 
