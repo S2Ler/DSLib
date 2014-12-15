@@ -13,7 +13,7 @@
 @property (nonatomic, weak) Reachability *reachability;
 @property (nonatomic, strong) NSArray *filterOutMessages;
 
-+ (id)sharedInstance;
++ (instancetype)sharedInstance;
 
 - (void)showAlert:(DSAlert *)theAlert modally:(BOOL)isModalAlert;
 

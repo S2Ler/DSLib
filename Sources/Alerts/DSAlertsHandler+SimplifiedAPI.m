@@ -30,7 +30,7 @@ static char simplifiedAPIDelegateKey;
     alert = [[self simpleAPIDelegate] customAlertMessage:theMessage];
   }
   
-  if (!alert) {
+  if (!alert && theMessage) {
     alert = [[DSAlert alloc] initWithMessage:theMessage
                                 cancelButton:[DSAlertButton OKButton]
                                 otherButtons:nil];
