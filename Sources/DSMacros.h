@@ -42,5 +42,6 @@ return _sharedObject;
 #define DSGRAY_CG(gray) ([UIColor colorWithWhite:gray/255. alpha:1.].CGColor)
 #define DSGRAYA(gray, alpha) [UIColor colorWithWhite:gray/255. alpha:alpha]
 
-#define DSWEAK_SELF(variable_name) __weak typeof(self) variable_name = self
+#define DSWEAK_SELF __weak typeof(self) weakSelf = self
+#define DSSTRONG_SELF __strong typeof(self) strongSelf = weakSelf
 #define DSWEAK(variable_name, variable) __weak typeof(variable) variable_name = variable;
