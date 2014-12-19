@@ -1,3 +1,4 @@
+
 #import "DSFetchedResultsControllerDelegate.h"
 
 @implementation DSFetchedResultsControllerDelegate
