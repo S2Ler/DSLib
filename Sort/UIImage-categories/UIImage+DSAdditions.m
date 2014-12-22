@@ -153,5 +153,21 @@
     return maskImageRef;
 }
 
+- (BOOL)saveToPath:(NSString *)path
+             error:(__autoreleasing NSError **)error
+         converter:(NSData *(^)(UIImage *image, NSString **getExtension))converter
+           getSize:(DSFileSize *)size
+{
+  NSString *extension = nil;
+  NSData *imageData = converter(self, &extension);
+  
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+  BOOL success = [imageData writeToFile:path options:NSDataWritingAtomic error:error];
+  *size = [imageData length];
+  
+  return success;
+}
 
 @end
+
+

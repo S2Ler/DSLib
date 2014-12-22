@@ -8,4 +8,9 @@
 - (UIImage *)maskedImageWithColor:(UIColor *)color;
 - (UIImage *)maskedImageWithColor:(UIColor *)color blendMode:(CGBlendMode)mode;
 
+- (BOOL)saveToPath:(NSString *)path
+             error:(__autoreleasing NSError **)error
+         converter:(NSData *(^)(UIImage *image, NSString **getExtension))converter
+           getSize:(DSFileSize *)size;
+
 @end
