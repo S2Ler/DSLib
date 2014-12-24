@@ -7,6 +7,7 @@
 #pragma mark - private
 @interface DSWebServiceArrayParam()
 @property (nonatomic, strong) NSMutableArray *params;
+@property (nonatomic, strong) NSMutableArray *paramNames;
 @end
 
 @implementation DSWebServiceArrayParam
@@ -19,6 +20,7 @@
   self = [super init];
   if (self) {
     _params = [NSMutableArray array];
+    _paramNames = [NSMutableArray array];
     _embeddedIndex = DSWebServiceParamEmbeddedIndexNotSet;
   }
   return self;
@@ -66,13 +68,18 @@
 
 - (void)enumerateParamsAndParamNamesWithBlock:(void (^)(id<DSWebServiceParam> theParam, NSString *theParamName))theBlock
 {
+  NSUInteger idx = 0;
   for (id<DSWebServiceParam> param in [self params]) {
-    theBlock(param, nil);
+    NSString *paramName = _paramNames[idx];
+    if ([paramName isEqual:[NSNull null]]) {
+      paramName = nil;
+    }
+    theBlock(param, paramName);
+    idx++;
   }
 }
 
-- (void)
-enumerateStringValuesAndParamNamesWithBlock:(void(^)(NSString *theParam, NSString *theValue))theBlock
+- (void)enumerateStringValuesAndParamNamesWithBlock:(void(^)(NSString *theParam, NSString *theValue))theBlock
 {
   [self enumerateParamsAndParamNamesWithBlock:^(id<DSWebServiceParam> param, NSString *paramName) {
     if ([param isKindOfClass:[DSWebServiceStringParam class]] == YES) {
@@ -84,11 +91,16 @@ enumerateStringValuesAndParamNamesWithBlock:(void(^)(NSString *theParam, NSStrin
   }];
 }
 
-- (void)addParam:(id<DSWebServiceParam>)theParam
-    forParamName:(NSString *)theParamName
+- (void)addParam:(id<DSWebServiceParam>)theParam forParamName:(NSString *)theParamName
 {
   //It is array and theParamName is discarded
   [[self params] addObject:theParam];
+  if (theParamName) {
+    [_paramNames addObject:theParamName];
+  }
+  else {
+    [_paramNames addObject:[NSNull null]];
+  }
 }
 
 - (id<DSWebServiceParam>)paramForParamName:(NSString *)theParamName
@@ -116,6 +128,7 @@ enumerateStringValuesAndParamNamesWithBlock:(void(^)(NSString *theParam, NSStrin
   [encoder encodeObject:self.params forKey:@"params"];
   [encoder encodeInteger:self.embeddedIndex forKey:@"embeddedIndex"];
   [encoder encodeObject:self.userInfo forKey:@"userInfo"];
+  [encoder encodeObject:self.paramNames forKey:@"paramNames"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -125,6 +138,7 @@ enumerateStringValuesAndParamNamesWithBlock:(void(^)(NSString *theParam, NSStrin
     self.params = [decoder decodeObjectForKey:@"params"];
     self.embeddedIndex = [decoder decodeIntegerForKey:@"embeddedIndex"];
     self.userInfo = [decoder decodeObjectForKey:@"userInfo"];
+    self.paramNames = [decoder decodeObjectForKey:@"paramNames"];
   }
   return self;
 }

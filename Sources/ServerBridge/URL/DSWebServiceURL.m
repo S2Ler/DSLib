@@ -137,28 +137,22 @@
       || ([self HTTPMethod] == DSWebServiceURLHTTPMethodPOST && [self embedParamsInURLForPOSTRequest])) {
     NSMutableString *GETParams = [NSMutableString string];
 
-    NSUInteger paramsCount = [[theParams stringParamNames] count];
     NSMutableArray *embeddedParams = [NSMutableArray array];
 
-    __block NSUInteger paramIndex = 0;
     [theParams enumerateParamsAndParamNamesWithBlock:
                  ^void(id<DSWebServiceParam> param, NSString *paramName)
                  {
-                   NSString *value = [param stringValueForParamName:paramName];
-
-                   if ([param embeddedIndex] == DSWebServiceParamEmbeddedIndexNotSet) {
-                     NSString *string = [NSString stringWithFormat:@"%@=%@", paramName, [value urlCompliantString]];
-                     [GETParams appendString:string];
-
-                     if (paramIndex < paramsCount - 1) {
+                   [param enumerateParamsAndParamNamesWithBlock:^(id<DSWebServiceParam> param, NSString *paramName) {
+                     if ([param embeddedIndex] == DSWebServiceParamEmbeddedIndexNotSet) {
+                       NSString *string = [NSString stringWithFormat:@"%@=%@", [paramName urlCompliantString], [[param stringValueForParamName:paramName] urlCompliantString]];
+                       [GETParams appendString:string];
+                       
                        [GETParams appendString:@"&"];
                      }
-                   }
-                   else {
-                     [embeddedParams addObject:param];
-                   }
-
-                   paramIndex++;
+                     else {
+                       [embeddedParams addObject:param];
+                     }
+                   }];
                  }];
 
     //embed embedded params
@@ -177,11 +171,11 @@
     }
 
     [urlStringWithParams appendString:@"?"];
+    [GETParams deleteCharactersInRange:NSMakeRange(GETParams.length-1, 1)];
     [urlStringWithParams appendString:GETParams];
   }
   else {//DSWebServiceURLHTTPMethodPOST
-    DSWebServiceParamsExporter *paramsExporter
-      = [[DSWebServiceParamsExporter alloc] initWithParams:theParams];
+    DSWebServiceParamsExporter *paramsExporter = [[DSWebServiceParamsExporter alloc] initWithParams:theParams];
     NSData *paramsData = [paramsExporter exportParamsData];
     [self setParamsDataForPOST:paramsData];
     
@@ -196,17 +190,12 @@
      }];
     
     //embed embedded params
-    NSSortDescriptor *sortDescriptor
-    = [NSSortDescriptor sortDescriptorWithKey:@"embeddedIndex"
-                                    ascending:YES];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"embeddedIndex" ascending:YES];
     
-    NSArray *sortedEmbeddedParams
-    = [embeddedParams sortedArrayUsingDescriptors:
-       [NSArray arrayWithObject:sortDescriptor]];
+    NSArray *sortedEmbeddedParams = [embeddedParams sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
     for (id<DSWebServiceParam> param in sortedEmbeddedParams) {
-      NSString
-      *value = [param stringValueForParamName:[[param paramNames] objectAtIndex:0]];
+      NSString *value = [param stringValueForParamName:[[param paramNames] objectAtIndex:0]];
       [urlStringWithParams appendFormat:@"/%@", value];
     }
 

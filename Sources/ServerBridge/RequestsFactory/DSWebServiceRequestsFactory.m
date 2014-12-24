@@ -7,8 +7,13 @@
 #import "DSFakeWebServiceRequest.h"
 
 @implementation DSWebServiceRequestsFactory
-+ (void)fillParam:(id)createdParam withSubValue:(id)subValue key:(NSString *)key
++ (void)fillParam:(id)createdParam
+     withSubValue:(id)subValue
+              key:(NSString *)key
+         paramIdx:(NSUInteger)paramIdx
+         paramName:(NSString *)paramName
 {
+  key = [NSString stringWithFormat:@"%@[%lu]", paramName, (unsigned long)paramIdx];
   if ([subValue isKindOfClass:[NSDictionary class]]) {
     id<DSWebServiceParam> subParams = [self paramsFromValues:subValue embeddedParams:nil];
     [createdParam addParam:subParams forParamName:key];
@@ -33,9 +38,8 @@
                            embeddedParams:(NSArray *)theEmbeddedParams
 {
   NSArray *paramNames = [theValues allKeys];
-  id<DSWebServiceParam>
-    params = [DSWebServiceParamFactory paramWithType:DSWebServiceParamTypeRoot];
-
+  id<DSWebServiceParam> params = [DSWebServiceParamFactory paramWithType:DSWebServiceParamTypeRoot];
+  NSUInteger paramIdx = 0;
   for (NSString *paramName in paramNames) {
     id value = [theValues objectForKey:paramName];
     id<DSWebServiceParam> createdParam = nil;
@@ -45,8 +49,7 @@
     }
     else if ([value isKindOfClass:[NSDate class]]) {
       NSString *datetimeString = [(NSDate *)value webServiceDateString];
-      createdParam = [params addStringValue:datetimeString
-                               forParamName:paramName];
+      createdParam = [params addStringValue:datetimeString forParamName:paramName];
     }
     else if ([value isKindOfClass:[NSURL class]]) {
       createdParam = [params addStringValue:[value absoluteString] forParamName:paramName];
@@ -54,7 +57,7 @@
     else if ([value isKindOfClass:[NSArray class]]) {
       createdParam = [DSWebServiceParamFactory paramWithType:DSWebServiceParamTypeArray];
       for (id subValue in (NSArray *)value) {
-        [self fillParam:createdParam withSubValue:subValue key:nil];
+        [self fillParam:createdParam withSubValue:subValue key:nil paramIdx:paramIdx paramName:paramName];
       }
       [params addParam:createdParam forParamName:paramName];
     }
@@ -62,7 +65,7 @@
       createdParam = [DSWebServiceParamFactory paramWithType:DSWebServiceParamTypeDictionary];
       for (NSString *key in [(NSDictionary *)value allKeys]) {
         id subValue = [value valueForKey:key];
-        [self fillParam:createdParam withSubValue:subValue key:key];
+        [self fillParam:createdParam withSubValue:subValue key:key paramIdx:paramIdx paramName:paramName];
       }
       [params addParam:createdParam forParamName:paramName];
     }
@@ -75,6 +78,8 @@
       NSInteger paramEmbeddedIndex = [theEmbeddedParams indexOfObject:paramName];
       [createdParam setEmbeddedIndex:paramEmbeddedIndex];
     }
+    
+    paramIdx++;
   }
 
   return params;
