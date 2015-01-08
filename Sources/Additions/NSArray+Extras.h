@@ -27,5 +27,8 @@
 - (NSArray *)filteredArrayUsingBlock:(BOOL(^)(id evaluatedObject))block;
 
 - (id)randomObject;
+
+- (NSArray *)map:(id(^)(id object))block;
 @end
 
+NSArray *mapFast(NSObject<NSFastEnumeration> *fastEnumerator, id(^block)(id));

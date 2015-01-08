@@ -54,4 +54,5 @@ FOUNDATION_EXPORT const unsigned char DSLibFrameworkVersionString[];
 #import <DSLibFramework/NSError+DSMessage.h>
 #import <DSLibFramework/NSError+Parse.h>
 #import <DSLibFramework/Reachability.h>
+#import <DSLibFramework/NSArray+Extras.h>
 

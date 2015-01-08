@@ -1,5 +1,6 @@
 
 #import "NSArray+Extras.h"
+@import UIKit;
 
 @implementation NSArray (Extras)
 
@@ -163,4 +164,23 @@
   return randomObject;
 }
 
+- (NSArray *)map:(id(^)(id object))block
+{
+  NSMutableArray *results = [NSMutableArray arrayWithCapacity:[self count]];
+  
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [results addObject:block(obj)];
+  }];
+  
+  return results;
+}
+
+NSArray *mapFast(NSObject<NSFastEnumeration> *fastEnumerator, id(^block)(id))
+{
+  NSMutableArray *results = [NSMutableArray array];
+  for (id object in fastEnumerator) {
+    [results addObject:block(object)];
+  }
+  return results;
+}
 @end

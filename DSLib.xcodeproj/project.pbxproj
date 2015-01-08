@@ -201,6 +201,8 @@
 		090526351A5E9DE8001536F9 /* DSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33017F0AC9100A21270 /* DSQueue.m */; };
 		090526361A5E9E0D001536F9 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A40717F0B4DA00A21270 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		090526371A5E9E0D001536F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A40817F0B4DA00A21270 /* Reachability.m */; };
+		090526611A5EBB6F001536F9 /* NSArray+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2EF17F0AC9100A21270 /* NSArray+Extras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526621A5EBB74001536F9 /* NSArray+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2F017F0AC9100A21270 /* NSArray+Extras.m */; };
 		09067F2D181804CA00C8F48F /* DSAlertsQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 09067F2B181804CA00C8F48F /* DSAlertsQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09067F2E181804CA00C8F48F /* DSAlertsQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F2C181804CA00C8F48F /* DSAlertsQueue.m */; };
 		09067F311818055900C8F48F /* DSAlertQueue+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 09067F2F1818055900C8F48F /* DSAlertQueue+Private.h */; };
@@ -2263,6 +2265,7 @@
 				0905261F1A5E9D0B001536F9 /* DSAlertsQueue.h in Headers */,
 				090526141A5E9D0B001536F9 /* NSError+DSMessage.h in Headers */,
 				099767251A4F08D800DDE130 /* DTTimePeriodChain.h in Headers */,
+				090526611A5EBB6F001536F9 /* NSArray+Extras.h in Headers */,
 				099767A91A4F351700DDE130 /* NSString+Extras.h in Headers */,
 				0997672B1A4F08D800DDE130 /* NSDate+DateTools.h in Headers */,
 				090526191A5E9D0B001536F9 /* DSAlertButton.h in Headers */,
@@ -2819,6 +2822,7 @@
 				0997677A1A4F318900DDE130 /* DSPassCodeController.m in Sources */,
 				090525181A5E9217001536F9 /* CATransition+AnimationsBuilder.m in Sources */,
 				099767741A4F128100DDE130 /* DSEmailSharer.m in Sources */,
+				090526621A5EBB74001536F9 /* NSArray+Extras.m in Sources */,
 				090526331A5E9D72001536F9 /* DSMessageInterceptor.m in Sources */,
 				090524C01A5E8A6F001536F9 /* UIView+XibLoading.m in Sources */,
 				099767641A4F0F6000DDE130 /* DSConstants.m in Sources */,
