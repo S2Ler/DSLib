@@ -4,7 +4,8 @@
 //
 
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import UIKit;
 
 @protocol DSDraggingSourceContainer;
 @protocol DSDraggingDestinationContainer;

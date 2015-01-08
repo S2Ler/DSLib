@@ -144,6 +144,63 @@
 		0903A41617F0C28300A21270 /* DSGPSTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A41117F0C28300A21270 /* DSGPSTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0903A41717F0C28300A21270 /* DSGPSTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A41217F0C28300A21270 /* DSGPSTracker.m */; };
 		0903A41817F0C28300A21270 /* DSGPSTrackerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A41317F0C28300A21270 /* DSGPSTrackerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090524BE1A5E899F001536F9 /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 090524BD1A5E899F001536F9 /* libobjc.dylib */; };
+		090524BF1A5E8A6D001536F9 /* UIView+XibLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31F17F0AC9100A21270 /* UIView+XibLoading.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090524C01A5E8A6F001536F9 /* UIView+XibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A32017F0AC9100A21270 /* UIView+XibLoading.m */; };
+		090524C11A5E8A7B001536F9 /* XibLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A32117F0AC9100A21270 /* XibLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090524C21A5E8A7E001536F9 /* XibLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A32217F0AC9100A21270 /* XibLoader.m */; };
+		090525151A5E91FD001536F9 /* DSPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098F665F18ACD09600E479E5 /* DSPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090525161A5E9201001536F9 /* DSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098F666018ACD09600E479E5 /* DSPhotoView.m */; };
+		090525171A5E9217001536F9 /* CATransition+AnimationsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2EC17F0AC9100A21270 /* CATransition+AnimationsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090525181A5E9217001536F9 /* CATransition+AnimationsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2ED17F0AC9100A21270 /* CATransition+AnimationsBuilder.m */; };
+		090525191A5E931C001536F9 /* NSObject+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A30217F0AC9100A21270 /* NSObject+DSAdditions.m */; };
+		0905251A1A5E931F001536F9 /* NSObject+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A30117F0AC9100A21270 /* NSObject+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0905260A1A5E9C9C001536F9 /* DSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33617F0AC9100A21270 /* DSMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0905260B1A5E9C9C001536F9 /* DSMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33717F0AC9100A21270 /* DSMacros.m */; };
+		0905260C1A5E9CA9001536F9 /* DSCFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33C17F0AC9100A21270 /* DSCFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0905260D1A5E9CAD001536F9 /* DSCFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33D17F0AC9100A21270 /* DSCFunctions.m */; };
+		0905260E1A5E9D0B001536F9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0905260F1A5E9D0B001536F9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
+		090526101A5E9D0B001536F9 /* DSAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD15C51F9116575702C34B /* DSAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526111A5E9D0B001536F9 /* DSAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD18B2AEF6C1DFD60B1B8E /* DSAlert.m */; };
+		090526121A5E9D0B001536F9 /* DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD174C1D46388A8A79AF76 /* DSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526131A5E9D0B001536F9 /* DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FC9FB79656CF9699964 /* DSMessage.m */; };
+		090526141A5E9D0B001536F9 /* NSError+DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526151A5E9D0B001536F9 /* NSError+DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */; };
+		090526161A5E9D0B001536F9 /* DSMessage+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 096C87AB18290ADA0024D734 /* DSMessage+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526171A5E9D0B001536F9 /* DSMessage+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 096C87AC18290ADA0024D734 /* DSMessage+Parse.m */; };
+		090526181A5E9D0B001536F9 /* DSAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD15ACA99084F023C7B4AF /* DSAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526191A5E9D0B001536F9 /* DSAlertButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD17F6B8F2871E6F283957 /* DSAlertButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0905261A1A5E9D0B001536F9 /* DSAlertButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD19823F32B27120690FE2 /* DSAlertButton.m */; };
+		0905261B1A5E9D0B001536F9 /* DSUIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1615BF12DB35C9A214EC /* DSUIAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0905261C1A5E9D0B001536F9 /* DSUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD10482694069BA9C5E531 /* DSUIAlertView.m */; };
+		0905261D1A5E9D0B001536F9 /* DSAlertsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154F33AD8BF741BCB314 /* DSAlertsHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0905261E1A5E9D0B001536F9 /* DSAlertsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FF31DEBF389A0374834 /* DSAlertsHandler.m */; };
+		0905261F1A5E9D0B001536F9 /* DSAlertsQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 09067F2B181804CA00C8F48F /* DSAlertsQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526201A5E9D0B001536F9 /* DSAlertsQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F2C181804CA00C8F48F /* DSAlertsQueue.m */; };
+		090526211A5E9D0B001536F9 /* DSAlertQueue+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 09067F2F1818055900C8F48F /* DSAlertQueue+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526221A5E9D0B001536F9 /* DSAlertQueue+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F301818055900C8F48F /* DSAlertQueue+Private.m */; };
+		090526231A5E9D0B001536F9 /* DSMessageContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1A94EAF2AD8177958550 /* DSMessageContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526241A5E9D0B001536F9 /* DSMessageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD14CA899B7E82F54CCD3C /* DSMessageContext.m */; };
+		090526251A5E9D0B001536F9 /* DSAlertViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD17A21471C20C738E6BAA /* DSAlertViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526261A5E9D0B001536F9 /* DSAlertViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1427633E33FD45C82818 /* DSAlertViewFactory.m */; };
+		090526271A5E9D0B001536F9 /* DSAlertsSupportCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154696C25DDF7CB90594 /* DSAlertsSupportCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526281A5E9D0B001536F9 /* DSAlertsSupportCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1596489ABB2F0A7DF235 /* DSAlertsSupportCode.m */; };
+		090526291A5E9D0B001536F9 /* DSAlertViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD16FE95C8F802F4E5BB13 /* DSAlertViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0905262A1A5E9D0B001536F9 /* DSAlertsHandlerConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1A7504C46E8DBB5D1BF9 /* DSAlertsHandlerConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0905262B1A5E9D0B001536F9 /* DSAlertsHandlerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FA1527704E3088180FA /* DSAlertsHandlerConfiguration.m */; };
+		0905262C1A5E9D0B001536F9 /* DSMessagesLocalization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62DD157786FD5902D0D9B3A8 /* DSMessagesLocalization.strings */; };
+		0905262D1A5E9D0B001536F9 /* DSAlertsHandler+SimplifiedAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD13AE88A68CBC5259F586 /* DSAlertsHandler+SimplifiedAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0905262E1A5E9D0B001536F9 /* DSAlertsHandler+SimplifiedAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1534F0088E374A3A7597 /* DSAlertsHandler+SimplifiedAPI.m */; };
+		0905262F1A5E9D0B001536F9 /* DSAlertsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526301A5E9D0B001536F9 /* DSCodingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSCodingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526311A5E9D0B001536F9 /* DSCodingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSCodingTransformer.m */; };
+		090526321A5E9D6D001536F9 /* DSMessageInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526331A5E9D72001536F9 /* DSMessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */; };
+		090526341A5E9DE8001536F9 /* DSQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A32F17F0AC9100A21270 /* DSQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526351A5E9DE8001536F9 /* DSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33017F0AC9100A21270 /* DSQueue.m */; };
+		090526361A5E9E0D001536F9 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A40717F0B4DA00A21270 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		090526371A5E9E0D001536F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A40817F0B4DA00A21270 /* Reachability.m */; };
 		09067F2D181804CA00C8F48F /* DSAlertsQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 09067F2B181804CA00C8F48F /* DSAlertsQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09067F2E181804CA00C8F48F /* DSAlertsQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F2C181804CA00C8F48F /* DSAlertsQueue.m */; };
 		09067F311818055900C8F48F /* DSAlertQueue+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 09067F2F1818055900C8F48F /* DSAlertQueue+Private.h */; };
@@ -732,6 +789,7 @@
 		0903A41117F0C28300A21270 /* DSGPSTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGPSTracker.h; sourceTree = "<group>"; };
 		0903A41217F0C28300A21270 /* DSGPSTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGPSTracker.m; sourceTree = "<group>"; };
 		0903A41317F0C28300A21270 /* DSGPSTrackerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGPSTrackerDelegate.h; sourceTree = "<group>"; };
+		090524BD1A5E899F001536F9 /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = usr/lib/libobjc.dylib; sourceTree = SDKROOT; };
 		09067F2B181804CA00C8F48F /* DSAlertsQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAlertsQueue.h; sourceTree = "<group>"; };
 		09067F2C181804CA00C8F48F /* DSAlertsQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlertsQueue.m; sourceTree = "<group>"; };
 		09067F2F1818055900C8F48F /* DSAlertQueue+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSAlertQueue+Private.h"; sourceTree = "<group>"; };
@@ -1061,6 +1119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090524BE1A5E899F001536F9 /* libobjc.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2103,6 +2162,7 @@
 		AED6C1951465E55000D9B44E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				090524BD1A5E899F001536F9 /* libobjc.dylib */,
 				0997675F1A4F0C3600DDE130 /* libcommonCrypto.dylib */,
 				0922D3E2178C951900AAE05E /* CoreData.framework */,
 				AED6C20C1465E89800D9B44E /* UIKit.framework */,
@@ -2171,44 +2231,73 @@
 			buildActionMask = 2147483647;
 			files = (
 				099767291A4F08D800DDE130 /* DTTimePeriodGroup.h in Headers */,
+				090526301A5E9D0B001536F9 /* DSCodingTransformer.h in Headers */,
 				099767731A4F127E00DDE130 /* DSEmailSharer.h in Headers */,
+				090526341A5E9DE8001536F9 /* DSQueue.h in Headers */,
 				0997676D1A4F105500DDE130 /* RTProtocol.h in Headers */,
 				099767231A4F08D800DDE130 /* DTTimePeriod.h in Headers */,
 				0997677C1A4F31CE00DDE130 /* UIImage+DSAdditions.h in Headers */,
+				0905251A1A5E931F001536F9 /* NSObject+DSAdditions.h in Headers */,
+				090526121A5E9D0B001536F9 /* DSMessage.h in Headers */,
 				0997671F1A4F08C500DDE130 /* DateTools.h in Headers */,
+				090525171A5E9217001536F9 /* CATransition+AnimationsBuilder.h in Headers */,
 				0997679F1A4F335700DDE130 /* DSFieldValidationControllerDelegate.h in Headers */,
+				0905260E1A5E9D0B001536F9 /* NSError+Parse.h in Headers */,
+				090525151A5E91FD001536F9 /* DSPhotoView.h in Headers */,
+				0905262D1A5E9D0B001536F9 /* DSAlertsHandler+SimplifiedAPI.h in Headers */,
 				099767791A4F318500DDE130 /* DSPassCodeController.h in Headers */,
+				090526251A5E9D0B001536F9 /* DSAlertViewFactory.h in Headers */,
 				099767AC1A4F35C400DDE130 /* DSDraggingDestinationContainer.h in Headers */,
 				099767821A4F334C00DDE130 /* UIBarButtonItem+WEPopover.h in Headers */,
 				099767841A4F334C00DDE130 /* WEPopoverContainerView.h in Headers */,
 				099767691A4F105500DDE130 /* RTMethod.h in Headers */,
 				099767211A4F08D800DDE130 /* DTError.h in Headers */,
 				099767891A4F334C00DDE130 /* WETouchableView.h in Headers */,
+				090526231A5E9D0B001536F9 /* DSMessageContext.h in Headers */,
 				099767A21A4F335700DDE130 /* DSFieldValidationCriterion.h in Headers */,
 				0997675D1A4F0BEB00DDE130 /* FBEncryptorAES.h in Headers */,
+				0905261B1A5E9D0B001536F9 /* DSUIAlertView.h in Headers */,
 				099767AD1A4F35C400DDE130 /* DSDragAndDropController.h in Headers */,
 				0997670A1A4F080800DDE130 /* DSLibFramework.h in Headers */,
+				0905262A1A5E9D0B001536F9 /* DSAlertsHandlerConfiguration.h in Headers */,
+				0905261F1A5E9D0B001536F9 /* DSAlertsQueue.h in Headers */,
+				090526141A5E9D0B001536F9 /* NSError+DSMessage.h in Headers */,
 				099767251A4F08D800DDE130 /* DTTimePeriodChain.h in Headers */,
 				099767A91A4F351700DDE130 /* NSString+Extras.h in Headers */,
 				0997672B1A4F08D800DDE130 /* NSDate+DateTools.h in Headers */,
+				090526191A5E9D0B001536F9 /* DSAlertButton.h in Headers */,
 				0997677B1A4F318C00DDE130 /* DSPassCodeControllerDelegate.h in Headers */,
 				0997676F1A4F105500DDE130 /* RTUnregisteredClass.h in Headers */,
+				090524C11A5E8A7B001536F9 /* XibLoader.h in Headers */,
 				099767751A4F12AF00DDE130 /* UICollectionView+NSFetchedResultsController.h in Headers */,
 				099767201A4F08D300DDE130 /* DTConstants.h in Headers */,
+				090526271A5E9D0B001536F9 /* DSAlertsSupportCode.h in Headers */,
+				090526101A5E9D0B001536F9 /* DSAlert.h in Headers */,
+				0905260C1A5E9CA9001536F9 /* DSCFunctions.h in Headers */,
+				090526321A5E9D6D001536F9 /* DSMessageInterceptor.h in Headers */,
+				090526361A5E9E0D001536F9 /* Reachability.h in Headers */,
 				099767A81A4F335700DDE130 /* DSFieldValidationFramework.h in Headers */,
 				0997675B1A4F0AB100DDE130 /* DSRedirectLogs.h in Headers */,
+				090526211A5E9D0B001536F9 /* DSAlertQueue+Private.h in Headers */,
 				099767651A4F105500DDE130 /* MARTNSObject.h in Headers */,
+				0905261D1A5E9D0B001536F9 /* DSAlertsHandler.h in Headers */,
+				0905260A1A5E9C9C001536F9 /* DSMacros.h in Headers */,
 				099767271A4F08D800DDE130 /* DTTimePeriodCollection.h in Headers */,
 				099767861A4F334C00DDE130 /* WEPopoverController.h in Headers */,
 				099767A61A4F335700DDE130 /* DSTextField.h in Headers */,
 				099767771A4F30FC00DDE130 /* DSFetchedResultsControllerDelegate.h in Headers */,
 				099767711A4F122A00DDE130 /* NSDate+TimeAgoFormatter.h in Headers */,
+				0905262F1A5E9D0B001536F9 /* DSAlertsFramework.h in Headers */,
+				090526161A5E9D0B001536F9 /* DSMessage+Parse.h in Headers */,
 				099767AB1A4F35C400DDE130 /* DSDraggingSourceContainer.h in Headers */,
+				090526181A5E9D0B001536F9 /* DSAlertView.h in Headers */,
 				099767A01A4F335700DDE130 /* DSFieldValidationCriterion+FactoryMethods.h in Headers */,
 				0997679A1A4F335700DDE130 /* DSCriterionDescriptionViewController.h in Headers */,
 				099767881A4F334C00DDE130 /* WEPopoverParentView.h in Headers */,
 				0997676B1A4F105500DDE130 /* RTProperty.h in Headers */,
+				090524BF1A5E8A6D001536F9 /* UIView+XibLoading.h in Headers */,
 				0997679D1A4F335700DDE130 /* DSFieldValidationController.h in Headers */,
+				090526291A5E9D0B001536F9 /* DSAlertViewDelegate.h in Headers */,
 				099767671A4F105500DDE130 /* RTIvar.h in Headers */,
 				099767A41A4F335700DDE130 /* DSFieldValidationCriterionDescription.h in Headers */,
 				099767AF1A4F35C400DDE130 /* DSDragAndDrop.h in Headers */,
@@ -2583,6 +2672,7 @@
 				099767971A4F335300DDE130 /* popoverBg.png in Resources */,
 				099767921A4F335300DDE130 /* popoverArrowRight@2x.png in Resources */,
 				0997671E1A4F089B00DDE130 /* DateTools.bundle in Resources */,
+				0905262C1A5E9D0B001536F9 /* DSMessagesLocalization.strings in Resources */,
 				099767951A4F335300DDE130 /* popoverArrowUp@2x.png in Resources */,
 				0997678D1A4F335300DDE130 /* popoverArrowDownSimple.png in Resources */,
 				099767911A4F335300DDE130 /* popoverArrowRight.png in Resources */,
@@ -2684,23 +2774,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090526151A5E9D0B001536F9 /* NSError+DSMessage.m in Sources */,
+				090526221A5E9D0B001536F9 /* DSAlertQueue+Private.m in Sources */,
+				090525161A5E9201001536F9 /* DSPhotoView.m in Sources */,
 				099767221A4F08D800DDE130 /* DTError.m in Sources */,
+				090525191A5E931C001536F9 /* NSObject+DSAdditions.m in Sources */,
 				0997672A1A4F08D800DDE130 /* DTTimePeriodGroup.m in Sources */,
+				0905261C1A5E9D0B001536F9 /* DSUIAlertView.m in Sources */,
+				0905260F1A5E9D0B001536F9 /* NSError+Parse.m in Sources */,
+				0905260D1A5E9CAD001536F9 /* DSCFunctions.m in Sources */,
+				090526261A5E9D0B001536F9 /* DSAlertViewFactory.m in Sources */,
 				0997676C1A4F105500DDE130 /* RTProperty.m in Sources */,
+				090526171A5E9D0B001536F9 /* DSMessage+Parse.m in Sources */,
 				0997675E1A4F0C0300DDE130 /* FBEncryptorAES.m in Sources */,
 				099767AE1A4F35C400DDE130 /* DSDragAndDropController.m in Sources */,
 				0997679B1A4F335700DDE130 /* DSCriterionDescriptionViewController.m in Sources */,
+				090526131A5E9D0B001536F9 /* DSMessage.m in Sources */,
 				099767A31A4F335700DDE130 /* DSFieldValidationCriterion.m in Sources */,
 				099767AA1A4F351B00DDE130 /* NSString+Extras.m in Sources */,
 				099767701A4F105500DDE130 /* RTUnregisteredClass.m in Sources */,
+				090526281A5E9D0B001536F9 /* DSAlertsSupportCode.m in Sources */,
+				090526371A5E9E0D001536F9 /* Reachability.m in Sources */,
 				099767281A4F08D800DDE130 /* DTTimePeriodCollection.m in Sources */,
 				0997676A1A4F105500DDE130 /* RTMethod.m in Sources */,
+				090526111A5E9D0B001536F9 /* DSAlert.m in Sources */,
 				099767261A4F08D800DDE130 /* DTTimePeriodChain.m in Sources */,
 				099767721A4F122F00DDE130 /* NSDate+TimeAgoFormatter.m in Sources */,
 				0997672C1A4F08D800DDE130 /* NSDate+DateTools.m in Sources */,
 				099767831A4F334C00DDE130 /* UIBarButtonItem+WEPopover.m in Sources */,
+				0905262B1A5E9D0B001536F9 /* DSAlertsHandlerConfiguration.m in Sources */,
 				099767A51A4F335700DDE130 /* DSFieldValidationCriterionDescription.m in Sources */,
 				099767681A4F105500DDE130 /* RTIvar.m in Sources */,
+				0905262E1A5E9D0B001536F9 /* DSAlertsHandler+SimplifiedAPI.m in Sources */,
+				0905261A1A5E9D0B001536F9 /* DSAlertButton.m in Sources */,
+				090526351A5E9DE8001536F9 /* DSQueue.m in Sources */,
+				090526201A5E9D0B001536F9 /* DSAlertsQueue.m in Sources */,
+				090526241A5E9D0B001536F9 /* DSMessageContext.m in Sources */,
 				0997675C1A4F0AB700DDE130 /* DSRedirectLogs.m in Sources */,
 				0997677D1A4F31D300DDE130 /* UIImage+DSAdditions.m in Sources */,
 				099767761A4F12B400DDE130 /* UICollectionView+NSFetchedResultsController.m in Sources */,
@@ -2708,14 +2817,21 @@
 				0997678A1A4F334C00DDE130 /* WETouchableView.m in Sources */,
 				099767A11A4F335700DDE130 /* DSFieldValidationCriterion+FactoryMethods.m in Sources */,
 				0997677A1A4F318900DDE130 /* DSPassCodeController.m in Sources */,
+				090525181A5E9217001536F9 /* CATransition+AnimationsBuilder.m in Sources */,
 				099767741A4F128100DDE130 /* DSEmailSharer.m in Sources */,
+				090526331A5E9D72001536F9 /* DSMessageInterceptor.m in Sources */,
+				090524C01A5E8A6F001536F9 /* UIView+XibLoading.m in Sources */,
 				099767641A4F0F6000DDE130 /* DSConstants.m in Sources */,
 				099767871A4F334C00DDE130 /* WEPopoverController.m in Sources */,
+				090526311A5E9D0B001536F9 /* DSCodingTransformer.m in Sources */,
+				0905260B1A5E9C9C001536F9 /* DSMacros.m in Sources */,
 				099767A71A4F335700DDE130 /* DSTextField.m in Sources */,
 				099767661A4F105500DDE130 /* MARTNSObject.m in Sources */,
 				099767781A4F310100DDE130 /* DSFetchedResultsControllerDelegate.m in Sources */,
 				0997679E1A4F335700DDE130 /* DSFieldValidationController.m in Sources */,
+				0905261E1A5E9D0B001536F9 /* DSAlertsHandler.m in Sources */,
 				0997676E1A4F105500DDE130 /* RTProtocol.m in Sources */,
+				090524C21A5E8A7E001536F9 /* XibLoader.m in Sources */,
 				099767851A4F334C00DDE130 /* WEPopoverContainerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

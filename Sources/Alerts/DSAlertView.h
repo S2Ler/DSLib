@@ -1,6 +1,7 @@
 
 @protocol DSAlertViewDelegate;
 @class DSAlert;
+@import Foundation;
 
 @protocol DSAlertView<NSObject>
 @property (nonatomic, strong) DSAlert *alert;

@@ -24,6 +24,5 @@
 #import "DSAlertsQueue.h"
 #import "DSMessage+Parse.h"
 #import "DSMessageInterceptor.h"
-#import "NSError+DSWebService.h"
 
 #endif

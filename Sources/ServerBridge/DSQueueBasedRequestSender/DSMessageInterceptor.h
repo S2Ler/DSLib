@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DSAlertsSupportCode.h"
+#import "DSConstants.h"
 
 /** Can intercept only messages without params */
 @interface DSMessageInterceptor : NSObject

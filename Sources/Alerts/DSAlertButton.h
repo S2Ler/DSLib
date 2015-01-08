@@ -1,7 +1,7 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "DSAlertsSupportCode.h"
-
+#import "DSConstants.h"
 
 @interface DSAlertButton: NSObject
 
