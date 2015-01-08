@@ -1,4 +1,6 @@
 
+@import UIKit;
+
 @class DSFieldValidationController;
 
 @protocol DSFieldValidationControllerDelegate<NSObject, UITextFieldDelegate>

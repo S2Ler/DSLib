@@ -21,6 +21,7 @@
 //
 
 #import "FBEncryptorAES.h"
+#import <CommonCrypto/CommonCryptor.h>
 
 @implementation FBEncryptorAES
 

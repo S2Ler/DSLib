@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 DS ltd. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import UIKit;
 
 //Custom types
 typedef off_t DSFileSize;

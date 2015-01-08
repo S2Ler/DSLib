@@ -1,5 +1,6 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+#import "DSConstants.h"
 
 #define isPhone568 ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568)
 /** Don't append extension */

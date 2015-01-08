@@ -1,6 +1,7 @@
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+@import CoreData;
+@import UIKit;
 
 @class DSFetchedResultsControllerDelegate;
 

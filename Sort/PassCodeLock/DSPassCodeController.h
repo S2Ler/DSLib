@@ -1,7 +1,6 @@
 
-#import <Foundation/Foundation.h>
-
-@protocol DSPassCodeControllerDelegate;
+@import Foundation;
+#import "DSPassCodeControllerDelegate.h"
 
 @interface DSPassCodeController: NSObject
 

@@ -1,5 +1,8 @@
 
 
+@import Foundation;
+@import UIKit;
+
 extern NSString *DSCriterionDescriptionViewController_ClassName;
 
 @class DSFieldValidationCriterionDescription;

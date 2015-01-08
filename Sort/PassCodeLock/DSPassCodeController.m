@@ -2,6 +2,7 @@
 #import "DSPassCodeController.h"
 #import "DSPassCodeControllerDelegate.h"
 #import "NSString+Extras.h"
+@import UIKit;
 
 @interface DSPassCodeController ()
 {
