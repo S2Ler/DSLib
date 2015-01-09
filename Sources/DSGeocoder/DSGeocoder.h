@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import <CoreLocation/CoreLocation.h>
 #import "DSPlacemarkPickerViewControllerDelegate.h"
 #import "DSGeocodeProvider.h"

@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /** All cached NSDateFormatters will receive new locale on change */
 @interface DSDateFormatterCache : NSObject {

@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "DSCFunctions.h"
 
 #define DS_SAVE_RELEASE(obj) [obj release]; obj = nil;

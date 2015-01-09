@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /** Easy access various directories */
 @interface NSFileManager (NSFileManager_Directories)

@@ -1,3 +1,4 @@
+@import Foundation;
 
 typedef void (^NSObjectObserverBlock)(id object, NSString *keyPath);
 typedef void (^NSObjectAggregatedObserverBlock) (id object, NSArray *changedKeypaths);

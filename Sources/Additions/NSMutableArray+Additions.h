@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSMutableArray (Additions)
 - (void)addObjectOrNil:(id)theObject;

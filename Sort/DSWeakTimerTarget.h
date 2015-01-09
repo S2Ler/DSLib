@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 DS ltd. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface DSWeakTimerTarget : NSObject
 - (instancetype)initWithTarget:(id)target selector:(SEL)sel;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 DS ltd. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSTimer (DSAdditions)
 /** Fires timer and change next fire date to timeinterval since now */

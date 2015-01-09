@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /** First In First Out queue.
  If number of items exceed theCapacity defined in initWithCapacity: method the object which

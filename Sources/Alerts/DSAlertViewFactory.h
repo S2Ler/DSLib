@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @protocol DSAlertView;
 @class DSAlert;

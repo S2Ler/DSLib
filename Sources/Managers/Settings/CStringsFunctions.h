@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #ifndef CStringsFunctions_h
 #define CStringsFunctions_h

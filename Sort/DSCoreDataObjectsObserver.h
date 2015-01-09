@@ -1,6 +1,7 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "DSCoreDataObjectsObserverDelegate.h"
+@import CoreData;
 
 @interface DSCoreDataObjectsObserver : NSObject
 

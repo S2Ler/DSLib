@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 DS ltd. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 typedef void (^DSRedirectLogsHandler) (NSString *format, va_list args_list);
 

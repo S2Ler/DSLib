@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "DSWebServiceRequest.h"
 #import "QRunLoopOperation.h"
 #import "DSRelativePath.h"

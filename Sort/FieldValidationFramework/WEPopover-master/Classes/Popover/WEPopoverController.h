@@ -6,7 +6,7 @@
 //  Copyright 2010 Werner IT Consultancy. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import <UIKit/UIKit.h>
 #import "WEPopoverContainerView.h"
 #import "WETouchableView.h"

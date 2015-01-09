@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface DSPostDataInfo : NSObject
 /** if not nil this request will use HTTP POST method to send the data */

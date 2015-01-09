@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 DS ltd. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "DSConfiguration.h"
 #import "DSWebServiceParams.h"
 

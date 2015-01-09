@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSObject (DeepCopy)
 - (id)deepCopy;

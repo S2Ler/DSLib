@@ -7,7 +7,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import <UIKit/UIKit.h>
 
 @protocol WEPopoverParentView

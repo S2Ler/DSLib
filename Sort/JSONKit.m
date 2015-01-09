@@ -17,7 +17,7 @@
 #include <CoreFoundation/CFDictionary.h>
 #include <CoreFoundation/CFNumber.h>
 
-//#import <Foundation/Foundation.h>
+//@import Foundation;
 #import <Foundation/NSArray.h>
 #import <Foundation/NSAutoreleasePool.h>
 #import <Foundation/NSData.h>

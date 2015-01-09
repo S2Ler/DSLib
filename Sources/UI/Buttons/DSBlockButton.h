@@ -1,6 +1,7 @@
 
-#import <Foundation/Foundation.h>
-#import "DSAlertsSupportCode.h"
+@import Foundation;
+@import UIKit;
+#import "DSConstants.h"
 
 @interface DSBlockButton: UIButton
 - (void)setActionBlock:(ds_action_block_t)actionBlock;

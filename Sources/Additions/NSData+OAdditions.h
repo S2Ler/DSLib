@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSData (Additions)
 - (NSData *)truncatedDataToLength:(NSUInteger)theLength;

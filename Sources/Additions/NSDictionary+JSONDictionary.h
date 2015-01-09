@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSDictionary (JSONDictionary)
 - (NSString *)stringValueForKey:(NSString *)key;

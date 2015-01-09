@@ -1,4 +1,5 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import UIKit;
 
 /** Query various device params */
 @interface UIDevice (Additions)

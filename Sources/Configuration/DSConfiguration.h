@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /**
 * Handy class for encapsulating configuration keys.

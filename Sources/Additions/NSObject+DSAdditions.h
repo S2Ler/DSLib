@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 //TODO: doesn't work with cross references.
 //23.11.2012 Tried to add support for cross references but got an issues with description for NSNumber, NSString etc.

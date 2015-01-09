@@ -1,6 +1,6 @@
 
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /** If you add new setting value, synthesize them like @synthesize <PROPERTY_NAME>;
  as @synthesize <PROPERTY_NAME> = _<PROPERTY_NAME> syntax is used for internal

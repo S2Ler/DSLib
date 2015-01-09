@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 
 /** A set of usefull functions to query object from NSArray */

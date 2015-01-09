@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "DSWebServiceParam.h"
 
 @interface DSWebServiceParamFactory : NSObject

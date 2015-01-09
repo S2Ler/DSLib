@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface DSDataDetector : NSObject
 /** Tries to find url in string and return if founded */

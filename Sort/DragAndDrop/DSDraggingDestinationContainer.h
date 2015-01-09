@@ -4,7 +4,7 @@
 //
 
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @protocol DSDraggingDestinationContainer <NSObject>
 - (void)setHighlighted:(BOOL)highlighted;

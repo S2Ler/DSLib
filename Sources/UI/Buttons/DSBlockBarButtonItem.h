@@ -1,8 +1,7 @@
 
-#import <Foundation/Foundation.h>
-#import "DSAlertsSupportCode.h"
-
-
+@import Foundation;
+@import UIKit;
+#import "DSConstants.h"
 
 @interface DSBlockBarButtonItem: UIBarButtonItem
 - (id)initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem;

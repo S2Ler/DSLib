@@ -1,5 +1,6 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import UIKit;
 
 @interface UIView (Layout)
 - (void)verticallyLayoutLabels:(NSArray *)labels

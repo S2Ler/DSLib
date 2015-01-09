@@ -1,6 +1,6 @@
 
-#import <Foundation/Foundation.h>
-#import "DSAlertsSupportCode.h"
+@import Foundation;
+#import "DSConstants.h"
 
 @interface DSFindCountry: NSObject
 

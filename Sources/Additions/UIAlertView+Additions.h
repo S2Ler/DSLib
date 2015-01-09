@@ -1,7 +1,8 @@
 
 #pragma mark -
 #pragma mark Imports
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import UIKit;
 
 /** Simple UIAlertView wrapper methods */
 @interface UIAlertView(Additions)

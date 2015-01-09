@@ -8,4 +8,5 @@
 #import "DSWebServiceURL.h"
 #import "DSWebServiceResponse.h"
 #import "DSWebServiceSerialQueue.h"
+#import "DSQueueBasedRequestSender.h"
 

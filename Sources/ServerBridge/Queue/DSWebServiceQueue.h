@@ -4,7 +4,7 @@
 //  Created by Alexander Belyavskiy on 4/26/12.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "QWatchedOperationQueue.h"
 
 @protocol DSWebServiceRequest;

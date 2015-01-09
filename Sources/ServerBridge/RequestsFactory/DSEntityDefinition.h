@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import <CoreData/CoreData.h>
 
 #define SYNTHESIZE_STRING_GETTER(name) - (NSString *)name {return [self stringValueWithName:@#name];}

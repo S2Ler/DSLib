@@ -1,5 +1,5 @@
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "DSQueueBasedRequestSender.h"
 #import "DSAlertsSupportCode.h"
 

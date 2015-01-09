@@ -1,4 +1,6 @@
 
+@import UIKit;
+
 typedef void (^proccedView_block_t)(UIView *theView);
 
 @interface UIView (Subviews)

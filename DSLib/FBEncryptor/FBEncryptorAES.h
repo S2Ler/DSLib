@@ -20,7 +20,7 @@
 // THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #define FBENCRYPT_ALGORITHM     kCCAlgorithmAES128
 #define FBENCRYPT_BLOCK_SIZE    kCCBlockSizeAES128

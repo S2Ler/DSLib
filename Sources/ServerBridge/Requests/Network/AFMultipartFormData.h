@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 DS ltd. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 extern NSUInteger const kAFUploadStream3GSuggestedPacketSize;
 extern NSTimeInterval const kAFUploadStream3GSuggestedDelay;
