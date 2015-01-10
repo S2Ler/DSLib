@@ -148,5 +148,4 @@ FOUNDATION_EXPORT const unsigned char DSLibFrameworkVersionString[];
 #import <DSLibFramework/DSCheckButton.h>
 #import <DSLibFramework/DSCheckButtonProtocol.h>
 #import <DSLibFramework/UISwitch+DSCheckButton.h>
-
-
+#import <DSLibFramework/DSDateFormatterCache.h>

@@ -534,6 +534,8 @@
 		09D35A34193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D35A32193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m */; };
 		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
+		09E443141A61736600E8B6C0 /* DSDateFormatterCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33A17F0AC9100A21270 /* DSDateFormatterCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09E443151A61736600E8B6C0 /* DSDateFormatterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33B17F0AC9100A21270 /* DSDateFormatterCache.m */; };
 		09E54D051A6036EB002A854C /* DSConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1C0631C240FC26D7C2E3 /* DSConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E54D061A6036EF002A854C /* DSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1A0DD9DE7CA23881E72F /* DSConfiguration.m */; };
 		09E54D071A60381A002A854C /* DSRelativePath.h in Headers */ = {isa = PBXBuildFile; fileRef = 0987FB7219C6E15A007D1C55 /* DSRelativePath.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2489,6 +2491,7 @@
 				0905261B1A5E9D0B001536F9 /* DSUIAlertView.h in Headers */,
 				09E54DA11A603B4D002A854C /* UITableView+DSAdditions.h in Headers */,
 				099767AD1A4F35C400DDE130 /* DSDragAndDropController.h in Headers */,
+				09E443141A61736600E8B6C0 /* DSDateFormatterCache.h in Headers */,
 				09E54E141A603C49002A854C /* DSGradientView.h in Headers */,
 				09E54D2B1A603978002A854C /* DSWebServiceNetRequest.h in Headers */,
 				09E54E101A603C49002A854C /* UINavigationController+Inspection.h in Headers */,
@@ -3110,6 +3113,7 @@
 				09E54D101A6038C9002A854C /* DSWebServiceConfiguration.m in Sources */,
 				09E54D7A1A603B4D002A854C /* NSArray+Extras.m in Sources */,
 				09E54D2C1A603978002A854C /* DSWebServiceNetRequest.m in Sources */,
+				09E443151A61736600E8B6C0 /* DSDateFormatterCache.m in Sources */,
 				099767701A4F105500DDE130 /* RTUnregisteredClass.m in Sources */,
 				09E54D961A603B4D002A854C /* UIApplication+DSAdditions.m in Sources */,
 				09E54D801A603B4D002A854C /* NSDate+OAddittions.m in Sources */,
