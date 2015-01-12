@@ -15,6 +15,7 @@ FOUNDATION_EXPORT double DSLibFrameworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char DSLibFrameworkVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DSLibFramework/PublicHeader.h>
+#import <DSLibFramework/NSTimer+DSAdditions.h>
 #import <DSLibFramework/DateTools.h>
 #import <DSLibFramework/DSRedirectLogs.h>
 #import <DSLibFramework/FBEncryptorAES.h>
@@ -47,7 +48,21 @@ FOUNDATION_EXPORT const unsigned char DSLibFrameworkVersionString[];
 #import <DSLibFramework/NSObject+DSAdditions.h>
 #import <DSLibFramework/DSMacros.h>
 #import <DSLibFramework/DSCFunctions.h>
-#import <DSLibFramework/DSAlertsFramework.h>
+#import <DSLibFramework/DSAlert.h>
+#import <DSLibFramework/DSMessage.h>
+#import <DSLibFramework/DSAlertView.h>
+#import <DSLibFramework/DSAlertButton.h>
+#import <DSLibFramework/DSUIAlertView.h>
+#import <DSLibFramework/DSAlertsHandler.h>
+#import <DSLibFramework/DSMessageContext.h>
+#import <DSLibFramework/DSAlertViewFactory.h>
+#import <DSLibFramework/DSAlertsSupportCode.h>
+#import <DSLibFramework/DSAlertViewDelegate.h>
+#import <DSLibFramework/DSAlertsHandlerConfiguration.h>
+#import <DSLibFramework/DSAlertsHandler+SimplifiedAPI.h>
+#import <DSLibFramework/DSAlertsQueue.h>
+#import <DSLibFramework/DSMessage+Parse.h>
+#import <DSLibFramework/DSMessageInterceptor.h>
 #import <DSLibFramework/DSQueue.h>
 #import <DSLibFramework/DSAlertQueue+Private.h>
 #import <DSLibFramework/DSCodingTransformer.h>
@@ -122,7 +137,6 @@ FOUNDATION_EXPORT const unsigned char DSLibFrameworkVersionString[];
 #import <DSLibFramework/NSObject+Observing.h>
 #import <DSLibFramework/NSOutputStream+DSAdditions.h>
 #import <DSLibFramework/NSString+Encoding.h>
-#import <DSLibFramework/NSTimer+DSAdditions.h>
 #import <DSLibFramework/UIAlertView+Additions.h>
 #import <DSLibFramework/UIApplication+DSAdditions.h>
 #import <DSLibFramework/UIApplication+KeyboardView.h>
@@ -135,7 +149,6 @@ FOUNDATION_EXPORT const unsigned char DSLibFrameworkVersionString[];
 #import <DSLibFramework/UITableView+DSAdditions.h>
 #import <DSLibFramework/UITextView+Size.h>
 #import <DSLibFramework/UIView+DSAdditions.h>
-#import <DSLibFramework/UIView+Layout.h>
 #import <DSLibFramework/UIView+Resizing.h>
 #import <DSLibFramework/UIView+Subviews.h>
 #import <DSLibFramework/UIView+ViewsEnumeration.h>
@@ -149,3 +162,8 @@ FOUNDATION_EXPORT const unsigned char DSLibFrameworkVersionString[];
 #import <DSLibFramework/DSCheckButtonProtocol.h>
 #import <DSLibFramework/UISwitch+DSCheckButton.h>
 #import <DSLibFramework/DSDateFormatterCache.h>
+#import <DSLibFramework/DSGetPhotosPermissions.h>
+
+
+
+

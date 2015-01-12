@@ -19,7 +19,7 @@ static NSCalendar *gregorianCalendar;
 {
   if (!gregorianCalendar) {
     gregorianCalendar = [[NSCalendar alloc]
-                                     initWithCalendarIdentifier:NSGregorianCalendar];
+                                     initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     [gregorianCalendar setFirstWeekday:2];
   }
 
@@ -32,7 +32,7 @@ static NSCalendar *gregorianCalendar;
   // start by retrieving day, weekday, month and year components for yourDate
   NSCalendar *gregorian = [NSDate gregorianCalendar];
   NSDateComponents *todayComponents
-      = [gregorian components:(NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit)
+      = [gregorian components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear)
                      fromDate:self];
   NSInteger theDay = [todayComponents day];
   NSInteger theMonth = [todayComponents month];
@@ -54,7 +54,7 @@ static NSCalendar *gregorianCalendar;
 - (NSInteger)differenceInDays:(NSDate *)date
 {
   NSDateComponents *components = [[NSDate gregorianCalendar]
-                                          components:NSDayCalendarUnit
+                                          components:NSCalendarUnitDay
                                             fromDate:self
                                               toDate:date
                                              options:0];
@@ -64,9 +64,9 @@ static NSCalendar *gregorianCalendar;
 - (NSDate *)dateByDroppingMilliseconds
 {
   NSDateComponents *components = [[NSDate gregorianCalendar]
-                                          components:NSYearCalendarUnit | NSMonthCalendarUnit
-                                              | NSDayCalendarUnit | NSHourCalendarUnit
-                                              | NSMinuteCalendarUnit | NSSecondCalendarUnit
+                                          components:NSCalendarUnitYear | NSCalendarUnitMonth
+                                              | NSCalendarUnitDay | NSCalendarUnitHour
+                                              | NSCalendarUnitMinute | NSCalendarUnitSecond
                                             fromDate:self];
   return [[NSDate gregorianCalendar] dateFromComponents:components];
 }
@@ -97,9 +97,9 @@ static NSCalendar *gregorianCalendar;
 - (NSDate *)dateWithTimeSetToHours:(NSInteger)hours minutes:(NSInteger)minutes
 {
   NSDateComponents *comps = [[NSDate gregorianCalendar]
-                                     components:NSDayCalendarUnit
-                                                    | NSMonthCalendarUnit
-                                                    | NSYearCalendarUnit
+                                     components:NSCalendarUnitDay
+                                                    | NSCalendarUnitMonth
+                                                    | NSCalendarUnitYear
                                        fromDate:self];
 
   [comps setHour:hours];
@@ -115,12 +115,12 @@ static NSCalendar *gregorianCalendar;
 
 - (NSInteger)hours
 {
-  return [[self componentsForUnit:NSHourCalendarUnit] hour];
+  return [[self componentsForUnit:NSCalendarUnitHour] hour];
 }
 
 - (NSInteger)minutes
 {
-  return [[self componentsForUnit:NSMinuteCalendarUnit] minute];
+  return [[self componentsForUnit:NSCalendarUnitMinute] minute];
 }
 
 - (NSString *)dateString
@@ -142,17 +142,17 @@ static NSCalendar *gregorianCalendar;
 
 - (NSDate *)dateAtStartOfWeek
 {
-  return [NSDate dateForUnit:NSWeekCalendarUnit beforeDate:self];
+  return [NSDate dateForUnit:NSCalendarUnitWeekOfMonth beforeDate:self];
 }
 
 - (NSDate *)dateAtStartOfMonth
 {
-  return [NSDate dateForUnit:NSMonthCalendarUnit beforeDate:self];
+  return [NSDate dateForUnit:NSCalendarUnitMonth beforeDate:self];
 }
 
 - (NSDate *)dateAtStartOfYear
 {
-  return [NSDate dateForUnit:NSYearCalendarUnit beforeDate:self];
+  return [NSDate dateForUnit:NSCalendarUnitYear beforeDate:self];
 }
 
 - (NSDateComponents *)componentsForUnit:(NSCalendarUnit)unit byAdding:(NSInteger)added
@@ -160,16 +160,16 @@ static NSCalendar *gregorianCalendar;
   NSDateComponents *components = [[NSDateComponents alloc] init];
 
   switch (unit) {
-    case NSDayCalendarUnit:
+    case NSCalendarUnitDay:
       [components setDay:added];
       break;
-    case NSWeekCalendarUnit:
-      [components setWeek:added];
+    case NSCalendarUnitWeekOfMonth:
+      [components setWeekOfMonth:added];
       break;
-    case NSMonthCalendarUnit:
+    case NSCalendarUnitMonth:
       [components setMonth:added];
       break;
-    case NSYearCalendarUnit:
+    case NSCalendarUnitYear:
       [components setYear:added];
       break;
     default:
@@ -255,14 +255,14 @@ static NSCalendar *gregorianCalendar;
 {
 
   NSDateComponents *myComponents = [[NSDate gregorianCalendar]
-                                            components:NSDayCalendarUnit
-                                                           | NSMonthCalendarUnit
-                                                           | NSYearCalendarUnit
+                                            components:NSCalendarUnitDay
+                                                           | NSCalendarUnitMonth
+                                                           | NSCalendarUnitYear
                                               fromDate:self];
   NSDateComponents *otherComponents = [[NSDate gregorianCalendar]
-                                               components:NSDayCalendarUnit
-                                                              | NSMonthCalendarUnit
-                                                              | NSYearCalendarUnit
+                                               components:NSCalendarUnitDay
+                                                              | NSCalendarUnitMonth
+                                                              | NSCalendarUnitYear
                                                  fromDate:date];
 
   return myComponents.day == otherComponents.day && myComponents.month == otherComponents.month

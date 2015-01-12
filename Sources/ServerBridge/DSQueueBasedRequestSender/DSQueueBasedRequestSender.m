@@ -12,9 +12,9 @@
 #import "DSMessageInterceptor.h"
 #import "DSTimeFunctions.h"
 #import "NSDate+OAddittions.h"
-#import "NSTimer+DSAdditions.h"
 #import "NSDate+DateTools.h"
 #import "DSWeakTimerTarget.h"
+#import "NSTimer+DSAdditions.h"
 
 #define COMPLETION_USER_INFO_KEY @"Completion"
 #define REQUEST_SUCCESSFUL_HANDLER_USER_INFO_KEY @"Request Successful"

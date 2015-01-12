@@ -84,7 +84,7 @@
   }
   
   if (_path) {
-    _data = [NSData dataWithContentsOfMappedFile:[_path fullPath]];
+    _data = [NSData dataWithContentsOfFile:_path.fullPath options:NSDataReadingMappedIfSafe error:nil];
     return _data;
   }
   

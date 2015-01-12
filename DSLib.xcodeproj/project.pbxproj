@@ -79,8 +79,6 @@
 		0903A3B617F0AC9100A21270 /* UIScreen+Availability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31617F0AC9100A21270 /* UIScreen+Availability.m */; };
 		0903A3B717F0AC9100A21270 /* UITableView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31717F0AC9100A21270 /* UITableView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0903A3B817F0AC9100A21270 /* UITableView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31817F0AC9100A21270 /* UITableView+DSAdditions.m */; };
-		0903A3B917F0AC9100A21270 /* UIView+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31917F0AC9100A21270 /* UIView+Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3BA17F0AC9100A21270 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31A17F0AC9100A21270 /* UIView+Layout.m */; };
 		0903A3BB17F0AC9100A21270 /* UIView+Resizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31B17F0AC9100A21270 /* UIView+Resizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0903A3BC17F0AC9100A21270 /* UIView+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31C17F0AC9100A21270 /* UIView+Resizing.m */; };
 		0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31D17F0AC9100A21270 /* UIView+Subviews.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -184,7 +182,6 @@
 		0905262C1A5E9D0B001536F9 /* DSMessagesLocalization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62DD157786FD5902D0D9B3A8 /* DSMessagesLocalization.strings */; };
 		0905262D1A5E9D0B001536F9 /* DSAlertsHandler+SimplifiedAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD13AE88A68CBC5259F586 /* DSAlertsHandler+SimplifiedAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0905262E1A5E9D0B001536F9 /* DSAlertsHandler+SimplifiedAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1534F0088E374A3A7597 /* DSAlertsHandler+SimplifiedAPI.m */; };
-		0905262F1A5E9D0B001536F9 /* DSAlertsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		090526301A5E9D0B001536F9 /* DSCodingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSCodingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		090526311A5E9D0B001536F9 /* DSCodingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSCodingTransformer.m */; };
 		090526321A5E9D6D001536F9 /* DSMessageInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -229,7 +226,6 @@
 		09162C9B180EECC100A0DEEF /* WETouchableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C83180EECC100A0DEEF /* WETouchableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		09162C9C180EEEB900A0DEEF /* DSCriterionDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C59180EE84900A0DEEF /* DSCriterionDescriptionViewController.m */; };
 		0922D3E3178C951900AAE05E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0922D3E2178C951900AAE05E /* CoreData.framework */; };
-		0928CFCD17F2150100E494E1 /* DSAlertsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0928CFDE17F21C9C00E494E1 /* DSWebServiceFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0928CFDF17F21C9C00E494E1 /* DSWebServiceFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */; };
 		092D8A6518D09ACE00EA56F0 /* ALAsset+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 092D8A6318D09ACE00EA56F0 /* ALAsset+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -536,6 +532,8 @@
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
 		09E443141A61736600E8B6C0 /* DSDateFormatterCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33A17F0AC9100A21270 /* DSDateFormatterCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E443151A61736600E8B6C0 /* DSDateFormatterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33B17F0AC9100A21270 /* DSDateFormatterCache.m */; };
+		09E443DA1A61861400E8B6C0 /* DSGetPhotosPermissions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E443D81A61861400E8B6C0 /* DSGetPhotosPermissions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09E443DB1A61861400E8B6C0 /* DSGetPhotosPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E443D91A61861400E8B6C0 /* DSGetPhotosPermissions.m */; };
 		09E54D051A6036EB002A854C /* DSConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1C0631C240FC26D7C2E3 /* DSConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E54D061A6036EF002A854C /* DSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1A0DD9DE7CA23881E72F /* DSConfiguration.m */; };
 		09E54D071A60381A002A854C /* DSRelativePath.h in Headers */ = {isa = PBXBuildFile; fileRef = 0987FB7219C6E15A007D1C55 /* DSRelativePath.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -649,8 +647,6 @@
 		09E54DA01A603B4D002A854C /* UIScreen+Availability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31617F0AC9100A21270 /* UIScreen+Availability.m */; };
 		09E54DA11A603B4D002A854C /* UITableView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31717F0AC9100A21270 /* UITableView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E54DA21A603B4D002A854C /* UITableView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31817F0AC9100A21270 /* UITableView+DSAdditions.m */; };
-		09E54DA31A603B4D002A854C /* UIView+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31917F0AC9100A21270 /* UIView+Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09E54DA41A603B4D002A854C /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31A17F0AC9100A21270 /* UIView+Layout.m */; };
 		09E54DA51A603B4D002A854C /* UIView+Resizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31B17F0AC9100A21270 /* UIView+Resizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E54DA61A603B4D002A854C /* UIView+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31C17F0AC9100A21270 /* UIView+Resizing.m */; };
 		09E54DA71A603B4D002A854C /* UIView+Subviews.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31D17F0AC9100A21270 /* UIView+Subviews.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -660,7 +656,7 @@
 		09E54DAB1A603B4D002A854C /* XibLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A32117F0AC9100A21270 /* XibLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E54DAC1A603B4D002A854C /* XibLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A32217F0AC9100A21270 /* XibLoader.m */; };
 		09E54DAD1A603BF7002A854C /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 093859D517F1FDD400E8AB0E /* JSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09E54DAE1A603BF7002A854C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09E54DAE1A603BF7002A854C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		09E54DAF1A603C07002A854C /* DSArrayChange.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2D517F0AC8300A21270 /* DSArrayChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E54DB01A603C07002A854C /* DSArrayChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2D617F0AC8300A21270 /* DSArrayChange.m */; };
 		09E54DB11A603C07002A854C /* DSArrayChangeApplier.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2D717F0AC8300A21270 /* DSArrayChangeApplier.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -903,8 +899,6 @@
 		0903A31617F0AC9100A21270 /* UIScreen+Availability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Availability.m"; sourceTree = "<group>"; };
 		0903A31717F0AC9100A21270 /* UITableView+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DSAdditions.h"; sourceTree = "<group>"; };
 		0903A31817F0AC9100A21270 /* UITableView+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DSAdditions.m"; sourceTree = "<group>"; };
-		0903A31917F0AC9100A21270 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
-		0903A31A17F0AC9100A21270 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		0903A31B17F0AC9100A21270 /* UIView+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Resizing.h"; sourceTree = "<group>"; };
 		0903A31C17F0AC9100A21270 /* UIView+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Resizing.m"; sourceTree = "<group>"; };
 		0903A31D17F0AC9100A21270 /* UIView+Subviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Subviews.h"; sourceTree = "<group>"; };
@@ -1035,7 +1029,6 @@
 		09162C91180EECC100A0DEEF /* popoverBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popoverBg@2x.png"; sourceTree = "<group>"; };
 		09162C92180EECC100A0DEEF /* popoverBgSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popoverBgSimple.png; sourceTree = "<group>"; };
 		0922D3E2178C951900AAE05E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAlertsFramework.h; sourceTree = "<group>"; };
 		0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceFunctions.h; sourceTree = "<group>"; };
 		0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceFunctions.m; sourceTree = "<group>"; };
 		092D8A6318D09ACE00EA56F0 /* ALAsset+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+DSAdditions.h"; sourceTree = "<group>"; };
@@ -1240,6 +1233,8 @@
 		09D6223E1817DDF900A252D9 /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Parse.h"; sourceTree = "<group>"; };
 		09D6223F1817DDF900A252D9 /* NSError+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Parse.m"; sourceTree = "<group>"; };
 		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
+		09E443D81A61861400E8B6C0 /* DSGetPhotosPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGetPhotosPermissions.h; sourceTree = "<group>"; };
+		09E443D91A61861400E8B6C0 /* DSGetPhotosPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGetPhotosPermissions.m; sourceTree = "<group>"; };
 		09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPassCodeController.h; sourceTree = "<group>"; };
 		09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPassCodeController.m; sourceTree = "<group>"; };
 		09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPassCodeControllerDelegate.h; sourceTree = "<group>"; };
@@ -1425,6 +1420,8 @@
 				097F7A0B19B84F8A004B4129 /* NSTimer+DSAdditions.m */,
 				09AAD18D1A35F82800DAE9E4 /* DSWeakTimerTarget.h */,
 				09AAD18E1A35F82800DAE9E4 /* DSWeakTimerTarget.m */,
+				09E443D81A61861400E8B6C0 /* DSGetPhotosPermissions.h */,
+				09E443D91A61861400E8B6C0 /* DSGetPhotosPermissions.m */,
 			);
 			name = Sort;
 			path = ../Sort;
@@ -1492,8 +1489,6 @@
 				0903A31617F0AC9100A21270 /* UIScreen+Availability.m */,
 				0903A31717F0AC9100A21270 /* UITableView+DSAdditions.h */,
 				0903A31817F0AC9100A21270 /* UITableView+DSAdditions.m */,
-				0903A31917F0AC9100A21270 /* UIView+Layout.h */,
-				0903A31A17F0AC9100A21270 /* UIView+Layout.m */,
 				0903A31B17F0AC9100A21270 /* UIView+Resizing.h */,
 				0903A31C17F0AC9100A21270 /* UIView+Resizing.m */,
 				0903A31D17F0AC9100A21270 /* UIView+Subviews.h */,
@@ -2297,7 +2292,6 @@
 				62DD157786FD5902D0D9B3A8 /* DSMessagesLocalization.strings */,
 				62DD13AE88A68CBC5259F586 /* DSAlertsHandler+SimplifiedAPI.h */,
 				62DD1534F0088E374A3A7597 /* DSAlertsHandler+SimplifiedAPI.m */,
-				0928CFCC17F2150100E494E1 /* DSAlertsFramework.h */,
 				098783CD18C1F39700C838A2 /* DSCodingTransformer.h */,
 				098783CE18C1F39700C838A2 /* DSCodingTransformer.m */,
 			);
@@ -2519,7 +2513,6 @@
 				09E54D3B1A6039CF002A854C /* DSEntityDefinition.h in Headers */,
 				09E54D1A1A60390E002A854C /* DSWebServiceParamFactory.h in Headers */,
 				090526101A5E9D0B001536F9 /* DSAlert.h in Headers */,
-				09E54DA31A603B4D002A854C /* UIView+Layout.h in Headers */,
 				09E54E221A6046A8002A854C /* DSBlockBarButtonItem.h in Headers */,
 				09E54E181A603C49002A854C /* NSTimer+DSAdditions.h in Headers */,
 				09E54E2D1A604826002A854C /* UISwitch+DSCheckButton.h in Headers */,
@@ -2533,6 +2526,7 @@
 				0997675B1A4F0AB100DDE130 /* DSRedirectLogs.h in Headers */,
 				09E54D271A603967002A854C /* DSFakeWebServiceRequest.h in Headers */,
 				09E54D811A603B4D002A854C /* NSDictionary+JSONDictionary.h in Headers */,
+				09E443DA1A61861400E8B6C0 /* DSGetPhotosPermissions.h in Headers */,
 				09E54E0F1A603C49002A854C /* DSCoreDataObjectsObserverDelegate.h in Headers */,
 				09E54D321A603978002A854C /* AFHTTPBodyPart.h in Headers */,
 				090526211A5E9D0B001536F9 /* DSAlertQueue+Private.h in Headers */,
@@ -2560,7 +2554,6 @@
 				099767A61A4F335700DDE130 /* DSTextField.h in Headers */,
 				099767771A4F30FC00DDE130 /* DSFetchedResultsControllerDelegate.h in Headers */,
 				099767711A4F122A00DDE130 /* NSDate+TimeAgoFormatter.h in Headers */,
-				0905262F1A5E9D0B001536F9 /* DSAlertsFramework.h in Headers */,
 				09E54D0F1A6038C9002A854C /* DSWebServiceConfiguration.h in Headers */,
 				09E54DF71A603C49002A854C /* DSCompas.h in Headers */,
 				09E54D151A60390E002A854C /* DSWebServiceArrayParam.h in Headers */,
@@ -2723,7 +2716,6 @@
 				0903A3FC17F0AC9100A21270 /* DSCheckButtonProtocol.h in Headers */,
 				0903A3EB17F0AC9100A21270 /* DSFontManager.h in Headers */,
 				0903A3DF17F0AC9100A21270 /* DSRuntimeHacker.h in Headers */,
-				0903A3B917F0AC9100A21270 /* UIView+Layout.h in Headers */,
 				0903A3AD17F0AC9100A21270 /* UIApplication+KeyboardView.h in Headers */,
 				0903A3BF17F0AC9100A21270 /* UIView+XibLoading.h in Headers */,
 				0903A39717F0AC9100A21270 /* NSDictionary+JSONDictionary.h in Headers */,
@@ -2793,7 +2785,6 @@
 				62DD130F46A501A7FFCD1BAE /* DSDataDetector.h in Headers */,
 				09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */,
 				09162C6F180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h in Headers */,
-				0928CFCD17F2150100E494E1 /* DSAlertsFramework.h in Headers */,
 				09B866B917F1E5C7003B1070 /* DSWebServiceParams.h in Headers */,
 				62DD19B8D7F38D3DAD57B11E /* DSFindCountry.h in Headers */,
 				0907D3BF194C4CC30035C075 /* UINavigationController+Inspection.h in Headers */,
@@ -3107,7 +3098,6 @@
 				09E54E041A603C49002A854C /* NSNumber+DSAdditions.m in Sources */,
 				099767A31A4F335700DDE130 /* DSFieldValidationCriterion.m in Sources */,
 				09E54DB51A603C07002A854C /* DSArrayChangeCalculator.m in Sources */,
-				09E54DA41A603B4D002A854C /* UIView+Layout.m in Sources */,
 				09E54D261A60394C002A854C /* DSWebServiceSerialQueue.m in Sources */,
 				09E54E151A603C49002A854C /* DSGradientView.m in Sources */,
 				09E54D101A6038C9002A854C /* DSWebServiceConfiguration.m in Sources */,
@@ -3209,6 +3199,7 @@
 				09E54D3E1A6039CF002A854C /* DSWebServiceOperationType.m in Sources */,
 				09E54DE91A603C49002A854C /* DSNetworkActivity.m in Sources */,
 				099767661A4F105500DDE130 /* MARTNSObject.m in Sources */,
+				09E443DB1A61861400E8B6C0 /* DSGetPhotosPermissions.m in Sources */,
 				099767781A4F310100DDE130 /* DSFetchedResultsControllerDelegate.m in Sources */,
 				09E54D221A60392F002A854C /* DSWebServiceParamsJSONBuilder.m in Sources */,
 				09E54D2A1A603967002A854C /* DSFakeWebServiceRequestBehaviour.m in Sources */,
@@ -3277,7 +3268,6 @@
 				0903A3FE17F0AC9100A21270 /* UISwitch+DSCheckButton.m in Sources */,
 				09B6DCED1858F5C500FB1825 /* DSGeocoder.m in Sources */,
 				0903A3B817F0AC9100A21270 /* UITableView+DSAdditions.m in Sources */,
-				0903A3BA17F0AC9100A21270 /* UIView+Layout.m in Sources */,
 				0903A3EE17F0AC9100A21270 /* FontsDB.m in Sources */,
 				09162C6C180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m in Sources */,
 				0903A3C417F0AC9100A21270 /* DSCArray.m in Sources */,

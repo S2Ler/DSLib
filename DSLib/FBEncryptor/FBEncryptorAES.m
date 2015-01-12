@@ -128,7 +128,7 @@
 
 + (NSString *)decryptBase64String:(NSString *)encryptedBase64String keyString:(NSString *)keyString
 {
-  NSData *encryptedData = [[NSData alloc] initWithBase64Encoding:encryptedBase64String];
+  NSData *encryptedData = [[NSData alloc] initWithBase64EncodedString:encryptedBase64String options:0];
   NSData *data = [self decryptData:encryptedData
                                key:[keyString dataUsingEncoding:NSUTF8StringEncoding]
                                 iv:nil];
@@ -145,7 +145,7 @@
   NSData *data = [self encryptData:[string dataUsingEncoding:NSUTF8StringEncoding]
                                key:[keyString dataUsingEncoding:NSUTF8StringEncoding]
                                 iv:nil];
-  return [data base64Encoding];
+  return [data base64EncodedStringWithOptions:0];
 }
 
 

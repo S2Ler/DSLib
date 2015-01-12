@@ -195,7 +195,7 @@
     mainPostData = [self POSTData];
   }
   else if ([self POSTDataPath]) {
-    mainPostData = [NSData dataWithContentsOfMappedFile:[self POSTDataPath]];
+    mainPostData = [NSData dataWithContentsOfFile:self.POSTDataPath options:NSDataReadingMappedIfSafe error:nil];
   }
   
   [postData appendData:mainPostData];
