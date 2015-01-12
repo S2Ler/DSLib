@@ -69,8 +69,6 @@
 {
   [self resetCurrentIndex];
   
-  NSLog(@"!!!!!!before hashes: %@", [[self subviews] valueForKeyPath:@"user.object_hash"]);
-
   UIView *firstView = [self viewForIndex:0];
   UIView *dontRemoveView = nil;
   if ([[self dataSource] viewStack:self isView:firstView equalToView:self.draggingView]) {
@@ -84,7 +82,6 @@
   }
   
   [self preloadViewsSkipFirst:dontRemoveView != nil];
-  NSLog(@"!!!!!!after hashes: %@", [[self subviews] valueForKeyPath:@"user.object_hash"]);
 }
 
 - (UIView *)dequeueReusableView
