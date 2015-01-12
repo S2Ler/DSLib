@@ -121,6 +121,11 @@
   return [self showNextViewAnimated:NO animationDirection:DSViewsStackAnimationDirectionNone delay:0];
 }
 
+- (UIView *)topView
+{
+  return [[self subviews] lastObject];
+}
+
 #pragma mark - private
 - (void)resetCurrentIndex
 {
@@ -161,7 +166,7 @@
                animationDirection:(DSViewsStackAnimationDirection)direction
                             delay:(NSTimeInterval)delay
 {
-  UIView *topView = [[self subviews] lastObject];
+  UIView *topView = [self topView];
   
   if (animated && topView) {
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
@@ -377,4 +382,10 @@
   }
 }
 
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+  UIView *topView = [self topView];
+  return topView == gestureRecognizer.view;
+}
 @end
