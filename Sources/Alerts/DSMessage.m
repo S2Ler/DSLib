@@ -21,6 +21,11 @@
   return [[DSAlertsHandlerConfiguration sharedInstance] messagesLocalizationTableName];
 }
 
++ (NSString *)localizationTable
+{
+  return [[DSAlertsHandlerConfiguration sharedInstance] messagesLocalizationTableName];
+}
+
 - (NSString *)keyForLocalizedTitle
 {
   NSString *key = [NSString stringWithFormat:@"%@.%@.title", [self domain], [self code]];
@@ -72,7 +77,7 @@
 
 + (NSString *)messageTitleFromError:(NSError *)error
 {
-    return [error title] ? [error title] : NSLocalizedString(@"general.error.title", nil);
+  return [error title] ? [error title] : NSLocalizedStringFromTable(@"general.error.title", [self localizationTable], nil);
 }
 
 - (NSString *)generalErrorBody

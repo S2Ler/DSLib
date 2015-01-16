@@ -13,7 +13,10 @@
          paramIdx:(NSUInteger)paramIdx
          paramName:(NSString *)paramName
 {
-  key = [NSString stringWithFormat:@"%@[%lu]", paramName, (unsigned long)paramIdx];
+  if (!key) {
+    key = [NSString stringWithFormat:@"%@[%lu]", paramName, (unsigned long)paramIdx];
+  }
+  
   if ([subValue isKindOfClass:[NSDictionary class]]) {
     id<DSWebServiceParam> subParams = [self paramsFromValues:subValue embeddedParams:nil];
     [createdParam addParam:subParams forParamName:key];

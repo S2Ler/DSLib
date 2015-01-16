@@ -30,5 +30,5 @@
 
 - (void)removeViewAtIndex:(NSUInteger)index;
 
-
+- (UIView *)topView;
 @end
