@@ -19,4 +19,5 @@
 - (void)validateField:(DSTextField *)field;
 
 - (void)resetValidateOnTextChangeFlag;
+- (void)resignAllFields;
 @end

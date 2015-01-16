@@ -8,19 +8,39 @@
 
 #import "WEPopoverContainerView.h"
 
-@implementation WEPopoverContainerViewProperties
-
-@synthesize bgImageName, upArrowImageName, downArrowImageName, leftArrowImageName, rightArrowImageName, topBgMargin, bottomBgMargin, leftBgMargin, rightBgMargin, topBgCapSize, leftBgCapSize;
-@synthesize leftContentMargin, rightContentMargin, topContentMargin, bottomContentMargin, arrowMargin;
-
-- (void)dealloc {
-	self.bgImageName = nil;
-	self.upArrowImageName = nil;
-	self.downArrowImageName = nil;
-	self.leftArrowImageName = nil;
-	self.rightArrowImageName = nil;
-	[super dealloc];
+@implementation WEPopoverContainerViewProperties {
+	
 }
+
+#define IMAGE_FOR_NAME(arrowImage, arrowImageName)	((arrowImage != nil) ? (arrowImage) : (arrowImageName == nil ? nil : [UIImage imageNamed:arrowImageName]))
+
+- (id)init {
+    if ((self = [super init])) {
+        self.maskInsets = CGSizeZero;
+    }
+    return self;
+}
+
+- (UIImage *)upArrowImage {
+    return IMAGE_FOR_NAME(_upArrowImage, _upArrowImageName);
+}
+
+- (UIImage *)downArrowImage {
+    return IMAGE_FOR_NAME(_downArrowImage, _downArrowImageName);
+}
+
+- (UIImage *)leftArrowImage {
+    return IMAGE_FOR_NAME(_leftArrowImage, _leftArrowImageName);
+}
+
+- (UIImage *)rightArrowImage {
+    return IMAGE_FOR_NAME(_rightArrowImage, _rightArrowImageName);
+}
+
+- (UIImage *)bgImage {
+    return IMAGE_FOR_NAME(_bgImage, _bgImageName);
+}
+
 
 @end
 
@@ -34,11 +54,22 @@
 
 @end
 
-@implementation WEPopoverContainerView
+@implementation WEPopoverContainerView {
+	UIImage *_bgImage;
+	UIImage *_arrowImage;
+	
+	WEPopoverContainerViewProperties *_properties;
+	
+	CGRect _arrowRect;
+	CGRect _bgRect;
+	CGPoint _offset;
+	CGPoint _arrowOffset;
+	
+	CGSize _correctedSize;
+    CGRect _calculatedFrame;
+}
 
-@synthesize arrowDirection, contentView;
-
-- (id)initWithSize:(CGSize)theSize 
+- (id)initWithSize:(CGSize)theSize
 		anchorRect:(CGRect)anchorRect 
 	   displayArea:(CGRect)displayArea
 permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
@@ -46,31 +77,35 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 	if ((self = [super initWithFrame:CGRectZero])) {
 		
 		[self setProperties:theProperties];
-		correctedSize = CGSizeMake(theSize.width + properties.leftBgMargin + properties.rightBgMargin + properties.leftContentMargin + properties.rightContentMargin, 
-								   theSize.height + properties.topBgMargin + properties.bottomBgMargin + properties.topContentMargin + properties.bottomContentMargin);	
-		[self determineGeometryForSize:correctedSize anchorRect:anchorRect displayArea:displayArea permittedArrowDirections:permittedArrowDirections];
-		[self initFrame];
+		_correctedSize = CGSizeMake(theSize.width + _properties.leftBgMargin + _properties.rightBgMargin + _properties.leftContentMargin + _properties.rightContentMargin,
+								   theSize.height + _properties.topBgMargin + _properties.bottomBgMargin + _properties.topContentMargin + _properties.bottomContentMargin);
+		[self determineGeometryForSize:_correctedSize anchorRect:anchorRect displayArea:displayArea permittedArrowDirections:permittedArrowDirections];
 		self.backgroundColor = [UIColor clearColor];
-		UIImage *theImage = [UIImage imageNamed:properties.bgImageName];
-		bgImage = [[theImage stretchableImageWithLeftCapWidth:properties.leftBgCapSize topCapHeight:properties.topBgCapSize] retain];
+        
+		UIImage *theImage = _properties.bgImage;
+		_bgImage = [theImage stretchableImageWithLeftCapWidth:_properties.leftBgCapSize topCapHeight:_properties.topBgCapSize];
 		
 		self.clipsToBounds = YES;
 		self.userInteractionEnabled = YES;
+        [self initFrame];
 	}
 	return self;
 }
 
-- (void)dealloc {
-	[properties release];
-	[contentView release];
-	[bgImage release];
-	[arrowImage release];
-	[super dealloc];
-}
 
 - (void)drawRect:(CGRect)rect {
-	[bgImage drawInRect:bgRect blendMode:kCGBlendModeNormal alpha:1.0];
-	[arrowImage drawInRect:arrowRect blendMode:kCGBlendModeNormal alpha:1.0]; 
+	[_bgImage drawInRect:_bgRect blendMode:kCGBlendModeNormal alpha:1.0];
+	[_arrowImage drawInRect:_arrowRect blendMode:kCGBlendModeNormal alpha:1.0];
+    
+    BOOL shouldClip = _properties.maskCornerRadius > 0.0f || !CGSizeEqualToSize(_properties.maskInsets, CGSizeZero);
+    if (shouldClip) {
+        CAShapeLayer *maskLayer = [CAShapeLayer layer];
+        CGPathRef path = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(self.bounds, _properties.maskInsets.width, _properties.maskInsets.height) cornerRadius:_properties.maskCornerRadius].CGPath;
+        [maskLayer setPath:path];
+        [maskLayer setFillRule:kCAFillRuleEvenOdd];
+        maskLayer.frame = self.bounds;
+        [self.layer setMask:maskLayer];
+    }
 }
 
 - (void)updatePositionWithSize:(CGSize)theSize
@@ -78,9 +113,9 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
                    displayArea:(CGRect)displayArea
       permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections {
     
-    correctedSize = CGSizeMake(theSize.width + properties.leftBgMargin + properties.rightBgMargin + properties.leftContentMargin + properties.rightContentMargin, 
-                               theSize.height + properties.topBgMargin + properties.bottomBgMargin + properties.topContentMargin + properties.bottomContentMargin);	
-	[self determineGeometryForSize:correctedSize anchorRect:anchorRect displayArea:displayArea permittedArrowDirections:permittedArrowDirections];
+    _correctedSize = CGSizeMake(theSize.width + _properties.leftBgMargin + _properties.rightBgMargin + _properties.leftContentMargin + _properties.rightContentMargin,
+                               theSize.height + _properties.topBgMargin + _properties.bottomBgMargin + _properties.topContentMargin + _properties.bottomContentMargin);
+	[self determineGeometryForSize:_correctedSize anchorRect:anchorRect displayArea:displayArea permittedArrowDirections:permittedArrowDirections];
 	[self initFrame];
     [self setNeedsDisplay];
     
@@ -107,67 +142,77 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 }
 
 - (void)setContentView:(UIView *)v {
-	if (v != contentView) {
-		[contentView release];
-		contentView = [v retain];		
-		contentView.frame = self.contentRect;		
-		[self addSubview:contentView];
+	if (v != _contentView) {
+		_contentView = v;
+		_contentView.frame = self.contentRect;
+		[self addSubview:_contentView];
 	}
 }
 
+- (CGRect)calculatedFrame {
+    return _calculatedFrame;
+}
 
+- (void)setFrame:(CGRect)frame {
+    if ([self.delegate respondsToSelector:@selector(popoverContainerView:willChangeFrame:)]) {
+        frame = [self.delegate popoverContainerView:self willChangeFrame:frame];
+    }
+    [super setFrame:frame];
+}
 
 @end
 
 @implementation WEPopoverContainerView(Private)
 
 - (void)initFrame {
-	CGRect theFrame = CGRectOffset(CGRectUnion(bgRect, arrowRect), offset.x, offset.y);
+	CGRect theFrame = CGRectOffset(CGRectUnion(_bgRect, _arrowRect), _offset.x, _offset.y);
 	
 	//If arrow rect origin is < 0 the frame above is extended to include it so we should offset the other rects
-	arrowOffset = CGPointMake(MAX(0, -arrowRect.origin.x), MAX(0, -arrowRect.origin.y));
-	bgRect = CGRectOffset(bgRect, arrowOffset.x, arrowOffset.y);
-	arrowRect = CGRectOffset(arrowRect, arrowOffset.x, arrowOffset.y);
-	    
-    self.frame = CGRectIntegral(theFrame);
-}																		 
+	_arrowOffset = CGPointMake(MAX(0, -_arrowRect.origin.x), MAX(0, -_arrowRect.origin.y));
+	_bgRect = CGRectOffset(_bgRect, _arrowOffset.x, _arrowOffset.y);
+	_arrowRect = CGRectOffset(_arrowRect, _arrowOffset.x, _arrowOffset.y);
+    _calculatedFrame = CGRectIntegral(theFrame);
+}
 
 - (CGSize)contentSize {
 	return self.contentRect.size;
 }
 
 - (CGRect)contentRect {
-	CGRect rect = CGRectMake(properties.leftBgMargin + properties.leftContentMargin + arrowOffset.x, 
-							 properties.topBgMargin + properties.topContentMargin + arrowOffset.y, 
-							 bgRect.size.width - properties.leftBgMargin - properties.rightBgMargin - properties.leftContentMargin - properties.rightContentMargin,
-							 bgRect.size.height - properties.topBgMargin - properties.bottomBgMargin - properties.topContentMargin - properties.bottomContentMargin);
+	CGRect rect = CGRectMake(_properties.leftBgMargin + _properties.leftContentMargin + _arrowOffset.x,
+							 _properties.topBgMargin + _properties.topContentMargin + _arrowOffset.y,
+							 _bgRect.size.width - _properties.leftBgMargin - _properties.rightBgMargin - _properties.leftContentMargin - _properties.rightContentMargin,
+							 _bgRect.size.height - _properties.topBgMargin - _properties.bottomBgMargin - _properties.topContentMargin - _properties.bottomContentMargin);
 	return rect;
 }
 
 - (void)setProperties:(WEPopoverContainerViewProperties *)props {
-	if (properties != props) {
-		[properties release];
-		properties = [props retain];
+	if (_properties != props) {
+		_properties = props;
 	}
 }
 
-- (void)determineGeometryForSize:(CGSize)theSize anchorRect:(CGRect)anchorRect displayArea:(CGRect)displayArea permittedArrowDirections:(UIPopoverArrowDirection)supportedArrowDirections {	
+- (CGRect)roundedRect:(CGRect)rect {
+    return CGRectMake(roundf(rect.origin.x), roundf(rect.origin.y), roundf(rect.size.width), roundf(rect.size.height));
+}
+
+- (void)determineGeometryForSize:(CGSize)theSize anchorRect:(CGRect)anchorRect displayArea:(CGRect)displayArea permittedArrowDirections:(UIPopoverArrowDirection)supportedArrowDirections {
 	
 	//Determine the frame, it should not go outside the display area
 	UIPopoverArrowDirection theArrowDirection = UIPopoverArrowDirectionUp;
 	
-	offset =  CGPointZero;
-	bgRect = CGRectZero;
-	arrowRect = CGRectZero;
-	arrowDirection = UIPopoverArrowDirectionUnknown;
+	_offset =  CGPointZero;
+	_bgRect = CGRectZero;
+	_arrowRect = CGRectZero;
+	_arrowDirection = UIPopoverArrowDirectionUnknown;
 	
 	CGFloat biggestSurface = 0.0f;
 	CGFloat currentMinMargin = 0.0f;
 	
-	UIImage *upArrowImage = [UIImage imageNamed:properties.upArrowImageName];
-	UIImage *downArrowImage = [UIImage imageNamed:properties.downArrowImageName];
-	UIImage *leftArrowImage = [UIImage imageNamed:properties.leftArrowImageName];
-	UIImage *rightArrowImage = [UIImage imageNamed:properties.rightArrowImageName];
+	UIImage *upArrowImage = _properties.upArrowImage;
+	UIImage *downArrowImage = _properties.downArrowImage;
+	UIImage *leftArrowImage = _properties.leftArrowImage;
+	UIImage *rightArrowImage = _properties.rightArrowImage;
 	
 	while (theArrowDirection <= UIPopoverArrowDirectionRight) {
 		
@@ -186,7 +231,7 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 					anchorPoint = CGPointMake(CGRectGetMidX(anchorRect) - displayArea.origin.x, CGRectGetMaxY(anchorRect) - displayArea.origin.y);
                     
                 	xArrowOffset = theSize.width / 2 - upArrowImage.size.width / 2;
-					yArrowOffset = properties.topBgMargin - upArrowImage.size.height;
+					yArrowOffset = _properties.topBgMargin - upArrowImage.size.height;
 					
 					theOffset = CGPointMake(anchorPoint.x - xArrowOffset - upArrowImage.size.width / 2, anchorPoint.y  - yArrowOffset);
 					
@@ -199,8 +244,8 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 					}
 					
 					//Cap the arrow offset
-					xArrowOffset = MAX(xArrowOffset, properties.leftBgMargin + properties.arrowMargin);
-					xArrowOffset = MIN(xArrowOffset, theSize.width - properties.rightBgMargin - properties.arrowMargin - upArrowImage.size.width);
+					xArrowOffset = MAX(xArrowOffset, _properties.leftBgMargin + _properties.arrowMargin);
+					xArrowOffset = MIN(xArrowOffset, theSize.width - _properties.rightBgMargin - _properties.arrowMargin - upArrowImage.size.width);
 					
 					theArrowRect = CGRectMake(xArrowOffset, yArrowOffset, upArrowImage.size.width, upArrowImage.size.height);
 					
@@ -210,7 +255,7 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 					anchorPoint = CGPointMake(CGRectGetMidX(anchorRect)  - displayArea.origin.x, CGRectGetMinY(anchorRect) - displayArea.origin.y);
 					
 					xArrowOffset = theSize.width / 2 - downArrowImage.size.width / 2;
-					yArrowOffset = theSize.height - properties.bottomBgMargin;
+					yArrowOffset = theSize.height - _properties.bottomBgMargin;
 					
 					theOffset = CGPointMake(anchorPoint.x - xArrowOffset - downArrowImage.size.width / 2, anchorPoint.y - yArrowOffset - downArrowImage.size.height);
 					
@@ -223,8 +268,8 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 					}
 					
 					//Cap the arrow offset
-					xArrowOffset = MAX(xArrowOffset, properties.leftBgMargin + properties.arrowMargin);
-					xArrowOffset = MIN(xArrowOffset, theSize.width - properties.rightBgMargin - properties.arrowMargin - downArrowImage.size.width);
+					xArrowOffset = MAX(xArrowOffset, _properties.leftBgMargin + _properties.arrowMargin);
+					xArrowOffset = MIN(xArrowOffset, theSize.width - _properties.rightBgMargin - _properties.arrowMargin - downArrowImage.size.width);
 					
 					theArrowRect = CGRectMake(xArrowOffset , yArrowOffset, downArrowImage.size.width, downArrowImage.size.height);
 					
@@ -233,7 +278,7 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 					
 					anchorPoint = CGPointMake(CGRectGetMaxX(anchorRect) - displayArea.origin.x, CGRectGetMidY(anchorRect) - displayArea.origin.y);
 					
-					xArrowOffset = properties.leftBgMargin - leftArrowImage.size.width;
+					xArrowOffset = _properties.leftBgMargin - leftArrowImage.size.width;
 					yArrowOffset = theSize.height / 2  - leftArrowImage.size.height / 2;
 					
 					theOffset = CGPointMake(anchorPoint.x - xArrowOffset, anchorPoint.y - yArrowOffset - leftArrowImage.size.height / 2);
@@ -247,8 +292,8 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 					}
 					
 					//Cap the arrow offset
-					yArrowOffset = MAX(yArrowOffset, properties.topBgMargin + properties.arrowMargin);
-					yArrowOffset = MIN(yArrowOffset, theSize.height - properties.bottomBgMargin - properties.arrowMargin - leftArrowImage.size.height);
+					yArrowOffset = MAX(yArrowOffset, _properties.topBgMargin + _properties.arrowMargin);
+					yArrowOffset = MIN(yArrowOffset, theSize.height - _properties.bottomBgMargin - _properties.arrowMargin - leftArrowImage.size.height);
 					
 					theArrowRect = CGRectMake(xArrowOffset, yArrowOffset, leftArrowImage.size.width, leftArrowImage.size.height);
 					
@@ -257,7 +302,7 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 					
 					anchorPoint = CGPointMake(CGRectGetMinX(anchorRect) - displayArea.origin.x, CGRectGetMidY(anchorRect) - displayArea.origin.y);
 					
-					xArrowOffset = theSize.width - properties.rightBgMargin;
+					xArrowOffset = theSize.width - _properties.rightBgMargin;
 					yArrowOffset = theSize.height / 2  - rightArrowImage.size.width / 2;
 					
 					theOffset = CGPointMake(anchorPoint.x - xArrowOffset - rightArrowImage.size.width, anchorPoint.y - yArrowOffset - rightArrowImage.size.height / 2);
@@ -271,8 +316,8 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 					}
 					
 					//Cap the arrow offset
-					yArrowOffset = MAX(yArrowOffset, properties.topBgMargin + properties.arrowMargin);
-					yArrowOffset = MIN(yArrowOffset, theSize.height - properties.bottomBgMargin - properties.arrowMargin - rightArrowImage.size.height);
+					yArrowOffset = MAX(yArrowOffset, _properties.topBgMargin + _properties.arrowMargin);
+					yArrowOffset = MIN(yArrowOffset, theSize.height - _properties.bottomBgMargin - _properties.arrowMargin - rightArrowImage.size.height);
 					
 					theArrowRect = CGRectMake(xArrowOffset, yArrowOffset, rightArrowImage.size.width, rightArrowImage.size.height);
 					
@@ -288,43 +333,74 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 			CGFloat minMarginTop = CGRectGetMinY(bgFrame); 
 			CGFloat minMarginBottom = CGRectGetHeight(displayArea) - CGRectGetMaxY(bgFrame); 
 			
-			if (minMarginLeft < 0) {
-			    // Popover is too wide and clipped on the left; decrease width
-			    // and move it to the right
-			    theOffset.x -= minMarginLeft;
-			    theBgRect.size.width += minMarginLeft;
-			    minMarginLeft = 0;
-			    if (theArrowDirection == UIPopoverArrowDirectionRight) {
-			        theArrowRect.origin.x = CGRectGetMaxX(theBgRect) - properties.rightBgMargin;
-			    }
-			}
-			if (minMarginRight < 0) {
-			    // Popover is too wide and clipped on the right; decrease width.
-			    theBgRect.size.width += minMarginRight;
-			    minMarginRight = 0;
-			    if (theArrowDirection == UIPopoverArrowDirectionLeft) {
-			        theArrowRect.origin.x = CGRectGetMinX(theBgRect) - leftArrowImage.size.width + properties.leftBgMargin;
-			    }
-			}
-			if (minMarginTop < 0) {
-			    // Popover is too high and clipped at the top; decrease height
-			    // and move it down
-			    theOffset.y -= minMarginTop;
-			    theBgRect.size.height += minMarginTop;
-			    minMarginTop = 0;
-			    if (theArrowDirection == UIPopoverArrowDirectionDown) {
-			        theArrowRect.origin.y = CGRectGetMaxY(theBgRect) - properties.bottomBgMargin;
-			    }
-			}
-			if (minMarginBottom < 0) {
-			    // Popover is too high and clipped at the bottom; decrease height.
-			    theBgRect.size.height += minMarginBottom;
-			    minMarginBottom = 0;
-			    if (theArrowDirection == UIPopoverArrowDirectionUp) {
-			        theArrowRect.origin.y = CGRectGetMinY(theBgRect) - upArrowImage.size.height + properties.topBgMargin;
-			    }
-			}
-//			bgFrame = CGRectOffset(theBgRect, theOffset.x, theOffset.y);
+            if (minMarginLeft < 0) {
+                // Popover is clipped on the left;
+                // move it to the right
+                theOffset.x -= minMarginLeft;
+                
+                minMarginRight += minMarginLeft;
+                
+                if (minMarginRight < 0) {
+                    // and decrease width if needed
+                    theBgRect.size.width += minMarginRight;
+                    minMarginRight = 0;
+                }
+                minMarginLeft = 0;
+                
+                if (theArrowDirection == UIPopoverArrowDirectionRight) {
+                    theArrowRect.origin.x = CGRectGetMaxX(theBgRect) - _properties.rightBgMargin;
+                }
+            } else if (minMarginRight < 0) {
+                
+                // Popover is clipped on the right
+                theOffset.x += minMarginRight;
+                
+                minMarginLeft += minMarginRight;
+                
+                if (minMarginLeft < 0) {
+                    theBgRect.size.width += minMarginLeft;
+                    minMarginLeft = 0;
+                }
+                
+                minMarginRight = 0;
+                
+                if (theArrowDirection == UIPopoverArrowDirectionLeft) {
+                    theArrowRect.origin.x = CGRectGetMinX(theBgRect) - leftArrowImage.size.width + _properties.leftBgMargin;
+                }
+            }
+            
+            if (minMarginTop < 0) {
+                // Popover is at the top;
+                theOffset.y -= minMarginTop;
+                minMarginBottom += minMarginTop;
+                
+                if (minMarginBottom < 0) {
+                    theBgRect.size.height += minMarginBottom;
+                    minMarginBottom = 0;
+                }
+                
+                minMarginTop = 0;
+                
+                if (theArrowDirection == UIPopoverArrowDirectionDown) {
+                    theArrowRect.origin.y = CGRectGetMaxY(theBgRect) - _properties.bottomBgMargin;
+                }
+            } else if (minMarginBottom < 0) {
+                // Popover is clipped at the bottom
+                
+                theOffset.y += minMarginBottom;
+                minMarginTop += minMarginBottom;
+                
+                if (minMarginTop < 0) {
+                    theBgRect.size.height += minMarginTop;
+                    minMarginTop = 0;
+                }
+                
+                minMarginBottom = 0;
+                
+                if (theArrowDirection == UIPopoverArrowDirectionUp) {
+                    theArrowRect.origin.y = CGRectGetMinY(theBgRect) - upArrowImage.size.height + _properties.topBgMargin;
+                }
+            }
             
 			CGFloat minMargin = MIN(minMarginLeft, minMarginRight);
 			minMargin = MIN(minMargin, minMarginTop);
@@ -335,10 +411,10 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 			
 			if (surface >= biggestSurface && minMargin >= currentMinMargin) {
 				biggestSurface = surface;
-				offset = CGPointMake(theOffset.x + displayArea.origin.x, theOffset.y + displayArea.origin.y);
-				arrowRect = theArrowRect;
-				bgRect = theBgRect;
-				arrowDirection = theArrowDirection;
+				_offset = CGPointMake(roundf(theOffset.x + displayArea.origin.x), roundf(theOffset.y + displayArea.origin.y));
+				_arrowRect = [self roundedRect:theArrowRect];
+				_bgRect = [self roundedRect:theBgRect];
+				_arrowDirection = theArrowDirection;
 				currentMinMargin = minMargin;
 			}
 		}
@@ -346,18 +422,18 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 		theArrowDirection <<= 1;
 	}
 	
-	switch (arrowDirection) {
+	switch (_arrowDirection) {
 		case UIPopoverArrowDirectionUp:
-			arrowImage = [upArrowImage retain];
+			_arrowImage = upArrowImage;
 			break;
 		case UIPopoverArrowDirectionDown:
-			arrowImage = [downArrowImage retain];
+			_arrowImage = downArrowImage;
 			break;
 		case UIPopoverArrowDirectionLeft:
-			arrowImage = [leftArrowImage retain];
+			_arrowImage = leftArrowImage;
 			break;
 		case UIPopoverArrowDirectionRight:
-			arrowImage = [rightArrowImage retain];
+			_arrowImage = rightArrowImage;
 			break;
         default:
             break;

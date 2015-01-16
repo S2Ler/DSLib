@@ -200,6 +200,10 @@
 		0907D3C0194C4CC30035C075 /* UINavigationController+Inspection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */; };
 		0908940A195326D4002CCCB8 /* UITextView+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 09089408195326D4002CCCB8 /* UITextView+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0908940B195326D4002CCCB8 /* UITextView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 09089409195326D4002CCCB8 /* UITextView+Size.m */; };
+		09101F4F1A665BF200A74D41 /* WEBlockingGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 09101F4D1A665BF200A74D41 /* WEBlockingGestureRecognizer.h */; };
+		09101F501A665BF200A74D41 /* WEBlockingGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 09101F4D1A665BF200A74D41 /* WEBlockingGestureRecognizer.h */; };
+		09101F511A665BF200A74D41 /* WEBlockingGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09101F4E1A665BF200A74D41 /* WEBlockingGestureRecognizer.m */; };
+		09101F521A665BF200A74D41 /* WEBlockingGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09101F4E1A665BF200A74D41 /* WEBlockingGestureRecognizer.m */; };
 		09162C55180ED00C00A0DEEF /* DSCompas.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C53180ED00C00A0DEEF /* DSCompas.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09162C56180ED00C00A0DEEF /* DSCompas.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C54180ED00C00A0DEEF /* DSCompas.m */; };
 		09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C58180EE84900A0DEEF /* DSCriterionDescriptionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -352,14 +356,14 @@
 		0997677C1A4F31CE00DDE130 /* UIImage+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92518328AE100B3C4B2 /* UIImage+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0997677D1A4F31D300DDE130 /* UIImage+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F92618328AE100B3C4B2 /* UIImage+DSAdditions.m */; };
 		099767821A4F334C00DDE130 /* UIBarButtonItem+WEPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C7B180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		099767831A4F334C00DDE130 /* UIBarButtonItem+WEPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C7C180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		099767831A4F334C00DDE130 /* UIBarButtonItem+WEPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C7C180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m */; };
 		099767841A4F334C00DDE130 /* WEPopoverContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C7D180EECC100A0DEEF /* WEPopoverContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		099767851A4F334C00DDE130 /* WEPopoverContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C7E180EECC100A0DEEF /* WEPopoverContainerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		099767851A4F334C00DDE130 /* WEPopoverContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C7E180EECC100A0DEEF /* WEPopoverContainerView.m */; };
 		099767861A4F334C00DDE130 /* WEPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C7F180EECC100A0DEEF /* WEPopoverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		099767871A4F334C00DDE130 /* WEPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C80180EECC100A0DEEF /* WEPopoverController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		099767871A4F334C00DDE130 /* WEPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C80180EECC100A0DEEF /* WEPopoverController.m */; };
 		099767881A4F334C00DDE130 /* WEPopoverParentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C81180EECC100A0DEEF /* WEPopoverParentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		099767891A4F334C00DDE130 /* WETouchableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C82180EECC100A0DEEF /* WETouchableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0997678A1A4F334C00DDE130 /* WETouchableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C83180EECC100A0DEEF /* WETouchableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0997678A1A4F334C00DDE130 /* WETouchableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C83180EECC100A0DEEF /* WETouchableView.m */; };
 		0997678B1A4F335300DDE130 /* popoverArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C84180EECC100A0DEEF /* popoverArrowDown.png */; };
 		0997678C1A4F335300DDE130 /* popoverArrowDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C85180EECC100A0DEEF /* popoverArrowDown@2x.png */; };
 		0997678D1A4F335300DDE130 /* popoverArrowDownSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 09162C86180EECC100A0DEEF /* popoverArrowDownSimple.png */; };
@@ -987,6 +991,8 @@
 		0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Inspection.m"; sourceTree = "<group>"; };
 		09089408195326D4002CCCB8 /* UITextView+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Size.h"; sourceTree = "<group>"; };
 		09089409195326D4002CCCB8 /* UITextView+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Size.m"; sourceTree = "<group>"; };
+		09101F4D1A665BF200A74D41 /* WEBlockingGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEBlockingGestureRecognizer.h; sourceTree = "<group>"; };
+		09101F4E1A665BF200A74D41 /* WEBlockingGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEBlockingGestureRecognizer.m; sourceTree = "<group>"; };
 		09162C53180ED00C00A0DEEF /* DSCompas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCompas.h; sourceTree = "<group>"; };
 		09162C54180ED00C00A0DEEF /* DSCompas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCompas.m; sourceTree = "<group>"; };
 		09162C58180EE84900A0DEEF /* DSCriterionDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCriterionDescriptionViewController.h; sourceTree = "<group>"; };
@@ -1784,6 +1790,8 @@
 		09162C7A180EECC100A0DEEF /* Popover */ = {
 			isa = PBXGroup;
 			children = (
+				09101F4D1A665BF200A74D41 /* WEBlockingGestureRecognizer.h */,
+				09101F4E1A665BF200A74D41 /* WEBlockingGestureRecognizer.m */,
 				09162C7B180EECC100A0DEEF /* UIBarButtonItem+WEPopover.h */,
 				09162C7C180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m */,
 				09162C7D180EECC100A0DEEF /* WEPopoverContainerView.h */,
@@ -2512,6 +2520,7 @@
 				090526271A5E9D0B001536F9 /* DSAlertsSupportCode.h in Headers */,
 				09E54D3B1A6039CF002A854C /* DSEntityDefinition.h in Headers */,
 				09E54D1A1A60390E002A854C /* DSWebServiceParamFactory.h in Headers */,
+				09101F501A665BF200A74D41 /* WEBlockingGestureRecognizer.h in Headers */,
 				090526101A5E9D0B001536F9 /* DSAlert.h in Headers */,
 				09E54E221A6046A8002A854C /* DSBlockBarButtonItem.h in Headers */,
 				09E54E181A603C49002A854C /* NSTimer+DSAdditions.h in Headers */,
@@ -2613,6 +2622,7 @@
 				0903A3FD17F0AC9100A21270 /* UISwitch+DSCheckButton.h in Headers */,
 				0903A40417F0AC9100A21270 /* DSValueChooserViewControllerDelegate.h in Headers */,
 				0972E33E19B6FA9F005D00F2 /* NSDate+DateTools.h in Headers */,
+				09101F4F1A665BF200A74D41 /* WEBlockingGestureRecognizer.h in Headers */,
 				09162C68180EE84900A0DEEF /* DSFieldValidationController.h in Headers */,
 				0903A2E517F0AC8300A21270 /* DSArrayChangeCalculator.h in Headers */,
 				0903A3B717F0AC9100A21270 /* UITableView+DSAdditions.h in Headers */,
@@ -3071,6 +3081,7 @@
 				09E54DF31A603C49002A854C /* DSKeyboardController.m in Sources */,
 				099767221A4F08D800DDE130 /* DTError.m in Sources */,
 				09E54D941A603B4D002A854C /* UIAlertView+Additions.m in Sources */,
+				09101F521A665BF200A74D41 /* WEBlockingGestureRecognizer.m in Sources */,
 				09E54D061A6036EF002A854C /* DSConfiguration.m in Sources */,
 				09E54E1F1A603E17002A854C /* QWatchedOperationQueue.m in Sources */,
 				09E54E1B1A603C49002A854C /* DSWeakTimerTarget.m in Sources */,
@@ -3260,6 +3271,7 @@
 				097CA65C195DCAA900A2EC56 /* NSError+DSMessage.m in Sources */,
 				0903A3D217F0AC9100A21270 /* DSCFunctions.m in Sources */,
 				09B6DCF71858F5C500FB1825 /* DSGeocodeProviderOpenmap.m in Sources */,
+				09101F511A665BF200A74D41 /* WEBlockingGestureRecognizer.m in Sources */,
 				09EB9F9718ED680A0098CAFF /* DSPassCodeController.m in Sources */,
 				0903A40A17F0B4DA00A21270 /* Reachability.m in Sources */,
 				0998E23D192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m in Sources */,

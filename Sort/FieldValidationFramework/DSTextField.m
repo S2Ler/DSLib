@@ -14,6 +14,7 @@
 @interface DSTextField()
 @property (nonatomic, strong) WEPopoverController *popoverController;
 @property (nonatomic, strong) NSArray *validationFailedDescriptions;
+@property (nonatomic, assign) BOOL isValidationPassed;
 @end
 
 @implementation DSTextField
@@ -36,6 +37,7 @@
 
 - (void)setValidationFailedWithDescriptions:(NSArray *)criterionDescriptions
 {
+  self.isValidationPassed = false;
   [self setValidationFailedDescriptions:criterionDescriptions];
 
   [self setRightViewMode:UITextFieldViewModeAlways];
@@ -62,6 +64,7 @@
 
 - (void)setValidationPassedState
 {
+  self.isValidationPassed = true;
   [self setRightView:nil];
   [self validationPassedStateDidSet];
 }
@@ -88,7 +91,7 @@
   WEPopoverController *popoverController = [[WEPopoverController alloc] initWithContentViewController:descriptionViewController];
   CGRect popoverFrame = [self frame];
   popoverFrame.origin = [self center];
-  popoverFrame.size = CGSizeMake(1, 1);
+  popoverFrame.size = CGSizeMake(300, 300);
 
   [popoverController presentPopoverFromRect:popoverFrame
                                      inView:[self superview]
@@ -96,10 +99,11 @@
                                    animated:YES];
   [descriptionViewController setCriterionDescriptions:[self validationFailedDescriptions]];
   __block __weak DSTextField *weakSelf = self;
-  [popoverController setDismissHandler:^
-  {
-    [weakSelf setPopoverController:nil];
-  }];
+#warning implement dismiss handler
+//  [popoverController setDismissHandler:^
+//  {
+//    [weakSelf setPopoverController:nil];
+//  }];
 
   [self setPopoverController:popoverController];
 }

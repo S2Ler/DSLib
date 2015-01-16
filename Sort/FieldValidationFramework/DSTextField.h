@@ -11,6 +11,7 @@
 @property (nonatomic, strong) NSArray *validationCriteria;
 @property (nonatomic, assign) BOOL shouldValidateOnTextChange;
 @property (nonatomic, copy) dispatch_block_t discriptionButtonPressedHandler;
+@property (nonatomic, assign, readonly) BOOL isValidationPassed;
 
 - (void)setValidationFailedWithDescriptions:(NSArray *)criterionDescriptions;
 - (void)setValidationPassedState;

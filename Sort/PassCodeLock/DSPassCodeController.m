@@ -76,6 +76,7 @@
                                                  name:UIApplicationWillTerminateNotification
                                                object:nil];
     _isUnlocked = YES;
+    [self lockIfNeeded];
     [self loadSavedTimeInterval];
   }
 
