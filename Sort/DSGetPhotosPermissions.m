@@ -34,3 +34,16 @@ void DSRequestPhotosPermissions(void(^completion)(DSPhotosPermission permissions
     completion(DSPhotosPermissionDenied);
   }
 }
+
+DSPhotosPermission DSCurrentPhotosPermissions(void)
+{
+  if ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusAuthorized) {
+    return DSPhotosPermissionAuthorized;
+  }
+  else if ([ALAssetsLibrary authorizationStatus] == ALAuthorizationStatusNotDetermined) {
+    return DSPhotosPermissionNotDetermined;
+  }
+  else {
+    return DSPhotosPermissionDenied;
+  }
+}

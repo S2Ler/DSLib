@@ -10,7 +10,9 @@
 
 typedef NS_ENUM(int8_t, DSPhotosPermission) {
   DSPhotosPermissionAuthorized,
-  DSPhotosPermissionDenied
+  DSPhotosPermissionDenied,
+  DSPhotosPermissionNotDetermined
 };
 
 void DSRequestPhotosPermissions(void(^completion)(DSPhotosPermission permissions));
+DSPhotosPermission DSCurrentPhotosPermissions(void);
