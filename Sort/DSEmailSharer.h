@@ -26,6 +26,8 @@ MFMailComposeViewControllerDelegate
 
 @property (nonatomic, copy) void (^completionHandler)();
 
+- (void)setupAppearanceWithBlock:(void(^)(UINavigationController *navigationController, UINavigationBar *navigationBar))block;
+
 - (void)share;
 
 + (BOOL)canSendEmail;

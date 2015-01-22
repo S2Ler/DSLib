@@ -34,6 +34,11 @@
   return self;
 }
 
+- (void)setupAppearanceWithBlock:(void (^)(UINavigationController *navigationController, UINavigationBar *navigationBar))block
+{
+  block(self.mailComposer.navigationController, self.mailComposer.navigationBar);
+}
+
 - (void)share
 {
   [[self mailComposer] setToRecipients:[self recipients]];
