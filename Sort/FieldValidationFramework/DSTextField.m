@@ -98,7 +98,7 @@
                    permittedArrowDirections:UIPopoverArrowDirectionAny
                                    animated:YES];
   [descriptionViewController setCriterionDescriptions:[self validationFailedDescriptions]];
-  __block __weak DSTextField *weakSelf = self;
+//  __block __weak DSTextField *weakSelf = self;
 #warning implement dismiss handler
 //  [popoverController setDismissHandler:^
 //  {
