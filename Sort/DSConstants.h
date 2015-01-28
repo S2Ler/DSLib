@@ -22,6 +22,7 @@ typedef void (^ds_action_block_t)(id sender);
 typedef void (^ds_cell_action_block_t)(UITableViewCell *cell, id sender);
 typedef void (^ds_completion_handler)(BOOL success, DSMessage *message);
 typedef void (^ds_results_completion)(BOOL success, DSMessage *message, id result);
+typedef void (^ds_results_multiple_errors_completion)(BOOL success, NSArray *errorMessages, id result);
 typedef void (^ds_object_handler)(id object);
 
 #define NO_RESULTS nil

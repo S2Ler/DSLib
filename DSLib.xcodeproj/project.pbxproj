@@ -238,6 +238,12 @@
 		092D8A6E18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */; };
 		093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 093859D517F1FDD400E8AB0E /* JSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		093885501A78BCE200907151 /* DSGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0906D6BA19ADAC9D00E2F7F6 /* DSGradientView.m */; };
+		093885521A78BD7000907151 /* DSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C65180EE84900A0DEEF /* DSTextField.m */; };
+		093885531A78BD7700907151 /* DSFieldValidationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C5C180EE84900A0DEEF /* DSFieldValidationController.m */; };
+		093885541A78BD8200907151 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
+		093885551A78BD8A00907151 /* DSAlertsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FF31DEBF389A0374834 /* DSAlertsHandler.m */; };
+		093885561A78BD9C00907151 /* DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FC9FB79656CF9699964 /* DSMessage.m */; };
 		09423C7818E8244000F1B9E2 /* DSMessageInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09423C7918E8244000F1B9E2 /* DSMessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */; };
 		0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -3245,9 +3251,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093885541A78BD8200907151 /* NSError+Parse.m in Sources */,
+				093885531A78BD7700907151 /* DSFieldValidationController.m in Sources */,
 				0985A14418E33143009F9F33 /* DSQueue.m in Sources */,
 				09CEE83318E1E76B00B090F9 /* DSViewsStack_Tests.m in Sources */,
+				093885561A78BD9C00907151 /* DSMessage.m in Sources */,
+				093885551A78BD8A00907151 /* DSAlertsHandler.m in Sources */,
+				093885521A78BD7000907151 /* DSTextField.m in Sources */,
 				09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */,
+				093885501A78BCE200907151 /* DSGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

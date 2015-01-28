@@ -104,7 +104,7 @@
   [[self viewsStack] reloadData];
   BOOL showedNextView = [[self viewsStack] showNextViewWithoutAnimation];
   XCTAssertEqual(_viewsReturnedCount, 3, @"Should load next view, but didn't");
-  XCTAssertEqual(showedNextView, YES, @"There are more than 3 views in datasource. Should be able to show next view");
+  XCTAssertEqual(showedNextView, YES, @"There are more than 3 views in dataSource. Should be able to show next view");
 }
 
 - (void)testNextViewAnimatedWhenThereIsNoMoreViews
