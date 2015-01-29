@@ -3,7 +3,6 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "DSTextField.h"
 #import "DSFieldValidationCriterionDescription.h"
-#import "WEPopoverController.h"
 #import "DSCriterionDescriptionViewController.h"
 #import "DSFieldValidationCriterion.h"
 #import "DSCFunctions.h"
