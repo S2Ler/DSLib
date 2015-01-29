@@ -7,11 +7,11 @@
 #import "DSFieldValidationCriterion.h"
 #import "DSCFunctions.h"
 #import "DSMacros.h"
-
+#import "WYPopoverController.h"
 
 #pragma mark - private
 @interface DSTextField()
-@property (nonatomic, strong) WEPopoverController *popoverController;
+@property (nonatomic, strong) WYPopoverController *popoverController;
 @property (nonatomic, strong) NSArray *validationFailedDescriptions;
 @property (nonatomic, assign) BOOL isValidationPassed;
 @end
@@ -87,22 +87,28 @@
   DSCriterionDescriptionViewController *descriptionViewController= [[descriptionViewControllerClass alloc] init];
 
   //TODO: Get rid of WEPopoverAndWrite something my own
-  WEPopoverController *popoverController = [[WEPopoverController alloc] initWithContentViewController:descriptionViewController];
-  CGRect popoverFrame = [self frame];
-  popoverFrame.origin = [self center];
-  popoverFrame.size = CGSizeMake(300, 300);
-
+  
+  [WYPopoverController setDefaultTheme:[WYPopoverTheme theme]];
+  WYPopoverBackgroundView *popoverAppearance = [WYPopoverBackgroundView appearance];
+  UIColor *greenColor = [UIColor darkGrayColor];
+  [popoverAppearance setFillTopColor:greenColor];
+  [popoverAppearance setFillBottomColor:greenColor];
+  [popoverAppearance setOuterStrokeColor:greenColor];
+  [popoverAppearance setInnerStrokeColor:greenColor];
+  
+  WYPopoverController *popoverController = [[WYPopoverController alloc] initWithContentViewController:descriptionViewController];
+  
+  CGRect popoverFrame = self.rightView.frame;
+  
   [popoverController presentPopoverFromRect:popoverFrame
-                                     inView:[self superview]
-                   permittedArrowDirections:UIPopoverArrowDirectionAny
+                                     inView:[self rightView].superview
+                   permittedArrowDirections:WYPopoverArrowDirectionAny
                                    animated:YES];
   [descriptionViewController setCriterionDescriptions:[self validationFailedDescriptions]];
-//  __block __weak DSTextField *weakSelf = self;
-#warning implement dismiss handler
-//  [popoverController setDismissHandler:^
-//  {
-//    [weakSelf setPopoverController:nil];
-//  }];
+  __block __weak DSTextField *weakSelf = self;
+  [popoverController setDismissCompletionBlock:^(WYPopoverController *dismissedController) {
+    [weakSelf setPopoverController:nil];
+  }];
 
   [self setPopoverController:popoverController];
 }

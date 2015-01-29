@@ -233,6 +233,10 @@
 		093885561A78BD9C00907151 /* DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FC9FB79656CF9699964 /* DSMessage.m */; };
 		09423C7818E8244000F1B9E2 /* DSMessageInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09423C7918E8244000F1B9E2 /* DSMessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */; };
+		094BFFD81A7A3BFA00B1481D /* WYPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 094BFFD41A7A3BFA00B1481D /* WYPopoverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		094BFFD91A7A3BFA00B1481D /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BFFD51A7A3BFA00B1481D /* WYPopoverController.m */; };
+		094BFFDA1A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 094BFFD61A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		094BFFDB1A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BFFD71A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m */; };
 		0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */; };
 		095568D7195D61710081A268 /* DSEmailSharer.h in Headers */ = {isa = PBXBuildFile; fileRef = 095568D5195D61710081A268 /* DSEmailSharer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -973,6 +977,10 @@
 		093859D617F1FDD400E8AB0E /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMessageInterceptor.h; sourceTree = "<group>"; };
 		09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessageInterceptor.m; sourceTree = "<group>"; };
+		094BFFD41A7A3BFA00B1481D /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYPopoverController.h; path = WYPopoverController/WYPopoverController/WYPopoverController.h; sourceTree = SOURCE_ROOT; };
+		094BFFD51A7A3BFA00B1481D /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYPopoverController.m; path = WYPopoverController/WYPopoverController/WYPopoverController.m; sourceTree = SOURCE_ROOT; };
+		094BFFD61A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYStoryboardPopoverSegue.h; path = WYPopoverController/WYPopoverController/WYStoryboardPopoverSegue.h; sourceTree = SOURCE_ROOT; };
+		094BFFD71A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYStoryboardPopoverSegue.m; path = WYPopoverController/WYPopoverController/WYStoryboardPopoverSegue.m; sourceTree = SOURCE_ROOT; };
 		0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DSAdditions.h"; sourceTree = "<group>"; };
 		0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DSAdditions.m"; sourceTree = "<group>"; };
 		095568D5195D61710081A268 /* DSEmailSharer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEmailSharer.h; sourceTree = "<group>"; };
@@ -2249,6 +2257,10 @@
 		AED6C1981465E55000D9B44E /* DSLib */ = {
 			isa = PBXGroup;
 			children = (
+				094BFFD41A7A3BFA00B1481D /* WYPopoverController.h */,
+				094BFFD51A7A3BFA00B1481D /* WYPopoverController.m */,
+				094BFFD61A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h */,
+				094BFFD71A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m */,
 				0972E32219B6FA9F005D00F2 /* DateTools */,
 				09A83F3819238A49008DE30F /* LogsRedirect */,
 				09F1B7801909983A0031B0F6 /* FBEncryptor */,
@@ -2349,8 +2361,10 @@
 				090526251A5E9D0B001536F9 /* DSAlertViewFactory.h in Headers */,
 				09E54D9F1A603B4D002A854C /* UIScreen+Availability.h in Headers */,
 				09E54D171A60390E002A854C /* DSWebServiceCompositeParams.h in Headers */,
+				094BFFDA1A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h in Headers */,
 				09E54DE81A603C49002A854C /* DSNetworkActivity.h in Headers */,
 				09E54DF41A603C49002A854C /* DSKeyboardControllerDelegate.h in Headers */,
+				094BFFD81A7A3BFA00B1481D /* WYPopoverController.h in Headers */,
 				09E54D8F1A603B4D002A854C /* NSString+Encoding.h in Headers */,
 				09E54E1A1A603C49002A854C /* DSWeakTimerTarget.h in Headers */,
 				099767AC1A4F35C400DDE130 /* DSDraggingDestinationContainer.h in Headers */,
@@ -2945,6 +2959,7 @@
 				099767A31A4F335700DDE130 /* DSFieldValidationCriterion.m in Sources */,
 				09E54DB51A603C07002A854C /* DSArrayChangeCalculator.m in Sources */,
 				09E54D261A60394C002A854C /* DSWebServiceSerialQueue.m in Sources */,
+				094BFFDB1A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m in Sources */,
 				09E54E151A603C49002A854C /* DSGradientView.m in Sources */,
 				09E54D101A6038C9002A854C /* DSWebServiceConfiguration.m in Sources */,
 				09E54D7A1A603B4D002A854C /* NSArray+Extras.m in Sources */,
@@ -2958,6 +2973,7 @@
 				090526281A5E9D0B001536F9 /* DSAlertsSupportCode.m in Sources */,
 				090526371A5E9E0D001536F9 /* Reachability.m in Sources */,
 				09E54D771A603B4D002A854C /* CATransition+AnimationsBuilder.m in Sources */,
+				094BFFD91A7A3BFA00B1481D /* WYPopoverController.m in Sources */,
 				09E54D9A1A603B4D002A854C /* UIBarButtonItem+DSAdditions.m in Sources */,
 				099767281A4F08D800DDE130 /* DTTimePeriodCollection.m in Sources */,
 				09E54D081A60381A002A854C /* DSRelativePath.m in Sources */,
