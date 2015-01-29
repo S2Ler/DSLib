@@ -40,11 +40,6 @@ FOUNDATION_EXPORT const unsigned char DSLibFrameworkVersionString[];
 #import <DSLibFramework/RTProperty.h>
 #import <DSLibFramework/RTProtocol.h>
 #import <DSLibFramework/RTUnregisteredClass.h>
-#import <DSLibFramework/UIBarButtonItem+WEPopover.h>
-#import <DSLibFramework/WEPopoverContainerView.h>
-#import <DSLibFramework/WEPopoverController.h>
-#import <DSLibFramework/WETouchableView.h>
-#import <DSLibFramework/WEPopoverParentView.h>
 #import <DSLibFramework/NSObject+DSAdditions.h>
 #import <DSLibFramework/DSMacros.h>
 #import <DSLibFramework/DSCFunctions.h>
