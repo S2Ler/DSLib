@@ -33,6 +33,8 @@ NSFastEnumeration
 /** Adds theObject to the beginning of the queue */
 - (void)pushBack:(id)theObject;
 
+- (void)pushObjectsFromArray:(NSArray *)array;
+
 /** The top object in the queue */
 - (id)top;
 

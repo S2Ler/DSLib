@@ -98,6 +98,13 @@
   [self updatedIsFullVariable];  
 }
 
+- (void)pushObjectsFromArray:(NSArray *)array
+{
+  [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [self push:obj];
+  }];
+}
+
 - (void)removeAll {
 	[queue_ removeAllObjects];
   [self updatedIsFullVariable];
