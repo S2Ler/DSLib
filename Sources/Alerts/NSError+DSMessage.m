@@ -8,6 +8,7 @@
 
 #pragma mark - include
 #import "NSError+DSMessage.h"
+#import "DSMessage.h"
 
 #define ERROR_TITLE_KEY @"DSMessage_title"
 
@@ -26,4 +27,10 @@
                                               ERROR_TITLE_KEY: title}];
   return error;
 }
+
++ (instancetype)errorFromMessage:(DSMessage *)message
+{
+  return [self errorWithTitle:[message localizedTitle] description:[message localizedBody]];
+}
+
 @end
