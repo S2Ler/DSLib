@@ -173,4 +173,9 @@
 {
   [[self queue] filterUsingPredicate:predicate];
 }
+
+- (NSArray *)array
+{
+  return [[self queue] copy];
+}
 @end

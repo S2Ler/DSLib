@@ -68,6 +68,8 @@ NSFastEnumeration
 - (id)firstObjectWhichEqualsTo:(id)object;
 
 - (void)filterWithPredicate:(NSPredicate *)predicate;
+
+- (NSArray *)array;
 @end
 
 /** For internal and subclass use */
