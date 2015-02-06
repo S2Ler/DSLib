@@ -108,4 +108,9 @@
 {
   return [self fullPath];
 }
+
+- (NSString *)description
+{
+  return [self fullPath];
+}
 @end
