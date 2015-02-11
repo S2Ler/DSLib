@@ -18,6 +18,7 @@
 - (NSString *)classPrefix;
 - (BOOL)isFactoryShouldGenerateFakeRequests;
 - (BOOL)HTTPSEnabled;
+- (NSNumber *)timeout;
 @end
 
 @interface DSWebServiceConfiguration (UnitTests)

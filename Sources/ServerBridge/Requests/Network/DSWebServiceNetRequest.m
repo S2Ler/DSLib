@@ -3,6 +3,7 @@
 #import "DSWebServiceParam.h"
 #import "DSWebServiceURL.h"
 #import "DSWebServiceResponse.h"
+#import "DSWebServiceConfiguration.h"
 #import "NSData+OAdditions.h"
 #import "NSNumber+DSAdditions.h"
 #import "AFStreamingMultipartFormData.h"
@@ -61,7 +62,13 @@
       _userInfo = [NSMutableDictionary dictionary];
     }
 
-    [self setTimeoutInterval:DEFAULT_TIMEOUT];
+    const NSNumber *timeout = [[DSWebServiceConfiguration sharedInstance] timeout];
+    if (timeout) {
+      self.timeoutInterval = timeout.doubleValue;
+    }
+    else {
+      [self setTimeoutInterval:DEFAULT_TIMEOUT];
+    }
   }
 
   return self;
@@ -253,7 +260,7 @@
   if ([self POSTData] == nil && [self POSTDataPath] == nil) {
     request = [NSMutableURLRequest requestWithURL:nsURL
                                       cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
-                                  timeoutInterval:_timeoutInterval];
+                                  timeoutInterval:self.timeoutInterval];
   }
   else {
     request = [[NSMutableURLRequest alloc] init];
@@ -275,7 +282,7 @@
       request = [formData requestByFinalizingMultipartFormData];
     }
     
-    [request setTimeoutInterval:DEFAULT_TIMEOUT];
+    [request setTimeoutInterval:self.timeoutInterval];
     [request setCachePolicy:NSURLRequestUseProtocolCachePolicy];
   }
 
