@@ -87,7 +87,7 @@
   if (context == nil) {
     [[self imageView] setAlpha:0];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-      [[self layer] addAnimation:[CATransition transationForFadeWithDuration:0.25] forKey:nil];
+      [[self layer] addAnimation:[CATransition transationForFadeWithDuration:.5] forKey:nil];
       [[self imageView] setAlpha:1];
       [self updateZoom];
       [self updateConstraints];
@@ -99,7 +99,6 @@
 
 #pragma mark - Layout
 - (void) updateConstraints {
-  
   float imageWidth = self.imageView.image.size.width;
   float imageHeight = self.imageView.image.size.height;
   
