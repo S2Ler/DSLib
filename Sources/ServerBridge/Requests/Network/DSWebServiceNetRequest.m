@@ -226,7 +226,12 @@
   
   if ([self POSTDataPath]) {
     if (![self POSTDataFileName]) {
-      [self setPOSTDataFileName:@"file"];
+      if (self.POSTDataPath) {
+        [self setPOSTDataFileName:[self.POSTDataPath lastPathComponent]];
+      }
+      else {
+        [self setPOSTDataFileName:@"file"];
+      }
     }
     NSURL *fileURL = [NSURL fileURLWithPath:[self POSTDataPath]];
     NSString *fileName = [self POSTDataFileName];
