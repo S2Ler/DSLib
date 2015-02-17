@@ -185,12 +185,12 @@ static NSMapTable *interceptorsMap = nil;
 {
   if ([interceptor code]) {
     DSMessage *message = [DSMessage messageWithDomain:[interceptor domain] code:[interceptor code]];
-    [[self interceptorsMap] setObject:[interceptor handler] forKey:message];
+    [[self interceptorsMap] setObject:interceptor forKey:message];
   }
   else {
     for (DSMessageCode *code in [interceptor codes]) {
       DSMessage *message = [DSMessage messageWithDomain:[interceptor domain] code:code];
-      [[self interceptorsMap] setObject:[[interceptor handler] copy] forKey:message];
+      [[self interceptorsMap] setObject:interceptor forKey:message];
     }
   }
 }
@@ -200,7 +200,7 @@ static NSMapTable *interceptorsMap = nil;
   return [[self interceptorsMap] objectForKey:message] != nil;
 }
 
-+ (ds_completion_handler)interceptorHandlerForMessage:(DSMessage *)message
++ (DSMessageInterceptor *)interceptorForMessage:(DSMessage *)message
 {
   return [[self interceptorsMap] objectForKey:message];
 }
@@ -312,9 +312,12 @@ static NSMapTable *interceptorsMap = nil;
   void (^finishWithErrorBlock)(DSMessage *errorMessage) = ^(DSMessage *errorMessage) {
     BOOL thereIsGlobalHandler = [DSQueueBasedRequestSender hasInterceptorForMessage:errorMessage];
     if (thereIsGlobalHandler) {
-      ds_completion_handler handler = [DSQueueBasedRequestSender interceptorHandlerForMessage:errorMessage];
-      handler(FAILED_WITH_MESSAGE, errorMessage);
-      errorMessage = nil;
+      NSLog(@"%@", params);
+      DSMessageInterceptor *interceptor = [DSQueueBasedRequestSender interceptorForMessage:errorMessage];
+      if ([interceptor shouldInterceptParams:params]) {
+        interceptor.handler(FAILED_WITH_MESSAGE, errorMessage);
+        errorMessage = nil;
+      }
     }
     
     if (requestFailedHandler) {
