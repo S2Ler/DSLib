@@ -10,8 +10,10 @@
 #import "DSAlertsSupportCode.h"
 #import "DSConstants.h"
 
+@class DSWebServiceParams;
+
 /** Can intercept only messages without params */
-@interface DSMessageInterceptor : NSObject
+@interface DSMessageInterceptor : NSObject<NSCopying>
 @property (nonatomic, strong) DSMessageDomain *domain;
 
 /** You can set one code for domain */
@@ -21,4 +23,7 @@
 
 - (void)setHandler:(ds_completion_handler)handler;
 - (ds_completion_handler)handler;
+
+- (void)excludeParamsFromInterception:(Class)params;
+- (BOOL)shouldInterceptParams:(DSWebServiceParams *)params;
 @end
