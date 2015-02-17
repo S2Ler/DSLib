@@ -34,7 +34,7 @@
   
   for (NSString *paramName in allParamNames) {
     id value = [self valueForKeyPath:paramName];
-    if (value) {
+    if (value && ![paramName isEqualToString:@"POSTDataPath"]) {
       params[paramName] = value;
     }
   }
