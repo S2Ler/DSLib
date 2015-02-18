@@ -37,13 +37,13 @@
     case NSFetchedResultsChangeInsert: {
       [[self tableView]
        insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
-       withRowAnimation:UITableViewRowAnimationFade];
+       withRowAnimation:UITableViewRowAnimationAutomatic];
     }
       break;
     case NSFetchedResultsChangeDelete: {
       [[self tableView]
        deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
-       withRowAnimation:UITableViewRowAnimationFade];
+       withRowAnimation:UITableViewRowAnimationAutomatic];
     }
       break;
     default:
@@ -99,7 +99,7 @@
       
     case NSFetchedResultsChangeMove:
       [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                              withRowAnimation:UITableViewRowAnimationFade];
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
       [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
                               withRowAnimation:UITableViewRowAnimationAutomatic];
       if ([[self delegate] respondsToSelector:@selector(fetchDelegate:didMoveItemFromIndexPath:toIndexPath:)]) {
