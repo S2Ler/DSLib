@@ -14,6 +14,7 @@ static NSDictionary *DSWebServiceConfiguration_sharedConfiguration = nil;
 @property (strong) NSString *classPrefix;
 @property (strong) NSNumber *generateFakeRequests;
 @property (strong) NSNumber *useHTTPS;
+@property (strong) NSNumber *timeout;
 
 - (NSString *)keyForConfigurationKey:(NSString *)theConfigurationKey
                               scheme:(NSString *)theScheme;

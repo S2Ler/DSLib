@@ -20,5 +20,7 @@
 	<false/>
 	<key>useHTTPS</key>
 	<true/>
+	<key>timeout</key>
+	<integer>30</integer>
 </dict>
 </plist>

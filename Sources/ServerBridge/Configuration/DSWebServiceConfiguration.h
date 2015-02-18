@@ -16,6 +16,7 @@
 - (NSString *)serverURL;
 - (NSString *)paramsDataOutputType;
 - (NSString *)classPrefix;
+- (NSNumber *)timeout;
 - (BOOL)isFactoryShouldGenerateFakeRequests;
 - (BOOL)HTTPSEnabled;
 @end

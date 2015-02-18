@@ -7,6 +7,7 @@
 #import "NSNumber+DSAdditions.h"
 #import "AFStreamingMultipartFormData.h"
 #import "AFFunctions.h"
+#import "DSWebServiceConfiguration.h"
 
 #define DEFAULT_TIMEOUT 30
 
@@ -61,7 +62,13 @@
       _userInfo = [NSMutableDictionary dictionary];
     }
 
-    [self setTimeoutInterval:DEFAULT_TIMEOUT];
+    const NSNumber *timeout = [[DSWebServiceConfiguration sharedInstance] timeout];
+    if (!timeout) {
+      [self setTimeoutInterval:DEFAULT_TIMEOUT];
+    }
+    else {
+      self.timeoutInterval = [timeout doubleValue];
+    }
   }
 
   return self;
@@ -275,7 +282,7 @@
       request = [formData requestByFinalizingMultipartFormData];
     }
     
-    [request setTimeoutInterval:DEFAULT_TIMEOUT];
+    [request setTimeoutInterval:_timeoutInterval];
     [request setCachePolicy:NSURLRequestUseProtocolCachePolicy];
   }
 
