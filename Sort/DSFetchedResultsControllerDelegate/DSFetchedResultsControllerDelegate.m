@@ -37,13 +37,13 @@
     case NSFetchedResultsChangeInsert: {
       [[self tableView]
        insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
-       withRowAnimation:UITableViewRowAnimationAutomatic];
+       withRowAnimation:UITableViewRowAnimationNone];
     }
       break;
     case NSFetchedResultsChangeDelete: {
       [[self tableView]
        deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
-       withRowAnimation:UITableViewRowAnimationAutomatic];
+       withRowAnimation:UITableViewRowAnimationNone];
     }
       break;
     default:
@@ -65,7 +65,7 @@
       }
       
       [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:updatedPath]
-                              withRowAnimation:UITableViewRowAnimationAutomatic];
+                              withRowAnimation:UITableViewRowAnimationNone];
       
       if ([[self delegate] respondsToSelector: @selector(fetchDelegate:didInsertItemAtIndexPath:)]) {
         [[self delegate] fetchDelegate:self didInsertItemAtIndexPath:updatedPath];
@@ -80,7 +80,7 @@
       }
       
       [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:updatedPath]
-                              withRowAnimation:UITableViewRowAnimationAutomatic];
+                              withRowAnimation:UITableViewRowAnimationNone];
       
       if ([[self delegate] respondsToSelector:@selector(fetchDelegate:didDeleteItemAtIndexPath:)]) {
         [[self delegate] fetchDelegate:self didDeleteItemAtIndexPath:updatedPath];
@@ -99,9 +99,9 @@
       
     case NSFetchedResultsChangeMove:
       [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                              withRowAnimation:UITableViewRowAnimationAutomatic];
+                              withRowAnimation:UITableViewRowAnimationNone];
       [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
-                              withRowAnimation:UITableViewRowAnimationAutomatic];
+                              withRowAnimation:UITableViewRowAnimationNone];
       if ([[self delegate] respondsToSelector:@selector(fetchDelegate:didMoveItemFromIndexPath:toIndexPath:)]) {
         [[self delegate] fetchDelegate:self
               didMoveItemFromIndexPath:indexPath
