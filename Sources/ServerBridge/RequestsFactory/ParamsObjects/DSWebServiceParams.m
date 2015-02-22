@@ -62,13 +62,13 @@
   }
 }
 
-+ (id)params
++ (instancetype)params
 {
   return [[[self class] alloc] init];
 }
 
-+ (id)paramsForEntityName:(NSString *)theEntityName
-            operationType:(DSWebServiceOperationType)theOperationType
++ (instancetype)paramsForEntityName:(NSString *)theEntityName
+                      operationType:(DSWebServiceOperationType)theOperationType
 {
   NSAssert([theEntityName hasPrefix:[self classPrefix]], nil);
 

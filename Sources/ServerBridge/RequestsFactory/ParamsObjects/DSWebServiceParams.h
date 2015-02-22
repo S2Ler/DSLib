@@ -24,11 +24,11 @@
 - (DSEntityDefinition *)entityDefinitionWithClass:(Class)theDefinitionClass;
 - (void)loadParamsValuesFromDefinition:(DSEntityDefinition *)theDefinition;
 
-+ (id)params;
++ (instancetype)params;
 //TODO: adapt docs
 /** \param theEntityName like: OCalendar, OToDo, etc */
-+ (id)paramsForEntityName:(NSString *)theEntityName
-            operationType:(DSWebServiceOperationType)theOperationType;
++ (instancetype)paramsForEntityName:(NSString *)theEntityName
+                      operationType:(DSWebServiceOperationType)theOperationType;
 
 + (BOOL)isCorrespondsToRequest:(id<DSWebServiceRequest>)theRequest;
 
