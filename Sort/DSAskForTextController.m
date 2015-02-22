@@ -68,20 +68,42 @@
           isTextValidTester:(BOOL(^)(NSString *))isTextValid
              withCompletion:(DSAskForTextControllerCompletion)completion
 {
-  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
-                                                      message:nil
-                                                     delegate:self
-                                            cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
-                                            otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
+  DSAskForTextControllerConfig *config = [DSAskForTextControllerConfig config];
+  config.options = options;
+  config.isTextValidTester = isTextValid;
+  config.completion = completion;
   
-  NSMutableDictionary *userInfo = [alertView objectUserInfo];
-  userInfo[@"completion"] = completion;
-  userInfo[@"options"] = @(options);
-  if (isTextValid) {
-    userInfo[@"isTextValidTester"] = isTextValid;
+  [self askForTextWithTitle:title placeholder:placeholder initialText:initialText config:config];
+}
+
+- (void)askForTextWithTitle:(NSString *)title
+                placeholder:(NSString *)placeholder
+                initialText:(NSString *)initialText
+                     config:(DSAskForTextControllerConfig *)config
+{
+  NSString *cancelButtonTitle = config.cancelButtonTitle;
+  if (!cancelButtonTitle) {
+    cancelButtonTitle = NSLocalizedString(@"Cancel", nil);
   }
   
-  if (options & DSAskForTextControllerOptionSecure) {
+  NSString *okButtonTitle = config.okButtonTitle;
+  if (!okButtonTitle) {
+    okButtonTitle = NSLocalizedString(@"OK", nil);
+  }
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title ? title : @""
+                                                      message:nil
+                                                     delegate:self
+                                            cancelButtonTitle:cancelButtonTitle
+                                            otherButtonTitles:okButtonTitle, nil];
+  
+  NSMutableDictionary *userInfo = [alertView objectUserInfo];
+  userInfo[@"completion"] = config.completion;
+  userInfo[@"options"] = @(config.options);
+  if (config.isTextValidTester) {
+    userInfo[@"isTextValidTester"] = config.isTextValidTester;
+  }
+  
+  if (config.options & DSAskForTextControllerOptionSecure) {
     [alertView setAlertViewStyle:UIAlertViewStyleSecureTextInput];
   }
   else {
@@ -97,7 +119,7 @@
   [[self alertViews] addObject:alertView];
   [alertView show];
   
-  NSAssert(!(options & DSAskForTextControllerOptionPlaceholderIsValidText) || ((options & DSAskForTextControllerOptionPlaceholderIsValidText) && [placeholder length] > 0), @"DSAskForTextControllerOptionPlaceholderIsValidText is only valid with non empty placeholder");
+  NSAssert(!(config.options & DSAskForTextControllerOptionPlaceholderIsValidText) || ((config.options & DSAskForTextControllerOptionPlaceholderIsValidText) && [placeholder length] > 0), @"DSAskForTextControllerOptionPlaceholderIsValidText is only valid with non empty placeholder");
 }
 
 - (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
@@ -151,4 +173,13 @@
   
   [[self alertViews] removeObject:alertView];
 }
+@end
+
+@implementation DSAskForTextControllerConfig
+
++ (instancetype)config
+{
+  return [self new];
+}
+
 @end

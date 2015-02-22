@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class DSAskForTextControllerConfig;
+
 typedef void (^DSAskForTextControllerCompletion) (BOOL success, NSString *text);
 
 typedef NS_OPTIONS(NSUInteger, DSAskForTextControllerOptions) {
@@ -39,5 +41,19 @@ typedef NS_OPTIONS(NSUInteger, DSAskForTextControllerOptions) {
           isTextValidTester:(BOOL(^)(NSString *))isTextValid
              withCompletion:(DSAskForTextControllerCompletion)completion;
 
+- (void)askForTextWithTitle:(NSString *)title
+                placeholder:(NSString *)placeholder
+                initialText:(NSString *)initialText
+                     config:(DSAskForTextControllerConfig *)config;
 
+@end
+
+@interface DSAskForTextControllerConfig: NSObject
+@property (nonatomic, assign) DSAskForTextControllerOptions options;
+@property (nonatomic, copy) BOOL(^isTextValidTester)(NSString *);
+@property (nonatomic, copy) DSAskForTextControllerCompletion completion;
+@property (nonatomic, strong) NSString *cancelButtonTitle;
+@property (nonatomic, strong) NSString *okButtonTitle;
+
++ (instancetype)config;
 @end
