@@ -21,6 +21,7 @@ return _sharedObject;
 #define CASSERT_MAIN_THREAD NSCAssert([[NSThread currentThread] isEqual:[NSThread mainThread]], @"This block should run main thread.")
 
 #define DS_DESIGNATED_INIT NS_DESIGNATED_INITIALIZER
+#define DS_ABSTRACT_METHOD
 
 #define DISPATCH_AFTER_SECONDS_Q(TIME_IN_SECONDS, BLOCK, queue) {double delayInSeconds = TIME_IN_SECONDS;dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));dispatch_after(popTime, queue, BLOCK);}
 #define DISPATCH_AFTER_SECONDS(TIME_IN_SECONDS, BLOCK) {DISPATCH_AFTER_SECONDS_Q(TIME_IN_SECONDS, BLOCK, dispatch_get_main_queue())}
