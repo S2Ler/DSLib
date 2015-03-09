@@ -56,26 +56,26 @@
   
   long double size = theSizeInBytes;
   
-  if (size > divider)
+  if (size >= divider)
   {
     size /= divider;
     sizeUnit = @"KB";
   }
-  if (size > divider)
+  if (size >= divider)
   {
     size /= divider;
     sizeUnit = @"MB";
   }
-  if (size > divider)
+  if (size >= divider)
   {
     size /= divider;
     sizeUnit = @"GB";
   }
-  if (size > divider) {
+  if (size >= divider) {
     size /= divider;
     sizeUnit = @"TB";
   }
-  if (size > divider) {
+  if (size >= divider) {
     size /= divider;
     sizeUnit = @"PB";
   }
