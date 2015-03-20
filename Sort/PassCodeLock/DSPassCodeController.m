@@ -2,12 +2,17 @@
 #import "DSPassCodeController.h"
 #import "DSPassCodeControllerDelegate.h"
 #import "NSString+Extras.h"
+#import "DSConstants.h"
+#import "DSMessage.h"
 @import UIKit;
+@import LocalAuthentication;
 
 @interface DSPassCodeController ()
 {
   NSString *_PASSCODE_IDENTIFIER;
+  NSString *_TOUCH_ID_ENABLED_IDENTIFIER;
   int64_t _timerTicks;
+  LAPolicy _policy;
 }
 
 @property (nonatomic, strong) NSString *serviceName;
@@ -50,6 +55,15 @@
   return _PASSCODE_IDENTIFIER;
 }
 
+- (NSString *)TOUCH_ID_ENABLED_IDENTIFIER
+{
+  if (!_TOUCH_ID_ENABLED_IDENTIFIER) {
+    _TOUCH_ID_ENABLED_IDENTIFIER = [NSString stringWithFormat:@"touch_id_enabled:%@", self.uniqueID];
+  }
+
+  return _TOUCH_ID_ENABLED_IDENTIFIER;
+}
+
 - (void)setUniqueID:(NSString *)uniqueID
 {
   _PASSCODE_IDENTIFIER = nil;
@@ -60,16 +74,17 @@
 {
   self = [super init];
   if (self) {
+    _policy = LAPolicyDeviceOwnerAuthenticationWithBiometrics;
     [self setUniqueID:uniqueID];
     _serviceName = serviceName;
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(applicationDidBecomeActive:)
-                                                 name:UIApplicationDidBecomeActiveNotification
+                                                 name:UIApplicationWillEnterForegroundNotification
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(applicationWillResignActive:)
-                                                 name:UIApplicationWillResignActiveNotification
+                                                 name:UIApplicationDidEnterBackgroundNotification
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(applicationWillTerminateNotification:)
@@ -274,6 +289,96 @@
 {
   NSMutableDictionary *query = [self newQueryForIdentifier:identifier];
   SecItemDelete((__bridge CFDictionaryRef) query);
+}
+
+#pragma mark - TouchID
+- (BOOL)isTouchIDAvailable
+{
+  LAContext *context = [LAContext new];
+  return [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:nil];
+}
+
+- (BOOL)isTouchIDLockEnabled
+{
+  NSNumber *touchIDEnabled = (NSNumber *)[self searchKeychainValueCopyMatching:[self TOUCH_ID_ENABLED_IDENTIFIER]];
+  return [touchIDEnabled boolValue];
+}
+
+- (void)setIsTouchIDLockEnabled:(BOOL)enabled
+{
+  [self setKeychainValue:@(enabled) forIdentifier:[self TOUCH_ID_ENABLED_IDENTIFIER]];
+}
+
+- (BOOL)isCancelCode:(NSError *)error
+{
+  NSInteger errorCode = error.code;
+  return (errorCode == LAErrorUserCancel ||
+          errorCode == LAErrorSystemCancel ||
+          errorCode == LAErrorAuthenticationFailed ||
+          errorCode == LAErrorUserFallback);
+}
+
+- (void)enabledTouchIDWithCompletion:(ds_completion_handler)completion
+{
+  const BOOL touchIDAvailable = [self isTouchIDAvailable];
+  [self setIsTouchIDLockEnabled:touchIDAvailable];
+  completion(touchIDAvailable, NO_MESSAGE);
+  
+//  LAContext *context = [LAContext new];
+//  context.localizedFallbackTitle = nil;
+//
+//  [context evaluatePolicy:_policy localizedReason:NSLocalizedString(@"Place your finger on home button to allow your fingerprint to unlock FlipDrive", nil)
+//                    reply:^(BOOL success, NSError *error) {
+//                      [self setIsTouchIDLockEnabled:success];
+//                      
+//                      dispatch_async(dispatch_get_main_queue(), ^{
+//                        if (success) {
+//                          completion(SUCCEED_WITH_MESSAGE, NO_MESSAGE);
+//                        }
+//                        else {
+//                          DSMessage *errorMessage = nil;
+//                          if (![self isCancelCode:error]) {
+//                            errorMessage = [DSMessage messageWithError:error];
+//                          }
+//
+//                          completion(FAILED_WITH_MESSAGE, errorMessage);
+//                        }
+//                      });
+//                    }];
+}
+
+- (void)unlockUsingTouchIDWithCompletion:(ds_completion_handler)completion
+{
+  if (![self isTouchIDLockEnabled]) {
+    completion(FAILED_WITH_MESSAGE, NO_MESSAGE);
+    return;
+  }
+  
+  LAContext *context = [LAContext new];
+  context.localizedFallbackTitle = NSLocalizedString(@"Enter Passcode", nil);
+
+  [context evaluatePolicy:_policy
+          localizedReason:NSLocalizedString(@"settings.unlockFlipDrive", nil)
+                    reply:^(BOOL success, NSError *error) {
+                      dispatch_async(dispatch_get_main_queue(), ^{
+                        if (success) {
+                          [self unlock];
+                          completion(SUCCEED_WITH_MESSAGE, NO_MESSAGE);
+                        }
+                        else {
+                          DSMessage *errorMessage = nil;
+                          if (![self isCancelCode:error]) {
+                            errorMessage = [DSMessage messageWithError:error];
+                          }
+                          completion(FAILED_WITH_MESSAGE, errorMessage);
+                        }
+                      });
+                    }];
+}
+
+- (void)disableTouchID
+{
+  [self setKeychainValue:@(false) forIdentifier:[self TOUCH_ID_ENABLED_IDENTIFIER]];
 }
 
 @end

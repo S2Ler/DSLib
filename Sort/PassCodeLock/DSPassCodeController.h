@@ -1,4 +1,4 @@
-
+#import "DSConstants.h"
 @import Foundation;
 #import "DSPassCodeControllerDelegate.h"
 
@@ -24,5 +24,12 @@
 
 /** unlock PassCodeStorage if aPass is equal to stored in the secure storage */
 - (BOOL)unlockWithPassCode:(NSString *)aPass;
+
+#pragma mark - TOUCH ID
+- (BOOL)isTouchIDAvailable;
+- (BOOL)isTouchIDLockEnabled;
+- (void)enabledTouchIDWithCompletion:(ds_completion_handler)completion;
+- (void)unlockUsingTouchIDWithCompletion:(ds_completion_handler)completion;
+- (void)disableTouchID;
 
 @end
