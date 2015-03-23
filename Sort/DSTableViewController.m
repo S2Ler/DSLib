@@ -8,7 +8,7 @@
 
 #import "DSTableViewController.h"
 #import "DSKeyboardController.h"
-#import <DSLib/DSFieldValidationController.h>
+#import <DSLibFramework/DSFieldValidationController.h>
 
 @interface DSTableViewController () {
   DSFieldValidationController *_validationController;

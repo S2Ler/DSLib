@@ -99,7 +99,7 @@
       
     case NSFetchedResultsChangeMove:
       [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                              withRowAnimation:UITableViewRowAnimationFade];
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
       [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
                               withRowAnimation:UITableViewRowAnimationAutomatic];
       if ([[self delegate] respondsToSelector:@selector(fetchDelegate:didMoveItemFromIndexPath:toIndexPath:)]) {

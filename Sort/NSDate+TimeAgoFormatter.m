@@ -7,8 +7,8 @@
 //
 
 #import "NSDate+TimeAgoFormatter.h"
-#import <DSLib/DSTimeFunctions.h>
-#import <DSLib/DSMacros.h>
+#import <DSLibFramework/DSTimeFunctions.h>
+#import <DSLibFramework/DSMacros.h>
 #import "NSDate+DateTools.h"
 #import <syslog.h>
 
