@@ -77,6 +77,9 @@
   
   CGContextDrawLinearGradient(context, gradient,
                               startPoint, endPoint, 0);
+  
+  CGGradientRelease(gradient);
+  free(locations);
 }
 
 @end
