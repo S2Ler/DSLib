@@ -160,6 +160,7 @@ FOUNDATION_EXPORT const unsigned char DSLibFrameworkVersionString[];
 #import <DSLibFramework/DSGetPhotosPermissions.h>
 #import <DSLibFramework/WYPopoverController.h>
 #import <DSLibFramework/WYStoryboardPopoverSegue.h>
-
-
-
+#import <DSLibFramework/DSViewsStack.h>
+#import <DSLibFramework/DSViewsStackAnimationDirection.h>
+#import <DSLibFramework/DSViewsStackDelegate.h>
+#import <DSLibFramework/DSViewsStackDataSource.h>

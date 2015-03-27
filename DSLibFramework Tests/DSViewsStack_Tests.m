@@ -8,9 +8,7 @@
 
 #pragma mark - include
 #import <XCTest/XCTest.h>
-#import "DSViewsStack.h"
-#import "DSViewsStackDelegate.h"
-#import "DSViewsStackDataSource.h"
+@import DSLibFramework;
 
 @interface DSViewsStack_Tests : XCTestCase<DSViewsStackDelegate, DSViewsStackDataSource>
 @property (nonatomic, strong) DSViewsStack *viewsStack;
