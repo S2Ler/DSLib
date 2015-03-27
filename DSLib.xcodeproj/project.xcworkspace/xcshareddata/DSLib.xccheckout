@@ -10,33 +10,49 @@
 	<string>DSLib</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>3436080B-9ABE-4680-B920-A82F025A840D</key>
-		<string>ssh://bitbucket.org/diejmon/dslib.git</string>
-		<key>7013BDBB-E368-4B78-85E8-9CE8F5C92EC6</key>
+		<key>18030B5112E4743F2CDD69CFF074D529EA063310</key>
 		<string>https://github.com/diejmon/MAObjCRuntime.git</string>
+		<key>2F8EEF5317AA69F11A949659E3B8464B01ACB933</key>
+		<string>https://github.com/diejmon/DSLib.git</string>
+		<key>7A5956F059676DA113B1AB93EE84E5C408348809</key>
+		<string>https://github.com/sammcewan/WYPopoverController.git</string>
+		<key>F8622BA04EBD09F8BA8DC9C0C199149407552BFA</key>
+		<string>https://github.com/MatthewYork/DateTools.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DSLib.xcodeproj/project.xcworkspace</string>
+	<string>DSLib.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>3436080B-9ABE-4680-B920-A82F025A840D</key>
+		<key>18030B5112E4743F2CDD69CFF074D529EA063310</key>
+		<string>../..MAObjCRuntime/</string>
+		<key>2F8EEF5317AA69F11A949659E3B8464B01ACB933</key>
 		<string>../..</string>
-		<key>7013BDBB-E368-4B78-85E8-9CE8F5C92EC6</key>
-		<string>../../MAObjCRuntime</string>
+		<key>7A5956F059676DA113B1AB93EE84E5C408348809</key>
+		<string>../..WYPopoverController/</string>
+		<key>F8622BA04EBD09F8BA8DC9C0C199149407552BFA</key>
+		<string>../..DateTools/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://bitbucket.org/diejmon/dslib.git</string>
+	<string>https://github.com/diejmon/DSLib.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3436080B-9ABE-4680-B920-A82F025A840D</string>
+	<string>2F8EEF5317AA69F11A949659E3B8464B01ACB933</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3436080B-9ABE-4680-B920-A82F025A840D</string>
+			<string>F8622BA04EBD09F8BA8DC9C0C199149407552BFA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DateTools</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2F8EEF5317AA69F11A949659E3B8464B01ACB933</string>
 			<key>IDESourceControlWCCName</key>
 			<string>DSLib</string>
 		</dict>
@@ -44,9 +60,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7013BDBB-E368-4B78-85E8-9CE8F5C92EC6</string>
+			<string>18030B5112E4743F2CDD69CFF074D529EA063310</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MAObjCRuntime</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7A5956F059676DA113B1AB93EE84E5C408348809</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WYPopoverController</string>
 		</dict>
 	</array>
 </dict>
