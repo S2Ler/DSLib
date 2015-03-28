@@ -11,5 +11,5 @@
 @protocol DSViewsStackDataSource <NSObject>
 - (NSUInteger)numberOfViewsInViewsStack:(DSViewsStack *)viewsStack;
 - (UIView *)viewsStack:(DSViewsStack *)viewsStack viewForIndex:(NSUInteger)viewIndex;
-- (BOOL)viewStack:(DSViewsStack *)viewsStack isView:(UIView *)view1 equalToView:(UIView *)view2;
+- (BOOL)viewStack:(DSViewsStack *)viewsStack isViewAtIndex:(NSUInteger)viewIndex equalToView:(UIView *)view2;
 @end

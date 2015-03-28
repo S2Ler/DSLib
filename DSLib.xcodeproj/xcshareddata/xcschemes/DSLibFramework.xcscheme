@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0997670E1A4F080800DDE130"
+               BlueprintIdentifier = "0950A8E51AC6E00200EF93C2"
                BuildableName = "DSLibFrameworkTests.xctest"
                BlueprintName = "DSLibFrameworkTests"
                ReferencedContainer = "container:DSLib.xcodeproj">
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0950A8C81AC5DE1000EF93C2"
-               BuildableName = "DSLibFramework Tests.xctest"
-               BlueprintName = "DSLibFramework Tests"
+               BlueprintIdentifier = "0950A8E51AC6E00200EF93C2"
+               BuildableName = "DSLibFrameworkTests.xctest"
+               BlueprintName = "DSLibFrameworkTests"
                ReferencedContainer = "container:DSLib.xcodeproj">
             </BuildableReference>
          </TestableReference>

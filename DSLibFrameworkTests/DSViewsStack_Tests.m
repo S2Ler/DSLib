@@ -162,4 +162,8 @@
   }
 }
 
+- (BOOL)viewStack:(DSViewsStack *)viewsStack isViewAtIndex:(NSUInteger)viewIndex equalToView:(UIView *)view2
+{
+  return false;
+}
 @end

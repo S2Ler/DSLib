@@ -231,14 +231,14 @@
 		094BFFD91A7A3BFA00B1481D /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BFFD51A7A3BFA00B1481D /* WYPopoverController.m */; };
 		094BFFDA1A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 094BFFD61A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		094BFFDB1A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BFFD71A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m */; };
-		0950A8D81AC5DE5100EF93C2 /* DSViewsStack_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950A8D71AC5DE5100EF93C2 /* DSViewsStack_Tests.m */; };
-		0950A8D91AC5DF5000EF93C2 /* DSLibFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099767051A4F080800DDE130 /* DSLibFramework.framework */; };
 		0950A8DC1AC5E01300EF93C2 /* DSViewsStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0950A8DD1AC5E01300EF93C2 /* DSViewsStackAnimationDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0950A8DE1AC5E01300EF93C2 /* DSViewsStackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0950A8DF1AC5E01300EF93C2 /* DSViewsStackDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0950A8E01AC5E01B00EF93C2 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
 		0950A8E11AC5E01B00EF93C2 /* DSViewsStackAnimationDirection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */; };
+		0950A8EC1AC6E00200EF93C2 /* DSLibFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099767051A4F080800DDE130 /* DSLibFramework.framework */; };
+		0950A8F31AC6E01E00EF93C2 /* DSViewsStack_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950A8F21AC6E01E00EF93C2 /* DSViewsStack_Tests.m */; };
 		0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */; };
 		095568D7195D61710081A268 /* DSEmailSharer.h in Headers */ = {isa = PBXBuildFile; fileRef = 095568D5195D61710081A268 /* DSEmailSharer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -768,19 +768,12 @@
 			remoteGlobalIDString = 09A60412182A65CF00F57F89;
 			remoteInfo = DSLibBundle;
 		};
-		0950A8D01AC5DE1000EF93C2 /* PBXContainerItemProxy */ = {
+		0950A8ED1AC6E00200EF93C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 099767041A4F080800DDE130;
 			remoteInfo = DSLibFramework;
-		};
-		0950A8DA1AC5DF7F00EF93C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 099767301A4F09B400DDE130;
-			remoteInfo = SwiftSampleProject;
 		};
 		099767581A4F09CB00DDE130 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -982,9 +975,9 @@
 		094BFFD51A7A3BFA00B1481D /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYPopoverController.m; path = WYPopoverController/WYPopoverController/WYPopoverController.m; sourceTree = SOURCE_ROOT; };
 		094BFFD61A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYStoryboardPopoverSegue.h; path = WYPopoverController/WYPopoverController/WYStoryboardPopoverSegue.h; sourceTree = SOURCE_ROOT; };
 		094BFFD71A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYStoryboardPopoverSegue.m; path = WYPopoverController/WYPopoverController/WYStoryboardPopoverSegue.m; sourceTree = SOURCE_ROOT; };
-		0950A8C91AC5DE1000EF93C2 /* DSLibFramework Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DSLibFramework Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0950A8CC1AC5DE1000EF93C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0950A8D71AC5DE5100EF93C2 /* DSViewsStack_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack_Tests.m; sourceTree = "<group>"; };
+		0950A8E61AC6E00200EF93C2 /* DSLibFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLibFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0950A8E91AC6E00200EF93C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0950A8F21AC6E01E00EF93C2 /* DSViewsStack_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack_Tests.m; sourceTree = "<group>"; };
 		0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DSAdditions.h"; sourceTree = "<group>"; };
 		0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DSAdditions.m"; sourceTree = "<group>"; };
 		095568D5195D61710081A268 /* DSEmailSharer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEmailSharer.h; sourceTree = "<group>"; };
@@ -1237,11 +1230,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0950A8C61AC5DE1000EF93C2 /* Frameworks */ = {
+		0950A8E31AC6E00200EF93C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0950A8D91AC5DF5000EF93C2 /* DSLibFramework.framework in Frameworks */,
+				0950A8EC1AC6E00200EF93C2 /* DSLibFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1680,19 +1673,19 @@
 			path = FieldValidationFramework;
 			sourceTree = "<group>";
 		};
-		0950A8CA1AC5DE1000EF93C2 /* DSLibFramework Tests */ = {
+		0950A8E71AC6E00200EF93C2 /* DSLibFrameworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				0950A8D71AC5DE5100EF93C2 /* DSViewsStack_Tests.m */,
-				0950A8CB1AC5DE1000EF93C2 /* Supporting Files */,
+				0950A8F21AC6E01E00EF93C2 /* DSViewsStack_Tests.m */,
+				0950A8E81AC6E00200EF93C2 /* Supporting Files */,
 			);
-			path = "DSLibFramework Tests";
+			path = DSLibFrameworkTests;
 			sourceTree = "<group>";
 		};
-		0950A8CB1AC5DE1000EF93C2 /* Supporting Files */ = {
+		0950A8E81AC6E00200EF93C2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0950A8CC1AC5DE1000EF93C2 /* Info.plist */,
+				0950A8E91AC6E00200EF93C2 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -2176,7 +2169,7 @@
 				09A60416182A65CF00F57F89 /* DSLibBundle */,
 				099767061A4F080800DDE130 /* DSLibFramework */,
 				099767321A4F09B400DDE130 /* SwiftSampleProject */,
-				0950A8CA1AC5DE1000EF93C2 /* DSLibFramework Tests */,
+				0950A8E71AC6E00200EF93C2 /* DSLibFrameworkTests */,
 				AED6C1951465E55000D9B44E /* Frameworks */,
 				AED6C1941465E55000D9B44E /* Products */,
 			);
@@ -2191,7 +2184,7 @@
 				09A60413182A65CF00F57F89 /* DSLib.bundle */,
 				099767051A4F080800DDE130 /* DSLibFramework.framework */,
 				099767311A4F09B400DDE130 /* SwiftSampleProject.app */,
-				0950A8C91AC5DE1000EF93C2 /* DSLibFramework Tests.xctest */,
+				0950A8E61AC6E00200EF93C2 /* DSLibFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2661,23 +2654,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0950A8C81AC5DE1000EF93C2 /* DSLibFramework Tests */ = {
+		0950A8E51AC6E00200EF93C2 /* DSLibFrameworkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0950A8D41AC5DE1000EF93C2 /* Build configuration list for PBXNativeTarget "DSLibFramework Tests" */;
+			buildConfigurationList = 0950A8EF1AC6E00200EF93C2 /* Build configuration list for PBXNativeTarget "DSLibFrameworkTests" */;
 			buildPhases = (
-				0950A8C51AC5DE1000EF93C2 /* Sources */,
-				0950A8C61AC5DE1000EF93C2 /* Frameworks */,
-				0950A8C71AC5DE1000EF93C2 /* Resources */,
+				0950A8E21AC6E00200EF93C2 /* Sources */,
+				0950A8E31AC6E00200EF93C2 /* Frameworks */,
+				0950A8E41AC6E00200EF93C2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0950A8D11AC5DE1000EF93C2 /* PBXTargetDependency */,
-				0950A8DB1AC5DF7F00EF93C2 /* PBXTargetDependency */,
+				0950A8EE1AC6E00200EF93C2 /* PBXTargetDependency */,
 			);
-			name = "DSLibFramework Tests";
-			productName = "DSLibFramework Tests";
-			productReference = 0950A8C91AC5DE1000EF93C2 /* DSLibFramework Tests.xctest */;
+			name = DSLibFrameworkTests;
+			productName = DSLibFrameworkTests;
+			productReference = 0950A8E61AC6E00200EF93C2 /* DSLibFrameworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		099767041A4F080800DDE130 /* DSLibFramework */ = {
@@ -2761,7 +2753,7 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "DS ltd.";
 				TargetAttributes = {
-					0950A8C81AC5DE1000EF93C2 = {
+					0950A8E51AC6E00200EF93C2 = {
 						CreatedOnToolsVersion = 6.2;
 					};
 					099767041A4F080800DDE130 = {
@@ -2790,13 +2782,13 @@
 				0904155A1892E4D600302A2F /* Framework */,
 				099767041A4F080800DDE130 /* DSLibFramework */,
 				099767301A4F09B400DDE130 /* SwiftSampleProject */,
-				0950A8C81AC5DE1000EF93C2 /* DSLibFramework Tests */,
+				0950A8E51AC6E00200EF93C2 /* DSLibFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0950A8C71AC5DE1000EF93C2 /* Resources */ = {
+		0950A8E41AC6E00200EF93C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2877,11 +2869,11 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0950A8C51AC5DE1000EF93C2 /* Sources */ = {
+		0950A8E21AC6E00200EF93C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0950A8D81AC5DE5100EF93C2 /* DSViewsStack_Tests.m in Sources */,
+				0950A8F31AC6E01E00EF93C2 /* DSViewsStack_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3247,15 +3239,10 @@
 			target = 09A60412182A65CF00F57F89 /* DSLibBundle */;
 			targetProxy = 090415611892E5EE00302A2F /* PBXContainerItemProxy */;
 		};
-		0950A8D11AC5DE1000EF93C2 /* PBXTargetDependency */ = {
+		0950A8EE1AC6E00200EF93C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 099767041A4F080800DDE130 /* DSLibFramework */;
-			targetProxy = 0950A8D01AC5DE1000EF93C2 /* PBXContainerItemProxy */;
-		};
-		0950A8DB1AC5DF7F00EF93C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 099767301A4F09B400DDE130 /* SwiftSampleProject */;
-			targetProxy = 0950A8DA1AC5DF7F00EF93C2 /* PBXContainerItemProxy */;
+			targetProxy = 0950A8ED1AC6E00200EF93C2 /* PBXContainerItemProxy */;
 		};
 		099767591A4F09CB00DDE130 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3306,7 +3293,7 @@
 			};
 			name = Release;
 		};
-		0950A8D21AC5DE1000EF93C2 /* Debug */ = {
+		0950A8F01AC6E00200EF93C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -3325,7 +3312,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "DSLibFramework Tests/Info.plist";
+				INFOPLIST_FILE = DSLibFrameworkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -3333,7 +3320,7 @@
 			};
 			name = Debug;
 		};
-		0950A8D31AC5DE1000EF93C2 /* Release */ = {
+		0950A8F11AC6E00200EF93C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -3350,7 +3337,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "DSLibFramework Tests/Info.plist";
+				INFOPLIST_FILE = DSLibFrameworkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -3678,11 +3665,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0950A8D41AC5DE1000EF93C2 /* Build configuration list for PBXNativeTarget "DSLibFramework Tests" */ = {
+		0950A8EF1AC6E00200EF93C2 /* Build configuration list for PBXNativeTarget "DSLibFrameworkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0950A8D21AC5DE1000EF93C2 /* Debug */,
-				0950A8D31AC5DE1000EF93C2 /* Release */,
+				0950A8F01AC6E00200EF93C2 /* Debug */,
+				0950A8F11AC6E00200EF93C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
