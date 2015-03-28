@@ -9,6 +9,7 @@
 #pragma mark - include
 #import <XCTest/XCTest.h>
 @import DSLibFramework;
+@import Expecta;
 
 @interface DSViewsStack_Tests : XCTestCase<DSViewsStackDelegate, DSViewsStackDataSource>
 @property (nonatomic, strong) DSViewsStack *viewsStack;
@@ -43,7 +44,7 @@
 
 - (void)testCreationPossible
 {
-  XCTAssertNotNil([self viewsStack], @"Can't create views stack");
+  expect(self.viewsStack).notTo.beNil();
 }
 
 - (void)testDelegateCanBeSet
