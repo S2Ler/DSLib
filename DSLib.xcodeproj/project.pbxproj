@@ -3799,6 +3799,7 @@
 				0950A8F11AC6E00200EF93C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0997671C1A4F080800DDE130 /* Build configuration list for PBXNativeTarget "DSLibFramework" */ = {
 			isa = XCConfigurationList;
