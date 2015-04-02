@@ -10,7 +10,6 @@
 #import "DSWebServiceParams.h"
 
 @interface DSMessageInterceptor ()
-@property (nonatomic, copy) ds_completion_handler handler;
 @property (nonatomic, strong) NSMutableArray *excludedParams;
 @end
 
@@ -53,6 +52,9 @@
     [copy setDomain:self.domain];
     
     [copy setExcludedParams:self.excludedParams];
+    
+    copy.shouldAllowOthersToProceed = self.shouldAllowOthersToProceed;
+    copy.isActive = self.isActive;
   }
   
   return copy;

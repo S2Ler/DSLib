@@ -15,6 +15,7 @@
 #import "NSTimer+DSAdditions.h"
 #import "NSDate+DateTools.h"
 #import "DSWeakTimerTarget.h"
+#import "DSInterceptedMessageMetadata.h"
 
 #define COMPLETION_USER_INFO_KEY @"Completion"
 #define REQUEST_SUCCESSFUL_HANDLER_USER_INFO_KEY @"Request Successful"
@@ -195,6 +196,11 @@ static NSMapTable *interceptorsMap = nil;
   }
 }
 
++ (void)removeMessageInterceptor:(DSMessageInterceptor *)interceptor
+{
+  
+}
+
 + (BOOL)hasInterceptorForMessage:(DSMessage *)message
 {
   return [[self interceptorsMap] objectForKey:message] != nil;
@@ -314,9 +320,15 @@ static NSMapTable *interceptorsMap = nil;
     if (thereIsGlobalHandler) {
       NSLog(@"%@", params);
       DSMessageInterceptor *interceptor = [DSQueueBasedRequestSender interceptorForMessage:errorMessage];
-      if ([interceptor shouldInterceptParams:params]) {
-        interceptor.handler(FAILED_WITH_MESSAGE, errorMessage);
-        errorMessage = nil;
+      if (interceptor.isActive && [interceptor shouldInterceptParams:params]) {
+        DSInterceptedMessageMetadata *interceptedMetadata = [DSInterceptedMessageMetadata new];
+        interceptedMetadata.message = errorMessage;
+        interceptedMetadata.params = params;
+        interceptor.handler(interceptedMetadata);
+        
+        if (!interceptor.shouldAllowOthersToProceed) {
+          errorMessage = nil;
+        }
       }
     }
     

@@ -262,6 +262,11 @@
 		0998E21F1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E21C1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0998E23C192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E23A192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0998E23D192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998E23B192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m */; };
+		099C4A2D1ACD823D00E65286 /* DSInterceptedMessageMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 099C4A2B1ACD823D00E65286 /* DSInterceptedMessageMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		099C4A2E1ACD823D00E65286 /* DSInterceptedMessageMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C4A2C1ACD823D00E65286 /* DSInterceptedMessageMetadata.m */; };
+		099C4A311ACD897000E65286 /* DSInterceptorsMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 099C4A2F1ACD897000E65286 /* DSInterceptorsMap.h */; };
+		099C4A321ACD897000E65286 /* DSInterceptorsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C4A301ACD897000E65286 /* DSInterceptorsMap.m */; };
+		099C4A341ACD89DE00E65286 /* DSInterceptorsMap_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C4A331ACD89DE00E65286 /* DSInterceptorsMap_Tests.m */; };
 		09A6040D182A657000F57F89 /* NSBundle+DSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */; };
 		09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */; };
 		09A60415182A65CF00F57F89 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A60414182A65CF00F57F89 /* CoreFoundation.framework */; };
@@ -753,6 +758,11 @@
 		0998E21C1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCoreDataObjectsObserverDelegate.h; sourceTree = "<group>"; };
 		0998E23A192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
 		0998E23B192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
+		099C4A2B1ACD823D00E65286 /* DSInterceptedMessageMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSInterceptedMessageMetadata.h; sourceTree = "<group>"; };
+		099C4A2C1ACD823D00E65286 /* DSInterceptedMessageMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptedMessageMetadata.m; sourceTree = "<group>"; };
+		099C4A2F1ACD897000E65286 /* DSInterceptorsMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSInterceptorsMap.h; sourceTree = "<group>"; };
+		099C4A301ACD897000E65286 /* DSInterceptorsMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptorsMap.m; sourceTree = "<group>"; };
+		099C4A331ACD89DE00E65286 /* DSInterceptorsMap_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptorsMap_Tests.m; sourceTree = "<group>"; };
 		09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DSBundle.h"; sourceTree = "<group>"; };
 		09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DSBundle.m"; sourceTree = "<group>"; };
 		09A60413182A65CF00F57F89 /* DSLib.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1510,8 +1520,12 @@
 				098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */,
 				098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */,
 				098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */,
+				099C4A2F1ACD897000E65286 /* DSInterceptorsMap.h */,
+				099C4A301ACD897000E65286 /* DSInterceptorsMap.m */,
 				09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */,
 				09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */,
+				099C4A2B1ACD823D00E65286 /* DSInterceptedMessageMetadata.h */,
+				099C4A2C1ACD823D00E65286 /* DSInterceptedMessageMetadata.m */,
 				09EFCEE819B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.h */,
 				09EFCEE919B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.m */,
 			);
@@ -1810,6 +1824,7 @@
 			isa = PBXGroup;
 			children = (
 				09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */,
+				099C4A331ACD89DE00E65286 /* DSInterceptorsMap_Tests.m */,
 			);
 			path = DSViewsStack;
 			sourceTree = "<group>";
@@ -2007,6 +2022,7 @@
 				09162C68180EE84900A0DEEF /* DSFieldValidationController.h in Headers */,
 				0903A2E517F0AC8300A21270 /* DSArrayChangeCalculator.h in Headers */,
 				0903A3B717F0AC9100A21270 /* UITableView+DSAdditions.h in Headers */,
+				099C4A311ACD897000E65286 /* DSInterceptorsMap.h in Headers */,
 				09067F311818055900C8F48F /* DSAlertQueue+Private.h in Headers */,
 				0903A3C317F0AC9100A21270 /* DSCArray.h in Headers */,
 				09F84FE018C5FA900047AA16 /* AFStreamingMultipartFormData.h in Headers */,
@@ -2085,6 +2101,7 @@
 				09B6DCF01858F5C500FB1825 /* DSPlacemarkPickerViewController.h in Headers */,
 				09F8C87618A93A7500960CC8 /* NSNumber+DSAdditions.h in Headers */,
 				0903A3F517F0AC9100A21270 /* DSSlider.h in Headers */,
+				099C4A2D1ACD823D00E65286 /* DSInterceptedMessageMetadata.h in Headers */,
 				0903A3DD17F0AC9100A21270 /* CStringsFunctions.h in Headers */,
 				0903A3CF17F0AC9100A21270 /* DSDateFormatterCache.h in Headers */,
 				09B6DCF41858F5C500FB1825 /* DSGeocodeProviderApple.h in Headers */,
@@ -2383,6 +2400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0985A14418E33143009F9F33 /* DSQueue.m in Sources */,
+				099C4A341ACD89DE00E65286 /* DSInterceptorsMap_Tests.m in Sources */,
 				09CEE83318E1E76B00B090F9 /* DSViewsStack_Tests.m in Sources */,
 				09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */,
 			);
@@ -2457,6 +2475,7 @@
 				0972E33919B6FA9F005D00F2 /* DTTimePeriodChain.m in Sources */,
 				0903A3F417F0AC9100A21270 /* DSRotatingImageView.m in Sources */,
 				0903A3F617F0AC9100A21270 /* DSSlider.m in Sources */,
+				099C4A321ACD897000E65286 /* DSInterceptorsMap.m in Sources */,
 				09B866B017F1E5C7003B1070 /* DSWebServiceNetRequest.m in Sources */,
 				09162C98180EECC100A0DEEF /* WEPopoverController.m in Sources */,
 				097F7A0D19B84F8A004B4129 /* NSTimer+DSAdditions.m in Sources */,
@@ -2531,6 +2550,7 @@
 				62DD1E3872904802D5077B3F /* DSUIAlertView.m in Sources */,
 				09162C6E180EE84900A0DEEF /* DSFieldValidationCriterion.m in Sources */,
 				09162C94180EECC100A0DEEF /* UIBarButtonItem+WEPopover.m in Sources */,
+				099C4A2E1ACD823D00E65286 /* DSInterceptedMessageMetadata.m in Sources */,
 				09F84FE118C5FA900047AA16 /* AFStreamingMultipartFormData.m in Sources */,
 				62DD1569D576C442B9DF1889 /* DSAlertsHandler.m in Sources */,
 				09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */,

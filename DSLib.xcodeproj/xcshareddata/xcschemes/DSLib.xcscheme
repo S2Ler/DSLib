@@ -37,6 +37,11 @@
                BlueprintName = "DSLib Tests"
                ReferencedContainer = "container:DSLib.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "DSViewsStack_Tests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

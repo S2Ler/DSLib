@@ -21,6 +21,7 @@ typedef void (^request_failed_block_t)(id<DSWebServiceRequest> request, DSMessag
 @property (nonatomic, assign, getter=isSuspended) BOOL suspended;
 
 + (void)addMessageInterceptor:(DSMessageInterceptor *)interceptor;
++ (void)removeMessageInterceptor:(DSMessageInterceptor *)interceptor;
 
 @end
 
