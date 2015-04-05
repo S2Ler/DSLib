@@ -14,6 +14,8 @@
 
 /** Can intercept only messages without params */
 @interface DSMessageInterceptor : NSObject<NSCopying>
+@property (nonatomic, strong) NSString *uniqueKey;
+
 /** Default yes */
 @property (nonatomic, assign) BOOL isActive;
 @property (nonatomic, strong) DSMessageDomain *domain;

@@ -186,6 +186,9 @@
   }
   else {
     dispatch_async([self delegateQueue], ^{
+      if (self.shouldStopAfterObtainingLocation) {
+        [self deactivate];
+      }
       if ([self failedBlock]) {
         [self failedBlock](error);
       }

@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DSInterceptorsMap : NSObject
+@class DSMessageInterceptor;
+@class DSMessage;
 
+@interface DSInterceptorsMap : NSObject
+- (void)addInterceptor:(DSMessageInterceptor *)interceptor;
+- (void)removeInterceptor:(DSMessageInterceptor *)interceptor;
+- (NSMutableArray *)interceptorsForMessage:(DSMessage *)message;
 @end

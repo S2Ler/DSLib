@@ -93,6 +93,7 @@
 - (BOOL)showNextViewAnimated:(BOOL)animated
           animationDirection:(DSViewsStackAnimationDirection)direction
                        delay:(NSTimeInterval)delay
+                    velocity:(CGPoint)velocity
 {
   if ([[self delegate] respondsToSelector:@selector(viewsStack:willRemoveViewAtIndex:inDirection:)]) {
     [[self delegate] viewsStack:self
@@ -111,9 +112,16 @@
                        }
                animationDirection:direction
                             delay:delay
-];
+                         velocity:velocity];
   
   return increased;
+}
+
+- (BOOL)showNextViewAnimated:(BOOL)animated
+          animationDirection:(DSViewsStackAnimationDirection)direction
+                       delay:(NSTimeInterval)delay
+{
+  return [self showNextViewAnimated:animated animationDirection:direction delay:delay velocity:CGPointZero];
 }
 
 - (BOOL)showNextViewWithoutAnimation
@@ -165,6 +173,7 @@
                        completion:(void(^)(UIView *))completion
                animationDirection:(DSViewsStackAnimationDirection)direction
                             delay:(NSTimeInterval)delay
+                         velocity:(CGPoint)velocity
 {
   UIView *topView = [self topView];
   
@@ -174,45 +183,90 @@
     if ([[self delegate] respondsToSelector:@selector(viewsStack:willAutomaticallyMoveViewOutOfScreen:direction:)]) {
       [[self delegate] viewsStack:self willAutomaticallyMoveViewOutOfScreen:topView direction:direction];
     }
-
-    DISPATCH_AFTER_SECONDS(delay, ^{
-      [UIView animateWithDuration:0.25
+    
+    if (CGPointEqualToPoint(velocity, CGPointZero)) {
+      if (direction == DSViewsStackAnimationDirectionLeft) {
+        velocity = CGPointMake(-1, 0);
+      }
+      else if (direction == DSViewsStackAnimationDirectionRight) {
+        velocity = CGPointMake(1, 0);
+      }
+      else if (direction == DSViewsStackAnimationDirectionTop) {
+        velocity = CGPointMake(0, -1);
+      }
+      else if (direction == DSViewsStackAnimationDirectionBottom) {
+        velocity = CGPointMake(0, 1);
+      }
+      velocity.x *= 1500;
+      velocity.y *= 1500;
+    }
+    
+    void (^animationBlock)() = ^{
+      const CGPoint startCenter = topView.center;
+      CGPoint endCenter = startCenter;
+      
+      const CGFloat viewWidth = self.bounds.size.width;
+      const CGFloat viewHeight = self.bounds.size.height;
+      
+      CGFloat moveDistance = sqrt(pow(viewWidth, 2) + pow(viewHeight, 2));
+      const CGFloat v_x = velocity.x;
+      const CGFloat v_y = velocity.y;
+      CGFloat v_d = sqrt(pow(v_x, 2) + pow(v_y, 2));
+      const CGFloat cosAlpha = v_x / v_d;
+      const CGFloat sinAlpha = v_y / v_d;
+      
+      if (v_d < 400) {
+        v_d = 400;
+      }
+      
+      const CGFloat d_x = moveDistance * cosAlpha;
+      const CGFloat d_y = moveDistance * sinAlpha;
+      
+      endCenter.x += d_x;
+      endCenter.y += d_y;
+      
+      const NSTimeInterval duration = moveDistance / v_d;
+      
+      //      if (direction == DSViewsStackAnimationDirectionTop
+      //          || direction == DSViewsStackAnimationDirectionBottom) {
+      //        x = [self frame].size.width/2.0;
+      //        if (direction == DSViewsStackAnimationDirectionTop) {
+      //          y = -[topView frame].size.height/2.0;
+      //        }
+      //        else {
+      //          y = [self frame].size.height + [topView frame].size.height/2.0;
+      //        }
+      //      }
+      //
+      //      if (direction == DSViewsStackAnimationDirectionLeft ||
+      //          direction == DSViewsStackAnimationDirectionRight) {
+      //        y = [self frame].size.height/2.0;
+      //        if (direction == DSViewsStackAnimationDirectionLeft) {
+      //          x = -[topView frame].size.width/2.0;
+      //        }
+      //        else {
+      //          x = +[self frame].size.width + [topView frame].size.width/2.0;
+      //        }
+      //      }
+      
+      [UIView animateWithDuration:duration
                        animations:^{
-                         CGFloat x = 0;// = -[topView frame].size.width/2.0;
-                         CGFloat y = 0;// = [self frame].size.height/2.0;
-                         
-                         if (direction == DSViewsStackAnimationDirectionTop
-                             || direction == DSViewsStackAnimationDirectionBottom) {
-                           x = [self frame].size.width/2.0;
-                           if (direction == DSViewsStackAnimationDirectionTop) {
-                             y = -[topView frame].size.height/2.0;
-                           }
-                           else {
-                             y = [self frame].size.height + [topView frame].size.height/2.0;
-                           }
-                         }
-                         
-                         if (direction == DSViewsStackAnimationDirectionLeft ||
-                             direction == DSViewsStackAnimationDirectionRight) {
-                           y = [self frame].size.height/2.0;
-                           if (direction == DSViewsStackAnimationDirectionLeft) {
-                             x = -[topView frame].size.width/2.0;
-                           }
-                           else {
-                             x = +[self frame].size.width + [topView frame].size.width/2.0;
-                           }
-                         }
-                         
-                         [topView setCenter:CGPointMake(x, y)];
+                         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+                         [topView setCenter:endCenter];
                          [self updateViewRotation:topView];
                        } completion:^(BOOL finished) {
                          [[UIApplication sharedApplication] endIgnoringInteractionEvents];
                          [topView removeFromSuperview];
                          completion(topView);
                        }];
-    });
+    };
     
-    
+    if (delay == 0) {
+      animationBlock();
+    }
+    else {
+      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), animationBlock);
+    }
   }
   else if (topView) {
     [topView removeFromSuperview];
@@ -221,6 +275,14 @@
   else {
     completion(nil);
   }
+}
+
+- (void)removeViewFromTopAnimated:(BOOL)animated
+                       completion:(void(^)(UIView *))completion
+               animationDirection:(DSViewsStackAnimationDirection)direction
+                            delay:(NSTimeInterval)delay
+{
+  [self removeViewFromTopAnimated:animated completion:completion animationDirection:direction delay:delay velocity:CGPointZero];
 }
 
 #pragma mark - views moving
@@ -302,7 +364,7 @@
       __weak DSViewsStack *weakSelf = self;
       
       void (^block)() = ^{
-        [weakSelf showNextViewAnimated:YES animationDirection:draggedSide delay:0];
+        [weakSelf showNextViewAnimated:YES animationDirection:draggedSide delay:0 velocity:[recognizer velocityInView:self]];
       };
       
       if (draggedSide == DSViewsStackAnimationDirectionNone) {

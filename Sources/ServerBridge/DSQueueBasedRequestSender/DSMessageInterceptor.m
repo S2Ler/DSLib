@@ -8,12 +8,22 @@
 
 #import "DSMessageInterceptor.h"
 #import "DSWebServiceParams.h"
+#import "NSObject+DSAdditions.h"
 
 @interface DSMessageInterceptor ()
 @property (nonatomic, strong) NSMutableArray *excludedParams;
 @end
 
 @implementation DSMessageInterceptor
+
+- (instancetype)init
+{
+  self = [super init];
+  if (self) {
+    _isActive = true;
+  }
+  return self;
+}
 
 - (NSMutableArray *)excludedParams
 {
@@ -54,7 +64,6 @@
     [copy setExcludedParams:self.excludedParams];
     
     copy.shouldAllowOthersToProceed = self.shouldAllowOthersToProceed;
-    copy.isActive = self.isActive;
   }
   
   return copy;
@@ -72,4 +81,8 @@
   return ![self.excludedParams containsObject:[params class]];
 }
 
+- (NSString *)debugDescription
+{
+  return [self longDescription];
+}
 @end

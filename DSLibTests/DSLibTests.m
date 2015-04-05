@@ -1,24 +1,23 @@
 //
-//  DSInterceptorsMap_Tests.m
-//  DSLib
+//  DSLibTests.m
+//  DSLibTests
 //
-//  Created by Alexander Belyavskiy on 4/2/15.
+//  Created by Alexander Belyavskiy on 4/4/15.
 //  Copyright (c) 2015 DS ltd. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "DSInterceptorsMap.h"
 
-@interface DSInterceptorsMap_Tests : XCTestCase
-@property (nonatomic, strong) DSInterceptorsMap *interceptorsMap;
+@interface DSLibTests : XCTestCase
+
 @end
 
-@implementation DSInterceptorsMap_Tests
+@implementation DSLibTests
 
 - (void)setUp {
     [super setUp];
-  
+    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {

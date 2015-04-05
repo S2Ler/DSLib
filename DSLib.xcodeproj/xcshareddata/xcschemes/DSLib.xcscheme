@@ -32,18 +32,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09CEE81818E1E6EB00B090F9"
-               BuildableName = "DSLib Tests.xctest"
-               BlueprintName = "DSLib Tests"
+               BlueprintIdentifier = "09E2A8F31ACFF3CB00566461"
+               BuildableName = "DSLibTests.xctest"
+               BlueprintName = "DSLibTests"
                ReferencedContainer = "container:DSLib.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "DSViewsStack_Tests">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AED6C1921465E55000D9B44E"
+            BuildableName = "libDSLib.a"
+            BlueprintName = "DSLib"
+            ReferencedContainer = "container:DSLib.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -72,6 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AED6C1921465E55000D9B44E"
+            BuildableName = "libDSLib.a"
+            BlueprintName = "DSLib"
+            ReferencedContainer = "container:DSLib.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

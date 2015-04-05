@@ -244,8 +244,6 @@
 		097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0982EB7D18E1E97500F9DFF2 /* DSViewsStackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0982EB7F18E1EA6000F9DFF2 /* DSViewsStackDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0982EB8918E1F40A00F9DFF2 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0982EB8118E1F40A00F9DFF2 /* libOCMock.a */; };
-		0985A14418E33143009F9F33 /* DSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33017F0AC9100A21270 /* DSQueue.m */; };
 		098783CF18C1F39700C838A2 /* DSCodingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSCodingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098783D018C1F39700C838A2 /* DSCodingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSCodingTransformer.m */; };
 		0987FB7419C6E15A007D1C55 /* DSRelativePath.h in Headers */ = {isa = PBXBuildFile; fileRef = 0987FB7219C6E15A007D1C55 /* DSRelativePath.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -266,7 +264,6 @@
 		099C4A2E1ACD823D00E65286 /* DSInterceptedMessageMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C4A2C1ACD823D00E65286 /* DSInterceptedMessageMetadata.m */; };
 		099C4A311ACD897000E65286 /* DSInterceptorsMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 099C4A2F1ACD897000E65286 /* DSInterceptorsMap.h */; };
 		099C4A321ACD897000E65286 /* DSInterceptorsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C4A301ACD897000E65286 /* DSInterceptorsMap.m */; };
-		099C4A341ACD89DE00E65286 /* DSInterceptorsMap_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C4A331ACD89DE00E65286 /* DSInterceptorsMap_Tests.m */; };
 		09A6040D182A657000F57F89 /* NSBundle+DSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */; };
 		09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */; };
 		09A60415182A65CF00F57F89 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A60414182A65CF00F57F89 /* CoreFoundation.framework */; };
@@ -385,18 +382,15 @@
 		09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09CDC39419260E4600C49EEA /* DSViewsStackAnimationDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09CDC39519260E4600C49EEA /* DSViewsStackAnimationDirection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */; };
-		09CEE81B18E1E6EB00B090F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CEE81A18E1E6EB00B090F9 /* XCTest.framework */; };
-		09CEE81C18E1E6EB00B090F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1961465E55000D9B44E /* Foundation.framework */; };
-		09CEE81D18E1E6EB00B090F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C20C1465E89800D9B44E /* UIKit.framework */; };
-		09CEE82318E1E6EB00B090F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09CEE82118E1E6EB00B090F9 /* InfoPlist.strings */; };
 		09CEE82F18E1E73E00B090F9 /* DSViewsStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09CEE83018E1E73E00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
-		09CEE83318E1E76B00B090F9 /* DSViewsStack_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */; };
-		09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
 		09D35A33193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D35A31193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D35A34193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D35A32193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m */; };
 		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
+		09E2A8F91ACFF3CC00566461 /* DSLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2A8F81ACFF3CC00566461 /* DSLibTests.m */; };
+		09E2A8FA1ACFF3CC00566461 /* libDSLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1931465E55000D9B44E /* libDSLib.a */; };
+		09E2A9011ACFF3D700566461 /* DSInterceptorsMap_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2A9001ACFF3D700566461 /* DSInterceptorsMap_Tests.m */; };
 		09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09EB9F9718ED680A0098CAFF /* DSPassCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */; };
 		09EB9F9818ED680A0098CAFF /* DSPassCodeControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -474,7 +468,7 @@
 			remoteGlobalIDString = 09A60412182A65CF00F57F89;
 			remoteInfo = DSLibBundle;
 		};
-		09CEE82718E1E6EB00B090F9 /* PBXContainerItemProxy */ = {
+		09E2A8FB1ACFF3CC00566461 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
 			proxyType = 1;
@@ -735,13 +729,6 @@
 		097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
 		0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSViewsStackDelegate.h; sourceTree = "<group>"; };
 		0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStackDataSource.h; sourceTree = "<group>"; };
-		0982EB8118E1F40A00F9DFF2 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
-		0982EB8318E1F40A00F9DFF2 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
-		0982EB8418E1F40A00F9DFF2 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
-		0982EB8518E1F40A00F9DFF2 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
-		0982EB8618E1F40A00F9DFF2 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
-		0982EB8718E1F40A00F9DFF2 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
-		0982EB8818E1F40A00F9DFF2 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		098783CD18C1F39700C838A2 /* DSCodingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCodingTransformer.h; sourceTree = "<group>"; };
 		098783CE18C1F39700C838A2 /* DSCodingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCodingTransformer.m; sourceTree = "<group>"; };
 		0987FB7219C6E15A007D1C55 /* DSRelativePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRelativePath.h; sourceTree = "<group>"; };
@@ -762,7 +749,6 @@
 		099C4A2C1ACD823D00E65286 /* DSInterceptedMessageMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptedMessageMetadata.m; sourceTree = "<group>"; };
 		099C4A2F1ACD897000E65286 /* DSInterceptorsMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSInterceptorsMap.h; sourceTree = "<group>"; };
 		099C4A301ACD897000E65286 /* DSInterceptorsMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptorsMap.m; sourceTree = "<group>"; };
-		099C4A331ACD89DE00E65286 /* DSInterceptorsMap_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptorsMap_Tests.m; sourceTree = "<group>"; };
 		09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DSBundle.h"; sourceTree = "<group>"; };
 		09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DSBundle.m"; sourceTree = "<group>"; };
 		09A60413182A65CF00F57F89 /* DSLib.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -860,19 +846,18 @@
 		09C6BE521806BD760084C600 /* DSDragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDrop.h; sourceTree = "<group>"; };
 		09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStackAnimationDirection.h; sourceTree = "<group>"; };
 		09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStackAnimationDirection.m; sourceTree = "<group>"; };
-		09CEE81918E1E6EB00B090F9 /* DSLib Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DSLib Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CEE81A18E1E6EB00B090F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		09CEE82018E1E6EB00B090F9 /* DSLib Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DSLib Tests-Info.plist"; sourceTree = "<group>"; };
-		09CEE82218E1E6EB00B090F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		09CEE82618E1E6EB00B090F9 /* DSLib Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLib Tests-Prefix.pch"; sourceTree = "<group>"; };
 		09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStack.h; sourceTree = "<group>"; };
 		09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack.m; sourceTree = "<group>"; };
-		09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack_Tests.m; sourceTree = "<group>"; };
 		09D35A31193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+NSFetchedResultsController.h"; sourceTree = "<group>"; };
 		09D35A32193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+NSFetchedResultsController.m"; sourceTree = "<group>"; };
 		09D6223E1817DDF900A252D9 /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Parse.h"; sourceTree = "<group>"; };
 		09D6223F1817DDF900A252D9 /* NSError+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Parse.m"; sourceTree = "<group>"; };
 		09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DSWebServiceFunctions.plist; sourceTree = "<group>"; };
+		09E2A8F41ACFF3CB00566461 /* DSLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E2A8F71ACFF3CC00566461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E2A8F81ACFF3CC00566461 /* DSLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSLibTests.m; sourceTree = "<group>"; };
+		09E2A9001ACFF3D700566461 /* DSInterceptorsMap_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptorsMap_Tests.m; sourceTree = "<group>"; };
 		09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPassCodeController.h; sourceTree = "<group>"; };
 		09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPassCodeController.m; sourceTree = "<group>"; };
 		09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPassCodeControllerDelegate.h; sourceTree = "<group>"; };
@@ -949,14 +934,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09CEE81618E1E6EB00B090F9 /* Frameworks */ = {
+		09E2A8F11ACFF3CB00566461 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09CEE81B18E1E6EB00B090F9 /* XCTest.framework in Frameworks */,
-				0982EB8918E1F40A00F9DFF2 /* libOCMock.a in Frameworks */,
-				09CEE81D18E1E6EB00B090F9 /* UIKit.framework in Frameworks */,
-				09CEE81C18E1E6EB00B090F9 /* Foundation.framework in Frameworks */,
+				09E2A8FA1ACFF3CC00566461 /* libDSLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1474,28 +1456,6 @@
 			path = MAObjCRuntime;
 			sourceTree = SOURCE_ROOT;
 		};
-		0982EB8018E1F40400F9DFF2 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				0982EB8118E1F40A00F9DFF2 /* libOCMock.a */,
-				0982EB8218E1F40A00F9DFF2 /* OCMock */,
-			);
-			path = Libs;
-			sourceTree = "<group>";
-		};
-		0982EB8218E1F40A00F9DFF2 /* OCMock */ = {
-			isa = PBXGroup;
-			children = (
-				0982EB8318E1F40A00F9DFF2 /* NSNotificationCenter+OCMAdditions.h */,
-				0982EB8418E1F40A00F9DFF2 /* OCMArg.h */,
-				0982EB8518E1F40A00F9DFF2 /* OCMConstraint.h */,
-				0982EB8618E1F40A00F9DFF2 /* OCMock.h */,
-				0982EB8718E1F40A00F9DFF2 /* OCMockObject.h */,
-				0982EB8818E1F40A00F9DFF2 /* OCMockRecorder.h */,
-			);
-			path = OCMock;
-			sourceTree = "<group>";
-		};
 		0987FB7119C6E149007D1C55 /* Path */ = {
 			isa = PBXGroup;
 			children = (
@@ -1787,26 +1747,6 @@
 			path = URL;
 			sourceTree = "<group>";
 		};
-		09CEE81E18E1E6EB00B090F9 /* DSLib Tests */ = {
-			isa = PBXGroup;
-			children = (
-				0982EB8018E1F40400F9DFF2 /* Libs */,
-				09CEE83118E1E75800B090F9 /* DSViewsStack */,
-				09CEE81F18E1E6EB00B090F9 /* Supporting Files */,
-			);
-			path = "DSLib Tests";
-			sourceTree = "<group>";
-		};
-		09CEE81F18E1E6EB00B090F9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				09CEE82018E1E6EB00B090F9 /* DSLib Tests-Info.plist */,
-				09CEE82118E1E6EB00B090F9 /* InfoPlist.strings */,
-				09CEE82618E1E6EB00B090F9 /* DSLib Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		09CEE82C18E1E72B00B090F9 /* ViewsStack */ = {
 			isa = PBXGroup;
 			children = (
@@ -1820,13 +1760,22 @@
 			path = ViewsStack;
 			sourceTree = "<group>";
 		};
-		09CEE83118E1E75800B090F9 /* DSViewsStack */ = {
+		09E2A8F51ACFF3CC00566461 /* DSLibTests */ = {
 			isa = PBXGroup;
 			children = (
-				09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */,
-				099C4A331ACD89DE00E65286 /* DSInterceptorsMap_Tests.m */,
+				09E2A9001ACFF3D700566461 /* DSInterceptorsMap_Tests.m */,
+				09E2A8F81ACFF3CC00566461 /* DSLibTests.m */,
+				09E2A8F61ACFF3CC00566461 /* Supporting Files */,
 			);
-			path = DSViewsStack;
+			path = DSLibTests;
+			sourceTree = "<group>";
+		};
+		09E2A8F61ACFF3CC00566461 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09E2A8F71ACFF3CC00566461 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		09EB9F9218ED680A0098CAFF /* PassCodeLock */ = {
@@ -1917,7 +1866,7 @@
 			children = (
 				AED6C1981465E55000D9B44E /* DSLib */,
 				09A60416182A65CF00F57F89 /* DSLibBundle */,
-				09CEE81E18E1E6EB00B090F9 /* DSLib Tests */,
+				09E2A8F51ACFF3CC00566461 /* DSLibTests */,
 				AED6C1951465E55000D9B44E /* Frameworks */,
 				AED6C1941465E55000D9B44E /* Products */,
 			);
@@ -1930,7 +1879,7 @@
 			children = (
 				AED6C1931465E55000D9B44E /* libDSLib.a */,
 				09A60413182A65CF00F57F89 /* DSLib.bundle */,
-				09CEE81918E1E6EB00B090F9 /* DSLib Tests.xctest */,
+				09E2A8F41ACFF3CB00566461 /* DSLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2240,22 +2189,22 @@
 			productReference = 09A60413182A65CF00F57F89 /* DSLib.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		09CEE81818E1E6EB00B090F9 /* DSLib Tests */ = {
+		09E2A8F31ACFF3CB00566461 /* DSLibTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09CEE82B18E1E6EB00B090F9 /* Build configuration list for PBXNativeTarget "DSLib Tests" */;
+			buildConfigurationList = 09E2A8FD1ACFF3CC00566461 /* Build configuration list for PBXNativeTarget "DSLibTests" */;
 			buildPhases = (
-				09CEE81518E1E6EB00B090F9 /* Sources */,
-				09CEE81618E1E6EB00B090F9 /* Frameworks */,
-				09CEE81718E1E6EB00B090F9 /* Resources */,
+				09E2A8F01ACFF3CB00566461 /* Sources */,
+				09E2A8F11ACFF3CB00566461 /* Frameworks */,
+				09E2A8F21ACFF3CB00566461 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				09CEE82818E1E6EB00B090F9 /* PBXTargetDependency */,
+				09E2A8FC1ACFF3CC00566461 /* PBXTargetDependency */,
 			);
-			name = "DSLib Tests";
-			productName = "DSLib Tests";
-			productReference = 09CEE81918E1E6EB00B090F9 /* DSLib Tests.xctest */;
+			name = DSLibTests;
+			productName = DSLibTests;
+			productReference = 09E2A8F41ACFF3CB00566461 /* DSLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		AED6C1921465E55000D9B44E /* DSLib */ = {
@@ -2285,8 +2234,8 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "DS ltd.";
 				TargetAttributes = {
-					09CEE81818E1E6EB00B090F9 = {
-						TestTargetID = AED6C1921465E55000D9B44E;
+					09E2A8F31ACFF3CB00566461 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -2305,7 +2254,7 @@
 				AED6C1921465E55000D9B44E /* DSLib */,
 				09A60412182A65CF00F57F89 /* DSLibBundle */,
 				0904155A1892E4D600302A2F /* Framework */,
-				09CEE81818E1E6EB00B090F9 /* DSLib Tests */,
+				09E2A8F31ACFF3CB00566461 /* DSLibTests */,
 			);
 		};
 /* End PBXProject section */
@@ -2348,11 +2297,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09CEE81718E1E6EB00B090F9 /* Resources */ = {
+		09E2A8F21ACFF3CB00566461 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09CEE82318E1E6EB00B090F9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2395,14 +2343,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09CEE81518E1E6EB00B090F9 /* Sources */ = {
+		09E2A8F01ACFF3CB00566461 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0985A14418E33143009F9F33 /* DSQueue.m in Sources */,
-				099C4A341ACD89DE00E65286 /* DSInterceptorsMap_Tests.m in Sources */,
-				09CEE83318E1E76B00B090F9 /* DSViewsStack_Tests.m in Sources */,
-				09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */,
+				09E2A8F91ACFF3CC00566461 /* DSLibTests.m in Sources */,
+				09E2A9011ACFF3D700566461 /* DSInterceptorsMap_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2604,10 +2550,10 @@
 			target = 09A60412182A65CF00F57F89 /* DSLibBundle */;
 			targetProxy = 090415611892E5EE00302A2F /* PBXContainerItemProxy */;
 		};
-		09CEE82818E1E6EB00B090F9 /* PBXTargetDependency */ = {
+		09E2A8FC1ACFF3CC00566461 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AED6C1921465E55000D9B44E /* DSLib */;
-			targetProxy = 09CEE82718E1E6EB00B090F9 /* PBXContainerItemProxy */;
+			targetProxy = 09E2A8FB1ACFF3CC00566461 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2616,14 +2562,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				09A6041A182A65CF00F57F89 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		09CEE82118E1E6EB00B090F9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09CEE82218E1E6EB00B090F9 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2695,7 +2633,7 @@
 			};
 			name = Release;
 		};
-		09CEE82918E1E6EB00B090F9 /* Debug */ = {
+		09E2A8FE1ACFF3CC00566461 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -2707,42 +2645,22 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DSLib Tests/DSLib Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/DSLib Tests/Libs\"",
-				);
-				INFOPLIST_FILE = "DSLib Tests/DSLib Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DSLib",
-					"\"$(SRCROOT)/DSLib Tests/Libs\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-force_load",
-					"\"$(SRCROOT)/DSLib Tests/Libs/libOCMock.a\"",
-					"-ObjC",
-				);
+				INFOPLIST_FILE = DSLibTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		09CEE82A18E1E6EB00B090F9 /* Release */ = {
+		09E2A8FF1ACFF3CC00566461 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -2751,38 +2669,19 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DSLib Tests/DSLib Tests-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/DSLib Tests/Libs\"",
-				);
-				INFOPLIST_FILE = "DSLib Tests/DSLib Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DSLib",
-					"\"$(SRCROOT)/DSLib Tests/Libs\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-force_load",
-					"\"$(SRCROOT)/DSLib Tests/Libs/libOCMock.a\"",
-					"-ObjC",
-				);
+				INFOPLIST_FILE = DSLibTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -2922,14 +2821,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09CEE82B18E1E6EB00B090F9 /* Build configuration list for PBXNativeTarget "DSLib Tests" */ = {
+		09E2A8FD1ACFF3CC00566461 /* Build configuration list for PBXNativeTarget "DSLibTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				09CEE82918E1E6EB00B090F9 /* Debug */,
-				09CEE82A18E1E6EB00B090F9 /* Release */,
+				09E2A8FE1ACFF3CC00566461 /* Debug */,
+				09E2A8FF1ACFF3CC00566461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		AED6C18D1465E55000D9B44E /* Build configuration list for PBXProject "DSLib" */ = {
 			isa = XCConfigurationList;
