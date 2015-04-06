@@ -40,6 +40,7 @@
 - (NSData *)POSTData;
 - (NSString *)POSTDataPath;
 - (NSString *)POSTDataFileName;
+- (NSTimeInterval)timeoutInterval;
 - (NSString *)customServerURL;
 /** Default NO */
 - (BOOL)embedParamsInURLForPOSTRequest;

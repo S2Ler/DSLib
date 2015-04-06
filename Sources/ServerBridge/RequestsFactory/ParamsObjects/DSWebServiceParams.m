@@ -112,6 +112,11 @@
   return nil;
 }
 
+- (NSTimeInterval)timeoutInterval
+{
+  return 0;
+}
+
 - (NSString *)customServerURL
 {
   return nil;

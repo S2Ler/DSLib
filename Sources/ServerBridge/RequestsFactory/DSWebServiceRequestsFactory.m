@@ -115,6 +115,9 @@
     [request setPOSTDataPath:[theParams POSTDataPath]];
     [request setRunLoopThread:[self networkRequestThread]];
     [request setPOSTDataFileName:[theParams POSTDataFileName]];
+    if ([theParams timeoutInterval]) {
+      [request setTimeoutInterval:[theParams timeoutInterval]];
+    }
     [request setSendRawPOSTData:NO];
     [request setPOSTDataKey:@"json_request"];
 

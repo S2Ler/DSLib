@@ -292,6 +292,10 @@ static DSInterceptorsMap *interceptorsMap = nil;
                                         userInfo:(NSDictionary *)userInfo
                                    callbackQueue:(dispatch_queue_t)callbackQueue
 {
+//  UIBackgroundTaskIdentifier taskID = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+//    //
+//  }];
+  
   id<DSWebServiceRequest> request = [DSWebServiceRequestsFactory requestWithParams:params];
   [request setDelegate:self];
   
@@ -328,6 +332,8 @@ static DSInterceptorsMap *interceptorsMap = nil;
 
   [request setCompletionBlock:^{
     void (^finish)() = ^{
+//      [[UIApplication sharedApplication] endBackgroundTask:taskID];
+      
       if ([weakRequest error]) {
         finishWithErrorBlock([DSMessage messageWithError:[weakRequest error]]);
         return;
