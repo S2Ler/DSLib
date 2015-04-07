@@ -358,13 +358,13 @@
     case UIGestureRecognizerStateEnded:
     case UIGestureRecognizerStateCancelled: {
       self.draggingView = nil;
-      
-      DSViewsStackAnimationDirection draggedSide = [self isViewDraggedOut:view];
+      CGPoint velocity = [recognizer velocityInView:self];
+      DSViewsStackAnimationDirection draggedSide = [self isViewDraggedOut:view velocity:velocity];
       
       __weak DSViewsStack *weakSelf = self;
       
       void (^block)() = ^{
-        [weakSelf showNextViewAnimated:YES animationDirection:draggedSide delay:0 velocity:[recognizer velocityInView:self]];
+        [weakSelf showNextViewAnimated:YES animationDirection:draggedSide delay:0 velocity:velocity];
       };
       
       if (draggedSide == DSViewsStackAnimationDirectionNone) {
@@ -395,7 +395,7 @@
   }
 }
 
-- (DSViewsStackAnimationDirection)isViewDraggedOut:(UIView *)view
+- (DSViewsStackAnimationDirection)isViewDraggedOut:(UIView *)view velocity:(CGPoint)velocity
 {
   CGRect viewFrame = [view frame];
   CGRect boundsFrame = [self bounds];
@@ -403,10 +403,10 @@
   BOOL leftIntersection = viewFrame.origin.x + 70 < boundsFrame.origin.x;
   BOOL rightIntersection = CGRectGetMaxX(viewFrame) - 70 > CGRectGetMaxX(boundsFrame);
   
-  if (leftIntersection) {
+  if (leftIntersection && velocity.x < 0) {
     return DSViewsStackAnimationDirectionLeft;
   }
-  else if (rightIntersection) {
+  else if (rightIntersection && velocity.x > 0) {
     return DSViewsStackAnimationDirectionRight;
   }
   
