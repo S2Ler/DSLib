@@ -12,6 +12,7 @@
 @property (nonatomic, assign) BOOL shouldValidateOnTextChange;
 @property (nonatomic, copy) dispatch_block_t discriptionButtonPressedHandler;
 @property (nonatomic, assign, readonly) BOOL isValidationPassed;
+@property (nonatomic, weak) UIViewController *parentViewController;
 
 - (void)setValidationFailedWithDescriptions:(NSArray *)criterionDescriptions;
 - (void)setValidationPassedState;

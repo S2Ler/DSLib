@@ -9,25 +9,27 @@
 @interface DSFieldValidationController ()<UITextFieldDelegate>
 @property (nonatomic, strong) NSMutableArray *fields;
 @property (nonatomic, weak) DSTextField *focusedTextField;
-
+@property (nonatomic, weak) UIViewController *parentViewController;
 @end
 
 @implementation DSFieldValidationController
 
 #pragma mark - initialization
 - (id)initWithDelegate:(id<DSFieldValidationControllerDelegate>)delegate
+  parentViewController:(UIViewController *)parentViewController
 {
   self = [super init];
   if (self) {
     _delegate = delegate;
     _fields = [NSMutableArray array];
+    _parentViewController = parentViewController;
   }
   return self;
 }
 
 - (id)init
 {
-  return [self initWithDelegate:nil];
+  return [self initWithDelegate:nil parentViewController:nil];
 }
 
 - (void)resignAllFields
@@ -51,6 +53,7 @@
     [field setDiscriptionButtonPressedHandler:^{
       [weakSelf resignAllFields];
     }];
+    field.parentViewController = self.parentViewController;
   }
 }
 

@@ -3,14 +3,17 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "DSTextField.h"
 #import "DSFieldValidationCriterionDescription.h"
+#import "FDPopoverBackgroundView.h"
 #import "DSCriterionDescriptionViewController.h"
 #import "DSFieldValidationCriterion.h"
 #import "DSCFunctions.h"
 #import "DSMacros.h"
 #import "WYPopoverController.h"
 
+#define SHOW_DESCRIPTION_BUTTON_GAG 333
+
 #pragma mark - private
-@interface DSTextField()
+@interface DSTextField()<UIPopoverPresentationControllerDelegate>
 @property (nonatomic, strong) WYPopoverController *popoverController;
 @property (nonatomic, strong) NSArray *validationFailedDescriptions;
 @property (nonatomic, assign) BOOL isValidationPassed;
@@ -41,23 +44,32 @@
 
   [self setRightViewMode:UITextFieldViewModeAlways];
   UIView *rightView = nil;
+  BOOL rightViewUpdated = false;
+  
   if ([criterionDescriptions count] > 0) {
-    UIButton *showDescriptionButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [showDescriptionButton addTarget:self
-                              action:@selector(showDescriptionButtonPressed)
-                    forControlEvents:UIControlEventTouchUpInside];
-    [showDescriptionButton setImage:[self validationFailedImage] forState:UIControlStateNormal];
-
-    CGRect showDescriptionButtonFrame = CGRectZero;
-    showDescriptionButtonFrame.size = [[self validationFailedImage] size];
-    [showDescriptionButton setFrame:showDescriptionButtonFrame];
-
-    rightView = showDescriptionButton;
+    if (self.rightView.tag != SHOW_DESCRIPTION_BUTTON_GAG) {
+      UIButton *showDescriptionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+      showDescriptionButton.tag = SHOW_DESCRIPTION_BUTTON_GAG;
+      [showDescriptionButton addTarget:self
+                                action:@selector(showDescriptionButtonPressed)
+                      forControlEvents:UIControlEventTouchUpInside];
+      [showDescriptionButton setImage:[self validationFailedImage] forState:UIControlStateNormal];
+      
+      CGRect showDescriptionButtonFrame = CGRectZero;
+      showDescriptionButtonFrame.size = [[self validationFailedImage] size];
+      [showDescriptionButton setFrame:showDescriptionButtonFrame];
+      
+      rightView = showDescriptionButton;
+      rightViewUpdated = true;
+    }
   }
   else {
     rightView = [[UIImageView alloc] initWithImage:[self validationFailedImage]];
+    rightViewUpdated = true;
   }
-  [self setRightView:rightView];
+  if (rightViewUpdated) {
+    [self setRightView:rightView];
+  }
   [self validationFailedStateDidSet];
 }
 
@@ -85,32 +97,33 @@
   NSAssert([descriptionViewControllerClass isSubclassOfClass:[DSCriterionDescriptionViewController class]], @"description view controller should be subclass of DSCriterionDescriptionViewController");
   
   DSCriterionDescriptionViewController *descriptionViewController= [[descriptionViewControllerClass alloc] init];
-
-  //TODO: Get rid of WEPopoverAndWrite something my own
+  descriptionViewController.modalPresentationStyle = UIModalPresentationPopover;
+  UIPopoverPresentationController *popover =  descriptionViewController.popoverPresentationController;
+  popover.sourceView = self.parentViewController.view;
+  popover.sourceRect = [self.parentViewController.view convertRect:self.rightView.frame fromView:self.rightView.superview];
+  popover.backgroundColor = descriptionViewController.view.backgroundColor;
+  popover.delegate = self;
+  popover.popoverBackgroundViewClass = [FDPopoverBackgroundView class];
+  popover.permittedArrowDirections = UIPopoverArrowDirectionRight;
   
-  [WYPopoverController setDefaultTheme:[WYPopoverTheme theme]];
-  WYPopoverBackgroundView *popoverAppearance = [WYPopoverBackgroundView appearance];
-  UIColor *greenColor = [UIColor darkGrayColor];
-  [popoverAppearance setFillTopColor:greenColor];
-  [popoverAppearance setFillBottomColor:greenColor];
-  [popoverAppearance setOuterStrokeColor:greenColor];
-  [popoverAppearance setInnerStrokeColor:greenColor];
-  
-  WYPopoverController *popoverController = [[WYPopoverController alloc] initWithContentViewController:descriptionViewController];
-  
-  CGRect popoverFrame = self.rightView.frame;
-  
-  [popoverController presentPopoverFromRect:popoverFrame
-                                     inView:[self rightView].superview
-                   permittedArrowDirections:WYPopoverArrowDirectionAny
-                                   animated:YES];
+  [self.parentViewController presentViewController:descriptionViewController animated:true completion:nil];
   [descriptionViewController setCriterionDescriptions:[self validationFailedDescriptions]];
-  __block __weak DSTextField *weakSelf = self;
-  [popoverController setDismissCompletionBlock:^(WYPopoverController *dismissedController) {
-    [weakSelf setPopoverController:nil];
-  }];
+  
+//  __block __weak DSTextField *weakSelf = self;
+  
+//  [popoverController setDismissCompletionBlock:^(WYPopoverController *dismissedController) {
+//    [weakSelf setPopoverController:nil];
+//  }];
 
-  [self setPopoverController:popoverController];
+//  [self setPopoverController:popoverController];
+}
+
+#pragma mark - UIPopoverPresentationControllerDelegate
+- (void)popoverPresentationController:(UIPopoverPresentationController *)popoverPresentationController
+          willRepositionPopoverToRect:(inout CGRect *)rect
+                               inView:(inout UIView **)view
+{
+  *rect = [self.rightView.window convertRect:self.rightView.frame fromView:self.rightView.superview];
 }
 
 @end

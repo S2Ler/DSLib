@@ -294,6 +294,8 @@
 		0987FB7519C6E15A007D1C55 /* DSRelativePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 0987FB7319C6E15A007D1C55 /* DSRelativePath.m */; };
 		098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098A63E718D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */; };
+		098E7E6C1AD4F93100702E38 /* FDPopoverBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098E7E6A1AD4F93100702E38 /* FDPopoverBackgroundView.h */; };
+		098E7E6D1AD4F93100702E38 /* FDPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098E7E6B1AD4F93100702E38 /* FDPopoverBackgroundView.m */; };
 		098F666118ACD09600E479E5 /* DSPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098F665F18ACD09600E479E5 /* DSPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098F666218ACD09600E479E5 /* DSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098F666018ACD09600E479E5 /* DSPhotoView.m */; };
 		098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1043,6 +1045,8 @@
 		0987FB7319C6E15A007D1C55 /* DSRelativePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRelativePath.m; sourceTree = "<group>"; };
 		098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+DSAdditions.h"; sourceTree = "<group>"; };
 		098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+DSAdditions.m"; sourceTree = "<group>"; };
+		098E7E6A1AD4F93100702E38 /* FDPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDPopoverBackgroundView.h; sourceTree = "<group>"; };
+		098E7E6B1AD4F93100702E38 /* FDPopoverBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDPopoverBackgroundView.m; sourceTree = "<group>"; };
 		098F665F18ACD09600E479E5 /* DSPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPhotoView.h; sourceTree = "<group>"; };
 		098F666018ACD09600E479E5 /* DSPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPhotoView.m; sourceTree = "<group>"; };
 		098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSQueueBasedRequestSender+Private.h"; sourceTree = "<group>"; };
@@ -1686,6 +1690,8 @@
 				09162C63180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m */,
 				09162C64180EE84900A0DEEF /* DSTextField.h */,
 				09162C65180EE84900A0DEEF /* DSTextField.m */,
+				098E7E6A1AD4F93100702E38 /* FDPopoverBackgroundView.h */,
+				098E7E6B1AD4F93100702E38 /* FDPopoverBackgroundView.m */,
 				09162C74180EEB5900A0DEEF /* DSFieldValidationFramework.h */,
 			);
 			path = FieldValidationFramework;
@@ -2326,6 +2332,7 @@
 				09E54DF01A603C49002A854C /* DSTableViewController.h in Headers */,
 				09E54D111A6038D5002A854C /* DSWebServiceFunctions.h in Headers */,
 				090526341A5E9DE8001536F9 /* DSQueue.h in Headers */,
+				098E7E6C1AD4F93100702E38 /* FDPopoverBackgroundView.h in Headers */,
 				0997676D1A4F105500DDE130 /* RTProtocol.h in Headers */,
 				09E54D8B1A603B4D002A854C /* NSObject+DSAdditions.h in Headers */,
 				099767231A4F08D800DDE130 /* DTTimePeriod.h in Headers */,
@@ -3041,6 +3048,7 @@
 				09E54D2E1A603978002A854C /* AFMultipartBodyStream.m in Sources */,
 				09E54D9C1A603B4D002A854C /* UIDevice+Additions.m in Sources */,
 				09E54D361A603978002A854C /* AFFunctions.m in Sources */,
+				098E7E6D1AD4F93100702E38 /* FDPopoverBackgroundView.m in Sources */,
 				09E54D1B1A60390E002A854C /* DSWebServiceParamFactory.m in Sources */,
 				09E54DA21A603B4D002A854C /* UITableView+DSAdditions.m in Sources */,
 				099767741A4F128100DDE130 /* DSEmailSharer.m in Sources */,
