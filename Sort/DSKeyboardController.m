@@ -160,7 +160,7 @@
                                            key:UIKeyboardFrameBeginUserInfoKey];
   
   if (value) {
-    return [self keyboardFrameTakingIntoAccountOrientationFromFrame:[value CGRectValue]];
+    return [value CGRectValue];
   }
   else {
     return CGRectZero;
@@ -174,26 +174,10 @@
                                            key:UIKeyboardFrameEndUserInfoKey];
   
   if (value) {
-    return [self keyboardFrameTakingIntoAccountOrientationFromFrame:[value CGRectValue]];
+    return [value CGRectValue];
   }
   else {
     return CGRectZero;
-  }
-}
-
-- (CGRect)keyboardFrameTakingIntoAccountOrientationFromFrame:(CGRect)keyboardOriginalFrame
-{
-  UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-  if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
-    CGRect keyboardFrame;
-    keyboardFrame.size.width = keyboardOriginalFrame.size.height;
-    keyboardFrame.size.height = keyboardOriginalFrame.size.width;
-    keyboardFrame.origin.x = keyboardOriginalFrame.origin.y;
-    keyboardFrame.origin.y = keyboardOriginalFrame.origin.x;
-    return keyboardFrame;
-  }
-  else {
-    return keyboardOriginalFrame;
   }
 }
 
