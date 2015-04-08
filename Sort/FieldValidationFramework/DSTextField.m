@@ -8,13 +8,11 @@
 #import "DSFieldValidationCriterion.h"
 #import "DSCFunctions.h"
 #import "DSMacros.h"
-#import "WYPopoverController.h"
 
 #define SHOW_DESCRIPTION_BUTTON_GAG 333
 
 #pragma mark - private
 @interface DSTextField()<UIPopoverPresentationControllerDelegate>
-@property (nonatomic, strong) WYPopoverController *popoverController;
 @property (nonatomic, strong) NSArray *validationFailedDescriptions;
 @property (nonatomic, assign) BOOL isValidationPassed;
 @end
