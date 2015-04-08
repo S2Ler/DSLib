@@ -68,11 +68,14 @@
 - (void)reloadData
 {
   [self resetCurrentIndex];
+  const NSUInteger viewsCount = [[self dataSource] numberOfViewsInViewsStack:self];
   
-  UIView *firstView = [self viewForIndex:0];
   UIView *dontRemoveView = nil;
-  if ([[self dataSource] viewStack:self isView:firstView equalToView:self.draggingView]) {
-    dontRemoveView = self.draggingView;
+  
+  if (viewsCount > 0) {
+    if ([[self dataSource] viewStack:self isViewAtIndex:0 equalToView:self.draggingView]) {
+      dontRemoveView = self.draggingView;
+    }
   }
   
   for (UIView *subView in self.subviews) {

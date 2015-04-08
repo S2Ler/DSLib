@@ -225,18 +225,22 @@
 		092D8A6E18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */; };
 		093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 093859D517F1FDD400E8AB0E /* JSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
-		093885501A78BCE200907151 /* DSGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0906D6BA19ADAC9D00E2F7F6 /* DSGradientView.m */; };
-		093885521A78BD7000907151 /* DSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C65180EE84900A0DEEF /* DSTextField.m */; };
-		093885531A78BD7700907151 /* DSFieldValidationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C5C180EE84900A0DEEF /* DSFieldValidationController.m */; };
-		093885541A78BD8200907151 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
-		093885551A78BD8A00907151 /* DSAlertsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FF31DEBF389A0374834 /* DSAlertsHandler.m */; };
-		093885561A78BD9C00907151 /* DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FC9FB79656CF9699964 /* DSMessage.m */; };
 		09423C7818E8244000F1B9E2 /* DSMessageInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09423C7918E8244000F1B9E2 /* DSMessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */; };
 		094BFFD81A7A3BFA00B1481D /* WYPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 094BFFD41A7A3BFA00B1481D /* WYPopoverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		094BFFD91A7A3BFA00B1481D /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BFFD51A7A3BFA00B1481D /* WYPopoverController.m */; };
 		094BFFDA1A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 094BFFD61A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		094BFFDB1A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BFFD71A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m */; };
+		0950A8DC1AC5E01300EF93C2 /* DSViewsStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0950A8DD1AC5E01300EF93C2 /* DSViewsStackAnimationDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0950A8DE1AC5E01300EF93C2 /* DSViewsStackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0950A8DF1AC5E01300EF93C2 /* DSViewsStackDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0950A8E01AC5E01B00EF93C2 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
+		0950A8E11AC5E01B00EF93C2 /* DSViewsStackAnimationDirection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */; };
+		0950A8EC1AC6E00200EF93C2 /* DSLibFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099767051A4F080800DDE130 /* DSLibFramework.framework */; };
+		0950A8F31AC6E01E00EF93C2 /* DSViewsStack_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950A8F21AC6E01E00EF93C2 /* DSViewsStack_Tests.m */; };
+		0950A90B1AC6EF9B00EF93C2 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0950A8FE1AC6EF3300EF93C2 /* Expecta.framework */; };
+		0950A90D1AC6F08F00EF93C2 /* DSQueue_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950A90C1AC6F08E00EF93C2 /* DSQueue_Tests.m */; };
 		0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */; };
 		095568D7195D61710081A268 /* DSEmailSharer.h in Headers */ = {isa = PBXBuildFile; fileRef = 095568D5195D61710081A268 /* DSEmailSharer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -286,8 +290,6 @@
 		097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0982EB7D18E1E97500F9DFF2 /* DSViewsStackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0982EB7F18E1EA6000F9DFF2 /* DSViewsStackDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0982EB8918E1F40A00F9DFF2 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0982EB8118E1F40A00F9DFF2 /* libOCMock.a */; };
-		0985A14418E33143009F9F33 /* DSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33017F0AC9100A21270 /* DSQueue.m */; };
 		098783CF18C1F39700C838A2 /* DSCodingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSCodingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098783D018C1F39700C838A2 /* DSCodingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSCodingTransformer.m */; };
 		0987FB7419C6E15A007D1C55 /* DSRelativePath.h in Headers */ = {isa = PBXBuildFile; fileRef = 0987FB7219C6E15A007D1C55 /* DSRelativePath.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -482,14 +484,8 @@
 		09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09CDC39419260E4600C49EEA /* DSViewsStackAnimationDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09CDC39519260E4600C49EEA /* DSViewsStackAnimationDirection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */; };
-		09CEE81B18E1E6EB00B090F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CEE81A18E1E6EB00B090F9 /* XCTest.framework */; };
-		09CEE81C18E1E6EB00B090F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1961465E55000D9B44E /* Foundation.framework */; };
-		09CEE81D18E1E6EB00B090F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C20C1465E89800D9B44E /* UIKit.framework */; };
-		09CEE82318E1E6EB00B090F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09CEE82118E1E6EB00B090F9 /* InfoPlist.strings */; };
 		09CEE82F18E1E73E00B090F9 /* DSViewsStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09CEE83018E1E73E00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
-		09CEE83318E1E76B00B090F9 /* DSViewsStack_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */; };
-		09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
 		09D35A33193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D35A31193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09D35A34193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D35A32193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m */; };
 		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -776,19 +772,68 @@
 			remoteGlobalIDString = 09A60412182A65CF00F57F89;
 			remoteInfo = DSLibBundle;
 		};
-		099767581A4F09CB00DDE130 /* PBXContainerItemProxy */ = {
+		0950A8ED1AC6E00200EF93C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 099767041A4F080800DDE130;
 			remoteInfo = DSLibFramework;
 		};
-		09CEE82718E1E6EB00B090F9 /* PBXContainerItemProxy */ = {
+		0950A8FD1AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 908379791A8B972C009844DA;
+			remoteInfo = Expecta;
+		};
+		0950A8FF1AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 908379111A8B9660009844DA;
+			remoteInfo = "Expecta-iOS";
+		};
+		0950A9011AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C4416F917FF3F4A00978F09;
+			remoteInfo = ExpectaTests;
+		};
+		0950A9031AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E93067DA13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOSTests";
+		};
+		0950A9051AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9ACDF0C13B2DD520010F4D7;
+			remoteInfo = libExpecta;
+		};
+		0950A9071AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E93067CE13B2E6D100EA26FF;
+			remoteInfo = "libExpecta-iOS";
+		};
+		0950A9091AC6EF4400EF93C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 908379101A8B9660009844DA;
+			remoteInfo = "Expecta-iOS";
+		};
+		099767581A4F09CB00DDE130 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AED6C1921465E55000D9B44E;
-			remoteInfo = DSLib;
+			remoteGlobalIDString = 099767041A4F080800DDE130;
+			remoteInfo = DSLibFramework;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -983,6 +1028,11 @@
 		094BFFD51A7A3BFA00B1481D /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYPopoverController.m; path = WYPopoverController/WYPopoverController/WYPopoverController.m; sourceTree = SOURCE_ROOT; };
 		094BFFD61A7A3BFA00B1481D /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYStoryboardPopoverSegue.h; path = WYPopoverController/WYPopoverController/WYStoryboardPopoverSegue.h; sourceTree = SOURCE_ROOT; };
 		094BFFD71A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYStoryboardPopoverSegue.m; path = WYPopoverController/WYPopoverController/WYStoryboardPopoverSegue.m; sourceTree = SOURCE_ROOT; };
+		0950A8E61AC6E00200EF93C2 /* DSLibFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLibFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0950A8E91AC6E00200EF93C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0950A8F21AC6E01E00EF93C2 /* DSViewsStack_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack_Tests.m; sourceTree = "<group>"; };
+		0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = Expecta/Expecta.xcodeproj; sourceTree = SOURCE_ROOT; };
+		0950A90C1AC6F08E00EF93C2 /* DSQueue_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueue_Tests.m; sourceTree = "<group>"; };
 		0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DSAdditions.h"; sourceTree = "<group>"; };
 		0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DSAdditions.m"; sourceTree = "<group>"; };
 		095568D5195D61710081A268 /* DSEmailSharer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEmailSharer.h; sourceTree = "<group>"; };
@@ -1032,13 +1082,6 @@
 		097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
 		0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSViewsStackDelegate.h; sourceTree = "<group>"; };
 		0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStackDataSource.h; sourceTree = "<group>"; };
-		0982EB8118E1F40A00F9DFF2 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
-		0982EB8318E1F40A00F9DFF2 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
-		0982EB8418E1F40A00F9DFF2 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
-		0982EB8518E1F40A00F9DFF2 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
-		0982EB8618E1F40A00F9DFF2 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
-		0982EB8718E1F40A00F9DFF2 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
-		0982EB8818E1F40A00F9DFF2 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		098783CD18C1F39700C838A2 /* DSCodingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCodingTransformer.h; sourceTree = "<group>"; };
 		098783CE18C1F39700C838A2 /* DSCodingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCodingTransformer.m; sourceTree = "<group>"; };
 		0987FB7219C6E15A007D1C55 /* DSRelativePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRelativePath.h; sourceTree = "<group>"; };
@@ -1166,14 +1209,9 @@
 		09C6BE521806BD760084C600 /* DSDragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDrop.h; sourceTree = "<group>"; };
 		09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStackAnimationDirection.h; sourceTree = "<group>"; };
 		09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStackAnimationDirection.m; sourceTree = "<group>"; };
-		09CEE81918E1E6EB00B090F9 /* DSLib Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DSLib Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CEE81A18E1E6EB00B090F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		09CEE82018E1E6EB00B090F9 /* DSLib Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DSLib Tests-Info.plist"; sourceTree = "<group>"; };
-		09CEE82218E1E6EB00B090F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		09CEE82618E1E6EB00B090F9 /* DSLib Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLib Tests-Prefix.pch"; sourceTree = "<group>"; };
 		09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStack.h; sourceTree = "<group>"; };
 		09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack.m; sourceTree = "<group>"; };
-		09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack_Tests.m; sourceTree = "<group>"; };
 		09D35A31193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+NSFetchedResultsController.h"; sourceTree = "<group>"; };
 		09D35A32193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+NSFetchedResultsController.m"; sourceTree = "<group>"; };
 		09D6223E1817DDF900A252D9 /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Parse.h"; sourceTree = "<group>"; };
@@ -1249,6 +1287,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0950A8E31AC6E00200EF93C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0950A90B1AC6EF9B00EF93C2 /* Expecta.framework in Frameworks */,
+				0950A8EC1AC6E00200EF93C2 /* DSLibFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		099767011A4F080800DDE130 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1270,17 +1317,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A60415182A65CF00F57F89 /* CoreFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09CEE81618E1E6EB00B090F9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09CEE81B18E1E6EB00B090F9 /* XCTest.framework in Frameworks */,
-				0982EB8918E1F40A00F9DFF2 /* libOCMock.a in Frameworks */,
-				09CEE81D18E1E6EB00B090F9 /* UIKit.framework in Frameworks */,
-				09CEE81C18E1E6EB00B090F9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1697,6 +1733,38 @@
 			path = FieldValidationFramework;
 			sourceTree = "<group>";
 		};
+		0950A8E71AC6E00200EF93C2 /* DSLibFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */,
+				0950A8F21AC6E01E00EF93C2 /* DSViewsStack_Tests.m */,
+				0950A90C1AC6F08E00EF93C2 /* DSQueue_Tests.m */,
+				0950A8E81AC6E00200EF93C2 /* Supporting Files */,
+			);
+			path = DSLibFrameworkTests;
+			sourceTree = "<group>";
+		};
+		0950A8E81AC6E00200EF93C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0950A8E91AC6E00200EF93C2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0950A8F51AC6EF3300EF93C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0950A8FE1AC6EF3300EF93C2 /* Expecta.framework */,
+				0950A9001AC6EF3300EF93C2 /* Expecta.framework */,
+				0950A9021AC6EF3300EF93C2 /* ExpectaTests.xctest */,
+				0950A9041AC6EF3300EF93C2 /* Expecta-iOSTests.xctest */,
+				0950A9061AC6EF3300EF93C2 /* libExpecta.a */,
+				0950A9081AC6EF3300EF93C2 /* libExpecta.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0969F92418328AE100B3C4B2 /* UIImage-categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -1747,28 +1815,6 @@
 			);
 			path = MAObjCRuntime;
 			sourceTree = SOURCE_ROOT;
-		};
-		0982EB8018E1F40400F9DFF2 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				0982EB8118E1F40A00F9DFF2 /* libOCMock.a */,
-				0982EB8218E1F40A00F9DFF2 /* OCMock */,
-			);
-			path = Libs;
-			sourceTree = "<group>";
-		};
-		0982EB8218E1F40A00F9DFF2 /* OCMock */ = {
-			isa = PBXGroup;
-			children = (
-				0982EB8318E1F40A00F9DFF2 /* NSNotificationCenter+OCMAdditions.h */,
-				0982EB8418E1F40A00F9DFF2 /* OCMArg.h */,
-				0982EB8518E1F40A00F9DFF2 /* OCMConstraint.h */,
-				0982EB8618E1F40A00F9DFF2 /* OCMock.h */,
-				0982EB8718E1F40A00F9DFF2 /* OCMockObject.h */,
-				0982EB8818E1F40A00F9DFF2 /* OCMockRecorder.h */,
-			);
-			path = OCMock;
-			sourceTree = "<group>";
 		};
 		0987FB7119C6E149007D1C55 /* Path */ = {
 			isa = PBXGroup;
@@ -2096,26 +2142,6 @@
 			path = URL;
 			sourceTree = "<group>";
 		};
-		09CEE81E18E1E6EB00B090F9 /* DSLib Tests */ = {
-			isa = PBXGroup;
-			children = (
-				0982EB8018E1F40400F9DFF2 /* Libs */,
-				09CEE83118E1E75800B090F9 /* DSViewsStack */,
-				09CEE81F18E1E6EB00B090F9 /* Supporting Files */,
-			);
-			path = "DSLib Tests";
-			sourceTree = "<group>";
-		};
-		09CEE81F18E1E6EB00B090F9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				09CEE82018E1E6EB00B090F9 /* DSLib Tests-Info.plist */,
-				09CEE82118E1E6EB00B090F9 /* InfoPlist.strings */,
-				09CEE82618E1E6EB00B090F9 /* DSLib Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		09CEE82C18E1E72B00B090F9 /* ViewsStack */ = {
 			isa = PBXGroup;
 			children = (
@@ -2127,14 +2153,6 @@
 				0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */,
 			);
 			path = ViewsStack;
-			sourceTree = "<group>";
-		};
-		09CEE83118E1E75800B090F9 /* DSViewsStack */ = {
-			isa = PBXGroup;
-			children = (
-				09CEE83218E1E76B00B090F9 /* DSViewsStack_Tests.m */,
-			);
-			path = DSViewsStack;
 			sourceTree = "<group>";
 		};
 		09EB9F9218ED680A0098CAFF /* PassCodeLock */ = {
@@ -2224,9 +2242,9 @@
 			children = (
 				AED6C1981465E55000D9B44E /* DSLib */,
 				09A60416182A65CF00F57F89 /* DSLibBundle */,
-				09CEE81E18E1E6EB00B090F9 /* DSLib Tests */,
 				099767061A4F080800DDE130 /* DSLibFramework */,
 				099767321A4F09B400DDE130 /* SwiftSampleProject */,
+				0950A8E71AC6E00200EF93C2 /* DSLibFrameworkTests */,
 				AED6C1951465E55000D9B44E /* Frameworks */,
 				AED6C1941465E55000D9B44E /* Products */,
 			);
@@ -2239,9 +2257,9 @@
 			children = (
 				AED6C1931465E55000D9B44E /* libDSLib.a */,
 				09A60413182A65CF00F57F89 /* DSLib.bundle */,
-				09CEE81918E1E6EB00B090F9 /* DSLib Tests.xctest */,
 				099767051A4F080800DDE130 /* DSLibFramework.framework */,
 				099767311A4F09B400DDE130 /* SwiftSampleProject.app */,
+				0950A8E61AC6E00200EF93C2 /* DSLibFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2325,6 +2343,7 @@
 				09E54DEF1A603C49002A854C /* DSFindCountry.h in Headers */,
 				09E54D451A603A09002A854C /* DSWebServiceResponse.h in Headers */,
 				090526301A5E9D0B001536F9 /* DSCodingTransformer.h in Headers */,
+				0950A8DE1AC5E01300EF93C2 /* DSViewsStackDelegate.h in Headers */,
 				09E54DB41A603C07002A854C /* DSArrayChangeCalculator.h in Headers */,
 				09E54E0B1A603C49002A854C /* NSFetchedResultsController+DSAdditions.h in Headers */,
 				099767731A4F127E00DDE130 /* DSEmailSharer.h in Headers */,
@@ -2410,6 +2429,7 @@
 				0997676F1A4F105500DDE130 /* RTUnregisteredClass.h in Headers */,
 				09E54D8D1A603B4D002A854C /* NSObject+Observing.h in Headers */,
 				099767751A4F12AF00DDE130 /* UICollectionView+NSFetchedResultsController.h in Headers */,
+				0950A8DF1AC5E01300EF93C2 /* DSViewsStackDataSource.h in Headers */,
 				099767201A4F08D300DDE130 /* DTConstants.h in Headers */,
 				09E54E2C1A604826002A854C /* DSCheckButtonProtocol.h in Headers */,
 				09E54D3D1A6039CF002A854C /* DSWebServiceOperationType.h in Headers */,
@@ -2425,6 +2445,7 @@
 				09E54D211A60392F002A854C /* DSWebServiceParamsJSONBuilder.h in Headers */,
 				09E54E281A6047AC002A854C /* DSSettings_impl.h in Headers */,
 				090526361A5E9E0D001536F9 /* Reachability.h in Headers */,
+				0950A8DC1AC5E01300EF93C2 /* DSViewsStack.h in Headers */,
 				099767A81A4F335700DDE130 /* DSFieldValidationFramework.h in Headers */,
 				09E54E091A603C49002A854C /* NSManagedObjectContext+DSAdditions.h in Headers */,
 				0997675B1A4F0AB100DDE130 /* DSRedirectLogs.h in Headers */,
@@ -2444,6 +2465,7 @@
 				09E54D7D1A603B4D002A854C /* NSData+OAdditions.h in Headers */,
 				09E54E1C1A603E17002A854C /* QRunLoopOperation.h in Headers */,
 				09E54D0E1A603858002A854C /* DSWebServiceFramework.h in Headers */,
+				0950A8DD1AC5E01300EF93C2 /* DSViewsStackAnimationDirection.h in Headers */,
 				0905261D1A5E9D0B001536F9 /* DSAlertsHandler.h in Headers */,
 				09E54D7F1A603B4D002A854C /* NSDate+OAddittions.h in Headers */,
 				09E54E1E1A603E17002A854C /* QWatchedOperationQueue.h in Headers */,
@@ -2708,6 +2730,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0950A8E51AC6E00200EF93C2 /* DSLibFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0950A8EF1AC6E00200EF93C2 /* Build configuration list for PBXNativeTarget "DSLibFrameworkTests" */;
+			buildPhases = (
+				0950A8E21AC6E00200EF93C2 /* Sources */,
+				0950A8E31AC6E00200EF93C2 /* Frameworks */,
+				0950A8E41AC6E00200EF93C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0950A90A1AC6EF4400EF93C2 /* PBXTargetDependency */,
+				0950A8EE1AC6E00200EF93C2 /* PBXTargetDependency */,
+			);
+			name = DSLibFrameworkTests;
+			productName = DSLibFrameworkTests;
+			productReference = 0950A8E61AC6E00200EF93C2 /* DSLibFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		099767041A4F080800DDE130 /* DSLibFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0997671C1A4F080800DDE130 /* Build configuration list for PBXNativeTarget "DSLibFramework" */;
@@ -2762,24 +2803,6 @@
 			productReference = 09A60413182A65CF00F57F89 /* DSLib.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		09CEE81818E1E6EB00B090F9 /* DSLib Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09CEE82B18E1E6EB00B090F9 /* Build configuration list for PBXNativeTarget "DSLib Tests" */;
-			buildPhases = (
-				09CEE81518E1E6EB00B090F9 /* Sources */,
-				09CEE81618E1E6EB00B090F9 /* Frameworks */,
-				09CEE81718E1E6EB00B090F9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				09CEE82818E1E6EB00B090F9 /* PBXTargetDependency */,
-			);
-			name = "DSLib Tests";
-			productName = "DSLib Tests";
-			productReference = 09CEE81918E1E6EB00B090F9 /* DSLib Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		AED6C1921465E55000D9B44E /* DSLib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AED6C1A01465E55000D9B44E /* Build configuration list for PBXNativeTarget "DSLib" */;
@@ -2807,14 +2830,14 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "DS ltd.";
 				TargetAttributes = {
+					0950A8E51AC6E00200EF93C2 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					099767041A4F080800DDE130 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					099767301A4F09B400DDE130 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					09CEE81818E1E6EB00B090F9 = {
-						TestTargetID = AED6C1921465E55000D9B44E;
 					};
 				};
 			};
@@ -2829,19 +2852,77 @@
 			mainGroup = AED6C1881465E55000D9B44E;
 			productRefGroup = AED6C1941465E55000D9B44E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0950A8F51AC6EF3300EF93C2 /* Products */;
+					ProjectRef = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AED6C1921465E55000D9B44E /* DSLib */,
 				09A60412182A65CF00F57F89 /* DSLibBundle */,
 				0904155A1892E4D600302A2F /* Framework */,
-				09CEE81818E1E6EB00B090F9 /* DSLib Tests */,
 				099767041A4F080800DDE130 /* DSLibFramework */,
 				099767301A4F09B400DDE130 /* SwiftSampleProject */,
+				0950A8E51AC6E00200EF93C2 /* DSLibFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		0950A8FE1AC6EF3300EF93C2 /* Expecta.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Expecta.framework;
+			remoteRef = 0950A8FD1AC6EF3300EF93C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0950A9001AC6EF3300EF93C2 /* Expecta.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Expecta.framework;
+			remoteRef = 0950A8FF1AC6EF3300EF93C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0950A9021AC6EF3300EF93C2 /* ExpectaTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ExpectaTests.xctest;
+			remoteRef = 0950A9011AC6EF3300EF93C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0950A9041AC6EF3300EF93C2 /* Expecta-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Expecta-iOSTests.xctest";
+			remoteRef = 0950A9031AC6EF3300EF93C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0950A9061AC6EF3300EF93C2 /* libExpecta.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libExpecta.a;
+			remoteRef = 0950A9051AC6EF3300EF93C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0950A9081AC6EF3300EF93C2 /* libExpecta.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libExpecta.a;
+			remoteRef = 0950A9071AC6EF3300EF93C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
+		0950A8E41AC6E00200EF93C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		099767031A4F080800DDE130 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2884,14 +2965,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09CEE81718E1E6EB00B090F9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09CEE82318E1E6EB00B090F9 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -2924,6 +2997,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0950A8E21AC6E00200EF93C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0950A90D1AC6F08F00EF93C2 /* DSQueue_Tests.m in Sources */,
+				0950A8F31AC6E01E00EF93C2 /* DSViewsStack_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		099767001A4F080800DDE130 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2960,6 +3042,7 @@
 				09E54DF81A603C49002A854C /* DSCompas.m in Sources */,
 				0997679B1A4F335700DDE130 /* DSCriterionDescriptionViewController.m in Sources */,
 				090526131A5E9D0B001536F9 /* DSMessage.m in Sources */,
+				0950A8E01AC5E01B00EF93C2 /* DSViewsStack.m in Sources */,
 				09E54D4A1A603A18002A854C /* DSWebServiceURLHTTPMethod.m in Sources */,
 				09E54DFA1A603C49002A854C /* UIView+DSAdditions.m in Sources */,
 				09E54E041A603C49002A854C /* NSNumber+DSAdditions.m in Sources */,
@@ -2967,6 +3050,7 @@
 				09E54DB51A603C07002A854C /* DSArrayChangeCalculator.m in Sources */,
 				09E54D261A60394C002A854C /* DSWebServiceSerialQueue.m in Sources */,
 				094BFFDB1A7A3BFA00B1481D /* WYStoryboardPopoverSegue.m in Sources */,
+				0950A8E11AC5E01B00EF93C2 /* DSViewsStackAnimationDirection.m in Sources */,
 				09E54E151A603C49002A854C /* DSGradientView.m in Sources */,
 				09E54D101A6038C9002A854C /* DSWebServiceConfiguration.m in Sources */,
 				09E54D7A1A603B4D002A854C /* NSArray+Extras.m in Sources */,
@@ -3093,22 +3177,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09CEE81518E1E6EB00B090F9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				093885541A78BD8200907151 /* NSError+Parse.m in Sources */,
-				093885531A78BD7700907151 /* DSFieldValidationController.m in Sources */,
-				0985A14418E33143009F9F33 /* DSQueue.m in Sources */,
-				09CEE83318E1E76B00B090F9 /* DSViewsStack_Tests.m in Sources */,
-				093885561A78BD9C00907151 /* DSMessage.m in Sources */,
-				093885551A78BD8A00907151 /* DSAlertsHandler.m in Sources */,
-				093885521A78BD7000907151 /* DSTextField.m in Sources */,
-				09CEE83418E1E7DF00B090F9 /* DSViewsStack.m in Sources */,
-				093885501A78BCE200907151 /* DSGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3301,15 +3369,20 @@
 			target = 09A60412182A65CF00F57F89 /* DSLibBundle */;
 			targetProxy = 090415611892E5EE00302A2F /* PBXContainerItemProxy */;
 		};
+		0950A8EE1AC6E00200EF93C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 099767041A4F080800DDE130 /* DSLibFramework */;
+			targetProxy = 0950A8ED1AC6E00200EF93C2 /* PBXContainerItemProxy */;
+		};
+		0950A90A1AC6EF4400EF93C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Expecta-iOS";
+			targetProxy = 0950A9091AC6EF4400EF93C2 /* PBXContainerItemProxy */;
+		};
 		099767591A4F09CB00DDE130 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 099767041A4F080800DDE130 /* DSLibFramework */;
 			targetProxy = 099767581A4F09CB00DDE130 /* PBXContainerItemProxy */;
-		};
-		09CEE82818E1E6EB00B090F9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AED6C1921465E55000D9B44E /* DSLib */;
-			targetProxy = 09CEE82718E1E6EB00B090F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3338,14 +3411,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		09CEE82118E1E6EB00B090F9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09CEE82218E1E6EB00B090F9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -3359,6 +3424,58 @@
 		0904155D1892E4D600302A2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0950A8F01AC6E00200EF93C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = DSLibFrameworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0950A8F11AC6E00200EF93C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = DSLibFrameworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -3556,97 +3673,6 @@
 			};
 			name = Release;
 		};
-		09CEE82918E1E6EB00B090F9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DSLib Tests/DSLib Tests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/DSLib Tests/Libs\"",
-				);
-				INFOPLIST_FILE = "DSLib Tests/DSLib Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DSLib",
-					"\"$(SRCROOT)/DSLib Tests/Libs\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-force_load",
-					"\"$(SRCROOT)/DSLib Tests/Libs/libOCMock.a\"",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		09CEE82A18E1E6EB00B090F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DSLib Tests/DSLib Tests-Prefix.pch";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/DSLib Tests/Libs\"",
-				);
-				INFOPLIST_FILE = "DSLib Tests/DSLib Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DSLib",
-					"\"$(SRCROOT)/DSLib Tests/Libs\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-force_load",
-					"\"$(SRCROOT)/DSLib Tests/Libs/libOCMock.a\"",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 		AED6C19E1465E55000D9B44E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3774,6 +3800,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		0950A8EF1AC6E00200EF93C2 /* Build configuration list for PBXNativeTarget "DSLibFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0950A8F01AC6E00200EF93C2 /* Debug */,
+				0950A8F11AC6E00200EF93C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0997671C1A4F080800DDE130 /* Build configuration list for PBXNativeTarget "DSLibFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3797,15 +3832,6 @@
 			buildConfigurations = (
 				09A6041E182A65CF00F57F89 /* Debug */,
 				09A6041F182A65CF00F57F89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09CEE82B18E1E6EB00B090F9 /* Build configuration list for PBXNativeTarget "DSLib Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09CEE82918E1E6EB00B090F9 /* Debug */,
-				09CEE82A18E1E6EB00B090F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
