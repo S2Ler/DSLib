@@ -35,6 +35,12 @@
   return nil;
 }
 
+- (UIImage *)validationFailedSelectedImage
+{
+  ASSERT_ABSTRACT_METHOD;
+  return nil;
+}
+
 - (void)setValidationFailedWithDescriptions:(NSArray *)criterionDescriptions
 {
   self.isValidationPassed = false;
@@ -52,6 +58,7 @@
                                 action:@selector(showDescriptionButtonPressed)
                       forControlEvents:UIControlEventTouchUpInside];
       [showDescriptionButton setImage:[self validationFailedImage] forState:UIControlStateNormal];
+      [showDescriptionButton setImage:[self validationFailedSelectedImage] forState:UIControlStateSelected];
       
       CGRect showDescriptionButtonFrame = CGRectZero;
       showDescriptionButtonFrame.size = [[self validationFailedImage] size];
@@ -83,6 +90,15 @@
   return [criterion validateWithObject:[self text]];
 }
 
+- (UIButton *)rightMenuButton
+{
+  if ([self.rightView isKindOfClass:[UIButton class]]) {
+    return (UIButton *)self.rightView;
+  }
+  else {
+    return nil;
+  }
+}
 
 - (void)showDescriptionButtonPressed
 {
@@ -103,6 +119,7 @@
   popover.delegate = self;
   popover.popoverBackgroundViewClass = [FDPopoverBackgroundView class];
   popover.permittedArrowDirections = UIPopoverArrowDirectionRight;
+  [[self rightMenuButton] setSelected:true];
   
   [self.parentViewController presentViewController:descriptionViewController animated:true completion:nil];
   [descriptionViewController setCriterionDescriptions:[self validationFailedDescriptions]];
@@ -122,6 +139,11 @@
                                inView:(inout UIView **)view
 {
   *rect = [self.rightView.window convertRect:self.rightView.frame fromView:self.rightView.superview];
+}
+
+- (void)popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController *)popoverPresentationController
+{
+  [[self rightMenuButton] setSelected:false];
 }
 
 @end

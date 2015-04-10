@@ -28,4 +28,5 @@
 
 @interface  DSTextField(Abstract)
 - (UIImage *)validationFailedImage;
+- (UIImage *)validationFailedSelectedImage;
 @end
