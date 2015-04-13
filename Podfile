@@ -2,15 +2,6 @@
 platform :ios, '8.0'
 use_frameworks!
 
-
-target 'DSLibFramework' do
-
-end
-
-target 'SwiftSampleProject' do
-
-end
-
 target 'DSLibFrameworkTests' do
 pod 'Expecta'
 end
