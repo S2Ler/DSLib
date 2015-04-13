@@ -6,142 +6,7 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		0904155A1892E4D600302A2F /* Framework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 0904155B1892E4D600302A2F /* Build configuration list for PBXAggregateTarget "Framework" */;
-			buildPhases = (
-				090415601892E4F700302A2F /* ShellScript */,
-			);
-			dependencies = (
-				090415621892E5EE00302A2F /* PBXTargetDependency */,
-				0904155F1892E4DF00302A2F /* PBXTargetDependency */,
-			);
-			name = Framework;
-			productName = Framework;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		0903A2E017F0AC8300A21270 /* DSArrayChange.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2D517F0AC8300A21270 /* DSArrayChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A2E117F0AC8300A21270 /* DSArrayChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2D617F0AC8300A21270 /* DSArrayChange.m */; };
-		0903A2E217F0AC8300A21270 /* DSArrayChangeApplier.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2D717F0AC8300A21270 /* DSArrayChangeApplier.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A2E317F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2D817F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A2E417F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2D917F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.m */; };
-		0903A2E517F0AC8300A21270 /* DSArrayChangeCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2DA17F0AC8300A21270 /* DSArrayChangeCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A2E617F0AC8300A21270 /* DSArrayChangeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2DB17F0AC8300A21270 /* DSArrayChangeCalculator.m */; };
-		0903A2E717F0AC8300A21270 /* DSNetworkActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2DC17F0AC8300A21270 /* DSNetworkActivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A2E817F0AC8300A21270 /* DSNetworkActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2DD17F0AC8300A21270 /* DSNetworkActivity.m */; };
-		0903A2E917F0AC8300A21270 /* UIView+ViewsEnumeration.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2DE17F0AC8300A21270 /* UIView+ViewsEnumeration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A2EA17F0AC8300A21270 /* UIView+ViewsEnumeration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2DF17F0AC8300A21270 /* UIView+ViewsEnumeration.m */; };
-		0903A38C17F0AC9100A21270 /* CATransition+AnimationsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2EC17F0AC9100A21270 /* CATransition+AnimationsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A38D17F0AC9100A21270 /* CATransition+AnimationsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2ED17F0AC9100A21270 /* CATransition+AnimationsBuilder.m */; };
-		0903A38E17F0AC9100A21270 /* DSTimeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2EE17F0AC9100A21270 /* DSTimeFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A38F17F0AC9100A21270 /* NSArray+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2EF17F0AC9100A21270 /* NSArray+Extras.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A39017F0AC9100A21270 /* NSArray+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2F017F0AC9100A21270 /* NSArray+Extras.m */; };
-		0903A39117F0AC9100A21270 /* NSArray+ObjectsQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2F117F0AC9100A21270 /* NSArray+ObjectsQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A39217F0AC9100A21270 /* NSArray+ObjectsQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2F217F0AC9100A21270 /* NSArray+ObjectsQuery.m */; };
-		0903A39317F0AC9100A21270 /* NSData+OAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2F317F0AC9100A21270 /* NSData+OAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A39417F0AC9100A21270 /* NSData+OAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2F417F0AC9100A21270 /* NSData+OAdditions.m */; };
-		0903A39517F0AC9100A21270 /* NSDate+OAddittions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2F517F0AC9100A21270 /* NSDate+OAddittions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A39617F0AC9100A21270 /* NSDate+OAddittions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2F617F0AC9100A21270 /* NSDate+OAddittions.m */; };
-		0903A39717F0AC9100A21270 /* NSDictionary+JSONDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2F717F0AC9100A21270 /* NSDictionary+JSONDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A39817F0AC9100A21270 /* NSDictionary+JSONDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2F817F0AC9100A21270 /* NSDictionary+JSONDictionary.m */; };
-		0903A39917F0AC9100A21270 /* NSFileManager+Directories.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2F917F0AC9100A21270 /* NSFileManager+Directories.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A39A17F0AC9100A21270 /* NSFileManager+Directories.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2FA17F0AC9100A21270 /* NSFileManager+Directories.m */; };
-		0903A39B17F0AC9100A21270 /* NSMutableArray+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2FB17F0AC9100A21270 /* NSMutableArray+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A39C17F0AC9100A21270 /* NSMutableArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2FC17F0AC9100A21270 /* NSMutableArray+Additions.m */; };
-		0903A39D17F0AC9100A21270 /* NSMutableURLRequest+POSTData.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2FD17F0AC9100A21270 /* NSMutableURLRequest+POSTData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A39E17F0AC9100A21270 /* NSMutableURLRequest+POSTData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A2FE17F0AC9100A21270 /* NSMutableURLRequest+POSTData.m */; };
-		0903A39F17F0AC9100A21270 /* NSObject+DeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A2FF17F0AC9100A21270 /* NSObject+DeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3A017F0AC9100A21270 /* NSObject+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A30017F0AC9100A21270 /* NSObject+DeepCopy.m */; };
-		0903A3A117F0AC9100A21270 /* NSObject+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A30117F0AC9100A21270 /* NSObject+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3A217F0AC9100A21270 /* NSObject+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A30217F0AC9100A21270 /* NSObject+DSAdditions.m */; };
-		0903A3A317F0AC9100A21270 /* NSObject+Observing.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A30317F0AC9100A21270 /* NSObject+Observing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3A417F0AC9100A21270 /* NSObject+Observing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A30417F0AC9100A21270 /* NSObject+Observing.m */; };
-		0903A3A517F0AC9100A21270 /* NSString+Encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A30517F0AC9100A21270 /* NSString+Encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3A617F0AC9100A21270 /* NSString+Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A30617F0AC9100A21270 /* NSString+Encoding.m */; };
-		0903A3A717F0AC9100A21270 /* NSString+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A30717F0AC9100A21270 /* NSString+Extras.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3A817F0AC9100A21270 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A30817F0AC9100A21270 /* NSString+Extras.m */; };
-		0903A3A917F0AC9100A21270 /* UIAlertView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A30917F0AC9100A21270 /* UIAlertView+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3AA17F0AC9100A21270 /* UIAlertView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A30A17F0AC9100A21270 /* UIAlertView+Additions.m */; };
-		0903A3AB17F0AC9100A21270 /* UIApplication+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A30B17F0AC9100A21270 /* UIApplication+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3AC17F0AC9100A21270 /* UIApplication+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A30C17F0AC9100A21270 /* UIApplication+DSAdditions.m */; };
-		0903A3AD17F0AC9100A21270 /* UIApplication+KeyboardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A30D17F0AC9100A21270 /* UIApplication+KeyboardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3AE17F0AC9100A21270 /* UIApplication+KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A30E17F0AC9100A21270 /* UIApplication+KeyboardView.m */; };
-		0903A3AF17F0AC9100A21270 /* UIBarButtonItem+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A30F17F0AC9100A21270 /* UIBarButtonItem+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3B017F0AC9100A21270 /* UIBarButtonItem+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31017F0AC9100A21270 /* UIBarButtonItem+DSAdditions.m */; };
-		0903A3B117F0AC9100A21270 /* UIDevice+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31117F0AC9100A21270 /* UIDevice+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3B217F0AC9100A21270 /* UIDevice+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31217F0AC9100A21270 /* UIDevice+Additions.m */; };
-		0903A3B317F0AC9100A21270 /* UIFont+FromString.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31317F0AC9100A21270 /* UIFont+FromString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3B417F0AC9100A21270 /* UIFont+FromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31417F0AC9100A21270 /* UIFont+FromString.m */; };
-		0903A3B517F0AC9100A21270 /* UIScreen+Availability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31517F0AC9100A21270 /* UIScreen+Availability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3B617F0AC9100A21270 /* UIScreen+Availability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31617F0AC9100A21270 /* UIScreen+Availability.m */; };
-		0903A3B717F0AC9100A21270 /* UITableView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31717F0AC9100A21270 /* UITableView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3B817F0AC9100A21270 /* UITableView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31817F0AC9100A21270 /* UITableView+DSAdditions.m */; };
-		0903A3BB17F0AC9100A21270 /* UIView+Resizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31B17F0AC9100A21270 /* UIView+Resizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3BC17F0AC9100A21270 /* UIView+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31C17F0AC9100A21270 /* UIView+Resizing.m */; };
-		0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31D17F0AC9100A21270 /* UIView+Subviews.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3BE17F0AC9100A21270 /* UIView+Subviews.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A31E17F0AC9100A21270 /* UIView+Subviews.m */; };
-		0903A3BF17F0AC9100A21270 /* UIView+XibLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A31F17F0AC9100A21270 /* UIView+XibLoading.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3C017F0AC9100A21270 /* UIView+XibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A32017F0AC9100A21270 /* UIView+XibLoading.m */; };
-		0903A3C117F0AC9100A21270 /* XibLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A32117F0AC9100A21270 /* XibLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3C217F0AC9100A21270 /* XibLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A32217F0AC9100A21270 /* XibLoader.m */; };
-		0903A3C317F0AC9100A21270 /* DSCArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A32B17F0AC9100A21270 /* DSCArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3C417F0AC9100A21270 /* DSCArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A32C17F0AC9100A21270 /* DSCArray.m */; };
-		0903A3C517F0AC9100A21270 /* DSCFLoatDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A32D17F0AC9100A21270 /* DSCFLoatDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3C617F0AC9100A21270 /* DSCFLoatDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A32E17F0AC9100A21270 /* DSCFLoatDictionary.m */; };
-		0903A3C717F0AC9100A21270 /* DSQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A32F17F0AC9100A21270 /* DSQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3C817F0AC9100A21270 /* DSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33017F0AC9100A21270 /* DSQueue.m */; };
-		0903A3CD17F0AC9100A21270 /* DSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33617F0AC9100A21270 /* DSMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3CE17F0AC9100A21270 /* DSMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33717F0AC9100A21270 /* DSMacros.m */; };
-		0903A3CF17F0AC9100A21270 /* DSDateFormatterCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33A17F0AC9100A21270 /* DSDateFormatterCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3D017F0AC9100A21270 /* DSDateFormatterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33B17F0AC9100A21270 /* DSDateFormatterCache.m */; };
-		0903A3D117F0AC9100A21270 /* DSCFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33C17F0AC9100A21270 /* DSCFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3D217F0AC9100A21270 /* DSCFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33D17F0AC9100A21270 /* DSCFunctions.m */; };
-		0903A3DD17F0AC9100A21270 /* CStringsFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A34C17F0AC9100A21270 /* CStringsFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3DE17F0AC9100A21270 /* CStringsFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A34D17F0AC9100A21270 /* CStringsFunctions.m */; };
-		0903A3DF17F0AC9100A21270 /* DSRuntimeHacker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A34E17F0AC9100A21270 /* DSRuntimeHacker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3E017F0AC9100A21270 /* DSRuntimeHacker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A34F17F0AC9100A21270 /* DSRuntimeHacker.m */; };
-		0903A3E117F0AC9100A21270 /* DSSettings_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A35017F0AC9100A21270 /* DSSettings_impl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3E217F0AC9100A21270 /* DSSettings_impl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A35117F0AC9100A21270 /* DSSettings_impl.m */; };
-		0903A3E517F0AC9100A21270 /* QRunLoopOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A35717F0AC9100A21270 /* QRunLoopOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3E617F0AC9100A21270 /* QRunLoopOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A35817F0AC9100A21270 /* QRunLoopOperation.m */; };
-		0903A3E717F0AC9100A21270 /* QWatchedOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A35917F0AC9100A21270 /* QWatchedOperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3E817F0AC9100A21270 /* QWatchedOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A35A17F0AC9100A21270 /* QWatchedOperationQueue.m */; };
-		0903A3E917F0AC9100A21270 /* DSVibrator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A35E17F0AC9100A21270 /* DSVibrator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3EA17F0AC9100A21270 /* DSVibrator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A35F17F0AC9100A21270 /* DSVibrator.m */; };
-		0903A3EB17F0AC9100A21270 /* DSFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A36217F0AC9100A21270 /* DSFontManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3EC17F0AC9100A21270 /* DSFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A36317F0AC9100A21270 /* DSFontManager.m */; };
-		0903A3ED17F0AC9100A21270 /* FontsDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A36417F0AC9100A21270 /* FontsDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3EE17F0AC9100A21270 /* FontsDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A36517F0AC9100A21270 /* FontsDB.m */; };
-		0903A3EF17F0AC9100A21270 /* DSActivityIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A36917F0AC9100A21270 /* DSActivityIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3F017F0AC9100A21270 /* DSActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A36A17F0AC9100A21270 /* DSActivityIndicator.m */; };
-		0903A3F117F0AC9100A21270 /* DSFlashingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A36C17F0AC9100A21270 /* DSFlashingImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3F217F0AC9100A21270 /* DSFlashingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A36D17F0AC9100A21270 /* DSFlashingImageView.m */; };
-		0903A3F317F0AC9100A21270 /* DSRotatingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A36F17F0AC9100A21270 /* DSRotatingImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3F417F0AC9100A21270 /* DSRotatingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A37017F0AC9100A21270 /* DSRotatingImageView.m */; };
-		0903A3F517F0AC9100A21270 /* DSSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A37217F0AC9100A21270 /* DSSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3F617F0AC9100A21270 /* DSSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A37317F0AC9100A21270 /* DSSlider.m */; };
-		0903A3F717F0AC9100A21270 /* DSSliderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A37417F0AC9100A21270 /* DSSliderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3F817F0AC9100A21270 /* PGSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A37517F0AC9100A21270 /* PGSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3F917F0AC9100A21270 /* PGSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A37617F0AC9100A21270 /* PGSlider.m */; };
-		0903A3FA17F0AC9100A21270 /* DSCheckButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A37E17F0AC9100A21270 /* DSCheckButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3FB17F0AC9100A21270 /* DSCheckButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A37F17F0AC9100A21270 /* DSCheckButton.m */; };
-		0903A3FC17F0AC9100A21270 /* DSCheckButtonProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A38017F0AC9100A21270 /* DSCheckButtonProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3FD17F0AC9100A21270 /* UISwitch+DSCheckButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A38117F0AC9100A21270 /* UISwitch+DSCheckButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A3FE17F0AC9100A21270 /* UISwitch+DSCheckButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A38217F0AC9100A21270 /* UISwitch+DSCheckButton.m */; };
-		0903A3FF17F0AC9100A21270 /* PGVideoImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A38417F0AC9100A21270 /* PGVideoImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A40017F0AC9100A21270 /* PGVideoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A38517F0AC9100A21270 /* PGVideoImageView.m */; };
-		0903A40117F0AC9100A21270 /* PGVideoImageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A38617F0AC9100A21270 /* PGVideoImageViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A40217F0AC9100A21270 /* DSValueChooserViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A38817F0AC9100A21270 /* DSValueChooserViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A40317F0AC9100A21270 /* DSValueChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A38917F0AC9100A21270 /* DSValueChooserViewController.m */; };
-		0903A40417F0AC9100A21270 /* DSValueChooserViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A38B17F0AC9100A21270 /* DSValueChooserViewControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A40917F0B4DA00A21270 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A40717F0B4DA00A21270 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A40A17F0B4DA00A21270 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A40817F0B4DA00A21270 /* Reachability.m */; };
-		0903A41617F0C28300A21270 /* DSGPSTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A41117F0C28300A21270 /* DSGPSTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0903A41717F0C28300A21270 /* DSGPSTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A41217F0C28300A21270 /* DSGPSTracker.m */; };
-		0903A41817F0C28300A21270 /* DSGPSTrackerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A41317F0C28300A21270 /* DSGPSTrackerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		090524BE1A5E899F001536F9 /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 090524BD1A5E899F001536F9 /* libobjc.dylib */; };
 		090525151A5E91FD001536F9 /* DSPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098F665F18ACD09600E479E5 /* DSPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		090525161A5E9201001536F9 /* DSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098F666018ACD09600E479E5 /* DSPhotoView.m */; };
@@ -190,43 +55,6 @@
 		090526351A5E9DE8001536F9 /* DSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33017F0AC9100A21270 /* DSQueue.m */; };
 		090526361A5E9E0D001536F9 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A40717F0B4DA00A21270 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		090526371A5E9E0D001536F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A40817F0B4DA00A21270 /* Reachability.m */; };
-		09067F2D181804CA00C8F48F /* DSAlertsQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 09067F2B181804CA00C8F48F /* DSAlertsQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09067F2E181804CA00C8F48F /* DSAlertsQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F2C181804CA00C8F48F /* DSAlertsQueue.m */; };
-		09067F311818055900C8F48F /* DSAlertQueue+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 09067F2F1818055900C8F48F /* DSAlertQueue+Private.h */; };
-		09067F321818055900C8F48F /* DSAlertQueue+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 09067F301818055900C8F48F /* DSAlertQueue+Private.m */; };
-		0906D6BB19ADAC9D00E2F7F6 /* DSGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0906D6B919ADAC9D00E2F7F6 /* DSGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0906D6BC19ADAC9D00E2F7F6 /* DSGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0906D6BA19ADAC9D00E2F7F6 /* DSGradientView.m */; };
-		0907D3BF194C4CC30035C075 /* UINavigationController+Inspection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0907D3BD194C4CC30035C075 /* UINavigationController+Inspection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0907D3C0194C4CC30035C075 /* UINavigationController+Inspection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0907D3BE194C4CC30035C075 /* UINavigationController+Inspection.m */; };
-		0908940A195326D4002CCCB8 /* UITextView+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 09089408195326D4002CCCB8 /* UITextView+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0908940B195326D4002CCCB8 /* UITextView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 09089409195326D4002CCCB8 /* UITextView+Size.m */; };
-		09162C55180ED00C00A0DEEF /* DSCompas.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C53180ED00C00A0DEEF /* DSCompas.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09162C56180ED00C00A0DEEF /* DSCompas.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C54180ED00C00A0DEEF /* DSCompas.m */; };
-		09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C58180EE84900A0DEEF /* DSCriterionDescriptionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09162C68180EE84900A0DEEF /* DSFieldValidationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C5B180EE84900A0DEEF /* DSFieldValidationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09162C69180EE84900A0DEEF /* DSFieldValidationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C5C180EE84900A0DEEF /* DSFieldValidationController.m */; };
-		09162C6A180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C5D180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09162C6B180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C5E180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09162C6C180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C5F180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m */; };
-		09162C6D180EE84900A0DEEF /* DSFieldValidationCriterion.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C60180EE84900A0DEEF /* DSFieldValidationCriterion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09162C6E180EE84900A0DEEF /* DSFieldValidationCriterion.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C61180EE84900A0DEEF /* DSFieldValidationCriterion.m */; };
-		09162C6F180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C62180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09162C70180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C63180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m */; };
-		09162C71180EE84900A0DEEF /* DSTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C64180EE84900A0DEEF /* DSTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09162C72180EE84900A0DEEF /* DSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C65180EE84900A0DEEF /* DSTextField.m */; };
-		09162C76180EEB5900A0DEEF /* DSFieldValidationFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 09162C74180EEB5900A0DEEF /* DSFieldValidationFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09162C9C180EEEB900A0DEEF /* DSCriterionDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09162C59180EE84900A0DEEF /* DSCriterionDescriptionViewController.m */; };
-		0922D3E3178C951900AAE05E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0922D3E2178C951900AAE05E /* CoreData.framework */; };
-		0928CFDE17F21C9C00E494E1 /* DSWebServiceFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0928CFDF17F21C9C00E494E1 /* DSWebServiceFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */; };
-		092D8A6518D09ACE00EA56F0 /* ALAsset+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 092D8A6318D09ACE00EA56F0 /* ALAsset+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		092D8A6618D09ACE00EA56F0 /* ALAsset+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D8A6418D09ACE00EA56F0 /* ALAsset+DSAdditions.m */; };
-		092D8A6D18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 092D8A6B18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		092D8A6E18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D8A6C18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m */; };
-		093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 093859D517F1FDD400E8AB0E /* JSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 093859D617F1FDD400E8AB0E /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
-		09423C7818E8244000F1B9E2 /* DSMessageInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 09423C7618E8244000F1B9E2 /* DSMessageInterceptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09423C7918E8244000F1B9E2 /* DSMessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */; };
 		0950A8DC1AC5E01300EF93C2 /* DSViewsStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0950A8DD1AC5E01300EF93C2 /* DSViewsStackAnimationDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0950A8DE1AC5E01300EF93C2 /* DSViewsStackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -235,70 +63,9 @@
 		0950A8E11AC5E01B00EF93C2 /* DSViewsStackAnimationDirection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */; };
 		0950A8EC1AC6E00200EF93C2 /* DSLibFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099767051A4F080800DDE130 /* DSLibFramework.framework */; };
 		0950A8F31AC6E01E00EF93C2 /* DSViewsStack_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950A8F21AC6E01E00EF93C2 /* DSViewsStack_Tests.m */; };
-		0950A90B1AC6EF9B00EF93C2 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0950A8FE1AC6EF3300EF93C2 /* Expecta.framework */; };
 		0950A90D1AC6F08F00EF93C2 /* DSQueue_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0950A90C1AC6F08E00EF93C2 /* DSQueue_Tests.m */; };
-		0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */; };
-		095568D7195D61710081A268 /* DSEmailSharer.h in Headers */ = {isa = PBXBuildFile; fileRef = 095568D5195D61710081A268 /* DSEmailSharer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		095568D8195D61710081A268 /* DSEmailSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = 095568D6195D61710081A268 /* DSEmailSharer.m */; };
-		095D116C19B6F96D004604BE /* NSDate+TimeAgoFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 095D116A19B6F96D004604BE /* NSDate+TimeAgoFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		095D116D19B6F96D004604BE /* NSDate+TimeAgoFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D116B19B6F96D004604BE /* NSDate+TimeAgoFormatter.m */; };
-		0969F92B18328AE100B3C4B2 /* UIImage+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F92518328AE100B3C4B2 /* UIImage+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0969F92C18328AE100B3C4B2 /* UIImage+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F92618328AE100B3C4B2 /* UIImage+DSAdditions.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		0969F93318329C3C00B3C4B2 /* DSAskForTextController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0969F93118329C3C00B3C4B2 /* DSAskForTextController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0969F93418329C3C00B3C4B2 /* DSAskForTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0969F93218329C3C00B3C4B2 /* DSAskForTextController.m */; };
-		096C87AD18290ADA0024D734 /* DSMessage+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 096C87AB18290ADA0024D734 /* DSMessage+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		096C87AE18290ADA0024D734 /* DSMessage+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 096C87AC18290ADA0024D734 /* DSMessage+Parse.m */; };
-		0972E33219B6FA9F005D00F2 /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32419B6FA9F005D00F2 /* DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0972E33319B6FA9F005D00F2 /* DTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32519B6FA9F005D00F2 /* DTConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0972E33419B6FA9F005D00F2 /* DTError.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32619B6FA9F005D00F2 /* DTError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0972E33519B6FA9F005D00F2 /* DTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E32719B6FA9F005D00F2 /* DTError.m */; };
-		0972E33619B6FA9F005D00F2 /* DTTimePeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32819B6FA9F005D00F2 /* DTTimePeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0972E33719B6FA9F005D00F2 /* DTTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E32919B6FA9F005D00F2 /* DTTimePeriod.m */; };
-		0972E33819B6FA9F005D00F2 /* DTTimePeriodChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32A19B6FA9F005D00F2 /* DTTimePeriodChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0972E33919B6FA9F005D00F2 /* DTTimePeriodChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E32B19B6FA9F005D00F2 /* DTTimePeriodChain.m */; };
-		0972E33A19B6FA9F005D00F2 /* DTTimePeriodCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32C19B6FA9F005D00F2 /* DTTimePeriodCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0972E33B19B6FA9F005D00F2 /* DTTimePeriodCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E32D19B6FA9F005D00F2 /* DTTimePeriodCollection.m */; };
-		0972E33C19B6FA9F005D00F2 /* DTTimePeriodGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32E19B6FA9F005D00F2 /* DTTimePeriodGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0972E33D19B6FA9F005D00F2 /* DTTimePeriodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E32F19B6FA9F005D00F2 /* DTTimePeriodGroup.m */; };
-		0972E33E19B6FA9F005D00F2 /* NSDate+DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E33019B6FA9F005D00F2 /* NSDate+DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0972E33F19B6FA9F005D00F2 /* NSDate+DateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0972E33119B6FA9F005D00F2 /* NSDate+DateTools.m */; };
-		0972E34019B6FCB1005D00F2 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0972E32319B6FA9F005D00F2 /* DateTools.bundle */; };
-		0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0973572518041E3A00351055 /* DSCustomFontLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0973572618041E3A00351055 /* DSCustomFontLabel.m */; };
-		097C81B019B5C31F00E9F48E /* UIButton+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 097C81AE19B5C31F00E9F48E /* UIButton+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		097C81B119B5C31F00E9F48E /* UIButton+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 097C81AF19B5C31F00E9F48E /* UIButton+DSAdditions.m */; };
-		097CA65B195DCAA900A2EC56 /* NSError+DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 097CA659195DCAA900A2EC56 /* NSError+DSMessage.h */; };
-		097CA65C195DCAA900A2EC56 /* NSError+DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 097CA65A195DCAA900A2EC56 /* NSError+DSMessage.m */; };
-		097F7A0C19B84F8A004B4129 /* NSTimer+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 097F7A0A19B84F8A004B4129 /* NSTimer+DSAdditions.h */; };
-		097F7A0D19B84F8A004B4129 /* NSTimer+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 097F7A0B19B84F8A004B4129 /* NSTimer+DSAdditions.m */; };
-		097FCD76189FAAF300B9B041 /* MARTNSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD60189FAAF300B9B041 /* MARTNSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		097FCD77189FAAF300B9B041 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD61189FAAF300B9B041 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		097FCD78189FAAF300B9B041 /* RTIvar.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD63189FAAF300B9B041 /* RTIvar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		097FCD79189FAAF300B9B041 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD64189FAAF300B9B041 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		097FCD7A189FAAF300B9B041 /* RTMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD65189FAAF300B9B041 /* RTMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		097FCD7B189FAAF300B9B041 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD66189FAAF300B9B041 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		097FCD7C189FAAF300B9B041 /* RTProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD67189FAAF300B9B041 /* RTProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		097FCD7D189FAAF300B9B041 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD68189FAAF300B9B041 /* RTProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		097FCD7E189FAAF300B9B041 /* RTProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD69189FAAF300B9B041 /* RTProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		097FCD7F189FAAF300B9B041 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6A189FAAF300B9B041 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		097FCD80189FAAF300B9B041 /* RTUnregisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 097FCD6B189FAAF300B9B041 /* RTUnregisteredClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 097FCD6C189FAAF300B9B041 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		0982EB7D18E1E97500F9DFF2 /* DSViewsStackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0982EB7F18E1EA6000F9DFF2 /* DSViewsStackDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7E18E1EA6000F9DFF2 /* DSViewsStackDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		098783CF18C1F39700C838A2 /* DSCodingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 098783CD18C1F39700C838A2 /* DSCodingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		098783D018C1F39700C838A2 /* DSCodingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098783CE18C1F39700C838A2 /* DSCodingTransformer.m */; };
-		0987FB7419C6E15A007D1C55 /* DSRelativePath.h in Headers */ = {isa = PBXBuildFile; fileRef = 0987FB7219C6E15A007D1C55 /* DSRelativePath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0987FB7519C6E15A007D1C55 /* DSRelativePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 0987FB7319C6E15A007D1C55 /* DSRelativePath.m */; };
-		098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 098A63E418D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		098A63E718D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A63E518D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m */; };
 		098E7E6C1AD4F93100702E38 /* FDPopoverBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098E7E6A1AD4F93100702E38 /* FDPopoverBackgroundView.h */; };
 		098E7E6D1AD4F93100702E38 /* FDPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098E7E6B1AD4F93100702E38 /* FDPopoverBackgroundView.m */; };
-		098F666118ACD09600E479E5 /* DSPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 098F665F18ACD09600E479E5 /* DSPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		098F666218ACD09600E479E5 /* DSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 098F666018ACD09600E479E5 /* DSPhotoView.m */; };
-		098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25C17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 098FB25D17F2008600DB9F49 /* DSQueueBasedRequestSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 098FB25E17F2008600DB9F49 /* DSQueueBasedRequestSender.m */; };
 		0997670A1A4F080800DDE130 /* DSLibFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 099767091A4F080800DDE130 /* DSLibFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0997671E1A4F089B00DDE130 /* DateTools.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0972E32319B6FA9F005D00F2 /* DateTools.bundle */; };
 		0997671F1A4F08C500DDE130 /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0972E32419B6FA9F005D00F2 /* DateTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -372,120 +139,6 @@
 		099767AD1A4F35C400DDE130 /* DSDragAndDropController.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		099767AE1A4F35C400DDE130 /* DSDragAndDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD13ED0EF18F1D1FD6F1A7 /* DSDragAndDropController.m */; };
 		099767AF1A4F35C400DDE130 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0998E21D1928E962004D9BD1 /* DSCoreDataObjectsObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E21A1928E962004D9BD1 /* DSCoreDataObjectsObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0998E21E1928E962004D9BD1 /* DSCoreDataObjectsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998E21B1928E962004D9BD1 /* DSCoreDataObjectsObserver.m */; };
-		0998E21F1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E21C1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0998E23C192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0998E23A192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0998E23D192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998E23B192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m */; };
-		09A6040D182A657000F57F89 /* NSBundle+DSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */; };
-		09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */; };
-		09A60415182A65CF00F57F89 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A60414182A65CF00F57F89 /* CoreFoundation.framework */; };
-		09A6041B182A65CF00F57F89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09A60419182A65CF00F57F89 /* InfoPlist.strings */; };
-		09A6042F182A65E100F57F89 /* DSWebServiceFunctions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D8004817F2BA8E0082561F /* DSWebServiceFunctions.plist */; };
-		09A60430182A65E700F57F89 /* DSFieldValidation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09162C5A180EE84900A0DEEF /* DSFieldValidation.strings */; };
-		09A60431182A663C00F57F89 /* DSWebServiceConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09B8665217F1E5C7003B1070 /* DSWebServiceConfiguration.plist */; };
-		09A60433182A663C00F57F89 /* UIFontsNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0903A36617F0AC9100A21270 /* UIFontsNames.plist */; };
-		09A60434182A663C00F57F89 /* slider_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37817F0AC9100A21270 /* slider_background.png */; };
-		09A60435182A663C00F57F89 /* slider_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37917F0AC9100A21270 /* slider_background@2x.png */; };
-		09A60436182A663C00F57F89 /* sliderthumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37A17F0AC9100A21270 /* sliderthumb.png */; };
-		09A60437182A663C00F57F89 /* slidertrack.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37B17F0AC9100A21270 /* slidertrack.png */; };
-		09A60438182A663C00F57F89 /* slidertrack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0903A37C17F0AC9100A21270 /* slidertrack@2x.png */; };
-		09A60439182A663C00F57F89 /* DSValueChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0903A38A17F0AC9100A21270 /* DSValueChooserViewController.xib */; };
-		09A6043A182A663C00F57F89 /* DSMessagesLocalization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62DD157786FD5902D0D9B3A8 /* DSMessagesLocalization.strings */; };
-		09A6043B182A663C00F57F89 /* DSConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DD12A2DD6F6F278480844E /* DSConfiguration.plist */; };
-		09A83F3B19238ABE008DE30F /* DSRedirectLogs.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A83F3919238ABE008DE30F /* DSRedirectLogs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09A83F3C19238ABE008DE30F /* DSRedirectLogs.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A83F3A19238ABE008DE30F /* DSRedirectLogs.m */; };
-		09AAD18F1A35F82800DAE9E4 /* DSWeakTimerTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 09AAD18D1A35F82800DAE9E4 /* DSWeakTimerTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09AAD1901A35F82800DAE9E4 /* DSWeakTimerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AAD18E1A35F82800DAE9E4 /* DSWeakTimerTarget.m */; };
-		09AD5B2018A8F0E3001FC5D1 /* DSConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 09AD5B1E18A8F0E3001FC5D1 /* DSConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09AD5B2118A8F0E3001FC5D1 /* DSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AD5B1F18A8F0E3001FC5D1 /* DSConstants.m */; };
-		09B6DCE51858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCCD1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B6DCE61858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCCE1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m */; };
-		09B6DCE71858F5C500FB1825 /* DSCLPlacemarkTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD01858F5C500FB1825 /* DSCLPlacemarkTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B6DCE81858F5C500FB1825 /* DSCLPlacemarkTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCD11858F5C500FB1825 /* DSCLPlacemarkTransformer.m */; };
-		09B6DCE91858F5C500FB1825 /* DSGeocodeProviderType.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD21858F5C500FB1825 /* DSGeocodeProviderType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B6DCEA1858F5C500FB1825 /* DSGeocoder+Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD31858F5C500FB1825 /* DSGeocoder+Factory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B6DCEB1858F5C500FB1825 /* DSGeocoder+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCD41858F5C500FB1825 /* DSGeocoder+Factory.m */; };
-		09B6DCEC1858F5C500FB1825 /* DSGeocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD51858F5C500FB1825 /* DSGeocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B6DCED1858F5C500FB1825 /* DSGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCD61858F5C500FB1825 /* DSGeocoder.m */; };
-		09B6DCEE1858F5C500FB1825 /* DSGeocoderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD71858F5C500FB1825 /* DSGeocoderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B6DCEF1858F5C500FB1825 /* DSGeocoderFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD81858F5C500FB1825 /* DSGeocoderFramework.h */; };
-		09B6DCF01858F5C500FB1825 /* DSPlacemarkPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCD91858F5C500FB1825 /* DSPlacemarkPickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B6DCF11858F5C500FB1825 /* DSPlacemarkPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCDA1858F5C500FB1825 /* DSPlacemarkPickerViewController.m */; };
-		09B6DCF21858F5C500FB1825 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCDC1858F5C500FB1825 /* DSPlacemarkPickerViewControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B6DCF31858F5C500FB1825 /* DSGeocodeProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCDE1858F5C500FB1825 /* DSGeocodeProvider.h */; };
-		09B6DCF41858F5C500FB1825 /* DSGeocodeProviderApple.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCDF1858F5C500FB1825 /* DSGeocodeProviderApple.h */; };
-		09B6DCF51858F5C500FB1825 /* DSGeocodeProviderApple.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCE01858F5C500FB1825 /* DSGeocodeProviderApple.m */; };
-		09B6DCF61858F5C500FB1825 /* DSGeocodeProviderOpenmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCE11858F5C500FB1825 /* DSGeocodeProviderOpenmap.h */; };
-		09B6DCF71858F5C500FB1825 /* DSGeocodeProviderOpenmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCE21858F5C500FB1825 /* DSGeocodeProviderOpenmap.m */; };
-		09B6DCF81858F5C500FB1825 /* DSPlacemark.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B6DCE31858F5C500FB1825 /* DSPlacemark.h */; };
-		09B6DCF91858F5C500FB1825 /* DSPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B6DCE41858F5C500FB1825 /* DSPlacemark.m */; };
-		09B6DCFA1858F5DE00FB1825 /* DSChoosePlacemarkAnnotation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09B6DCCF1858F5C500FB1825 /* DSChoosePlacemarkAnnotation.strings */; };
-		09B8663A17F1B82D003B1070 /* DSTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663817F1B82D003B1070 /* DSTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8663B17F1B82D003B1070 /* DSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8663917F1B82D003B1070 /* DSTableViewController.m */; };
-		09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8663C17F1B990003B1070 /* DSKeyboardController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8663F17F1B990003B1070 /* DSKeyboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8663D17F1B990003B1070 /* DSKeyboardController.m */; };
-		09B8664517F1BF30003B1070 /* DSKeyboardControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8664417F1BF2B003B1070 /* DSKeyboardControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8669017F1E5C7003B1070 /* DSWebServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665017F1E5C7003B1070 /* DSWebServiceConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8669117F1E5C7003B1070 /* DSWebServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8665117F1E5C7003B1070 /* DSWebServiceConfiguration.m */; };
-		09B8669217F1E5C7003B1070 /* DSWebServiceFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665317F1E5C7003B1070 /* DSWebServiceFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8669317F1E5C7003B1070 /* NSError+DSWebService.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665517F1E5C7003B1070 /* NSError+DSWebService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8669417F1E5C7003B1070 /* NSError+DSWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8665617F1E5C7003B1070 /* NSError+DSWebService.m */; };
-		09B8669517F1E5C7003B1070 /* DSWebServiceArrayParam.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665817F1E5C7003B1070 /* DSWebServiceArrayParam.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8669617F1E5C7003B1070 /* DSWebServiceArrayParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8665917F1E5C7003B1070 /* DSWebServiceArrayParam.m */; };
-		09B8669717F1E5C7003B1070 /* DSWebServiceCompositeParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665A17F1E5C7003B1070 /* DSWebServiceCompositeParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8669817F1E5C7003B1070 /* DSWebServiceCompositeParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8665B17F1E5C7003B1070 /* DSWebServiceCompositeParams.m */; };
-		09B8669917F1E5C7003B1070 /* DSWebServiceParam.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665C17F1E5C7003B1070 /* DSWebServiceParam.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8669A17F1E5C7003B1070 /* DSWebServiceParamFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665D17F1E5C7003B1070 /* DSWebServiceParamFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8669B17F1E5C7003B1070 /* DSWebServiceParamFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8665E17F1E5C7003B1070 /* DSWebServiceParamFactory.m */; };
-		09B8669C17F1E5C7003B1070 /* DSWebServiceStringParam.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8665F17F1E5C7003B1070 /* DSWebServiceStringParam.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8669D17F1E5C7003B1070 /* DSWebServiceStringParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8666017F1E5C7003B1070 /* DSWebServiceStringParam.m */; };
-		09B8669E17F1E5C7003B1070 /* DSWebServiceParamsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666217F1E5C7003B1070 /* DSWebServiceParamsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B8669F17F1E5C7003B1070 /* DSWebServiceParamsExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666317F1E5C7003B1070 /* DSWebServiceParamsExporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866A017F1E5C7003B1070 /* DSWebServiceParamsExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8666417F1E5C7003B1070 /* DSWebServiceParamsExporter.m */; };
-		09B866A117F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666517F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866A217F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8666617F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m */; };
-		09B866A317F1E5C7003B1070 /* DSWebServiceQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666817F1E5C7003B1070 /* DSWebServiceQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866A417F1E5C7003B1070 /* DSWebServiceQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8666917F1E5C7003B1070 /* DSWebServiceQueue.m */; };
-		09B866A517F1E5C7003B1070 /* DSWebServiceSerialQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666A17F1E5C7003B1070 /* DSWebServiceSerialQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866A617F1E5C7003B1070 /* DSWebServiceSerialQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8666B17F1E5C7003B1070 /* DSWebServiceSerialQueue.m */; };
-		09B866A717F1E5C7003B1070 /* DSWebServiceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666E17F1E5C7003B1070 /* DSWebServiceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866A817F1E5C7003B1070 /* DSWebServiceRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8666F17F1E5C7003B1070 /* DSWebServiceRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866A917F1E5C7003B1070 /* DSWebServiceRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667017F1E5C7003B1070 /* DSWebServiceRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866AA17F1E5C7003B1070 /* DSWebServiceRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667117F1E5C7003B1070 /* DSWebServiceRequestOperation.m */; };
-		09B866AB17F1E5C7003B1070 /* DSFakeWebServiceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667317F1E5C7003B1070 /* DSFakeWebServiceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866AC17F1E5C7003B1070 /* DSFakeWebServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667417F1E5C7003B1070 /* DSFakeWebServiceRequest.m */; };
-		09B866AD17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667517F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866AE17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667617F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m */; };
-		09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667817F1E5C7003B1070 /* DSWebServiceNetRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866B017F1E5C7003B1070 /* DSWebServiceNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667917F1E5C7003B1070 /* DSWebServiceNetRequest.m */; };
-		09B866B117F1E5C7003B1070 /* DSEntityDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667B17F1E5C7003B1070 /* DSEntityDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866B217F1E5C7003B1070 /* DSEntityDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667C17F1E5C7003B1070 /* DSEntityDefinition.m */; };
-		09B866B317F1E5C7003B1070 /* DSWebServiceOperationType.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667D17F1E5C7003B1070 /* DSWebServiceOperationType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866B417F1E5C7003B1070 /* DSWebServiceOperationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8667E17F1E5C7003B1070 /* DSWebServiceOperationType.m */; };
-		09B866B517F1E5C7003B1070 /* DSWebServiceRequestsFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8667F17F1E5C7003B1070 /* DSWebServiceRequestsFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866B617F1E5C7003B1070 /* DSWebServiceRequestsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668017F1E5C7003B1070 /* DSWebServiceRequestsFactory.m */; };
-		09B866B717F1E5C7003B1070 /* NSManagedObject+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668117F1E5C7003B1070 /* NSManagedObject+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866B817F1E5C7003B1070 /* NSManagedObject+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668217F1E5C7003B1070 /* NSManagedObject+DSAdditions.m */; };
-		09B866B917F1E5C7003B1070 /* DSWebServiceParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668417F1E5C7003B1070 /* DSWebServiceParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866BA17F1E5C7003B1070 /* DSWebServiceParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668517F1E5C7003B1070 /* DSWebServiceParams.m */; };
-		09B866BD17F1E5C7003B1070 /* DSWebServiceResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668917F1E5C7003B1070 /* DSWebServiceResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866BE17F1E5C7003B1070 /* DSWebServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668A17F1E5C7003B1070 /* DSWebServiceResponse.m */; };
-		09B866BF17F1E5C7003B1070 /* DSWebServiceURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668C17F1E5C7003B1070 /* DSWebServiceURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866C017F1E5C7003B1070 /* DSWebServiceURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668D17F1E5C7003B1070 /* DSWebServiceURL.m */; };
-		09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8668E17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668F17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m */; };
-		09C15FD518DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09C15FD618DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */; };
-		09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09CDC39419260E4600C49EEA /* DSViewsStackAnimationDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09CDC39519260E4600C49EEA /* DSViewsStackAnimationDirection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */; };
-		09CEE82F18E1E73E00B090F9 /* DSViewsStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09CEE83018E1E73E00B090F9 /* DSViewsStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CEE82E18E1E73E00B090F9 /* DSViewsStack.m */; };
-		09D35A33193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D35A31193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09D35A34193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D35A32193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m */; };
-		09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D6223E1817DDF900A252D9 /* NSError+Parse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D6223F1817DDF900A252D9 /* NSError+Parse.m */; };
 		09E443141A61736600E8B6C0 /* DSDateFormatterCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33A17F0AC9100A21270 /* DSDateFormatterCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E443151A61736600E8B6C0 /* DSDateFormatterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33B17F0AC9100A21270 /* DSDateFormatterCache.m */; };
 		09E443DA1A61861400E8B6C0 /* DSGetPhotosPermissions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E443D81A61861400E8B6C0 /* DSGetPhotosPermissions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -691,138 +344,16 @@
 		09E54E2C1A604826002A854C /* DSCheckButtonProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A38017F0AC9100A21270 /* DSCheckButtonProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E54E2D1A604826002A854C /* UISwitch+DSCheckButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A38117F0AC9100A21270 /* UISwitch+DSCheckButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E54E2E1A604826002A854C /* UISwitch+DSCheckButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A38217F0AC9100A21270 /* UISwitch+DSCheckButton.m */; };
-		09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9318ED680A0098CAFF /* DSPassCodeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09EB9F9718ED680A0098CAFF /* DSPassCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EB9F9418ED680A0098CAFF /* DSPassCodeController.m */; };
-		09EB9F9818ED680A0098CAFF /* DSPassCodeControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EB9F9518ED680A0098CAFF /* DSPassCodeControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09EFCEEA19B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 09EFCEE819B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09EFCEEB19B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EFCEE919B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.m */; };
-		09F1B7831909983A0031B0F6 /* FBEncryptorAES.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F1B7811909983A0031B0F6 /* FBEncryptorAES.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09F1B7841909983A0031B0F6 /* FBEncryptorAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F1B7821909983A0031B0F6 /* FBEncryptorAES.m */; };
-		09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F7389B18A22EE6003FE0C2 /* DSDynamicPropertyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09F7389E18A22EE6003FE0C2 /* DSDynamicPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7389C18A22EE6003FE0C2 /* DSDynamicPropertyObject.m */; };
-		09F84FDC18C5FA380047AA16 /* AFMultipartBodyStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FDA18C5FA380047AA16 /* AFMultipartBodyStream.h */; };
-		09F84FDD18C5FA380047AA16 /* AFMultipartBodyStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F84FDB18C5FA380047AA16 /* AFMultipartBodyStream.m */; };
-		09F84FE018C5FA900047AA16 /* AFStreamingMultipartFormData.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FDE18C5FA900047AA16 /* AFStreamingMultipartFormData.h */; };
-		09F84FE118C5FA900047AA16 /* AFStreamingMultipartFormData.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F84FDF18C5FA900047AA16 /* AFStreamingMultipartFormData.m */; };
-		09F84FE518C5FB0B0047AA16 /* AFHTTPBodyPart.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FE318C5FB0B0047AA16 /* AFHTTPBodyPart.h */; };
-		09F84FE618C5FB0B0047AA16 /* AFHTTPBodyPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F84FE418C5FB0B0047AA16 /* AFHTTPBodyPart.m */; };
-		09F84FE918C5FBD70047AA16 /* AFHTTPBodyPartReadPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FE718C5FBD70047AA16 /* AFHTTPBodyPartReadPhase.h */; };
-		09F84FED18C5FCB60047AA16 /* AFFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F84FEB18C5FCB60047AA16 /* AFFunctions.h */; };
-		09F84FEE18C5FCB60047AA16 /* AFFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F84FEC18C5FCB60047AA16 /* AFFunctions.m */; };
-		09F8C87618A93A7500960CC8 /* NSNumber+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F8C87418A93A7500960CC8 /* NSNumber+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09F8C87718A93A7500960CC8 /* NSNumber+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8C87518A93A7500960CC8 /* NSNumber+DSAdditions.m */; };
-		62DD10D7C5D585E7DF32649A /* DSAlertsSupportCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154696C25DDF7CB90594 /* DSAlertsSupportCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD10D8A5F859797CC11AF7 /* DSAlertViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD17A21471C20C738E6BAA /* DSAlertViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD12341D52C3E5516F6D85 /* DSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD174C1D46388A8A79AF76 /* DSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD12A9BE582692B9643004 /* DSAlertsHandler+SimplifiedAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD13AE88A68CBC5259F586 /* DSAlertsHandler+SimplifiedAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD12DB787C62A67B7990A4 /* DSAlertButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD19823F32B27120690FE2 /* DSAlertButton.m */; };
-		62DD130527D6B094184E7AE6 /* DSAlertsHandlerConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1A7504C46E8DBB5D1BF9 /* DSAlertsHandlerConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD130F46A501A7FFCD1BAE /* DSDataDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1712F60E10D917DFEF98 /* DSDataDetector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD13C9E2F182E4E22E7D24 /* DSBlockBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1A7E79FEFB570DEAAA5E /* DSBlockBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD13EB68EB018ACE1AC0F5 /* DSConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1C0631C240FC26D7C2E3 /* DSConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD14ABC283FD7DF3AD2734 /* DSAlertViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD16FE95C8F802F4E5BB13 /* DSAlertViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD152CB973B9C752B7120C /* DSBlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1E5EAE093487F56DFF15 /* DSBlockBarButtonItem.m */; };
-		62DD1569D576C442B9DF1889 /* DSAlertsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FF31DEBF389A0374834 /* DSAlertsHandler.m */; };
-		62DD156A5BCD9E8F54FAFD25 /* DSDataDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD199D2FC7139BB1616937 /* DSDataDetector.m */; };
-		62DD1622AD022227DFD60F1E /* DSFindCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD11E47C44DDA0A2867834 /* DSFindCountry.m */; };
-		62DD16F1B4C19E58049F683D /* DSDraggingDestinationContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1EBE1FD4CA47F4C2E4FF /* DSDraggingDestinationContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD17944D3580379A737D2A /* DSAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD15ACA99084F023C7B4AF /* DSAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD17ADB8BFA1779019830E /* DSAlertsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD154F33AD8BF741BCB314 /* DSAlertsHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD17C01B3B707487A95F6D /* DSDragAndDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD13ED0EF18F1D1FD6F1A7 /* DSDragAndDropController.m */; };
-		62DD1841C6225FE22AA92F1B /* DSAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD18C9F54D0E5F44F3F6C6 /* DSAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD187C5A8A0492EB15FAEE /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD138D9722CA655F636CCA /* DSAppDelegate.m */; };
-		62DD19B8D7F38D3DAD57B11E /* DSFindCountry.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD18BB1C71903CA44B9C0A /* DSFindCountry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD19FF93EC85DB54E81188 /* DSBlockButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1AF5D211006BE9830590 /* DSBlockButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD1A1174BC68559EA4299F /* DSDragAndDropController.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD1AFD36B9F22FEFEB3170 /* DSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FC9FB79656CF9699964 /* DSMessage.m */; };
-		62DD1BC6C151EFA0696F8AC2 /* DSBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD145CE5D14120FE018CBA /* DSBlockButton.m */; };
-		62DD1C6C3614A89A5BF0FF1B /* DSUIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1615BF12DB35C9A214EC /* DSUIAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD1C90C4EBBDB2502CA983 /* DSAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD15C51F9116575702C34B /* DSAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD1C9E769C375EB5D785FB /* DSDraggingSourceContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD123F1B7C97E47FFB0F7C /* DSDraggingSourceContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD14CA899B7E82F54CCD3C /* DSMessageContext.m */; };
-		62DD1D2E90263BBAA1002A5B /* DSMessageContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1A94EAF2AD8177958550 /* DSMessageContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD1DB23EEF8D87DD0C9B15 /* DSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1A0DD9DE7CA23881E72F /* DSConfiguration.m */; };
-		62DD1E3812B21714B92C8ACF /* DSAlertsHandlerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1FA1527704E3088180FA /* DSAlertsHandlerConfiguration.m */; };
-		62DD1E3872904802D5077B3F /* DSUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD10482694069BA9C5E531 /* DSUIAlertView.m */; };
-		62DD1E899DE35CD54E5DC2BF /* DSAlertViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1427633E33FD45C82818 /* DSAlertViewFactory.m */; };
-		62DD1E915F2215F00929FC3C /* DSAlertButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD17F6B8F2871E6F283957 /* DSAlertButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62DD1EF1B0929ACD16CFF64B /* DSAlertsHandler+SimplifiedAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1534F0088E374A3A7597 /* DSAlertsHandler+SimplifiedAPI.m */; };
-		62DD1F21D685DAF88DB40D0D /* DSAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD18B2AEF6C1DFD60B1B8E /* DSAlert.m */; };
-		62DD1FEFFC22374EBAC3044E /* DSAlertsSupportCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1596489ABB2F0A7DF235 /* DSAlertsSupportCode.m */; };
-		AED6C1971465E55000D9B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C1961465E55000D9B44E /* Foundation.framework */; };
-		AED6C20D1465E89800D9B44E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED6C20C1465E89800D9B44E /* UIKit.framework */; };
+		C5FF8535B1FDB81804E3EA73 /* Pods_DSLibFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E37211C878D03B115227EA /* Pods_DSLibFrameworkTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0904155E1892E4DF00302A2F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AED6C1921465E55000D9B44E;
-			remoteInfo = DSLib;
-		};
-		090415611892E5EE00302A2F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09A60412182A65CF00F57F89;
-			remoteInfo = DSLibBundle;
-		};
 		0950A8ED1AC6E00200EF93C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AED6C18A1465E55000D9B44E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 099767041A4F080800DDE130;
 			remoteInfo = DSLibFramework;
-		};
-		0950A8FD1AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 908379791A8B972C009844DA;
-			remoteInfo = Expecta;
-		};
-		0950A8FF1AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 908379111A8B9660009844DA;
-			remoteInfo = "Expecta-iOS";
-		};
-		0950A9011AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9C4416F917FF3F4A00978F09;
-			remoteInfo = ExpectaTests;
-		};
-		0950A9031AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E93067DA13B2E6D100EA26FF;
-			remoteInfo = "Expecta-iOSTests";
-		};
-		0950A9051AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9ACDF0C13B2DD520010F4D7;
-			remoteInfo = libExpecta;
-		};
-		0950A9071AC6EF3300EF93C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E93067CE13B2E6D100EA26FF;
-			remoteInfo = "libExpecta-iOS";
-		};
-		0950A9091AC6EF4400EF93C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 908379101A8B9660009844DA;
-			remoteInfo = "Expecta-iOS";
 		};
 		099767581A4F09CB00DDE130 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1023,7 +554,6 @@
 		0950A8E61AC6E00200EF93C2 /* DSLibFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLibFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0950A8E91AC6E00200EF93C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0950A8F21AC6E01E00EF93C2 /* DSViewsStack_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStack_Tests.m; sourceTree = "<group>"; };
-		0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = Expecta/Expecta.xcodeproj; sourceTree = SOURCE_ROOT; };
 		0950A90C1AC6F08E00EF93C2 /* DSQueue_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueue_Tests.m; sourceTree = "<group>"; };
 		0951BF26181A6A0D0088D3E8 /* UIView+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DSAdditions.h"; sourceTree = "<group>"; };
 		0951BF27181A6A0D0088D3E8 /* UIView+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DSAdditions.m"; sourceTree = "<group>"; };
@@ -1106,7 +636,6 @@
 		0998E23B192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
 		09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DSBundle.h"; sourceTree = "<group>"; };
 		09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DSBundle.m"; sourceTree = "<group>"; };
-		09A60413182A65CF00F57F89 /* DSLib.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A60414182A65CF00F57F89 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		09A60418182A65CF00F57F89 /* DSLibBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DSLibBundle-Info.plist"; sourceTree = "<group>"; };
 		09A6041A182A65CF00F57F89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1272,10 +801,12 @@
 		62DD1FA1527704E3088180FA /* DSAlertsHandlerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlertsHandlerConfiguration.m; sourceTree = "<group>"; };
 		62DD1FC9FB79656CF9699964 /* DSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessage.m; sourceTree = "<group>"; };
 		62DD1FF31DEBF389A0374834 /* DSAlertsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAlertsHandler.m; sourceTree = "<group>"; };
-		AED6C1931465E55000D9B44E /* libDSLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDSLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED6C1961465E55000D9B44E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AED6C19A1465E55000D9B44E /* DSLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLib-Prefix.pch"; sourceTree = "<group>"; };
 		AED6C20C1465E89800D9B44E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B4670282BAC8D02C97ED50A5 /* Pods-DSLibFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSLibFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSLibFrameworkTests/Pods-DSLibFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
+		BE2DD3B6B822B9E4DC27AC22 /* Pods-DSLibFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSLibFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSLibFrameworkTests/Pods-DSLibFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3E37211C878D03B115227EA /* Pods_DSLibFrameworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSLibFrameworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1283,8 +814,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0950A90B1AC6EF9B00EF93C2 /* Expecta.framework in Frameworks */,
 				0950A8EC1AC6E00200EF93C2 /* DSLibFramework.framework in Frameworks */,
+				C5FF8535B1FDB81804E3EA73 /* Pods_DSLibFrameworkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1301,24 +832,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				099767561A4F09CB00DDE130 /* DSLibFramework.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09A60410182A65CF00F57F89 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09A60415182A65CF00F57F89 /* CoreFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AED6C1901465E55000D9B44E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0922D3E3178C951900AAE05E /* CoreData.framework in Frameworks */,
-				AED6C20D1465E89800D9B44E /* UIKit.framework in Frameworks */,
-				AED6C1971465E55000D9B44E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1728,7 +1241,6 @@
 		0950A8E71AC6E00200EF93C2 /* DSLibFrameworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */,
 				0950A8F21AC6E01E00EF93C2 /* DSViewsStack_Tests.m */,
 				0950A90C1AC6F08E00EF93C2 /* DSQueue_Tests.m */,
 				0950A8E81AC6E00200EF93C2 /* Supporting Files */,
@@ -1742,19 +1254,6 @@
 				0950A8E91AC6E00200EF93C2 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0950A8F51AC6EF3300EF93C2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0950A8FE1AC6EF3300EF93C2 /* Expecta.framework */,
-				0950A9001AC6EF3300EF93C2 /* Expecta.framework */,
-				0950A9021AC6EF3300EF93C2 /* ExpectaTests.xctest */,
-				0950A9041AC6EF3300EF93C2 /* Expecta-iOSTests.xctest */,
-				0950A9061AC6EF3300EF93C2 /* libExpecta.a */,
-				0950A9081AC6EF3300EF93C2 /* libExpecta.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0969F92418328AE100B3C4B2 /* UIImage-categories */ = {
@@ -2229,6 +1728,15 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		A4CF709DEA92B1950CA2D1F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE2DD3B6B822B9E4DC27AC22 /* Pods-DSLibFrameworkTests.debug.xcconfig */,
+				B4670282BAC8D02C97ED50A5 /* Pods-DSLibFrameworkTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AED6C1881465E55000D9B44E = {
 			isa = PBXGroup;
 			children = (
@@ -2239,6 +1747,7 @@
 				0950A8E71AC6E00200EF93C2 /* DSLibFrameworkTests */,
 				AED6C1951465E55000D9B44E /* Frameworks */,
 				AED6C1941465E55000D9B44E /* Products */,
+				A4CF709DEA92B1950CA2D1F9 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -2247,8 +1756,6 @@
 		AED6C1941465E55000D9B44E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AED6C1931465E55000D9B44E /* libDSLib.a */,
-				09A60413182A65CF00F57F89 /* DSLib.bundle */,
 				099767051A4F080800DDE130 /* DSLibFramework.framework */,
 				099767311A4F09B400DDE130 /* SwiftSampleProject.app */,
 				0950A8E61AC6E00200EF93C2 /* DSLibFrameworkTests.xctest */,
@@ -2266,6 +1773,7 @@
 				AED6C1961465E55000D9B44E /* Foundation.framework */,
 				09A60414182A65CF00F57F89 /* CoreFoundation.framework */,
 				09CEE81A18E1E6EB00B090F9 /* XCTest.framework */,
+				D3E37211C878D03B115227EA /* Pods_DSLibFrameworkTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2504,215 +2012,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AED6C1911465E55000D9B44E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09162C6B180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.h in Headers */,
-				0903A3E917F0AC9100A21270 /* DSVibrator.h in Headers */,
-				0903A41617F0C28300A21270 /* DSGPSTracker.h in Headers */,
-				097F7A0C19B84F8A004B4129 /* NSTimer+DSAdditions.h in Headers */,
-				09F84FED18C5FCB60047AA16 /* AFFunctions.h in Headers */,
-				0903A2E017F0AC8300A21270 /* DSArrayChange.h in Headers */,
-				096C87AD18290ADA0024D734 /* DSMessage+Parse.h in Headers */,
-				0903A3F117F0AC9100A21270 /* DSFlashingImageView.h in Headers */,
-				0903A3C117F0AC9100A21270 /* XibLoader.h in Headers */,
-				09B866AB17F1E5C7003B1070 /* DSFakeWebServiceRequest.h in Headers */,
-				09B866A317F1E5C7003B1070 /* DSWebServiceQueue.h in Headers */,
-				0903A3EF17F0AC9100A21270 /* DSActivityIndicator.h in Headers */,
-				0903A3FD17F0AC9100A21270 /* UISwitch+DSCheckButton.h in Headers */,
-				0903A40417F0AC9100A21270 /* DSValueChooserViewControllerDelegate.h in Headers */,
-				0972E33E19B6FA9F005D00F2 /* NSDate+DateTools.h in Headers */,
-				09162C68180EE84900A0DEEF /* DSFieldValidationController.h in Headers */,
-				0903A2E517F0AC8300A21270 /* DSArrayChangeCalculator.h in Headers */,
-				0903A3B717F0AC9100A21270 /* UITableView+DSAdditions.h in Headers */,
-				09067F311818055900C8F48F /* DSAlertQueue+Private.h in Headers */,
-				0903A3C317F0AC9100A21270 /* DSCArray.h in Headers */,
-				09F84FE018C5FA900047AA16 /* AFStreamingMultipartFormData.h in Headers */,
-				09EFCEEA19B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.h in Headers */,
-				0903A3BD17F0AC9100A21270 /* UIView+Subviews.h in Headers */,
-				0982EB7F18E1EA6000F9DFF2 /* DSViewsStackDataSource.h in Headers */,
-				095568D7195D61710081A268 /* DSEmailSharer.h in Headers */,
-				09F1B7831909983A0031B0F6 /* FBEncryptorAES.h in Headers */,
-				0972E33819B6FA9F005D00F2 /* DTTimePeriodChain.h in Headers */,
-				0903A38C17F0AC9100A21270 /* CATransition+AnimationsBuilder.h in Headers */,
-				09B866C117F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.h in Headers */,
-				0972E33A19B6FA9F005D00F2 /* DTTimePeriodCollection.h in Headers */,
-				09AAD18F1A35F82800DAE9E4 /* DSWeakTimerTarget.h in Headers */,
-				0903A40217F0AC9100A21270 /* DSValueChooserViewController.h in Headers */,
-				0972E33219B6FA9F005D00F2 /* DateTools.h in Headers */,
-				09B8663A17F1B82D003B1070 /* DSTableViewController.h in Headers */,
-				0903A2E317F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.h in Headers */,
-				0903A39B17F0AC9100A21270 /* NSMutableArray+Additions.h in Headers */,
-				09B8669C17F1E5C7003B1070 /* DSWebServiceStringParam.h in Headers */,
-				0903A3B517F0AC9100A21270 /* UIScreen+Availability.h in Headers */,
-				09067F2D181804CA00C8F48F /* DSAlertsQueue.h in Headers */,
-				097FCD7C189FAAF300B9B041 /* RTProperty.h in Headers */,
-				097C81B019B5C31F00E9F48E /* UIButton+DSAdditions.h in Headers */,
-				09162C71180EE84900A0DEEF /* DSTextField.h in Headers */,
-				0903A3A717F0AC9100A21270 /* NSString+Extras.h in Headers */,
-				0972E33C19B6FA9F005D00F2 /* DTTimePeriodGroup.h in Headers */,
-				0903A3B117F0AC9100A21270 /* UIDevice+Additions.h in Headers */,
-				098783CF18C1F39700C838A2 /* DSCodingTransformer.h in Headers */,
-				09CDC39419260E4600C49EEA /* DSViewsStackAnimationDirection.h in Headers */,
-				0903A39F17F0AC9100A21270 /* NSObject+DeepCopy.h in Headers */,
-				0903A2E717F0AC8300A21270 /* DSNetworkActivity.h in Headers */,
-				0903A3AF17F0AC9100A21270 /* UIBarButtonItem+DSAdditions.h in Headers */,
-				09B8669E17F1E5C7003B1070 /* DSWebServiceParamsBuilder.h in Headers */,
-				09B6DCE51858F5C500FB1825 /* DSChoosePlacemarkAnnotation.h in Headers */,
-				09162C6A180EE84900A0DEEF /* DSFieldValidationControllerDelegate.h in Headers */,
-				0903A3E117F0AC9100A21270 /* DSSettings_impl.h in Headers */,
-				097CA65B195DCAA900A2EC56 /* NSError+DSMessage.h in Headers */,
-				09F84FE518C5FB0B0047AA16 /* AFHTTPBodyPart.h in Headers */,
-				095D116C19B6F96D004604BE /* NSDate+TimeAgoFormatter.h in Headers */,
-				0903A40117F0AC9100A21270 /* PGVideoImageViewDelegate.h in Headers */,
-				0903A3A317F0AC9100A21270 /* NSObject+Observing.h in Headers */,
-				0903A3F317F0AC9100A21270 /* DSRotatingImageView.h in Headers */,
-				0903A3F717F0AC9100A21270 /* DSSliderDelegate.h in Headers */,
-				0969F93318329C3C00B3C4B2 /* DSAskForTextController.h in Headers */,
-				0903A3C517F0AC9100A21270 /* DSCFLoatDictionary.h in Headers */,
-				0903A3C717F0AC9100A21270 /* DSQueue.h in Headers */,
-				09B866A817F1E5C7003B1070 /* DSWebServiceRequestDelegate.h in Headers */,
-				09B6DCEC1858F5C500FB1825 /* DSGeocoder.h in Headers */,
-				0903A39D17F0AC9100A21270 /* NSMutableURLRequest+POSTData.h in Headers */,
-				09B6DCF61858F5C500FB1825 /* DSGeocodeProviderOpenmap.h in Headers */,
-				0903A39917F0AC9100A21270 /* NSFileManager+Directories.h in Headers */,
-				0903A39117F0AC9100A21270 /* NSArray+ObjectsQuery.h in Headers */,
-				0903A3E717F0AC9100A21270 /* QWatchedOperationQueue.h in Headers */,
-				0972E33419B6FA9F005D00F2 /* DTError.h in Headers */,
-				09A83F3B19238ABE008DE30F /* DSRedirectLogs.h in Headers */,
-				0903A3E517F0AC9100A21270 /* QRunLoopOperation.h in Headers */,
-				0903A2E217F0AC8300A21270 /* DSArrayChangeApplier.h in Headers */,
-				0903A39317F0AC9100A21270 /* NSData+OAdditions.h in Headers */,
-				0998E21D1928E962004D9BD1 /* DSCoreDataObjectsObserver.h in Headers */,
-				0982EB7D18E1E97500F9DFF2 /* DSViewsStackDelegate.h in Headers */,
-				0903A3D117F0AC9100A21270 /* DSCFunctions.h in Headers */,
-				092D8A6D18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.h in Headers */,
-				09B8669317F1E5C7003B1070 /* NSError+DSWebService.h in Headers */,
-				0969F92B18328AE100B3C4B2 /* UIImage+DSAdditions.h in Headers */,
-				0972E33619B6FA9F005D00F2 /* DTTimePeriod.h in Headers */,
-				0903A3BB17F0AC9100A21270 /* UIView+Resizing.h in Headers */,
-				09B6DCF21858F5C500FB1825 /* DSPlacemarkPickerViewControllerDelegate.h in Headers */,
-				0903A38E17F0AC9100A21270 /* DSTimeFunctions.h in Headers */,
-				09B866BD17F1E5C7003B1070 /* DSWebServiceResponse.h in Headers */,
-				09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */,
-				0973572718041E3A00351055 /* DSCustomFontLabel.h in Headers */,
-				09162C76180EEB5900A0DEEF /* DSFieldValidationFramework.h in Headers */,
-				09B6DCF01858F5C500FB1825 /* DSPlacemarkPickerViewController.h in Headers */,
-				09F8C87618A93A7500960CC8 /* NSNumber+DSAdditions.h in Headers */,
-				0903A3F517F0AC9100A21270 /* DSSlider.h in Headers */,
-				0903A3DD17F0AC9100A21270 /* CStringsFunctions.h in Headers */,
-				0903A3CF17F0AC9100A21270 /* DSDateFormatterCache.h in Headers */,
-				09B6DCF41858F5C500FB1825 /* DSGeocodeProviderApple.h in Headers */,
-				0998E21F1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h in Headers */,
-				0998E23C192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h in Headers */,
-				0903A2E917F0AC8300A21270 /* UIView+ViewsEnumeration.h in Headers */,
-				09B866A517F1E5C7003B1070 /* DSWebServiceSerialQueue.h in Headers */,
-				0903A3CD17F0AC9100A21270 /* DSMacros.h in Headers */,
-				0951BF28181A6A0D0088D3E8 /* UIView+DSAdditions.h in Headers */,
-				09B8669017F1E5C7003B1070 /* DSWebServiceConfiguration.h in Headers */,
-				09D35A33193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.h in Headers */,
-				098A63E618D426A40082BDEE /* NSManagedObjectContext+DSAdditions.h in Headers */,
-				0903A3A917F0AC9100A21270 /* UIAlertView+Additions.h in Headers */,
-				09B866A117F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.h in Headers */,
-				0987FB7419C6E15A007D1C55 /* DSRelativePath.h in Headers */,
-				0903A3A517F0AC9100A21270 /* NSString+Encoding.h in Headers */,
-				0903A3F817F0AC9100A21270 /* PGSlider.h in Headers */,
-				0903A39517F0AC9100A21270 /* NSDate+OAddittions.h in Headers */,
-				0903A3FC17F0AC9100A21270 /* DSCheckButtonProtocol.h in Headers */,
-				0903A3EB17F0AC9100A21270 /* DSFontManager.h in Headers */,
-				0903A3DF17F0AC9100A21270 /* DSRuntimeHacker.h in Headers */,
-				0903A3AD17F0AC9100A21270 /* UIApplication+KeyboardView.h in Headers */,
-				0903A3BF17F0AC9100A21270 /* UIView+XibLoading.h in Headers */,
-				0903A39717F0AC9100A21270 /* NSDictionary+JSONDictionary.h in Headers */,
-				09B6DCE71858F5C500FB1825 /* DSCLPlacemarkTransformer.h in Headers */,
-				0903A3FF17F0AC9100A21270 /* PGVideoImageView.h in Headers */,
-				09F84FE918C5FBD70047AA16 /* AFHTTPBodyPartReadPhase.h in Headers */,
-				0903A38F17F0AC9100A21270 /* NSArray+Extras.h in Headers */,
-				09B6DCEA1858F5C500FB1825 /* DSGeocoder+Factory.h in Headers */,
-				09B866B117F1E5C7003B1070 /* DSEntityDefinition.h in Headers */,
-				09423C7818E8244000F1B9E2 /* DSMessageInterceptor.h in Headers */,
-				0903A3FA17F0AC9100A21270 /* DSCheckButton.h in Headers */,
-				09C15FD518DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h in Headers */,
-				0903A3AB17F0AC9100A21270 /* UIApplication+DSAdditions.h in Headers */,
-				09B8669517F1E5C7003B1070 /* DSWebServiceArrayParam.h in Headers */,
-				09B866A717F1E5C7003B1070 /* DSWebServiceRequest.h in Headers */,
-				0903A3A117F0AC9100A21270 /* NSObject+DSAdditions.h in Headers */,
-				09EB9F9818ED680A0098CAFF /* DSPassCodeControllerDelegate.h in Headers */,
-				09162C6D180EE84900A0DEEF /* DSFieldValidationCriterion.h in Headers */,
-				09B866B517F1E5C7003B1070 /* DSWebServiceRequestsFactory.h in Headers */,
-				09B6DCEF1858F5C500FB1825 /* DSGeocoderFramework.h in Headers */,
-				09F84FDC18C5FA380047AA16 /* AFMultipartBodyStream.h in Headers */,
-				097FCD7E189FAAF300B9B041 /* RTProtocol.h in Headers */,
-				0903A3B317F0AC9100A21270 /* UIFont+FromString.h in Headers */,
-				092D8A6518D09ACE00EA56F0 /* ALAsset+DSAdditions.h in Headers */,
-				0903A3ED17F0AC9100A21270 /* FontsDB.h in Headers */,
-				0972E33319B6FA9F005D00F2 /* DTConstants.h in Headers */,
-				62DD1C90C4EBBDB2502CA983 /* DSAlert.h in Headers */,
-				62DD12341D52C3E5516F6D85 /* DSMessage.h in Headers */,
-				62DD17944D3580379A737D2A /* DSAlertView.h in Headers */,
-				62DD1E915F2215F00929FC3C /* DSAlertButton.h in Headers */,
-				0903A40917F0B4DA00A21270 /* Reachability.h in Headers */,
-				62DD1C6C3614A89A5BF0FF1B /* DSUIAlertView.h in Headers */,
-				09A6040D182A657000F57F89 /* NSBundle+DSBundle.h in Headers */,
-				097FCD80189FAAF300B9B041 /* RTUnregisteredClass.h in Headers */,
-				09B8669917F1E5C7003B1070 /* DSWebServiceParam.h in Headers */,
-				62DD17ADB8BFA1779019830E /* DSAlertsHandler.h in Headers */,
-				62DD1D2E90263BBAA1002A5B /* DSMessageContext.h in Headers */,
-				62DD10D8A5F859797CC11AF7 /* DSAlertViewFactory.h in Headers */,
-				09F7389D18A22EE6003FE0C2 /* DSDynamicPropertyObject.h in Headers */,
-				62DD10D7C5D585E7DF32649A /* DSAlertsSupportCode.h in Headers */,
-				09B8669217F1E5C7003B1070 /* DSWebServiceFramework.h in Headers */,
-				0906D6BB19ADAC9D00E2F7F6 /* DSGradientView.h in Headers */,
-				09CEE82F18E1E73E00B090F9 /* DSViewsStack.h in Headers */,
-				098FB26017F2008600DB9F49 /* DSQueueBasedRequestSender.h in Headers */,
-				09B8664517F1BF30003B1070 /* DSKeyboardControllerDelegate.h in Headers */,
-				09B8669A17F1E5C7003B1070 /* DSWebServiceParamFactory.h in Headers */,
-				62DD14ABC283FD7DF3AD2734 /* DSAlertViewDelegate.h in Headers */,
-				62DD130527D6B094184E7AE6 /* DSAlertsHandlerConfiguration.h in Headers */,
-				09B8669717F1E5C7003B1070 /* DSWebServiceCompositeParams.h in Headers */,
-				09B6DCE91858F5C500FB1825 /* DSGeocodeProviderType.h in Headers */,
-				62DD12A9BE582692B9643004 /* DSAlertsHandler+SimplifiedAPI.h in Headers */,
-				097FCD78189FAAF300B9B041 /* RTIvar.h in Headers */,
-				09B866A917F1E5C7003B1070 /* DSWebServiceRequestOperation.h in Headers */,
-				62DD13EB68EB018ACE1AC0F5 /* DSConfiguration.h in Headers */,
-				09B6DCF81858F5C500FB1825 /* DSPlacemark.h in Headers */,
-				0903A41817F0C28300A21270 /* DSGPSTrackerDelegate.h in Headers */,
-				62DD1841C6225FE22AA92F1B /* DSAppDelegate.h in Headers */,
-				62DD19FF93EC85DB54E81188 /* DSBlockButton.h in Headers */,
-				09162C55180ED00C00A0DEEF /* DSCompas.h in Headers */,
-				093859D717F1FDD400E8AB0E /* JSONKit.h in Headers */,
-				09B866B317F1E5C7003B1070 /* DSWebServiceOperationType.h in Headers */,
-				09AD5B2018A8F0E3001FC5D1 /* DSConstants.h in Headers */,
-				098F666118ACD09600E479E5 /* DSPhotoView.h in Headers */,
-				62DD13C9E2F182E4E22E7D24 /* DSBlockBarButtonItem.h in Headers */,
-				097FCD76189FAAF300B9B041 /* MARTNSObject.h in Headers */,
-				62DD130F46A501A7FFCD1BAE /* DSDataDetector.h in Headers */,
-				09B8663E17F1B990003B1070 /* DSKeyboardController.h in Headers */,
-				09162C6F180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h in Headers */,
-				09B866B917F1E5C7003B1070 /* DSWebServiceParams.h in Headers */,
-				62DD19B8D7F38D3DAD57B11E /* DSFindCountry.h in Headers */,
-				0907D3BF194C4CC30035C075 /* UINavigationController+Inspection.h in Headers */,
-				098FB25F17F2008600DB9F49 /* DSQueueBasedRequestSender+Private.h in Headers */,
-				0928CFDE17F21C9C00E494E1 /* DSWebServiceFunctions.h in Headers */,
-				09B8669F17F1E5C7003B1070 /* DSWebServiceParamsExporter.h in Headers */,
-				09B866AD17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.h in Headers */,
-				09B866BF17F1E5C7003B1070 /* DSWebServiceURL.h in Headers */,
-				09B6DCF31858F5C500FB1825 /* DSGeocodeProvider.h in Headers */,
-				09EB9F9618ED680A0098CAFF /* DSPassCodeController.h in Headers */,
-				09B866AF17F1E5C7003B1070 /* DSWebServiceNetRequest.h in Headers */,
-				0908940A195326D4002CCCB8 /* UITextView+Size.h in Headers */,
-				09162C66180EE84900A0DEEF /* DSCriterionDescriptionViewController.h in Headers */,
-				09B866B717F1E5C7003B1070 /* NSManagedObject+DSAdditions.h in Headers */,
-				097FCD7A189FAAF300B9B041 /* RTMethod.h in Headers */,
-				62DD1C9E769C375EB5D785FB /* DSDraggingSourceContainer.h in Headers */,
-				09D622401817DDF900A252D9 /* NSError+Parse.h in Headers */,
-				09B6DCEE1858F5C500FB1825 /* DSGeocoderDelegate.h in Headers */,
-				62DD16F1B4C19E58049F683D /* DSDraggingDestinationContainer.h in Headers */,
-				62DD1A1174BC68559EA4299F /* DSDragAndDropController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -2720,14 +2019,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0950A8EF1AC6E00200EF93C2 /* Build configuration list for PBXNativeTarget "DSLibFrameworkTests" */;
 			buildPhases = (
+				E8E2A07E9643930EEF50B9FA /* Check Pods Manifest.lock */,
 				0950A8E21AC6E00200EF93C2 /* Sources */,
 				0950A8E31AC6E00200EF93C2 /* Frameworks */,
 				0950A8E41AC6E00200EF93C2 /* Resources */,
+				52EDCAE9F5320FED919B0A78 /* Embed Pods Frameworks */,
+				1CDAC1D00BEDBF0F3C81C6FB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0950A90A1AC6EF4400EF93C2 /* PBXTargetDependency */,
 				0950A8EE1AC6E00200EF93C2 /* PBXTargetDependency */,
 			);
 			name = DSLibFrameworkTests;
@@ -2772,41 +2073,6 @@
 			productReference = 099767311A4F09B400DDE130 /* SwiftSampleProject.app */;
 			productType = "com.apple.product-type.application";
 		};
-		09A60412182A65CF00F57F89 /* DSLibBundle */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09A6041D182A65CF00F57F89 /* Build configuration list for PBXNativeTarget "DSLibBundle" */;
-			buildPhases = (
-				09A6040F182A65CF00F57F89 /* Sources */,
-				09A60410182A65CF00F57F89 /* Frameworks */,
-				09A60411182A65CF00F57F89 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DSLibBundle;
-			productName = DSLibBundle;
-			productReference = 09A60413182A65CF00F57F89 /* DSLib.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		AED6C1921465E55000D9B44E /* DSLib */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AED6C1A01465E55000D9B44E /* Build configuration list for PBXNativeTarget "DSLib" */;
-			buildPhases = (
-				AED6C18F1465E55000D9B44E /* Sources */,
-				AED6C1901465E55000D9B44E /* Frameworks */,
-				AED6C1911465E55000D9B44E /* Headers */,
-				090415591892E47900302A2F /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DSLib;
-			productName = DSLib;
-			productReference = AED6C1931465E55000D9B44E /* libDSLib.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2838,68 +2104,14 @@
 			mainGroup = AED6C1881465E55000D9B44E;
 			productRefGroup = AED6C1941465E55000D9B44E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 0950A8F51AC6EF3300EF93C2 /* Products */;
-					ProjectRef = 0950A8F41AC6EF3300EF93C2 /* Expecta.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				AED6C1921465E55000D9B44E /* DSLib */,
-				09A60412182A65CF00F57F89 /* DSLibBundle */,
-				0904155A1892E4D600302A2F /* Framework */,
 				099767041A4F080800DDE130 /* DSLibFramework */,
 				099767301A4F09B400DDE130 /* SwiftSampleProject */,
 				0950A8E51AC6E00200EF93C2 /* DSLibFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		0950A8FE1AC6EF3300EF93C2 /* Expecta.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Expecta.framework;
-			remoteRef = 0950A8FD1AC6EF3300EF93C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0950A9001AC6EF3300EF93C2 /* Expecta.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Expecta.framework;
-			remoteRef = 0950A8FF1AC6EF3300EF93C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0950A9021AC6EF3300EF93C2 /* ExpectaTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ExpectaTests.xctest;
-			remoteRef = 0950A9011AC6EF3300EF93C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0950A9041AC6EF3300EF93C2 /* Expecta-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Expecta-iOSTests.xctest";
-			remoteRef = 0950A9031AC6EF3300EF93C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0950A9061AC6EF3300EF93C2 /* libExpecta.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libExpecta.a;
-			remoteRef = 0950A9051AC6EF3300EF93C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0950A9081AC6EF3300EF93C2 /* libExpecta.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libExpecta.a;
-			remoteRef = 0950A9071AC6EF3300EF93C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0950A8E41AC6E00200EF93C2 /* Resources */ = {
@@ -2929,56 +2141,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09A60411182A65CF00F57F89 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0972E34019B6FCB1005D00F2 /* DateTools.bundle in Resources */,
-				09A60431182A663C00F57F89 /* DSWebServiceConfiguration.plist in Resources */,
-				09A60433182A663C00F57F89 /* UIFontsNames.plist in Resources */,
-				09A60434182A663C00F57F89 /* slider_background.png in Resources */,
-				09A60435182A663C00F57F89 /* slider_background@2x.png in Resources */,
-				09A60436182A663C00F57F89 /* sliderthumb.png in Resources */,
-				09A60437182A663C00F57F89 /* slidertrack.png in Resources */,
-				09A60438182A663C00F57F89 /* slidertrack@2x.png in Resources */,
-				09A60439182A663C00F57F89 /* DSValueChooserViewController.xib in Resources */,
-				09A6043A182A663C00F57F89 /* DSMessagesLocalization.strings in Resources */,
-				09A6043B182A663C00F57F89 /* DSConfiguration.plist in Resources */,
-				09A60430182A65E700F57F89 /* DSFieldValidation.strings in Resources */,
-				09A6042F182A65E100F57F89 /* DSWebServiceFunctions.plist in Resources */,
-				09A6041B182A65CF00F57F89 /* InfoPlist.strings in Resources */,
-				09B6DCFA1858F5DE00FB1825 /* DSChoosePlacemarkAnnotation.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		090415591892E47900302A2F /* ShellScript */ = {
+		1CDAC1D00BEDBF0F3C81C6FB /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSLibFrameworkTests/Pods-DSLibFrameworkTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-		090415601892E4F700302A2F /* ShellScript */ = {
+		52EDCAE9F5320FED919B0A78 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSLibFrameworkTests/Pods-DSLibFrameworkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8E2A07E9643930EEF50B9FA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -3157,211 +2366,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09A6040F182A65CF00F57F89 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AED6C18F1465E55000D9B44E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0903A3C217F0AC9100A21270 /* XibLoader.m in Sources */,
-				09162C69180EE84900A0DEEF /* DSFieldValidationController.m in Sources */,
-				0903A41717F0C28300A21270 /* DSGPSTracker.m in Sources */,
-				0903A3C617F0AC9100A21270 /* DSCFLoatDictionary.m in Sources */,
-				09AD5B2118A8F0E3001FC5D1 /* DSConstants.m in Sources */,
-				09B6DCE81858F5C500FB1825 /* DSCLPlacemarkTransformer.m in Sources */,
-				0903A2EA17F0AC8300A21270 /* UIView+ViewsEnumeration.m in Sources */,
-				0903A3B417F0AC9100A21270 /* UIFont+FromString.m in Sources */,
-				095D116D19B6F96D004604BE /* NSDate+TimeAgoFormatter.m in Sources */,
-				098A63E718D426A40082BDEE /* NSManagedObjectContext+DSAdditions.m in Sources */,
-				09B866BA17F1E5C7003B1070 /* DSWebServiceParams.m in Sources */,
-				09B866A217F1E5C7003B1070 /* DSWebServiceParamsJSONBuilder.m in Sources */,
-				097FCD81189FAAF300B9B041 /* RTUnregisteredClass.m in Sources */,
-				097CA65C195DCAA900A2EC56 /* NSError+DSMessage.m in Sources */,
-				0903A3D217F0AC9100A21270 /* DSCFunctions.m in Sources */,
-				09B6DCF71858F5C500FB1825 /* DSGeocodeProviderOpenmap.m in Sources */,
-				09EB9F9718ED680A0098CAFF /* DSPassCodeController.m in Sources */,
-				0903A40A17F0B4DA00A21270 /* Reachability.m in Sources */,
-				0998E23D192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m in Sources */,
-				0903A3DE17F0AC9100A21270 /* CStringsFunctions.m in Sources */,
-				0903A3B617F0AC9100A21270 /* UIScreen+Availability.m in Sources */,
-				0903A3FE17F0AC9100A21270 /* UISwitch+DSCheckButton.m in Sources */,
-				09B6DCED1858F5C500FB1825 /* DSGeocoder.m in Sources */,
-				0903A3B817F0AC9100A21270 /* UITableView+DSAdditions.m in Sources */,
-				0903A3EE17F0AC9100A21270 /* FontsDB.m in Sources */,
-				09162C6C180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m in Sources */,
-				0903A3C417F0AC9100A21270 /* DSCArray.m in Sources */,
-				0906D6BC19ADAC9D00E2F7F6 /* DSGradientView.m in Sources */,
-				09B8669D17F1E5C7003B1070 /* DSWebServiceStringParam.m in Sources */,
-				09D35A34193C80F900BF14E0 /* UICollectionView+NSFetchedResultsController.m in Sources */,
-				09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */,
-				0903A39E17F0AC9100A21270 /* NSMutableURLRequest+POSTData.m in Sources */,
-				097FCD77189FAAF300B9B041 /* MARTNSObject.m in Sources */,
-				093859D817F1FDD400E8AB0E /* JSONKit.m in Sources */,
-				0903A3E017F0AC9100A21270 /* DSRuntimeHacker.m in Sources */,
-				09423C7918E8244000F1B9E2 /* DSMessageInterceptor.m in Sources */,
-				09B6DCEB1858F5C500FB1825 /* DSGeocoder+Factory.m in Sources */,
-				09B866B617F1E5C7003B1070 /* DSWebServiceRequestsFactory.m in Sources */,
-				09162C72180EE84900A0DEEF /* DSTextField.m in Sources */,
-				0903A39617F0AC9100A21270 /* NSDate+OAddittions.m in Sources */,
-				09F84FEE18C5FCB60047AA16 /* AFFunctions.m in Sources */,
-				0903A3E617F0AC9100A21270 /* QRunLoopOperation.m in Sources */,
-				097FCD7F189FAAF300B9B041 /* RTProtocol.m in Sources */,
-				0903A2E117F0AC8300A21270 /* DSArrayChange.m in Sources */,
-				0903A3F017F0AC9100A21270 /* DSActivityIndicator.m in Sources */,
-				09D622411817DDF900A252D9 /* NSError+Parse.m in Sources */,
-				0903A39417F0AC9100A21270 /* NSData+OAdditions.m in Sources */,
-				09162C9C180EEEB900A0DEEF /* DSCriterionDescriptionViewController.m in Sources */,
-				0903A3AA17F0AC9100A21270 /* UIAlertView+Additions.m in Sources */,
-				0972E33719B6FA9F005D00F2 /* DTTimePeriod.m in Sources */,
-				09F1B7841909983A0031B0F6 /* FBEncryptorAES.m in Sources */,
-				0903A39817F0AC9100A21270 /* NSDictionary+JSONDictionary.m in Sources */,
-				0903A3C017F0AC9100A21270 /* UIView+XibLoading.m in Sources */,
-				0903A3B217F0AC9100A21270 /* UIDevice+Additions.m in Sources */,
-				09B8663F17F1B990003B1070 /* DSKeyboardController.m in Sources */,
-				09B866AA17F1E5C7003B1070 /* DSWebServiceRequestOperation.m in Sources */,
-				0928CFDF17F21C9C00E494E1 /* DSWebServiceFunctions.m in Sources */,
-				0903A3F217F0AC9100A21270 /* DSFlashingImageView.m in Sources */,
-				0903A3F917F0AC9100A21270 /* PGSlider.m in Sources */,
-				09B6DCF91858F5C500FB1825 /* DSPlacemark.m in Sources */,
-				0972E33919B6FA9F005D00F2 /* DTTimePeriodChain.m in Sources */,
-				0903A3F417F0AC9100A21270 /* DSRotatingImageView.m in Sources */,
-				0903A3F617F0AC9100A21270 /* DSSlider.m in Sources */,
-				09B866B017F1E5C7003B1070 /* DSWebServiceNetRequest.m in Sources */,
-				097F7A0D19B84F8A004B4129 /* NSTimer+DSAdditions.m in Sources */,
-				092D8A6618D09ACE00EA56F0 /* ALAsset+DSAdditions.m in Sources */,
-				09162C56180ED00C00A0DEEF /* DSCompas.m in Sources */,
-				0903A39017F0AC9100A21270 /* NSArray+Extras.m in Sources */,
-				09B866C017F1E5C7003B1070 /* DSWebServiceURL.m in Sources */,
-				0903A3A017F0AC9100A21270 /* NSObject+DeepCopy.m in Sources */,
-				0903A40017F0AC9100A21270 /* PGVideoImageView.m in Sources */,
-				0903A3B017F0AC9100A21270 /* UIBarButtonItem+DSAdditions.m in Sources */,
-				0951BF29181A6A0D0088D3E8 /* UIView+DSAdditions.m in Sources */,
-				0903A40317F0AC9100A21270 /* DSValueChooserViewController.m in Sources */,
-				0903A3A817F0AC9100A21270 /* NSString+Extras.m in Sources */,
-				0903A3AC17F0AC9100A21270 /* UIApplication+DSAdditions.m in Sources */,
-				0972E33F19B6FA9F005D00F2 /* NSDate+DateTools.m in Sources */,
-				0998E21E1928E962004D9BD1 /* DSCoreDataObjectsObserver.m in Sources */,
-				0903A2E817F0AC8300A21270 /* DSNetworkActivity.m in Sources */,
-				0969F92C18328AE100B3C4B2 /* UIImage+DSAdditions.m in Sources */,
-				09B6DCE61858F5C500FB1825 /* DSChoosePlacemarkAnnotation.m in Sources */,
-				0907D3C0194C4CC30035C075 /* UINavigationController+Inspection.m in Sources */,
-				0903A3BE17F0AC9100A21270 /* UIView+Subviews.m in Sources */,
-				0903A39217F0AC9100A21270 /* NSArray+ObjectsQuery.m in Sources */,
-				096C87AE18290ADA0024D734 /* DSMessage+Parse.m in Sources */,
-				0903A3FB17F0AC9100A21270 /* DSCheckButton.m in Sources */,
-				09B8669417F1E5C7003B1070 /* NSError+DSWebService.m in Sources */,
-				097FCD7D189FAAF300B9B041 /* RTProperty.m in Sources */,
-				09B866A617F1E5C7003B1070 /* DSWebServiceSerialQueue.m in Sources */,
-				0903A3A217F0AC9100A21270 /* NSObject+DSAdditions.m in Sources */,
-				0903A3AE17F0AC9100A21270 /* UIApplication+KeyboardView.m in Sources */,
-				0903A2E617F0AC8300A21270 /* DSArrayChangeCalculator.m in Sources */,
-				0903A3A617F0AC9100A21270 /* NSString+Encoding.m in Sources */,
-				09F84FE618C5FB0B0047AA16 /* AFHTTPBodyPart.m in Sources */,
-				0908940B195326D4002CCCB8 /* UITextView+Size.m in Sources */,
-				0903A3BC17F0AC9100A21270 /* UIView+Resizing.m in Sources */,
-				09A83F3C19238ABE008DE30F /* DSRedirectLogs.m in Sources */,
-				0903A3E217F0AC9100A21270 /* DSSettings_impl.m in Sources */,
-				0903A3A417F0AC9100A21270 /* NSObject+Observing.m in Sources */,
-				09B866B417F1E5C7003B1070 /* DSWebServiceOperationType.m in Sources */,
-				09B866B817F1E5C7003B1070 /* NSManagedObject+DSAdditions.m in Sources */,
-				0903A3E817F0AC9100A21270 /* QWatchedOperationQueue.m in Sources */,
-				0903A3EA17F0AC9100A21270 /* DSVibrator.m in Sources */,
-				0903A3EC17F0AC9100A21270 /* DSFontManager.m in Sources */,
-				0903A3D017F0AC9100A21270 /* DSDateFormatterCache.m in Sources */,
-				0972E33519B6FA9F005D00F2 /* DTError.m in Sources */,
-				09B866AC17F1E5C7003B1070 /* DSFakeWebServiceRequest.m in Sources */,
-				09CEE83018E1E73E00B090F9 /* DSViewsStack.m in Sources */,
-				0903A3CE17F0AC9100A21270 /* DSMacros.m in Sources */,
-				0903A38D17F0AC9100A21270 /* CATransition+AnimationsBuilder.m in Sources */,
-				09EFCEEB19B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.m in Sources */,
-				095568D8195D61710081A268 /* DSEmailSharer.m in Sources */,
-				0903A39A17F0AC9100A21270 /* NSFileManager+Directories.m in Sources */,
-				0903A39C17F0AC9100A21270 /* NSMutableArray+Additions.m in Sources */,
-				09067F321818055900C8F48F /* DSAlertQueue+Private.m in Sources */,
-				092D8A6E18D0A71E00EA56F0 /* NSOutputStream+DSAdditions.m in Sources */,
-				0903A2E417F0AC8300A21270 /* DSArrayChangeApplier_UICollectionView.m in Sources */,
-				098F666218ACD09600E479E5 /* DSPhotoView.m in Sources */,
-				0903A3C817F0AC9100A21270 /* DSQueue.m in Sources */,
-				0972E33B19B6FA9F005D00F2 /* DTTimePeriodCollection.m in Sources */,
-				62DD1F21D685DAF88DB40D0D /* DSAlert.m in Sources */,
-				0987FB7519C6E15A007D1C55 /* DSRelativePath.m in Sources */,
-				0973572818041E3A00351055 /* DSCustomFontLabel.m in Sources */,
-				62DD1AFD36B9F22FEFEB3170 /* DSMessage.m in Sources */,
-				098FB26117F2008600DB9F49 /* DSQueueBasedRequestSender.m in Sources */,
-				09B866A017F1E5C7003B1070 /* DSWebServiceParamsExporter.m in Sources */,
-				62DD12DB787C62A67B7990A4 /* DSAlertButton.m in Sources */,
-				09B866AE17F1E5C7003B1070 /* DSFakeWebServiceRequestBehaviour.m in Sources */,
-				09B866A417F1E5C7003B1070 /* DSWebServiceQueue.m in Sources */,
-				097C81B119B5C31F00E9F48E /* UIButton+DSAdditions.m in Sources */,
-				62DD1E3872904802D5077B3F /* DSUIAlertView.m in Sources */,
-				09162C6E180EE84900A0DEEF /* DSFieldValidationCriterion.m in Sources */,
-				09F84FE118C5FA900047AA16 /* AFStreamingMultipartFormData.m in Sources */,
-				62DD1569D576C442B9DF1889 /* DSAlertsHandler.m in Sources */,
-				09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */,
-				62DD1CF9CE9E36A498936216 /* DSMessageContext.m in Sources */,
-				09B6DCF51858F5C500FB1825 /* DSGeocodeProviderApple.m in Sources */,
-				098783D018C1F39700C838A2 /* DSCodingTransformer.m in Sources */,
-				097FCD7B189FAAF300B9B041 /* RTMethod.m in Sources */,
-				09F7389E18A22EE6003FE0C2 /* DSDynamicPropertyObject.m in Sources */,
-				62DD1E899DE35CD54E5DC2BF /* DSAlertViewFactory.m in Sources */,
-				62DD1FEFFC22374EBAC3044E /* DSAlertsSupportCode.m in Sources */,
-				097FCD79189FAAF300B9B041 /* RTIvar.m in Sources */,
-				09F8C87718A93A7500960CC8 /* NSNumber+DSAdditions.m in Sources */,
-				09162C70180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m in Sources */,
-				09B8669817F1E5C7003B1070 /* DSWebServiceCompositeParams.m in Sources */,
-				62DD1E3812B21714B92C8ACF /* DSAlertsHandlerConfiguration.m in Sources */,
-				09B866BE17F1E5C7003B1070 /* DSWebServiceResponse.m in Sources */,
-				09B6DCF11858F5C500FB1825 /* DSPlacemarkPickerViewController.m in Sources */,
-				62DD1EF1B0929ACD16CFF64B /* DSAlertsHandler+SimplifiedAPI.m in Sources */,
-				0969F93418329C3C00B3C4B2 /* DSAskForTextController.m in Sources */,
-				09B8669617F1E5C7003B1070 /* DSWebServiceArrayParam.m in Sources */,
-				09B866B217F1E5C7003B1070 /* DSEntityDefinition.m in Sources */,
-				62DD1DB23EEF8D87DD0C9B15 /* DSConfiguration.m in Sources */,
-				09F84FDD18C5FA380047AA16 /* AFMultipartBodyStream.m in Sources */,
-				62DD187C5A8A0492EB15FAEE /* DSAppDelegate.m in Sources */,
-				62DD152CB973B9C752B7120C /* DSBlockBarButtonItem.m in Sources */,
-				09CDC39519260E4600C49EEA /* DSViewsStackAnimationDirection.m in Sources */,
-				09AAD1901A35F82800DAE9E4 /* DSWeakTimerTarget.m in Sources */,
-				09C15FD618DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m in Sources */,
-				62DD1BC6C151EFA0696F8AC2 /* DSBlockButton.m in Sources */,
-				0972E33D19B6FA9F005D00F2 /* DTTimePeriodGroup.m in Sources */,
-				62DD156A5BCD9E8F54FAFD25 /* DSDataDetector.m in Sources */,
-				62DD1622AD022227DFD60F1E /* DSFindCountry.m in Sources */,
-				09B8663B17F1B82D003B1070 /* DSTableViewController.m in Sources */,
-				09B8669117F1E5C7003B1070 /* DSWebServiceConfiguration.m in Sources */,
-				09B8669B17F1E5C7003B1070 /* DSWebServiceParamFactory.m in Sources */,
-				09067F2E181804CA00C8F48F /* DSAlertsQueue.m in Sources */,
-				62DD17C01B3B707487A95F6D /* DSDragAndDropController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0904155F1892E4DF00302A2F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AED6C1921465E55000D9B44E /* DSLib */;
-			targetProxy = 0904155E1892E4DF00302A2F /* PBXContainerItemProxy */;
-		};
-		090415621892E5EE00302A2F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 09A60412182A65CF00F57F89 /* DSLibBundle */;
-			targetProxy = 090415611892E5EE00302A2F /* PBXContainerItemProxy */;
-		};
 		0950A8EE1AC6E00200EF93C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 099767041A4F080800DDE130 /* DSLibFramework */;
 			targetProxy = 0950A8ED1AC6E00200EF93C2 /* PBXContainerItemProxy */;
-		};
-		0950A90A1AC6EF4400EF93C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Expecta-iOS";
-			targetProxy = 0950A9091AC6EF4400EF93C2 /* PBXContainerItemProxy */;
 		};
 		099767591A4F09CB00DDE130 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3398,22 +2409,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0904155C1892E4D600302A2F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		0904155D1892E4D600302A2F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		0950A8F01AC6E00200EF93C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE2DD3B6B822B9E4DC27AC22 /* Pods-DSLibFrameworkTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -3441,6 +2439,7 @@
 		};
 		0950A8F11AC6E00200EF93C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4670282BAC8D02C97ED50A5 /* Pods-DSLibFrameworkTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -3607,56 +2606,6 @@
 			};
 			name = Release;
 		};
-		09A6041E182A65CF00F57F89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DSLibBundle/DSLibBundle-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				INFOPLIST_FILE = "DSLibBundle/DSLibBundle-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = DSLib;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		09A6041F182A65CF00F57F89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DSLibBundle/DSLibBundle-Prefix.pch";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				INFOPLIST_FILE = "DSLibBundle/DSLibBundle-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = DSLib;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		AED6C19E1465E55000D9B44E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3722,70 +2671,9 @@
 			};
 			name = Release;
 		};
-		AED6C1A11465E55000D9B44E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = NO;
-				DEFINES_MODULE = NO;
-				DSTROOT = /tmp/DSLib.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DSLib/DSLib-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
-				SKIP_INSTALL = YES;
-				STRIP_STYLE = "non-global";
-				USER_HEADER_SEARCH_PATHS = "";
-			};
-			name = Debug;
-		};
-		AED6C1A21465E55000D9B44E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = NO;
-				DEFINES_MODULE = NO;
-				DSTROOT = /tmp/DSLib.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DSLib/DSLib-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
-				SKIP_INSTALL = YES;
-				STRIP_STYLE = "non-global";
-				USER_HEADER_SEARCH_PATHS = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0904155B1892E4D600302A2F /* Build configuration list for PBXAggregateTarget "Framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0904155C1892E4D600302A2F /* Debug */,
-				0904155D1892E4D600302A2F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0950A8EF1AC6E00200EF93C2 /* Build configuration list for PBXNativeTarget "DSLibFrameworkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3813,29 +2701,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09A6041D182A65CF00F57F89 /* Build configuration list for PBXNativeTarget "DSLibBundle" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09A6041E182A65CF00F57F89 /* Debug */,
-				09A6041F182A65CF00F57F89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		AED6C18D1465E55000D9B44E /* Build configuration list for PBXProject "DSLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AED6C19E1465E55000D9B44E /* Debug */,
 				AED6C19F1465E55000D9B44E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AED6C1A01465E55000D9B44E /* Build configuration list for PBXNativeTarget "DSLib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AED6C1A11465E55000D9B44E /* Debug */,
-				AED6C1A21465E55000D9B44E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
