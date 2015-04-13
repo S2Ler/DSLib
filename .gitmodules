@@ -4,6 +4,3 @@
 [submodule "DateTools"]
 	path = DateTools
 	url = https://github.com/MatthewYork/DateTools.git
-[submodule "Expecta"]
-	path = Expecta
-	url = https://github.com/specta/expecta.git
