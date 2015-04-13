@@ -344,6 +344,7 @@
 		09E54E2C1A604826002A854C /* DSCheckButtonProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A38017F0AC9100A21270 /* DSCheckButtonProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E54E2D1A604826002A854C /* UISwitch+DSCheckButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A38117F0AC9100A21270 /* UISwitch+DSCheckButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E54E2E1A604826002A854C /* UISwitch+DSCheckButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A38217F0AC9100A21270 /* UISwitch+DSCheckButton.m */; };
+		51E5BF95317FE62FDB9D949F /* Pods_DSLibFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411DE8AB0E564048F2262533 /* Pods_DSLibFramework.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C5FF8535B1FDB81804E3EA73 /* Pods_DSLibFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E37211C878D03B115227EA /* Pods_DSLibFrameworkTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -761,6 +762,8 @@
 		09F84FEC18C5FCB60047AA16 /* AFFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFunctions.m; sourceTree = "<group>"; };
 		09F8C87418A93A7500960CC8 /* NSNumber+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+DSAdditions.h"; sourceTree = "<group>"; };
 		09F8C87518A93A7500960CC8 /* NSNumber+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+DSAdditions.m"; sourceTree = "<group>"; };
+		411DE8AB0E564048F2262533 /* Pods_DSLibFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSLibFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EEE41C1616454F3403F7A5A /* Pods-DSLibFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSLibFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSLibFramework/Pods-DSLibFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		62DD10482694069BA9C5E531 /* DSUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUIAlertView.m; sourceTree = "<group>"; };
 		62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDropController.h; sourceTree = "<group>"; };
 		62DD11E47C44DDA0A2867834 /* DSFindCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFindCountry.m; sourceTree = "<group>"; };
@@ -807,6 +810,7 @@
 		B4670282BAC8D02C97ED50A5 /* Pods-DSLibFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSLibFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSLibFrameworkTests/Pods-DSLibFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		BE2DD3B6B822B9E4DC27AC22 /* Pods-DSLibFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSLibFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSLibFrameworkTests/Pods-DSLibFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3E37211C878D03B115227EA /* Pods_DSLibFrameworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSLibFrameworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44F53DD139674FAA4FA13E6 /* Pods-DSLibFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSLibFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSLibFramework/Pods-DSLibFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -824,6 +828,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				090524BE1A5E899F001536F9 /* libobjc.dylib in Frameworks */,
+				51E5BF95317FE62FDB9D949F /* Pods_DSLibFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1733,6 +1738,8 @@
 			children = (
 				BE2DD3B6B822B9E4DC27AC22 /* Pods-DSLibFrameworkTests.debug.xcconfig */,
 				B4670282BAC8D02C97ED50A5 /* Pods-DSLibFrameworkTests.release.xcconfig */,
+				4EEE41C1616454F3403F7A5A /* Pods-DSLibFramework.debug.xcconfig */,
+				D44F53DD139674FAA4FA13E6 /* Pods-DSLibFramework.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1774,6 +1781,7 @@
 				09A60414182A65CF00F57F89 /* CoreFoundation.framework */,
 				09CEE81A18E1E6EB00B090F9 /* XCTest.framework */,
 				D3E37211C878D03B115227EA /* Pods_DSLibFrameworkTests.framework */,
+				411DE8AB0E564048F2262533 /* Pods_DSLibFramework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2040,10 +2048,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0997671C1A4F080800DDE130 /* Build configuration list for PBXNativeTarget "DSLibFramework" */;
 			buildPhases = (
+				CB39800DEA534288E927B440 /* Check Pods Manifest.lock */,
 				099767001A4F080800DDE130 /* Sources */,
 				099767011A4F080800DDE130 /* Frameworks */,
 				099767021A4F080800DDE130 /* Headers */,
 				099767031A4F080800DDE130 /* Resources */,
+				AEF51C567531C4F81013F4E6 /* Embed Pods Frameworks */,
+				0B163736C374D344820653BD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2144,6 +2155,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B163736C374D344820653BD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSLibFramework/Pods-DSLibFramework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1CDAC1D00BEDBF0F3C81C6FB /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2172,6 +2198,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSLibFrameworkTests/Pods-DSLibFrameworkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEF51C567531C4F81013F4E6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSLibFramework/Pods-DSLibFramework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB39800DEA534288E927B440 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E8E2A07E9643930EEF50B9FA /* Check Pods Manifest.lock */ = {
@@ -2465,6 +2521,7 @@
 		};
 		099767181A4F080800DDE130 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EEE41C1616454F3403F7A5A /* Pods-DSLibFramework.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
@@ -2508,6 +2565,7 @@
 		};
 		099767191A4F080800DDE130 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D44F53DD139674FAA4FA13E6 /* Pods-DSLibFramework.release.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";

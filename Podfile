@@ -3,14 +3,6 @@ platform :ios, '8.0'
 use_frameworks!
 
 
-target 'DSLib' do
-
-end
-
-target 'DSLibBundle' do
-
-end
-
 target 'DSLibFramework' do
 
 end
