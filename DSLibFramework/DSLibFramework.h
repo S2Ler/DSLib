@@ -32,7 +32,6 @@ FOUNDATION_EXPORT const unsigned char DSLibFrameworkVersionString[];
 #import <DSLibFramework/DSDragAndDrop.h>
 #import <DSLibFramework/UIView+XibLoading.h>
 #import <DSLibFramework/XibLoader.h>
-#import <DSLibFramework/DSPhotoView.h>
 #import <DSLibFramework/CATransition+AnimationsBuilder.h>
 #import <DSLibFramework/MARTNSObject.h>
 #import <DSLibFramework/RTIvar.h>
