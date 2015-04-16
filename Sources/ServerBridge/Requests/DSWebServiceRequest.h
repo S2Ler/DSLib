@@ -40,6 +40,7 @@
 
 - (void)send;
 - (void)cancel;
+- (BOOL)isCancelled;
 
 - (BOOL)isRequestWithFunctionName:(NSString *)theFunctionName 
                        HTTPMethod:(DSWebServiceURLHTTPMethod)theHTTPMethod;
