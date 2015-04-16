@@ -9,6 +9,8 @@
 @import Foundation;
 @import UIKit;
 
+@class UITableViewCell;
+
 //Custom types
 typedef off_t DSFileSize;
 extern const DSFileSize DSFileSize_Max;
