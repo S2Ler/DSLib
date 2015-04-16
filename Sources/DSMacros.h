@@ -45,3 +45,6 @@ return _sharedObject;
 #define DSWEAK_SELF __weak typeof(self) weakSelf = self
 #define DSSTRONG_SELF __strong typeof(self) strongSelf = weakSelf
 #define DSWEAK(variable_name, variable) __weak typeof(variable) variable_name = variable;
+
+
+#define DSDynamicCast(x, c) ((c *) ([x isKindOfClass:[c class]] ? x : nil))

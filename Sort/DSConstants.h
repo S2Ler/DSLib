@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class UITableViewCell;
+
 //Custom types
 typedef off_t DSFileSize;
 extern const DSFileSize DSFileSize_Max;
