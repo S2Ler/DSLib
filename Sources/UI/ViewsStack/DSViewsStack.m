@@ -356,14 +356,30 @@
 
 - (void)moveViewToInitialPosition:(UIView *)view animated:(BOOL)animated
 {
-  if (animated) {
-    [UIView beginAnimations:nil context:nil];
-  }
+  void (^animationBlock)() = ^{
     [view setCenter:[self getViewsCenter]];
-  [view setTransform:CGAffineTransformIdentity];
+    [view setTransform:CGAffineTransformIdentity];
+  };
+  
   
   if (animated) {
-    [UIView commitAnimations];
+    if ([UIView respondsToSelector:@selector(animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:)]) {
+      [UIView animateWithDuration:0.5
+                            delay:0
+           usingSpringWithDamping:0.5
+            initialSpringVelocity:0.5
+                          options:UIViewAnimationOptionCurveEaseIn
+                       animations:animationBlock completion:nil];
+    }
+    else {
+      [UIView beginAnimations:nil context:nil];
+      [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+      animationBlock();
+      [UIView commitAnimations];
+    }
+  }
+  else {
+    animationBlock();
   }
 }
 
