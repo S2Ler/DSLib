@@ -379,6 +379,7 @@
 		09B866C217F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8668F17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m */; };
 		09C15FD518DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09C15FD618DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */; };
+		09C23CDE1AE0E9A0007F2172 /* DSInterceptedMessageMetadata_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C23CDD1AE0E9A0007F2172 /* DSInterceptedMessageMetadata_Tests.m */; };
 		09C6BE541806BD760084C600 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09CDC39419260E4600C49EEA /* DSViewsStackAnimationDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09CDC39519260E4600C49EEA /* DSViewsStackAnimationDirection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */; };
@@ -843,6 +844,7 @@
 		09B8668F17F1E5C7003B1070 /* DSWebServiceURLHTTPMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceURLHTTPMethod.m; sourceTree = "<group>"; };
 		09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+DSAdditions.h"; sourceTree = "<group>"; };
 		09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+DSAdditions.m"; sourceTree = "<group>"; };
+		09C23CDD1AE0E9A0007F2172 /* DSInterceptedMessageMetadata_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptedMessageMetadata_Tests.m; sourceTree = "<group>"; };
 		09C6BE521806BD760084C600 /* DSDragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDrop.h; sourceTree = "<group>"; };
 		09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStackAnimationDirection.h; sourceTree = "<group>"; };
 		09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStackAnimationDirection.m; sourceTree = "<group>"; };
@@ -1764,6 +1766,7 @@
 			isa = PBXGroup;
 			children = (
 				09E2A9001ACFF3D700566461 /* DSInterceptorsMap_Tests.m */,
+				09C23CDD1AE0E9A0007F2172 /* DSInterceptedMessageMetadata_Tests.m */,
 				09E2A8F81ACFF3CC00566461 /* DSLibTests.m */,
 				09E2A8F61ACFF3CC00566461 /* Supporting Files */,
 			);
@@ -2349,6 +2352,7 @@
 			files = (
 				09E2A8F91ACFF3CC00566461 /* DSLibTests.m in Sources */,
 				09E2A9011ACFF3D700566461 /* DSInterceptorsMap_Tests.m in Sources */,
+				09C23CDE1AE0E9A0007F2172 /* DSInterceptedMessageMetadata_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

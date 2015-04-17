@@ -7,7 +7,17 @@
 //
 
 #import "DSInterceptedMessageMetadata.h"
+#import "DSWebServiceParams.h"
 
 @implementation DSInterceptedMessageMetadata
-
+- (BOOL)anyOfParams:(NSArray *)params
+{
+  for (Class paramClass in params) {
+    if ([paramClass isSubclassOfClass:[self.params class]]) {
+      return true;
+    }
+  }
+  
+  return false;
+}
 @end

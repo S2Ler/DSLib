@@ -14,4 +14,6 @@
 @interface DSInterceptedMessageMetadata : NSObject
 @property (nonatomic, strong) DSMessage *message;
 @property (nonatomic, strong) DSWebServiceParams *params;
+
+- (BOOL)anyOfParams:(NSArray *)params;
 @end
