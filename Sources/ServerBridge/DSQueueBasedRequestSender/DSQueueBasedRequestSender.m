@@ -292,9 +292,9 @@ static DSInterceptorsMap *interceptorsMap = nil;
                                         userInfo:(NSDictionary *)userInfo
                                    callbackQueue:(dispatch_queue_t)callbackQueue
 {
-//  UIBackgroundTaskIdentifier taskID = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
-//    //
-//  }];
+  __block UIBackgroundTaskIdentifier taskID = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+    [[UIApplication sharedApplication] endBackgroundTask:taskID];
+  }];
   
   id<DSWebServiceRequest> request = [DSWebServiceRequestsFactory requestWithParams:params];
   [request setDelegate:self];
@@ -330,12 +330,15 @@ static DSInterceptorsMap *interceptorsMap = nil;
     }
   };
 
+  void (^endBackgroundTask)() = ^{
+    [[UIApplication sharedApplication] endBackgroundTask:taskID];
+  };
+  
   [request setCompletionBlock:^{
     void (^finish)() = ^{
-//      [[UIApplication sharedApplication] endBackgroundTask:taskID];
-      
       if ([weakRequest error]) {
         finishWithErrorBlock([DSMessage messageWithError:[weakRequest error]]);
+        endBackgroundTask();
         return;
       }
       
@@ -361,6 +364,8 @@ static DSInterceptorsMap *interceptorsMap = nil;
         
         finishWithErrorBlock(unknownErrorMessage);
       }
+      
+      endBackgroundTask();
     };
     
     dispatch_sync(callbackQueue, finish);
