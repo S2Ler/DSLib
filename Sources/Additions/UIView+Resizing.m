@@ -161,4 +161,11 @@
         theTransformation->size.width -= theDistance;
     }]; 
 }
+
+- (void)layoutToFit
+{
+  CGRect newFrame = self.frame;
+  newFrame.size = [self systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+  self.frame = newFrame;
+}
 @end

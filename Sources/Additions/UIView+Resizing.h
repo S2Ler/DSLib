@@ -30,4 +30,6 @@
 - (void)shrinkRight:(CGFloat)theDistance;
 
 - (void)applyTransformationWithBlock:(void (^)(CGRect *theTransformation))theBlock;
+
+- (void)layoutToFit;
 @end
