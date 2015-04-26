@@ -15,12 +15,14 @@
 #import "NSDate+DateTools.h"
 #import "DSWeakTimerTarget.h"
 #import "NSTimer+DSAdditions.h"
+#import "DSInterceptorsMap.h"
+#import "DSInterceptedMessageMetadata.h"
 
 #define COMPLETION_USER_INFO_KEY @"Completion"
 #define REQUEST_SUCCESSFUL_HANDLER_USER_INFO_KEY @"Request Successful"
 #define REQUEST_FAILED_HANDLER_USER_INFO_KEY @"Request Failed"
 
-static NSMapTable *interceptorsMap = nil;
+static DSInterceptorsMap *interceptorsMap = nil;
 
 @interface DSQueueRecurrentRequestData : NSObject
 @property (nonatomic, strong) DSWebServiceParams *params;
@@ -169,13 +171,11 @@ static NSMapTable *interceptorsMap = nil;
 }
 
 #pragma mark - Message Interception
-+ (NSMapTable *)interceptorsMap
++ (DSInterceptorsMap *)interceptorsMap
 {
   static dispatch_once_t pred = 0;
   dispatch_once(&pred, ^{
-    interceptorsMap = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsStrongMemory
-                                                valueOptions:NSPointerFunctionsCopyIn
-                                                    capacity:2];
+    interceptorsMap = [[DSInterceptorsMap alloc] init];
   });
   
   return interceptorsMap;
@@ -183,26 +183,17 @@ static NSMapTable *interceptorsMap = nil;
 
 + (void)addMessageInterceptor:(DSMessageInterceptor *)interceptor;
 {
-  if ([interceptor code]) {
-    DSMessage *message = [DSMessage messageWithDomain:[interceptor domain] code:[interceptor code]];
-    [[self interceptorsMap] setObject:interceptor forKey:message];
-  }
-  else {
-    for (DSMessageCode *code in [interceptor codes]) {
-      DSMessage *message = [DSMessage messageWithDomain:[interceptor domain] code:code];
-      [[self interceptorsMap] setObject:interceptor forKey:message];
-    }
-  }
+  [[self interceptorsMap] addInterceptor:interceptor];
 }
 
-+ (BOOL)hasInterceptorForMessage:(DSMessage *)message
++ (void)removeMessageInterceptor:(DSMessageInterceptor *)interceptor
 {
-  return [[self interceptorsMap] objectForKey:message] != nil;
+  [[self interceptorsMap] removeInterceptor:interceptor];
 }
 
-+ (DSMessageInterceptor *)interceptorForMessage:(DSMessage *)message
++ (NSArray *)interceptorsForMessage:(DSMessage *)message
 {
-  return [[self interceptorsMap] objectForKey:message];
+  return [[self interceptorsMap] interceptorsForMessage:message];
 }
 
 #pragma mark - Recurrent Requests
@@ -310,13 +301,20 @@ static NSMapTable *interceptorsMap = nil;
   }
   
   void (^finishWithErrorBlock)(DSMessage *errorMessage) = ^(DSMessage *errorMessage) {
-    BOOL thereIsGlobalHandler = [DSQueueBasedRequestSender hasInterceptorForMessage:errorMessage];
-    if (thereIsGlobalHandler) {
+    NSArray *globalInterceptors = [DSQueueBasedRequestSender interceptorsForMessage:errorMessage];
+    if ([globalInterceptors count] > 0) {
       NSLog(@"%@", params);
-      DSMessageInterceptor *interceptor = [DSQueueBasedRequestSender interceptorForMessage:errorMessage];
-      if ([interceptor shouldInterceptParams:params]) {
-        interceptor.handler(FAILED_WITH_MESSAGE, errorMessage);
-        errorMessage = nil;
+      for (DSMessageInterceptor *interceptor in globalInterceptors) {
+        if (interceptor.isActive && [interceptor shouldInterceptParams:params]) {
+          DSInterceptedMessageMetadata *interceptedMetadata = [DSInterceptedMessageMetadata new];
+          interceptedMetadata.message = errorMessage;
+          interceptedMetadata.params = params;
+          interceptor.handler(interceptedMetadata);
+          
+          if (!interceptor.shouldAllowOthersToProceed) {
+            errorMessage = nil;
+          }
+        }
       }
     }
     
@@ -327,7 +325,8 @@ static NSMapTable *interceptorsMap = nil;
       completion(FAILED_WITH_MESSAGE, errorMessage, NO_RESULTS);
     }
   };
-
+  
+  
   [request setCompletionBlock:^{
     void (^finish)() = ^{
       if ([weakRequest error]) {

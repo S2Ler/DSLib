@@ -22,11 +22,11 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>18030B5112E4743F2CDD69CFF074D529EA063310</key>
-		<string>..MAObjCRuntime/</string>
+		<string>..MAObjCRuntime</string>
 		<key>2F8EEF5317AA69F11A949659E3B8464B01ACB933</key>
 		<string>..</string>
 		<key>F8622BA04EBD09F8BA8DC9C0C199149407552BFA</key>
-		<string>..DateTools/</string>
+		<string>..DateTools</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://bitbucket.org/diejmon/dslib.git</string>
@@ -40,14 +40,6 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F8622BA04EBD09F8BA8DC9C0C199149407552BFA</string>
-			<key>IDESourceControlWCCName</key>
-			<string>DateTools</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>2F8EEF5317AA69F11A949659E3B8464B01ACB933</string>
 			<key>IDESourceControlWCCName</key>
 			<string>dslib</string>
@@ -56,9 +48,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F8622BA04EBD09F8BA8DC9C0C199149407552BFA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>dslibDateTools</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>18030B5112E4743F2CDD69CFF074D529EA063310</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MAObjCRuntime</string>
+			<string>dslibMAObjCRuntime</string>
 		</dict>
 	</array>
 </dict>

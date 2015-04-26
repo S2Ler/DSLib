@@ -53,6 +53,12 @@
 		090526351A5E9DE8001536F9 /* DSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33017F0AC9100A21270 /* DSQueue.m */; };
 		090526361A5E9E0D001536F9 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A40717F0B4DA00A21270 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		090526371A5E9E0D001536F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A40817F0B4DA00A21270 /* Reachability.m */; };
+		091F64471AED10A600A8CA37 /* DSInterceptorsMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 091F64451AED10A600A8CA37 /* DSInterceptorsMap.h */; };
+		091F64481AED10A600A8CA37 /* DSInterceptorsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64461AED10A600A8CA37 /* DSInterceptorsMap.m */; };
+		091F644A1AED111E00A8CA37 /* DSInterceptorsMap_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64491AED111E00A8CA37 /* DSInterceptorsMap_Tests.m */; };
+		091F644D1AED115100A8CA37 /* DSInterceptedMessageMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 091F644B1AED115100A8CA37 /* DSInterceptedMessageMetadata.h */; };
+		091F644E1AED115100A8CA37 /* DSInterceptedMessageMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F644C1AED115100A8CA37 /* DSInterceptedMessageMetadata.m */; };
+		091F64501AED115A00A8CA37 /* DSInterceptedMessageMetadata_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F644F1AED115A00A8CA37 /* DSInterceptedMessageMetadata_Tests.m */; };
 		0950A8DC1AC5E01300EF93C2 /* DSViewsStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CEE82D18E1E73E00B090F9 /* DSViewsStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0950A8DD1AC5E01300EF93C2 /* DSViewsStackAnimationDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0950A8DE1AC5E01300EF93C2 /* DSViewsStackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982EB7B18E1E96B00F9DFF2 /* DSViewsStackDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -538,6 +544,12 @@
 		09162C64180EE84900A0DEEF /* DSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTextField.h; sourceTree = "<group>"; };
 		09162C65180EE84900A0DEEF /* DSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTextField.m; sourceTree = "<group>"; };
 		09162C74180EEB5900A0DEEF /* DSFieldValidationFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFieldValidationFramework.h; sourceTree = "<group>"; };
+		091F64451AED10A600A8CA37 /* DSInterceptorsMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSInterceptorsMap.h; sourceTree = "<group>"; };
+		091F64461AED10A600A8CA37 /* DSInterceptorsMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptorsMap.m; sourceTree = "<group>"; };
+		091F64491AED111E00A8CA37 /* DSInterceptorsMap_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptorsMap_Tests.m; sourceTree = "<group>"; };
+		091F644B1AED115100A8CA37 /* DSInterceptedMessageMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSInterceptedMessageMetadata.h; sourceTree = "<group>"; };
+		091F644C1AED115100A8CA37 /* DSInterceptedMessageMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptedMessageMetadata.m; sourceTree = "<group>"; };
+		091F644F1AED115A00A8CA37 /* DSInterceptedMessageMetadata_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptedMessageMetadata_Tests.m; sourceTree = "<group>"; };
 		0922D3E2178C951900AAE05E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0928CFDC17F21C9C00E494E1 /* DSWebServiceFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWebServiceFunctions.h; sourceTree = "<group>"; };
 		0928CFDD17F21C9C00E494E1 /* DSWebServiceFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWebServiceFunctions.m; sourceTree = "<group>"; };
@@ -1237,6 +1249,8 @@
 		0950A8E71AC6E00200EF93C2 /* DSLibFrameworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				091F644F1AED115A00A8CA37 /* DSInterceptedMessageMetadata_Tests.m */,
+				091F64491AED111E00A8CA37 /* DSInterceptorsMap_Tests.m */,
 				0950A8F21AC6E01E00EF93C2 /* DSViewsStack_Tests.m */,
 				0950A90C1AC6F08E00EF93C2 /* DSQueue_Tests.m */,
 				0950A8E81AC6E00200EF93C2 /* Supporting Files */,
@@ -1322,6 +1336,10 @@
 				09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */,
 				09EFCEE819B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.h */,
 				09EFCEE919B76C9F00D9CA73 /* DSQueueRecurrentRequestPolicy.m */,
+				091F64451AED10A600A8CA37 /* DSInterceptorsMap.h */,
+				091F64461AED10A600A8CA37 /* DSInterceptorsMap.m */,
+				091F644B1AED115100A8CA37 /* DSInterceptedMessageMetadata.h */,
+				091F644C1AED115100A8CA37 /* DSInterceptedMessageMetadata.m */,
 			);
 			path = DSQueueBasedRequestSender;
 			sourceTree = "<group>";
@@ -1871,6 +1889,7 @@
 				09E54D9F1A603B4D002A854C /* UIScreen+Availability.h in Headers */,
 				09E54D171A60390E002A854C /* DSWebServiceCompositeParams.h in Headers */,
 				09E54DE81A603C49002A854C /* DSNetworkActivity.h in Headers */,
+				091F64471AED10A600A8CA37 /* DSInterceptorsMap.h in Headers */,
 				09E54DF41A603C49002A854C /* DSKeyboardControllerDelegate.h in Headers */,
 				09E54D8F1A603B4D002A854C /* NSString+Encoding.h in Headers */,
 				09E54E1A1A603C49002A854C /* DSWeakTimerTarget.h in Headers */,
@@ -1887,6 +1906,7 @@
 				099767A21A4F335700DDE130 /* DSFieldValidationCriterion.h in Headers */,
 				0997675D1A4F0BEB00DDE130 /* FBEncryptorAES.h in Headers */,
 				0905261B1A5E9D0B001536F9 /* DSUIAlertView.h in Headers */,
+				091F644D1AED115100A8CA37 /* DSInterceptedMessageMetadata.h in Headers */,
 				09E54DA11A603B4D002A854C /* UITableView+DSAdditions.h in Headers */,
 				099767AD1A4F35C400DDE130 /* DSDragAndDropController.h in Headers */,
 				09E443141A61736600E8B6C0 /* DSDateFormatterCache.h in Headers */,
@@ -2184,6 +2204,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0950A90D1AC6F08F00EF93C2 /* DSQueue_Tests.m in Sources */,
+				091F64501AED115A00A8CA37 /* DSInterceptedMessageMetadata_Tests.m in Sources */,
+				091F644A1AED111E00A8CA37 /* DSInterceptorsMap_Tests.m in Sources */,
 				0950A8F31AC6E01E00EF93C2 /* DSViewsStack_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2237,6 +2259,7 @@
 				09E54D2C1A603978002A854C /* DSWebServiceNetRequest.m in Sources */,
 				09E443151A61736600E8B6C0 /* DSDateFormatterCache.m in Sources */,
 				099767701A4F105500DDE130 /* RTUnregisteredClass.m in Sources */,
+				091F644E1AED115100A8CA37 /* DSInterceptedMessageMetadata.m in Sources */,
 				09E54D961A603B4D002A854C /* UIApplication+DSAdditions.m in Sources */,
 				09E54D801A603B4D002A854C /* NSDate+OAddittions.m in Sources */,
 				09E54D331A603978002A854C /* AFHTTPBodyPart.m in Sources */,
@@ -2317,6 +2340,7 @@
 				099767741A4F128100DDE130 /* DSEmailSharer.m in Sources */,
 				090526331A5E9D72001536F9 /* DSMessageInterceptor.m in Sources */,
 				09E54D8C1A603B4D002A854C /* NSObject+DSAdditions.m in Sources */,
+				091F64481AED10A600A8CA37 /* DSInterceptorsMap.m in Sources */,
 				09E54E111A603C49002A854C /* UINavigationController+Inspection.m in Sources */,
 				09E54D481A603A18002A854C /* DSWebServiceURL.m in Sources */,
 				09E54D8A1A603B4D002A854C /* NSObject+DeepCopy.m in Sources */,

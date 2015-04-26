@@ -6,14 +6,18 @@
 //  Copyright (c) 2014 DS ltd. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 #import "DSAlertsSupportCode.h"
-#import "DSConstants.h"
 
 @class DSWebServiceParams;
+@class DSInterceptedMessageMetadata;
 
 /** Can intercept only messages without params */
 @interface DSMessageInterceptor : NSObject<NSCopying>
+@property (nonatomic, strong) NSString *uniqueKey;
+
+/** Default yes */
+@property (nonatomic, assign) BOOL isActive;
 @property (nonatomic, strong) DSMessageDomain *domain;
 
 /** You can set one code for domain */
@@ -21,9 +25,10 @@
 /** Or several codes for domain */
 @property (nonatomic, strong) NSArray *codes;
 
-- (void)setHandler:(ds_completion_handler)handler;
-- (ds_completion_handler)handler;
+@property (nonatomic, copy) void (^handler)(DSInterceptedMessageMetadata *metadata);
 
 - (void)excludeParamsFromInterception:(Class)params;
 - (BOOL)shouldInterceptParams:(DSWebServiceParams *)params;
+
+@property (nonatomic, assign) BOOL shouldAllowOthersToProceed;
 @end
