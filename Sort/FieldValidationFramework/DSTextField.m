@@ -11,6 +11,26 @@
 
 #define SHOW_DESCRIPTION_BUTTON_GAG 333
 
+@interface DSTextFieldErrorButton: UIButton
+@property (nonatomic, assign) CGPoint extendTouchArea;
+@end
+
+@implementation DSTextFieldErrorButton
+
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+{
+  if (CGPointEqualToPoint(self.extendTouchArea, CGPointZero)) {
+    return [super pointInside:point withEvent:event];
+  }
+  else {
+    CGRect bounds = self.bounds;
+    CGRect touchArea = CGRectInset(bounds, -self.extendTouchArea.x, -self.extendTouchArea.y);
+    return CGRectContainsPoint(touchArea, point);
+  }
+}
+
+@end
+
 #pragma mark - private
 @interface DSTextField()<UIPopoverPresentationControllerDelegate>
 @property (nonatomic, strong) NSArray *validationFailedDescriptions;
@@ -52,7 +72,8 @@
   
   if ([criterionDescriptions count] > 0) {
     if (self.rightView.tag != SHOW_DESCRIPTION_BUTTON_GAG) {
-      UIButton *showDescriptionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+      DSTextFieldErrorButton *showDescriptionButton = [DSTextFieldErrorButton buttonWithType:UIButtonTypeCustom];
+      showDescriptionButton.extendTouchArea = CGPointMake(20, 20);
       showDescriptionButton.tag = SHOW_DESCRIPTION_BUTTON_GAG;
       [showDescriptionButton addTarget:self
                                 action:@selector(showDescriptionButtonPressed)
