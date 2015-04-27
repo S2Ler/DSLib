@@ -51,8 +51,6 @@
 		090526331A5E9D72001536F9 /* DSMessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09423C7718E8244000F1B9E2 /* DSMessageInterceptor.m */; };
 		090526341A5E9DE8001536F9 /* DSQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A32F17F0AC9100A21270 /* DSQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		090526351A5E9DE8001536F9 /* DSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33017F0AC9100A21270 /* DSQueue.m */; };
-		090526361A5E9E0D001536F9 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A40717F0B4DA00A21270 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		090526371A5E9E0D001536F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A40817F0B4DA00A21270 /* Reachability.m */; };
 		091F64471AED10A600A8CA37 /* DSInterceptorsMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 091F64451AED10A600A8CA37 /* DSInterceptorsMap.h */; };
 		091F64481AED10A600A8CA37 /* DSInterceptorsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64461AED10A600A8CA37 /* DSInterceptorsMap.m */; };
 		091F644A1AED111E00A8CA37 /* DSInterceptorsMap_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64491AED111E00A8CA37 /* DSInterceptorsMap_Tests.m */; };
@@ -143,6 +141,8 @@
 		099767AD1A4F35C400DDE130 /* DSDragAndDropController.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DD1055A2169FFABFFDBB72 /* DSDragAndDropController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		099767AE1A4F35C400DDE130 /* DSDragAndDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD13ED0EF18F1D1FD6F1A7 /* DSDragAndDropController.m */; };
 		099767AF1A4F35C400DDE130 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09A28F4D1AEE141500DA671A /* DSReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A28F4B1AEE141500DA671A /* DSReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09A28F4E1AEE141500DA671A /* DSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A28F4C1AEE141500DA671A /* DSReachability.m */; };
 		09E443141A61736600E8B6C0 /* DSDateFormatterCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33A17F0AC9100A21270 /* DSDateFormatterCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E443151A61736600E8B6C0 /* DSDateFormatterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33B17F0AC9100A21270 /* DSDateFormatterCache.m */; };
 		09E443DA1A61861400E8B6C0 /* DSGetPhotosPermissions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E443D81A61861400E8B6C0 /* DSGetPhotosPermissions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -511,8 +511,6 @@
 		0903A38917F0AC9100A21270 /* DSValueChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSValueChooserViewController.m; sourceTree = "<group>"; };
 		0903A38A17F0AC9100A21270 /* DSValueChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSValueChooserViewController.xib; sourceTree = "<group>"; };
 		0903A38B17F0AC9100A21270 /* DSValueChooserViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSValueChooserViewControllerDelegate.h; sourceTree = "<group>"; };
-		0903A40717F0B4DA00A21270 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		0903A40817F0B4DA00A21270 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Reachability.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0903A41117F0C28300A21270 /* DSGPSTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGPSTracker.h; sourceTree = "<group>"; };
 		0903A41217F0C28300A21270 /* DSGPSTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGPSTracker.m; sourceTree = "<group>"; };
 		0903A41317F0C28300A21270 /* DSGPSTrackerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGPSTrackerDelegate.h; sourceTree = "<group>"; };
@@ -642,6 +640,8 @@
 		0998E21C1928E962004D9BD1 /* DSCoreDataObjectsObserverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCoreDataObjectsObserverDelegate.h; sourceTree = "<group>"; };
 		0998E23A192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
 		0998E23B192A595C004D9BD1 /* DSFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
+		09A28F4B1AEE141500DA671A /* DSReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSReachability.h; sourceTree = "<group>"; };
+		09A28F4C1AEE141500DA671A /* DSReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSReachability.m; sourceTree = "<group>"; };
 		09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DSBundle.h"; sourceTree = "<group>"; };
 		09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DSBundle.m"; sourceTree = "<group>"; };
 		09A60414182A65CF00F57F89 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -1812,8 +1812,8 @@
 				09B6DCCC1858F5C500FB1825 /* DSGeocoder */,
 				09B8664E17F1E5C7003B1070 /* ServerBridge */,
 				0903A41017F0C28300A21270 /* GPSTracker */,
-				0903A40717F0B4DA00A21270 /* Reachability.h */,
-				0903A40817F0B4DA00A21270 /* Reachability.m */,
+				09A28F4B1AEE141500DA671A /* DSReachability.h */,
+				09A28F4C1AEE141500DA671A /* DSReachability.m */,
 				0903A2EB17F0AC9100A21270 /* Additions */,
 				0903A32317F0AC9100A21270 /* CodeGeneration */,
 				0903A32A17F0AC9100A21270 /* Collections */,
@@ -1903,6 +1903,7 @@
 				09E54E071A603C49002A854C /* NSOutputStream+DSAdditions.h in Headers */,
 				090526231A5E9D0B001536F9 /* DSMessageContext.h in Headers */,
 				09E54D911A603B4D002A854C /* NSString+Extras.h in Headers */,
+				09A28F4D1AEE141500DA671A /* DSReachability.h in Headers */,
 				099767A21A4F335700DDE130 /* DSFieldValidationCriterion.h in Headers */,
 				0997675D1A4F0BEB00DDE130 /* FBEncryptorAES.h in Headers */,
 				0905261B1A5E9D0B001536F9 /* DSUIAlertView.h in Headers */,
@@ -1945,7 +1946,6 @@
 				090526321A5E9D6D001536F9 /* DSMessageInterceptor.h in Headers */,
 				09E54D211A60392F002A854C /* DSWebServiceParamsJSONBuilder.h in Headers */,
 				09E54E281A6047AC002A854C /* DSSettings_impl.h in Headers */,
-				090526361A5E9E0D001536F9 /* Reachability.h in Headers */,
 				0950A8DC1AC5E01300EF93C2 /* DSViewsStack.h in Headers */,
 				099767A81A4F335700DDE130 /* DSFieldValidationFramework.h in Headers */,
 				09E54E091A603C49002A854C /* NSManagedObjectContext+DSAdditions.h in Headers */,
@@ -2265,7 +2265,6 @@
 				09E54D331A603978002A854C /* AFHTTPBodyPart.m in Sources */,
 				09E54D921A603B4D002A854C /* NSString+Extras.m in Sources */,
 				090526281A5E9D0B001536F9 /* DSAlertsSupportCode.m in Sources */,
-				090526371A5E9E0D001536F9 /* Reachability.m in Sources */,
 				09E54D771A603B4D002A854C /* CATransition+AnimationsBuilder.m in Sources */,
 				09E54D9A1A603B4D002A854C /* UIBarButtonItem+DSAdditions.m in Sources */,
 				099767281A4F08D800DDE130 /* DTTimePeriodCollection.m in Sources */,
@@ -2297,6 +2296,7 @@
 				099767A51A4F335700DDE130 /* DSFieldValidationCriterionDescription.m in Sources */,
 				09E54D9E1A603B4D002A854C /* UIFont+FromString.m in Sources */,
 				09E54E061A603C49002A854C /* ALAsset+DSAdditions.m in Sources */,
+				09A28F4E1AEE141500DA671A /* DSReachability.m in Sources */,
 				09E54D881A603B4D002A854C /* NSMutableURLRequest+POSTData.m in Sources */,
 				09E54E291A6047AC002A854C /* DSSettings_impl.m in Sources */,
 				099767681A4F105500DDE130 /* RTIvar.m in Sources */,

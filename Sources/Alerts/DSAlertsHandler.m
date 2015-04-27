@@ -1,4 +1,4 @@
-
+ 
 #pragma mark - include
 #import "DSAlertsHandler.h"
 #import "DSMacros.h"
@@ -7,7 +7,7 @@
 #import "DSAlertView.h"
 #import "DSAlertViewFactory.h"
 #import "DSAlertButton.h"
-#import "Reachability.h"
+#import "DSReachability.h"
 #import "DSMessage.h"
 #import "DSAlertsQueue.h"
 #import "DSAlertQueue+Private.h"
@@ -58,7 +58,7 @@
   }
 }
 
-- (void)setReachability:(Reachability *)reachability
+- (void)setReachability:(DSReachability *)reachability
 {
   if ([self reachability]) {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -73,7 +73,7 @@
 
 - (void)reachabilityChanged:(NSNotification *)notification
 {
-  if ([(Reachability *)[notification object] isReachable])  {
+  if ([(DSReachability *)[notification object] isReachable])  {
     [self setIsOnline:YES];
   }
 }
