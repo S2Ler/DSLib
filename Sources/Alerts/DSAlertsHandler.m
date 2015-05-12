@@ -11,6 +11,7 @@
 #import "DSMessage.h"
 #import "DSAlertsQueue.h"
 #import "DSAlertQueue+Private.h"
+#import "DSAlertsHandlerConfiguration.h"
 
 #pragma mark - private
 @interface DSAlertsHandler ()
@@ -172,9 +173,15 @@
     }
 
     [self setIsOnline:NO];
+    NSNumber *showOfflineErrorsMoveThanOncen = [[DSAlertsHandlerConfiguration sharedInstance] showOfflineErrorsMoveThanOnce];
+    if (showOfflineErrorsMoveThanOncen) {
+      [self setShouldShowNotReachableAlerts:showOfflineErrorsMoveThanOncen.boolValue];
+    }
+    else {
 #if DSAlertsHandler_SHOW_NO_INTERNET_CONNECTION_POPUPS_ONCE
-    [self setShouldShowNotReachableAlerts:NO];
+      [self setShouldShowNotReachableAlerts:NO];
 #endif
+    }
   }
   else {
     [[self alertsQueue] push:theAlert];

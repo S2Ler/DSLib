@@ -6,7 +6,8 @@
 @class DSReachability;
 @class DSAlertsQueue;
 
-#define DSAlertsHandler_SHOW_NO_INTERNET_CONNECTION_POPUPS_ONCE 1
+//Deprecated in favour of DSAlertsHandlerConfiguration showOfflineErrorsMoveThanOncen
+//#define DSAlertsHandler_SHOW_NO_INTERNET_CONNECTION_POPUPS_ONCE 1
 
 @interface DSAlertsHandler: NSObject<DSAlertViewDelegate>
 
