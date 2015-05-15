@@ -36,21 +36,48 @@ static char kDSTouchHandlerKey;
 }
 
 - (void)dimOutViewWithTapHandler:(void(^)())handler
+                        animated:(BOOL)animated
+               animationDuration:(NSTimeInterval)animationDuration
 {
   UIView *dimOutView = [[UIView alloc] init];
   [dimOutView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
   [dimOutView setTranslatesAutoresizingMaskIntoConstraints:YES];
-  [dimOutView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.2]];
+  [dimOutView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.55]];
   [dimOutView setTouchHandler:^(UIView *view) {
     if (handler) {
       handler();
     }
     
-    [view removeFromSuperview];
+    if (!animated) {
+      [view removeFromSuperview];
+    }
+    else {
+      [UIView animateWithDuration:animationDuration
+                       animations:^{
+                         view.alpha = 0;
+                       } completion:^(BOOL finished) {
+                         [view removeFromSuperview];
+                       }];
+    }
   }];
   
   [dimOutView setFrame:[self bounds]];
+  if (animated) {
+    dimOutView.alpha = 0;
+  }
   [self addSubview:dimOutView];
+  
+  if (animated) {
+    [UIView animateWithDuration:animationDuration
+                     animations:^{
+                       dimOutView.alpha = 1;
+                     }];
+  }
+}
+
+- (void)dimOutViewWithTapHandler:(void(^)())handler
+{
+  [self dimOutViewWithTapHandler:handler animated:false animationDuration:0];
 }
 
 @end

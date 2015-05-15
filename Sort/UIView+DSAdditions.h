@@ -13,4 +13,7 @@ typedef void (^DSViewTouchHandler)(UIView *view);
 @interface UIView (DSAdditions)
 - (void)setTouchHandler:(DSViewTouchHandler)touchHandler;
 - (void)dimOutViewWithTapHandler:(void(^)())handler;
+- (void)dimOutViewWithTapHandler:(void(^)())handler
+                        animated:(BOOL)animated
+               animationDuration:(NSTimeInterval)animationDuration;
 @end
