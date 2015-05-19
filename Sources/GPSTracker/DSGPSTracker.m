@@ -120,6 +120,7 @@
 
 - (void)deactivate
 {
+  self.locationManager.delegate = nil;
   [[self locationManager] stopUpdatingLocation];
   [self setIsUpdatingLocation:NO];
   _locationManager = nil;
