@@ -264,6 +264,7 @@
 		099C4A2E1ACD823D00E65286 /* DSInterceptedMessageMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C4A2C1ACD823D00E65286 /* DSInterceptedMessageMetadata.m */; };
 		099C4A311ACD897000E65286 /* DSInterceptorsMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 099C4A2F1ACD897000E65286 /* DSInterceptorsMap.h */; };
 		099C4A321ACD897000E65286 /* DSInterceptorsMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 099C4A301ACD897000E65286 /* DSInterceptorsMap.m */; };
+		09A5C9471B0DD3F3005CB0E4 /* NSDataHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A5C9461B0DD3F3005CB0E4 /* NSDataHexString.m */; };
 		09A6040D182A657000F57F89 /* NSBundle+DSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */; };
 		09A6040E182A657000F57F89 /* NSBundle+DSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */; };
 		09A60415182A65CF00F57F89 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A60414182A65CF00F57F89 /* CoreFoundation.framework */; };
@@ -750,6 +751,7 @@
 		099C4A2C1ACD823D00E65286 /* DSInterceptedMessageMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptedMessageMetadata.m; sourceTree = "<group>"; };
 		099C4A2F1ACD897000E65286 /* DSInterceptorsMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSInterceptorsMap.h; sourceTree = "<group>"; };
 		099C4A301ACD897000E65286 /* DSInterceptorsMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptorsMap.m; sourceTree = "<group>"; };
+		09A5C9461B0DD3F3005CB0E4 /* NSDataHexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataHexString.m; sourceTree = "<group>"; };
 		09A6040B182A657000F57F89 /* NSBundle+DSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+DSBundle.h"; sourceTree = "<group>"; };
 		09A6040C182A657000F57F89 /* NSBundle+DSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+DSBundle.m"; sourceTree = "<group>"; };
 		09A60413182A65CF00F57F89 /* DSLib.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSLib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -845,6 +847,7 @@
 		09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+DSAdditions.h"; sourceTree = "<group>"; };
 		09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+DSAdditions.m"; sourceTree = "<group>"; };
 		09C23CDD1AE0E9A0007F2172 /* DSInterceptedMessageMetadata_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInterceptedMessageMetadata_Tests.m; sourceTree = "<group>"; };
+		09C54E581B0DCF9800793F36 /* DSLibTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DSLibTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		09C6BE521806BD760084C600 /* DSDragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDrop.h; sourceTree = "<group>"; };
 		09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStackAnimationDirection.h; sourceTree = "<group>"; };
 		09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStackAnimationDirection.m; sourceTree = "<group>"; };
@@ -1768,7 +1771,9 @@
 				09E2A9001ACFF3D700566461 /* DSInterceptorsMap_Tests.m */,
 				09C23CDD1AE0E9A0007F2172 /* DSInterceptedMessageMetadata_Tests.m */,
 				09E2A8F81ACFF3CC00566461 /* DSLibTests.m */,
+				09A5C9461B0DD3F3005CB0E4 /* NSDataHexString.m */,
 				09E2A8F61ACFF3CC00566461 /* Supporting Files */,
+				09C54E581B0DCF9800793F36 /* DSLibTests-Bridging-Header.h */,
 			);
 			path = DSLibTests;
 			sourceTree = "<group>";
@@ -2353,6 +2358,7 @@
 				09E2A8F91ACFF3CC00566461 /* DSLibTests.m in Sources */,
 				09E2A9011ACFF3D700566461 /* DSInterceptorsMap_Tests.m in Sources */,
 				09C23CDE1AE0E9A0007F2172 /* DSInterceptedMessageMetadata_Tests.m in Sources */,
+				09A5C9471B0DD3F3005CB0E4 /* NSDataHexString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2660,7 +2666,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DSLibTests/DSLibTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -2685,7 +2700,15 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DSLibTests/DSLibTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
