@@ -39,10 +39,35 @@ static char kDSTouchHandlerKey;
                         animated:(BOOL)animated
                animationDuration:(NSTimeInterval)animationDuration
 {
+  [self dimOutViewWithTapHandler:handler
+                        animated:animated
+               animationDuration:animationDuration
+                     enableSwipe:NO
+                  swipeDirection:0];
+}
+
+- (void)dimOutViewWithTapHandler:(void(^)())handler
+{
+  [self dimOutViewWithTapHandler:handler animated:false animationDuration:0];
+}
+
+- (void)dimOutViewWithTapHandler:(void(^)())handler
+                        animated:(BOOL)animated
+               animationDuration:(NSTimeInterval)animationDuration
+                     enableSwipe:(BOOL)enableSwipe
+                  swipeDirection:(UISwipeGestureRecognizerDirection)swipeDirection
+{
   UIView *dimOutView = [[UIView alloc] init];
   [dimOutView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
   [dimOutView setTranslatesAutoresizingMaskIntoConstraints:YES];
   [dimOutView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.55]];
+  if (enableSwipe) {
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:dimOutView
+                                                                                       action:@selector(_dsTouchedHandler:)];
+    swipeGesture.direction = swipeDirection;
+    [dimOutView addGestureRecognizer:swipeGesture];
+  }
+  
   [dimOutView setTouchHandler:^(UIView *view) {
     if (handler) {
       handler();
@@ -74,10 +99,4 @@ static char kDSTouchHandlerKey;
                      }];
   }
 }
-
-- (void)dimOutViewWithTapHandler:(void(^)())handler
-{
-  [self dimOutViewWithTapHandler:handler animated:false animationDuration:0];
-}
-
 @end

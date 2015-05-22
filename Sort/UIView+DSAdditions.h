@@ -16,4 +16,10 @@ typedef void (^DSViewTouchHandler)(UIView *view);
 - (void)dimOutViewWithTapHandler:(void(^)())handler
                         animated:(BOOL)animated
                animationDuration:(NSTimeInterval)animationDuration;
+- (void)dimOutViewWithTapHandler:(void(^)())handler
+                        animated:(BOOL)animated
+               animationDuration:(NSTimeInterval)animationDuration
+                     enableSwipe:(BOOL)enableSwipe
+                  swipeDirection:(UISwipeGestureRecognizerDirection)swipeDirection;
+
 @end
