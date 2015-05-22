@@ -260,6 +260,22 @@
   return [self isEqualToMessage:object];
 }
 
+- (BOOL)isEqualToError:(NSError *)error
+{
+  return DSMessageDomainsEqual(error.domain, self.domain) &&
+  DSMessageCodesEqual(self.code, [@(error.code) description]);
+}
+
+- (BOOL)isEqualToDomain:(DSMessageDomain *)domain codeInteger:(NSInteger)code
+{
+  return [self isEqualToError:[NSError errorWithDomain:domain code:code userInfo:nil]];
+}
+
+- (BOOL)isEqualToDomain:(DSMessageDomain *)domain code:(DSMessageCode *)code
+{
+  return DSMessageDomainsEqual(self.domain, domain) && DSMessageCodesEqual(self.code, code);
+}
+
 - (NSUInteger)hash
 {
   NSString *hashString = [NSString stringWithFormat:@"%@%@%@%@", [self domain], [self code], [self params], [self titleParams]];

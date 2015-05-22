@@ -46,4 +46,8 @@
 
 - (BOOL)isGeneralErrorMessage;
 
+- (BOOL)isEqualToError:(NSError *)error;
+- (BOOL)isEqualToDomain:(DSMessageDomain *)domain codeInteger:(NSInteger)code;
+- (BOOL)isEqualToDomain:(DSMessageDomain *)domain code:(DSMessageCode *)code;
+
 @end
