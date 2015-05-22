@@ -7,21 +7,26 @@
 @class DSWebServiceQueue;
 @class DSMessageInterceptor;
 
-typedef void (^request_successful_block_t)(id<DSWebServiceRequest> request, DSWebServiceResponse *response, ds_results_completion completion);
-typedef void (^request_failed_block_t)(id<DSWebServiceRequest> request, DSMessage *errorMessage, ds_results_completion completion);
+typedef void (^request_successful_block_t)(__nonnull id<DSWebServiceRequest> request,
+                                            DSWebServiceResponse * __nonnull response,
+                                           __nullable ds_results_completion completion);
+typedef void (^request_failed_block_t)(__nonnull id<DSWebServiceRequest> request,
+                                       DSMessage *__nullable errorMessage,
+                                       __nullable ds_results_completion completion);
 
 @interface DSQueueBasedRequestSender: NSObject<DSWebServiceRequestDelegate>
-@property (strong, readonly) DSWebServiceQueue *queue;
+@property (strong, readonly, nonnull) DSWebServiceQueue *queue;
 /** @return array of id<DSWebServiceRequest> objects */
-- (NSArray *)activeRequests;
-- (id<DSWebServiceRequest>)activeRequestForParamsClass:(Class)paramsClass;
+- (nonnull NSArray *)activeRequests;
+- (nullable id<DSWebServiceRequest>)findActiveRequestPassingTest:(nonnull BOOL(^)(__nonnull id<DSWebServiceRequest>))testBlock;
+- (nullable id<DSWebServiceRequest>)activeRequestForParamsClass:(nonnull Class)paramsClass;
 - (NSInteger)requestCount;
 //- (BOOL)hasActiveRequest
 
 @property (nonatomic, assign, getter=isSuspended) BOOL suspended;
 
-+ (void)addMessageInterceptor:(DSMessageInterceptor *)interceptor;
-+ (void)removeMessageInterceptor:(DSMessageInterceptor *)interceptor;
++ (void)addMessageInterceptor:(nonnull DSMessageInterceptor *)interceptor;
++ (void)removeMessageInterceptor:(nonnull DSMessageInterceptor *)interceptor;
 
 @end
 

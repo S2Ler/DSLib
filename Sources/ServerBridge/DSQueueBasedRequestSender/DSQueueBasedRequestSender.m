@@ -140,13 +140,28 @@ static DSInterceptorsMap *interceptorsMap = nil;
 
 - (id<DSWebServiceRequest>)activeRequestForParamsClass:(Class)paramsClass
 {
-  for (id<DSWebServiceRequest> activeRequest in [self activeRequests]) {
-    if ([paramsClass isCorrespondsToRequest:activeRequest]) {
-      return activeRequest;
+  return [self findActiveRequestPassingTest:^BOOL(id<DSWebServiceRequest> __nonnull request) {
+    return [paramsClass isCorrespondsToRequest:request];
+  }];
+}
+
+- (id<DSWebServiceRequest>)findActiveRequestPassingTest:(BOOL(^)(id<DSWebServiceRequest>))testBlock
+{
+  const NSUInteger objectIndex
+  = [self.activeRequests indexOfObjectPassingTest:^BOOL(id<DSWebServiceRequest> request, NSUInteger idx, BOOL *stop) {
+    if ([request conformsToProtocol:@protocol(DSWebServiceRequest)]) {
+      return testBlock(request);
     }
+    else {
+      return NO;
+    }
+  }];
+  if (objectIndex != NSNotFound) {
+    return self.activeRequests[objectIndex];
   }
-  
-  return nil;
+  else {
+    return nil;
+  }
 }
 
 - (NSInteger)requestCount
