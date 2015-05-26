@@ -176,8 +176,13 @@
   NSString *domain = [theError domain];
   NSInteger code = [theError code];
 
-  self = [self initWithDomain:domain
-                         code:[NSString stringWithFormat:@"%lld", (long long)code]];
+  if ([theError isErrorFromMessage]) {
+    self = [self initWithDomain:domain code:[theError extractMessageCode]];
+  }
+  else {
+    self = [self initWithDomain:domain
+                           code:[NSString stringWithFormat:@"%lld", (long long)code]];
+  }
   if (self) {
       _error = theError;
   }
