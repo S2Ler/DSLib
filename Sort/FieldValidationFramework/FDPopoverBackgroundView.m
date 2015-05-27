@@ -19,15 +19,15 @@
 @implementation FDPopoverBackgroundView
 
 + (UIEdgeInsets)contentViewInsets {
-  return UIEdgeInsetsMake(2, 2, 2, 9);
+  return UIEdgeInsetsMake(3, 3, 3, 3);
 }
 
 + (CGFloat)arrowBase {
-  return 14.0;
+  return 24.0;
 }
 
 + (CGFloat)arrowHeight {
-  return 7;
+  return 14;
 }
 
 + (BOOL)wantsDefaultContentAppearance {
@@ -35,13 +35,13 @@
 }
 
 - (void)setArrowDirection:(UIPopoverArrowDirection)arrowDirection {
-  _arrowDirection = UIPopoverArrowDirectionRight;
+  _arrowDirection = UIPopoverArrowDirectionDown;
   [self setNeedsLayout];
 }
 
 - (UIPopoverArrowDirection)arrowDirection
 {
-  return UIPopoverArrowDirectionRight;
+  return UIPopoverArrowDirectionDown;
 }
 
 - (void)setArrowOffset:(CGFloat)arrowOffset {
@@ -64,38 +64,39 @@
   return self;
 }
 
-- (void)drawRect:(CGRect)frame
+- (void)drawRect:(CGRect)errorPopupFrame
 {
-  
-  const CGFloat arrowMiddle = frame.size.height / 2.0 + _arrowOffset;
+  const CGFloat arrowMiddle = errorPopupFrame.size.width / 2.0 + _arrowOffset;
 
   CGContextRef context = UIGraphicsGetCurrentContext();
   
-  CGContextClearRect(context, frame);
+  CGContextClearRect(context, errorPopupFrame);
   
-  //// Rectangle Drawing
-  //// Rectangle Drawing
-  UIBezierPath* rectanglePath = UIBezierPath.bezierPath;
-  [rectanglePath moveToPoint: CGPointMake(CGRectGetMinX(frame) + 1, CGRectGetMaxY(frame) - 8.31)];
-  [rectanglePath addCurveToPoint: CGPointMake(CGRectGetMinX(frame) + 7.51, CGRectGetMaxY(frame) - 1) controlPoint1: CGPointMake(CGRectGetMinX(frame) + 1, CGRectGetMaxY(frame) - 4.27) controlPoint2: CGPointMake(CGRectGetMinX(frame) + 3.92, CGRectGetMaxY(frame) - 1)];
-  [rectanglePath addLineToPoint: CGPointMake(CGRectGetMaxX(frame) - 15.52, CGRectGetMaxY(frame) - 1)];
-  [rectanglePath addCurveToPoint: CGPointMake(CGRectGetMaxX(frame) - 9.24, CGRectGetMaxY(frame) - 8.15) controlPoint1: CGPointMake(CGRectGetMaxX(frame) - 11.93, CGRectGetMaxY(frame) - 1) controlPoint2: CGPointMake(CGRectGetMaxX(frame) - 9.24, CGRectGetMaxY(frame) - 4.12)];
-  [rectanglePath addLineToPoint: CGPointMake(CGRectGetMaxX(frame) - 9.24, CGRectGetMinY(frame) + arrowMiddle + self.class.arrowBase/2.0)];
-  [rectanglePath addLineToPoint: CGPointMake(CGRectGetMaxX(frame) - (9.24-self.class.arrowHeight), CGRectGetMinY(frame) + arrowMiddle)];
-  [rectanglePath addLineToPoint: CGPointMake(CGRectGetMaxX(frame) - 9.24, CGRectGetMinY(frame) + arrowMiddle - self.class.arrowBase/2.0)];
-  [rectanglePath addLineToPoint: CGPointMake(CGRectGetMaxX(frame) - 9.24, CGRectGetMinY(frame) + 8.63)];
-  [rectanglePath addCurveToPoint: CGPointMake(CGRectGetMaxX(frame) - 15.52, CGRectGetMinY(frame) + 1) controlPoint1: CGPointMake(CGRectGetMaxX(frame) - 9.24, CGRectGetMinY(frame) + 4.6) controlPoint2: CGPointMake(CGRectGetMaxX(frame) - 11.93, CGRectGetMinY(frame) + 1)];
-  [rectanglePath addLineToPoint: CGPointMake(CGRectGetMinX(frame) + 7.51, CGRectGetMinY(frame) + 1)];
-  [rectanglePath addCurveToPoint: CGPointMake(CGRectGetMinX(frame) + 1, CGRectGetMinY(frame) + 8.31) controlPoint1: CGPointMake(CGRectGetMinX(frame) + 3.92, CGRectGetMinY(frame) + 1) controlPoint2: CGPointMake(CGRectGetMinX(frame) + 1, CGRectGetMinY(frame) + 4.27)];
-  [rectanglePath addLineToPoint: CGPointMake(CGRectGetMinX(frame) + 1, CGRectGetMaxY(frame) - 8.31)];
-  [rectanglePath closePath];
-  rectanglePath.lineJoinStyle = kCGLineJoinRound;
+  //// Color Declarations
+  UIColor* background = DSRGB(255, 236, 236);
+  UIColor* stroke = DSRGB(243, 91, 94);
   
-  rectanglePath.lineWidth = 2;
+  const CGFloat arrowHeight = [self.class arrowHeight]+2;
   
-  [DSRGB(243, 91, 94) setStroke];
-  [DSRGB(255, 236, 236) setFill];
-  [rectanglePath fill];
-  [rectanglePath stroke];
+  //// Bezier Drawing
+  UIBezierPath* bezierPath = UIBezierPath.bezierPath;
+  [bezierPath moveToPoint: CGPointMake(CGRectGetMaxX(errorPopupFrame) - 2, CGRectGetMinY(errorPopupFrame) + 13)];
+  [bezierPath addLineToPoint: CGPointMake(CGRectGetMaxX(errorPopupFrame) - 2, CGRectGetMaxY(errorPopupFrame) - 11-arrowHeight)];
+  [bezierPath addCurveToPoint: CGPointMake(CGRectGetMaxX(errorPopupFrame) - 13, CGRectGetMaxY(errorPopupFrame) - arrowHeight) controlPoint1: CGPointMake(CGRectGetMaxX(errorPopupFrame) - 2, CGRectGetMaxY(errorPopupFrame) - 4.92-arrowHeight) controlPoint2: CGPointMake(CGRectGetMaxX(errorPopupFrame) - 6.92, CGRectGetMaxY(errorPopupFrame) - arrowHeight)];
+  [bezierPath addLineToPoint: CGPointMake(CGRectGetMinX(errorPopupFrame) + arrowMiddle+self.class.arrowBase/2.0, CGRectGetMaxY(errorPopupFrame) - arrowHeight)];
+  [bezierPath addLineToPoint: CGPointMake(CGRectGetMinX(errorPopupFrame) + arrowMiddle, CGRectGetMaxY(errorPopupFrame) - arrowHeight + self.class.arrowHeight)];
+  [bezierPath addLineToPoint: CGPointMake(CGRectGetMinX(errorPopupFrame) + arrowMiddle-self.class.arrowBase/2.0, CGRectGetMaxY(errorPopupFrame) - arrowHeight)];
+  [bezierPath addLineToPoint: CGPointMake(CGRectGetMinX(errorPopupFrame) + 13, CGRectGetMaxY(errorPopupFrame) - arrowHeight)];
+  [bezierPath addCurveToPoint: CGPointMake(CGRectGetMinX(errorPopupFrame) + 2, CGRectGetMaxY(errorPopupFrame) - 11-arrowHeight) controlPoint1: CGPointMake(CGRectGetMinX(errorPopupFrame) + 6.92, CGRectGetMaxY(errorPopupFrame) - arrowHeight) controlPoint2: CGPointMake(CGRectGetMinX(errorPopupFrame) + 2, CGRectGetMaxY(errorPopupFrame) - 4.92-arrowHeight)];
+  [bezierPath addLineToPoint: CGPointMake(CGRectGetMinX(errorPopupFrame) + 2, CGRectGetMinY(errorPopupFrame) + 13)];
+  [bezierPath addCurveToPoint: CGPointMake(CGRectGetMinX(errorPopupFrame) + 13, CGRectGetMinY(errorPopupFrame) + 2) controlPoint1: CGPointMake(CGRectGetMinX(errorPopupFrame) + 2, CGRectGetMinY(errorPopupFrame) + 6.92) controlPoint2: CGPointMake(CGRectGetMinX(errorPopupFrame) + 6.92, CGRectGetMinY(errorPopupFrame) + 2)];
+  [bezierPath addLineToPoint: CGPointMake(CGRectGetMaxX(errorPopupFrame) - 13, CGRectGetMinY(errorPopupFrame) + 2)];
+  [bezierPath addCurveToPoint: CGPointMake(CGRectGetMaxX(errorPopupFrame) - 2, CGRectGetMinY(errorPopupFrame) + 13) controlPoint1: CGPointMake(CGRectGetMaxX(errorPopupFrame) - 6.92, CGRectGetMinY(errorPopupFrame) + 2) controlPoint2: CGPointMake(CGRectGetMaxX(errorPopupFrame) - 2, CGRectGetMinY(errorPopupFrame) + 6.92)];
+  [bezierPath closePath];
+  [background setFill];
+  [bezierPath fill];
+  [stroke setStroke];
+  bezierPath.lineWidth = 2;
+  [bezierPath stroke];
 }
 @end

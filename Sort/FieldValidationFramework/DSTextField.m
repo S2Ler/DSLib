@@ -129,29 +129,23 @@
   
   Class descriptionViewControllerClass = NSClassFromString(DSCriterionDescriptionViewController_ClassName);
   NSAssert(descriptionViewControllerClass, @"Nil description class");
-  NSAssert([descriptionViewControllerClass isSubclassOfClass:[DSCriterionDescriptionViewController class]], @"description view controller should be subclass of DSCriterionDescriptionViewController");
+  NSAssert([descriptionViewControllerClass isSubclassOfClass:[DSCriterionDescriptionViewController class]],
+           @"description view controller should be subclass of DSCriterionDescriptionViewController");
   
   DSCriterionDescriptionViewController *descriptionViewController= [[descriptionViewControllerClass alloc] init];
   descriptionViewController.modalPresentationStyle = UIModalPresentationPopover;
   UIPopoverPresentationController *popover =  descriptionViewController.popoverPresentationController;
   popover.sourceView = self.parentViewController.view;
-  popover.sourceRect = [self.parentViewController.view convertRect:self.rightView.frame fromView:self.rightView.superview];
+  popover.sourceRect = CGRectInset([self.parentViewController.view convertRect:self.rightView.frame fromView:self.rightView.superview], 0, -7);
   popover.backgroundColor = descriptionViewController.view.backgroundColor;
   popover.delegate = self;
   popover.popoverBackgroundViewClass = [FDPopoverBackgroundView class];
-  popover.permittedArrowDirections = UIPopoverArrowDirectionRight;
+  popover.permittedArrowDirections = UIPopoverArrowDirectionDown;
   [[self rightMenuButton] setSelected:true];
   
   [self.parentViewController presentViewController:descriptionViewController animated:true completion:nil];
-  [descriptionViewController setCriterionDescriptions:[self validationFailedDescriptions]];
-  
-//  __block __weak DSTextField *weakSelf = self;
-  
-//  [popoverController setDismissCompletionBlock:^(WYPopoverController *dismissedController) {
-//    [weakSelf setPopoverController:nil];
-//  }];
 
-//  [self setPopoverController:popoverController];
+  [descriptionViewController setCriterionDescriptions:[self validationFailedDescriptions]];
 }
 
 #pragma mark - UIPopoverPresentationControllerDelegate
