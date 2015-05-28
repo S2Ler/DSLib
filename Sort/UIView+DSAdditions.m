@@ -8,9 +8,48 @@
 
 #import "UIView+DSAdditions.h"
 #import <objc/runtime.h>
+#import "DSMacros.h"
 
 @implementation UIView (DSAdditions)
 static char kDSTouchHandlerKey;
+static char kDSTouchHandlerDimOutViewKey;
+
+- (void)setDimOutView:(UIView *)view
+{
+  objc_setAssociatedObject(self, &kDSTouchHandlerDimOutViewKey, view, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (UIView *)dimOutView
+{
+  return objc_getAssociatedObject(self, &kDSTouchHandlerDimOutViewKey);
+}
+
+- (void)removeDimOutView
+{
+  [self removeDimOutViewAnimated:NO animationDuration:0];
+}
+
+- (void)removeDimOutViewAnimated:(BOOL)animated animationDuration:(NSTimeInterval)animationDuration
+{
+  UIView *dimoutView = self.dimOutView;
+  [self setDimOutView:nil];
+  
+  void (^remove)() = ^{
+    [dimoutView removeFromSuperview];
+  };
+  
+  if (!animated) {
+    remove();
+  }
+  else {
+    [UIView animateWithDuration:animationDuration
+                     animations:^{
+                       dimoutView.alpha = 0;
+                     } completion:^(BOOL finished) {
+                       remove();
+                     }];
+  }
+}
 
 - (void)setTouchHandler:(DSViewTouchHandler)touchHandler
 {
@@ -35,29 +74,57 @@ static char kDSTouchHandlerKey;
   return objc_getAssociatedObject(self, &kDSTouchHandlerKey);
 }
 
-- (void)dimOutViewWithTapHandler:(void(^)())handler
+- (UIView *)dimOutViewWithTapHandler:(void(^)())handler
                         animated:(BOOL)animated
                animationDuration:(NSTimeInterval)animationDuration
 {
-  [self dimOutViewWithTapHandler:handler
-                        animated:animated
-               animationDuration:animationDuration
-                     enableSwipe:NO
-                  swipeDirection:0];
+  return [self dimOutViewWithTapHandler:handler
+                               animated:animated
+                      animationDuration:animationDuration
+                            enableSwipe:NO
+                         swipeDirection:0];
 }
 
-- (void)dimOutViewWithTapHandler:(void(^)())handler
+- (UIView *)dimOutViewAnimated:(BOOL)animated
+             animationDuration:(NSTimeInterval)animationDuration
 {
-  [self dimOutViewWithTapHandler:handler animated:false animationDuration:0];
+  return [self dimOutViewWithTapHandler:nil
+                               animated:animated
+                      animationDuration:animationDuration
+                            enableSwipe:NO
+                         swipeDirection:0
+                            hideOnTouch:^{return NO;}];
 }
 
-- (void)dimOutViewWithTapHandler:(void(^)())handler
-                        animated:(BOOL)animated
-               animationDuration:(NSTimeInterval)animationDuration
-                     enableSwipe:(BOOL)enableSwipe
-                  swipeDirection:(UISwipeGestureRecognizerDirection)swipeDirection
+- (UIView *)dimOutViewWithTapHandler:(void(^)())handler
+{
+  return [self dimOutViewWithTapHandler:handler animated:false animationDuration:0];
+}
+
+- (UIView *)dimOutViewWithTapHandler:(void(^)())handler
+                            animated:(BOOL)animated
+                   animationDuration:(NSTimeInterval)animationDuration
+                         enableSwipe:(BOOL)enableSwipe
+                      swipeDirection:(UISwipeGestureRecognizerDirection)swipeDirection
+{
+  return [self dimOutViewWithTapHandler:handler
+                               animated:animated
+                      animationDuration:animationDuration
+                            enableSwipe:enableSwipe
+                         swipeDirection:swipeDirection
+                            hideOnTouch:^{return YES;}];
+}
+
+- (UIView *)dimOutViewWithTapHandler:(void(^)())handler
+                            animated:(BOOL)animated
+                   animationDuration:(NSTimeInterval)animationDuration
+                         enableSwipe:(BOOL)enableSwipe
+                      swipeDirection:(UISwipeGestureRecognizerDirection)swipeDirection
+                         hideOnTouch:(BOOL(^)())hideOnTouch
 {
   UIView *dimOutView = [[UIView alloc] init];
+  [self setDimOutView:dimOutView];
+  
   [dimOutView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
   [dimOutView setTranslatesAutoresizingMaskIntoConstraints:YES];
   [dimOutView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.55]];
@@ -68,21 +135,16 @@ static char kDSTouchHandlerKey;
     [dimOutView addGestureRecognizer:swipeGesture];
   }
   
+  DSWEAK_SELF;
   [dimOutView setTouchHandler:^(UIView *view) {
+    DSSTRONG_SELF;
+    
     if (handler) {
       handler();
     }
     
-    if (!animated) {
-      [view removeFromSuperview];
-    }
-    else {
-      [UIView animateWithDuration:animationDuration
-                       animations:^{
-                         view.alpha = 0;
-                       } completion:^(BOOL finished) {
-                         [view removeFromSuperview];
-                       }];
+    if (hideOnTouch()) {
+      [strongSelf removeDimOutViewAnimated:animated animationDuration:animationDuration];
     }
   }];
   
@@ -98,5 +160,7 @@ static char kDSTouchHandlerKey;
                        dimOutView.alpha = 1;
                      }];
   }
+  
+  return dimOutView;
 }
 @end
