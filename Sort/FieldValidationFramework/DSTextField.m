@@ -5,7 +5,6 @@
 #import "DSFieldValidationCriterionDescription.h"
 #import "FDPopoverBackgroundView.h"
 #import "DSCriterionDescriptionViewController.h"
-#import "DSFieldValidationCriterion.h"
 #import "DSCFunctions.h"
 #import "DSMacros.h"
 
@@ -104,11 +103,6 @@
   self.isValidationPassed = true;
   [self setRightView:nil];
   [self validationPassedStateDidSet];
-}
-
-- (BOOL)isPassesCriterion:(DSFieldValidationCriterion *)criterion
-{
-  return [criterion validateWithObject:[self text]];
 }
 
 - (UIButton *)rightMenuButton

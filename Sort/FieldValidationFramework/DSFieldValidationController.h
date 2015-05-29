@@ -4,6 +4,7 @@
 
 @protocol DSFieldValidationControllerDelegate;
 @class DSTextField;
+@class DSFieldValidationCriteria;
 
 @interface DSFieldValidationController: NSObject
 @property (nonatomic, weak) id<DSFieldValidationControllerDelegate> delegate;
@@ -15,7 +16,7 @@
 
 /** if field already added - nothing happens */
 - (void)addField:(DSTextField *)field
-        criteria:(NSArray *)criteria;
+        criteria:(DSFieldValidationCriteria *)criteria;
 
 - (BOOL)validateAllFields;
 - (void)validateField:(DSTextField *)field;

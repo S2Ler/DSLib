@@ -4,6 +4,7 @@
 #import "DSFieldValidationControllerDelegate.h"
 #import "DSTextField.h"
 #import "DSFieldValidationCriterion.h"
+#import "DSFieldValidationCriteria.h"
 
 #pragma mark - private
 @interface DSFieldValidationController ()<UITextFieldDelegate>
@@ -39,7 +40,7 @@
   }];
 }
 
-- (void)addField:(DSTextField *)field criteria:(NSArray *)criteria
+- (void)addField:(DSTextField *)field criteria:(DSFieldValidationCriteria *)criteria
 {
   NSAssert([field isKindOfClass:[DSTextField class]], @"Wrong field class: %@. It should be DSTextField", nil);
 
@@ -84,16 +85,9 @@
 
 - (NSArray *)nonPassedCriteriaInField:(DSTextField *)field
 {
-  NSArray *criteria = [field validationCriteria];
+  DSFieldValidationCriteria *criteria = [field validationCriteria];
 
-  NSMutableArray *nonPassedCriteria = [NSMutableArray array];
-  for (DSFieldValidationCriterion *criterion in criteria) {
-    BOOL isPassesCriterion = [field isPassesCriterion:criterion];
-    if (!isPassesCriterion) {
-      [nonPassedCriteria addObject:criterion];
-    }
-  }
-
+  NSArray *nonPassedCriteria = [criteria validateAgainstObject:[field text]];
   return nonPassedCriteria;
 }
 

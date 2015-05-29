@@ -143,6 +143,8 @@
 		099767AF1A4F35C400DDE130 /* DSDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C6BE521806BD760084C600 /* DSDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09A28F4D1AEE141500DA671A /* DSReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A28F4B1AEE141500DA671A /* DSReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09A28F4E1AEE141500DA671A /* DSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A28F4C1AEE141500DA671A /* DSReachability.m */; };
+		09CC45761B18B6D400AF4BC5 /* DSFieldValidationCriteria.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CC45741B18B6D400AF4BC5 /* DSFieldValidationCriteria.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09CC45771B18B6D400AF4BC5 /* DSFieldValidationCriteria.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CC45751B18B6D400AF4BC5 /* DSFieldValidationCriteria.m */; };
 		09E443141A61736600E8B6C0 /* DSDateFormatterCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0903A33A17F0AC9100A21270 /* DSDateFormatterCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E443151A61736600E8B6C0 /* DSDateFormatterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0903A33B17F0AC9100A21270 /* DSDateFormatterCache.m */; };
 		09E443DA1A61861400E8B6C0 /* DSGetPhotosPermissions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E443D81A61861400E8B6C0 /* DSGetPhotosPermissions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -736,6 +738,8 @@
 		09C15FD318DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+DSAdditions.h"; sourceTree = "<group>"; };
 		09C15FD418DAC1E6008737DC /* NSFetchedResultsController+DSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+DSAdditions.m"; sourceTree = "<group>"; };
 		09C6BE521806BD760084C600 /* DSDragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDragAndDrop.h; sourceTree = "<group>"; };
+		09CC45741B18B6D400AF4BC5 /* DSFieldValidationCriteria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFieldValidationCriteria.h; sourceTree = "<group>"; };
+		09CC45751B18B6D400AF4BC5 /* DSFieldValidationCriteria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFieldValidationCriteria.m; sourceTree = "<group>"; };
 		09CDC39219260E4600C49EEA /* DSViewsStackAnimationDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewsStackAnimationDirection.h; sourceTree = "<group>"; };
 		09CDC39319260E4600C49EEA /* DSViewsStackAnimationDirection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewsStackAnimationDirection.m; sourceTree = "<group>"; };
 		09CEE81A18E1E6EB00B090F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -1235,6 +1239,8 @@
 				09162C5F180EE84900A0DEEF /* DSFieldValidationCriterion+FactoryMethods.m */,
 				09162C60180EE84900A0DEEF /* DSFieldValidationCriterion.h */,
 				09162C61180EE84900A0DEEF /* DSFieldValidationCriterion.m */,
+				09CC45741B18B6D400AF4BC5 /* DSFieldValidationCriteria.h */,
+				09CC45751B18B6D400AF4BC5 /* DSFieldValidationCriteria.m */,
 				09162C62180EE84900A0DEEF /* DSFieldValidationCriterionDescription.h */,
 				09162C63180EE84900A0DEEF /* DSFieldValidationCriterionDescription.m */,
 				09162C64180EE84900A0DEEF /* DSTextField.h */,
@@ -2011,6 +2017,7 @@
 				099767A41A4F335700DDE130 /* DSFieldValidationCriterionDescription.h in Headers */,
 				09E54DA91A603B4D002A854C /* UIView+XibLoading.h in Headers */,
 				09E54D381A6039B2002A854C /* DSWebServiceRequestDelegate.h in Headers */,
+				09CC45761B18B6D400AF4BC5 /* DSFieldValidationCriteria.h in Headers */,
 				099767AF1A4F35C400DDE130 /* DSDragAndDrop.h in Headers */,
 				09E54D7B1A603B4D002A854C /* NSArray+ObjectsQuery.h in Headers */,
 				09E54E241A6047AC002A854C /* CStringsFunctions.h in Headers */,
@@ -2329,6 +2336,7 @@
 				099767A11A4F335700DDE130 /* DSFieldValidationCriterion+FactoryMethods.m in Sources */,
 				09E54D461A603A09002A854C /* DSWebServiceResponse.m in Sources */,
 				0997677A1A4F318900DDE130 /* DSPassCodeController.m in Sources */,
+				09CC45771B18B6D400AF4BC5 /* DSFieldValidationCriteria.m in Sources */,
 				09E54DED1A603C49002A854C /* DSDataDetector.m in Sources */,
 				09E54E081A603C49002A854C /* NSOutputStream+DSAdditions.m in Sources */,
 				09E54D2E1A603978002A854C /* AFMultipartBodyStream.m in Sources */,
