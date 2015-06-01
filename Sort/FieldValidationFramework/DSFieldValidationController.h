@@ -14,7 +14,7 @@
 - (id)initWithDelegate:(id<DSFieldValidationControllerDelegate>)delegate
         parentViewController:(UIViewController *)parentViewController;
 
-/** if field already added - nothing happens */
+/** if field already added - criteria appends to existing criteria */
 - (void)addField:(DSTextField *)field
         criteria:(DSFieldValidationCriteria *)criteria;
 

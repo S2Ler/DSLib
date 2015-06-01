@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DSFieldValidationCriteria : NSObject
 + (instancetype)criteriaWith:(NSArray *)criteria;
 - (instancetype)initWithCriteria:(NSArray *)criteria;
+- (instancetype)newMergedCopyWith:(DSFieldValidationCriteria *)otherCriteria;
 
 /** @return empty array if all criterias has been passed. Otherwise array of failed criteria */
 - (nonnull NSArray *)validateAgainstObject:(nullable id)object;

@@ -56,6 +56,10 @@
     }];
     field.parentViewController = self.parentViewController;
   }
+  else {
+    DSFieldValidationCriteria *currentCriteria = field.validationCriteria;
+    field.validationCriteria = [currentCriteria newMergedCopyWith:criteria];
+  }
 }
 
 #pragma mark - validation

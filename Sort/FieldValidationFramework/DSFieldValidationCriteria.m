@@ -24,6 +24,14 @@
   return self;
 }
 
+- (instancetype)newMergedCopyWith:(DSFieldValidationCriteria *)other
+{
+  NSArray *selfCriteria = self.criteria;
+  NSArray *otherCriteria = other.criteria;
+  
+  return [DSFieldValidationCriteria criteriaWith:[selfCriteria arrayByAddingObjectsFromArray:otherCriteria]];
+}
+
 + (instancetype)criteriaWith:(NSArray *)criteria
 {
   return [[self alloc] initWithCriteria:criteria];
