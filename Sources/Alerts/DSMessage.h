@@ -16,6 +16,11 @@
 
 - (NSString *)localizedBody;
 
+/** This method makes sure that two message which are equals without call to this method won't be equal.
+ Why this needed? 
+ CoreData doesn't send KVO messages if object to be changed is equal to current one. But for one of my usecases I need it to send KVO notifications every single change */
+- (void)makeUnique;
+
 /**
 * @param theParam params for body text. to set params for title text, user titleParams property.
 */

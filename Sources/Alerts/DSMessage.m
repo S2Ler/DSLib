@@ -12,6 +12,7 @@
 @property (nonatomic, strong) DSMessageCode *code;
 @property (nonatomic, strong) NSArray *params;
 @property (nonatomic, strong) NSError *error;
+@property (nonatomic, strong) NSString *uniqueID;
 @end
 
 @implementation DSMessage
@@ -252,8 +253,10 @@
       }
     }
   }
+  
+  BOOL uniquenessEquals = (!self.uniqueID && !theObj.uniqueID) || [self.uniqueID isEqualToString:theObj.uniqueID];
 
-  return (domainsEqual && codesEqual && paramsEqual);
+  return (domainsEqual && codesEqual && paramsEqual && uniquenessEquals);
 }
 
 - (BOOL)isEqual:(id)object
@@ -307,6 +310,7 @@
   [encoder encodeObject:self.params forKey:@"params"];
   [encoder encodeObject:self.error forKey:@"error"];
   [encoder encodeObject:self.titleParams forKey:@"titleParams"];
+  [encoder encodeObject:self.uniqueID forKey:@"uniqueID"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -319,7 +323,15 @@
     self.params = [decoder decodeObjectForKey:@"params"];
     self.error = [decoder decodeObjectForKey:@"error"];
     self.titleParams = [decoder decodeObjectForKey:@"titleParams"];
+    self.uniqueID = [decoder decodeObjectForKey:@"uniqueID"];
   }
   return self;
 }
+
+#pragma mark - 
+- (void)makeUnique
+{
+  self.uniqueID = [[NSUUID UUID] UUIDString];
+}
+
 @end
