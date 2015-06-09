@@ -47,7 +47,14 @@
   //
 }
 
-
+- (CGRect)clearButtonRectForBounds:(CGRect)bounds
+{
+  CGRect clearButtonRect = bounds;
+  clearButtonRect.size = [self validationFailedImage].size;
+  clearButtonRect.origin.x = bounds.size.width - clearButtonRect.size.width;
+  clearButtonRect.origin.y = bounds.size.height / 2.0 - clearButtonRect.size.height / 2.0;
+  return clearButtonRect;
+}
 - (UIImage *)validationFailedImage
 {
   ASSERT_ABSTRACT_METHOD;
