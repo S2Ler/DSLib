@@ -3,6 +3,8 @@
 #import "DSQueueBasedRequestSender.h"
 #import "DSAlertsSupportCode.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class DSWebServiceParams;
 @class DSQueueRecurrentRequestPolicy;
 
@@ -12,11 +14,11 @@
 
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
                                       completion:(ds_results_completion)completion
-                        requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler;
+                        requestSuccessfulHandler:(nullable request_successful_block_t)requestSuccessfulHandler;
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
                                       completion:(ds_results_completion)completion
-                        requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler
-                                   callbackQueue:(dispatch_queue_t)callbackQueue;
+                        requestSuccessfulHandler:(nullable request_successful_block_t)requestSuccessfulHandler
+                                   callbackQueue:(nullable dispatch_queue_t)callbackQueue;
 
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
                                       completion:(ds_results_completion)completion;
@@ -24,28 +26,28 @@
 
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
                                       completion:(ds_results_completion)completion
-                        requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler
-                                        userInfo:(NSDictionary *)userInfo;
+                        requestSuccessfulHandler:(nullable request_successful_block_t)requestSuccessfulHandler
+                                        userInfo:(nullable NSDictionary *)userInfo;
 
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
                                       completion:(ds_results_completion)completion
-                        requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler
-                            requestFailedHandler:(request_failed_block_t)requestFailedHandler
-                                        userInfo:(NSDictionary *)userInfo;
+                        requestSuccessfulHandler:(nullable request_successful_block_t)requestSuccessfulHandler
+                            requestFailedHandler:(nullable request_failed_block_t)requestFailedHandler
+                                        userInfo:(nullable NSDictionary *)userInfo;
 
 - (id<DSWebServiceRequest>)sendRequestWithParams:(DSWebServiceParams *)params
                                       completion:(ds_results_completion)completion
-                        requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler
-                            requestFailedHandler:(request_failed_block_t)requestFailedHandler
-                                        userInfo:(NSDictionary *)userInfo
-                                   callbackQueue:(dispatch_queue_t)callbackQueue;
+                        requestSuccessfulHandler:(nullable request_successful_block_t)requestSuccessfulHandler
+                            requestFailedHandler:(nullable request_failed_block_t)requestFailedHandler
+                                        userInfo:(nullable NSDictionary *)userInfo
+                                   callbackQueue:(nullable dispatch_queue_t)callbackQueue;
 
 - (void)addRecurrentRequestWithParams:(DSWebServiceParams *)params
                            completion:(ds_results_completion)completion
-             requestSuccessfulHandler:(request_successful_block_t)requestSuccessfulHandler
-                 requestFailedHandler:(request_failed_block_t)requestFailedHandler
-                             userInfo:(NSDictionary *)userInfo
-                        callbackQueue:(dispatch_queue_t)callbackQueue
+             requestSuccessfulHandler:(nullable request_successful_block_t)requestSuccessfulHandler
+                 requestFailedHandler:(nullable request_failed_block_t)requestFailedHandler
+                             userInfo:(nullable NSDictionary *)userInfo
+                        callbackQueue:(nullable dispatch_queue_t)callbackQueue
                       recurrentPolicy:(DSQueueRecurrentRequestPolicy *)policy
                            requestKey:(NSString *)requestKey;
 
@@ -59,3 +61,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END
