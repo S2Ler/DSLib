@@ -74,9 +74,8 @@
 {
   DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"yyyyddMMMMjjmm"
-                                                                 options:0
-                                                                  locale:[NSLocale autoupdatingCurrentLocale]]];
+    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
     return dateFormatter;
   });
 }
