@@ -323,28 +323,6 @@
   const BOOL touchIDAvailable = [self isTouchIDAvailable];
   [self setIsTouchIDLockEnabled:touchIDAvailable];
   completion(touchIDAvailable, NO_MESSAGE);
-  
-//  LAContext *context = [LAContext new];
-//  context.localizedFallbackTitle = nil;
-//
-//  [context evaluatePolicy:_policy localizedReason:NSLocalizedString(@"Place your finger on home button to allow your fingerprint to unlock FlipDrive", nil)
-//                    reply:^(BOOL success, NSError *error) {
-//                      [self setIsTouchIDLockEnabled:success];
-//                      
-//                      dispatch_async(dispatch_get_main_queue(), ^{
-//                        if (success) {
-//                          completion(SUCCEED_WITH_MESSAGE, NO_MESSAGE);
-//                        }
-//                        else {
-//                          DSMessage *errorMessage = nil;
-//                          if (![self isCancelCode:error]) {
-//                            errorMessage = [DSMessage messageWithError:error];
-//                          }
-//
-//                          completion(FAILED_WITH_MESSAGE, errorMessage);
-//                        }
-//                      });
-//                    }];
 }
 
 - (void)unlockUsingTouchIDWithCompletion:(ds_completion_handler)completion
