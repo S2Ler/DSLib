@@ -1,4 +1,1 @@
-# Not Included in Project #
-- DSLogFormatter.h
-- TestFlightLogger.h
-- DSReplaceRootViewControllerSegue.h
+Abandoned. Refactored into DSLib* set of frameworks
